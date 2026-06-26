@@ -6,7 +6,7 @@ Date: 2026-06-26
 
 - [x] Create repo knowledge system.
 - [x] Verify known project links.
-- [ ] Add GitHub remote.
+- [x] Add GitHub remote.
 - [ ] Make global contact assets public-ready.
 - [x] Build featured project evidence registry.
 - [x] Create featured project evidence pack.
@@ -31,10 +31,11 @@ Date: 2026-06-26
 
 ## P2
 
-- [ ] Scaffold Astro project.
-- [ ] Add content collections.
-- [ ] Implement static homepage.
-- [ ] Implement case study pages.
+- [x] Scaffold Astro project.
+- [x] Add structured static data files.
+- [x] Implement static homepage.
+- [x] Implement case study pages.
+- [ ] Expand MDX/content collections for long-form case studies.
 
 ## Backlog Rules
 

@@ -4,11 +4,11 @@ Date: 2026-06-26
 
 ## Current Project State
 
-The portfolio is still in planning/repository setup. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold. The strategy is strong and should not be redesigned.
 
 The repository now has a continuity system under `docs/00..17`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, The Loop workflow walkthrough, and resume publication plan.
 
-Limited Astro static scaffolding is allowed if it stays conservative and uses no fake evidence. Production-ready UI polish is still blocked.
+Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
 
 ## Completed Work
 
@@ -27,6 +27,11 @@ Limited Astro static scaffolding is allowed if it stays conservative and uses no
 - Featured project evidence pack and Mermaid/spec diagram files created on 2026-06-26.
 - Featured evidence review, screenshot/import plan, Hybrid benchmark methodology, The Loop workflow walkthrough, and resume publication plan created on 2026-06-26.
 - GitHub remote and repository health verified on 2026-06-26.
+- Astro, TypeScript, Tailwind, and MDX scaffold created on 2026-06-26.
+- Static homepage implemented in the locked proof-first order.
+- Static case-study shells created for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop.
+- Evidence-safe pending visual panels are used instead of fake screenshots, fake dashboards, fake metrics, or invented links.
+- Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
 
 ## Missing Work
 
@@ -46,7 +51,7 @@ Limited Astro static scaffolding is allowed if it stays conservative and uses no
 - Global contact assets are Known/Verified but not fully public-ready.
 - Featured project evidence is improved but incomplete; diagram review and limitation notes are Known, while screenshots/demos, role details, final rendered diagram QA, and deeper proof artifacts remain incomplete.
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
-- No website scaffold exists.
+- Website scaffold exists, but it is a conservative static shell only.
 
 ## Known Risks
 
@@ -59,7 +64,7 @@ Limited Astro static scaffolding is allowed if it stays conservative and uses no
 
 ## Next Recommended Task
 
-Create the Astro static scaffold as a conservative content shell, then import or capture portfolio-local screenshots/demos, add role/contribution details, execute Hybrid benchmark/routing evidence, copy the final resume PDF into repo/public assets, and manually verify LinkedIn.
+Import or capture portfolio-local screenshots/demos, add role/contribution details, execute Hybrid benchmark/routing evidence, copy the final resume PDF into repo/public assets, manually verify LinkedIn, then harden the case-study pages.
 
 ## Featured Project Evidence Pack
 
@@ -115,5 +120,5 @@ Verification caveats:
 ## Exact Next Prompt Recommendation
 
 ```text
-Create the Astro static scaffold as a conservative content shell. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Wire project content to the evidence docs, keep production-ready UI polish blocked, and then collect/import portfolio-local screenshots, add role/contribution details, execute the Hybrid benchmark/routing plan, copy the selected public resume into `public/resume/`, manually verify LinkedIn, and confirm the public email.
+Continue from the conservative Astro static scaffold. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Import portfolio-local screenshots only after visual review, add role/contribution details, execute the Hybrid benchmark/routing plan before publishing latency/cost claims, copy the selected public resume into `public/resume/`, manually verify LinkedIn, confirm the public email, and then harden the case-study pages.
 ```

@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectModule from "../../components/project/ProjectModule.astro";
+import { featuredProjects, getProjectBySlug } from "../../data/projects";
+
+export function getStaticPaths() {
+  return featuredProjects.map((project) => ({
+    params: { slug: project.slug },
+  }));
+}
+
+const project = getProjectBySlug(Astro.params.slug ?? "");
+
+if (!project) {
+  throw new Error(`Unknown project slug: ${Astro.params.slug}`);
+}
+---
+
+<BaseLayout title={`${project.title} | AJ Portfolio`}>
+  <section class="case-hero">
+    <div class="section-inner">
+      <a class="text-link" href="/#featured-projects">Back to featured work</a>
+      <div class="eyebrow">{project.tier} case study shell</div>
+      <h1>{project.title}</h1>
+      <p class="lead">{project.subtitle}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner case-grid">
+      <ProjectModule project={project} />
+      <aside class="case-panel">
+        <span class="meta-label">Current boundary</span>
+        <p>
+          This page is a static shell only. It intentionally does not include fake screenshots,
+          benchmark numbers, dashboards, or deployment claims beyond verified links.
+        </p>
+        <ul class="missing-list">
+          {project.missingProof.map((item) => <li>{item}</li>)}
+        </ul>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

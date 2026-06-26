@@ -4,13 +4,13 @@ Date: 2026-06-26
 
 ## Current Phase
 
-Featured evidence hardening before frontend scaffolding.
+Astro static scaffold created; evidence hardening continues before production-ready UI polish.
 
-The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, The Loop workflow walkthrough, and resume publication plan exist.
+The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
 
 ## Frontend Implementation Allowed?
 
-Limited Astro static scaffolding: Yes.
+Limited Astro static scaffolding: Completed for the homepage and three featured case-study shells.
 
 Production-ready UI polish: No.
 
@@ -36,6 +36,7 @@ Reason:
 | Role/contribution details | Needed | Required for ownership clarity. |
 | Hybrid benchmark/routing evidence | Planned | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; measured latency/cost/routing examples are still Needed. |
 | The Loop workflow walkthrough | Known | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots remain Needed. |
+| Astro static scaffold | Verified | Homepage and `/projects/mahoraga`, `/projects/hybrid-categorizer`, `/projects/the-loop` build successfully. Verified locally on 2026-06-26 with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`. |
 
 ## Verified Evidence Links
 
@@ -60,11 +61,9 @@ Verification notes:
 
 ## Next Milestone
 
-Astro static scaffolding with conservative evidence boundaries.
+Evidence import and case-study hardening after the static scaffold.
 
 Completion criteria:
-- Create the Astro scaffold and content model without fake screenshots, fake metrics, or unverified public claims.
-- Keep project data wired to the evidence registry.
 - Copy final resume PDF into repo/public assets and manually verify LinkedIn before public resume/contact CTAs.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
 - Add featured project role/contribution details, portfolio-local screenshots, and demos.

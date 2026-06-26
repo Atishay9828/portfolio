@@ -113,3 +113,22 @@ Completed:
 Status:
 - Limited Astro static scaffolding can begin as a conservative content shell.
 - Production-ready UI polish remains blocked by portfolio-local screenshots/demos, role/contribution details, final rendered diagram QA, resume publication, and measured Hybrid benchmark/routing evidence.
+
+### 2026-06-26 Astro Static Scaffold
+
+Completed:
+- Created Astro, TypeScript, Tailwind, and MDX project configuration.
+- Added structured data files for links, evidence summary, featured projects, secondary projects, lab projects, timeline stages, capabilities, and routes.
+- Implemented the static homepage in the locked order: Hero, Proof Strip, Featured Projects, Signal Evolution Timeline, Secondary Work, Lab Projects, Systems Map, About, Contact.
+- Implemented basic static case-study shells for `/projects/mahoraga`, `/projects/hybrid-categorizer`, and `/projects/the-loop`.
+- Added evidence-safe visual panels that clearly mark missing screenshots/demos/metrics/resume assets as pending instead of using fake placeholders.
+- Added Vitest coverage for featured project ordering, verified-link CTAs, pending visual state, resume gating, and route definitions.
+- Added `.gitignore` for generated Astro, dependency, and build output directories.
+
+Validation:
+- `npm.cmd test` passed.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages.
+
+Status:
+- Conservative static scaffold is complete.
+- Production-ready UI polish, real visual assets, public resume CTA, role/contribution copy, and benchmark/metric claims remain blocked.

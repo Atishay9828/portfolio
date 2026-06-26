@@ -1,0 +1,22 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import { capabilities } from "../../data/projects";
+---
+
+<section class="section" id="systems-map">
+  <div class="section-inner">
+    <SectionHeader
+      eyebrow="Systems map"
+      title="Capabilities tied to evidence"
+      body="The map comes after the work, so skills read as backed by projects instead of as a generic tool list."
+    />
+    <div class="capability-grid">
+      {capabilities.map((capability) => (
+        <article class="lab-entry">
+          <h3>{capability.label}</h3>
+          <p>{capability.evidence.join(" / ")}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

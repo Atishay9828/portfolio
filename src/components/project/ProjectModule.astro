@@ -1,0 +1,61 @@
+---
+import type { Project } from "../../data/projects";
+
+const { project, compact = false } = Astro.props as { project: Project; compact?: boolean };
+const moduleClass = compact ? "compact-module" : "project-module";
+---
+
+<article class={moduleClass}>
+  <div>
+    <div class="status-label">{project.tier} / {project.statusLabel}</div>
+    <h3>{project.title}</h3>
+    <p>{project.subtitle}</p>
+    <div class="project-meta">
+      {project.stack.map((item) => <span class="tag">{item}</span>)}
+    </div>
+    <div class="project-facts">
+      <div class="fact">
+        <strong>Portfolio role</strong>
+        <span>{project.portfolioRole}</span>
+      </div>
+      <div class="fact">
+        <strong>Problem</strong>
+        <span>{project.problem}</span>
+      </div>
+      <div class="fact">
+        <strong>Key engineering decision</strong>
+        <span>{project.keyDecision}</span>
+      </div>
+      <div class="fact">
+        <strong>Limitation / tradeoff</strong>
+        <span>{project.tradeoff}</span>
+      </div>
+      <div class="fact">
+        <strong>{project.roleStatus}</strong>
+      </div>
+    </div>
+    <div class="link-row" aria-label={`${project.title} links`}>
+      {project.links.map((link) => (
+        <a class="button secondary" href={link.href}>
+          {link.label}
+        </a>
+      ))}
+      {project.tier === "Featured" && <a class="button secondary" href={`/projects/${project.slug}`}>Case study shell</a>}
+    </div>
+  </div>
+  {!compact && (
+    <aside class="evidence-panel" aria-label={`${project.title} evidence status`}>
+      <div>
+        <span class="status-pill">{project.visual.status}</span>
+        <h3>{project.visual.label}</h3>
+        <p>{project.visual.detail}</p>
+      </div>
+      <div>
+        <strong>Missing proof</strong>
+        <ul class="missing-list">
+          {project.missingProof.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </aside>
+  )}
+</article>

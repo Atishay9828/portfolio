@@ -1,0 +1,27 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import { timelineStages } from "../../data/projects";
+---
+
+<section class="section" id="signal-evolution">
+  <div class="section-inner">
+    <SectionHeader
+      eyebrow="Signal evolution"
+      title="Progression without project dumping"
+      body="Older and smaller projects stay as capability markers instead of competing with the featured work."
+    />
+    <div class="timeline">
+      {timelineStages.map((stage) => (
+        <article class="timeline-card">
+          <div>
+            <span class="meta-label">{stage.label}</span>
+          </div>
+          <div>
+            <h3>{stage.capability}</h3>
+            <p>{stage.projects.join(" / ")}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

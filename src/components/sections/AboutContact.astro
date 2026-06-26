@@ -1,0 +1,38 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import { links } from "../../data/links";
+---
+
+<section class="section" id="about">
+  <div class="section-inner about-grid">
+    <div>
+      <SectionHeader
+        eyebrow="About"
+        title="Computer Engineering, product-minded systems work"
+        body="AJ is a 3rd-year Computer Engineering student focused on software engineering, AI/ML, system design, DSA, automation, startups, product development, AI memory systems, and scalable architecture."
+      />
+    </div>
+    <aside class="case-panel">
+      <span class="meta-label">Current focus</span>
+      <p>AI agents, LLM applications, automation systems, product engineering, and maintainable software architecture.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-inner contact-grid">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Inspect the work or reach out.</h2>
+      <p class="lead">GitHub is verified. LinkedIn and email are rendered with Known status; resume remains pending until a public repo-local PDF exists.</p>
+    </div>
+    <div class="case-panel">
+      <div class="link-row">
+        {links.github.href && <a class="button secondary" href={links.github.href}>GitHub</a>}
+        {links.linkedin.href && <a class="button secondary" href={links.linkedin.href}>LinkedIn</a>}
+        {links.email.href && <a class="button secondary" href={links.email.href}>Email</a>}
+        <span class="button disabled" aria-disabled="true">Resume pending</span>
+      </div>
+    </div>
+  </div>
+</section>

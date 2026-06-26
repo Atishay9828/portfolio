@@ -1,0 +1,18 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import ProjectModule from "../project/ProjectModule.astro";
+import { secondaryProjects } from "../../data/projects";
+---
+
+<section class="section" id="secondary-work">
+  <div class="section-inner">
+    <SectionHeader
+      eyebrow="Secondary work"
+      title="Supporting systems"
+      body="These projects add automation and workflow breadth, but remain smaller until missing proof is collected."
+    />
+    <div class="compact-grid">
+      {secondaryProjects.map((project) => <ProjectModule project={project} compact />)}
+    </div>
+  </div>
+</section>

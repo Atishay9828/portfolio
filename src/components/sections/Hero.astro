@@ -1,0 +1,36 @@
+---
+import { featuredProjects } from "../../data/projects";
+import { links } from "../../data/links";
+---
+
+<section class="hero" id="top">
+  <div class="section-inner hero-grid">
+    <div>
+      <div class="eyebrow">Computer Engineering student</div>
+      <h1>AJ builds AI systems and practical products.</h1>
+      <div class="identity-line">
+        <span>AI Systems Engineer</span>
+        <span>Product Engineer</span>
+      </div>
+      <p class="lead">
+        I build software where models, data, APIs, memory, interfaces, and user workflows meet real constraints.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="#featured-projects">Featured work</a>
+        {links.github.href && <a class="button secondary" href={links.github.href}>GitHub</a>}
+        <span class="button disabled" aria-disabled="true" title={links.resume.note}>Resume pending</span>
+      </div>
+    </div>
+    <aside class="anchor-panel" aria-label="Featured project anchors">
+      <div class="meta-label">Proof anchors</div>
+      <div class="anchor-list">
+        {featuredProjects.map((project) => (
+          <div class="anchor-item">
+            <strong>{project.title}</strong>
+            <p>{project.subtitle}</p>
+          </div>
+        ))}
+      </div>
+    </aside>
+  </div>
+</section>

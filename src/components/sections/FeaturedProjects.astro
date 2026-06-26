@@ -1,0 +1,18 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import ProjectModule from "../project/ProjectModule.astro";
+import { featuredProjects } from "../../data/projects";
+---
+
+<section class="section" id="featured-projects">
+  <div class="section-inner">
+    <SectionHeader
+      eyebrow="Featured projects"
+      title="The strongest proof first"
+      body="Project cards show verified links and explicit missing-proof indicators. No screenshots or metrics are implied until they exist in the portfolio repo."
+    />
+    <div class="featured-stack">
+      {featuredProjects.map((project) => <ProjectModule project={project} />)}
+    </div>
+  </div>
+</section>

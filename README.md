@@ -1,6 +1,6 @@
 # AJ Portfolio Repository
 
-This repository is the source of truth for AJ's portfolio project.
+This repository is the source of truth for AJ's portfolio project and now contains the conservative Astro static scaffold.
 
 The portfolio positions AJ as:
 
@@ -11,9 +11,59 @@ The site is not implemented yet. This repo currently contains planning, architec
 
 ## Current Phase
 
-Featured evidence hardening before frontend scaffolding.
+Astro static scaffold complete; evidence hardening continues before production-ready UI polish.
 
-Limited Astro static scaffolding can begin, but only as a conservative content shell backed by the current evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, and benchmark/workflow evidence are complete.
+The current implementation is a conservative static content shell backed by the evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, and benchmark/workflow evidence are complete.
+
+## Run Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+Run validation:
+
+```bash
+npm test
+ASTRO_TELEMETRY_DISABLED=1 npm run build
+```
+
+On Windows PowerShell with script execution restrictions, use `npm.cmd`:
+
+```powershell
+npm.cmd test
+$env:ASTRO_TELEMETRY_DISABLED='1'; npm.cmd run build
+```
+
+## Routes
+
+- `/`
+- `/projects/mahoraga`
+- `/projects/hybrid-categorizer`
+- `/projects/the-loop`
+
+## Implementation Status
+
+Created:
+- Astro, TypeScript, Tailwind, and MDX configuration.
+- Data-driven homepage sections.
+- Static featured project case-study shells.
+- Evidence-safe pending visual panels for missing assets.
+- Tests for featured ordering, verified links, resume gating, and route definitions.
+
+Still blocked:
+- Public resume CTA until a final PDF exists under `public/resume/`.
+- Production visual polish until screenshots, demos, and diagram render/mobile QA are complete.
+- Hybrid latency/cost claims until benchmark/routing evidence is executed.
+- Ownership/role claims until contribution details are documented.
 
 ## Read First
 

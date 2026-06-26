@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+import { links } from "../data/links";
+
+const { title = "AJ | AI Systems Engineer", description = "AJ's evidence-driven portfolio shell." } = Astro.props;
+const githubHref = links.github.href;
+const linkedinHref = links.linkedin.href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <nav class="nav-inner" aria-label="Primary navigation">
+          <a class="brand" href="/">AJ</a>
+          <div class="nav-links">
+            <a href="/#featured-projects">Work</a>
+            <a href="/#lab-projects">Lab</a>
+            <a href="/#systems-map">Systems</a>
+            <a href="/#contact">Contact</a>
+            <span class="button disabled" aria-disabled="true" title="Repo-local public resume is pending">Resume pending</span>
+            {githubHref && <a href={githubHref}>GitHub</a>}
+            {linkedinHref && <a href={linkedinHref}>LinkedIn</a>}
+          </div>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div class="section-inner">
+          Static scaffold. Evidence-safe by default; production polish waits for portfolio-local assets.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

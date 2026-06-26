@@ -1,0 +1,23 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import { evidenceSummary } from "../../data/evidence";
+---
+
+<section class="section" id="proof-strip">
+  <div class="section-inner">
+    <SectionHeader
+      eyebrow="Proof strip"
+      title="Evidence before claims"
+      body="This shell exposes what is verified, what is Known, and what still blocks production polish."
+    />
+    <div class="proof-grid">
+      {evidenceSummary.map((item) => (
+        <div class="proof-cell">
+          <span class="meta-label">{item.label}</span>
+          <strong>{item.value}</strong>
+          <p>{item.detail}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

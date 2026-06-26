@@ -1,0 +1,24 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import { labProjects } from "../../data/projects";
+---
+
+<section class="section" id="lab-projects">
+  <div class="section-inner">
+    <SectionHeader
+      eyebrow="Lab projects"
+      title="Breadth kept compact"
+      body="Lab work stays text-first until real links, screenshots, notebooks, or diagrams are available."
+    />
+    <div class="lab-grid">
+      {labProjects.map((project) => (
+        <article class="lab-entry">
+          <span class="meta-label">{project.category}</span>
+          <h3>{project.title}</h3>
+          <p>{project.purpose}</p>
+          <p>{project.status}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
