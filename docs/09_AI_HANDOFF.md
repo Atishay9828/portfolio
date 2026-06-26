@@ -22,11 +22,11 @@ Frontend implementation is not allowed yet.
 - Repository continuity docs created.
 - Project evidence registry created.
 - Link registry created.
+- Known external evidence links verified on 2026-06-26.
 
 ## Missing Work
 
 - Add GitHub remote.
-- Verify Known links.
 - Add resume PDF.
 - Add GitHub profile URL.
 - Add LinkedIn URL.
@@ -41,8 +41,8 @@ Frontend implementation is not allowed yet.
 
 - No Git remote is configured.
 - Global contact assets are Missing.
-- Known project links are not Verified.
 - Featured project evidence is incomplete.
+- Hybrid Categorizer repo/deployment links, The Loop repo link, and secondary/lab project links remain Missing.
 - No website scaffold exists.
 
 ## Known Risks
@@ -56,7 +56,19 @@ Frontend implementation is not allowed yet.
 
 ## Next Recommended Task
 
-Verify the Known project links and update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md` with Verified or corrected statuses.
+Collect global contact assets, add the missing repo/deployment links where available, and create the featured project evidence artifacts needed for credible case studies.
+
+## Verified Links
+
+- Mahoraga GitHub repo: `https://github.com/Atishay9828/meta_Mahoraga`
+- Mahoraga Kaggle notebook: `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit`
+- Mahoraga HuggingFace demo: `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga`
+- Hybrid GenAI Transaction Categorizer YouTube walkthrough: `https://youtu.be/fsTXVh9JpoE`
+- The Loop deployment: `https://the-loop-5m7u.onrender.com/`
+
+Verification caveats:
+- Kaggle `/edit` URL loads via GET and canonicalizes to the notebook page; HEAD returned 404.
+- HuggingFace Space was public and correct, but runtime was `SLEEPING` at verification time.
 
 ## Files Future AI Agents Must Read First
 
@@ -74,6 +86,5 @@ Verify the Known project links and update `docs/06_ASSET_TRACKER.md`, `docs/10_P
 ## Exact Next Prompt Recommendation
 
 ```text
-Verify the Known links in docs/11_LINK_REGISTRY.md. Do not implement the website. For each Known link, check whether it loads, whether it points to the correct project, whether it is public enough for a portfolio visitor, and whether it should be marked Verified or needs correction. Then update docs/06_ASSET_TRACKER.md, docs/10_PROJECT_EVIDENCE_REGISTRY.md, docs/11_LINK_REGISTRY.md, docs/01_CURRENT_STATUS.md, docs/08_PROGRESS_LOG.md, and docs/09_AI_HANDOFF.md. Commit the changes locally. Do not push unless a remote exists.
+Do not implement the website yet. Collect the missing global contact assets and project evidence: resume PDF, GitHub profile URL, LinkedIn URL, email address, Hybrid Categorizer repo/deployment if available, The Loop repo link, role/contribution details, limitations/failure modes, and architecture diagrams for Mahoraga, Hybrid Categorizer, and The Loop. Update ASSET_REQUIREMENTS.md, docs/01_CURRENT_STATUS.md, docs/06_ASSET_TRACKER.md, docs/08_PROGRESS_LOG.md, docs/09_AI_HANDOFF.md, docs/10_PROJECT_EVIDENCE_REGISTRY.md, and docs/11_LINK_REGISTRY.md. Commit locally. Do not push unless a remote exists.
 ```
-

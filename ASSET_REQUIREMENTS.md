@@ -43,9 +43,9 @@ Purpose:
 
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
-| GitHub repo | Required | Known | `https://github.com/Atishay9828/meta_Mahoraga`; not verified in this repo session. |
-| Kaggle notebook | Recommended | Known | `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit`; not verified in this repo session. |
-| HuggingFace demo | Recommended | Known | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga`; not verified in this repo session. |
+| GitHub repo | Required | Verified | `https://github.com/Atishay9828/meta_Mahoraga`; loads as public GitHub repo `Atishay9828/meta_Mahoraga`. Verified 2026-06-26. |
+| Kaggle notebook | Recommended | Verified | `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit`; GET loads Kaggle notebook title `MEta_Mahoraga` and canonical notebook URL. Verified 2026-06-26. |
+| HuggingFace demo | Recommended | Verified | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga`; API confirms public Space titled `Mahoraga — Adaptive Combat RL Environment`. Verified 2026-06-26. |
 | Demo GIF or video | Required | Needed | 60-second behavior demo preferred; HuggingFace link is Known but no local demo asset is present. |
 | Architecture diagram | Required | Needed | Show environment, reward, agent, API, UI. |
 | Reward-system visualization | Required | Needed | Needed to frame adaptive behavior. |
@@ -58,7 +58,7 @@ Purpose:
 
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
-| YouTube walkthrough | Required | Known | `https://youtu.be/fsTXVh9JpoE`; not verified in this repo session. |
+| YouTube walkthrough | Required | Verified | `https://youtu.be/fsTXVh9JpoE`; redirects to YouTube watch page and oEmbed title is `Hybrid GenAI Transaction Categorization | Full Project Demo + Architecture Explained`. Verified 2026-06-26. |
 | Repo link | Required | Missing | TODO. |
 | Deployment link | Recommended | Missing | TODO. |
 | Confidence-routing diagram | Required | Needed | Core proof for AI systems architecture. |
@@ -72,7 +72,7 @@ Purpose:
 
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
-| Deployment link | Required | Known | `https://the-loop-5m7u.onrender.com/`; not verified in this repo session. |
+| Deployment link | Required | Verified | `https://the-loop-5m7u.onrender.com/`; loads Render deployment with page title `The Loop`. Verified 2026-06-26. |
 | Repo link | Required | Missing | TODO. |
 | Product screenshots | Required | Needed | Include primary workflow and mobile view. |
 | Database diagram | Required | Needed | Show users, events, interests, RSVPs, chat, recommendations. |
@@ -133,9 +133,9 @@ Purpose:
 | Area | Required Items | Known | Verified | Missing/Needed | Completion |
 |---|---:|---:|---:|---:|---:|
 | Global identity/contact | 4 | 0 | 0 | 4 | 0% |
-| Mahoraga | 6 | 1 | 0 | 5 | 17% known, 0% verified |
-| Hybrid Categorizer | 7 | 1 | 0 | 6 | 14% known, 0% verified |
-| The Loop | 7 | 1 | 0 | 6 | 14% known, 0% verified |
+| Mahoraga | 6 | 0 | 1 required, 3 links total | 5 | 17% required verified; 3 links verified |
+| Hybrid Categorizer | 7 | 0 | 1 | 6 | 14% required verified |
+| The Loop | 7 | 0 | 1 | 6 | 14% required verified |
 | Secondary projects | 10 | 0 | 0 | 10 | 0% |
 | Lab projects | 8 | 0 | 0 | 8 | 0% |
 
@@ -150,4 +150,3 @@ Purpose:
 7. Do not invent metrics.
 8. Do not use fake screenshots or fake dashboards.
 9. Every new or changed asset requirement must update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md`.
-

@@ -21,13 +21,13 @@ Purpose:
 
 Portfolio tier: Featured
 
-Known links:
+Verified links:
 - GitHub: `https://github.com/Atishay9828/meta_Mahoraga`
 - Kaggle notebook: `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit`
 - HuggingFace demo: `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga`
 
 Evidence status:
-- Links: Known, not Verified.
+- Links: Verified.
 - Local screenshots/videos/diagrams: Needed.
 - Metrics: Needed.
 
@@ -47,20 +47,22 @@ Missing assets:
 - Failure-mode note.
 
 Verification notes:
-- Links were provided in planning context but were not checked in this repo session.
+- GitHub repo loads as public repo `Atishay9828/meta_Mahoraga`.
+- Kaggle `/edit` URL loads via GET as notebook title `MEta_Mahoraga` and canonicalizes to `/code/atishay9828/meta-mahoraga`; HEAD returned 404, so use GET/browser verification for this link.
+- HuggingFace API confirms public Space titled `Mahoraga — Adaptive Combat RL Environment`; runtime was `SLEEPING`, so visitors may experience a cold start.
 
 Can be shown publicly yet:
-- No. Links must be verified and architecture/evidence assets must be created first.
+- Partially. Verified links can be referenced, but the project is not ready for full featured presentation until diagrams, screenshots/demo media, role details, and failure-mode notes are created.
 
 ### Hybrid GenAI Transaction Categorizer
 
 Portfolio tier: Featured
 
-Known links:
+Verified links:
 - YouTube walkthrough: `https://youtu.be/fsTXVh9JpoE`
 
 Evidence status:
-- Walkthrough: Known, not Verified.
+- Walkthrough: Verified.
 - Repo link: Missing.
 - Deployment link: Missing.
 - Diagrams/screenshots/benchmarks: Needed.
@@ -84,20 +86,20 @@ Missing assets:
 - Benchmarks.
 
 Verification notes:
-- YouTube link was provided in planning context but was not checked in this repo session.
+- Short URL redirects to YouTube watch URL and oEmbed title is `Hybrid GenAI Transaction Categorization | Full Project Demo + Architecture Explained`.
 
 Can be shown publicly yet:
-- No. Walkthrough must be verified, and repo/evidence assets are still missing or needed.
+- Partially. Verified walkthrough can be referenced, but full featured presentation remains blocked by missing repo/deployment links, diagrams, screenshots, benchmark/routing evidence, and limitation notes.
 
 ### The Loop
 
 Portfolio tier: Featured
 
-Known links:
+Verified links:
 - Deployment: `https://the-loop-5m7u.onrender.com/`
 
 Evidence status:
-- Deployment: Known, not Verified.
+- Deployment: Verified.
 - Repo link: Missing.
 - Product screenshots and diagrams: Needed.
 
@@ -118,10 +120,10 @@ Missing assets:
 - Demo/walkthrough.
 
 Verification notes:
-- Deployment link was provided in planning context but was not checked in this repo session.
+- Render deployment loads with page title `The Loop`.
 
 Can be shown publicly yet:
-- No. Deployment must be verified and supporting product evidence must be added.
+- Partially. Verified deployment can be referenced, but full featured presentation remains blocked by missing repo link, screenshots, diagrams, role details, and limitation notes.
 
 ## Secondary Projects
 
@@ -361,4 +363,3 @@ Verification notes:
 
 Can be shown publicly yet:
 - Yes, as a small timeline mention only, if phrased as foundation work.
-

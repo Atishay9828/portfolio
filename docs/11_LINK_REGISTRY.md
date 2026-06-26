@@ -33,7 +33,7 @@ Purpose:
 
 | Project | URL | Status | Notes |
 |---|---|---|---|
-| Mahoraga | `https://github.com/Atishay9828/meta_Mahoraga` | Known | Not verified in this repo session. |
+| Mahoraga | `https://github.com/Atishay9828/meta_Mahoraga` | Verified | Loads as public GitHub repo `Atishay9828/meta_Mahoraga`. Verified 2026-06-26. |
 | Hybrid GenAI Transaction Categorizer | TODO | Missing | Repo link not provided. |
 | The Loop | TODO | Missing | Repo link not provided. |
 
@@ -41,9 +41,9 @@ Purpose:
 
 | Project | URL | Status | Notes |
 |---|---|---|---|
-| Mahoraga HuggingFace demo | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga` | Known | Not verified in this repo session. |
-| Hybrid GenAI Transaction Categorizer YouTube walkthrough | `https://youtu.be/fsTXVh9JpoE` | Known | Not verified in this repo session. |
-| The Loop deployment | `https://the-loop-5m7u.onrender.com/` | Known | Not verified in this repo session. |
+| Mahoraga HuggingFace demo | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga` | Verified | HuggingFace API confirms public Space titled `Mahoraga — Adaptive Combat RL Environment`; runtime was sleeping at verification time. |
+| Hybrid GenAI Transaction Categorizer YouTube walkthrough | `https://youtu.be/fsTXVh9JpoE` | Verified | Redirects to YouTube watch page; oEmbed title matches Hybrid GenAI walkthrough. |
+| The Loop deployment | `https://the-loop-5m7u.onrender.com/` | Verified | Loads Render deployment with page title `The Loop`. |
 
 ## Secondary Project Repos
 
@@ -65,9 +65,9 @@ Purpose:
 
 | Label | URL | Status | Notes |
 |---|---|---|---|
-| Mahoraga Kaggle notebook | `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit` | Known | Not verified in this repo session. |
-| Mahoraga HuggingFace demo | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga` | Known | Duplicate of featured demo entry; kept here for external demo tracking. |
-| Hybrid Categorizer YouTube walkthrough | `https://youtu.be/fsTXVh9JpoE` | Known | Duplicate of featured demo entry; kept here for video tracking. |
+| Mahoraga Kaggle notebook | `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit` | Verified | GET loads notebook title `MEta_Mahoraga`; canonical URL is `/code/atishay9828/meta-mahoraga`; HEAD returned 404. |
+| Mahoraga HuggingFace demo | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga` | Verified | Duplicate of featured demo entry; kept here for external demo tracking. |
+| Hybrid Categorizer YouTube walkthrough | `https://youtu.be/fsTXVh9JpoE` | Verified | Duplicate of featured demo entry; kept here for video tracking. |
 
 ## Unknown/TODO Links
 
@@ -86,4 +86,3 @@ Purpose:
 | AI Resume Tailoring Engine ATS report | Missing | Required. |
 | Webcam Motion Alert repo | Missing | Required. |
 | Webcam Motion Alert screenshots/demo | Missing | Required. |
-
