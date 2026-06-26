@@ -6,9 +6,9 @@ Date: 2026-06-26
 
 The portfolio is still in planning/repository setup. The strategy is strong and should not be redesigned.
 
-The repository now has a continuity system under `docs/00..11`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, and link registry.
+The repository now has a continuity system under `docs/00..17`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, The Loop workflow walkthrough, and resume publication plan.
 
-Frontend implementation is not allowed yet.
+Limited Astro static scaffolding is allowed if it stays conservative and uses no fake evidence. Production-ready UI polish is still blocked.
 
 ## Completed Work
 
@@ -25,26 +25,26 @@ Frontend implementation is not allowed yet.
 - Known external evidence links verified on 2026-06-26.
 - Global identity/contact links and additional project repo links recorded on 2026-06-26.
 - Featured project evidence pack and Mermaid/spec diagram files created on 2026-06-26.
+- Featured evidence review, screenshot/import plan, Hybrid benchmark methodology, The Loop workflow walkthrough, and resume publication plan created on 2026-06-26.
+- GitHub remote and repository health verified on 2026-06-26.
 
 ## Missing Work
 
-- Add GitHub remote.
 - Choose final resume PDF and copy it into repo/public assets.
 - Manually verify LinkedIn in browser.
 - Confirm preferred public email.
-- Visually review featured project architecture diagrams.
+- Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
+- Render and mobile-QA selected Mermaid diagrams.
 - Collect screenshots/demos.
 - Add role/contribution details for featured and secondary projects.
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
-- Add Hybrid benchmark/routing table.
-- Add The Loop user workflow walkthrough.
+- Execute Hybrid benchmark/routing table with real or clearly representative examples.
 - Add concrete design token values for typography, breakpoints, focus rings, and z-index.
 
 ## Current Blockers
 
-- No Git remote is configured.
 - Global contact assets are Known/Verified but not fully public-ready.
-- Featured project evidence is improved but incomplete; diagram specs and limitation notes are Known, while screenshots/demos, role details, and deeper proof artifacts remain incomplete.
+- Featured project evidence is improved but incomplete; diagram review and limitation notes are Known, while screenshots/demos, role details, final rendered diagram QA, and deeper proof artifacts remain incomplete.
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - No website scaffold exists.
 
@@ -59,7 +59,7 @@ Frontend implementation is not allowed yet.
 
 ## Next Recommended Task
 
-Review the created featured-project diagram specs, import or capture portfolio-local screenshots/demos, add role/contribution details, create Hybrid benchmark/routing evidence, write The Loop workflow walkthrough, copy the final resume PDF into repo/public assets, and manually verify LinkedIn.
+Create the Astro static scaffold as a conservative content shell, then import or capture portfolio-local screenshots/demos, add role/contribution details, execute Hybrid benchmark/routing evidence, copy the final resume PDF into repo/public assets, and manually verify LinkedIn.
 
 ## Featured Project Evidence Pack
 
@@ -70,6 +70,7 @@ Review the created featured-project diagram specs, import or capture portfolio-l
 
 Status:
 - Diagram/spec files are Known and need visual review.
+- Diagram review results are in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 - Repo-contained screenshots/assets are Known and need portfolio-local selection or import.
 - Limitation notes are drafted and need final case-study copy review.
 
@@ -85,6 +86,7 @@ Status:
 - AI Resume Tailoring Engine repo: `https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly`
 - Webcam Motion Alert System repo: `https://github.com/Atishay9828/Webcam-Alert-App`
 - GitHub profile: `https://github.com/Atishay9828/`
+- Portfolio GitHub repository: `https://github.com/Atishay9828/portfolio`
 
 ## Known But Not Public-Ready Links
 
@@ -108,9 +110,10 @@ Verification caveats:
 8. `DESIGN_SYSTEM.md`
 9. `docs/10_PROJECT_EVIDENCE_REGISTRY.md`
 10. `docs/11_LINK_REGISTRY.md`
+11. `docs/13_FEATURED_EVIDENCE_REVIEW.md`
 
 ## Exact Next Prompt Recommendation
 
 ```text
-Do not implement the website yet. Review the featured-project Mermaid/spec diagrams, select or import portfolio-local screenshots/demos, add role/contribution details, create Hybrid benchmark/routing evidence, write The Loop workflow walkthrough, copy the final resume PDF into repo/public assets, manually verify LinkedIn, and confirm the public email. Update ASSET_REQUIREMENTS.md, docs/01_CURRENT_STATUS.md, docs/06_ASSET_TRACKER.md, docs/08_PROGRESS_LOG.md, docs/09_AI_HANDOFF.md, docs/10_PROJECT_EVIDENCE_REGISTRY.md, and docs/11_LINK_REGISTRY.md. Commit locally. Do not push unless a remote exists.
+Create the Astro static scaffold as a conservative content shell. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Wire project content to the evidence docs, keep production-ready UI polish blocked, and then collect/import portfolio-local screenshots, add role/contribution details, execute the Hybrid benchmark/routing plan, copy the selected public resume into `public/resume/`, manually verify LinkedIn, and confirm the public email.
 ```

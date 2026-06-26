@@ -7,6 +7,11 @@ Source documents:
 - `FEATURED_PROJECT_SELECTION.md`
 - `PORTFOLIO_RISK_AUDIT.md`
 - User-provided known project evidence in the 2026-06-26 repository continuity task.
+- `docs/13_FEATURED_EVIDENCE_REVIEW.md`
+- `docs/14_SCREENSHOT_IMPORT_PLAN.md`
+- `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`
+- `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`
+- `docs/17_RESUME_PUBLICATION_PLAN.md`
 
 Purpose:
 - Track every asset required to make the portfolio credible.
@@ -38,6 +43,7 @@ Purpose:
 | Profile photo or intentional identity mark | Recommended | Needed | Create or choose only if it improves trust and design. |
 | Open Graph image | Recommended | Needed | Needed before deployment/public sharing. |
 | Favicon or AJ monogram | Recommended | Needed | Needed for polish. |
+| Portfolio GitHub repository | Required | Verified | `https://github.com/Atishay9828/portfolio`; GitHub CLI confirms public repo, default branch `master`, and README exists on GitHub. Verified 2026-06-26. |
 
 ## Mahoraga
 
@@ -47,8 +53,8 @@ Purpose:
 | Kaggle notebook | Recommended | Verified | `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit`; GET loads Kaggle notebook title `MEta_Mahoraga` and canonical notebook URL. Verified 2026-06-26. |
 | HuggingFace demo | Recommended | Verified | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga`; API confirms public Space titled `Mahoraga — Adaptive Combat RL Environment`. Verified 2026-06-26. |
 | Demo GIF or video | Required | Needed | 60-second behavior demo preferred; HuggingFace demo is Verified, but no local GIF/video asset is present. |
-| Architecture diagram | Required | Known | `docs/diagrams/mahoraga-architecture.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
-| Reward-system visualization | Required | Known | `docs/diagrams/mahoraga-reward-system.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
+| Architecture diagram | Required | Known | `docs/diagrams/mahoraga-architecture.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
+| Reward-system visualization | Required | Known | `docs/diagrams/mahoraga-reward-system.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
 | Training timeline or metrics chart | Required | Known | External repo contains `docs/training_metrics.png`; not copied into portfolio and not visually reviewed. Use only documented metrics. |
 | Failure mode or limitation note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 | Project screenshot | Recommended | Known | External repo contains dashboard/screenshot candidates; not copied into portfolio and not visually reviewed. |
@@ -61,10 +67,10 @@ Purpose:
 | YouTube walkthrough | Required | Verified | `https://youtu.be/fsTXVh9JpoE`; redirects to YouTube watch page and oEmbed title is `Hybrid GenAI Transaction Categorization | Full Project Demo + Architecture Explained`. Verified 2026-06-26. |
 | Repo link | Required | Verified | `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization`; GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`. Verified 2026-06-26. |
 | Deployment link | Recommended | Missing | TODO. |
-| Confidence-routing diagram | Required | Known | `docs/diagrams/hybrid-categorizer-routing.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
-| Merchant memory visualization | Required | Known | `docs/diagrams/hybrid-categorizer-memory.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
-| Latency comparison benchmark | Required | Needed | ONNX path vs LLM fallback path if measurable. |
-| Routing decision table | Required | Needed | Use real or representative transactions, clearly labeled. |
+| Confidence-routing diagram | Required | Known | `docs/diagrams/hybrid-categorizer-routing.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
+| Merchant memory visualization | Required | Known | `docs/diagrams/hybrid-categorizer-memory.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
+| Latency comparison benchmark | Required | Needed | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; publish no numbers until measured. |
+| Routing decision table | Required | Needed | Use real or representative transactions, clearly labeled; table structure exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`. |
 | UI screenshots | Required | Known | External repo contains prediction, categories, history, and memory screenshots; not copied into portfolio and not visually reviewed. |
 | Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
@@ -75,10 +81,10 @@ Purpose:
 | Deployment link | Required | Verified | `https://the-loop-5m7u.onrender.com/`; loads Render deployment with page title `The Loop`. Verified 2026-06-26. |
 | Repo link | Required | Verified | `https://github.com/Atishay9828/TIET-LOOP`; GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. |
 | Product screenshots | Required | Known | External repo contains `assets/landing_page.jpg` and `assets/interest_selection.png`; not copied into portfolio and not visually reviewed. |
-| Database diagram | Required | Known | `docs/diagrams/the-loop-system.md` includes documented database tables and system boundaries; needs visual review before frontend implementation. |
-| WebSocket architecture diagram | Required | Known | `docs/diagrams/the-loop-realtime-flow.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
-| Auth flow diagram | Required | Known | `docs/diagrams/the-loop-auth-flow.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
-| User workflow walkthrough | Required | Needed | Show event coordination path. |
+| Database diagram | Required | Known | `docs/diagrams/the-loop-system.md` includes documented database tables and system boundaries; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
+| WebSocket architecture diagram | Required | Known | `docs/diagrams/the-loop-realtime-flow.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
+| Auth flow diagram | Required | Known | `docs/diagrams/the-loop-auth-flow.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
+| User workflow walkthrough | Required | Known | `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md` exists; screenshots remain Needed. |
 | Demo video or GIF | Recommended | Needed | End-to-end product flow. |
 | Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 

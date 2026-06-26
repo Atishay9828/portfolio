@@ -18,7 +18,8 @@ Purpose:
 
 | Label | URL | Status | Notes |
 |---|---|---|---|
-| Portfolio GitHub repository remote | TODO | Missing | No Git remote is currently configured. |
+| Portfolio GitHub repository remote | `https://github.com/Atishay9828/portfolio.git` | Verified | Local `origin` fetch/push remote. Verified 2026-06-26. |
+| Portfolio GitHub repository | `https://github.com/Atishay9828/portfolio` | Verified | GitHub CLI confirms public repo `Atishay9828/portfolio`, default branch `master`, and README exists on GitHub. Verified 2026-06-26. |
 
 ## Personal Links
 
@@ -73,7 +74,6 @@ Purpose:
 
 | Item | Status | Notes |
 |---|---|---|
-| Portfolio GitHub remote | Missing | Add remote before push. |
 | Hybrid Categorizer deployment | Missing | Recommended if hosted. |
 | AI Resume Tailoring Engine sample output | Missing | Required. |
 | AI Resume Tailoring Engine ATS report | Missing | Required. |

@@ -11,9 +11,9 @@ The site is not implemented yet. This repo currently contains planning, architec
 
 ## Current Phase
 
-Repository continuity and evidence registry setup.
+Featured evidence hardening before frontend scaffolding.
 
-Frontend implementation is not allowed yet. The next milestone is to verify known links, collect contact assets, and create the required project evidence artifacts.
+Limited Astro static scaffolding can begin, but only as a conservative content shell backed by the current evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, and benchmark/workflow evidence are complete.
 
 ## Read First
 
@@ -40,7 +40,7 @@ Future agents should start here:
 - `SITE_BLUEPRINT.md`
 - `DESIGN_SYSTEM.md`
 - `ASSET_REQUIREMENTS.md`
-- `docs/00_READ_FIRST.md` through `docs/11_LINK_REGISTRY.md`
+- `docs/00_READ_FIRST.md` through `docs/17_RESUME_PUBLICATION_PLAN.md`
 
 ## Locked Decisions
 
@@ -53,6 +53,8 @@ Future agents should start here:
 ## Repository Status
 
 - Local Git repository exists.
-- No Git remote is currently configured.
-- Do not push until a remote is added.
-
+- Remote: `https://github.com/Atishay9828/portfolio.git`
+- GitHub repository: `https://github.com/Atishay9828/portfolio`
+- Default branch: `master`
+- Visibility: Public
+- README exists and renders on GitHub.

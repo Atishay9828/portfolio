@@ -13,9 +13,9 @@ Status vocabulary follows `ASSET_REQUIREMENTS.md`: Known, Verified, Missing, Nee
 
 | Project | Public-readiness | Diagram source confidence | Main remaining blocker |
 |---|---|---|---|
-| Mahoraga | Partial, not homepage-ready | High for environment/reward architecture; Medium for training/UI integration | Local demo media, visual review of diagrams/assets, role/contribution detail |
-| Hybrid GenAI Transaction Categorizer | Partial, not homepage-ready | High for routing and memory flow | Deployment link, benchmark/routing evidence, portfolio-local screenshots |
-| The Loop | Partial, not homepage-ready | High for backend/auth/realtime components; Medium for end-to-end deployment topology | Portfolio-local product screenshots, workflow walkthrough, role/contribution detail |
+| Mahoraga | Partial, static-scaffold ready with constraints | High for reward system; Medium for combined architecture/training UI | Local demo media, architecture diagram revision, role/contribution detail |
+| Hybrid GenAI Transaction Categorizer | Partial, static-scaffold ready with constraints | High for routing concept; Medium for final visual diagrams | Deployment link, measured benchmark/routing evidence, portfolio-local screenshots |
+| The Loop | Partial, static-scaffold ready with constraints | High for auth/realtime; Medium for system/deployment topology | Portfolio-local product screenshots, system diagram revision, role/contribution detail |
 
 ## Mahoraga
 
@@ -38,13 +38,14 @@ Flagship technical-depth project and primary proof of adaptive AI systems engine
 - Links: Verified.
 - Architecture diagram spec: Known; `docs/diagrams/mahoraga-architecture.md` exists and needs visual review.
 - Reward-system diagram spec: Known; `docs/diagrams/mahoraga-reward-system.md` exists and needs visual review.
+- Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; reward-system diagram is Ready, architecture diagram needs revision.
 - Repo-contained visual artifacts: Known; repo contains `docs/training_metrics.png`, `docs/dashboard_preview.png`, and related dashboard assets, but they are not portfolio-local and have not been visually reviewed for final use.
 - Local demo GIF/video: Needed.
 - Role/contribution detail: Needed.
 
 ### Public-Readiness Status
 
-Partial. Verified links and diagram specs can inform the case study, but the project is not ready for a public featured section until demo media, visual review, role/contribution details, and limitation framing are finalized.
+Partial. Verified links, conservative copy, and the reward-system diagram can inform the first static homepage. The project is not ready for final featured polish until demo media, architecture diagram revision, rendered/mobile diagram QA, role/contribution details, and limitation framing are finalized.
 
 ### Required Evidence Assets
 
@@ -141,15 +142,17 @@ Production-minded AI systems proof: local classifier first, LLM only when confid
 - Repo and walkthrough: Verified.
 - Routing diagram spec: Known; `docs/diagrams/hybrid-categorizer-routing.md` exists and needs visual review.
 - Merchant memory diagram spec: Known; `docs/diagrams/hybrid-categorizer-memory.md` exists and needs visual review.
+- Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
 - Repo-contained screenshots: Known; repo contains `frontend/public/screenshots/predict.png`, `categories.png`, `history.png`, and `memory.png`, but they are not portfolio-local and have not been visually reviewed.
 - Deployment link: Missing.
 - Latency/cost benchmark: Needed.
-- Routing decision table: Needed.
+- Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
+- Measured routing decision table: Needed.
 - Role/contribution detail: Needed.
 
 ### Public-Readiness Status
 
-Partial. This project has strong architecture evidence in the repo and a verified walkthrough, but full featured presentation remains blocked by missing benchmark/routing proof, deployment status, role details, and portfolio-local screenshots.
+Partial. This project has strong architecture evidence in the repo and a verified walkthrough, so it can support conservative static scaffolding. Full featured presentation remains blocked by missing measured benchmark/routing proof, deployment status, role details, diagram revisions, and portfolio-local screenshots.
 
 ### Required Evidence Assets
 
@@ -248,13 +251,14 @@ Main Product Engineer proof: a full-stack student event coordination platform wi
 - System diagram spec: Known; `docs/diagrams/the-loop-system.md` exists and needs visual review.
 - Realtime flow diagram spec: Known; `docs/diagrams/the-loop-realtime-flow.md` exists and needs visual review.
 - Auth flow diagram spec: Known; `docs/diagrams/the-loop-auth-flow.md` exists and needs visual review.
+- Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime and auth diagrams are Ready, system diagram needs revision.
 - Repo-contained screenshots: Known; repo contains `assets/landing_page.jpg` and `assets/interest_selection.png`, but they are not portfolio-local and have not been visually reviewed.
-- Product workflow walkthrough: Needed.
+- Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots still Needed.
 - Role/contribution detail: Needed.
 
 ### Public-Readiness Status
 
-Partial. The project has verified repo/deployment evidence and clear full-stack components, but the public case study still needs reviewed screenshots, user workflow walkthrough, limitation/tradeoff copy, and contribution scope.
+Partial. The project has verified repo/deployment evidence, a documented workflow walkthrough, and clear full-stack components. The public case study still needs reviewed screenshots, system diagram revision, limitation/tradeoff copy, and contribution scope.
 
 ### Required Evidence Assets
 

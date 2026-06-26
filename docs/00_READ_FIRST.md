@@ -27,6 +27,7 @@ Read these first, in order:
 8. `DESIGN_SYSTEM.md`
 9. `docs/10_PROJECT_EVIDENCE_REGISTRY.md`
 10. `docs/11_LINK_REGISTRY.md`
+11. `docs/13_FEATURED_EVIDENCE_REVIEW.md`
 
 Read these next when relevant:
 
@@ -39,6 +40,11 @@ Read these next when relevant:
 - `docs/06_ASSET_TRACKER.md`
 - `docs/07_BACKLOG.md`
 - `docs/08_PROGRESS_LOG.md`
+- `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`
+- `docs/14_SCREENSHOT_IMPORT_PLAN.md`
+- `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`
+- `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`
+- `docs/17_RESUME_PUBLICATION_PLAN.md`
 
 ## Non-Negotiable Constraints
 
@@ -69,4 +75,3 @@ Known does not mean safe to publish. Verify before public CTAs are implemented.
 - Every asset requirement change updates `docs/06_ASSET_TRACKER.md`.
 - Every project evidence/link update changes `docs/10_PROJECT_EVIDENCE_REGISTRY.md` and `docs/11_LINK_REGISTRY.md`.
 - Every handoff or phase transition updates `docs/09_AI_HANDOFF.md`.
-

@@ -11,15 +11,22 @@ Date: 2026-06-26
 - [x] Build featured project evidence registry.
 - [x] Create featured project evidence pack.
 - [x] Create featured project diagram specs.
+- [x] Verify GitHub remote and repository health.
+- [x] Create final featured evidence review.
+- [x] Create screenshot/import plan.
+- [x] Create resume publication plan.
 
 ## P1
 
-- [ ] Visually review architecture diagrams for Mahoraga, Hybrid Categorizer, The Loop.
+- [x] Complete spec-level diagram review for Mahoraga, Hybrid Categorizer, and The Loop.
+- [x] Create Hybrid benchmark/routing methodology.
+- [x] Create The Loop workflow walkthrough.
+- [ ] Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
+- [ ] Render and mobile-QA selected Mermaid diagrams.
 - [ ] Add concrete design tokens.
 - [ ] Collect or import portfolio-local screenshots/demos.
 - [ ] Add role/contribution details per featured project.
-- [ ] Add Hybrid benchmark/routing table.
-- [ ] Add The Loop user workflow walkthrough.
+- [ ] Execute Hybrid benchmark/routing table with real or clearly representative examples.
 - [ ] Finalize featured project tradeoff/limitation copy.
 
 ## P2

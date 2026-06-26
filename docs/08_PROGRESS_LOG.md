@@ -43,7 +43,7 @@ Status:
 - Repository continuity system established.
 - Evidence registry established.
 - Known links recorded but not verified.
-- No Git remote configured.
+- Remote status was unresolved at that time; later resolved in the Featured Evidence Hardening Pass.
 
 ### 2026-06-26 Link Verification
 
@@ -62,7 +62,7 @@ Verification notes:
 
 Status:
 - Known project evidence links are now Verified.
-- Frontend implementation remains blocked by non-public-ready global assets, missing screenshots/demos, missing role details, missing deeper proof artifacts, missing Git remote, and remaining TODO deployment/evidence items.
+- Frontend implementation remained blocked at that time by non-public-ready global assets, missing screenshots/demos, missing role details, missing deeper proof artifacts, and remaining TODO deployment/evidence items.
 
 ### 2026-06-26 Identity and Repo Evidence Update
 
@@ -79,7 +79,7 @@ Completed:
 
 Status:
 - Global identity/contact assets are no longer Missing, but resume is not repo-local and LinkedIn remains Known rather than Verified.
-- Frontend implementation remains blocked by non-public-ready global assets, missing screenshots/demos, missing role details, missing deeper proof artifacts, missing Git remote, and remaining TODO deployment/evidence items.
+- Frontend implementation remained blocked at that time by non-public-ready global assets, missing screenshots/demos, missing role details, missing deeper proof artifacts, and remaining TODO deployment/evidence items.
 
 ### 2026-06-26 Featured Project Evidence Pack
 
@@ -95,4 +95,21 @@ Completed:
 Status:
 - Diagram specs are Known, not Verified final frontend assets.
 - Repo-contained screenshot/metric candidates are Known, not portfolio-local.
-- Frontend implementation remains blocked by visual review, portfolio-local screenshots/demos, role/contribution details, Hybrid benchmark/routing evidence, The Loop workflow walkthrough, Git remote, and public-ready global assets.
+- Frontend implementation remained blocked at that time by visual review, portfolio-local screenshots/demos, role/contribution details, Hybrid benchmark/routing evidence, The Loop workflow walkthrough, and public-ready global assets.
+
+### 2026-06-26 Featured Evidence Hardening Pass
+
+Completed:
+- Created `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
+- Created `docs/14_SCREENSHOT_IMPORT_PLAN.md`.
+- Created `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
+- Created `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`.
+- Created `docs/17_RESUME_PUBLICATION_PLAN.md`.
+- Reviewed every featured Mermaid/spec diagram for correctness, clarity, overclaiming, system boundaries, mobile readability, and frontend readiness.
+- Verified GitHub CLI is installed and authenticated.
+- Verified remote `origin` points to `https://github.com/Atishay9828/portfolio.git`.
+- Verified GitHub repo `Atishay9828/portfolio` is Public, default branch is `master`, and README exists on GitHub.
+
+Status:
+- Limited Astro static scaffolding can begin as a conservative content shell.
+- Production-ready UI polish remains blocked by portfolio-local screenshots/demos, role/contribution details, final rendered diagram QA, resume publication, and measured Hybrid benchmark/routing evidence.

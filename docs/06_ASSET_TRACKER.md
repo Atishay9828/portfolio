@@ -20,6 +20,7 @@ Link registry:
 | Area | Known | Verified | Missing | Needed | Public-ready? |
 |---|---:|---:|---:|---:|---|
 | Global contact assets | 3 | 1 | 0 | 3 | No |
+| Portfolio repository | 0 | 1 | 0 | 0 | Yes |
 | Mahoraga | 5 | 3 | 0 | 1 | No |
 | Hybrid Categorizer | 4 | 2 | 1 | 2 | No |
 | The Loop | 5 | 2 | 0 | 2 | No |
@@ -31,6 +32,7 @@ Link registry:
 
 | Project | Link | Verification result |
 |---|---|---|
+| Portfolio repository | `https://github.com/Atishay9828/portfolio` | GitHub CLI confirms public repo `Atishay9828/portfolio`, default branch `master`, and README file exists on GitHub. |
 | Global identity | `https://github.com/Atishay9828/` | GitHub API confirms public user `Atishay9828`. |
 | Mahoraga | `https://github.com/Atishay9828/meta_Mahoraga` | Loads as public GitHub repo `Atishay9828/meta_Mahoraga`. |
 | Mahoraga | `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit` | GET loads Kaggle notebook title `MEta_Mahoraga`; canonical URL is `/code/atishay9828/meta-mahoraga`. |
@@ -58,9 +60,9 @@ Link registry:
 
 | Project | Evidence added | Status | Next action |
 |---|---|---|---|
-| Mahoraga | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/diagrams/mahoraga-architecture.md`, `docs/diagrams/mahoraga-reward-system.md` | Known | Review diagrams visually, choose local media/assets, add role/contribution detail. |
-| Hybrid GenAI Transaction Categorizer | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md` | Known | Review diagrams visually, select screenshots, add benchmark/routing table. |
-| The Loop | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, `docs/diagrams/the-loop-auth-flow.md` | Known | Review diagrams visually, select screenshots, add workflow walkthrough and role detail. |
+| Mahoraga | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/diagrams/mahoraga-architecture.md`, `docs/diagrams/mahoraga-reward-system.md` | Known | Revise architecture diagram, render QA diagrams, choose local media/assets, add role/contribution detail. |
+| Hybrid GenAI Transaction Categorizer | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`, `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md` | Known | Revise diagrams, select screenshots, execute benchmark/routing table. |
+| The Loop | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`, `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, `docs/diagrams/the-loop-auth-flow.md` | Known | Revise system diagram, select screenshots, add role detail. |
 
 ## Featured Project Asset Gate
 
@@ -75,10 +77,11 @@ Do not build public final project CTAs until each featured project has:
 
 ## Next Asset Tasks
 
-1. Choose final resume PDF and move it into the repo/public asset path.
+1. Choose final resume PDF and move it into `public/resume/`.
 2. Manually verify LinkedIn in browser and confirm public email preference.
-3. Add remaining deployment links where marked TODO.
-4. Visually review created Mermaid/spec diagrams and decide which become homepage thumbnails.
-5. Collect or import screenshots/demos.
-6. Add role/contribution details and final tradeoff copy.
-7. Create Hybrid benchmark/routing table and The Loop workflow walkthrough.
+3. Add remaining deployment links where marked Missing.
+4. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
+5. Render and mobile-QA selected Mermaid diagrams before final visual use.
+6. Collect or import screenshots/demos following `docs/14_SCREENSHOT_IMPORT_PLAN.md`.
+7. Add role/contribution details and final tradeoff copy.
+8. Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.

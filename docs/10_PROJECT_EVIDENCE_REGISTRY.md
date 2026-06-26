@@ -29,6 +29,7 @@ Verified links:
 Evidence status:
 - Links: Verified.
 - Diagram specs: Known.
+- Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; reward-system diagram is Ready, architecture diagram needs revision.
 - Repo-contained screenshot/metrics candidates: Known, not portfolio-local.
 - Local demo media: Needed.
 - Metrics: Known in external repo, not selected or reviewed for portfolio.
@@ -54,9 +55,10 @@ Verification notes:
 - HuggingFace API confirms public Space titled `Mahoraga - Adaptive Combat RL Environment`; runtime was `SLEEPING`, so visitors may experience a cold start.
 - Created diagram/spec files: `docs/diagrams/mahoraga-architecture.md` and `docs/diagrams/mahoraga-reward-system.md`.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
+- Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md` and `docs/14_SCREENSHOT_IMPORT_PLAN.md`.
 
 Can be shown publicly yet:
-- Partially. Verified links and Known diagram specs can be referenced during implementation planning, but the project is not ready for full featured presentation until diagrams are visually reviewed and demo media, selected screenshots/metrics, role details, and final tradeoff copy are ready.
+- Partially. Verified links, conservative copy, and the reward-system diagram can support a first static homepage section, but full featured presentation remains blocked by architecture diagram revision, rendered/mobile diagram QA, demo media, selected screenshots/metrics, role details, and final tradeoff copy.
 
 ### Hybrid GenAI Transaction Categorizer
 
@@ -71,8 +73,10 @@ Evidence status:
 - Repo link: Verified.
 - Deployment link: Missing.
 - Diagram specs: Known.
+- Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
 - Repo-contained screenshots: Known, not portfolio-local.
-- Benchmarks/routing table: Needed.
+- Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
+- Measured benchmarks/routing table: Needed.
 
 Required assets:
 - Repo link.
@@ -99,9 +103,10 @@ Verification notes:
 - Created diagram/spec files: `docs/diagrams/hybrid-categorizer-routing.md` and `docs/diagrams/hybrid-categorizer-memory.md`.
 - Repo contains screenshot candidates under `frontend/public/screenshots/`; these are Known but not portfolio-local.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
+- Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 
 Can be shown publicly yet:
-- Partially. Verified walkthrough, repo, and Known diagram specs can be referenced during implementation planning, but full featured presentation remains blocked by missing deployment status, portfolio-local screenshots, benchmark/routing evidence, role detail, and final tradeoff copy.
+- Partially. Verified walkthrough, repo, and conservative routing copy can support a first static homepage section, but full featured presentation remains blocked by missing deployment status, portfolio-local screenshots, measured benchmark/routing evidence, diagram revisions, role detail, and final tradeoff copy.
 
 ### The Loop
 
@@ -115,8 +120,9 @@ Evidence status:
 - Deployment: Verified.
 - Repo link: Verified.
 - Diagram specs: Known.
+- Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, system diagram needs revision.
 - Repo-contained product screenshot candidates: Known, not portfolio-local.
-- Product workflow walkthrough: Needed.
+- Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots still Needed.
 
 Required assets:
 - Repo link.
@@ -141,9 +147,10 @@ Verification notes:
 - Created diagram/spec files: `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, and `docs/diagrams/the-loop-auth-flow.md`.
 - Repo contains screenshot candidates under `assets/`; these are Known but not portfolio-local.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
+- Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`.
 
 Can be shown publicly yet:
-- Partially. Verified deployment, repo, and Known diagram specs can be referenced during implementation planning, but full featured presentation remains blocked by portfolio-local screenshots, workflow walkthrough, role details, and final tradeoff copy.
+- Partially. Verified deployment, repo, workflow walkthrough, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by portfolio-local screenshots, system diagram revision, rendered/mobile diagram QA, role details, and final tradeoff copy.
 
 ## Secondary Projects
 

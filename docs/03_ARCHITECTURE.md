@@ -35,6 +35,12 @@ Portfolio/
     09_AI_HANDOFF.md
     10_PROJECT_EVIDENCE_REGISTRY.md
     11_LINK_REGISTRY.md
+    12_FEATURED_PROJECT_EVIDENCE_PACK.md
+    13_FEATURED_EVIDENCE_REVIEW.md
+    14_SCREENSHOT_IMPORT_PLAN.md
+    15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md
+    16_THE_LOOP_WORKFLOW_WALKTHROUGH.md
+    17_RESUME_PUBLICATION_PLAN.md
     portfolio-website-master-plan.md
 ```
 
@@ -108,5 +114,4 @@ src/
 
 ## Current Architecture Status
 
-The website is not scaffolded yet. This file describes the target architecture only.
-
+The website is not scaffolded yet. Limited Astro static scaffolding can begin as a conservative content shell. Production-ready UI polish remains blocked until the evidence gaps in `docs/01_CURRENT_STATUS.md` and `docs/13_FEATURED_EVIDENCE_REVIEW.md` are resolved.
