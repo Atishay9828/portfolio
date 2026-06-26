@@ -31,10 +31,10 @@ Purpose:
 
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
-| Resume PDF | Required | Missing | TODO. Needed for hero, nav, contact, and `/resume`. |
-| GitHub profile URL | Required | Missing | TODO. Needed for hero/nav/contact. |
-| LinkedIn URL | Required | Missing | TODO. Needed for recruiter conversion. |
-| Email address | Required | Missing | TODO. Needed for contact section. |
+| Resume PDF | Required | Known | Local files exist outside repo: `E:\Downloads\ATISHAY_Software_Intern.pdf` and `E:\Downloads\ATISHAY_Data_Analyst.pdf`. Not Verified for public use until copied into repo/public asset path. Checked 2026-06-26. |
+| GitHub profile URL | Required | Verified | `https://github.com/Atishay9828/`; GitHub API confirms user `Atishay9828`. Verified 2026-06-26. |
+| LinkedIn URL | Required | Known | `https://www.linkedin.com/in/atishay9828/`; provided but automated verification was blocked by LinkedIn HTTP 999. |
+| Email address | Required | Known | `ajain8_be23@thapar.edu`; provided but not externally verified. |
 | Profile photo or intentional identity mark | Recommended | Needed | Create or choose only if it improves trust and design. |
 | Open Graph image | Recommended | Needed | Needed before deployment/public sharing. |
 | Favicon or AJ monogram | Recommended | Needed | Needed for polish. |
@@ -59,7 +59,7 @@ Purpose:
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
 | YouTube walkthrough | Required | Verified | `https://youtu.be/fsTXVh9JpoE`; redirects to YouTube watch page and oEmbed title is `Hybrid GenAI Transaction Categorization | Full Project Demo + Architecture Explained`. Verified 2026-06-26. |
-| Repo link | Required | Missing | TODO. |
+| Repo link | Required | Verified | `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization`; GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`. Verified 2026-06-26. |
 | Deployment link | Recommended | Missing | TODO. |
 | Confidence-routing diagram | Required | Needed | Core proof for AI systems architecture. |
 | Merchant memory visualization | Required | Needed | Needed to show memory behavior. |
@@ -73,7 +73,7 @@ Purpose:
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
 | Deployment link | Required | Verified | `https://the-loop-5m7u.onrender.com/`; loads Render deployment with page title `The Loop`. Verified 2026-06-26. |
-| Repo link | Required | Missing | TODO. |
+| Repo link | Required | Verified | `https://github.com/Atishay9828/TIET-LOOP`; GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. |
 | Product screenshots | Required | Needed | Include primary workflow and mobile view. |
 | Database diagram | Required | Needed | Show users, events, interests, RSVPs, chat, recommendations. |
 | WebSocket architecture diagram | Required | Needed | Show real-time communication flow. |
@@ -86,7 +86,7 @@ Purpose:
 
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
-| Repo link | Required | Missing | TODO. |
+| Repo link | Required | Verified | `https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly`; GitHub API confirms public repo `Atishay9828/AI_Resume_Builder_ATS_Friendly`. Verified 2026-06-26. |
 | Sample output | Required | Missing | TODO; must redact private information. |
 | ATS report | Required | Missing | TODO. |
 | Pipeline diagram | Required | Needed | Profile compression -> prompt constraints -> generation -> PDF/ATS. |
@@ -99,7 +99,7 @@ Purpose:
 
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
-| Repo link | Required | Missing | TODO. |
+| Repo link | Required | Verified | `https://github.com/Atishay9828/Webcam-Alert-App`; GitHub API confirms public repo `Atishay9828/Webcam-Alert-App`. Verified 2026-06-26. |
 | Screenshots/demo | Required | Missing | TODO. |
 | Streamlit screenshot | Required | Needed | Current risk audit flags screenshot gap. |
 | Motion detection screenshot | Required | Needed | Show bounding boxes or detection state. |
@@ -132,11 +132,11 @@ Purpose:
 
 | Area | Required Items | Known | Verified | Missing/Needed | Completion |
 |---|---:|---:|---:|---:|---:|
-| Global identity/contact | 4 | 0 | 0 | 4 | 0% |
+| Global identity/contact | 4 | 3 | 1 | 0 | 100% required Known/Verified; public-ready after repo-local resume and LinkedIn verification |
 | Mahoraga | 6 | 0 | 1 required, 3 links total | 5 | 17% required verified; 3 links verified |
-| Hybrid Categorizer | 7 | 0 | 1 | 6 | 14% required verified |
-| The Loop | 7 | 0 | 1 | 6 | 14% required verified |
-| Secondary projects | 10 | 0 | 0 | 10 | 0% |
+| Hybrid Categorizer | 7 | 0 | 2 | 5 | 29% required verified |
+| The Loop | 7 | 0 | 2 | 5 | 29% required verified |
+| Secondary projects | 10 | 0 | 2 | 8 | 20% required verified |
 | Lab projects | 8 | 0 | 0 | 8 | 0% |
 
 ## Asset Rules

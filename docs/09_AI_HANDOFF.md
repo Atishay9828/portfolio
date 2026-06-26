@@ -23,14 +23,14 @@ Frontend implementation is not allowed yet.
 - Project evidence registry created.
 - Link registry created.
 - Known external evidence links verified on 2026-06-26.
+- Global identity/contact links and additional project repo links recorded on 2026-06-26.
 
 ## Missing Work
 
 - Add GitHub remote.
-- Add resume PDF.
-- Add GitHub profile URL.
-- Add LinkedIn URL.
-- Add email address.
+- Choose final resume PDF and copy it into repo/public assets.
+- Manually verify LinkedIn in browser.
+- Confirm preferred public email.
 - Create featured project architecture diagrams.
 - Collect screenshots/demos.
 - Add role/contribution details for featured and secondary projects.
@@ -40,9 +40,9 @@ Frontend implementation is not allowed yet.
 ## Current Blockers
 
 - No Git remote is configured.
-- Global contact assets are Missing.
+- Global contact assets are Known/Verified but not fully public-ready.
 - Featured project evidence is incomplete.
-- Hybrid Categorizer repo/deployment links, The Loop repo link, and secondary/lab project links remain Missing.
+- Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - No website scaffold exists.
 
 ## Known Risks
@@ -56,7 +56,7 @@ Frontend implementation is not allowed yet.
 
 ## Next Recommended Task
 
-Collect global contact assets, add the missing repo/deployment links where available, and create the featured project evidence artifacts needed for credible case studies.
+Copy the final resume PDF into repo/public assets, manually verify LinkedIn, add remaining deployment/evidence links where available, and create the featured project evidence artifacts needed for credible case studies.
 
 ## Verified Links
 
@@ -64,7 +64,18 @@ Collect global contact assets, add the missing repo/deployment links where avail
 - Mahoraga Kaggle notebook: `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit`
 - Mahoraga HuggingFace demo: `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga`
 - Hybrid GenAI Transaction Categorizer YouTube walkthrough: `https://youtu.be/fsTXVh9JpoE`
+- Hybrid GenAI Transaction Categorizer repo: `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization`
 - The Loop deployment: `https://the-loop-5m7u.onrender.com/`
+- The Loop repo: `https://github.com/Atishay9828/TIET-LOOP`
+- AI Resume Tailoring Engine repo: `https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly`
+- Webcam Motion Alert System repo: `https://github.com/Atishay9828/Webcam-Alert-App`
+- GitHub profile: `https://github.com/Atishay9828/`
+
+## Known But Not Public-Ready Links
+
+- Resume PDF candidates: `E:\Downloads\ATISHAY_Software_Intern.pdf` and `E:\Downloads\ATISHAY_Data_Analyst.pdf`; both exist locally but are outside the repo.
+- LinkedIn: `https://www.linkedin.com/in/atishay9828/`; automated verification was blocked by LinkedIn HTTP 999.
+- Email: `ajain8_be23@thapar.edu`; provided but not externally verified.
 
 Verification caveats:
 - Kaggle `/edit` URL loads via GET and canonicalizes to the notebook page; HEAD returned 404.
@@ -86,5 +97,5 @@ Verification caveats:
 ## Exact Next Prompt Recommendation
 
 ```text
-Do not implement the website yet. Collect the missing global contact assets and project evidence: resume PDF, GitHub profile URL, LinkedIn URL, email address, Hybrid Categorizer repo/deployment if available, The Loop repo link, role/contribution details, limitations/failure modes, and architecture diagrams for Mahoraga, Hybrid Categorizer, and The Loop. Update ASSET_REQUIREMENTS.md, docs/01_CURRENT_STATUS.md, docs/06_ASSET_TRACKER.md, docs/08_PROGRESS_LOG.md, docs/09_AI_HANDOFF.md, docs/10_PROJECT_EVIDENCE_REGISTRY.md, and docs/11_LINK_REGISTRY.md. Commit locally. Do not push unless a remote exists.
+Do not implement the website yet. Make global assets public-ready by copying the final resume PDF into repo/public assets, manually verifying LinkedIn, and confirming the public email. Then create role/contribution details, limitations/failure modes, screenshots/demos, and architecture diagrams for Mahoraga, Hybrid Categorizer, and The Loop. Update ASSET_REQUIREMENTS.md, docs/01_CURRENT_STATUS.md, docs/06_ASSET_TRACKER.md, docs/08_PROGRESS_LOG.md, docs/09_AI_HANDOFF.md, docs/10_PROJECT_EVIDENCE_REGISTRY.md, and docs/11_LINK_REGISTRY.md. Commit locally. Do not push unless a remote exists.
 ```

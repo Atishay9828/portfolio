@@ -60,10 +60,11 @@ Portfolio tier: Featured
 
 Verified links:
 - YouTube walkthrough: `https://youtu.be/fsTXVh9JpoE`
+- GitHub repo: `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization`
 
 Evidence status:
 - Walkthrough: Verified.
-- Repo link: Missing.
+- Repo link: Verified.
 - Deployment link: Missing.
 - Diagrams/screenshots/benchmarks: Needed.
 
@@ -79,7 +80,6 @@ Required assets:
 - Role/contribution details.
 
 Missing assets:
-- Repo link.
 - Deployment link.
 - Architecture/routing diagrams.
 - Screenshots.
@@ -87,9 +87,10 @@ Missing assets:
 
 Verification notes:
 - Short URL redirects to YouTube watch URL and oEmbed title is `Hybrid GenAI Transaction Categorization | Full Project Demo + Architecture Explained`.
+- GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`.
 
 Can be shown publicly yet:
-- Partially. Verified walkthrough can be referenced, but full featured presentation remains blocked by missing repo/deployment links, diagrams, screenshots, benchmark/routing evidence, and limitation notes.
+- Partially. Verified walkthrough and repo can be referenced, but full featured presentation remains blocked by missing deployment link, diagrams, screenshots, benchmark/routing evidence, and limitation notes.
 
 ### The Loop
 
@@ -97,10 +98,11 @@ Portfolio tier: Featured
 
 Verified links:
 - Deployment: `https://the-loop-5m7u.onrender.com/`
+- GitHub repo: `https://github.com/Atishay9828/TIET-LOOP`
 
 Evidence status:
 - Deployment: Verified.
-- Repo link: Missing.
+- Repo link: Verified.
 - Product screenshots and diagrams: Needed.
 
 Required assets:
@@ -114,16 +116,16 @@ Required assets:
 - Role/contribution details.
 
 Missing assets:
-- Repo link.
 - Screenshots.
 - Diagrams.
 - Demo/walkthrough.
 
 Verification notes:
 - Render deployment loads with page title `The Loop`.
+- GitHub API confirms public repo `Atishay9828/TIET-LOOP`.
 
 Can be shown publicly yet:
-- Partially. Verified deployment can be referenced, but full featured presentation remains blocked by missing repo link, screenshots, diagrams, role details, and limitation notes.
+- Partially. Verified deployment and repo can be referenced, but full featured presentation remains blocked by missing screenshots, diagrams, role details, and limitation notes.
 
 ## Secondary Projects
 
@@ -131,11 +133,11 @@ Can be shown publicly yet:
 
 Portfolio tier: Secondary
 
-Known links:
-- None.
+Verified links:
+- GitHub repo: `https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly`
 
 Evidence status:
-- Repo link: Missing.
+- Repo link: Verified.
 - Sample output: Missing.
 - ATS report: Missing.
 - Diagrams/examples: Needed.
@@ -150,25 +152,24 @@ Required assets:
 - Role/contribution details.
 
 Missing assets:
-- Repo link.
 - Sample output.
 - ATS report.
 
 Verification notes:
-- No external evidence was provided in the current planning context.
+- GitHub API confirms public repo `Atishay9828/AI_Resume_Builder_ATS_Friendly`.
 
 Can be shown publicly yet:
-- No.
+- Partially. Repo can be referenced, but the project still needs redacted sample output, ATS evidence, role details, and pipeline proof.
 
 ### Webcam Motion Alert System
 
 Portfolio tier: Secondary
 
-Known links:
-- None.
+Verified links:
+- GitHub repo: `https://github.com/Atishay9828/Webcam-Alert-App`
 
 Evidence status:
-- Repo link: Missing.
+- Repo link: Verified.
 - Screenshots/demo: Missing.
 - Workflow diagram: Needed.
 
@@ -181,14 +182,13 @@ Required assets:
 - Role/contribution details.
 
 Missing assets:
-- Repo link.
 - Screenshots/demo.
 
 Verification notes:
-- No external evidence was provided in the current planning context.
+- GitHub API confirms public repo `Atishay9828/Webcam-Alert-App`.
 
 Can be shown publicly yet:
-- No. If screenshots/demo remain unavailable, demote to Lab.
+- Partially. Repo can be referenced, but screenshots/demo and workflow proof are still required; if those remain unavailable, demote to Lab.
 
 ## Lab Projects
 

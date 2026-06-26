@@ -24,18 +24,18 @@ Purpose:
 
 | Label | URL | Status | Notes |
 |---|---|---|---|
-| Resume PDF | TODO | Missing | Add local/public resume asset. |
-| GitHub profile | TODO | Missing | Needed for hero/nav/contact. |
-| LinkedIn | TODO | Missing | Needed for recruiter path. |
-| Email | TODO | Missing | Needed for contact section. |
+| Resume PDF | `E:\Downloads\ATISHAY_Software_Intern.pdf`; `E:\Downloads\ATISHAY_Data_Analyst.pdf` | Known | Local files exist outside repo. Choose final PDF and copy into repo/public asset path before linking. |
+| GitHub profile | `https://github.com/Atishay9828/` | Verified | GitHub API confirms public user `Atishay9828`. Verified 2026-06-26. |
+| LinkedIn | `https://www.linkedin.com/in/atishay9828/` | Known | Provided; automated verification blocked by LinkedIn HTTP 999. |
+| Email | `ajain8_be23@thapar.edu` | Known | Provided; not externally verified. |
 
 ## Featured Project Repos
 
 | Project | URL | Status | Notes |
 |---|---|---|---|
 | Mahoraga | `https://github.com/Atishay9828/meta_Mahoraga` | Verified | Loads as public GitHub repo `Atishay9828/meta_Mahoraga`. Verified 2026-06-26. |
-| Hybrid GenAI Transaction Categorizer | TODO | Missing | Repo link not provided. |
-| The Loop | TODO | Missing | Repo link not provided. |
+| Hybrid GenAI Transaction Categorizer | `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization` | Verified | GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`. Verified 2026-06-26. |
+| The Loop | `https://github.com/Atishay9828/TIET-LOOP` | Verified | GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. |
 
 ## Featured Project Demos
 
@@ -49,8 +49,8 @@ Purpose:
 
 | Project | URL | Status | Notes |
 |---|---|---|---|
-| AI Resume Tailoring Engine | TODO | Missing | Repo link not provided. |
-| Webcam Motion Alert System | TODO | Missing | Repo link not provided. |
+| AI Resume Tailoring Engine | `https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly` | Verified | GitHub API confirms public repo `Atishay9828/AI_Resume_Builder_ATS_Friendly`. Verified 2026-06-26. |
+| Webcam Motion Alert System | `https://github.com/Atishay9828/Webcam-Alert-App` | Verified | GitHub API confirms public repo `Atishay9828/Webcam-Alert-App`. Verified 2026-06-26. |
 
 ## Lab Project Repos
 
@@ -74,15 +74,7 @@ Purpose:
 | Item | Status | Notes |
 |---|---|---|
 | Portfolio GitHub remote | Missing | Add remote before push. |
-| Resume PDF | Missing | Required. |
-| GitHub profile URL | Missing | Required. |
-| LinkedIn URL | Missing | Required. |
-| Email address | Missing | Required. |
-| Hybrid Categorizer repo | Missing | Required. |
 | Hybrid Categorizer deployment | Missing | Recommended if hosted. |
-| The Loop repo | Missing | Required. |
-| AI Resume Tailoring Engine repo | Missing | Required. |
 | AI Resume Tailoring Engine sample output | Missing | Required. |
 | AI Resume Tailoring Engine ATS report | Missing | Required. |
-| Webcam Motion Alert repo | Missing | Required. |
 | Webcam Motion Alert screenshots/demo | Missing | Required. |

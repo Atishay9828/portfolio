@@ -62,4 +62,21 @@ Verification notes:
 
 Status:
 - Known project evidence links are now Verified.
-- Frontend implementation remains blocked by missing global contact assets, missing project diagrams/screenshots/demos, missing role details, missing limitations/failure modes, missing Git remote, and missing TODO repo/deployment links.
+- Frontend implementation remains blocked by non-public-ready global assets, missing project diagrams/screenshots/demos, missing role details, missing limitations/failure modes, missing Git remote, and remaining TODO deployment/evidence items.
+
+### 2026-06-26 Identity and Repo Evidence Update
+
+Completed:
+- Recorded local resume PDF candidates: `E:\Downloads\ATISHAY_Software_Intern.pdf` and `E:\Downloads\ATISHAY_Data_Analyst.pdf`.
+- Verified GitHub profile: `https://github.com/Atishay9828/`.
+- Recorded LinkedIn as Known: `https://www.linkedin.com/in/atishay9828/`; automated verification was blocked by LinkedIn HTTP 999.
+- Recorded email as Known: `ajain8_be23@thapar.edu`.
+- Verified Hybrid GenAI Transaction Categorizer repo: `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization`.
+- Verified The Loop repo: `https://github.com/Atishay9828/TIET-LOOP`.
+- Verified AI Resume Tailoring Engine repo: `https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly`.
+- Verified Webcam Motion Alert System repo: `https://github.com/Atishay9828/Webcam-Alert-App`.
+- Updated `ASSET_REQUIREMENTS.md`, `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, `docs/11_LINK_REGISTRY.md`, `docs/01_CURRENT_STATUS.md`, and `docs/09_AI_HANDOFF.md`.
+
+Status:
+- Global identity/contact assets are no longer Missing, but resume is not repo-local and LinkedIn remains Known rather than Verified.
+- Frontend implementation remains blocked by non-public-ready global assets, missing project diagrams/screenshots/demos, missing role details, missing limitations/failure modes, missing Git remote, and remaining TODO deployment/evidence items.
