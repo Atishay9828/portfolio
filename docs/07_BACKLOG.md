@@ -15,6 +15,9 @@ Date: 2026-06-26
 - [x] Create final featured evidence review.
 - [x] Create screenshot/import plan.
 - [x] Create resume publication plan.
+- [x] Complete first implementation review and hardening pass.
+- [x] Gate Known-but-not-public-ready personal CTAs in the implementation.
+- [x] Capture desktop and mobile screenshot QA for current Astro shell.
 
 ## P1
 
@@ -28,6 +31,7 @@ Date: 2026-06-26
 - [ ] Add role/contribution details per featured project.
 - [ ] Execute Hybrid benchmark/routing table with real or clearly representative examples.
 - [ ] Finalize featured project tradeoff/limitation copy.
+- [ ] Plan Astro/Vitest major dependency upgrade path for audit remediation.
 
 ## P2
 
@@ -35,6 +39,7 @@ Date: 2026-06-26
 - [x] Add structured static data files.
 - [x] Implement static homepage.
 - [x] Implement case study pages.
+- [x] Add hardening tests for featured order, verified links, missing evidence state behavior, required routes/data, and resume CTA gating.
 - [ ] Expand MDX/content collections for long-form case studies.
 
 ## Backlog Rules

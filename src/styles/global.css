@@ -36,6 +36,7 @@ body {
   background-size: 40px 40px;
   color: var(--text-primary);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -63,8 +64,11 @@ button:focus-visible {
 
 .nav-inner,
 .section-inner {
-  width: min(1180px, calc(100% - 40px));
+  width: 100%;
+  max-width: 1180px;
   margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .nav-inner {
@@ -83,6 +87,8 @@ button:focus-visible {
 
 .nav-links {
   display: flex;
+  min-width: 0;
+  max-width: 100%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
@@ -123,6 +129,7 @@ button:focus-visible {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  overflow-wrap: anywhere;
 }
 
 h1,
@@ -131,6 +138,8 @@ h3 {
   font-family: "Space Grotesk", "IBM Plex Sans", system-ui, sans-serif;
   letter-spacing: 0;
   line-height: 1.05;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 h1 {
@@ -153,6 +162,8 @@ h3 {
   max-width: 720px;
   color: var(--text-muted);
   font-size: 1.12rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .identity-line {
@@ -172,6 +183,7 @@ h3 {
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
   font-size: 0.82rem;
   color: var(--text-muted);
+  overflow-wrap: anywhere;
 }
 
 .cta-row {
@@ -183,6 +195,7 @@ h3 {
 
 .button {
   display: inline-flex;
+  min-width: 0;
   min-height: 44px;
   align-items: center;
   justify-content: center;
@@ -191,6 +204,9 @@ h3 {
   padding: 10px 15px;
   text-decoration: none;
   font-weight: 700;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .button.primary {
@@ -295,6 +311,19 @@ h3 {
   padding: 24px;
 }
 
+.hero-grid > *,
+.section-header > *,
+.project-module > *,
+.compact-module > *,
+.case-grid > *,
+.about-grid > *,
+.contact-grid > *,
+.proof-cell,
+.lab-entry,
+.case-panel {
+  min-width: 0;
+}
+
 .project-module:first-child {
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.72fr);
   background: linear-gradient(135deg, rgba(46, 242, 197, 0.08), rgba(17, 20, 23, 0.94) 34%);
@@ -325,6 +354,7 @@ h3 {
 .missing-list,
 .timeline-card p {
   color: var(--text-muted);
+  overflow-wrap: anywhere;
 }
 
 .link-row {
@@ -363,6 +393,17 @@ h3 {
   gap: 20px;
   padding: 18px 0 18px 20px;
   border-left: 2px solid var(--border-strong);
+}
+
+.anchor-item p,
+.proof-cell p,
+.evidence-panel p,
+.compact-module p,
+.lab-entry p,
+.case-panel p,
+.missing-list li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .compact-grid {
@@ -417,7 +458,7 @@ h3 {
 @media (max-width: 860px) {
   .nav-inner,
   .section-inner {
-    width: min(100% - 40px, 1180px);
+    width: 100%;
   }
 
   .nav-inner {
@@ -427,6 +468,7 @@ h3 {
   }
 
   .nav-links {
+    width: 100%;
     justify-content: flex-start;
   }
 
@@ -462,6 +504,39 @@ h3 {
 }
 
 @media (max-width: 560px) {
+  .nav-inner,
+  .section-inner {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .nav-links,
+  .cta-row,
+  .link-row {
+    align-items: stretch;
+  }
+
+  .cta-row .button,
+  .link-row .button {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .nav-links .button {
+    flex: 0 1 auto;
+  }
+
+  .button {
+    max-width: 100%;
+  }
+
+  .anchor-panel,
+  .project-module,
+  .compact-module,
+  .lab-entry,
+  .case-panel {
+    overflow: hidden;
+  }
+
   .proof-grid,
   .lab-grid,
   .capability-grid {
@@ -469,11 +544,22 @@ h3 {
   }
 
   h1 {
-    font-size: 2.45rem;
+    max-width: 100%;
+    font-size: 2rem;
+    line-height: 1.12;
   }
 
   h2 {
     font-size: 1.9rem;
+  }
+
+  h3 {
+    font-size: 1.18rem;
+    line-height: 1.18;
+  }
+
+  .lead {
+    font-size: 1rem;
   }
 }
 

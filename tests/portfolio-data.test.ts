@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { featuredProjects, getProjectBySlug, routes } from "../src/data/projects";
+import { featuredProjects, getProjectBySlug, routes, secondaryProjects } from "../src/data/projects";
 import { links } from "../src/data/links";
 
 describe("portfolio scaffold data", () => {
@@ -20,10 +20,19 @@ describe("portfolio scaffold data", () => {
   });
 
   it("renders only verified public project links as enabled CTAs", () => {
-    for (const project of featuredProjects) {
+    for (const project of [...featuredProjects, ...secondaryProjects]) {
       expect(project.links.every((link) => link.status === "Verified")).toBe(true);
       expect(project.links.every((link) => link.href.startsWith("https://"))).toBe(true);
     }
+  });
+
+  it("does not expose active personal CTAs until links are verified public-ready", () => {
+    expect(links.github.status).toBe("Verified");
+    expect(links.github.href).toBe("https://github.com/Atishay9828/");
+    expect(links.linkedin.status).toBe("Known");
+    expect(links.linkedin.href).toBeUndefined();
+    expect(links.email.status).toBe("Known");
+    expect(links.email.href).toBeUndefined();
   });
 
   it("does not expose a resume CTA until a repo-local public resume exists", () => {
@@ -32,12 +41,14 @@ describe("portfolio scaffold data", () => {
   });
 
   it("defines static routes for the homepage and featured case-study shells", () => {
-    expect(routes).toEqual([
-      "/",
-      "/projects/mahoraga",
-      "/projects/hybrid-categorizer",
-      "/projects/the-loop",
-    ]);
+    expect(routes).toEqual(["/", ...featuredProjects.map((project) => `/projects/${project.slug}`)]);
     expect(getProjectBySlug("the-loop")?.title).toBe("The Loop");
+  });
+
+  it("keeps missing proof explicit for every featured project", () => {
+    for (const project of featuredProjects) {
+      expect(project.missingProof.length).toBeGreaterThan(0);
+      expect(project.roleStatus).toContain("Needed");
+    }
   });
 });

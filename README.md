@@ -1,17 +1,17 @@
 # AJ Portfolio Repository
 
-This repository is the source of truth for AJ's portfolio project and now contains the conservative Astro static scaffold.
+This repository is the source of truth for AJ's portfolio project and contains the conservative Astro static scaffold plus the first implementation hardening pass.
 
 The portfolio positions AJ as:
 
 - Primary identity: AI Systems Engineer
 - Secondary identity: Product Engineer
 
-The site is not implemented yet. This repo currently contains planning, architecture, design, content, risk, evidence, and handoff documentation that must guide the eventual implementation.
+The site is implemented as an evidence-safe static shell. This repo also contains the planning, architecture, design, content, risk, evidence, and handoff documentation that must guide future implementation.
 
 ## Current Phase
 
-Astro static scaffold complete; evidence hardening continues before production-ready UI polish.
+Astro static scaffold and first implementation hardening pass complete; evidence hardening continues before production-ready UI polish.
 
 The current implementation is a conservative static content shell backed by the evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, and benchmark/workflow evidence are complete.
 
@@ -57,13 +57,17 @@ Created:
 - Data-driven homepage sections.
 - Static featured project case-study shells.
 - Evidence-safe pending visual panels for missing assets.
-- Tests for featured ordering, verified links, resume gating, and route definitions.
+- Tests for featured ordering, verified links, missing evidence states, resume gating, and route definitions.
+- Desktop and mobile screenshot QA under `docs/reviews/screenshots/`.
+- Public CTA gating for Known-but-not-public-ready LinkedIn, email, and resume assets.
 
 Still blocked:
 - Public resume CTA until a final PDF exists under `public/resume/`.
+- LinkedIn and email CTAs until they are verified/confirmed public-ready.
 - Production visual polish until screenshots, demos, and diagram render/mobile QA are complete.
 - Hybrid latency/cost claims until benchmark/routing evidence is executed.
 - Ownership/role claims until contribution details are documented.
+- Audit remediation until Astro/Vitest major dependency upgrades are planned and tested.
 
 ## Read First
 

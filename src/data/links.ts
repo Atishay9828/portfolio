@@ -3,6 +3,7 @@ export type EvidenceStatus = "Verified" | "Known" | "Needed" | "Missing" | "Not 
 export type LinkRecord = {
   label: string;
   href?: string;
+  referenceHref?: string;
   status: EvidenceStatus;
   note: string;
 };
@@ -16,13 +17,13 @@ export const links: Record<string, LinkRecord> = {
   },
   linkedin: {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/atishay9828/",
+    referenceHref: "https://www.linkedin.com/in/atishay9828/",
     status: "Known",
     note: "Provided, but automated verification was blocked by LinkedIn HTTP 999.",
   },
   email: {
     label: "Email",
-    href: "mailto:ajain8_be23@thapar.edu",
+    referenceHref: "mailto:ajain8_be23@thapar.edu",
     status: "Known",
     note: "Preferred public email still needs confirmation before launch.",
   },

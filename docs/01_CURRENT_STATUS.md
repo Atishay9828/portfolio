@@ -4,9 +4,16 @@ Date: 2026-06-26
 
 ## Current Phase
 
-Astro static scaffold created; evidence hardening continues before production-ready UI polish.
+Astro static scaffold created and first implementation hardening pass completed; evidence hardening continues before production-ready UI polish.
 
 The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
+
+First implementation review status:
+- Architecture remains clean enough for the next milestone: project/link/evidence data is centralized, route definitions are data-driven, and homepage/case-study rendering is separated into section/project components.
+- Known-but-not-public-ready personal CTAs are no longer active links. GitHub remains active because it is Verified; LinkedIn, email, and resume are rendered as pending until verification/publication is complete.
+- Responsive CSS was hardened for mobile wrapping and viewport clipping without changing the site structure or adding motion.
+- Screenshot QA was captured under `docs/reviews/screenshots/` for desktop and mobile views.
+- `npm audit` currently reports 17 vulnerabilities: 14 moderate, 2 high, and 1 critical. Direct dependencies are affected (`@astrojs/check`, `@astrojs/mdx`, `astro`, `vitest`), but available fixes require major version changes, so no automatic fix was applied.
 
 ## Frontend Implementation Allowed?
 
@@ -37,6 +44,9 @@ Reason:
 | Hybrid benchmark/routing evidence | Planned | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; measured latency/cost/routing examples are still Needed. |
 | The Loop workflow walkthrough | Known | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots remain Needed. |
 | Astro static scaffold | Verified | Homepage and `/projects/mahoraga`, `/projects/hybrid-categorizer`, `/projects/the-loop` build successfully. Verified locally on 2026-06-26 with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`. |
+| First implementation hardening pass | Verified | Evidence-gating, test coverage, responsive CSS hardening, screenshot QA, and dependency audit completed on 2026-06-26. |
+| Dependency audit | Known | `npm audit` reports 17 vulnerabilities; safe non-breaking fixes are not clearly available because fixes require major dependency changes. |
+| Screenshot QA | Verified | Desktop and mobile screenshots exist in `docs/reviews/screenshots/`; Edge headless was used because Chrome headless failed with a GPU-process error. |
 
 ## Verified Evidence Links
 
@@ -65,7 +75,9 @@ Evidence import and case-study hardening after the static scaffold.
 
 Completion criteria:
 - Copy final resume PDF into repo/public assets and manually verify LinkedIn before public resume/contact CTAs.
+- Confirm preferred public email before enabling email CTA.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
 - Add featured project role/contribution details, portfolio-local screenshots, and demos.
 - Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.
+- Plan dependency major-version upgrades separately from evidence/content hardening.
 - Update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md`.

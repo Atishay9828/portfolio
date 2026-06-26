@@ -4,11 +4,17 @@ Date: 2026-06-26
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold plus a first implementation hardening pass. The strategy is strong and should not be redesigned.
 
 The repository now has a continuity system under `docs/00..17`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, The Loop workflow walkthrough, and resume publication plan.
 
 Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
+
+First hardening pass status:
+- Project/link/evidence data remains centralized and routes are data-driven.
+- Known-but-not-public-ready personal CTAs are gated in the UI: LinkedIn, email, and resume are pending rather than active links.
+- Desktop and mobile screenshot QA exists under `docs/reviews/screenshots/`.
+- `npm audit` reports 17 vulnerabilities; available fixes require major dependency upgrades, so no automatic fix was applied.
 
 ## Completed Work
 
@@ -31,6 +37,11 @@ Limited Astro static scaffolding has been completed for the homepage and three f
 - Static homepage implemented in the locked proof-first order.
 - Static case-study shells created for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop.
 - Evidence-safe pending visual panels are used instead of fake screenshots, fake dashboards, fake metrics, or invented links.
+- First implementation review and hardening pass completed on 2026-06-26.
+- Personal CTAs hardened so only Verified GitHub is active; LinkedIn, email, and resume remain pending.
+- Mobile wrapping/responsiveness hardened without redesigning the layout.
+- Screenshot QA captured for the homepage and all three case-study routes at desktop and mobile widths.
+- Dependency audit run with `npm audit`; results recorded as 14 moderate, 2 high, and 1 critical vulnerabilities.
 - Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
 
 ## Missing Work
@@ -45,6 +56,7 @@ Limited Astro static scaffolding has been completed for the homepage and three f
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
 - Execute Hybrid benchmark/routing table with real or clearly representative examples.
 - Add concrete design token values for typography, breakpoints, focus rings, and z-index.
+- Plan and test major dependency upgrades needed to remediate current audit findings.
 
 ## Current Blockers
 
@@ -52,6 +64,7 @@ Limited Astro static scaffolding has been completed for the homepage and three f
 - Featured project evidence is improved but incomplete; diagram review and limitation notes are Known, while screenshots/demos, role details, final rendered diagram QA, and deeper proof artifacts remain incomplete.
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - Website scaffold exists, but it is a conservative static shell only.
+- Current dependency audit has unresolved vulnerabilities because remediation requires major version changes.
 
 ## Known Risks
 
@@ -61,10 +74,35 @@ Limited Astro static scaffolding has been completed for the homepage and three f
 - The Loop must remain featured to prevent AI-only tunnel vision.
 - Fake screenshots, fake dashboards, fake metrics, or placeholder links would damage trust.
 - Motion can hurt recruiter efficiency if added before static content is strong.
+- Major dependency upgrades can break Astro integration behavior and should be handled as a separate tested milestone.
 
 ## Next Recommended Task
 
-Import or capture portfolio-local screenshots/demos, add role/contribution details, execute Hybrid benchmark/routing evidence, copy the final resume PDF into repo/public assets, manually verify LinkedIn, then harden the case-study pages.
+Import or capture portfolio-local screenshots/demos, add role/contribution details, execute Hybrid benchmark/routing evidence, copy the final resume PDF into repo/public assets, manually verify LinkedIn, confirm the public email, then harden the case-study pages.
+
+## Screenshot QA
+
+Captured files:
+- `docs/reviews/screenshots/homepage-desktop.png`
+- `docs/reviews/screenshots/mahoraga-desktop.png`
+- `docs/reviews/screenshots/hybrid-categorizer-desktop.png`
+- `docs/reviews/screenshots/the-loop-desktop.png`
+- `docs/reviews/screenshots/homepage-mobile.png`
+- `docs/reviews/screenshots/mahoraga-mobile.png`
+- `docs/reviews/screenshots/hybrid-categorizer-mobile.png`
+- `docs/reviews/screenshots/the-loop-mobile.png`
+
+Capture notes:
+- Microsoft Edge headless succeeded with GPU/software-rasterizer disable flags.
+- Chrome headless failed earlier with `GPU process isn't usable`; do not treat that as a site failure.
+
+## Dependency Audit
+
+`npm audit` result on 2026-06-26:
+- Total vulnerabilities: 17.
+- Severity: 14 moderate, 2 high, 1 critical.
+- Direct dependencies affected: `@astrojs/check`, `@astrojs/mdx`, `astro`, and `vitest`.
+- Safe non-breaking fixes: none clearly available. Reported fixes require major dependency changes, so `npm audit fix --force` was not run.
 
 ## Featured Project Evidence Pack
 

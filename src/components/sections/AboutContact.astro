@@ -29,8 +29,8 @@ import { links } from "../../data/links";
     <div class="case-panel">
       <div class="link-row">
         {links.github.href && <a class="button secondary" href={links.github.href}>GitHub</a>}
-        {links.linkedin.href && <a class="button secondary" href={links.linkedin.href}>LinkedIn</a>}
-        {links.email.href && <a class="button secondary" href={links.email.href}>Email</a>}
+        <span class="button disabled" aria-disabled="true" title={links.linkedin.note}>LinkedIn pending</span>
+        <span class="button disabled" aria-disabled="true" title={links.email.note}>Email pending</span>
         <span class="button disabled" aria-disabled="true">Resume pending</span>
       </div>
     </div>
