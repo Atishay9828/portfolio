@@ -9,7 +9,7 @@ Purpose:
 
 ## Status Meanings
 
-- Known: link or artifact was provided in planning context but not checked in this repo session.
+- Known: link or artifact was provided, discovered in a verified source, or created as a repo spec, but is not final public-ready portfolio evidence.
 - Verified: link or artifact was checked and confirmed usable.
 - Missing: explicitly absent or not provided anywhere.
 - Needed: must be created.
@@ -28,8 +28,10 @@ Verified links:
 
 Evidence status:
 - Links: Verified.
-- Local screenshots/videos/diagrams: Needed.
-- Metrics: Needed.
+- Diagram specs: Known.
+- Repo-contained screenshot/metrics candidates: Known, not portfolio-local.
+- Local demo media: Needed.
+- Metrics: Known in external repo, not selected or reviewed for portfolio.
 
 Required assets:
 - Architecture diagram.
@@ -41,18 +43,20 @@ Required assets:
 
 Missing assets:
 - Local demo media.
-- Architecture diagram.
-- Reward-system visualization.
-- Training/evaluation artifact.
-- Failure-mode note.
+- Portfolio-local screenshot/media selection.
+- Final reviewed training/evaluation artifact.
+- Role/contribution detail.
+- Final tradeoff note.
 
 Verification notes:
 - GitHub repo loads as public repo `Atishay9828/meta_Mahoraga`.
 - Kaggle `/edit` URL loads via GET as notebook title `MEta_Mahoraga` and canonicalizes to `/code/atishay9828/meta-mahoraga`; HEAD returned 404, so use GET/browser verification for this link.
-- HuggingFace API confirms public Space titled `Mahoraga — Adaptive Combat RL Environment`; runtime was `SLEEPING`, so visitors may experience a cold start.
+- HuggingFace API confirms public Space titled `Mahoraga - Adaptive Combat RL Environment`; runtime was `SLEEPING`, so visitors may experience a cold start.
+- Created diagram/spec files: `docs/diagrams/mahoraga-architecture.md` and `docs/diagrams/mahoraga-reward-system.md`.
+- Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 
 Can be shown publicly yet:
-- Partially. Verified links can be referenced, but the project is not ready for full featured presentation until diagrams, screenshots/demo media, role details, and failure-mode notes are created.
+- Partially. Verified links and Known diagram specs can be referenced during implementation planning, but the project is not ready for full featured presentation until diagrams are visually reviewed and demo media, selected screenshots/metrics, role details, and final tradeoff copy are ready.
 
 ### Hybrid GenAI Transaction Categorizer
 
@@ -66,7 +70,9 @@ Evidence status:
 - Walkthrough: Verified.
 - Repo link: Verified.
 - Deployment link: Missing.
-- Diagrams/screenshots/benchmarks: Needed.
+- Diagram specs: Known.
+- Repo-contained screenshots: Known, not portfolio-local.
+- Benchmarks/routing table: Needed.
 
 Required assets:
 - Repo link.
@@ -81,16 +87,21 @@ Required assets:
 
 Missing assets:
 - Deployment link.
-- Architecture/routing diagrams.
-- Screenshots.
 - Benchmarks.
+- Portfolio-local screenshots.
+- Routing decision table.
+- Role/contribution detail.
+- Final tradeoff note.
 
 Verification notes:
 - Short URL redirects to YouTube watch URL and oEmbed title is `Hybrid GenAI Transaction Categorization | Full Project Demo + Architecture Explained`.
 - GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`.
+- Created diagram/spec files: `docs/diagrams/hybrid-categorizer-routing.md` and `docs/diagrams/hybrid-categorizer-memory.md`.
+- Repo contains screenshot candidates under `frontend/public/screenshots/`; these are Known but not portfolio-local.
+- Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 
 Can be shown publicly yet:
-- Partially. Verified walkthrough and repo can be referenced, but full featured presentation remains blocked by missing deployment link, diagrams, screenshots, benchmark/routing evidence, and limitation notes.
+- Partially. Verified walkthrough, repo, and Known diagram specs can be referenced during implementation planning, but full featured presentation remains blocked by missing deployment status, portfolio-local screenshots, benchmark/routing evidence, role detail, and final tradeoff copy.
 
 ### The Loop
 
@@ -103,7 +114,9 @@ Verified links:
 Evidence status:
 - Deployment: Verified.
 - Repo link: Verified.
-- Product screenshots and diagrams: Needed.
+- Diagram specs: Known.
+- Repo-contained product screenshot candidates: Known, not portfolio-local.
+- Product workflow walkthrough: Needed.
 
 Required assets:
 - Repo link.
@@ -116,16 +129,21 @@ Required assets:
 - Role/contribution details.
 
 Missing assets:
-- Screenshots.
-- Diagrams.
+- Portfolio-local screenshots.
+- User workflow walkthrough.
 - Demo/walkthrough.
+- Role/contribution detail.
+- Final tradeoff note.
 
 Verification notes:
 - Render deployment loads with page title `The Loop`.
 - GitHub API confirms public repo `Atishay9828/TIET-LOOP`.
+- Created diagram/spec files: `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, and `docs/diagrams/the-loop-auth-flow.md`.
+- Repo contains screenshot candidates under `assets/`; these are Known but not portfolio-local.
+- Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 
 Can be shown publicly yet:
-- Partially. Verified deployment and repo can be referenced, but full featured presentation remains blocked by missing screenshots, diagrams, role details, and limitation notes.
+- Partially. Verified deployment, repo, and Known diagram specs can be referenced during implementation planning, but full featured presentation remains blocked by portfolio-local screenshots, workflow walkthrough, role details, and final tradeoff copy.
 
 ## Secondary Projects
 

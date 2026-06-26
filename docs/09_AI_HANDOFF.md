@@ -24,6 +24,7 @@ Frontend implementation is not allowed yet.
 - Link registry created.
 - Known external evidence links verified on 2026-06-26.
 - Global identity/contact links and additional project repo links recorded on 2026-06-26.
+- Featured project evidence pack and Mermaid/spec diagram files created on 2026-06-26.
 
 ## Missing Work
 
@@ -31,17 +32,19 @@ Frontend implementation is not allowed yet.
 - Choose final resume PDF and copy it into repo/public assets.
 - Manually verify LinkedIn in browser.
 - Confirm preferred public email.
-- Create featured project architecture diagrams.
+- Visually review featured project architecture diagrams.
 - Collect screenshots/demos.
 - Add role/contribution details for featured and secondary projects.
-- Add limitations/failure modes for featured projects.
+- Finalize limitations/failure modes and tradeoff copy for featured projects.
+- Add Hybrid benchmark/routing table.
+- Add The Loop user workflow walkthrough.
 - Add concrete design token values for typography, breakpoints, focus rings, and z-index.
 
 ## Current Blockers
 
 - No Git remote is configured.
 - Global contact assets are Known/Verified but not fully public-ready.
-- Featured project evidence is incomplete.
+- Featured project evidence is improved but incomplete; diagram specs and limitation notes are Known, while screenshots/demos, role details, and deeper proof artifacts remain incomplete.
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - No website scaffold exists.
 
@@ -56,7 +59,19 @@ Frontend implementation is not allowed yet.
 
 ## Next Recommended Task
 
-Copy the final resume PDF into repo/public assets, manually verify LinkedIn, add remaining deployment/evidence links where available, and create the featured project evidence artifacts needed for credible case studies.
+Review the created featured-project diagram specs, import or capture portfolio-local screenshots/demos, add role/contribution details, create Hybrid benchmark/routing evidence, write The Loop workflow walkthrough, copy the final resume PDF into repo/public assets, and manually verify LinkedIn.
+
+## Featured Project Evidence Pack
+
+- Evidence pack: `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`
+- Mahoraga diagrams: `docs/diagrams/mahoraga-architecture.md`, `docs/diagrams/mahoraga-reward-system.md`
+- Hybrid diagrams: `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md`
+- The Loop diagrams: `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, `docs/diagrams/the-loop-auth-flow.md`
+
+Status:
+- Diagram/spec files are Known and need visual review.
+- Repo-contained screenshots/assets are Known and need portfolio-local selection or import.
+- Limitation notes are drafted and need final case-study copy review.
 
 ## Verified Links
 
@@ -97,5 +112,5 @@ Verification caveats:
 ## Exact Next Prompt Recommendation
 
 ```text
-Do not implement the website yet. Make global assets public-ready by copying the final resume PDF into repo/public assets, manually verifying LinkedIn, and confirming the public email. Then create role/contribution details, limitations/failure modes, screenshots/demos, and architecture diagrams for Mahoraga, Hybrid Categorizer, and The Loop. Update ASSET_REQUIREMENTS.md, docs/01_CURRENT_STATUS.md, docs/06_ASSET_TRACKER.md, docs/08_PROGRESS_LOG.md, docs/09_AI_HANDOFF.md, docs/10_PROJECT_EVIDENCE_REGISTRY.md, and docs/11_LINK_REGISTRY.md. Commit locally. Do not push unless a remote exists.
+Do not implement the website yet. Review the featured-project Mermaid/spec diagrams, select or import portfolio-local screenshots/demos, add role/contribution details, create Hybrid benchmark/routing evidence, write The Loop workflow walkthrough, copy the final resume PDF into repo/public assets, manually verify LinkedIn, and confirm the public email. Update ASSET_REQUIREMENTS.md, docs/01_CURRENT_STATUS.md, docs/06_ASSET_TRACKER.md, docs/08_PROGRESS_LOG.md, docs/09_AI_HANDOFF.md, docs/10_PROJECT_EVIDENCE_REGISTRY.md, and docs/11_LINK_REGISTRY.md. Commit locally. Do not push unless a remote exists.
 ```

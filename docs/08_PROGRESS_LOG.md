@@ -62,7 +62,7 @@ Verification notes:
 
 Status:
 - Known project evidence links are now Verified.
-- Frontend implementation remains blocked by non-public-ready global assets, missing project diagrams/screenshots/demos, missing role details, missing limitations/failure modes, missing Git remote, and remaining TODO deployment/evidence items.
+- Frontend implementation remains blocked by non-public-ready global assets, missing screenshots/demos, missing role details, missing deeper proof artifacts, missing Git remote, and remaining TODO deployment/evidence items.
 
 ### 2026-06-26 Identity and Repo Evidence Update
 
@@ -79,4 +79,20 @@ Completed:
 
 Status:
 - Global identity/contact assets are no longer Missing, but resume is not repo-local and LinkedIn remains Known rather than Verified.
-- Frontend implementation remains blocked by non-public-ready global assets, missing project diagrams/screenshots/demos, missing role details, missing limitations/failure modes, missing Git remote, and remaining TODO deployment/evidence items.
+- Frontend implementation remains blocked by non-public-ready global assets, missing screenshots/demos, missing role details, missing deeper proof artifacts, missing Git remote, and remaining TODO deployment/evidence items.
+
+### 2026-06-26 Featured Project Evidence Pack
+
+Completed:
+- Created `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
+- Created Mahoraga diagram specs: `docs/diagrams/mahoraga-architecture.md` and `docs/diagrams/mahoraga-reward-system.md`.
+- Created Hybrid Categorizer diagram specs: `docs/diagrams/hybrid-categorizer-routing.md` and `docs/diagrams/hybrid-categorizer-memory.md`.
+- Created The Loop diagram specs: `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, and `docs/diagrams/the-loop-auth-flow.md`.
+- Fixed stale Mahoraga wording so HuggingFace remains Verified while local demo media remains Needed.
+- Added limitation notes for all three featured projects.
+- Updated asset tracker, evidence registry, current status, backlog, and AI handoff.
+
+Status:
+- Diagram specs are Known, not Verified final frontend assets.
+- Repo-contained screenshot/metric candidates are Known, not portfolio-local.
+- Frontend implementation remains blocked by visual review, portfolio-local screenshots/demos, role/contribution details, Hybrid benchmark/routing evidence, The Loop workflow walkthrough, Git remote, and public-ready global assets.

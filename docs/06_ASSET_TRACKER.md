@@ -20,9 +20,9 @@ Link registry:
 | Area | Known | Verified | Missing | Needed | Public-ready? |
 |---|---:|---:|---:|---:|---|
 | Global contact assets | 3 | 1 | 0 | 3 | No |
-| Mahoraga | 0 | 3 | 0 | 6 | No |
-| Hybrid Categorizer | 0 | 2 | 1 | 6 | No |
-| The Loop | 0 | 2 | 0 | 6 | No |
+| Mahoraga | 5 | 3 | 0 | 1 | No |
+| Hybrid Categorizer | 4 | 2 | 1 | 2 | No |
+| The Loop | 5 | 2 | 0 | 2 | No |
 | AI Resume Tailoring Engine | 0 | 1 | 2 | 4 | No |
 | Webcam Motion Alert System | 0 | 1 | 1 | 4 | No |
 | Lab projects | 0 | 0 | 4 | 4 | No |
@@ -54,6 +54,14 @@ Link registry:
 | Open Graph image | Needed | Recommended | Create after visual direction is stable. |
 | Favicon/AJ monogram | Needed | Recommended | Create before deployment. |
 
+## Featured Project Evidence Pack
+
+| Project | Evidence added | Status | Next action |
+|---|---|---|---|
+| Mahoraga | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/diagrams/mahoraga-architecture.md`, `docs/diagrams/mahoraga-reward-system.md` | Known | Review diagrams visually, choose local media/assets, add role/contribution detail. |
+| Hybrid GenAI Transaction Categorizer | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md` | Known | Review diagrams visually, select screenshots, add benchmark/routing table. |
+| The Loop | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, `docs/diagrams/the-loop-auth-flow.md` | Known | Review diagrams visually, select screenshots, add workflow walkthrough and role detail. |
+
 ## Featured Project Asset Gate
 
 Do not build public final project CTAs until each featured project has:
@@ -70,6 +78,7 @@ Do not build public final project CTAs until each featured project has:
 1. Choose final resume PDF and move it into the repo/public asset path.
 2. Manually verify LinkedIn in browser and confirm public email preference.
 3. Add remaining deployment links where marked TODO.
-4. Create diagrams for Mahoraga, Hybrid Categorizer, and The Loop.
-5. Collect screenshots/demos.
-6. Add role/contribution details and limitations/failure modes.
+4. Visually review created Mermaid/spec diagrams and decide which become homepage thumbnails.
+5. Collect or import screenshots/demos.
+6. Add role/contribution details and final tradeoff copy.
+7. Create Hybrid benchmark/routing table and The Loop workflow walkthrough.

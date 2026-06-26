@@ -15,7 +15,7 @@ Purpose:
 
 ## Status Values
 
-- Known: link or artifact was provided in planning context but not checked in this repo session.
+- Known: link or artifact was provided, discovered in a verified source, or created as a repo spec, but is not final public-ready portfolio evidence.
 - Verified: link or artifact was checked and confirmed usable.
 - Missing: explicitly absent or not provided anywhere.
 - Needed: must be created.
@@ -46,12 +46,12 @@ Purpose:
 | GitHub repo | Required | Verified | `https://github.com/Atishay9828/meta_Mahoraga`; loads as public GitHub repo `Atishay9828/meta_Mahoraga`. Verified 2026-06-26. |
 | Kaggle notebook | Recommended | Verified | `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit`; GET loads Kaggle notebook title `MEta_Mahoraga` and canonical notebook URL. Verified 2026-06-26. |
 | HuggingFace demo | Recommended | Verified | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga`; API confirms public Space titled `Mahoraga — Adaptive Combat RL Environment`. Verified 2026-06-26. |
-| Demo GIF or video | Required | Needed | 60-second behavior demo preferred; HuggingFace link is Known but no local demo asset is present. |
-| Architecture diagram | Required | Needed | Show environment, reward, agent, API, UI. |
-| Reward-system visualization | Required | Needed | Needed to frame adaptive behavior. |
-| Training timeline or metrics chart | Required | Needed | Use only documented metrics. |
-| Failure mode or limitation note | Required | Needed | Prevents overclaiming. |
-| Project screenshot | Recommended | Needed | Useful if UI is real and polished. |
+| Demo GIF or video | Required | Needed | 60-second behavior demo preferred; HuggingFace demo is Verified, but no local GIF/video asset is present. |
+| Architecture diagram | Required | Known | `docs/diagrams/mahoraga-architecture.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
+| Reward-system visualization | Required | Known | `docs/diagrams/mahoraga-reward-system.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
+| Training timeline or metrics chart | Required | Known | External repo contains `docs/training_metrics.png`; not copied into portfolio and not visually reviewed. Use only documented metrics. |
+| Failure mode or limitation note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
+| Project screenshot | Recommended | Known | External repo contains dashboard/screenshot candidates; not copied into portfolio and not visually reviewed. |
 | Deployment link | Optional | Not applicable | HuggingFace demo is tracked separately. |
 
 ## Hybrid GenAI Transaction Categorizer
@@ -61,12 +61,12 @@ Purpose:
 | YouTube walkthrough | Required | Verified | `https://youtu.be/fsTXVh9JpoE`; redirects to YouTube watch page and oEmbed title is `Hybrid GenAI Transaction Categorization | Full Project Demo + Architecture Explained`. Verified 2026-06-26. |
 | Repo link | Required | Verified | `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization`; GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`. Verified 2026-06-26. |
 | Deployment link | Recommended | Missing | TODO. |
-| Confidence-routing diagram | Required | Needed | Core proof for AI systems architecture. |
-| Merchant memory visualization | Required | Needed | Needed to show memory behavior. |
+| Confidence-routing diagram | Required | Known | `docs/diagrams/hybrid-categorizer-routing.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
+| Merchant memory visualization | Required | Known | `docs/diagrams/hybrid-categorizer-memory.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
 | Latency comparison benchmark | Required | Needed | ONNX path vs LLM fallback path if measurable. |
 | Routing decision table | Required | Needed | Use real or representative transactions, clearly labeled. |
-| UI screenshots | Required | Needed | Main workflow and analytics/history views. |
-| Limitation/failure-mode note | Required | Needed | Include low-confidence and bad-output behavior. |
+| UI screenshots | Required | Known | External repo contains prediction, categories, history, and memory screenshots; not copied into portfolio and not visually reviewed. |
+| Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
 ## The Loop
 
@@ -74,13 +74,13 @@ Purpose:
 |---|---|---|---|
 | Deployment link | Required | Verified | `https://the-loop-5m7u.onrender.com/`; loads Render deployment with page title `The Loop`. Verified 2026-06-26. |
 | Repo link | Required | Verified | `https://github.com/Atishay9828/TIET-LOOP`; GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. |
-| Product screenshots | Required | Needed | Include primary workflow and mobile view. |
-| Database diagram | Required | Needed | Show users, events, interests, RSVPs, chat, recommendations. |
-| WebSocket architecture diagram | Required | Needed | Show real-time communication flow. |
-| Auth flow diagram | Required | Needed | OAuth/JWT boundary. |
+| Product screenshots | Required | Known | External repo contains `assets/landing_page.jpg` and `assets/interest_selection.png`; not copied into portfolio and not visually reviewed. |
+| Database diagram | Required | Known | `docs/diagrams/the-loop-system.md` includes documented database tables and system boundaries; needs visual review before frontend implementation. |
+| WebSocket architecture diagram | Required | Known | `docs/diagrams/the-loop-realtime-flow.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
+| Auth flow diagram | Required | Known | `docs/diagrams/the-loop-auth-flow.md` exists as a Mermaid/spec file; needs visual review before frontend implementation. |
 | User workflow walkthrough | Required | Needed | Show event coordination path. |
 | Demo video or GIF | Recommended | Needed | End-to-end product flow. |
-| Limitation/failure-mode note | Required | Needed | Include disconnects, auth errors, or recommendation limits. |
+| Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
 ## AI Resume Tailoring Engine
 
@@ -133,9 +133,9 @@ Purpose:
 | Area | Required Items | Known | Verified | Missing/Needed | Completion |
 |---|---:|---:|---:|---:|---:|
 | Global identity/contact | 4 | 3 | 1 | 0 | 100% required Known/Verified; public-ready after repo-local resume and LinkedIn verification |
-| Mahoraga | 6 | 0 | 1 required, 3 links total | 5 | 17% required verified; 3 links verified |
-| Hybrid Categorizer | 7 | 0 | 2 | 5 | 29% required verified |
-| The Loop | 7 | 0 | 2 | 5 | 29% required verified |
+| Mahoraga | 6 | 5 | 1 required, 3 links total | 1 | Diagrams/notes Known; demo media still Needed |
+| Hybrid Categorizer | 7 | 4 | 2 | 2 plus 1 missing deployment | Diagrams/screenshots/notes Known; benchmarks and routing table still Needed |
+| The Loop | 7 | 5 | 2 | 2 | Diagrams/screenshots/notes Known; workflow walkthrough and demo media still Needed |
 | Secondary projects | 10 | 0 | 2 | 8 | 20% required verified |
 | Lab projects | 8 | 0 | 0 | 8 | 0% |
 
