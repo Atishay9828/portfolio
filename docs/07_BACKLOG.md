@@ -28,7 +28,9 @@ Date: 2026-06-26
 - [ ] Render and mobile-QA selected Mermaid diagrams.
 - [ ] Add concrete design tokens.
 - [x] Import first portfolio-local candidate visuals from verified external repos.
-- [ ] Visually review imported candidate visuals and replace weak/low-resolution assets.
+- [x] Visually review imported candidate visuals.
+- [ ] Replace weak/mismatched imported assets.
+- [ ] Redact or sample-label Hybrid transaction screenshots before public polish.
 - [ ] Collect remaining portfolio-local screenshots/demos.
 - [ ] Add role/contribution details per featured project.
 - [ ] Execute Hybrid benchmark/routing table with real or clearly representative examples.

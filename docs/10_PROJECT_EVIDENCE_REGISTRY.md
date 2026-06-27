@@ -30,7 +30,7 @@ Evidence status:
 - Links: Verified.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; reward-system diagram is Ready, architecture diagram needs revision.
-- Imported screenshot/metrics candidates: Known portfolio-local files under `public/assets/projects/mahoraga/`; still need final visual review.
+- Imported screenshot/metrics candidates: Known portfolio-local files under `public/assets/projects/mahoraga/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Local demo media: Needed.
 - Metrics: Known in external repo, not selected or reviewed for portfolio.
 
@@ -44,7 +44,7 @@ Required assets:
 
 Missing assets:
 - Local demo media.
-- Final visual review of imported screenshot/media candidates.
+- Demo media, final training/evaluation interpretation, and role/contribution detail.
 - Final reviewed training/evaluation artifact.
 - Role/contribution detail.
 - Final tradeoff note.
@@ -56,6 +56,7 @@ Verification notes:
 - Created diagram/spec files: `docs/diagrams/mahoraga-architecture.md` and `docs/diagrams/mahoraga-reward-system.md`.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md` and `docs/14_SCREENSHOT_IMPORT_PLAN.md`.
+- Imported asset review added `docs/18_IMPORTED_ASSET_REVIEW.md`; `dashboard_preview.png` is homepage-approved, `stitch_aero_screenshot.png` is case-study-only, and `training_metrics.png` remains Candidate only.
 
 Can be shown publicly yet:
 - Partially. Verified links, conservative copy, and the reward-system diagram can support a first static homepage section, but full featured presentation remains blocked by architecture diagram revision, rendered/mobile diagram QA, demo media, selected screenshots/metrics, role details, and final tradeoff copy.
@@ -74,7 +75,7 @@ Evidence status:
 - Deployment link: Missing.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
-- Imported screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; still need final visual/privacy review.
+- Imported screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Measured benchmarks/routing table: Needed.
 
@@ -92,7 +93,7 @@ Required assets:
 Missing assets:
 - Deployment link.
 - Benchmarks.
-- Final visual/privacy review of imported screenshots.
+- Screenshot replacements/redaction/sample labeling based on `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Routing decision table.
 - Role/contribution detail.
 - Final tradeoff note.
@@ -104,6 +105,7 @@ Verification notes:
 - Repo contains screenshot candidates under `frontend/public/screenshots/`; these are Known but not portfolio-local.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
+- Imported asset review found `predict.png` is not prediction flow, `memory.png` is not merchant-memory proof, and transaction-detail screenshots need redaction/sample labeling.
 
 Can be shown publicly yet:
 - Partially. Verified walkthrough, repo, and conservative routing copy can support a first static homepage section, but full featured presentation remains blocked by missing deployment status, portfolio-local screenshots, measured benchmark/routing evidence, diagram revisions, role detail, and final tradeoff copy.
@@ -121,7 +123,7 @@ Evidence status:
 - Repo link: Verified.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, system diagram needs revision.
-- Imported product screenshot candidates: Known portfolio-local files under `public/assets/projects/the-loop/`; still incomplete and need review.
+- Imported product screenshot candidates: Known portfolio-local files under `public/assets/projects/the-loop/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots still Needed.
 
 Required assets:
@@ -135,7 +137,7 @@ Required assets:
 - Role/contribution details.
 
 Missing assets:
-- Final visual review of imported screenshots plus missing workflow screenshots.
+- Replace low-resolution landing image and capture missing workflow screenshots.
 - User workflow walkthrough.
 - Demo/walkthrough.
 - Role/contribution detail.
@@ -148,6 +150,7 @@ Verification notes:
 - Repo contains screenshot candidates under `assets/`; these are Known but not portfolio-local.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`.
+- Imported asset review marks `landing_page.jpg` Replace before polish and `interest_selection.png` Approved for case study only.
 
 Can be shown publicly yet:
 - Partially. Verified deployment, repo, workflow walkthrough, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by portfolio-local screenshots, system diagram revision, rendered/mobile diagram QA, role details, and final tradeoff copy.

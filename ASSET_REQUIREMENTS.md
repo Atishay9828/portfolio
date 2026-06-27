@@ -12,6 +12,7 @@ Source documents:
 - `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`
 - `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`
 - `docs/17_RESUME_PUBLICATION_PLAN.md`
+- `docs/18_IMPORTED_ASSET_REVIEW.md`
 
 Purpose:
 - Track every asset required to make the portfolio credible.
@@ -55,9 +56,9 @@ Purpose:
 | Demo GIF or video | Required | Needed | 60-second behavior demo preferred; HuggingFace demo is Verified, but no local GIF/video asset is present. |
 | Architecture diagram | Required | Known | `docs/diagrams/mahoraga-architecture.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
 | Reward-system visualization | Required | Known | `docs/diagrams/mahoraga-reward-system.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
-| Training timeline or metrics chart | Required | Known | Imported to `public/assets/projects/mahoraga/training_metrics.png` from the verified repo; needs visual review and interpretation before metric claims. |
+| Training timeline or metrics chart | Required | Known | Imported to `public/assets/projects/mahoraga/training_metrics.png` from the verified repo; visual review marks it Candidate only and metric claims remain blocked until methodology/evaluation limits are documented. |
 | Failure mode or limitation note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
-| Project screenshot | Recommended | Known | Imported candidates: `public/assets/projects/mahoraga/dashboard_preview.png` and `public/assets/projects/mahoraga/stitch_aero_screenshot.png`; both need final visual review. |
+| Project screenshot | Recommended | Known | Visual review approves `dashboard_preview.png` for homepage/case-study use and `stitch_aero_screenshot.png` for case-study-only support. |
 | Deployment link | Optional | Not applicable | HuggingFace demo is tracked separately. |
 
 ## Hybrid GenAI Transaction Categorizer
@@ -71,7 +72,7 @@ Purpose:
 | Merchant memory visualization | Required | Known | `docs/diagrams/hybrid-categorizer-memory.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
 | Latency comparison benchmark | Required | Needed | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; publish no numbers until measured. |
 | Routing decision table | Required | Needed | Use real or representative transactions, clearly labeled; table structure exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`. |
-| UI screenshots | Required | Known | Imported candidates: `public/assets/projects/hybrid-categorizer/predict.png`, `categories.png`, `history.png`, and `memory.png`; needs visual/privacy review before polish. |
+| UI screenshots | Required | Known | Visual review found `predict.png` and `memory.png` need replacement before polish; `categories.png` and `history.png` need sample-data labeling/redaction before case-study use. |
 | Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
 ## The Loop
@@ -80,7 +81,7 @@ Purpose:
 |---|---|---|---|
 | Deployment link | Required | Verified | `https://the-loop-5m7u.onrender.com/`; loads Render deployment with page title `The Loop`. Verified 2026-06-26. |
 | Repo link | Required | Verified | `https://github.com/Atishay9828/TIET-LOOP`; GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. |
-| Product screenshots | Required | Known | Imported candidates: `public/assets/projects/the-loop/landing_page.jpg` and `interest_selection.png`; landing image is low resolution and should be replaced before polish. |
+| Product screenshots | Required | Known | Visual review marks `landing_page.jpg` Replace before polish and approves `interest_selection.png` for case-study-only workflow support. |
 | Database diagram | Required | Known | `docs/diagrams/the-loop-system.md` includes documented database tables and system boundaries; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
 | WebSocket architecture diagram | Required | Known | `docs/diagrams/the-loop-realtime-flow.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
 | Auth flow diagram | Required | Known | `docs/diagrams/the-loop-auth-flow.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
@@ -139,9 +140,9 @@ Purpose:
 | Area | Required Items | Known | Verified | Missing/Needed | Completion |
 |---|---:|---:|---:|---:|---:|
 | Global identity/contact | 4 | 3 | 1 | 0 | 100% required Known/Verified; public-ready after repo-local resume and LinkedIn verification |
-| Mahoraga | 6 | 5 | 1 required, 3 links total | 1 | Imported asset candidates Known; demo media, visual review, and role detail still Needed |
-| Hybrid Categorizer | 7 | 4 | 2 | 2 plus 1 missing deployment | Imported screenshot candidates Known; benchmarks and routing table still Needed |
-| The Loop | 7 | 5 | 2 | 2 | Imported screenshot candidates Known; workflow screenshots, role detail, and demo media still Needed |
+| Mahoraga | 6 | 5 | 1 required, 3 links total | 1 | One homepage asset approved; demo media, metric interpretation, and role detail still Needed |
+| Hybrid Categorizer | 7 | 4 | 2 | 2 plus 1 missing deployment | Imported screenshots reviewed; replacements/redaction, benchmarks, and routing table still Needed |
+| The Loop | 7 | 5 | 2 | 2 | Interest selection approved case-study-only; landing/workflow screenshots, role detail, and demo media still Needed |
 | Secondary projects | 10 | 0 | 2 | 8 | 20% required verified |
 | Lab projects | 8 | 0 | 0 | 8 | 0% |
 

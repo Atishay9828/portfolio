@@ -167,3 +167,19 @@ Status:
 - First evidence import is complete, but production polish remains blocked.
 - Resume publication remains Decision Needed; no resume was copied into the repo.
 - Hybrid benchmark examples and all measured latency/cost claims remain pending.
+
+### 2026-06-27 Imported Asset Visual And Privacy Review
+
+Completed:
+- Created `docs/18_IMPORTED_ASSET_REVIEW.md`.
+- Reviewed all imported Mahoraga, Hybrid Categorizer, and The Loop assets for project match, readability, privacy risk, misleading content, and resolution.
+- Approved Mahoraga `dashboard_preview.png` for homepage/case-study visual use.
+- Approved Mahoraga `stitch_aero_screenshot.png` and The Loop `interest_selection.png` for case-study-only use.
+- Marked Mahoraga `training_metrics.png` Candidate only; metric claims remain blocked until methodology/evaluation interpretation exists.
+- Marked Hybrid `predict.png`, Hybrid `memory.png`, and The Loop `landing_page.jpg` Replace before polish.
+- Marked Hybrid `categories.png`, `history.png`, and `memory.png` as needing redaction or explicit sample-data labeling.
+- Updated asset/status docs and project data notes without activating resume, LinkedIn, or email CTAs.
+
+Status:
+- Imported asset review is complete.
+- Production polish remains blocked by replacement screenshots, redaction/sample labeling, missing demos/workflow screenshots, role/contribution details, diagram QA, and Hybrid benchmark evidence.

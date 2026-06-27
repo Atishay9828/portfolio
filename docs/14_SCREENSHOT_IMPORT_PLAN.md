@@ -6,6 +6,9 @@ Purpose:
 - Define where external project assets should be imported.
 - Prevent fake screenshots, unredacted private data, and untracked local-only assets from entering the public portfolio.
 
+Review status:
+- Imported asset visual/privacy review is recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
+
 ## Destination Structure
 
 Recommended repository paths:
@@ -24,11 +27,11 @@ Do not mark assets Verified until the files exist in these paths or another docu
 | Project | External asset candidates | Destination path | Status |
 |---|---|---|---|
 | Mahoraga | Demo GIF/video of adaptive behavior | `public/assets/projects/mahoraga/` | Needed |
-| Mahoraga | Reviewed dashboard/training metrics image from project repo | `public/assets/projects/mahoraga/` | Known externally, not imported |
-| Mahoraga | Reviewed UI or environment screenshot | `public/assets/projects/mahoraga/` | Known externally, not imported |
-| Hybrid Categorizer | `predict.png`, `categories.png`, `history.png`, `memory.png` from external repo screenshot folder | `public/assets/projects/hybrid-categorizer/` | Known externally, not imported |
+| Mahoraga | Reviewed dashboard/training metrics image from project repo | `public/assets/projects/mahoraga/` | Imported and reviewed; `dashboard_preview.png` approved homepage, `training_metrics.png` candidate only |
+| Mahoraga | Reviewed UI or environment screenshot | `public/assets/projects/mahoraga/` | Imported and reviewed; `stitch_aero_screenshot.png` case-study only |
+| Hybrid Categorizer | `predict.png`, `categories.png`, `history.png`, `memory.png` from external repo screenshot folder | `public/assets/projects/hybrid-categorizer/` | Imported and reviewed; replacements/redaction needed before polish |
 | Hybrid Categorizer | Routing decision table image or markdown table after examples are selected | `public/assets/projects/hybrid-categorizer/` or docs | Needed |
-| The Loop | `landing_page.jpg`, `interest_selection.png` from external repo assets | `public/assets/projects/the-loop/` | Known externally, not imported |
+| The Loop | `landing_page.jpg`, `interest_selection.png` from external repo assets | `public/assets/projects/the-loop/` | Imported and reviewed; landing must be replaced, interest selection is case-study only |
 | The Loop | Event discovery, RSVP/join, chat, carpool, and admin screenshots | `public/assets/projects/the-loop/` | Needed |
 | AI Resume Tailoring Engine | Redacted sample output | `public/assets/projects/resume-engine/` | Missing |
 | AI Resume Tailoring Engine | Redacted ATS report | `public/assets/projects/resume-engine/` | Missing |
@@ -92,4 +95,3 @@ Do not mark assets Verified until the files exist in these paths or another docu
 | The Loop final deployment screenshots | Deployment exists, but public workflow behavior still needs manual screen capture/review. | Capture screenshots from the verified deployment or local app with safe demo data. |
 | Resume-engine sample output | No redacted sample output is in repo. | Generate/select a safe public sample and redact private details. |
 | Webcam alert email screenshot | No public-safe alert screenshot is in repo. | Capture/redact email alert evidence. |
-

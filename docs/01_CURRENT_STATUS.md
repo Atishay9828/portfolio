@@ -23,6 +23,14 @@ First evidence import and case-study hardening status:
 - The Loop includes the documented discovery, interest, RSVP/join, friends/chat/carpool, admin, and edge-case workflow.
 - Role/contribution copy remains `Role/contribution details pending verification.`
 
+Imported asset visual/privacy review status:
+- Review results are recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
+- Mahoraga `dashboard_preview.png` is approved for homepage/case-study visual use.
+- Mahoraga `stitch_aero_screenshot.png` and The Loop `interest_selection.png` are approved for case-study-only support.
+- Mahoraga `training_metrics.png` remains Candidate only; no metric claims may be published without methodology/evaluation interpretation.
+- Hybrid `predict.png`, Hybrid `memory.png`, and The Loop `landing_page.jpg` must be replaced before polish.
+- Hybrid `categories.png`, `history.png`, and `memory.png` need redaction or explicit sample-data labeling before public polish.
+
 ## Frontend Implementation Allowed?
 
 Limited Astro static scaffolding: Completed for the homepage and three featured case-study shells.
@@ -56,6 +64,7 @@ Reason:
 | Dependency audit | Known | `npm audit` reports 17 vulnerabilities; safe non-breaking fixes are not clearly available because fixes require major dependency changes. |
 | Screenshot QA | Verified | Desktop and mobile screenshots exist in `docs/reviews/screenshots/`; Edge headless was used because Chrome headless failed with a GPU-process error. |
 | Imported project visuals | Known | Real candidate assets were copied from verified external repos into `public/assets/projects/...`; visual/privacy review is still required before production polish. |
+| Imported asset review | Known | `docs/18_IMPORTED_ASSET_REVIEW.md` classifies imported assets by homepage approval, case-study-only use, replacement need, and redaction/sample-labeling need. |
 | Case-study hardening | Verified | The three featured case-study routes now render documented architecture, evidence, limitation, missing-proof, and next-evidence sections. |
 
 ## Verified Evidence Links
@@ -88,7 +97,8 @@ Completion criteria:
 - Confirm preferred public email before enabling email CTA.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
 - Add featured project role/contribution details, portfolio-local screenshots, and demos.
-- Review imported candidate visuals for quality/privacy and replace weak assets, especially The Loop `landing_page.jpg`.
+- Replace weak/mismatched imported assets, especially Hybrid `predict.png`, Hybrid `memory.png`, and The Loop `landing_page.jpg`.
+- Redact or sample-label Hybrid transaction screenshots before public polish.
 - Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.
 - Plan dependency major-version upgrades separately from evidence/content hardening.
 - Update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md`.
