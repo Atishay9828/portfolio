@@ -149,3 +149,21 @@ Completed:
 Status:
 - First implementation hardening pass is complete.
 - Production-ready polish remains blocked by real assets, resume publication, LinkedIn/email verification, role/contribution detail, final diagram QA, and benchmark/workflow evidence.
+
+### 2026-06-26 Evidence Import And Case-Study Hardening Pass
+
+Completed:
+- Confirmed local `master` was aligned with `origin/master` before changes.
+- Verified documented candidate asset paths through the GitHub API before import.
+- Imported Mahoraga candidate visuals into `public/assets/projects/mahoraga/`.
+- Imported Hybrid Categorizer candidate screenshots into `public/assets/projects/hybrid-categorizer/`.
+- Imported The Loop candidate screenshots into `public/assets/projects/the-loop/`.
+- Kept all imported visuals as Known candidates that need final visual/privacy review.
+- Hardened featured case-study pages with documented what-was-built, architecture, decisions, evidence status, limitations, missing proof, and next-evidence sections.
+- Added Mahoraga reward-system proof framing, Hybrid benchmark-pending routing table structure, and The Loop workflow sections.
+- Expanded tests to verify imported asset paths, disabled public CTAs, case-study content, limitations, missing proof, and pending benchmark state.
+
+Status:
+- First evidence import is complete, but production polish remains blocked.
+- Resume publication remains Decision Needed; no resume was copied into the repo.
+- Hybrid benchmark examples and all measured latency/cost claims remain pending.

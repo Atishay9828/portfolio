@@ -15,6 +15,14 @@ First implementation review status:
 - Screenshot QA was captured under `docs/reviews/screenshots/` for desktop and mobile views.
 - `npm audit` currently reports 17 vulnerabilities: 14 moderate, 2 high, and 1 critical. Direct dependencies are affected (`@astrojs/check`, `@astrojs/mdx`, `astro`, `vitest`), but available fixes require major version changes, so no automatic fix was applied.
 
+First evidence import and case-study hardening status:
+- Documented external repo assets were imported into `public/assets/projects/...` as Known candidates, not final Verified polished visuals.
+- Featured case-study pages now render documented sections for what was built, architecture summary, decisions, evidence status, limitations/tradeoffs, missing proof, and next evidence needed.
+- Mahoraga includes adaptive-agent and reward-system proof framing without robust-performance claims.
+- Hybrid includes the routing-table structure with a clear `Benchmark pending` label and no latency/cost numbers.
+- The Loop includes the documented discovery, interest, RSVP/join, friends/chat/carpool, admin, and edge-case workflow.
+- Role/contribution copy remains `Role/contribution details pending verification.`
+
 ## Frontend Implementation Allowed?
 
 Limited Astro static scaffolding: Completed for the homepage and three featured case-study shells.
@@ -47,6 +55,8 @@ Reason:
 | First implementation hardening pass | Verified | Evidence-gating, test coverage, responsive CSS hardening, screenshot QA, and dependency audit completed on 2026-06-26. |
 | Dependency audit | Known | `npm audit` reports 17 vulnerabilities; safe non-breaking fixes are not clearly available because fixes require major dependency changes. |
 | Screenshot QA | Verified | Desktop and mobile screenshots exist in `docs/reviews/screenshots/`; Edge headless was used because Chrome headless failed with a GPU-process error. |
+| Imported project visuals | Known | Real candidate assets were copied from verified external repos into `public/assets/projects/...`; visual/privacy review is still required before production polish. |
+| Case-study hardening | Verified | The three featured case-study routes now render documented architecture, evidence, limitation, missing-proof, and next-evidence sections. |
 
 ## Verified Evidence Links
 
@@ -78,6 +88,7 @@ Completion criteria:
 - Confirm preferred public email before enabling email CTA.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
 - Add featured project role/contribution details, portfolio-local screenshots, and demos.
+- Review imported candidate visuals for quality/privacy and replace weak assets, especially The Loop `landing_page.jpg`.
 - Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.
 - Plan dependency major-version upgrades separately from evidence/content hardening.
 - Update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md`.

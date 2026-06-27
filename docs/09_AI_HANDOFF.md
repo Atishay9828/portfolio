@@ -16,6 +16,13 @@ First hardening pass status:
 - Desktop and mobile screenshot QA exists under `docs/reviews/screenshots/`.
 - `npm audit` reports 17 vulnerabilities; available fixes require major dependency upgrades, so no automatic fix was applied.
 
+Evidence import and case-study hardening status:
+- Real candidate visuals were imported from verified external repos into `public/assets/projects/...`.
+- Imported visuals are Known candidates, not final Verified polished assets.
+- Case-study pages now render documented evidence sections for all three featured projects.
+- Hybrid routing proof is intentionally a benchmark-pending table structure with no rows or latency/cost numbers.
+- The Loop workflow is documented from the existing walkthrough; full screenshot coverage remains incomplete.
+
 ## Completed Work
 
 - Strategy and positioning completed.
@@ -42,6 +49,9 @@ First hardening pass status:
 - Mobile wrapping/responsiveness hardened without redesigning the layout.
 - Screenshot QA captured for the homepage and all three case-study routes at desktop and mobile widths.
 - Dependency audit run with `npm audit`; results recorded as 14 moderate, 2 high, and 1 critical vulnerabilities.
+- First evidence import and case-study hardening pass completed on 2026-06-26.
+- Imported candidate visuals for Mahoraga, Hybrid Categorizer, and The Loop into `public/assets/projects/...`.
+- Added documented case-study sections for what was built, architecture summary, key engineering decisions, evidence status, limitations, missing proof, and next evidence.
 - Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
 
 ## Missing Work
@@ -52,6 +62,7 @@ First hardening pass status:
 - Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 - Render and mobile-QA selected Mermaid diagrams.
 - Collect screenshots/demos.
+- Review imported candidate visuals for quality/privacy and replace low-quality or incomplete assets.
 - Add role/contribution details for featured and secondary projects.
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
 - Execute Hybrid benchmark/routing table with real or clearly representative examples.
@@ -65,6 +76,7 @@ First hardening pass status:
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - Website scaffold exists, but it is a conservative static shell only.
 - Current dependency audit has unresolved vulnerabilities because remediation requires major version changes.
+- Imported screenshots are not final polished proof; they need visual/privacy review and stronger workflow coverage.
 
 ## Known Risks
 
@@ -78,7 +90,18 @@ First hardening pass status:
 
 ## Next Recommended Task
 
-Import or capture portfolio-local screenshots/demos, add role/contribution details, execute Hybrid benchmark/routing evidence, copy the final resume PDF into repo/public assets, manually verify LinkedIn, confirm the public email, then harden the case-study pages.
+Visually review imported candidate assets, capture missing workflow/demo screenshots, add role/contribution details, execute Hybrid benchmark/routing evidence, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
+
+## Imported Candidate Assets
+
+- Mahoraga: `public/assets/projects/mahoraga/dashboard_preview.png`, `stitch_aero_screenshot.png`, `training_metrics.png`.
+- Hybrid Categorizer: `public/assets/projects/hybrid-categorizer/predict.png`, `categories.png`, `history.png`, `memory.png`.
+- The Loop: `public/assets/projects/the-loop/landing_page.jpg`, `interest_selection.png`.
+
+Notes:
+- The Loop `landing_page.jpg` is low resolution and should be replaced before production polish.
+- Hybrid category/history/memory screenshots need privacy/sample-data review before polished presentation.
+- Mahoraga `training_metrics.png` must not be used for metric claims until reviewed and interpreted.
 
 ## Screenshot QA
 
@@ -134,6 +157,7 @@ Status:
 ## Known But Not Public-Ready Links
 
 - Resume PDF candidates: `E:\Downloads\ATISHAY_Software_Intern.pdf` and `E:\Downloads\ATISHAY_Data_Analyst.pdf`; both exist locally but are outside the repo.
+- Resume publication decision remains Needed; no resume was copied into `public/resume/`.
 - LinkedIn: `https://www.linkedin.com/in/atishay9828/`; automated verification was blocked by LinkedIn HTTP 999.
 - Email: `ajain8_be23@thapar.edu`; provided but not externally verified.
 

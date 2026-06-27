@@ -27,7 +27,9 @@ Date: 2026-06-26
 - [ ] Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 - [ ] Render and mobile-QA selected Mermaid diagrams.
 - [ ] Add concrete design tokens.
-- [ ] Collect or import portfolio-local screenshots/demos.
+- [x] Import first portfolio-local candidate visuals from verified external repos.
+- [ ] Visually review imported candidate visuals and replace weak/low-resolution assets.
+- [ ] Collect remaining portfolio-local screenshots/demos.
 - [ ] Add role/contribution details per featured project.
 - [ ] Execute Hybrid benchmark/routing table with real or clearly representative examples.
 - [ ] Finalize featured project tradeoff/limitation copy.
@@ -40,6 +42,7 @@ Date: 2026-06-26
 - [x] Implement static homepage.
 - [x] Implement case study pages.
 - [x] Add hardening tests for featured order, verified links, missing evidence state behavior, required routes/data, and resume CTA gating.
+- [x] Harden featured case-study pages with documented evidence sections and pending-proof gates.
 - [ ] Expand MDX/content collections for long-form case studies.
 
 ## Backlog Rules

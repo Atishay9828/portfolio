@@ -455,6 +455,90 @@ h3 {
   gap: 24px;
 }
 
+.case-study-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.asset-card {
+  margin: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-base);
+}
+
+.asset-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.asset-card figcaption {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+}
+
+.asset-card span,
+.asset-card small,
+.workflow-step p,
+td {
+  color: var(--text-muted);
+}
+
+.asset-card small {
+  overflow-wrap: anywhere;
+}
+
+.table-shell {
+  width: 100%;
+  margin-top: 16px;
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--text-primary);
+  font-size: 0.82rem;
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.workflow-step {
+  border-left: 1px solid var(--border-strong);
+  padding-left: 12px;
+}
+
 @media (max-width: 860px) {
   .nav-inner,
   .section-inner {
@@ -482,6 +566,7 @@ h3 {
   .project-module,
   .project-module:first-child,
   .compact-grid,
+  .asset-grid,
   .about-grid,
   .contact-grid,
   .case-grid {
@@ -494,7 +579,8 @@ h3 {
 
   .proof-grid,
   .lab-grid,
-  .capability-grid {
+  .capability-grid,
+  .workflow-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -539,7 +625,8 @@ h3 {
 
   .proof-grid,
   .lab-grid,
-  .capability-grid {
+  .capability-grid,
+  .workflow-grid {
     grid-template-columns: 1fr;
   }
 

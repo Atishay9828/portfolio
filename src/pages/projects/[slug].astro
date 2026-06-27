@@ -40,4 +40,131 @@ if (!project) {
       </aside>
     </div>
   </section>
+  {project.caseStudy && (
+    <section class="section">
+      <div class="section-inner case-study-stack">
+        <div class="section-header">
+          <div>
+            <span class="meta-label">Documented case study</span>
+            <h2>{project.title}</h2>
+          </div>
+          <p>
+            Built from the current evidence docs and imported repo artifacts. Candidate visuals are
+            real files, but remain pending until final review.
+          </p>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-panel">
+            <span class="meta-label">What was built</span>
+            <p>{project.caseStudy.whatWasBuilt}</p>
+          </article>
+          <article class="case-panel">
+            <span class="meta-label">Architecture summary</span>
+            <p>{project.caseStudy.architectureSummary}</p>
+          </article>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-panel">
+            <span class="meta-label">Key engineering decisions</span>
+            <ul class="missing-list">
+              {project.caseStudy.engineeringDecisions.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+          <article class="case-panel">
+            <span class="meta-label">Evidence status</span>
+            <ul class="missing-list">
+              {project.caseStudy.evidenceStatus.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        </div>
+
+        {project.visual.assets && project.visual.assets.length > 0 && (
+          <article class="case-panel">
+            <span class="meta-label">Imported asset candidates</span>
+            <div class="asset-grid">
+              {project.visual.assets.map((asset) => (
+                <figure class="asset-card">
+                  <img src={asset.src} alt={asset.label} loading="lazy" />
+                  <figcaption>
+                    <strong>{asset.label}</strong>
+                    <span>{asset.status}: {asset.note}</span>
+                    <small>{asset.source}</small>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </article>
+        )}
+
+        {project.caseStudy.rewardProof && (
+          <article class="case-panel">
+            <span class="meta-label">Reward-system proof</span>
+            <ul class="missing-list">
+              {project.caseStudy.rewardProof.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        )}
+
+        {project.caseStudy.routingProof && (
+          <article class="case-panel">
+            <span class="meta-label">{project.caseStudy.routingProof.label}</span>
+            <p>{project.caseStudy.routingProof.note}</p>
+            <div class="table-shell" role="region" aria-label="Pending routing decision table">
+              <table>
+                <thead>
+                  <tr>
+                    {project.caseStudy.routingProof.columns.map((column) => <th>{column}</th>)}
+                  </tr>
+                </thead>
+                <tbody>
+                  {project.caseStudy.routingProof.rows.length === 0 ? (
+                    <tr>
+                      <td colspan={project.caseStudy.routingProof.columns.length}>
+                        No benchmark examples selected yet. Latency, cost, and routing numbers remain pending.
+                      </td>
+                    </tr>
+                  ) : (
+                    project.caseStudy.routingProof.rows.map((row) => (
+                      <tr>{row.map((cell) => <td>{cell}</td>)}</tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </article>
+        )}
+
+        {project.caseStudy.workflow && (
+          <article class="case-panel">
+            <span class="meta-label">Workflow</span>
+            <div class="workflow-grid">
+              {project.caseStudy.workflow.map((step) => (
+                <div class="workflow-step">
+                  <strong>{step.label}</strong>
+                  <p>{step.detail}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        )}
+
+        <div class="case-grid">
+          <article class="case-panel">
+            <span class="meta-label">Current limitations / tradeoffs</span>
+            <ul class="missing-list">
+              {project.caseStudy.limitations.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+          <article class="case-panel">
+            <span class="meta-label">Next evidence needed</span>
+            <ul class="missing-list">
+              {project.caseStudy.nextEvidenceNeeded.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  )}
 </BaseLayout>

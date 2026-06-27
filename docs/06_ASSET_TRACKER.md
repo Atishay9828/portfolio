@@ -21,9 +21,9 @@ Link registry:
 |---|---:|---:|---:|---:|---|
 | Global contact assets | 3 | 1 | 0 | 3 | No |
 | Portfolio repository | 0 | 1 | 0 | 0 | Yes |
-| Mahoraga | 5 | 3 | 0 | 1 | No |
-| Hybrid Categorizer | 4 | 2 | 1 | 2 | No |
-| The Loop | 5 | 2 | 0 | 2 | No |
+| Mahoraga | 6 | 3 | 0 | 1 | No |
+| Hybrid Categorizer | 5 | 2 | 1 | 2 | No |
+| The Loop | 6 | 2 | 0 | 2 | No |
 | AI Resume Tailoring Engine | 0 | 1 | 2 | 4 | No |
 | Webcam Motion Alert System | 0 | 1 | 1 | 4 | No |
 | Lab projects | 0 | 0 | 4 | 4 | No |
@@ -64,6 +64,20 @@ Link registry:
 | Hybrid GenAI Transaction Categorizer | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`, `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md` | Known | Revise diagrams, select screenshots, execute benchmark/routing table. |
 | The Loop | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`, `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, `docs/diagrams/the-loop-auth-flow.md` | Known | Revise system diagram, select screenshots, add role detail. |
 
+## Imported Candidate Visuals
+
+| Project | Local path | Source | Status | Next action |
+|---|---|---|---|---|
+| Mahoraga | `public/assets/projects/mahoraga/dashboard_preview.png` | `Atishay9828/meta_Mahoraga:docs/dashboard_preview.png` | Known | Review for final visual use. |
+| Mahoraga | `public/assets/projects/mahoraga/stitch_aero_screenshot.png` | `Atishay9828/meta_Mahoraga:docs/stitch_aero_screenshot.png` | Known | Review for final visual use. |
+| Mahoraga | `public/assets/projects/mahoraga/training_metrics.png` | `Atishay9828/meta_Mahoraga:docs/training_metrics.png` | Known | Review and interpret before publishing metric claims. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/predict.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/predict.png` | Known | Review for privacy and visual quality. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/categories.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/categories.png` | Known | Review sample values before metric-like presentation. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/history.png` | Known | Review transaction privacy before polished use. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/memory.png` | Known | Review memory content before polished use. |
+| The Loop | `public/assets/projects/the-loop/landing_page.jpg` | `Atishay9828/TIET-LOOP:assets/landing_page.jpg` | Known | Low resolution; replace before production polish. |
+| The Loop | `public/assets/projects/the-loop/interest_selection.png` | `Atishay9828/TIET-LOOP:assets/interest_selection.png` | Known | Review and pair with workflow context. |
+
 ## Featured Project Asset Gate
 
 Do not build public final project CTAs until each featured project has:
@@ -82,6 +96,6 @@ Do not build public final project CTAs until each featured project has:
 3. Add remaining deployment links where marked Missing.
 4. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 5. Render and mobile-QA selected Mermaid diagrams before final visual use.
-6. Collect or import screenshots/demos following `docs/14_SCREENSHOT_IMPORT_PLAN.md`.
+6. Visually review imported screenshot candidates and collect missing demos/workflow screenshots.
 7. Add role/contribution details and final tradeoff copy.
 8. Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.

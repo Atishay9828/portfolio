@@ -11,7 +11,7 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold and first implementation hardening pass complete; evidence hardening continues before production-ready UI polish.
+Astro static scaffold, first implementation hardening pass, and first evidence import/case-study hardening pass are complete; evidence hardening continues before production-ready UI polish.
 
 The current implementation is a conservative static content shell backed by the evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, and benchmark/workflow evidence are complete.
 
@@ -60,11 +60,13 @@ Created:
 - Tests for featured ordering, verified links, missing evidence states, resume gating, and route definitions.
 - Desktop and mobile screenshot QA under `docs/reviews/screenshots/`.
 - Public CTA gating for Known-but-not-public-ready LinkedIn, email, and resume assets.
+- Imported real candidate visuals under `public/assets/projects/...` from verified external repos.
+- Hardened featured case-study pages with documented architecture, evidence status, limitations, missing proof, and next-evidence sections.
 
 Still blocked:
 - Public resume CTA until a final PDF exists under `public/resume/`.
 - LinkedIn and email CTAs until they are verified/confirmed public-ready.
-- Production visual polish until screenshots, demos, and diagram render/mobile QA are complete.
+- Production visual polish until imported candidate visuals, missing screenshots/demos, and diagram render/mobile QA are complete.
 - Hybrid latency/cost claims until benchmark/routing evidence is executed.
 - Ownership/role claims until contribution details are documented.
 - Audit remediation until Astro/Vitest major dependency upgrades are planned and tested.

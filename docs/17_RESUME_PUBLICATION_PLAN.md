@@ -50,6 +50,11 @@ Decision Needed.
 
 The current docs identify two local candidates, but they do not document which one is the canonical public portfolio resume.
 
+First evidence import pass note, 2026-06-26:
+- Decision remains Needed.
+- No resume file was copied into `public/resume/`.
+- Resume CTA must remain disabled until AJ explicitly selects the public PDF and it is copied into the repository.
+
 Recommendation:
 - Use the Software Intern resume if the portfolio targets software engineering, AI/ML, and product engineering opportunities.
 - Do not publish either file until AJ explicitly selects the public version.
@@ -57,4 +62,3 @@ Recommendation:
 ## Status Rule
 
 Status remains Known until the selected PDF is copied into the repository and intentionally marked public-ready.
-

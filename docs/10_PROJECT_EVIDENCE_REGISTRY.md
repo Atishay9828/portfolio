@@ -30,7 +30,7 @@ Evidence status:
 - Links: Verified.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; reward-system diagram is Ready, architecture diagram needs revision.
-- Repo-contained screenshot/metrics candidates: Known, not portfolio-local.
+- Imported screenshot/metrics candidates: Known portfolio-local files under `public/assets/projects/mahoraga/`; still need final visual review.
 - Local demo media: Needed.
 - Metrics: Known in external repo, not selected or reviewed for portfolio.
 
@@ -44,7 +44,7 @@ Required assets:
 
 Missing assets:
 - Local demo media.
-- Portfolio-local screenshot/media selection.
+- Final visual review of imported screenshot/media candidates.
 - Final reviewed training/evaluation artifact.
 - Role/contribution detail.
 - Final tradeoff note.
@@ -74,7 +74,7 @@ Evidence status:
 - Deployment link: Missing.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
-- Repo-contained screenshots: Known, not portfolio-local.
+- Imported screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; still need final visual/privacy review.
 - Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Measured benchmarks/routing table: Needed.
 
@@ -92,7 +92,7 @@ Required assets:
 Missing assets:
 - Deployment link.
 - Benchmarks.
-- Portfolio-local screenshots.
+- Final visual/privacy review of imported screenshots.
 - Routing decision table.
 - Role/contribution detail.
 - Final tradeoff note.
@@ -121,7 +121,7 @@ Evidence status:
 - Repo link: Verified.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, system diagram needs revision.
-- Repo-contained product screenshot candidates: Known, not portfolio-local.
+- Imported product screenshot candidates: Known portfolio-local files under `public/assets/projects/the-loop/`; still incomplete and need review.
 - Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots still Needed.
 
 Required assets:
@@ -135,7 +135,7 @@ Required assets:
 - Role/contribution details.
 
 Missing assets:
-- Portfolio-local screenshots.
+- Final visual review of imported screenshots plus missing workflow screenshots.
 - User workflow walkthrough.
 - Demo/walkthrough.
 - Role/contribution detail.
