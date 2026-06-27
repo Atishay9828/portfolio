@@ -1,6 +1,6 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-06-26
+Date: 2026-06-27
 
 ## Current Phase
 
@@ -28,8 +28,10 @@ Imported asset visual/privacy review status:
 - Mahoraga `dashboard_preview.png` is approved for homepage/case-study visual use.
 - Mahoraga `stitch_aero_screenshot.png` and The Loop `interest_selection.png` are approved for case-study-only support.
 - Mahoraga `training_metrics.png` remains Candidate only; no metric claims may be published without methodology/evaluation interpretation.
-- Hybrid `predict.png`, Hybrid `memory.png`, and The Loop `landing_page.jpg` must be replaced before polish.
-- Hybrid `categories.png`, `history.png`, and `memory.png` need redaction or explicit sample-data labeling before public polish.
+- Hybrid `predict.png` and Hybrid `memory.png` were replaced on 2026-06-27 with local captures from the verified Hybrid frontend using synthetic demo transactions.
+- Hybrid `categories.png` and `history.png` remain case-study candidates only and must be explicitly labeled as sample/demo transaction data if used.
+- The Loop `landing_page.jpg` must still be replaced before polish.
+- Hybrid replacement screenshots are frontend UI proof only; the full backend model path was not captured because the cloned Hybrid repo did not include `models/distilbert.onnx`.
 
 ## Frontend Implementation Allowed?
 
@@ -55,7 +57,7 @@ Reason:
 | Known project links | Verified | Known project links were checked on 2026-06-26. |
 | Additional project repo links | Verified | Hybrid Categorizer, The Loop, AI Resume Tailoring Engine, and Webcam Motion Alert repos were verified on 2026-06-26. |
 | Featured project diagram review | Known | Spec-level review exists in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; final rendered/mobile QA is still required before production polish. |
-| Featured project screenshots/demos | Known/Needed/Missing | Some repo-contained screenshot candidates exist; portfolio-local screenshots and demo media are still required before final visual implementation. |
+| Featured project screenshots/demos | Known/Needed/Missing | Hybrid prediction-flow and merchant-memory UI screenshots now exist as safe sample-data portfolio-local assets; The Loop workflow screenshots, Mahoraga demo media, and final screenshot/demo coverage are still required before final visual implementation. |
 | Role/contribution details | Needed | Required for ownership clarity. |
 | Hybrid benchmark/routing evidence | Planned | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; measured latency/cost/routing examples are still Needed. |
 | The Loop workflow walkthrough | Known | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots remain Needed. |
@@ -64,7 +66,8 @@ Reason:
 | Dependency audit | Known | `npm audit` reports 17 vulnerabilities; safe non-breaking fixes are not clearly available because fixes require major dependency changes. |
 | Screenshot QA | Verified | Desktop and mobile screenshots exist in `docs/reviews/screenshots/`; Edge headless was used because Chrome headless failed with a GPU-process error. |
 | Imported project visuals | Known | Real candidate assets were copied from verified external repos into `public/assets/projects/...`; visual/privacy review is still required before production polish. |
-| Imported asset review | Known | `docs/18_IMPORTED_ASSET_REVIEW.md` classifies imported assets by homepage approval, case-study-only use, replacement need, and redaction/sample-labeling need. |
+| Imported asset review | Known | `docs/18_IMPORTED_ASSET_REVIEW.md` classifies imported assets by homepage approval, case-study-only use, replacement need, sample-labeling need, and Hybrid sample-data UI replacement status. |
+| Hybrid sample-data visual proof | Known | `predict.png` and `memory.png` were replaced from a local run of the verified Hybrid frontend with synthetic demo transactions. Not benchmark/model-output evidence. |
 | Case-study hardening | Verified | The three featured case-study routes now render documented architecture, evidence, limitation, missing-proof, and next-evidence sections. |
 
 ## Verified Evidence Links
@@ -96,9 +99,9 @@ Completion criteria:
 - Copy final resume PDF into repo/public assets and manually verify LinkedIn before public resume/contact CTAs.
 - Confirm preferred public email before enabling email CTA.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
-- Add featured project role/contribution details, portfolio-local screenshots, and demos.
-- Replace weak/mismatched imported assets, especially Hybrid `predict.png`, Hybrid `memory.png`, and The Loop `landing_page.jpg`.
-- Redact or sample-label Hybrid transaction screenshots before public polish.
+- Add featured project role/contribution details, remaining portfolio-local screenshots, and demos.
+- Replace weak/mismatched imported assets, especially The Loop `landing_page.jpg`.
+- Keep Hybrid category/history transaction screenshots explicitly sample-labeled in site copy/data if used.
 - Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.
 - Plan dependency major-version upgrades separately from evidence/content hardening.
 - Update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md`.

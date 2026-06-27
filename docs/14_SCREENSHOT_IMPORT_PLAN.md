@@ -1,6 +1,6 @@
 # 14_SCREENSHOT_IMPORT_PLAN.md
 
-Date: 2026-06-26
+Date: 2026-06-27
 
 Purpose:
 - Define where external project assets should be imported.
@@ -29,7 +29,7 @@ Do not mark assets Verified until the files exist in these paths or another docu
 | Mahoraga | Demo GIF/video of adaptive behavior | `public/assets/projects/mahoraga/` | Needed |
 | Mahoraga | Reviewed dashboard/training metrics image from project repo | `public/assets/projects/mahoraga/` | Imported and reviewed; `dashboard_preview.png` approved homepage, `training_metrics.png` candidate only |
 | Mahoraga | Reviewed UI or environment screenshot | `public/assets/projects/mahoraga/` | Imported and reviewed; `stitch_aero_screenshot.png` case-study only |
-| Hybrid Categorizer | `predict.png`, `categories.png`, `history.png`, `memory.png` from external repo screenshot folder | `public/assets/projects/hybrid-categorizer/` | Imported and reviewed; replacements/redaction needed before polish |
+| Hybrid Categorizer | `predict.png`, `categories.png`, `history.png`, `memory.png` | `public/assets/projects/hybrid-categorizer/` | `predict.png` and `memory.png` replaced on 2026-06-27 with local running-frontend captures using synthetic demo data; `categories.png` and `history.png` remain imported case-study candidates requiring sample/demo labeling if used |
 | Hybrid Categorizer | Routing decision table image or markdown table after examples are selected | `public/assets/projects/hybrid-categorizer/` or docs | Needed |
 | The Loop | `landing_page.jpg`, `interest_selection.png` from external repo assets | `public/assets/projects/the-loop/` | Imported and reviewed; landing must be replaced, interest selection is case-study only |
 | The Loop | Event discovery, RSVP/join, chat, carpool, and admin screenshots | `public/assets/projects/the-loop/` | Needed |
@@ -50,8 +50,9 @@ Do not mark assets Verified until the files exist in these paths or another docu
 
 ### Hybrid Categorizer
 
-- Prediction flow screenshot.
-- History or merchant memory screenshot.
+- Prediction flow screenshot. Completed 2026-06-27 as a frontend UI capture using synthetic sample input; not backend benchmark/model-output evidence.
+- Merchant memory screenshot. Completed 2026-06-27 as a frontend UI capture using synthetic merchants; not measured model-quality evidence.
+- History screenshot only if sample/demo labeling is shown in surrounding case-study copy.
 - Categories/settings screenshot if it clarifies the threshold/routing behavior.
 - Benchmark/routing proof table after `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md` is executed.
 
@@ -92,6 +93,7 @@ Do not mark assets Verified until the files exist in these paths or another docu
 | Public resume PDF | Local candidates are outside repo and not selected for publication. | Choose final version, redact if needed, copy to `public/resume/`, and record status. |
 | Hybrid deployment screenshot | No deployment link is documented. | Provide and verify hosted deployment, or mark deployment not applicable. |
 | Hybrid latency/cost chart | No real measurements exist in this repo. | Run benchmark plan and record measured data. |
+| Hybrid backend/model-output screenshot | The cloned verified repo did not include `models/distilbert.onnx`; the replacement screenshots were captured from the frontend with controlled synthetic sample responses. | Set up the model/backend or use a verified hosted/demo environment, then capture end-to-end inference if final proof requires it. |
 | The Loop final deployment screenshots | Deployment exists, but public workflow behavior still needs manual screen capture/review. | Capture screenshots from the verified deployment or local app with safe demo data. |
 | Resume-engine sample output | No redacted sample output is in repo. | Generate/select a safe public sample and redact private details. |
 | Webcam alert email screenshot | No public-safe alert screenshot is in repo. | Capture/redact email alert evidence. |

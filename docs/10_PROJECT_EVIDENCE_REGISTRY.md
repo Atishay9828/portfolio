@@ -1,6 +1,6 @@
 # 10_PROJECT_EVIDENCE_REGISTRY.md
 
-Date: 2026-06-26
+Date: 2026-06-27
 
 Purpose:
 - Track portfolio evidence by project.
@@ -75,7 +75,7 @@ Evidence status:
 - Deployment link: Missing.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
-- Imported screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
+- UI screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; `predict.png` and `memory.png` were replaced on 2026-06-27 with running-frontend captures using synthetic demo data. `categories.png` and `history.png` remain case-study candidates that must be sample-labeled if used.
 - Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Measured benchmarks/routing table: Needed.
 
@@ -93,22 +93,24 @@ Required assets:
 Missing assets:
 - Deployment link.
 - Benchmarks.
-- Screenshot replacements/redaction/sample labeling based on `docs/18_IMPORTED_ASSET_REVIEW.md`.
+- Category/history sample-labeling in final case-study presentation if those screenshots are used.
 - Routing decision table.
 - Role/contribution detail.
 - Final tradeoff note.
+- End-to-end backend/model-output capture only if final proof needs more than frontend UI state.
 
 Verification notes:
 - Short URL redirects to YouTube watch URL and oEmbed title is `Hybrid GenAI Transaction Categorization | Full Project Demo + Architecture Explained`.
 - GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`.
 - Created diagram/spec files: `docs/diagrams/hybrid-categorizer-routing.md` and `docs/diagrams/hybrid-categorizer-memory.md`.
-- Repo contains screenshot candidates under `frontend/public/screenshots/`; these are Known but not portfolio-local.
+- Repo contains screenshot candidates under `frontend/public/screenshots/`; `categories.png` and `history.png` remain imported from that source.
+- `predict.png` and `memory.png` were replaced from a local run of the verified Hybrid frontend at `C:\tmp\Hybrid-GenAI-Transaction-Categorization` using synthetic demo transactions. The backend model path was not used because the cloned repo did not include `models/distilbert.onnx`.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
-- Imported asset review found `predict.png` is not prediction flow, `memory.png` is not merchant-memory proof, and transaction-detail screenshots need redaction/sample labeling.
+- Imported asset review found the original `predict.png` was not prediction flow and the original `memory.png` was not merchant-memory proof; both were replaced on 2026-06-27. Remaining transaction-detail screenshots require sample/demo labeling before public use.
 
 Can be shown publicly yet:
-- Partially. Verified walkthrough, repo, and conservative routing copy can support a first static homepage section, but full featured presentation remains blocked by missing deployment status, portfolio-local screenshots, measured benchmark/routing evidence, diagram revisions, role detail, and final tradeoff copy.
+- Partially. Verified walkthrough, repo, conservative routing copy, and sample-data UI screenshots can support a first static section, but full featured presentation remains blocked by missing deployment status, measured benchmark/routing evidence, diagram revisions, role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
 
 ### The Loop
 

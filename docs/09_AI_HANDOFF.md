@@ -1,6 +1,6 @@
 # 09_AI_HANDOFF.md
 
-Date: 2026-06-26
+Date: 2026-06-27
 
 ## Current Project State
 
@@ -28,8 +28,10 @@ Imported asset visual/privacy review status:
 - Homepage-approved asset: Mahoraga `dashboard_preview.png`.
 - Case-study-only assets: Mahoraga `stitch_aero_screenshot.png`, The Loop `interest_selection.png`.
 - Candidate only: Mahoraga `training_metrics.png`.
-- Replace before polish: Hybrid `predict.png`, Hybrid `memory.png`, The Loop `landing_page.jpg`.
-- Redact/sample-label needed: Hybrid `categories.png`, `history.png`, `memory.png`.
+- Replaced with safe sample-data UI proof: Hybrid `predict.png`, Hybrid `memory.png`.
+- Replace before polish: The Loop `landing_page.jpg`.
+- Sample-label needed in final presentation if used: Hybrid `categories.png`, `history.png`.
+- Hybrid replacement screenshots were captured from the verified Hybrid frontend using synthetic demo transactions. They are frontend UI proof, not backend benchmark/model-output evidence; the cloned repo did not include `models/distilbert.onnx`.
 
 ## Completed Work
 
@@ -61,6 +63,7 @@ Imported asset visual/privacy review status:
 - Imported candidate visuals for Mahoraga, Hybrid Categorizer, and The Loop into `public/assets/projects/...`.
 - Added documented case-study sections for what was built, architecture summary, key engineering decisions, evidence status, limitations, missing proof, and next evidence.
 - Imported asset visual/privacy review completed on 2026-06-27 and recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
+- Hybrid sample-data visual proof completed on 2026-06-27: `predict.png` and `memory.png` were replaced with running-frontend captures using synthetic demo transactions, and project data/docs now label Hybrid transaction visuals as sample/demo data.
 - Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
 
 ## Missing Work
@@ -71,7 +74,7 @@ Imported asset visual/privacy review status:
 - Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 - Render and mobile-QA selected Mermaid diagrams.
 - Collect screenshots/demos.
-- Replace weak/mismatched imported assets and redact/sample-label Hybrid transaction screenshots.
+- Replace remaining weak/mismatched imported assets and keep Hybrid category/history screenshots sample-labeled if used.
 - Add role/contribution details for featured and secondary projects.
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
 - Execute Hybrid benchmark/routing table with real or clearly representative examples.
@@ -85,7 +88,7 @@ Imported asset visual/privacy review status:
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - Website scaffold exists, but it is a conservative static shell only.
 - Current dependency audit has unresolved vulnerabilities because remediation requires major version changes.
-- Imported screenshots are not final polished proof; several need replacement, redaction/sample labeling, and stronger workflow coverage.
+- Imported screenshots are not final polished proof; Hybrid has safe sample-data UI proof, but The Loop still needs replacement/workflow coverage and Hybrid still needs benchmark/model-output evidence before stronger AI-system claims.
 
 ## Known Risks
 
@@ -99,7 +102,7 @@ Imported asset visual/privacy review status:
 
 ## Next Recommended Task
 
-Replace weak/mismatched imported assets, redact/sample-label Hybrid transaction screenshots, capture missing workflow/demo screenshots, add role/contribution details, execute Hybrid benchmark/routing evidence, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
+Replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots, add role/contribution details, execute Hybrid benchmark/routing evidence, optionally capture end-to-end Hybrid backend/model-output proof after model setup, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
 
 ## Imported Candidate Assets
 
@@ -109,17 +112,17 @@ Replace weak/mismatched imported assets, redact/sample-label Hybrid transaction 
 
 Notes:
 - The Loop `landing_page.jpg` is low resolution and should be replaced before production polish.
-- Hybrid category/history/memory screenshots need privacy/sample-data review before polished presentation.
+- Hybrid `predict.png` and `memory.png` are safe sample-data frontend UI captures; Hybrid `categories.png` and `history.png` need sample/demo labeling in final surrounding copy if used.
 - Mahoraga `training_metrics.png` must not be used for metric claims until reviewed and interpreted.
 
 Review outcomes:
 - `public/assets/projects/mahoraga/dashboard_preview.png`: approved for homepage/case-study visual use.
 - `public/assets/projects/mahoraga/stitch_aero_screenshot.png`: case-study only.
 - `public/assets/projects/mahoraga/training_metrics.png`: candidate only; no metric claims yet.
-- `public/assets/projects/hybrid-categorizer/predict.png`: replace before polish; content is not prediction flow.
-- `public/assets/projects/hybrid-categorizer/categories.png`: redaction/sample-labeling needed.
-- `public/assets/projects/hybrid-categorizer/history.png`: redaction/sample-labeling needed.
-- `public/assets/projects/hybrid-categorizer/memory.png`: replace before polish as memory proof; redaction/sample-labeling needed if reused as transaction detail.
+- `public/assets/projects/hybrid-categorizer/predict.png`: replaced 2026-06-27 with synthetic sample-data prediction-flow UI proof.
+- `public/assets/projects/hybrid-categorizer/categories.png`: sample/demo labeling needed if used.
+- `public/assets/projects/hybrid-categorizer/history.png`: sample/demo labeling needed if used; useful for route tags but not benchmark proof.
+- `public/assets/projects/hybrid-categorizer/memory.png`: replaced 2026-06-27 with synthetic sample-data merchant-memory UI proof.
 - `public/assets/projects/the-loop/landing_page.jpg`: replace before polish due low resolution.
 - `public/assets/projects/the-loop/interest_selection.png`: case-study only.
 

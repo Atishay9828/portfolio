@@ -1,6 +1,6 @@
 # 07_BACKLOG.md
 
-Date: 2026-06-26
+Date: 2026-06-27
 
 ## P0
 
@@ -29,8 +29,10 @@ Date: 2026-06-26
 - [ ] Add concrete design tokens.
 - [x] Import first portfolio-local candidate visuals from verified external repos.
 - [x] Visually review imported candidate visuals.
+- [x] Replace Hybrid `predict.png` and `memory.png` with safe sample-data frontend UI captures.
+- [x] Add explicit sample/demo labeling for Hybrid visual proof in project data/docs.
 - [ ] Replace weak/mismatched imported assets.
-- [ ] Redact or sample-label Hybrid transaction screenshots before public polish.
+- [ ] Keep Hybrid category/history screenshots sample-labeled in final case-study presentation if used.
 - [ ] Collect remaining portfolio-local screenshots/demos.
 - [ ] Add role/contribution details per featured project.
 - [ ] Execute Hybrid benchmark/routing table with real or clearly representative examples.

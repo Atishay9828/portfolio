@@ -183,3 +183,21 @@ Completed:
 Status:
 - Imported asset review is complete.
 - Production polish remains blocked by replacement screenshots, redaction/sample labeling, missing demos/workflow screenshots, role/contribution details, diagram QA, and Hybrid benchmark evidence.
+
+### 2026-06-27 Hybrid Sample-Data Visual Proof
+
+Completed:
+- Confirmed local `master` was aligned with `origin/master` before changes.
+- Cloned the verified Hybrid GenAI Transaction Categorizer repo into `C:\tmp\Hybrid-GenAI-Transaction-Categorization` because no local checkout was found in the portfolio workspace.
+- Installed and ran the Hybrid frontend locally on `http://127.0.0.1:5174/`.
+- Replaced `public/assets/projects/hybrid-categorizer/predict.png` with a running-frontend prediction-flow screenshot using synthetic input `demo cafe payment 750`.
+- Replaced `public/assets/projects/hybrid-categorizer/memory.png` with a running-frontend Merchant Memory screenshot using synthetic merchants `Demo Cafe` and `Sample Transit`.
+- Reviewed `categories.png` and `history.png`; kept them as case-study candidates only with explicit sample/demo transaction labeling required in site copy/data.
+- Updated project data and evidence docs to state that Hybrid screenshots use safe demo/sample data and do not prove backend benchmark, latency, cost, fallback-rate, or model-output claims.
+
+Blocked / caveat:
+- Full backend/model-output capture was not completed because the cloned verified repo did not include `models/distilbert.onnx`. The replacement screenshots are frontend UI proof with controlled synthetic `/predict` responses, not end-to-end inference proof.
+
+Status:
+- Hybrid `predict.png` and `memory.png` replacement is complete for safe sample-data UI proof.
+- Hybrid production polish remains blocked by measured benchmark/routing evidence, diagram revisions, role/contribution details, deployment status, and optional end-to-end backend/model-output capture.

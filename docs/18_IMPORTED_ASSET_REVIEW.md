@@ -19,10 +19,10 @@ Scope:
 | Mahoraga | `public/assets/projects/mahoraga/dashboard_preview.png` | Approved for homepage | Homepage and case study |
 | Mahoraga | `public/assets/projects/mahoraga/stitch_aero_screenshot.png` | Approved for case study only | Case study only |
 | Mahoraga | `public/assets/projects/mahoraga/training_metrics.png` | Candidate only | Case study candidate after metric interpretation |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/predict.png` | Replace before polish | Do not use as prediction proof |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/categories.png` | Redact/sample-label needed | Case study candidate only after review |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | Redact/sample-label needed | Case study candidate only after review |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | Replace before polish | Do not use as merchant-memory proof |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/predict.png` | Replaced with sample-data UI proof | Case-study candidate as frontend prediction-flow proof |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/categories.png` | Sample-label required in site copy/data | Case-study candidate only with sample/demo label |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | Sample-label required in site copy/data | Case-study candidate only with sample/demo label |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | Replaced with sample-data UI proof | Case-study candidate as frontend merchant-memory proof |
 | The Loop | `public/assets/projects/the-loop/landing_page.jpg` | Replace before polish | Do not use for final polish |
 | The Loop | `public/assets/projects/the-loop/interest_selection.png` | Approved for case study only | Case study workflow support |
 
@@ -120,24 +120,25 @@ Project:
 - Hybrid GenAI Transaction Categorizer
 
 Visual quality:
-- Good resolution and readable at full size, but the image content is a Categories Dashboard, not a prediction-flow screen.
+- Replaced on 2026-06-27. The current image is a readable running-frontend Home screen with a transaction input, prediction card, category, confidence bar, ONNX route label, explanation, and token chips.
 
 Readability:
-- Homepage card size: Poor fit; dense values and dashboard layout do not communicate routing/fallback quickly.
-- Case-study page size: Readable.
+- Homepage card size: Acceptable if cropped carefully, though the composition is mostly UI whitespace.
+- Case-study page size: Good.
 
 Privacy risk:
-- Medium. It shows sample-looking spending totals and category amounts. No account IDs or personal identifiers are visible, but values should be labeled as sample/demo data before polished use.
+- Low. It uses synthetic sample input `demo cafe payment 750` and no real account identifiers, personal merchant context, API keys, or private transaction data.
 
 Recommended usage:
-- Do not use as prediction proof.
-- Replace with an actual prediction/routing screen before polish.
+- Case-study candidate as frontend prediction-flow proof.
+- Surrounding site copy/data must state that visible transaction data is synthetic demo/sample data.
+- Do not treat the confidence value or route as benchmark/model-output evidence.
 
 Final status:
-- Replace before polish.
+- Replaced with sample-data UI proof.
 
 Notes:
-- Filename/content mismatch creates risk of misleading future maintainers.
+- Captured from a local run of the verified Hybrid frontend in `C:\tmp\Hybrid-GenAI-Transaction-Categorization` with a controlled synthetic `/predict` response. The full backend model path was blocked because the cloned repo did not include `models/distilbert.onnx`.
 
 ### Hybrid Categorizer `categories.png`
 
@@ -161,7 +162,7 @@ Recommended usage:
 - Case study candidate only after redaction/sample-data labeling.
 
 Final status:
-- Redact/sample-label needed.
+- Sample-label required in site copy/data.
 
 Notes:
 - Avoid homepage use. Do not publish as financial evidence or spend metrics.
@@ -188,7 +189,7 @@ Recommended usage:
 - Case study candidate only after redaction/sample-data labeling.
 
 Final status:
-- Redact/sample-label needed.
+- Sample-label required in site copy/data.
 
 Notes:
 - Useful for explaining routing behavior, but not enough to replace the pending benchmark/routing table.
@@ -202,24 +203,25 @@ Project:
 - Hybrid GenAI Transaction Categorizer
 
 Visual quality:
-- Good resolution and readable, but content is a transaction detail drawer rather than a merchant-memory screen.
+- Replaced on 2026-06-27. The current image is a readable running-frontend Merchant Memory screen with grouped synthetic merchants, visit count, totals, averages, and expanded visit history.
 
 Readability:
-- Homepage card size: Not appropriate.
-- Case-study page size: Readable.
+- Homepage card size: Possible if cropped, but better suited to case-study support.
+- Case-study page size: Good.
 
 Privacy risk:
-- Medium. It shows merchant, category, engine, confidence, raw text, amount, and timestamp. It should be sample-labeled or redacted before public polish.
+- Low. It uses synthetic merchants `Demo Cafe` and `Sample Transit`, generated sample amounts, and no real account identifiers, API keys, or private transaction records.
 
 Recommended usage:
-- Do not use as merchant-memory proof.
-- Replace with a real merchant-memory screen before polish.
+- Case-study candidate as frontend merchant-memory proof.
+- Surrounding site copy/data must state that visible transaction data is synthetic demo/sample data.
+- Do not use totals, dates, or visit counts as real product usage metrics.
 
 Final status:
-- Replace before polish.
+- Replaced with sample-data UI proof.
 
 Notes:
-- Filename/content mismatch creates evidence risk. It may still support a transaction-detail explanation if renamed/reframed later, but it should not be used as memory proof.
+- Captured from the same local frontend session as `predict.png`. The full backend model path was not exercised because `models/distilbert.onnx` was unavailable in the cloned repo.
 
 ### The Loop Landing Page
 
@@ -286,15 +288,12 @@ Notes:
 
 ## Replacement Needed
 
-- `public/assets/projects/hybrid-categorizer/predict.png`
-- `public/assets/projects/hybrid-categorizer/memory.png`
 - `public/assets/projects/the-loop/landing_page.jpg`
 
 ## Redaction Or Sample-Labeling Needed
 
 - `public/assets/projects/hybrid-categorizer/categories.png`
 - `public/assets/projects/hybrid-categorizer/history.png`
-- `public/assets/projects/hybrid-categorizer/memory.png`
 
 ## Candidate Only
 
@@ -302,8 +301,8 @@ Notes:
 
 ## Remaining Blockers
 
-- Hybrid still needs a true prediction/routing screenshot and a true merchant-memory screenshot.
-- Hybrid transaction screenshots need sample-data labeling or redaction before public polish.
+- Hybrid still needs measured benchmark/routing evidence and any end-to-end backend/model-output capture required for final inference proof.
+- Hybrid `categories.png` and `history.png` need sample-data labeling in final surrounding copy if used.
 - The Loop needs high-resolution landing/auth, event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots.
 - Mahoraga still needs demo media, architecture diagram revision, and interpreted evaluation evidence before metric claims.
 - Role/contribution details remain pending for all featured projects.

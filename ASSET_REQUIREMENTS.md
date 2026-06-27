@@ -1,6 +1,6 @@
 # ASSET_REQUIREMENTS.md
 
-Date: 2026-06-26
+Date: 2026-06-27
 
 Source documents:
 - `PROJECT_CONTEXT.md`
@@ -72,7 +72,7 @@ Purpose:
 | Merchant memory visualization | Required | Known | `docs/diagrams/hybrid-categorizer-memory.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
 | Latency comparison benchmark | Required | Needed | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; publish no numbers until measured. |
 | Routing decision table | Required | Needed | Use real or representative transactions, clearly labeled; table structure exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`. |
-| UI screenshots | Required | Known | Visual review found `predict.png` and `memory.png` need replacement before polish; `categories.png` and `history.png` need sample-data labeling/redaction before case-study use. |
+| UI screenshots | Required | Known | `predict.png` and `memory.png` were replaced on 2026-06-27 with local captures from the verified Hybrid frontend using synthetic demo transactions. `categories.png` and `history.png` remain case-study candidates only and must be labeled as sample/demo transaction data if used. These screenshots are UI proof, not backend benchmark/model-output evidence. |
 | Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
 ## The Loop
@@ -141,7 +141,7 @@ Purpose:
 |---|---:|---:|---:|---:|---:|
 | Global identity/contact | 4 | 3 | 1 | 0 | 100% required Known/Verified; public-ready after repo-local resume and LinkedIn verification |
 | Mahoraga | 6 | 5 | 1 required, 3 links total | 1 | One homepage asset approved; demo media, metric interpretation, and role detail still Needed |
-| Hybrid Categorizer | 7 | 4 | 2 | 2 plus 1 missing deployment | Imported screenshots reviewed; replacements/redaction, benchmarks, and routing table still Needed |
+| Hybrid Categorizer | 7 | 4 | 2 | 2 plus 1 missing deployment | Prediction-flow and merchant-memory screenshots replaced with safe demo-data UI proof; benchmarks, routing table, deployment status, role details, and any end-to-end model-output proof still Needed |
 | The Loop | 7 | 5 | 2 | 2 | Interest selection approved case-study-only; landing/workflow screenshots, role detail, and demo media still Needed |
 | Secondary projects | 10 | 0 | 2 | 8 | 20% required verified |
 | Lab projects | 8 | 0 | 0 | 8 | 0% |

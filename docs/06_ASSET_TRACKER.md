@@ -1,6 +1,6 @@
 # 06_ASSET_TRACKER.md
 
-Date: 2026-06-26
+Date: 2026-06-27
 
 Purpose:
 - Track global and project-specific asset readiness.
@@ -73,8 +73,9 @@ Summary:
 - Homepage approved: Mahoraga `dashboard_preview.png`.
 - Case-study only: Mahoraga `stitch_aero_screenshot.png`, The Loop `interest_selection.png`.
 - Candidate only: Mahoraga `training_metrics.png`.
-- Replace before polish: Hybrid `predict.png`, Hybrid `memory.png`, The Loop `landing_page.jpg`.
-- Redact/sample-label needed: Hybrid `categories.png`, Hybrid `history.png`, Hybrid `memory.png`.
+- Replaced with safe demo-data UI proof: Hybrid `predict.png`, Hybrid `memory.png`.
+- Replace before polish: The Loop `landing_page.jpg`.
+- Sample-label in site copy/data before public use: Hybrid `categories.png`, Hybrid `history.png`.
 
 ## Imported Candidate Visuals
 
@@ -83,10 +84,10 @@ Summary:
 | Mahoraga | `public/assets/projects/mahoraga/dashboard_preview.png` | `Atishay9828/meta_Mahoraga:docs/dashboard_preview.png` | Known | Approved for homepage/case-study visual use; do not treat as performance proof. |
 | Mahoraga | `public/assets/projects/mahoraga/stitch_aero_screenshot.png` | `Atishay9828/meta_Mahoraga:docs/stitch_aero_screenshot.png` | Known | Approved for case-study-only support. |
 | Mahoraga | `public/assets/projects/mahoraga/training_metrics.png` | `Atishay9828/meta_Mahoraga:docs/training_metrics.png` | Known | Candidate only; interpret methodology before publishing metric claims. |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/predict.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/predict.png` | Known | Replace before polish; content is a Categories Dashboard, not prediction flow. |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/categories.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/categories.png` | Known | Redact/sample-label merchant and transaction details before public polish. |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/history.png` | Known | Redact/sample-label transaction rows before public polish. |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/memory.png` | Known | Replace as merchant-memory proof; current image shows transaction detail. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/predict.png` | Local capture from verified repo frontend with synthetic sample input `demo cafe payment 750` | Known | Replaced 2026-06-27 with a prediction-flow UI screenshot. This is safe demo-data UI proof, not backend benchmark/model-output evidence. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/categories.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/categories.png` | Known | Case-study candidate only; site copy/data must label visible merchants, dates, and amounts as sample/demo transaction data if used. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/history.png` | Known | Case-study candidate only; site copy/data must label visible merchants, dates, route tags, confidence values, and amounts as sample/demo transaction data if used. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | Local capture from verified repo frontend with synthetic merchants `Demo Cafe` and `Sample Transit` | Known | Replaced 2026-06-27 with a merchant-memory UI screenshot. This proves the memory view with sample data, not measured model quality. |
 | The Loop | `public/assets/projects/the-loop/landing_page.jpg` | `Atishay9828/TIET-LOOP:assets/landing_page.jpg` | Known | Replace before polish due low resolution. |
 | The Loop | `public/assets/projects/the-loop/interest_selection.png` | `Atishay9828/TIET-LOOP:assets/interest_selection.png` | Known | Approved for case-study-only workflow support. |
 
@@ -108,6 +109,6 @@ Do not build public final project CTAs until each featured project has:
 3. Add remaining deployment links where marked Missing.
 4. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 5. Render and mobile-QA selected Mermaid diagrams before final visual use.
-6. Replace weak imported assets, redact/sample-label Hybrid transaction screenshots, and collect missing demos/workflow screenshots.
+6. Finish remaining weak imported assets, keep Hybrid category/history visuals sample-labeled if used, and collect missing demos/workflow screenshots.
 7. Add role/contribution details and final tradeoff copy.
 8. Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.

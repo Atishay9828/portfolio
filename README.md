@@ -1,6 +1,6 @@
 # AJ Portfolio Repository
 
-This repository is the source of truth for AJ's portfolio project and contains the conservative Astro static scaffold plus the first implementation hardening pass.
+This repository is the source of truth for AJ's portfolio project and contains the conservative Astro static scaffold plus evidence-hardening work for the featured projects.
 
 The portfolio positions AJ as:
 
@@ -11,7 +11,7 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold, first implementation hardening pass, and first evidence import/case-study hardening pass are complete; evidence hardening continues before production-ready UI polish.
+Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, and Hybrid sample-data visual replacement pass are complete; evidence hardening continues before production-ready UI polish.
 
 The current implementation is a conservative static content shell backed by the evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, and benchmark/workflow evidence are complete.
 
@@ -62,12 +62,14 @@ Created:
 - Public CTA gating for Known-but-not-public-ready LinkedIn, email, and resume assets.
 - Imported real candidate visuals under `public/assets/projects/...` from verified external repos.
 - Hardened featured case-study pages with documented architecture, evidence status, limitations, missing proof, and next-evidence sections.
+- Replaced Hybrid `predict.png` and `memory.png` with safe sample-data frontend UI captures.
 
 Still blocked:
 - Public resume CTA until a final PDF exists under `public/resume/`.
 - LinkedIn and email CTAs until they are verified/confirmed public-ready.
 - Production visual polish until imported candidate visuals, missing screenshots/demos, and diagram render/mobile QA are complete.
 - Hybrid latency/cost claims until benchmark/routing evidence is executed.
+- Hybrid backend/model-output claims until the model/backend path is captured or benchmarked end to end.
 - Ownership/role claims until contribution details are documented.
 - Audit remediation until Astro/Vitest major dependency upgrades are planned and tested.
 
