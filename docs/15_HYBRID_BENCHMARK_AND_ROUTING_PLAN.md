@@ -1,10 +1,13 @@
 # 15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md
 
-Date: 2026-06-26
+Date: 2026-06-28
 
 Purpose:
 - Define how to prove the Hybrid GenAI Transaction Categorizer routing behavior without inventing metrics.
 - Separate acceptable qualitative proof from measured benchmark claims.
+
+Related proof doc:
+- `docs/19_HYBRID_ROUTING_PROOF.md` records current safe sample routing proof and local benchmark blockers.
 
 ## Hard Rule
 
@@ -59,6 +62,17 @@ Rules:
 - Do not publish private financial data.
 - Do not show API keys, raw logs, or user identifiers.
 
+## Current Routing Proof Status
+
+The portfolio now contains a sample routing proof table in `docs/19_HYBRID_ROUTING_PROOF.md` and `src/data/projects.ts`.
+
+Current status:
+- Sample routing rows exist for `dominos order 750`, `bharat petrol payment 500`, `smart class monthly 899`, and `volvo bus booking 1200`.
+- Every row is marked `sample/unmeasured`.
+- Category and route are marked `Unknown` when not clearly documented by repo docs/code/data.
+- No measured latency, cost, fallback-rate, or benchmark result is published.
+- Local backend/model verification remains blocked because `models/distilbert.onnx` was missing from the cloned verified repo.
+
 ## Acceptable Qualitative Proof
 
 Qualitative proof is acceptable for the first static homepage if it is honest:
@@ -84,4 +98,3 @@ Not acceptable without measurement:
 - At least 2 merchant-memory correction or reuse examples.
 - Explicit threshold value from the repo configuration.
 - Measurement methodology if latency or cost appears anywhere.
-

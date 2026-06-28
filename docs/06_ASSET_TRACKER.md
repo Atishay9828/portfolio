@@ -1,6 +1,6 @@
 # 06_ASSET_TRACKER.md
 
-Date: 2026-06-27
+Date: 2026-06-28
 
 Purpose:
 - Track global and project-specific asset readiness.
@@ -22,8 +22,8 @@ Link registry:
 | Global contact assets | 3 | 1 | 0 | 3 | No |
 | Portfolio repository | 0 | 1 | 0 | 0 | Yes |
 | Mahoraga | 6 | 3 | 0 | 1 | No |
-| Hybrid Categorizer | 5 | 2 | 1 | 2 | No |
-| The Loop | 6 | 2 | 0 | 2 | No |
+| Hybrid Categorizer | 6 | 2 | 1 | 1 | No |
+| The Loop | 6 | 2 | 0 | 2 | No; screenshots blocked |
 | AI Resume Tailoring Engine | 0 | 1 | 2 | 4 | No |
 | Webcam Motion Alert System | 0 | 1 | 1 | 4 | No |
 | Lab projects | 0 | 0 | 4 | 4 | No |
@@ -61,8 +61,8 @@ Link registry:
 | Project | Evidence added | Status | Next action |
 |---|---|---|---|
 | Mahoraga | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/diagrams/mahoraga-architecture.md`, `docs/diagrams/mahoraga-reward-system.md` | Known | Revise architecture diagram, render QA diagrams, choose local media/assets, add role/contribution detail. |
-| Hybrid GenAI Transaction Categorizer | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`, `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md` | Known | Revise diagrams, select screenshots, execute benchmark/routing table. |
-| The Loop | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`, `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, `docs/diagrams/the-loop-auth-flow.md` | Known | Revise system diagram, select screenshots, add role detail. |
+| Hybrid GenAI Transaction Categorizer | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`, `docs/19_HYBRID_ROUTING_PROOF.md`, `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md` | Known | Revise diagrams, execute measured benchmark after runtime asset is available, add role detail. |
+| The Loop | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`, `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, `docs/diagrams/the-loop-auth-flow.md` | Known/Blocked | Revise system diagram and add role detail; workflow screenshots are blocked by deployment/server access issue until teammate/friend fixes it. |
 
 ## Imported Asset Review
 
@@ -74,7 +74,9 @@ Summary:
 - Case-study only: Mahoraga `stitch_aero_screenshot.png`, The Loop `interest_selection.png`.
 - Candidate only: Mahoraga `training_metrics.png`.
 - Replaced with safe demo-data UI proof: Hybrid `predict.png`, Hybrid `memory.png`.
+- Safe sample routing proof: Hybrid `docs/19_HYBRID_ROUTING_PROOF.md` and case-study routing table; all rows are sample/unmeasured.
 - Replace before polish: The Loop `landing_page.jpg`.
+- Blocked screenshot capture: The Loop workflow screenshots pending deployment/server access fix.
 - Sample-label in site copy/data before public use: Hybrid `categories.png`, Hybrid `history.png`.
 
 ## Imported Candidate Visuals
@@ -109,6 +111,6 @@ Do not build public final project CTAs until each featured project has:
 3. Add remaining deployment links where marked Missing.
 4. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 5. Render and mobile-QA selected Mermaid diagrams before final visual use.
-6. Finish remaining weak imported assets, keep Hybrid category/history visuals sample-labeled if used, and collect missing demos/workflow screenshots.
+6. Finish remaining weak imported assets, keep Hybrid category/history visuals sample-labeled if used, and collect missing demos/workflow screenshots after blockers are cleared.
 7. Add role/contribution details and final tradeoff copy.
-8. Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.
+8. Restore the Hybrid ONNX runtime asset and execute the benchmark plan before publishing latency/cost claims.

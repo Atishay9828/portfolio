@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { featuredProjects, getProjectBySlug, routes, secondaryProjects } from "../src/data/projects";
 import { links } from "../src/data/links";
+import hybridRoutingProof from "../docs/19_HYBRID_ROUTING_PROOF.md?raw";
 
 import mahoragaDashboard from "../public/assets/projects/mahoraga/dashboard_preview.png?url";
 import mahoragaScreenshot from "../public/assets/projects/mahoraga/stitch_aero_screenshot.png?url";
@@ -99,16 +100,44 @@ describe("portfolio scaffold data", () => {
     const hybrid = getProjectBySlug("hybrid-categorizer");
     expect(hybrid?.caseStudy?.routingProof?.label).toBe("Benchmark pending");
     expect(hybrid?.caseStudy?.routingProof?.columns).toEqual([
-      "Example",
-      "Merchant known?",
-      "ONNX category",
-      "Confidence",
-      "Rule status",
-      "Route taken",
-      "Final category",
-      "Notes",
+      "Input text",
+      "Expected merchant extraction",
+      "Expected category if documented",
+      "Expected route if documented",
+      "Confidence status",
+      "Evidence status",
     ]);
-    expect(hybrid?.caseStudy?.routingProof?.rows).toHaveLength(0);
+    expect(hybrid?.caseStudy?.routingProof?.rows).toHaveLength(4);
+    expect(hybrid?.caseStudy?.routingProof?.note.toLowerCase()).toContain("no measured latency");
+    expect(hybrid?.caseStudy?.routingProof?.note.toLowerCase()).toContain("onnx model/runtime asset missing");
+  });
+
+  it("records the Hybrid routing proof doc without measured latency or cost claims", () => {
+    const proof = hybridRoutingProof;
+    expect(proof).toContain("dominos order 750");
+    expect(proof).toContain("bharat petrol payment 500");
+    expect(proof).toContain("smart class monthly 899");
+    expect(proof).toContain("volvo bus booking 1200");
+    expect(proof).toContain("Benchmark status");
+    expect(proof).toContain("models/distilbert.onnx");
+    expect(proof).toContain("No measured latency");
+    expect(proof).not.toMatch(/\b\d+(\.\d+)?\s*(ms|milliseconds|s|seconds)\b/i);
+    expect(proof).not.toMatch(/[$₹]\s*\d/);
+  });
+
+  it("keeps Hybrid routing rows sample/unmeasured and free of latency or cost values", () => {
+    const rows = getProjectBySlug("hybrid-categorizer")?.caseStudy?.routingProof?.rows ?? [];
+    expect(rows.map((row) => row[0])).toEqual([
+      "dominos order 750",
+      "bharat petrol payment 500",
+      "smart class monthly 899",
+      "volvo bus booking 1200",
+    ]);
+    for (const row of rows) {
+      expect(row).toContain("sample/unmeasured");
+      expect(row.join(" ")).not.toMatch(/\b\d+(\.\d+)?\s*(ms|milliseconds|s|seconds)\b/i);
+      expect(row.join(" ")).not.toMatch(/[$₹]\s*\d/);
+    }
   });
 
   it("documents The Loop workflow without screenshots or private data", () => {
@@ -121,5 +150,7 @@ describe("portfolio scaffold data", () => {
       "Admin / event management",
       "Edge cases / pending evidence",
     ]);
+    expect(loop?.visual.detail.toLowerCase()).toContain("deployment/server access issue");
+    expect(loop?.missingProof).toContain("workflow screenshots blocked by deployment/server access issue");
   });
 });

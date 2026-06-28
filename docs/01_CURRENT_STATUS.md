@@ -1,12 +1,12 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-06-27
+Date: 2026-06-28
 
 ## Current Phase
 
 Astro static scaffold created and first implementation hardening pass completed; evidence hardening continues before production-ready UI polish.
 
-The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
+The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
 
 First implementation review status:
 - Architecture remains clean enough for the next milestone: project/link/evidence data is centralized, route definitions are data-driven, and homepage/case-study rendering is separated into section/project components.
@@ -30,7 +30,9 @@ Imported asset visual/privacy review status:
 - Mahoraga `training_metrics.png` remains Candidate only; no metric claims may be published without methodology/evaluation interpretation.
 - Hybrid `predict.png` and Hybrid `memory.png` were replaced on 2026-06-27 with local captures from the verified Hybrid frontend using synthetic demo transactions.
 - Hybrid `categories.png` and `history.png` remain case-study candidates only and must be explicitly labeled as sample/demo transaction data if used.
+- Hybrid safe routing proof was added on 2026-06-28 in `docs/19_HYBRID_ROUTING_PROOF.md`; all rows are sample/unmeasured and no latency/cost claims were added.
 - The Loop `landing_page.jpg` must still be replaced before polish.
+- The Loop workflow screenshot capture is temporarily blocked by a deployment/server access issue; a teammate/friend with access will fix it later.
 - Hybrid replacement screenshots are frontend UI proof only; the full backend model path was not captured because the cloned Hybrid repo did not include `models/distilbert.onnx`.
 
 ## Frontend Implementation Allowed?
@@ -59,8 +61,8 @@ Reason:
 | Featured project diagram review | Known | Spec-level review exists in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; final rendered/mobile QA is still required before production polish. |
 | Featured project screenshots/demos | Known/Needed/Missing | Hybrid prediction-flow and merchant-memory UI screenshots now exist as safe sample-data portfolio-local assets; The Loop workflow screenshots, Mahoraga demo media, and final screenshot/demo coverage are still required before final visual implementation. |
 | Role/contribution details | Needed | Required for ownership clarity. |
-| Hybrid benchmark/routing evidence | Planned | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; measured latency/cost/routing examples are still Needed. |
-| The Loop workflow walkthrough | Known | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots remain Needed. |
+| Hybrid benchmark/routing evidence | Known/Planned | Sample routing proof exists in `docs/19_HYBRID_ROUTING_PROOF.md`; measured latency/cost/routing examples are still Needed and local backend/model verification is blocked by missing `models/distilbert.onnx`. |
+| The Loop workflow walkthrough | Known/Blocked | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshot capture is temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it. |
 | Astro static scaffold | Verified | Homepage and `/projects/mahoraga`, `/projects/hybrid-categorizer`, `/projects/the-loop` build successfully. Verified locally on 2026-06-26 with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`. |
 | First implementation hardening pass | Verified | Evidence-gating, test coverage, responsive CSS hardening, screenshot QA, and dependency audit completed on 2026-06-26. |
 | Dependency audit | Known | `npm audit` reports 17 vulnerabilities; safe non-breaking fixes are not clearly available because fixes require major dependency changes. |
@@ -68,6 +70,7 @@ Reason:
 | Imported project visuals | Known | Real candidate assets were copied from verified external repos into `public/assets/projects/...`; visual/privacy review is still required before production polish. |
 | Imported asset review | Known | `docs/18_IMPORTED_ASSET_REVIEW.md` classifies imported assets by homepage approval, case-study-only use, replacement need, sample-labeling need, and Hybrid sample-data UI replacement status. |
 | Hybrid sample-data visual proof | Known | `predict.png` and `memory.png` were replaced from a local run of the verified Hybrid frontend with synthetic demo transactions. Not benchmark/model-output evidence. |
+| Hybrid routing proof | Known | `docs/19_HYBRID_ROUTING_PROOF.md` and the Hybrid case study include documented sample routing rows only; every row is `sample/unmeasured`. |
 | Case-study hardening | Verified | The three featured case-study routes now render documented architecture, evidence, limitation, missing-proof, and next-evidence sections. |
 
 ## Verified Evidence Links
@@ -102,6 +105,7 @@ Completion criteria:
 - Add featured project role/contribution details, remaining portfolio-local screenshots, and demos.
 - Replace weak/mismatched imported assets, especially The Loop `landing_page.jpg`.
 - Keep Hybrid category/history transaction screenshots explicitly sample-labeled in site copy/data if used.
-- Execute the Hybrid benchmark/routing plan before publishing latency/cost claims.
+- Execute the Hybrid benchmark/routing plan after restoring `models/distilbert.onnx` or an equivalent verified runtime asset before publishing latency/cost claims.
+- Wait for the teammate/friend with access to fix The Loop deployment/server issue before attempting workflow screenshot capture.
 - Plan dependency major-version upgrades separately from evidence/content hardening.
 - Update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md`.

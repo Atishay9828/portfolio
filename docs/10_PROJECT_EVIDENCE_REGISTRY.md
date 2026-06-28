@@ -1,6 +1,6 @@
 # 10_PROJECT_EVIDENCE_REGISTRY.md
 
-Date: 2026-06-27
+Date: 2026-06-28
 
 Purpose:
 - Track portfolio evidence by project.
@@ -77,6 +77,7 @@ Evidence status:
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
 - UI screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; `predict.png` and `memory.png` were replaced on 2026-06-27 with running-frontend captures using synthetic demo data. `categories.png` and `history.png` remain case-study candidates that must be sample-labeled if used.
 - Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
+- Safe sample routing proof: Known in `docs/19_HYBRID_ROUTING_PROOF.md`; all rows are sample/unmeasured.
 - Measured benchmarks/routing table: Needed.
 
 Required assets:
@@ -92,9 +93,8 @@ Required assets:
 
 Missing assets:
 - Deployment link.
-- Benchmarks.
+- Measured benchmarks.
 - Category/history sample-labeling in final case-study presentation if those screenshots are used.
-- Routing decision table.
 - Role/contribution detail.
 - Final tradeoff note.
 - End-to-end backend/model-output capture only if final proof needs more than frontend UI state.
@@ -105,12 +105,14 @@ Verification notes:
 - Created diagram/spec files: `docs/diagrams/hybrid-categorizer-routing.md` and `docs/diagrams/hybrid-categorizer-memory.md`.
 - Repo contains screenshot candidates under `frontend/public/screenshots/`; `categories.png` and `history.png` remain imported from that source.
 - `predict.png` and `memory.png` were replaced from a local run of the verified Hybrid frontend at `C:\tmp\Hybrid-GenAI-Transaction-Categorization` using synthetic demo transactions. The backend model path was not used because the cloned repo did not include `models/distilbert.onnx`.
+- `docs/19_HYBRID_ROUTING_PROOF.md` records documented sample routing rows for `dominos order 750`, `bharat petrol payment 500`, `smart class monthly 899`, and `volvo bus booking 1200`. The table is qualitative and unmeasured.
+- Local benchmark execution remains blocked because `models/distilbert.onnx` is missing from the cloned verified repo.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Imported asset review found the original `predict.png` was not prediction flow and the original `memory.png` was not merchant-memory proof; both were replaced on 2026-06-27. Remaining transaction-detail screenshots require sample/demo labeling before public use.
 
 Can be shown publicly yet:
-- Partially. Verified walkthrough, repo, conservative routing copy, and sample-data UI screenshots can support a first static section, but full featured presentation remains blocked by missing deployment status, measured benchmark/routing evidence, diagram revisions, role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
+- Partially. Verified walkthrough, repo, conservative routing copy, sample-data UI screenshots, and sample/unmeasured routing proof can support a first static section, but full featured presentation remains blocked by missing deployment status, measured benchmark evidence, diagram revisions, role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
 
 ### The Loop
 
@@ -126,7 +128,7 @@ Evidence status:
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, system diagram needs revision.
 - Imported product screenshot candidates: Known portfolio-local files under `public/assets/projects/the-loop/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
-- Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots still Needed.
+- Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots are temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it.
 
 Required assets:
 - Repo link.
@@ -139,7 +141,7 @@ Required assets:
 - Role/contribution details.
 
 Missing assets:
-- Replace low-resolution landing image and capture missing workflow screenshots.
+- Replace low-resolution landing image and capture missing workflow screenshots after the deployment/server access issue is fixed.
 - User workflow walkthrough.
 - Demo/walkthrough.
 - Role/contribution detail.
@@ -153,9 +155,10 @@ Verification notes:
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`.
 - Imported asset review marks `landing_page.jpg` Replace before polish and `interest_selection.png` Approved for case study only.
+- Workflow screenshots are blocked for this milestone because the deployed server has an access/server issue and the teammate/friend with access will fix it later.
 
 Can be shown publicly yet:
-- Partially. Verified deployment, repo, workflow walkthrough, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by portfolio-local screenshots, system diagram revision, rendered/mobile diagram QA, role details, and final tradeoff copy.
+- Partially. Verified deployment, repo, workflow walkthrough, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by workflow screenshots, system diagram revision, rendered/mobile diagram QA, role details, and final tradeoff copy. Screenshot capture is intentionally paused until the deployment/server access issue is fixed.
 
 ## Secondary Projects
 

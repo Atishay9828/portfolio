@@ -201,3 +201,23 @@ Blocked / caveat:
 Status:
 - Hybrid `predict.png` and `memory.png` replacement is complete for safe sample-data UI proof.
 - Hybrid production polish remains blocked by measured benchmark/routing evidence, diagram revisions, role/contribution details, deployment status, and optional end-to-end backend/model-output capture.
+
+### 2026-06-28 Hybrid Routing Proof Without Benchmark Claims
+
+Completed:
+- Confirmed local `master` was aligned with `origin/master` before changes.
+- Inspected the available verified Hybrid checkout under `C:\tmp\Hybrid-GenAI-Transaction-Categorization`.
+- Confirmed documented sample transactions: `dominos order 750`, `bharat petrol payment 500`, `smart class monthly 899`, and `volvo bus booking 1200`.
+- Confirmed `data/categories.json` documents `confidence_threshold` as `0.90`.
+- Confirmed merchant-map/code support for merchant override behavior where clear, and marked unsupported category/route fields as `Unknown`.
+- Confirmed no benchmark script/results were available from the local scan.
+- Confirmed local backend/model benchmark execution is blocked because `models/distilbert.onnx` is missing.
+- Created `docs/19_HYBRID_ROUTING_PROOF.md`.
+- Added sample/unmeasured Hybrid routing rows to the case-study data.
+- Updated project/docs status to keep latency, cost, fallback-rate, and model-output claims blocked.
+- Recorded The Loop workflow screenshots as temporarily blocked by a deployment/server access issue; teammate/friend with access will fix later.
+
+Status:
+- Hybrid now has safe routing proof for architecture/case-study context.
+- Hybrid benchmark status remains pending.
+- The Loop remains featured because repo/deployment links are verified, but workflow screenshot polish remains blocked.

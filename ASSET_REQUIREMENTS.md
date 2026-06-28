@@ -1,6 +1,6 @@
 # ASSET_REQUIREMENTS.md
 
-Date: 2026-06-27
+Date: 2026-06-28
 
 Source documents:
 - `PROJECT_CONTEXT.md`
@@ -13,6 +13,7 @@ Source documents:
 - `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`
 - `docs/17_RESUME_PUBLICATION_PLAN.md`
 - `docs/18_IMPORTED_ASSET_REVIEW.md`
+- `docs/19_HYBRID_ROUTING_PROOF.md`
 
 Purpose:
 - Track every asset required to make the portfolio credible.
@@ -70,8 +71,8 @@ Purpose:
 | Deployment link | Recommended | Missing | TODO. |
 | Confidence-routing diagram | Required | Known | `docs/diagrams/hybrid-categorizer-routing.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
 | Merchant memory visualization | Required | Known | `docs/diagrams/hybrid-categorizer-memory.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
-| Latency comparison benchmark | Required | Needed | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; publish no numbers until measured. |
-| Routing decision table | Required | Needed | Use real or representative transactions, clearly labeled; table structure exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`. |
+| Latency comparison benchmark | Required | Needed | Methodology exists in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`; publish no numbers until measured. Local benchmark execution is blocked until `models/distilbert.onnx` or an equivalent verified runtime asset is available. |
+| Routing decision table | Required | Known | Safe sample routing proof exists in `docs/19_HYBRID_ROUTING_PROOF.md` and `src/data/projects.ts`. All rows are `sample/unmeasured`; this is architecture/routing proof, not measured benchmark evidence. |
 | UI screenshots | Required | Known | `predict.png` and `memory.png` were replaced on 2026-06-27 with local captures from the verified Hybrid frontend using synthetic demo transactions. `categories.png` and `history.png` remain case-study candidates only and must be labeled as sample/demo transaction data if used. These screenshots are UI proof, not backend benchmark/model-output evidence. |
 | Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
@@ -81,11 +82,11 @@ Purpose:
 |---|---|---|---|
 | Deployment link | Required | Verified | `https://the-loop-5m7u.onrender.com/`; loads Render deployment with page title `The Loop`. Verified 2026-06-26. |
 | Repo link | Required | Verified | `https://github.com/Atishay9828/TIET-LOOP`; GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. |
-| Product screenshots | Required | Known | Visual review marks `landing_page.jpg` Replace before polish and approves `interest_selection.png` for case-study-only workflow support. |
+| Product screenshots | Required | Known | Visual review marks `landing_page.jpg` Replace before polish and approves `interest_selection.png` for case-study-only workflow support. Workflow screenshots are temporarily blocked by a deployment/server access issue; a teammate/friend with access will fix it later. |
 | Database diagram | Required | Known | `docs/diagrams/the-loop-system.md` includes documented database tables and system boundaries; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
 | WebSocket architecture diagram | Required | Known | `docs/diagrams/the-loop-realtime-flow.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
 | Auth flow diagram | Required | Known | `docs/diagrams/the-loop-auth-flow.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
-| User workflow walkthrough | Required | Known | `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md` exists; screenshots remain Needed. |
+| User workflow walkthrough | Required | Known | `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md` exists; workflow screenshots remain blocked until the deployment/server access issue is fixed by the teammate/friend with access. |
 | Demo video or GIF | Recommended | Needed | End-to-end product flow. |
 | Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
@@ -141,7 +142,7 @@ Purpose:
 |---|---:|---:|---:|---:|---:|
 | Global identity/contact | 4 | 3 | 1 | 0 | 100% required Known/Verified; public-ready after repo-local resume and LinkedIn verification |
 | Mahoraga | 6 | 5 | 1 required, 3 links total | 1 | One homepage asset approved; demo media, metric interpretation, and role detail still Needed |
-| Hybrid Categorizer | 7 | 4 | 2 | 2 plus 1 missing deployment | Prediction-flow and merchant-memory screenshots replaced with safe demo-data UI proof; benchmarks, routing table, deployment status, role details, and any end-to-end model-output proof still Needed |
+| Hybrid Categorizer | 7 | 5 | 2 | 1 plus 1 missing deployment | Prediction-flow and merchant-memory screenshots replaced with safe demo-data UI proof; sample routing proof added; benchmarks, deployment status, role details, and any end-to-end model-output proof still Needed |
 | The Loop | 7 | 5 | 2 | 2 | Interest selection approved case-study-only; landing/workflow screenshots, role detail, and demo media still Needed |
 | Secondary projects | 10 | 0 | 2 | 8 | 20% required verified |
 | Lab projects | 8 | 0 | 0 | 8 | 0% |

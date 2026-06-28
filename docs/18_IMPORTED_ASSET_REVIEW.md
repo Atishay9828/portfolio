@@ -1,6 +1,6 @@
 # 18_IMPORTED_ASSET_REVIEW.md
 
-Date: 2026-06-27
+Date: 2026-06-28
 
 Purpose:
 - Record the visual and privacy review of imported portfolio project assets.
@@ -24,7 +24,7 @@ Scope:
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | Sample-label required in site copy/data | Case-study candidate only with sample/demo label |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | Replaced with sample-data UI proof | Case-study candidate as frontend merchant-memory proof |
 | The Loop | `public/assets/projects/the-loop/landing_page.jpg` | Replace before polish | Do not use for final polish |
-| The Loop | `public/assets/projects/the-loop/interest_selection.png` | Approved for case study only | Case study workflow support |
+| The Loop | `public/assets/projects/the-loop/interest_selection.png` | Approved for case study only | Case study workflow support; broader workflow capture is blocked by deployment/server access issue |
 
 ## Asset Reviews
 
@@ -248,7 +248,7 @@ Final status:
 - Replace before polish.
 
 Notes:
-- Capture a fresh high-resolution landing/auth screenshot from the deployment or local app with safe demo data.
+- Capture a fresh high-resolution landing/auth screenshot only after the deployment/server access issue is fixed by the teammate/friend with access.
 
 ### The Loop Interest Selection
 
@@ -275,7 +275,7 @@ Final status:
 - Approved for case study only.
 
 Notes:
-- Pair with event discovery, RSVP/join, chat, carpool, and admin screenshots before claiming full product workflow coverage.
+- Pair with event discovery, RSVP/join, chat, carpool, and admin screenshots before claiming full product workflow coverage. Those screenshots are temporarily blocked by a deployment/server access issue and should not be captured in this milestone.
 
 ## Homepage-Approved Assets
 
@@ -303,6 +303,6 @@ Notes:
 
 - Hybrid still needs measured benchmark/routing evidence and any end-to-end backend/model-output capture required for final inference proof.
 - Hybrid `categories.png` and `history.png` need sample-data labeling in final surrounding copy if used.
-- The Loop needs high-resolution landing/auth, event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots.
+- The Loop needs high-resolution landing/auth, event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots after the deployment/server access issue is fixed by the teammate/friend with access.
 - Mahoraga still needs demo media, architecture diagram revision, and interpreted evaluation evidence before metric claims.
 - Role/contribution details remain pending for all featured projects.

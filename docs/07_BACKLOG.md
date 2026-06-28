@@ -1,6 +1,6 @@
 # 07_BACKLOG.md
 
-Date: 2026-06-27
+Date: 2026-06-28
 
 ## P0
 
@@ -31,11 +31,14 @@ Date: 2026-06-27
 - [x] Visually review imported candidate visuals.
 - [x] Replace Hybrid `predict.png` and `memory.png` with safe sample-data frontend UI captures.
 - [x] Add explicit sample/demo labeling for Hybrid visual proof in project data/docs.
+- [x] Add safe Hybrid sample routing proof without benchmark claims.
 - [ ] Replace weak/mismatched imported assets.
 - [ ] Keep Hybrid category/history screenshots sample-labeled in final case-study presentation if used.
-- [ ] Collect remaining portfolio-local screenshots/demos.
+- [ ] Collect remaining portfolio-local screenshots/demos after blockers clear.
+- [ ] Capture The Loop workflow screenshots after the deployment/server access issue is fixed by teammate/friend.
 - [ ] Add role/contribution details per featured project.
-- [ ] Execute Hybrid benchmark/routing table with real or clearly representative examples.
+- [ ] Execute Hybrid measured benchmark/routing table after runtime assets are available.
+- [ ] Restore or provide Hybrid `models/distilbert.onnx` or equivalent verified runtime asset before measured benchmark execution.
 - [ ] Finalize featured project tradeoff/limitation copy.
 - [ ] Plan Astro/Vitest major dependency upgrade path for audit remediation.
 
