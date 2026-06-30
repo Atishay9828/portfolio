@@ -1,6 +1,6 @@
 # 10_PROJECT_EVIDENCE_REGISTRY.md
 
-Date: 2026-06-28
+Date: 2026-06-30
 
 Purpose:
 - Track portfolio evidence by project.
@@ -77,8 +77,10 @@ Evidence status:
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
 - UI screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; `predict.png` and `memory.png` were replaced on 2026-06-27 with running-frontend captures using synthetic demo data. `categories.png` and `history.png` remain case-study candidates that must be sample-labeled if used.
 - Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
-- Safe sample routing proof: Known in `docs/19_HYBRID_ROUTING_PROOF.md`; all rows are sample/unmeasured.
-- Measured benchmarks/routing table: Needed.
+- Safe sample routing proof: Known in `docs/19_HYBRID_ROUTING_PROOF.md`.
+- Measured local classifier/routing table: Known in `docs/20_HYBRID_BENCHMARK_RESULTS.md` and `src/data/projects.ts`.
+- Full endpoint/Qwen fallback/cost benchmark: Needed.
+- Local ONNX runtime asset: Known at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`; not portfolio-local and not benchmark evidence by itself.
 
 Required assets:
 - Repo link.
@@ -93,7 +95,7 @@ Required assets:
 
 Missing assets:
 - Deployment link.
-- Measured benchmarks.
+- Full endpoint/Qwen fallback/cost benchmarks.
 - Category/history sample-labeling in final case-study presentation if those screenshots are used.
 - Role/contribution detail.
 - Final tradeoff note.
@@ -104,15 +106,16 @@ Verification notes:
 - GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`.
 - Created diagram/spec files: `docs/diagrams/hybrid-categorizer-routing.md` and `docs/diagrams/hybrid-categorizer-memory.md`.
 - Repo contains screenshot candidates under `frontend/public/screenshots/`; `categories.png` and `history.png` remain imported from that source.
-- `predict.png` and `memory.png` were replaced from a local run of the verified Hybrid frontend at `C:\tmp\Hybrid-GenAI-Transaction-Categorization` using synthetic demo transactions. The backend model path was not used because the cloned repo did not include `models/distilbert.onnx`.
+- `predict.png` and `memory.png` were replaced from a local run of the verified Hybrid frontend at `C:\tmp\Hybrid-GenAI-Transaction-Categorization` using synthetic demo transactions. The backend model path was not used in that run because the `C:\tmp` clone did not include `models/distilbert.onnx`.
 - `docs/19_HYBRID_ROUTING_PROOF.md` records documented sample routing rows for `dominos order 750`, `bharat petrol payment 500`, `smart class monthly 899`, and `volvo bus booking 1200`. The table is qualitative and unmeasured.
-- Local benchmark execution remains blocked because `models/distilbert.onnx` is missing from the cloned verified repo.
+- A local Hybrid repo runtime asset was found at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` on 2026-06-28. File size: 267,956,781 bytes. It is inside the Hybrid repo, outside the portfolio repo, not Git-tracked, ignored by `.gitignore` via `**/models/`, and should remain uncommitted.
+- `docs/20_HYBRID_BENCHMARK_RESULTS.md` records a 2026-06-30 local read-only ONNX classifier/routing benchmark with 20 measured runs and 5 warmups per sample. Qwen fallback was not called; endpoint latency, fallback latency, cost, fallback-rate, and production SLA claims remain blocked.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Imported asset review found the original `predict.png` was not prediction flow and the original `memory.png` was not merchant-memory proof; both were replaced on 2026-06-27. Remaining transaction-detail screenshots require sample/demo labeling before public use.
 
 Can be shown publicly yet:
-- Partially. Verified walkthrough, repo, conservative routing copy, sample-data UI screenshots, and sample/unmeasured routing proof can support a first static section, but full featured presentation remains blocked by missing deployment status, measured benchmark evidence, diagram revisions, role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
+- Partially. Verified walkthrough, repo, conservative routing copy, sample-data UI screenshots, sample routing proof, and local classifier/routing benchmark evidence can support a first static section, but full featured presentation remains blocked by missing deployment status, endpoint/Qwen fallback/cost benchmark evidence, diagram revisions, role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
 
 ### The Loop
 

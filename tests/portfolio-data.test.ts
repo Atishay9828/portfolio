@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { featuredProjects, getProjectBySlug, routes, secondaryProjects } from "../src/data/projects";
 import { links } from "../src/data/links";
 import hybridRoutingProof from "../docs/19_HYBRID_ROUTING_PROOF.md?raw";
+import hybridBenchmarkResults from "../docs/20_HYBRID_BENCHMARK_RESULTS.md?raw";
 
 import mahoragaDashboard from "../public/assets/projects/mahoraga/dashboard_preview.png?url";
 import mahoragaScreenshot from "../public/assets/projects/mahoraga/stitch_aero_screenshot.png?url";
@@ -24,6 +25,12 @@ const importedProjectAssets = [
   loopInterestSelection,
   loopLanding,
 ];
+
+const rootModelFiles = import.meta.glob("../models/distilbert.onnx", { eager: true, query: "?url" });
+const publicHybridModelFiles = import.meta.glob("../public/assets/projects/hybrid-categorizer/distilbert.onnx", {
+  eager: true,
+  query: "?url",
+});
 
 describe("portfolio scaffold data", () => {
   it("keeps the locked featured project order", () => {
@@ -96,23 +103,26 @@ describe("portfolio scaffold data", () => {
     }
   });
 
-  it("keeps Hybrid benchmark proof explicitly pending", () => {
+  it("records Hybrid benchmark proof as a local benchmark, not a production claim", () => {
     const hybrid = getProjectBySlug("hybrid-categorizer");
-    expect(hybrid?.caseStudy?.routingProof?.label).toBe("Benchmark pending");
+    expect(hybrid?.caseStudy?.routingProof?.label).toBe("Local benchmark measured");
     expect(hybrid?.caseStudy?.routingProof?.columns).toEqual([
       "Input text",
-      "Expected merchant extraction",
-      "Expected category if documented",
-      "Expected route if documented",
-      "Confidence status",
-      "Evidence status",
+      "Merchant extracted",
+      "Predicted category",
+      "Route taken",
+      "Confidence",
+      "Median local latency",
+      "Runs / warmup",
+      "Limitation",
     ]);
     expect(hybrid?.caseStudy?.routingProof?.rows).toHaveLength(4);
-    expect(hybrid?.caseStudy?.routingProof?.note.toLowerCase()).toContain("no measured latency");
-    expect(hybrid?.caseStudy?.routingProof?.note.toLowerCase()).toContain("onnx model/runtime asset missing");
+    expect(hybrid?.caseStudy?.routingProof?.note.toLowerCase()).toContain("local benchmark");
+    expect(hybrid?.caseStudy?.routingProof?.note.toLowerCase()).toContain("not a production sla");
+    expect(hybrid?.caseStudy?.routingProof?.note.toLowerCase()).toContain("qwen fallback was not called");
   });
 
-  it("records the Hybrid routing proof doc without measured latency or cost claims", () => {
+  it("keeps the older Hybrid routing proof doc free of measured latency or cost claims", () => {
     const proof = hybridRoutingProof;
     expect(proof).toContain("dominos order 750");
     expect(proof).toContain("bharat petrol payment 500");
@@ -120,12 +130,12 @@ describe("portfolio scaffold data", () => {
     expect(proof).toContain("volvo bus booking 1200");
     expect(proof).toContain("Benchmark status");
     expect(proof).toContain("models/distilbert.onnx");
-    expect(proof).toContain("No measured latency");
+    expect(proof).toContain("No production, endpoint, or Qwen fallback latency");
     expect(proof).not.toMatch(/\b\d+(\.\d+)?\s*(ms|milliseconds|s|seconds)\b/i);
     expect(proof).not.toMatch(/[$₹]\s*\d/);
   });
 
-  it("keeps Hybrid routing rows sample/unmeasured and free of latency or cost values", () => {
+  it("keeps measured Hybrid case-study rows local and free of cost or fallback-rate claims", () => {
     const rows = getProjectBySlug("hybrid-categorizer")?.caseStudy?.routingProof?.rows ?? [];
     expect(rows.map((row) => row[0])).toEqual([
       "dominos order 750",
@@ -134,10 +144,29 @@ describe("portfolio scaffold data", () => {
       "volvo bus booking 1200",
     ]);
     for (const row of rows) {
-      expect(row).toContain("sample/unmeasured");
-      expect(row.join(" ")).not.toMatch(/\b\d+(\.\d+)?\s*(ms|milliseconds|s|seconds)\b/i);
+      expect(row).not.toContain("sample/unmeasured");
+      expect(row.join(" ")).toContain("20 / 5");
+      expect(row.join(" ")).not.toMatch(/\b\d+(\.\d+)?%/);
       expect(row.join(" ")).not.toMatch(/[$₹]\s*\d/);
     }
+  });
+
+  it("documents the measured Hybrid benchmark result with local scope and limitations", () => {
+    const benchmarkDoc = hybridBenchmarkResults;
+
+    expect(benchmarkDoc).toContain("Local benchmark only");
+    expect(benchmarkDoc).toContain("D:\\Hybrid-GenAI-Transaction-Categorization\\models\\distilbert.onnx");
+    expect(benchmarkDoc).toContain("20 measured runs per sample");
+    expect(benchmarkDoc).toContain("5 warmup runs per sample");
+    expect(benchmarkDoc).toContain("Qwen fallback was not called");
+    expect(benchmarkDoc).toContain("not a production SLA");
+    expect(benchmarkDoc).not.toMatch(/[$â‚¹]\s*\d/);
+    expect(benchmarkDoc).not.toMatch(/fallback rate\s*[:=]\s*\d/i);
+  });
+
+  it("documents the Hybrid model path without copying the ONNX model into the portfolio repo", () => {
+    expect(Object.keys(rootModelFiles)).toEqual([]);
+    expect(Object.keys(publicHybridModelFiles)).toEqual([]);
   });
 
   it("documents The Loop workflow without screenshots or private data", () => {

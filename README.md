@@ -11,9 +11,9 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, and Hybrid sample routing proof pass are complete; evidence hardening continues before production-ready UI polish.
+Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, and Hybrid local benchmark pass are complete; evidence hardening continues before production-ready UI polish.
 
-The current implementation is a conservative static content shell backed by the evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, and benchmark/workflow evidence are complete.
+The current implementation is a conservative static content shell backed by the evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, full endpoint/fallback benchmark evidence, and workflow evidence are complete.
 
 ## Run Locally
 
@@ -64,12 +64,13 @@ Created:
 - Hardened featured case-study pages with documented architecture, evidence status, limitations, missing proof, and next-evidence sections.
 - Replaced Hybrid `predict.png` and `memory.png` with safe sample-data frontend UI captures.
 - Added `docs/19_HYBRID_ROUTING_PROOF.md` and sample/unmeasured Hybrid routing rows without benchmark claims.
+- Added `docs/20_HYBRID_BENCHMARK_RESULTS.md` with local read-only ONNX classifier/routing benchmark results.
 
 Still blocked:
 - Public resume CTA until a final PDF exists under `public/resume/`.
 - LinkedIn and email CTAs until they are verified/confirmed public-ready.
 - Production visual polish until imported candidate visuals, missing screenshots/demos, and diagram render/mobile QA are complete.
-- Hybrid latency/cost claims until the missing runtime asset is restored and measured benchmark evidence is executed.
+- Hybrid endpoint latency, Qwen fallback latency, cost, fallback-rate, and production claims until full endpoint/fallback benchmark evidence exists.
 - Hybrid backend/model-output claims until the model/backend path is captured or benchmarked end to end.
 - The Loop workflow screenshot polish until the deployment/server access issue is fixed by the teammate/friend with access.
 - Ownership/role claims until contribution details are documented.
@@ -100,7 +101,7 @@ Future agents should start here:
 - `SITE_BLUEPRINT.md`
 - `DESIGN_SYSTEM.md`
 - `ASSET_REQUIREMENTS.md`
-- `docs/00_READ_FIRST.md` through `docs/19_HYBRID_ROUTING_PROOF.md`
+- `docs/00_READ_FIRST.md` through `docs/20_HYBRID_BENCHMARK_RESULTS.md`
 
 ## Locked Decisions
 

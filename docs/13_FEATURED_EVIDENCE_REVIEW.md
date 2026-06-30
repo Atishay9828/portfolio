@@ -15,7 +15,7 @@ Important scope note:
 
 Astro static scaffolding can begin if it is limited to structure, routing, content placeholders backed by existing docs, and conservative evidence labels.
 
-Production-ready UI polish remains blocked because portfolio-local screenshots, demo media, role/contribution details, resume publication, and benchmark evidence are not complete.
+Production-ready UI polish remains blocked because portfolio-local screenshots, demo media, role/contribution details, resume publication, and full endpoint/fallback benchmark evidence are not complete.
 
 ## Diagram Review Summary
 
@@ -121,7 +121,7 @@ Production-minded AI systems proof: local classifier first, LLM fallback only wh
 
 - Deployment link if hosted.
 - Portfolio-local screenshots.
-- Actual latency/cost benchmark measurements.
+- Full endpoint/fallback/cost benchmark measurements.
 - Routing decision table with real or clearly representative examples.
 - Role/contribution details.
 - Final tradeoff copy.
@@ -137,7 +137,7 @@ Production-minded AI systems proof: local classifier first, LLM fallback only wh
 
 - Import reviewed UI screenshots from the external repo only after visual inspection.
 - Candidate destination: `public/assets/projects/hybrid-categorizer/`.
-- Capture benchmark/routing proof as a table or small annotated screenshot only after measurements/examples are real.
+- Use `docs/20_HYBRID_BENCHMARK_RESULTS.md` for local classifier/routing evidence; capture endpoint/fallback proof only after those measurements/examples are real.
 - Do not invent deployment, latency, cost, accuracy, or savings numbers.
 
 ### Role / Contribution Status
@@ -157,7 +157,7 @@ Hardened limitation available:
 
 Yes, with constraints.
 
-Use the verified repo/walkthrough and explain the hybrid routing idea. Do not present benchmark claims, deployment claims, or self-learning claims until the benchmark plan and screenshot/import work are completed.
+Use the verified repo/walkthrough and explain the hybrid routing idea. Present the local classifier/routing benchmark only with its limitations; do not present endpoint, fallback, cost, deployment, production, or self-learning claims until the required proof exists.
 
 ## The Loop
 
@@ -222,4 +222,3 @@ Hardened limitation available:
 Yes, with constraints.
 
 Use verified links, conservative product-flow copy, and the approved realtime/auth diagrams. Do not use the system diagram as a final visual until revised, and do not claim mature production operations.
-

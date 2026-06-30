@@ -1,6 +1,6 @@
 # 15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md
 
-Date: 2026-06-28
+Date: 2026-06-30
 
 Purpose:
 - Define how to prove the Hybrid GenAI Transaction Categorizer routing behavior without inventing metrics.
@@ -8,6 +8,7 @@ Purpose:
 
 Related proof doc:
 - `docs/19_HYBRID_ROUTING_PROOF.md` records current safe sample routing proof and local benchmark blockers.
+- `docs/20_HYBRID_BENCHMARK_RESULTS.md` records the first local read-only ONNX classifier/routing benchmark.
 
 ## Hard Rule
 
@@ -64,14 +65,16 @@ Rules:
 
 ## Current Routing Proof Status
 
-The portfolio now contains a sample routing proof table in `docs/19_HYBRID_ROUTING_PROOF.md` and `src/data/projects.ts`.
+The portfolio now contains a sample routing proof table in `docs/19_HYBRID_ROUTING_PROOF.md` and a local benchmark result table in `docs/20_HYBRID_BENCHMARK_RESULTS.md` and `src/data/projects.ts`.
 
 Current status:
 - Sample routing rows exist for `dominos order 750`, `bharat petrol payment 500`, `smart class monthly 899`, and `volvo bus booking 1200`.
-- Every row is marked `sample/unmeasured`.
-- Category and route are marked `Unknown` when not clearly documented by repo docs/code/data.
-- No measured latency, cost, fallback-rate, or benchmark result is published.
-- Local backend/model verification remains blocked because `models/distilbert.onnx` was missing from the cloned verified repo.
+- The original `docs/19_HYBRID_ROUTING_PROOF.md` rows are qualitative sample proof.
+- `docs/20_HYBRID_BENCHMARK_RESULTS.md` records local classifier/routing latency for four requested samples with 20 measured runs and 5 warmups per sample.
+- Cost, fallback-rate, endpoint latency, Qwen fallback latency, accuracy, and production SLA claims remain unpublished.
+- The earlier `C:\tmp` clone lacked `models/distilbert.onnx`, but a separate local Hybrid repo now has `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` available for benchmark verification.
+- The ONNX file is outside the portfolio repo, not Git-tracked in the Hybrid repo, ignored by `**/models/`, and should remain uncommitted.
+- Full backend endpoint and Qwen fallback benchmark execution remains Needed if those claims will be used.
 
 ## Acceptable Qualitative Proof
 
@@ -80,7 +83,7 @@ Qualitative proof is acceptable for the first static homepage if it is honest:
 - "Uses a local ONNX classifier first, then falls back to an LLM for low-confidence or rule-mismatched cases."
 - "Merchant memory reduces repeated ambiguity when mappings are corrected or learned."
 - "The design trades lower fallback frequency for threshold-tuning risk."
-- "A benchmark table is planned before publishing latency or cost claims."
+- "A local classifier/routing benchmark exists, but endpoint, fallback, cost, and production claims remain blocked."
 
 Not acceptable without measurement:
 
@@ -92,9 +95,9 @@ Not acceptable without measurement:
 
 ## Minimum Evidence Before Case Study Polish
 
-- At least 8 to 12 safe examples in the routing table.
+- At least 8 to 12 safe examples in the routing table before final polish.
 - At least 3 cases that route through ONNX.
-- At least 3 cases that route through LLM fallback.
+- At least 3 cases that route through LLM fallback, with fallback actually executed if fallback latency or quality is claimed.
 - At least 2 merchant-memory correction or reuse examples.
 - Explicit threshold value from the repo configuration.
 - Measurement methodology if latency or cost appears anywhere.

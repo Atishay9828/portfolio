@@ -211,7 +211,7 @@ Completed:
 - Confirmed `data/categories.json` documents `confidence_threshold` as `0.90`.
 - Confirmed merchant-map/code support for merchant override behavior where clear, and marked unsupported category/route fields as `Unknown`.
 - Confirmed no benchmark script/results were available from the local scan.
-- Confirmed local backend/model benchmark execution is blocked because `models/distilbert.onnx` is missing.
+- Confirmed local backend/model benchmark execution was blocked in the inspected `C:\tmp` clone because `models/distilbert.onnx` was missing there.
 - Created `docs/19_HYBRID_ROUTING_PROOF.md`.
 - Added sample/unmeasured Hybrid routing rows to the case-study data.
 - Updated project/docs status to keep latency, cost, fallback-rate, and model-output claims blocked.
@@ -221,3 +221,35 @@ Status:
 - Hybrid now has safe routing proof for architecture/case-study context.
 - Hybrid benchmark status remains pending.
 - The Loop remains featured because repo/deployment links are verified, but workflow screenshot polish remains blocked.
+
+### 2026-06-28 Hybrid ONNX Runtime Asset Correction
+
+Completed:
+- Searched for `distilbert.onnx` before treating benchmark execution as blocked by a missing model.
+- Found local ONNX files at `D:\distilbert.onnx` and `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`.
+- Recorded the Hybrid repo copy as the benchmark verification candidate: `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`, 267,956,781 bytes.
+- Confirmed the Hybrid repo copy is inside the Hybrid repo, outside the portfolio repo, not Git-tracked, and ignored by `.gitignore` via `**/models/`.
+- Confirmed no `distilbert.onnx` copy exists inside the portfolio repo.
+
+Status:
+- The previous missing-model blocker is corrected.
+- Hybrid benchmark/model-output evidence is still not Verified because the benchmark has not been executed.
+- `distilbert.onnx` should remain uncommitted and must not be copied into the portfolio repo.
+
+### 2026-06-30 Hybrid Local Benchmark Results
+
+Completed:
+- Confirmed local `master` was aligned with `origin/master` before changes.
+- Inspected the Hybrid backend runtime: FastAPI entrypoint `backend/main.py`, `/predict` endpoint, prediction logic in `backend/classify.py`, preprocessing in `backend/preprocessing.py`, merchant-map persistence in `backend/feedback.py`, Qwen fallback in `backend/reasoner.py` and `backend/llm.py`, threshold in `data/categories.json`, and dependencies in `requirements.txt`.
+- Confirmed the model path used for measurement: `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`.
+- Installed temporary benchmark dependencies under `C:\tmp\hybrid-bench-deps`; no portfolio or Hybrid repo dependency files were changed.
+- Ran a read-only ONNX classifier/routing benchmark with 20 measured runs and 5 warmup runs per sample.
+- Created `docs/20_HYBRID_BENCHMARK_RESULTS.md`.
+- Updated Hybrid case-study data with measured local rows for `dominos order 750`, `bharat petrol payment 500`, `smart class monthly 899`, and `volvo bus booking 1200`.
+- Kept Qwen fallback latency, cost, fallback-rate, endpoint latency, production SLA, and accuracy claims blocked.
+- Confirmed the Hybrid repo remained clean after the benchmark and no `distilbert.onnx` file was copied into the portfolio repo.
+
+Status:
+- Hybrid now has local classifier/routing benchmark evidence.
+- Full endpoint and Qwen fallback benchmarking remain blocked/pending.
+- The measured values are local-only and must not be framed as production performance.

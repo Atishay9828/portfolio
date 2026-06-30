@@ -92,8 +92,8 @@ Do not mark assets Verified until the files exist in these paths or another docu
 |---|---|---|
 | Public resume PDF | Local candidates are outside repo and not selected for publication. | Choose final version, redact if needed, copy to `public/resume/`, and record status. |
 | Hybrid deployment screenshot | No deployment link is documented. | Provide and verify hosted deployment, or mark deployment not applicable. |
-| Hybrid latency/cost chart | No real measurements exist in this repo. | Run benchmark plan and record measured data. |
-| Hybrid backend/model-output screenshot | The cloned verified repo did not include `models/distilbert.onnx`; the replacement screenshots were captured from the frontend with controlled synthetic sample responses. | Set up the model/backend or use a verified hosted/demo environment, then capture end-to-end inference if final proof requires it. |
+| Hybrid latency/cost chart | Local classifier/routing benchmark exists in `docs/20_HYBRID_BENCHMARK_RESULTS.md`, but cost, fallback-rate, endpoint latency, and Qwen fallback latency remain unmeasured. | Use the local benchmark only with its limitations visible; run full endpoint/fallback benchmark before stronger claims. |
+| Hybrid backend/model-output screenshot | The replacement screenshots were captured from the frontend with controlled synthetic sample responses, not the backend model path. A local classifier/routing benchmark now exists, but no end-to-end backend screenshot was captured. | Run the local backend/model path with the located ONNX asset or use a verified hosted/demo environment, then capture end-to-end inference if final proof requires it. |
 | The Loop final deployment screenshots | Deployment exists, but public workflow behavior still needs manual screen capture/review. | Capture screenshots from the verified deployment or local app with safe demo data. |
 | Resume-engine sample output | No redacted sample output is in repo. | Generate/select a safe public sample and redact private details. |
 | Webcam alert email screenshot | No public-safe alert screenshot is in repo. | Capture/redact email alert evidence. |

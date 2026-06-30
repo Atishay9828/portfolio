@@ -1,12 +1,12 @@
 # 09_AI_HANDOFF.md
 
-Date: 2026-06-28
+Date: 2026-06-30
 
 ## Current Project State
 
 The portfolio now has a conservative Astro static scaffold plus a first implementation hardening pass. The strategy is strong and should not be redesigned.
 
-The repository now has a continuity system under `docs/00..19`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, The Loop workflow walkthrough, and resume publication plan.
+The repository now has a continuity system under `docs/00..20`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, and resume publication plan.
 
 Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
 
@@ -20,7 +20,7 @@ Evidence import and case-study hardening status:
 - Real candidate visuals were imported from verified external repos into `public/assets/projects/...`.
 - Imported visuals are Known candidates, not final Verified polished assets.
 - Case-study pages now render documented evidence sections for all three featured projects.
-- Hybrid routing proof now includes safe sample/unmeasured rows from documented examples, with no latency/cost numbers.
+- Hybrid routing proof includes safe sample rows from documented examples, and `docs/20_HYBRID_BENCHMARK_RESULTS.md` now records a local read-only ONNX classifier/routing benchmark. Cost, fallback-rate, endpoint latency, Qwen fallback latency, and production SLA claims remain blocked.
 - The Loop workflow is documented from the existing walkthrough; screenshot capture is temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it.
 
 Imported asset visual/privacy review status:
@@ -31,8 +31,8 @@ Imported asset visual/privacy review status:
 - Replaced with safe sample-data UI proof: Hybrid `predict.png`, Hybrid `memory.png`.
 - Replace before polish: The Loop `landing_page.jpg`.
 - Sample-label needed in final presentation if used: Hybrid `categories.png`, `history.png`.
-- Hybrid replacement screenshots were captured from the verified Hybrid frontend using synthetic demo transactions. They are frontend UI proof, not backend benchmark/model-output evidence; the cloned repo did not include `models/distilbert.onnx`.
-- Hybrid routing proof lives in `docs/19_HYBRID_ROUTING_PROOF.md`; all rows are sample/unmeasured and benchmark status remains pending.
+- Hybrid replacement screenshots were captured from the verified Hybrid frontend using synthetic demo transactions. They are frontend UI proof, not backend benchmark/model-output evidence. The earlier `C:\tmp` clone did not include `models/distilbert.onnx`, but a separate local Hybrid repo now has `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` available for local benchmark verification.
+- Hybrid routing proof lives in `docs/19_HYBRID_ROUTING_PROOF.md`; local measured classifier/routing results live in `docs/20_HYBRID_BENCHMARK_RESULTS.md`.
 
 ## Completed Work
 
@@ -65,7 +65,8 @@ Imported asset visual/privacy review status:
 - Added documented case-study sections for what was built, architecture summary, key engineering decisions, evidence status, limitations, missing proof, and next evidence.
 - Imported asset visual/privacy review completed on 2026-06-27 and recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Hybrid sample-data visual proof completed on 2026-06-27: `predict.png` and `memory.png` were replaced with running-frontend captures using synthetic demo transactions, and project data/docs now label Hybrid transaction visuals as sample/demo data.
-- Hybrid routing proof without benchmark claims completed on 2026-06-28: added `docs/19_HYBRID_ROUTING_PROOF.md`, sample/unmeasured routing rows, and missing-runtime-asset blocker for `models/distilbert.onnx`.
+- Hybrid routing proof without benchmark claims completed on 2026-06-28: added `docs/19_HYBRID_ROUTING_PROOF.md` and sample/unmeasured routing rows. Later on 2026-06-28, the local ONNX runtime asset was located at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`.
+- Hybrid local benchmark completed on 2026-06-30: added `docs/20_HYBRID_BENCHMARK_RESULTS.md` and measured local classifier/routing rows to `src/data/projects.ts`; Qwen fallback was not called.
 - Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
 
 ## Missing Work
@@ -79,7 +80,7 @@ Imported asset visual/privacy review status:
 - Replace remaining weak/mismatched imported assets and keep Hybrid category/history screenshots sample-labeled if used.
 - Add role/contribution details for featured and secondary projects.
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
-- Execute Hybrid measured benchmark/routing table after `models/distilbert.onnx` or equivalent verified runtime asset is available.
+- Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback path if endpoint/fallback latency, cost, fallback-rate, or production claims are needed.
 - Add concrete design token values for typography, breakpoints, focus rings, and z-index.
 - Plan and test major dependency upgrades needed to remediate current audit findings.
 
@@ -90,7 +91,7 @@ Imported asset visual/privacy review status:
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - Website scaffold exists, but it is a conservative static shell only.
 - Current dependency audit has unresolved vulnerabilities because remediation requires major version changes.
-- Imported screenshots are not final polished proof; Hybrid has safe sample-data UI proof and sample/unmeasured routing proof, but The Loop workflow screenshots are blocked by deployment/server access and Hybrid still needs benchmark/model-output evidence before stronger AI-system claims.
+- Imported screenshots are not final polished proof; Hybrid has safe sample-data UI proof plus local classifier/routing benchmark evidence, but The Loop workflow screenshots are blocked by deployment/server access and Hybrid still needs endpoint/Qwen fallback/model-output evidence before stronger AI-system claims.
 
 ## Known Risks
 
@@ -104,7 +105,7 @@ Imported asset visual/privacy review status:
 
 ## Next Recommended Task
 
-Replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, add role/contribution details, restore Hybrid runtime assets and execute measured benchmark/routing evidence, optionally capture end-to-end Hybrid backend/model-output proof after model setup, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
+Replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, add role/contribution details, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
 
 ## Imported Candidate Assets
 
@@ -165,7 +166,8 @@ Status:
 - Diagram review results are in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 - Repo-contained screenshots/assets are Known and need portfolio-local selection or import.
 - Limitation notes are drafted and need final case-study copy review.
-- Hybrid routing proof: `docs/19_HYBRID_ROUTING_PROOF.md`; safe sample/unmeasured table only, no measured benchmark.
+- Hybrid routing proof: `docs/19_HYBRID_ROUTING_PROOF.md`; safe sample table only.
+- Hybrid benchmark results: `docs/20_HYBRID_BENCHMARK_RESULTS.md`; local read-only ONNX classifier/routing benchmark only, no endpoint/Qwen fallback/cost proof.
 
 ## Verified Links
 
@@ -209,5 +211,5 @@ Verification caveats:
 ## Exact Next Prompt Recommendation
 
 ```text
-Continue from the conservative Astro static scaffold. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Do not attempt The Loop screenshot capture until the deployment/server access issue is fixed. Add role/contribution details, restore Hybrid runtime assets and execute the Hybrid benchmark/routing plan before publishing latency/cost claims, copy the selected public resume into `public/resume/`, manually verify LinkedIn, confirm the public email, and then harden the case-study pages.
+Continue from the conservative Astro static scaffold. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Do not attempt The Loop screenshot capture until the deployment/server access issue is fixed. Add role/contribution details, extend Hybrid benchmarking to the full endpoint/Qwen fallback path before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims, copy the selected public resume into `public/resume/`, manually verify LinkedIn, confirm the public email, and then harden the case-study pages.
 ```

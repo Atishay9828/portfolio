@@ -138,7 +138,7 @@ Final status:
 - Replaced with sample-data UI proof.
 
 Notes:
-- Captured from a local run of the verified Hybrid frontend in `C:\tmp\Hybrid-GenAI-Transaction-Categorization` with a controlled synthetic `/predict` response. The full backend model path was blocked because the cloned repo did not include `models/distilbert.onnx`.
+- Captured from a local run of the verified Hybrid frontend in `C:\tmp\Hybrid-GenAI-Transaction-Categorization` with a controlled synthetic `/predict` response. The full backend model path was not exercised during that screenshot pass. A separate local Hybrid repo later provided `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` for benchmark verification, and local classifier/routing results now live in `docs/20_HYBRID_BENCHMARK_RESULTS.md`; this screenshot is still not backend benchmark evidence.
 
 ### Hybrid Categorizer `categories.png`
 
@@ -221,7 +221,7 @@ Final status:
 - Replaced with sample-data UI proof.
 
 Notes:
-- Captured from the same local frontend session as `predict.png`. The full backend model path was not exercised because `models/distilbert.onnx` was unavailable in the cloned repo.
+- Captured from the same local frontend session as `predict.png`. The full backend model path was not exercised during that screenshot pass; later ONNX discovery and local benchmark execution do not turn this screenshot into benchmark/model-output evidence.
 
 ### The Loop Landing Page
 

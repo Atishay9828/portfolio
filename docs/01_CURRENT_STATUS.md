@@ -1,12 +1,12 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-06-28
+Date: 2026-06-30
 
 ## Current Phase
 
 Astro static scaffold created and first implementation hardening pass completed; evidence hardening continues before production-ready UI polish.
 
-The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
+The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
 
 First implementation review status:
 - Architecture remains clean enough for the next milestone: project/link/evidence data is centralized, route definitions are data-driven, and homepage/case-study rendering is separated into section/project components.
@@ -19,7 +19,7 @@ First evidence import and case-study hardening status:
 - Documented external repo assets were imported into `public/assets/projects/...` as Known candidates, not final Verified polished visuals.
 - Featured case-study pages now render documented sections for what was built, architecture summary, decisions, evidence status, limitations/tradeoffs, missing proof, and next evidence needed.
 - Mahoraga includes adaptive-agent and reward-system proof framing without robust-performance claims.
-- Hybrid includes the routing-table structure with a clear `Benchmark pending` label and no latency/cost numbers.
+- Hybrid includes a local read-only ONNX classifier/routing benchmark table with measured local latency, while cost, fallback-rate, endpoint latency, and production SLA claims remain blocked.
 - The Loop includes the documented discovery, interest, RSVP/join, friends/chat/carpool, admin, and edge-case workflow.
 - Role/contribution copy remains `Role/contribution details pending verification.`
 
@@ -30,10 +30,10 @@ Imported asset visual/privacy review status:
 - Mahoraga `training_metrics.png` remains Candidate only; no metric claims may be published without methodology/evaluation interpretation.
 - Hybrid `predict.png` and Hybrid `memory.png` were replaced on 2026-06-27 with local captures from the verified Hybrid frontend using synthetic demo transactions.
 - Hybrid `categories.png` and `history.png` remain case-study candidates only and must be explicitly labeled as sample/demo transaction data if used.
-- Hybrid safe routing proof was added on 2026-06-28 in `docs/19_HYBRID_ROUTING_PROOF.md`; all rows are sample/unmeasured and no latency/cost claims were added.
+- Hybrid safe routing proof was added on 2026-06-28 in `docs/19_HYBRID_ROUTING_PROOF.md`; local classifier/routing benchmark results were added on 2026-06-30 in `docs/20_HYBRID_BENCHMARK_RESULTS.md`.
 - The Loop `landing_page.jpg` must still be replaced before polish.
 - The Loop workflow screenshot capture is temporarily blocked by a deployment/server access issue; a teammate/friend with access will fix it later.
-- Hybrid replacement screenshots are frontend UI proof only; the full backend model path was not captured because the cloned Hybrid repo did not include `models/distilbert.onnx`.
+- Hybrid replacement screenshots are frontend UI proof only; the local benchmark used `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` outside this repo. The model was not copied into this portfolio repo.
 
 ## Frontend Implementation Allowed?
 
@@ -61,7 +61,7 @@ Reason:
 | Featured project diagram review | Known | Spec-level review exists in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; final rendered/mobile QA is still required before production polish. |
 | Featured project screenshots/demos | Known/Needed/Missing | Hybrid prediction-flow and merchant-memory UI screenshots now exist as safe sample-data portfolio-local assets; The Loop workflow screenshots, Mahoraga demo media, and final screenshot/demo coverage are still required before final visual implementation. |
 | Role/contribution details | Needed | Required for ownership clarity. |
-| Hybrid benchmark/routing evidence | Known/Planned | Sample routing proof exists in `docs/19_HYBRID_ROUTING_PROOF.md`; measured latency/cost/routing examples are still Needed and local backend/model verification is blocked by missing `models/distilbert.onnx`. |
+| Hybrid benchmark/routing evidence | Known/Partial | Sample routing proof exists in `docs/19_HYBRID_ROUTING_PROOF.md`; local read-only ONNX classifier/routing benchmark results exist in `docs/20_HYBRID_BENCHMARK_RESULTS.md`. Full FastAPI endpoint latency, Qwen fallback latency, cost, fallback-rate, and production SLA claims remain Needed/blocked. |
 | The Loop workflow walkthrough | Known/Blocked | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshot capture is temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it. |
 | Astro static scaffold | Verified | Homepage and `/projects/mahoraga`, `/projects/hybrid-categorizer`, `/projects/the-loop` build successfully. Verified locally on 2026-06-26 with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`. |
 | First implementation hardening pass | Verified | Evidence-gating, test coverage, responsive CSS hardening, screenshot QA, and dependency audit completed on 2026-06-26. |
@@ -105,7 +105,7 @@ Completion criteria:
 - Add featured project role/contribution details, remaining portfolio-local screenshots, and demos.
 - Replace weak/mismatched imported assets, especially The Loop `landing_page.jpg`.
 - Keep Hybrid category/history transaction screenshots explicitly sample-labeled in site copy/data if used.
-- Execute the Hybrid benchmark/routing plan after restoring `models/distilbert.onnx` or an equivalent verified runtime asset before publishing latency/cost claims.
+- Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback before publishing endpoint, fallback latency, cost, fallback-rate, or production claims.
 - Wait for the teammate/friend with access to fix The Loop deployment/server issue before attempting workflow screenshot capture.
 - Plan dependency major-version upgrades separately from evidence/content hardening.
 - Update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md`.

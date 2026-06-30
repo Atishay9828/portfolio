@@ -1,6 +1,6 @@
 # 07_BACKLOG.md
 
-Date: 2026-06-28
+Date: 2026-06-30
 
 ## P0
 
@@ -37,8 +37,9 @@ Date: 2026-06-28
 - [ ] Collect remaining portfolio-local screenshots/demos after blockers clear.
 - [ ] Capture The Loop workflow screenshots after the deployment/server access issue is fixed by teammate/friend.
 - [ ] Add role/contribution details per featured project.
-- [ ] Execute Hybrid measured benchmark/routing table after runtime assets are available.
-- [ ] Restore or provide Hybrid `models/distilbert.onnx` or equivalent verified runtime asset before measured benchmark execution.
+- [x] Execute Hybrid local read-only ONNX classifier/routing benchmark using the located local ONNX runtime asset.
+- [ ] Benchmark Hybrid full FastAPI endpoint and Qwen fallback path before endpoint latency, fallback latency, cost, fallback-rate, or production claims.
+- [x] Locate Hybrid `models/distilbert.onnx` for local benchmark verification without copying it into the portfolio repo.
 - [ ] Finalize featured project tradeoff/limitation copy.
 - [ ] Plan Astro/Vitest major dependency upgrade path for audit remediation.
 

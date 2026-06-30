@@ -14,7 +14,7 @@ Status vocabulary follows `ASSET_REQUIREMENTS.md`: Known, Verified, Missing, Nee
 | Project | Public-readiness | Diagram source confidence | Main remaining blocker |
 |---|---|---|---|
 | Mahoraga | Partial, static-scaffold ready with constraints | High for reward system; Medium for combined architecture/training UI | Local demo media, architecture diagram revision, role/contribution detail |
-| Hybrid GenAI Transaction Categorizer | Partial, static-scaffold ready with constraints | High for routing concept; Medium for final visual diagrams | Deployment link, measured benchmark/routing evidence, portfolio-local screenshots |
+| Hybrid GenAI Transaction Categorizer | Partial, static-scaffold ready with constraints | High for routing concept; Medium for final visual diagrams | Deployment link, endpoint/fallback/cost benchmark evidence, portfolio-local screenshots |
 | The Loop | Partial, static-scaffold ready with constraints | High for auth/realtime; Medium for system/deployment topology | Portfolio-local product screenshots, system diagram revision, role/contribution detail |
 
 ## Mahoraga
@@ -145,14 +145,14 @@ Production-minded AI systems proof: local classifier first, LLM only when confid
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
 - Repo-contained screenshots: Known; repo contains `frontend/public/screenshots/predict.png`, `categories.png`, `history.png`, and `memory.png`, but they are not portfolio-local and have not been visually reviewed.
 - Deployment link: Missing.
-- Latency/cost benchmark: Needed.
+- Latency/cost benchmark: Known/Needed; local classifier/routing benchmark exists in `docs/20_HYBRID_BENCHMARK_RESULTS.md`, but endpoint latency, Qwen fallback latency, cost, fallback-rate, and production claims remain Needed/blocked.
 - Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Measured routing decision table: Needed.
 - Role/contribution detail: Needed.
 
 ### Public-Readiness Status
 
-Partial. This project has strong architecture evidence in the repo and a verified walkthrough, so it can support conservative static scaffolding. Full featured presentation remains blocked by missing measured benchmark/routing proof, deployment status, role details, diagram revisions, and portfolio-local screenshots.
+Partial. This project has strong architecture evidence in the repo, a verified walkthrough, and local classifier/routing benchmark evidence, so it can support conservative static scaffolding. Full featured presentation remains blocked by missing endpoint/fallback/cost benchmark proof, deployment status, role details, diagram revisions, and portfolio-local screenshots.
 
 ### Required Evidence Assets
 
@@ -180,7 +180,7 @@ Partial. This project has strong architecture evidence in the repo and a verifie
 ### Missing / Needed Evidence
 
 - Deployment link if hosted.
-- Measured latency or cost comparison. Do not reuse qualitative "fast" wording as a metric.
+- Endpoint/fallback latency or cost comparison. Do not reuse qualitative "fast" wording as a metric.
 - Real or clearly representative routing decision table.
 - Portfolio-local screenshot selection.
 - Role/contribution details.
@@ -209,7 +209,8 @@ The fallback path can increase latency and depends on confidence threshold tunin
 - [x] Repo-contained UI screenshot candidates found.
 - [ ] Deployment link.
 - [ ] Portfolio-local screenshots.
-- [ ] Latency/cost benchmark.
+- [x] Local classifier/routing benchmark.
+- [ ] Endpoint/fallback/cost benchmark.
 - [ ] Routing decision table.
 - [ ] Role/contribution scope.
 
@@ -219,14 +220,14 @@ The fallback path can increase latency and depends on confidence threshold tunin
 - [x] Architecture thumbnail source exists as Mermaid.
 - [x] Limitation note exists.
 - [ ] Screenshot/visual asset selected.
-- [ ] One benchmark or routing example available.
+- [x] One local benchmark or routing example available.
 - [ ] Short role/contribution line ready.
 
 ### What Must Be Collected Before Frontend Implementation
 
 - Select and review screenshot assets from the repo or capture fresh screenshots.
 - Produce a small routing decision table using documented examples.
-- Measure latency/cost if those claims will appear.
+- Measure endpoint latency, fallback latency, and cost if those claims will appear.
 - Confirm deployment status.
 - Add role/contribution details.
 
