@@ -34,6 +34,7 @@ Date: 2026-06-30
 - [x] Add safe Hybrid sample routing proof without benchmark claims.
 - [ ] Replace weak/mismatched imported assets.
 - [ ] Keep Hybrid category/history screenshots sample-labeled in final case-study presentation if used.
+- [ ] Capture Hybrid History AI Insight panel with one safe sample transaction opened and a real `/transaction-insight` response before using AI insights as visual evidence.
 - [ ] Collect remaining portfolio-local screenshots/demos after blockers clear.
 - [ ] Capture The Loop workflow screenshots after the deployment/server access issue is fixed by teammate/friend.
 - [ ] Add role/contribution details per featured project.

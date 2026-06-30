@@ -11,7 +11,7 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, and Hybrid local benchmark pass are complete; evidence hardening continues before production-ready UI polish.
+Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, and Hybrid History AI Insight evidence review are complete; evidence hardening continues before production-ready UI polish.
 
 The current implementation is a conservative static content shell backed by the evidence docs. Production-ready UI polish remains blocked until portfolio-local assets, role/contribution details, resume publication, full endpoint/fallback benchmark evidence, and workflow evidence are complete.
 
@@ -65,6 +65,7 @@ Created:
 - Replaced Hybrid `predict.png` and `memory.png` with safe sample-data frontend UI captures.
 - Added `docs/19_HYBRID_ROUTING_PROOF.md` and sample/unmeasured Hybrid routing rows without benchmark claims.
 - Added `docs/20_HYBRID_BENCHMARK_RESULTS.md` with local read-only ONNX classifier/routing benchmark results.
+- Added `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md` documenting the click-through History AI Insight panel and the limits of the current list-view screenshot.
 
 Still blocked:
 - Public resume CTA until a final PDF exists under `public/resume/`.
@@ -72,6 +73,7 @@ Still blocked:
 - Production visual polish until imported candidate visuals, missing screenshots/demos, and diagram render/mobile QA are complete.
 - Hybrid endpoint latency, Qwen fallback latency, cost, fallback-rate, and production claims until full endpoint/fallback benchmark evidence exists.
 - Hybrid backend/model-output claims until the model/backend path is captured or benchmarked end to end.
+- Hybrid History AI Insight visual proof until a safe sample transaction is opened and the real AI Insight panel is captured from `/transaction-insight`.
 - The Loop workflow screenshot polish until the deployment/server access issue is fixed by the teammate/friend with access.
 - Ownership/role claims until contribution details are documented.
 - Audit remediation until Astro/Vitest major dependency upgrades are planned and tested.
@@ -101,7 +103,7 @@ Future agents should start here:
 - `SITE_BLUEPRINT.md`
 - `DESIGN_SYSTEM.md`
 - `ASSET_REQUIREMENTS.md`
-- `docs/00_READ_FIRST.md` through `docs/20_HYBRID_BENCHMARK_RESULTS.md`
+- `docs/00_READ_FIRST.md` through `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`
 
 ## Locked Decisions
 

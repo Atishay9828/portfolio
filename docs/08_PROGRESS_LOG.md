@@ -253,3 +253,23 @@ Status:
 - Hybrid now has local classifier/routing benchmark evidence.
 - Full endpoint and Qwen fallback benchmarking remain blocked/pending.
 - The measured values are local-only and must not be framed as production performance.
+
+### 2026-06-30 Hybrid History AI Insight Evidence Review
+
+Completed:
+- Inspected the Hybrid History frontend source in `D:\Hybrid-GenAI-Transaction-Categorization\frontend\src\pages\History.jsx`, `HistoryCard.jsx`, `HistoryPanel.jsx`, and `HistoryStore.js`.
+- Confirmed the AI Insight UI appears only after one History transaction is opened.
+- Confirmed the opened panel calls `POST http://127.0.0.1:8000/transaction-insight`.
+- Confirmed the insight request includes the selected transaction plus up to three recent same-category history entries.
+- Re-reviewed `public/assets/projects/hybrid-categorizer/history.png` and confirmed it shows the History list, category confidence, and route tags, but not the opened AI Insight panel or an in-image sample/demo label.
+- Created `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`.
+- Updated asset/status/evidence docs and project data to keep the current screenshot as limited case-study evidence only.
+
+Blocked / caveat:
+- Replacement screenshot capture was not completed because the available Python runtime did not have the Hybrid backend dependencies installed and no repo-local virtual environment was present.
+- A replacement or supplemental screenshot remains Needed if the portfolio uses History AI insights as visual evidence.
+
+Status:
+- History AI Insight behavior is source-backed.
+- Current `history.png` is not AI Insight screenshot proof.
+- Any future capture must use safe sample/demo data and a real generated `/transaction-insight` response.

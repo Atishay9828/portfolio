@@ -30,6 +30,7 @@ Imported asset visual/privacy review status:
 - Mahoraga `training_metrics.png` remains Candidate only; no metric claims may be published without methodology/evaluation interpretation.
 - Hybrid `predict.png` and Hybrid `memory.png` were replaced on 2026-06-27 with local captures from the verified Hybrid frontend using synthetic demo transactions.
 - Hybrid `categories.png` and `history.png` remain case-study candidates only and must be explicitly labeled as sample/demo transaction data if used.
+- Hybrid History AI Insight behavior is documented in `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`: click one transaction in History to open a side panel that calls `POST /transaction-insight` and summarizes that transaction plus recent same-category history. The current `history.png` does not show this opened panel, so AI Insight screenshot proof remains Needed.
 - Hybrid safe routing proof was added on 2026-06-28 in `docs/19_HYBRID_ROUTING_PROOF.md`; local classifier/routing benchmark results were added on 2026-06-30 in `docs/20_HYBRID_BENCHMARK_RESULTS.md`.
 - The Loop `landing_page.jpg` must still be replaced before polish.
 - The Loop workflow screenshot capture is temporarily blocked by a deployment/server access issue; a teammate/friend with access will fix it later.
@@ -70,6 +71,7 @@ Reason:
 | Imported project visuals | Known | Real candidate assets were copied from verified external repos into `public/assets/projects/...`; visual/privacy review is still required before production polish. |
 | Imported asset review | Known | `docs/18_IMPORTED_ASSET_REVIEW.md` classifies imported assets by homepage approval, case-study-only use, replacement need, sample-labeling need, and Hybrid sample-data UI replacement status. |
 | Hybrid sample-data visual proof | Known | `predict.png` and `memory.png` were replaced from a local run of the verified Hybrid frontend with synthetic demo transactions. Not benchmark/model-output evidence. |
+| Hybrid History AI Insight screenshot | Needed | Source review confirms the click-through History panel and `/transaction-insight` flow, but the current `history.png` only shows the list view. Capture a safe sample-data opened-transaction panel with real generated insight before using it as visual evidence. |
 | Hybrid routing proof | Known | `docs/19_HYBRID_ROUTING_PROOF.md` and the Hybrid case study include documented sample routing rows only; every row is `sample/unmeasured`. |
 | Case-study hardening | Verified | The three featured case-study routes now render documented architecture, evidence, limitation, missing-proof, and next-evidence sections. |
 
@@ -105,6 +107,7 @@ Completion criteria:
 - Add featured project role/contribution details, remaining portfolio-local screenshots, and demos.
 - Replace weak/mismatched imported assets, especially The Loop `landing_page.jpg`.
 - Keep Hybrid category/history transaction screenshots explicitly sample-labeled in site copy/data if used.
+- Capture or replace Hybrid History AI Insight screenshot only with a safe sample-data transaction opened and a real generated `/transaction-insight` response.
 - Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback before publishing endpoint, fallback latency, cost, fallback-rate, or production claims.
 - Wait for the teammate/friend with access to fix The Loop deployment/server issue before attempting workflow screenshot capture.
 - Plan dependency major-version upgrades separately from evidence/content hardening.

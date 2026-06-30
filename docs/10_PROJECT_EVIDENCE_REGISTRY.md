@@ -75,7 +75,8 @@ Evidence status:
 - Deployment link: Missing.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
-- UI screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; `predict.png` and `memory.png` were replaced on 2026-06-27 with running-frontend captures using synthetic demo data. `categories.png` and `history.png` remain case-study candidates that must be sample-labeled if used.
+- UI screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; `predict.png` and `memory.png` were replaced on 2026-06-27 with running-frontend captures using synthetic demo data. `categories.png` and `history.png` remain case-study candidates that must be sample-labeled if used. The current `history.png` shows the History list view only, not the opened-transaction AI Insight panel.
+- History AI Insight behavior: Known in `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`; clicking one History transaction opens `HistoryPanel`, which calls `POST /transaction-insight` using the selected transaction plus recent same-category history. Screenshot proof of that opened panel remains Needed.
 - Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Safe sample routing proof: Known in `docs/19_HYBRID_ROUTING_PROOF.md`.
 - Measured local classifier/routing table: Known in `docs/20_HYBRID_BENCHMARK_RESULTS.md` and `src/data/projects.ts`.
@@ -97,6 +98,7 @@ Missing assets:
 - Deployment link.
 - Full endpoint/Qwen fallback/cost benchmarks.
 - Category/history sample-labeling in final case-study presentation if those screenshots are used.
+- Opened-transaction History AI Insight screenshot with safe sample data and a real generated `/transaction-insight` response.
 - Role/contribution detail.
 - Final tradeoff note.
 - End-to-end backend/model-output capture only if final proof needs more than frontend UI state.
@@ -110,12 +112,13 @@ Verification notes:
 - `docs/19_HYBRID_ROUTING_PROOF.md` records documented sample routing rows for `dominos order 750`, `bharat petrol payment 500`, `smart class monthly 899`, and `volvo bus booking 1200`. The table is qualitative and unmeasured.
 - A local Hybrid repo runtime asset was found at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` on 2026-06-28. File size: 267,956,781 bytes. It is inside the Hybrid repo, outside the portfolio repo, not Git-tracked, ignored by `.gitignore` via `**/models/`, and should remain uncommitted.
 - `docs/20_HYBRID_BENCHMARK_RESULTS.md` records a 2026-06-30 local read-only ONNX classifier/routing benchmark with 20 measured runs and 5 warmups per sample. Qwen fallback was not called; endpoint latency, fallback latency, cost, fallback-rate, and production SLA claims remain blocked.
+- `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md` records that the existing History screenshot shows transaction history, category confidence, and route tags, but no AI Insight panel or in-image sample-data label. The AI Insight panel is code-backed but still needs a safe opened-transaction capture before it is used as screenshot evidence.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Imported asset review found the original `predict.png` was not prediction flow and the original `memory.png` was not merchant-memory proof; both were replaced on 2026-06-27. Remaining transaction-detail screenshots require sample/demo labeling before public use.
 
 Can be shown publicly yet:
-- Partially. Verified walkthrough, repo, conservative routing copy, sample-data UI screenshots, sample routing proof, and local classifier/routing benchmark evidence can support a first static section, but full featured presentation remains blocked by missing deployment status, endpoint/Qwen fallback/cost benchmark evidence, diagram revisions, role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
+- Partially. Verified walkthrough, repo, conservative routing copy, sample-data UI screenshots, sample routing proof, local classifier/routing benchmark evidence, and source-backed History AI Insight behavior can support a first static section, but full featured presentation remains blocked by missing deployment status, endpoint/Qwen fallback/cost benchmark evidence, opened-transaction AI Insight screenshot proof, diagram revisions, role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
 
 ### The Loop
 

@@ -15,6 +15,7 @@ Source documents:
 - `docs/18_IMPORTED_ASSET_REVIEW.md`
 - `docs/19_HYBRID_ROUTING_PROOF.md`
 - `docs/20_HYBRID_BENCHMARK_RESULTS.md`
+- `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`
 
 Purpose:
 - Track every asset required to make the portfolio credible.
@@ -74,7 +75,7 @@ Purpose:
 | Merchant memory visualization | Required | Known | `docs/diagrams/hybrid-categorizer-memory.md` exists as a Mermaid/spec file; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
 | Latency comparison benchmark | Required | Known/Needed | Local read-only ONNX classifier/routing benchmark exists in `docs/20_HYBRID_BENCHMARK_RESULTS.md`. Full FastAPI endpoint, Qwen fallback latency, cost, fallback-rate, and production SLA claims remain Needed/blocked. |
 | Routing decision table | Required | Known | Safe sample routing proof exists in `docs/19_HYBRID_ROUTING_PROOF.md`; measured local classifier/routing rows now exist in `docs/20_HYBRID_BENCHMARK_RESULTS.md` and `src/data/projects.ts`. |
-| UI screenshots | Required | Known | `predict.png` and `memory.png` were replaced on 2026-06-27 with local captures from the verified Hybrid frontend using synthetic demo transactions. `categories.png` and `history.png` remain case-study candidates only and must be labeled as sample/demo transaction data if used. These screenshots are UI proof, not backend benchmark/model-output evidence. |
+| UI screenshots | Required | Known/Needed | `predict.png` and `memory.png` were replaced on 2026-06-27 with local captures from the verified Hybrid frontend using synthetic demo transactions. `categories.png` and `history.png` remain case-study candidates only and must be labeled as sample/demo transaction data if used. The current `history.png` shows the list view only; it does not show the click-through `AI Insight` panel. A replacement/supplemental safe sample-data History screenshot with one transaction opened and a real `/transaction-insight` response is Needed. These screenshots are UI proof, not backend benchmark/model-output evidence. |
 | Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
 ## The Loop
@@ -143,7 +144,7 @@ Purpose:
 |---|---:|---:|---:|---:|---:|
 | Global identity/contact | 4 | 3 | 1 | 0 | 100% required Known/Verified; public-ready after repo-local resume and LinkedIn verification |
 | Mahoraga | 6 | 5 | 1 required, 3 links total | 1 | One homepage asset approved; demo media, metric interpretation, and role detail still Needed |
-| Hybrid Categorizer | 7 | 6 | 2 | 1 plus 1 missing deployment | Prediction-flow and merchant-memory screenshots replaced with safe demo-data UI proof; local classifier/routing benchmark added; deployment status, role details, Qwen fallback/cost measurement, endpoint benchmark, and any end-to-end model-output proof still Needed |
+| Hybrid Categorizer | 7 | 6 | 2 | 1 plus 1 missing deployment | Prediction-flow and merchant-memory screenshots replaced with safe demo-data UI proof; local classifier/routing benchmark added; History AI Insight panel screenshot remains Needed; deployment status, role details, Qwen fallback/cost measurement, endpoint benchmark, and any end-to-end model-output proof still Needed |
 | The Loop | 7 | 5 | 2 | 2 | Interest selection approved case-study-only; landing/workflow screenshots, role detail, and demo media still Needed |
 | Secondary projects | 10 | 0 | 2 | 8 | 20% required verified |
 | Lab projects | 8 | 0 | 0 | 8 | 0% |

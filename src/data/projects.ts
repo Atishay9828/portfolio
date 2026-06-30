@@ -191,7 +191,7 @@ export const featuredProjects: Project[] = [
       kind: "evidence-panel",
       status: "Known",
       label: "Sample-data UI proof",
-      detail: "Prediction-flow and merchant-memory screenshots were replaced with captures from the running Hybrid frontend using synthetic demo transactions. Category/history screenshots remain sample-labeled case-study candidates; local classifier/routing benchmark is documented, while endpoint/fallback proof remains pending.",
+      detail: "Prediction-flow and merchant-memory screenshots were replaced with captures from the running Hybrid frontend using synthetic demo transactions. Category/history screenshots remain sample-labeled case-study candidates; the current History screenshot shows the list view but not the AI Insight panel. Local classifier/routing benchmark is documented, while endpoint/fallback proof remains pending.",
       assets: [
         {
           src: "/assets/projects/hybrid-categorizer/predict.png",
@@ -211,7 +211,7 @@ export const featuredProjects: Project[] = [
           src: "/assets/projects/hybrid-categorizer/history.png",
           label: "History screenshot candidate",
           status: "Known",
-          note: "Reviewed 2026-06-27; useful for routing explanation. Treat all visible merchants, dates, confidence values, and amounts as sample/demo transaction data; not benchmark evidence.",
+          note: "Re-reviewed 2026-06-30; useful for transaction history, category confidence, and route tags only. It does not show the slide-in AI Insight panel and must be labeled as sample/demo data if used.",
           source: "Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/history.png",
         },
         {
@@ -244,6 +244,7 @@ export const featuredProjects: Project[] = [
         "GitHub repo and YouTube walkthrough are Verified.",
         "Prediction-flow and merchant-memory UI screenshots are portfolio-local Known assets captured with synthetic sample data.",
         "Category/history screenshots remain Known case-study candidates and must be presented as sample/demo transaction data if used.",
+        "History AI Insight is source-code-backed through a slide-in `HistoryPanel` calling `POST /transaction-insight`, but the current `history.png` list screenshot does not show that panel.",
         "Routing and memory diagram specs are Known but need revision.",
         "Local ONNX classifier/routing benchmark is documented; production latency, endpoint latency, Qwen fallback latency, cost, and fallback-rate claims remain blocked.",
       ],
@@ -312,6 +313,7 @@ export const featuredProjects: Project[] = [
       nextEvidenceNeeded: [
         "Full FastAPI `/predict` endpoint benchmark after a clean backend environment is available.",
         "Measured Qwen fallback latency/cost only if captured with a repeatable method and documented calculation.",
+        "Replacement History screenshot showing the real `AI Insight` panel with safe sample data and a real `/transaction-insight` response.",
         "Add a repo-owned Hybrid benchmark script if this benchmark should become repeatable outside Codex.",
         "End-to-end backend/model-output capture only if the final case study needs inference proof beyond frontend UI state.",
         "Verified role/contribution details.",

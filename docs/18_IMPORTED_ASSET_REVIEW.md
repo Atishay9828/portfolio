@@ -21,7 +21,7 @@ Scope:
 | Mahoraga | `public/assets/projects/mahoraga/training_metrics.png` | Candidate only | Case study candidate after metric interpretation |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/predict.png` | Replaced with sample-data UI proof | Case-study candidate as frontend prediction-flow proof |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/categories.png` | Sample-label required in site copy/data | Case-study candidate only with sample/demo label |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | Sample-label required in site copy/data | Case-study candidate only with sample/demo label |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | Sample-label required in site copy/data | Case-study candidate only for History list/route tags; opened AI Insight panel not shown |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | Replaced with sample-data UI proof | Case-study candidate as frontend merchant-memory proof |
 | The Loop | `public/assets/projects/the-loop/landing_page.jpg` | Replace before polish | Do not use for final polish |
 | The Loop | `public/assets/projects/the-loop/interest_selection.png` | Approved for case study only | Case study workflow support; broader workflow capture is blocked by deployment/server access issue |
@@ -177,6 +177,7 @@ Project:
 
 Visual quality:
 - Good resolution and readable. It shows prediction history, category confidence, and route tags such as LLM, ONNX, and Merchant.
+- It does not show the opened transaction panel where `AI Insight` appears.
 
 Readability:
 - Homepage card size: Weak; long list rows and transaction text become too small.
@@ -187,12 +188,15 @@ Privacy risk:
 
 Recommended usage:
 - Case study candidate only after redaction/sample-data labeling.
+- Use for transaction history, category confidence, and route tags only.
+- Do not use as evidence for AI Insight output because the side panel is not visible.
 
 Final status:
 - Sample-label required in site copy/data.
 
 Notes:
 - Useful for explaining routing behavior, but not enough to replace the pending benchmark/routing table.
+- Re-reviewed 2026-06-30 against Hybrid source. In the actual UI, clicking one transaction opens `HistoryPanel`, which calls `POST /transaction-insight` and displays an `AI Insight` box based on the selected transaction plus recent same-category history. A replacement/supplemental screenshot is Needed if the portfolio wants visual proof of that AI Insight panel.
 
 ### Hybrid Categorizer Memory
 
@@ -295,6 +299,13 @@ Notes:
 - `public/assets/projects/hybrid-categorizer/categories.png`
 - `public/assets/projects/hybrid-categorizer/history.png`
 
+## AI Insight Panel Screenshot Needed
+
+- Current `history.png` shows only the History list view.
+- The Hybrid frontend has an opened-transaction `AI Insight` panel in `HistoryPanel.jsx`, but it is not visible in the current imported screenshot.
+- Capture a replacement or supplemental History screenshot only with safe sample/demo transaction history and a real backend `/transaction-insight` response.
+- Do not invent the insight text and do not use private transaction data.
+
 ## Candidate Only
 
 - `public/assets/projects/mahoraga/training_metrics.png`
@@ -303,6 +314,7 @@ Notes:
 
 - Hybrid still needs measured benchmark/routing evidence and any end-to-end backend/model-output capture required for final inference proof.
 - Hybrid `categories.png` and `history.png` need sample-data labeling in final surrounding copy if used.
+- Hybrid History AI Insight panel screenshot remains Needed before AI insights are used as visual portfolio evidence.
 - The Loop needs high-resolution landing/auth, event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots after the deployment/server access issue is fixed by the teammate/friend with access.
 - Mahoraga still needs demo media, architecture diagram revision, and interpreted evaluation evidence before metric claims.
 - Role/contribution details remain pending for all featured projects.

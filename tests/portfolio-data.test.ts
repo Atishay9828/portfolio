@@ -3,6 +3,7 @@ import { featuredProjects, getProjectBySlug, routes, secondaryProjects } from ".
 import { links } from "../src/data/links";
 import hybridRoutingProof from "../docs/19_HYBRID_ROUTING_PROOF.md?raw";
 import hybridBenchmarkResults from "../docs/20_HYBRID_BENCHMARK_RESULTS.md?raw";
+import hybridHistoryInsightsEvidence from "../docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md?raw";
 
 import mahoragaDashboard from "../public/assets/projects/mahoraga/dashboard_preview.png?url";
 import mahoragaScreenshot from "../public/assets/projects/mahoraga/stitch_aero_screenshot.png?url";
@@ -167,6 +168,27 @@ describe("portfolio scaffold data", () => {
   it("documents the Hybrid model path without copying the ONNX model into the portfolio repo", () => {
     expect(Object.keys(rootModelFiles)).toEqual([]);
     expect(Object.keys(publicHybridModelFiles)).toEqual([]);
+  });
+
+  it("keeps Hybrid History AI Insight evidence separate from the list-view screenshot", () => {
+    const hybrid = getProjectBySlug("hybrid-categorizer");
+    const historyAsset = hybrid?.visual.assets?.find((asset) => asset.src.endsWith("/history.png"));
+
+    expect(historyAsset?.note).toContain("does not show the slide-in AI Insight panel");
+    expect(hybrid?.caseStudy?.evidenceStatus.join(" ")).toContain("History AI Insight");
+    expect(hybrid?.caseStudy?.evidenceStatus.join(" ")).toContain("POST /transaction-insight");
+    expect(hybrid?.caseStudy?.nextEvidenceNeeded.join(" ")).toContain("Replacement History screenshot");
+  });
+
+  it("documents how Hybrid History AI insights are generated without inventing insight text", () => {
+    const doc = hybridHistoryInsightsEvidence;
+
+    expect(doc).toContain("clicking one History transaction opens `HistoryPanel`");
+    expect(doc).toContain("POST http://127.0.0.1:8000/transaction-insight");
+    expect(doc).toContain("up to three same-category recent history items");
+    expect(doc).toContain("Do not invent an insight");
+    expect(doc).toContain("The slide-in `AI Insight` panel is not visible");
+    expect(doc).toContain("AI Insight screenshot proof remains Needed");
   });
 
   it("documents The Loop workflow without screenshots or private data", () => {

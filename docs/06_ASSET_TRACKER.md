@@ -22,7 +22,7 @@ Link registry:
 | Global contact assets | 3 | 1 | 0 | 3 | No |
 | Portfolio repository | 0 | 1 | 0 | 0 | Yes |
 | Mahoraga | 6 | 3 | 0 | 1 | No |
-| Hybrid Categorizer | 7 | 2 | 1 | 1 | No |
+| Hybrid Categorizer | 7 | 2 | 1 | 2 | No |
 | The Loop | 6 | 2 | 0 | 2 | No; screenshots blocked |
 | AI Resume Tailoring Engine | 0 | 1 | 2 | 4 | No |
 | Webcam Motion Alert System | 0 | 1 | 1 | 4 | No |
@@ -61,7 +61,7 @@ Link registry:
 | Project | Evidence added | Status | Next action |
 |---|---|---|---|
 | Mahoraga | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/diagrams/mahoraga-architecture.md`, `docs/diagrams/mahoraga-reward-system.md` | Known | Revise architecture diagram, render QA diagrams, choose local media/assets, add role/contribution detail. |
-| Hybrid GenAI Transaction Categorizer | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`, `docs/19_HYBRID_ROUTING_PROOF.md`, `docs/20_HYBRID_BENCHMARK_RESULTS.md`, `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md` | Known/Partial | Revise diagrams, benchmark full endpoint/Qwen fallback if needed, add role detail. |
+| Hybrid GenAI Transaction Categorizer | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`, `docs/19_HYBRID_ROUTING_PROOF.md`, `docs/20_HYBRID_BENCHMARK_RESULTS.md`, `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`, `docs/diagrams/hybrid-categorizer-routing.md`, `docs/diagrams/hybrid-categorizer-memory.md` | Known/Partial | Revise diagrams, capture safe History AI Insight panel if needed, benchmark full endpoint/Qwen fallback if needed, add role detail. |
 | The Loop | `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`, `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`, `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, `docs/diagrams/the-loop-auth-flow.md` | Known/Blocked | Revise system diagram and add role detail; workflow screenshots are blocked by deployment/server access issue until teammate/friend fixes it. |
 
 ## Imported Asset Review
@@ -76,6 +76,7 @@ Summary:
 - Replaced with safe demo-data UI proof: Hybrid `predict.png`, Hybrid `memory.png`.
 - Safe sample routing proof: Hybrid `docs/19_HYBRID_ROUTING_PROOF.md`.
 - Local measured classifier/routing benchmark: Hybrid `docs/20_HYBRID_BENCHMARK_RESULTS.md` and case-study routing table; local only, not endpoint/Qwen fallback/cost proof.
+- History AI Insight evidence review: Hybrid `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`; current `history.png` shows the list view only, so a safe sample-data opened-transaction panel capture remains Needed before using AI insights as screenshot evidence.
 - Local ONNX runtime asset found outside this repo: `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`; keep uncommitted and do not copy into the portfolio repo.
 - Replace before polish: The Loop `landing_page.jpg`.
 - Blocked screenshot capture: The Loop workflow screenshots pending deployment/server access fix.
@@ -90,7 +91,7 @@ Summary:
 | Mahoraga | `public/assets/projects/mahoraga/training_metrics.png` | `Atishay9828/meta_Mahoraga:docs/training_metrics.png` | Known | Candidate only; interpret methodology before publishing metric claims. |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/predict.png` | Local capture from verified repo frontend with synthetic sample input `demo cafe payment 750` | Known | Replaced 2026-06-27 with a prediction-flow UI screenshot. This is safe demo-data UI proof, not backend benchmark/model-output evidence. |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/categories.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/categories.png` | Known | Case-study candidate only; site copy/data must label visible merchants, dates, and amounts as sample/demo transaction data if used. |
-| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/history.png` | Known | Case-study candidate only; site copy/data must label visible merchants, dates, route tags, confidence values, and amounts as sample/demo transaction data if used. |
+| Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/history.png` | Known | Case-study candidate only for the History list, category confidence, and route tags; site copy/data must label visible merchants, dates, route tags, confidence values, and amounts as sample/demo transaction data if used. Does not show the opened-transaction AI Insight panel. |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | Local capture from verified repo frontend with synthetic merchants `Demo Cafe` and `Sample Transit` | Known | Replaced 2026-06-27 with a merchant-memory UI screenshot. This proves the memory view with sample data, not measured model quality. |
 | The Loop | `public/assets/projects/the-loop/landing_page.jpg` | `Atishay9828/TIET-LOOP:assets/landing_page.jpg` | Known | Replace before polish due low resolution. |
 | The Loop | `public/assets/projects/the-loop/interest_selection.png` | `Atishay9828/TIET-LOOP:assets/interest_selection.png` | Known | Approved for case-study-only workflow support. |
@@ -115,4 +116,5 @@ Do not build public final project CTAs until each featured project has:
 5. Render and mobile-QA selected Mermaid diagrams before final visual use.
 6. Finish remaining weak imported assets, keep Hybrid category/history visuals sample-labeled if used, and collect missing demos/workflow screenshots after blockers are cleared.
 7. Add role/contribution details and final tradeoff copy.
-8. Extend Hybrid benchmarking to the full endpoint and Qwen fallback before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims.
+8. Capture or replace the Hybrid History screenshot with one safe sample transaction opened and the real AI Insight panel visible before using History AI insights as portfolio screenshot evidence.
+9. Extend Hybrid benchmarking to the full endpoint and Qwen fallback before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims.
