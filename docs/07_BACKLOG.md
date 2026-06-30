@@ -42,6 +42,8 @@ Date: 2026-06-30
 - [ ] Benchmark Hybrid full FastAPI endpoint and Qwen fallback path before endpoint latency, fallback latency, cost, fallback-rate, or production claims.
 - [x] Locate Hybrid `models/distilbert.onnx` for local benchmark verification without copying it into the portfolio repo.
 - [ ] Finalize featured project tradeoff/limitation copy.
+- [x] Complete conservative design-system polish for the static Astro shell without changing evidence states.
+- [ ] Recapture updated screenshot QA after local Chrome/Edge headless GPU failure is resolved.
 - [ ] Plan Astro/Vitest major dependency upgrade path for audit remediation.
 
 ## P2

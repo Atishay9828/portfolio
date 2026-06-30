@@ -11,9 +11,10 @@ import { timelineStages } from "../../data/projects";
       body="Older and smaller projects stay as capability markers instead of competing with the featured work."
     />
     <div class="timeline">
-      {timelineStages.map((stage) => (
+      {timelineStages.map((stage, index) => (
         <article class="timeline-card">
           <div>
+            <span class="timeline-index">{String(index + 1).padStart(2, "0")}</span>
             <span class="meta-label">{stage.label}</span>
           </div>
           <div>

@@ -273,3 +273,28 @@ Status:
 - History AI Insight behavior is source-backed.
 - Current `history.png` is not AI Insight screenshot proof.
 - Any future capture must use safe sample/demo data and a real generated `/transaction-insight` response.
+
+### 2026-06-30 Conservative Static Shell Design-System Polish
+
+Completed:
+- Confirmed local `master` was aligned with `origin/master` before changes.
+- Preserved the evidence boundaries: no GSAP, WebGL, scroll animations, invented screenshots, invented benchmark claims, invented role details, or activated resume/LinkedIn/email CTAs.
+- Tightened global visual rhythm, section separation, dark surface layering, typography hierarchy, focus states, and responsive constraints.
+- Sharpened the hero identity and made the three proof anchors direct case-study links.
+- Improved featured project visual hierarchy with status-aware evidence panels and small visual-candidate previews while keeping Known/Pending states explicit.
+- Improved case-study readability and highlighted the Hybrid benchmark as local classifier/routing evidence only, not production SLA or endpoint/fallback proof.
+- Kept timeline, secondary work, lab projects, and systems map visually subordinate to featured work.
+
+Validation:
+- `npm.cmd test` passed.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages.
+
+Screenshot QA:
+- Fresh screenshot recapture was attempted against rebuilt static output.
+- Astro dev server was blocked by sandboxed telemetry/AppData access and Vite parent-directory access errors.
+- Static build serving worked, but Chrome and Edge headless screenshot capture failed with GPU-process errors before reliable updated PNG output.
+- Existing earlier screenshots remain under `docs/reviews/screenshots/`; updated recapture remains Needed.
+
+Status:
+- Conservative static polish is complete.
+- Production launch remains blocked by missing screenshots/demos, role/contribution details, resume publication, LinkedIn/email readiness, diagram QA, The Loop screenshot access, Hybrid AI Insight screenshot proof, and full Hybrid endpoint/Qwen fallback benchmark evidence.

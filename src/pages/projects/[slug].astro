@@ -108,8 +108,9 @@ if (!project) {
         )}
 
         {project.caseStudy.routingProof && (
-          <article class="case-panel">
+          <article class="case-panel benchmark-panel">
             <span class="meta-label">{project.caseStudy.routingProof.label}</span>
+            <h3>Local classifier/routing benchmark only</h3>
             <p>{project.caseStudy.routingProof.note}</p>
             <div class="table-shell" role="region" aria-label="Pending routing decision table">
               <table>

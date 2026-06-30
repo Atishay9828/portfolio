@@ -4,7 +4,7 @@ Date: 2026-06-30
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold plus a first implementation hardening pass. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, and a conservative design-system polish pass. The strategy is strong and should not be redesigned.
 
 The repository now has a continuity system under `docs/00..20`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, and resume publication plan.
 
@@ -15,6 +15,14 @@ First hardening pass status:
 - Known-but-not-public-ready personal CTAs are gated in the UI: LinkedIn, email, and resume are pending rather than active links.
 - Desktop and mobile screenshot QA exists under `docs/reviews/screenshots/`.
 - `npm audit` reports 17 vulnerabilities; available fixes require major dependency upgrades, so no automatic fix was applied.
+
+Conservative design-system polish status:
+- Global CSS now has tighter spacing rhythm, section bands, focus states, dark surface layering, compact timeline styling, and stronger responsive constraints.
+- Hero copy is sharper and proof anchors link to the case-study shells.
+- Featured project modules render status-aware evidence panels plus small candidate visual previews without upgrading Known assets to Verified proof.
+- Hybrid benchmark presentation is visually framed as local classifier/routing evidence only, not production SLA, endpoint latency, fallback latency, cost, or fallback-rate proof.
+- Timeline, secondary work, lab projects, and systems map remain visually smaller than the featured trio.
+- Fresh screenshot recapture was attempted but blocked by local Chrome/Edge headless GPU-process failures. Existing screenshots remain in `docs/reviews/screenshots/`; updated recapture is still Needed.
 
 Evidence import and case-study hardening status:
 - Real candidate visuals were imported from verified external repos into `public/assets/projects/...`.
@@ -70,6 +78,7 @@ Imported asset visual/privacy review status:
 - Hybrid routing proof without benchmark claims completed on 2026-06-28: added `docs/19_HYBRID_ROUTING_PROOF.md` and sample/unmeasured routing rows. Later on 2026-06-28, the local ONNX runtime asset was located at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`.
 - Hybrid local benchmark completed on 2026-06-30: added `docs/20_HYBRID_BENCHMARK_RESULTS.md` and measured local classifier/routing rows to `src/data/projects.ts`; Qwen fallback was not called.
 - Hybrid History AI Insight evidence review completed on 2026-06-30: source inspection confirmed the opened-transaction panel and `/transaction-insight` behavior, while the existing `history.png` remained list-view evidence only.
+- Conservative static shell design-system polish completed on 2026-06-30 without activating pending CTAs or changing evidence states.
 - Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
 
 ## Missing Work
@@ -86,6 +95,7 @@ Imported asset visual/privacy review status:
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
 - Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback path if endpoint/fallback latency, cost, fallback-rate, or production claims are needed.
 - Add concrete design token values for typography, breakpoints, focus rings, and z-index.
+- Recapture updated screenshot QA after the local browser/headless GPU issue is resolved.
 - Plan and test major dependency upgrades needed to remediate current audit findings.
 
 ## Current Blockers
@@ -94,6 +104,7 @@ Imported asset visual/privacy review status:
 - Featured project evidence is improved but incomplete; diagram review and limitation notes are Known, while screenshots/demos, role details, final rendered diagram QA, and deeper proof artifacts remain incomplete.
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - Website scaffold exists, but it is a conservative static shell only.
+- Static shell design is cleaner and more Signal Lab-aligned, but production launch is still blocked.
 - Current dependency audit has unresolved vulnerabilities because remediation requires major version changes.
 - Imported screenshots are not final polished proof; Hybrid has safe sample-data UI proof plus local classifier/routing benchmark evidence, but The Loop workflow screenshots are blocked by deployment/server access and Hybrid still needs endpoint/Qwen fallback/model-output evidence before stronger AI-system claims.
 - Hybrid History AI Insight panel is not yet screenshot-verified; the current History asset shows transaction rows and route tags only.
@@ -110,7 +121,7 @@ Imported asset visual/privacy review status:
 
 ## Next Recommended Task
 
-Replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, add role/contribution details, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
+Recapture screenshot QA once the local browser/headless GPU issue is resolved, then replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, add role/contribution details, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
 
 ## Imported Candidate Assets
 

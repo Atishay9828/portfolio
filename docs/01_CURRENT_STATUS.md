@@ -4,7 +4,7 @@ Date: 2026-06-30
 
 ## Current Phase
 
-Astro static scaffold created and first implementation hardening pass completed; evidence hardening continues before production-ready UI polish.
+Astro static scaffold created, first implementation hardening pass completed, and conservative design-system polish completed; evidence hardening continues before production launch.
 
 The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
 
@@ -22,6 +22,14 @@ First evidence import and case-study hardening status:
 - Hybrid includes a local read-only ONNX classifier/routing benchmark table with measured local latency, while cost, fallback-rate, endpoint latency, and production SLA claims remain blocked.
 - The Loop includes the documented discovery, interest, RSVP/join, friends/chat/carpool, admin, and edge-case workflow.
 - Role/contribution copy remains `Role/contribution details pending verification.`
+
+Conservative design-system polish status:
+- Global spacing, section rhythm, dark surface layering, focus states, and responsive wrapping were tightened without adding GSAP, WebGL, scroll animations, purple/blue gradients, blobs, fake screenshots, fake metrics, or public pending CTAs.
+- Hero identity copy was sharpened and proof anchors now link to the three case-study shells while preserving pending resume/contact states.
+- Featured project modules now show status-aware evidence panels and small visual-candidate previews while keeping every asset labeled as Known rather than Verified proof.
+- Case-study pages now frame Hybrid benchmark evidence as a local classifier/routing benchmark only, not a production SLA or endpoint/fallback benchmark.
+- Timeline, secondary work, lab projects, and systems map remain visually smaller than featured work.
+- Fresh screenshot capture was attempted against the rebuilt static output, but local Chrome/Edge headless capture failed with GPU-process errors. Existing earlier screenshots remain in `docs/reviews/screenshots/`; recapture remains Needed when the browser environment is stable.
 
 Imported asset visual/privacy review status:
 - Review results are recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
@@ -74,6 +82,8 @@ Reason:
 | Hybrid History AI Insight screenshot | Needed | Source review confirms the click-through History panel and `/transaction-insight` flow, but the current `history.png` only shows the list view. Capture a safe sample-data opened-transaction panel with real generated insight before using it as visual evidence. |
 | Hybrid routing proof | Known | `docs/19_HYBRID_ROUTING_PROOF.md` and the Hybrid case study include documented sample routing rows only; every row is `sample/unmeasured`. |
 | Case-study hardening | Verified | The three featured case-study routes now render documented architecture, evidence, limitation, missing-proof, and next-evidence sections. |
+| Conservative design-system polish | Verified | Static shell visual hierarchy, section rhythm, evidence panels, focus states, and responsive behavior were polished without changing evidence states or activating blocked CTAs. |
+| Fresh screenshot recapture | Needed | Attempted on 2026-06-30 against rebuilt static output, but Chrome/Edge headless failed with GPU-process errors. Existing earlier screenshots remain available; updated recapture is still Needed. |
 
 ## Verified Evidence Links
 
@@ -98,7 +108,7 @@ Verification notes:
 
 ## Next Milestone
 
-Evidence import and case-study hardening after the static scaffold.
+Screenshot and evidence completion after conservative static polish.
 
 Completion criteria:
 - Copy final resume PDF into repo/public assets and manually verify LinkedIn before public resume/contact CTAs.
