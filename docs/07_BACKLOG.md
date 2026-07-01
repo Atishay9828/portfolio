@@ -41,7 +41,8 @@ Date: 2026-07-01
 - [x] Execute Hybrid local read-only ONNX classifier/routing benchmark using the located local ONNX runtime asset.
 - [ ] Benchmark Hybrid full FastAPI endpoint and Qwen fallback path before endpoint latency, fallback latency, cost, fallback-rate, or production claims.
 - [x] Locate Hybrid `models/distilbert.onnx` for local benchmark verification without copying it into the portfolio repo.
-- [ ] Finalize featured project tradeoff/limitation copy.
+- [x] Polish featured project case-study copy while preserving evidence gaps.
+- [ ] Finalize featured project tradeoff/limitation copy after role/contribution details, remaining screenshots, diagram QA, and deeper proof artifacts are supplied.
 - [x] Complete conservative design-system polish for the static Astro shell without changing evidence states.
 - [x] Recapture updated screenshot QA after local Chrome/Edge headless GPU failure is resolved or worked around.
 - [ ] Plan Astro/Vitest major dependency upgrade path for audit remediation.

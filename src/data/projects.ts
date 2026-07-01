@@ -68,13 +68,13 @@ export const featuredProjects: Project[] = [
   {
     slug: "mahoraga",
     title: "Mahoraga",
-    subtitle: "Adaptive combat RL environment and reward-system experiment.",
+    subtitle: "Adaptive-agent environment with explicit reward shaping, curriculum pressure, and evaluation limits.",
     tier: "Featured",
     portfolioRole: "Flagship technical depth and primary adaptive AI systems proof.",
     statusLabel: "Hackathon/prototype evidence, partially public-ready",
-    problem: "Show adaptive agent behavior through environment design, reward shaping, and behavior constraints rather than a generic model wrapper.",
-    keyDecision: "Frame the system around environment mechanics, reward components, Gym-style interaction, and optional Qwen/LoRA paths.",
-    tradeoff: "Reward hacking remains possible; evaluation scope is not broad enough to claim robust adaptive intelligence.",
+    problem: "Explore whether adaptive behavior can be shaped through environment rules, reward incentives, and anti-exploit constraints instead of presenting another model wrapper.",
+    keyDecision: "Make the environment loop the proof surface: mechanics, curriculum enemy behavior, reward components, Gym-style stepping, and optional Qwen/LoRA paths stay separated.",
+    tradeoff: "The design is technically interesting, but reward hacking and narrow evaluation still block claims of robust adaptive intelligence.",
     roleStatus: "Role/contribution details pending verification.",
     stack: ["Python", "Gymnasium", "FastAPI", "Gradio", "Qwen 2.5", "LoRA"],
     links: [
@@ -131,33 +131,33 @@ export const featuredProjects: Project[] = [
     ],
     caseStudy: {
       whatWasBuilt:
-        "A combat-style adaptive RL environment with environment mechanics, reward components, Gymnasium wrapper, FastAPI/Gradio interfaces, and optional Qwen/LoRA training paths documented in the source evidence pack.",
+        "An adaptive-agent prototype where the core artifact is the environment loop: state, combat mechanics, curriculum enemy behavior, reward shaping, Gymnasium interaction, FastAPI/Gradio surfaces, and optional Qwen/LoRA training paths documented in the evidence pack.",
       architectureSummary:
-        "The documented architecture separates environment state and mechanics, enemy curriculum behavior, reward calculation, Gym-compatible stepping, and demo/API surfaces. Training and runtime/demo flows still need a simplified final diagram before polished use.",
+        "The system is strongest when read as an RL environment design: mechanics update state, the curriculum enemy changes pressure over time, reward components score behavior, and the Gym wrapper keeps training code outside the environment. The training and demo/API paths still need a cleaner final diagram before polished use.",
       engineeringDecisions: [
-        "Use environment and reward design as the core proof instead of presenting the project as a generic model wrapper.",
-        "Expose a Gym-compatible interaction layer so training logic can sit outside the environment mechanics.",
-        "Keep reward-hacking risk visible because anti-cowardice and opportunity penalties reduce, but do not eliminate, exploit behavior.",
+        "Treat the boss-fight frame as a controlled adaptive environment, not as the main selling point.",
+        "Separate state/mechanics, enemy curriculum, reward calculation, and Gym-compatible stepping so each part of the loop can be reasoned about independently.",
+        "Add anti-cowardice and opportunity signals to discourage passive exploit behavior, while still labeling reward hacking as an open risk.",
       ],
       evidenceStatus: [
         "GitHub, Kaggle, and HuggingFace links are Verified.",
-        "Reward-system diagram is approved at spec level, but rendered/mobile QA is still required.",
+        "Reward-system diagram is approved at spec level because the reward components are code-backed, but rendered/mobile QA is still required.",
         "Architecture diagram needs revision before final frontend visual use.",
         "Imported visual assets are Known candidates, not final Verified polished evidence.",
       ],
       rewardProof: [
         "Reward components documented in `env/rewards.py` include survival, combat, adaptation, anti-cowardice, efficiency, terminal, and opportunity signals.",
-        "Anti-cowardice and opportunity penalties are evidence that passive healing or non-engagement behavior was considered.",
+        "Anti-cowardice and opportunity penalties show that the loop was designed against passive healing or non-engagement behavior, not only toward damage output.",
         "The portfolio should not claim robust adaptive intelligence until evaluation scope and training artifacts are reviewed.",
       ],
       limitations: [
         "Reward hacking remains possible despite explicit penalties.",
-        "Evaluation scope is not broad enough yet for robust adaptive-agent claims.",
-        "Hackathon/prototype constraints should stay visible in final copy.",
+        "Current evidence supports environment/reward design, not broad win-rate, generalization, or robustness claims.",
+        "Hackathon/prototype constraints should stay visible; the case study should not imply production-ready AI behavior.",
       ],
       nextEvidenceNeeded: [
-        "Final adaptive-behavior demo GIF/video.",
-        "Revised architecture diagram and rendered/mobile diagram QA.",
+        "Final adaptive-behavior demo GIF/video that shows the loop responding to agent choices.",
+        "Revised architecture diagram separating training, runtime/demo, and optional API/UI surfaces, followed by rendered/mobile diagram QA.",
         "Reviewed training/evaluation artifact selection.",
         "Verified role/contribution details.",
       ],
@@ -166,13 +166,13 @@ export const featuredProjects: Project[] = [
   {
     slug: "hybrid-categorizer",
     title: "Hybrid GenAI Transaction Categorizer",
-    subtitle: "Local ONNX classifier with confidence routing, LLM fallback, and merchant memory.",
+    subtitle: "Hybrid transaction routing: merchant override first, local ONNX when useful, fallback only when confidence breaks down.",
     tier: "Featured",
     portfolioRole: "Production-minded AI systems architecture proof.",
     statusLabel: "Verified walkthrough/repo, local benchmark partial",
-    problem: "Categorize transactions without sending every request to an LLM, while preserving fallback behavior for low-confidence or ambiguous cases.",
-    keyDecision: "Use a local classifier first, route uncertain cases through rules or LLM fallback, and retain merchant memory for repeated ambiguity.",
-    tradeoff: "Threshold tuning affects fallback rate and correctness; LLM fallback can add latency and cost.",
+    problem: "Categorize transactions without making the LLM the default path, while still handling low-confidence and ambiguous inputs honestly.",
+    keyDecision: "Route in layers: merchant overrides for known entities, ONNX classification for confident local inference, semantic checks for obvious rules, and LLM fallback only when the local path is not enough.",
+    tradeoff: "The architecture is cost-conscious, but the current proof is local-only; endpoint behavior, fallback latency, cost, fallback-rate, and accuracy remain unmeasured.",
     roleStatus: "Role/contribution details pending verification.",
     stack: ["FastAPI", "React", "Vite", "ONNX", "LLM fallback", "Client-side memory"],
     links: [
@@ -232,13 +232,13 @@ export const featuredProjects: Project[] = [
     ],
     caseStudy: {
       whatWasBuilt:
-        "A transaction categorization app that combines a local ONNX classifier, confidence/rule checks, optional LLM fallback, feedback, and merchant-memory behavior documented in the repo architecture and AI pipeline notes.",
+        "A transaction categorization system that combines merchant overrides, a local ONNX classifier, confidence and rule checks, optional LLM fallback, feedback, history, and merchant-memory behavior documented in the repo architecture and AI pipeline notes.",
       architectureSummary:
-        "The documented system uses a React/Vite frontend, FastAPI backend, ONNX prediction path, semantic fallback rules, LLM fallback, and client-side memory/history. The routing and memory diagrams still need revision before final visual use.",
+        "The routing flow is intentionally layered: known merchants can bypass inference, confident local ONNX results can return without an LLM call, low-confidence or semantically ambiguous inputs route toward fallback, and frontend history/memory keeps repeated ambiguity visible to the user. The routing and memory diagrams still need revision before final visual use.",
       engineeringDecisions: [
-        "Use local classification as the default path instead of sending every transaction to an LLM.",
-        "Route ambiguous or low-confidence cases through rules or fallback rather than forcing overconfident local predictions.",
-        "Keep merchant memory as a practical ambiguity-reduction mechanism with explicit correction-quality risk.",
+        "Prefer deterministic merchant overrides before model inference when the merchant is already known.",
+        "Use ONNX classification as the local path, but avoid treating every local prediction as trustworthy.",
+        "Keep fallback and merchant memory framed as practical routing tools, not as measured cost savings or autonomous learning proof.",
       ],
       evidenceStatus: [
         "GitHub repo and YouTube walkthrough are Verified.",
@@ -246,7 +246,7 @@ export const featuredProjects: Project[] = [
         "Category/history screenshots remain Known case-study candidates and must be presented as sample/demo transaction data if used.",
         "History AI Insight is source-code-backed through a slide-in `HistoryPanel` calling `POST /transaction-insight`, but the current `history.png` list screenshot does not show that panel.",
         "Routing and memory diagram specs are Known but need revision.",
-        "Local ONNX classifier/routing benchmark is documented; production latency, endpoint latency, Qwen fallback latency, cost, and fallback-rate claims remain blocked.",
+        "Local ONNX classifier/routing benchmark is documented; production latency, endpoint latency, Qwen fallback latency, cost, fallback-rate, and accuracy claims remain blocked.",
       ],
       routingProof: {
         label: "Local benchmark measured",
@@ -307,12 +307,13 @@ export const featuredProjects: Project[] = [
       limitations: [
         "Confidence threshold tuning affects fallback frequency and correctness.",
         "LLM fallback can add latency and cost, but Qwen fallback was not called in the local benchmark.",
-        "Measured numbers are local read-only harness results, not production SLA or endpoint latency.",
+        "Measured numbers are local read-only harness results, not production SLA, endpoint latency, or Qwen fallback latency.",
+        "The History AI Insight flow is source-backed, but the current screenshot does not show the opened insight panel.",
         "Merchant memory can encode wrong mappings if correction or extraction quality is weak.",
       ],
       nextEvidenceNeeded: [
         "Full FastAPI `/predict` endpoint benchmark after a clean backend environment is available.",
-        "Measured Qwen fallback latency/cost only if captured with a repeatable method and documented calculation.",
+        "Measured Qwen fallback latency and cost only if captured with a repeatable method and documented calculation.",
         "Replacement History screenshot showing the real `AI Insight` panel with safe sample data and a real `/transaction-insight` response.",
         "Add a repo-owned Hybrid benchmark script if this benchmark should become repeatable outside Codex.",
         "End-to-end backend/model-output capture only if the final case study needs inference proof beyond frontend UI state.",
@@ -323,13 +324,13 @@ export const featuredProjects: Project[] = [
   {
     slug: "the-loop",
     title: "The Loop",
-    subtitle: "Full-stack student coordination platform with events, friends, chat, and carpool flows.",
+    subtitle: "Campus event coordination platform connecting discovery, RSVP, friends, chat, and carpool workflows.",
     tier: "Featured",
     portfolioRole: "Main Product Engineer proof and AI-only balance.",
     statusLabel: "Verified deployment/repo, screenshots pending",
-    problem: "Turn campus event discovery and coordination into a real user workflow with auth, matching, chat, RSVP/join, and carpool support.",
-    keyDecision: "Use FastAPI, PostgreSQL models, JWT auth, and WebSocket chat to connect product workflows instead of shipping a frontend-only event board.",
-    tradeoff: "Realtime delivery depends on valid JWT state and active connections; session and reconnect behavior need deeper hardening before reliability claims.",
+    problem: "Make campus event participation less fragmented by connecting discovery, interest context, RSVP/join actions, social coordination, chat, and carpool planning in one product flow.",
+    keyDecision: "Use persisted backend models, JWT auth, and WebSocket chat so the product has real coordination state rather than only a static event listing UI.",
+    tradeoff: "The product flow is credible, but workflow screenshots, deployed behavior checks, role details, and realtime hardening evidence remain pending.",
     roleStatus: "Role/contribution details pending verification.",
     stack: ["React", "FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "WebSockets", "Render"],
     links: [
@@ -376,13 +377,13 @@ export const featuredProjects: Project[] = [
     ],
     caseStudy: {
       whatWasBuilt:
-        "A full-stack student event coordination platform with authentication, profiles/interests, event discovery, RSVP/join behavior, friend flows, chat, carpool coordination, and documented admin event endpoints.",
+        "A full-stack student event coordination platform with authentication, profiles/interests, event discovery, RSVP/join behavior, friend flows, chat history, WebSocket chat, carpool coordination, and documented admin event endpoints.",
       architectureSummary:
-        "The documented system uses a React frontend, FastAPI backend, SQLAlchemy models for users/events/social/carpool/chat data, JWT auth, WebSocket chat, and Render deployment configuration. System topology still needs diagram revision before final polish.",
+        "The system combines a React frontend, FastAPI backend, SQLAlchemy models for users/events/interests/social/carpool/chat data, JWT auth, WebSocket delivery, and Render deployment configuration. That supports a real product workflow, but the system topology still needs diagram revision before final polish.",
       engineeringDecisions: [
-        "Frame the project around student coordination workflows rather than a generic social/event board.",
-        "Use persisted backend models and JWT/WebSocket flows to support real coordination states.",
-        "Keep deployment and realtime limitations visible instead of implying mature production operations.",
+        "Frame the project around campus coordination outcomes, not a generic social/event board.",
+        "Persist event joins, friend requests, carpool groups, and chat history so the workflow has backend state.",
+        "Keep deployment, screenshot, and realtime limitations visible instead of implying mature production operations.",
       ],
       evidenceStatus: [
         "Deployment and GitHub repo are Verified.",
@@ -393,33 +394,34 @@ export const featuredProjects: Project[] = [
       workflow: [
         {
           label: "Discovery",
-          detail: "Student lands on The Loop, signs up or logs in, then reaches event discovery through profile and interest context.",
+          detail: "Student signs up or logs in, creates profile/interest context, and reaches event discovery from a personalized starting point.",
         },
         {
           label: "Interest matching",
-          detail: "Profile/interests inform the event feed and matching context; screenshot evidence is still incomplete.",
+          detail: "Interests shape the event feed and matching context; this is product-flow evidence, not proven recommendation-system research.",
         },
         {
           label: "RSVP / join",
-          detail: "Student joins or RSVPs to an event and the backend records a user-event relation.",
+          detail: "Student joins or RSVPs to an event, and the backend records the user-event relationship rather than leaving the action as UI-only state.",
         },
         {
           label: "Friends, chat, and carpool",
-          detail: "Friend connections, chat history, active WebSocket delivery, and carpool groups/requests support coordination.",
+          detail: "Friend connections, chat history, active WebSocket delivery, and carpool groups/requests connect event intent to coordination.",
         },
         {
           label: "Admin / event management",
-          detail: "Admin event endpoints are documented; feature this only after safe UI evidence exists.",
+          detail: "Admin event endpoints are documented, but they should be featured visually only after safe UI evidence exists.",
         },
         {
           label: "Edge cases / pending evidence",
-          detail: "Disconnects, expired JWTs, multi-tab state, offline delivery, matching quality, and Render/free-tier behavior need deeper proof before reliability claims.",
+          detail: "Disconnects, expired JWTs, multi-tab state, offline delivery, matching quality, and Render/free-tier behavior need deeper proof before reliability or scale claims.",
         },
       ],
       limitations: [
         "WebSocket delivery depends on valid JWT state and active connections.",
         "Offline delivery and reconnect/session behavior are not proven as hardened production features.",
         "Matching is a product workflow, not proven recommendation-system research.",
+        "Workflow screenshots are blocked by the deployment/server access issue, so no active deployment proof should be inferred from visuals.",
         "Render/free-tier constraints may affect perceived reliability.",
       ],
       nextEvidenceNeeded: [

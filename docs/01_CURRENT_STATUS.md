@@ -4,7 +4,7 @@ Date: 2026-07-01
 
 ## Current Phase
 
-Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, and fresh polished screenshot QA captured; evidence hardening continues before production launch.
+Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, and featured case-study copy polished; evidence hardening continues before production launch.
 
 The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
 
@@ -17,10 +17,10 @@ First implementation review status:
 
 First evidence import and case-study hardening status:
 - Documented external repo assets were imported into `public/assets/projects/...` as Known candidates, not final Verified polished visuals.
-- Featured case-study pages now render documented sections for what was built, architecture summary, decisions, evidence status, limitations/tradeoffs, missing proof, and next evidence needed.
-- Mahoraga includes adaptive-agent and reward-system proof framing without robust-performance claims.
-- Hybrid includes a local read-only ONNX classifier/routing benchmark table with measured local latency, while cost, fallback-rate, endpoint latency, and production SLA claims remain blocked.
-- The Loop includes the documented discovery, interest, RSVP/join, friends/chat/carpool, admin, and edge-case workflow.
+- Featured case-study pages now render sharper evidence-bound sections for problem/build, architecture, decisions, proof status, limitations/tradeoffs, missing proof, and next proof needed.
+- Mahoraga now frames the project around adaptive-agent environment design, curriculum pressure, and reward-loop constraints without robust-performance or win-rate claims.
+- Hybrid now explains merchant override vs local ONNX vs fallback routing more clearly, while cost, fallback-rate, endpoint latency, Qwen fallback latency, accuracy, and production SLA claims remain blocked.
+- The Loop now frames the product as a campus coordination workflow across discovery, RSVP/join, friends/chat/carpool, admin, and edge cases while preserving screenshot/deployment-access blockers.
 - Role/contribution copy remains `Role/contribution details pending verification.`
 
 Conservative design-system polish status:
@@ -80,8 +80,9 @@ Reason:
 | Imported asset review | Known | `docs/18_IMPORTED_ASSET_REVIEW.md` classifies imported assets by homepage approval, case-study-only use, replacement need, sample-labeling need, and Hybrid sample-data UI replacement status. |
 | Hybrid sample-data visual proof | Known | `predict.png` and `memory.png` were replaced from a local run of the verified Hybrid frontend with synthetic demo transactions. Not benchmark/model-output evidence. |
 | Hybrid History AI Insight screenshot | Needed | Source review confirms the click-through History panel and `/transaction-insight` flow, but the current `history.png` only shows the list view. Capture a safe sample-data opened-transaction panel with real generated insight before using it as visual evidence. |
-| Hybrid routing proof | Known | `docs/19_HYBRID_ROUTING_PROOF.md` and the Hybrid case study include documented sample routing rows only; every row is `sample/unmeasured`. |
+| Hybrid routing proof | Known | `docs/19_HYBRID_ROUTING_PROOF.md` preserves the original sample/unmeasured routing proof, while the Hybrid case study now uses measured local classifier/routing rows from `docs/20_HYBRID_BENCHMARK_RESULTS.md`. |
 | Case-study hardening | Verified | The three featured case-study routes now render documented architecture, evidence, limitation, missing-proof, and next-evidence sections. |
+| Featured case-study copy polish | Verified | Copy sharpened on 2026-07-01 while preserving Known/Needed states, local-only Hybrid benchmark framing, blocked The Loop screenshots, and pending role/contribution details. |
 | Conservative design-system polish | Verified | Static shell visual hierarchy, section rhythm, evidence panels, focus states, and responsive behavior were polished without changing evidence states or activating blocked CTAs. |
 | Fresh screenshot recapture | Verified | Captured on 2026-07-01 with Microsoft Edge headless and GPU-safe flags; review notes are in `docs/22_SCREENSHOT_QA_REVIEW.md`. |
 

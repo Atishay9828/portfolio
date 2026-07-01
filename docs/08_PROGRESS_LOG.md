@@ -323,3 +323,17 @@ Validation:
 Status:
 - Fresh polished screenshot QA is complete.
 - Production launch remains blocked by resume publication, LinkedIn/email readiness, role/contribution details, final diagram QA, missing demos/workflow screenshots, The Loop replacement screenshots, Hybrid AI Insight screenshot proof, and full Hybrid endpoint/Qwen fallback benchmark evidence.
+
+### 2026-07-01 Featured Case-Study Copy Polish
+
+Completed:
+- Confirmed local `master` was clean and aligned with `origin/master` before changes.
+- Polished Mahoraga case-study copy around adaptive-agent environment design, curriculum pressure, reward-loop proof, reward-hacking limits, and next evidence.
+- Polished Hybrid case-study copy around merchant override, local ONNX classification, fallback routing, local benchmark scope, History AI Insight screenshot limits, and blocked endpoint/Qwen/cost/fallback-rate/accuracy claims.
+- Polished The Loop case-study copy around campus-event coordination, persisted workflow state, RSVP/join, friends/chat/carpool flow, and deployment/screenshot limitations.
+- Improved case-study page labels from generic status headings to evidence-bound proof, architecture, limitation, and next-proof labels.
+- Preserved pending role/contribution details, Known visual asset status, local-only Hybrid benchmark framing, blocked The Loop workflow screenshots, and disabled resume/LinkedIn/email CTAs.
+
+Status:
+- Featured case-study copy is sharper, but no evidence status was promoted.
+- Production launch remains blocked by public contact assets, role/contribution details, final diagram QA, remaining screenshots/demos, The Loop deployment/server screenshot access, Hybrid AI Insight screenshot proof, and full Hybrid endpoint/Qwen fallback benchmark evidence.

@@ -4,7 +4,7 @@ Date: 2026-07-01
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, and fresh polished screenshot QA. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, and a featured case-study copy polish pass. The strategy is strong and should not be redesigned.
 
 The repository now has a continuity system under `docs/00..22`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, and polished screenshot QA review.
 
@@ -28,6 +28,10 @@ Evidence import and case-study hardening status:
 - Real candidate visuals were imported from verified external repos into `public/assets/projects/...`.
 - Imported visuals are Known candidates, not final Verified polished assets.
 - Case-study pages now render documented evidence sections for all three featured projects.
+- Featured case-study copy has been sharpened around problem/build, architecture, proof status, limitations, and next proof without promoting any Known/Needed evidence state.
+- Mahoraga is framed around adaptive-agent environment design, curriculum pressure, reward-loop proof, and reward-hacking limits rather than anime/game novelty.
+- Hybrid is framed around merchant override, local ONNX classification, confidence/rule fallback, local-only benchmark scope, and unmeasured endpoint/Qwen/cost/fallback-rate/accuracy gaps.
+- The Loop is framed around campus-event coordination workflows with persisted state, RSVP/join, friends/chat/carpool, and explicit screenshot/deployment-access limitations.
 - Hybrid routing proof includes safe sample rows from documented examples, and `docs/20_HYBRID_BENCHMARK_RESULTS.md` now records a local read-only ONNX classifier/routing benchmark. Cost, fallback-rate, endpoint latency, Qwen fallback latency, and production SLA claims remain blocked.
 - Hybrid History AI Insight behavior is source-backed in `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`: clicking one History transaction opens a side panel that calls `POST /transaction-insight` and summarizes that selected transaction plus recent same-category history. The current `history.png` shows only the list view, so an opened-panel screenshot remains Needed before AI insights are used as visual evidence.
 - The Loop workflow is documented from the existing walkthrough; screenshot capture is temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it.
@@ -81,6 +85,7 @@ Imported asset visual/privacy review status:
 - Conservative static shell design-system polish completed on 2026-06-30 without activating pending CTAs or changing evidence states.
 - Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
 - Fresh polished screenshot QA captured on 2026-07-01 for the homepage desktop/mobile and the three featured case-study desktop routes.
+- Featured case-study copy polish completed on 2026-07-01 while preserving pending proof, local-only benchmark scope, blocked The Loop workflow screenshots, and missing role/contribution details.
 
 ## Missing Work
 
@@ -94,6 +99,7 @@ Imported asset visual/privacy review status:
 - Capture a safe sample-data Hybrid History screenshot with one transaction opened and the real AI Insight panel visible if AI insights should be used as portfolio screenshot evidence.
 - Add role/contribution details for featured and secondary projects.
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
+- Revisit final case-study tradeoff/limitation copy after role/contribution details, diagram QA, and missing visual/benchmark evidence are supplied.
 - Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback path if endpoint/fallback latency, cost, fallback-rate, or production claims are needed.
 - Add concrete design token values for typography, breakpoints, focus rings, and z-index.
 - Use the fresh polished screenshot QA in `docs/22_SCREENSHOT_QA_REVIEW.md` as the current visual QA baseline.
@@ -122,7 +128,7 @@ Imported asset visual/privacy review status:
 
 ## Next Recommended Task
 
-Replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, add role/contribution details, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
+Replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, add role/contribution details, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, confirm the public email, and then do the final case-study proof/launch pass.
 
 ## Imported Candidate Assets
 

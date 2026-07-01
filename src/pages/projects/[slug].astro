@@ -20,7 +20,7 @@ if (!project) {
   <section class="case-hero">
     <div class="section-inner">
       <a class="text-link" href="/#featured-projects">Back to featured work</a>
-      <div class="eyebrow">{project.tier} case study shell</div>
+      <div class="eyebrow">{project.tier} evidence-bound case study</div>
       <h1>{project.title}</h1>
       <p class="lead">{project.subtitle}</p>
     </div>
@@ -29,7 +29,7 @@ if (!project) {
     <div class="section-inner case-grid">
       <ProjectModule project={project} />
       <aside class="case-panel">
-        <span class="meta-label">Current boundary</span>
+        <span class="meta-label">Publication boundary</span>
         <p>
           This page is a static shell only. It intentionally does not include fake screenshots,
           benchmark numbers, dashboards, or deployment claims beyond verified links.
@@ -45,7 +45,7 @@ if (!project) {
       <div class="section-inner case-study-stack">
         <div class="section-header">
           <div>
-            <span class="meta-label">Documented case study</span>
+            <span class="meta-label">Evidence-bound case study</span>
             <h2>{project.title}</h2>
           </div>
           <p>
@@ -56,11 +56,11 @@ if (!project) {
 
         <div class="case-grid">
           <article class="case-panel">
-            <span class="meta-label">What was built</span>
+            <span class="meta-label">Problem and build</span>
             <p>{project.caseStudy.whatWasBuilt}</p>
           </article>
           <article class="case-panel">
-            <span class="meta-label">Architecture summary</span>
+            <span class="meta-label">Architecture</span>
             <p>{project.caseStudy.architectureSummary}</p>
           </article>
         </div>
@@ -73,7 +73,7 @@ if (!project) {
             </ul>
           </article>
           <article class="case-panel">
-            <span class="meta-label">Evidence status</span>
+            <span class="meta-label">Proof status</span>
             <ul class="missing-list">
               {project.caseStudy.evidenceStatus.map((item) => <li>{item}</li>)}
             </ul>
@@ -82,7 +82,7 @@ if (!project) {
 
         {project.visual.assets && project.visual.assets.length > 0 && (
           <article class="case-panel">
-            <span class="meta-label">Imported asset candidates</span>
+            <span class="meta-label">Visual evidence candidates</span>
             <div class="asset-grid">
               {project.visual.assets.map((asset) => (
                 <figure class="asset-card">
@@ -100,7 +100,7 @@ if (!project) {
 
         {project.caseStudy.rewardProof && (
           <article class="case-panel">
-            <span class="meta-label">Reward-system proof</span>
+            <span class="meta-label">Reward-loop proof</span>
             <ul class="missing-list">
               {project.caseStudy.rewardProof.map((item) => <li>{item}</li>)}
             </ul>
@@ -139,7 +139,7 @@ if (!project) {
 
         {project.caseStudy.workflow && (
           <article class="case-panel">
-            <span class="meta-label">Workflow</span>
+            <span class="meta-label">Product workflow</span>
             <div class="workflow-grid">
               {project.caseStudy.workflow.map((step) => (
                 <div class="workflow-step">
@@ -153,13 +153,13 @@ if (!project) {
 
         <div class="case-grid">
           <article class="case-panel">
-            <span class="meta-label">Current limitations / tradeoffs</span>
+            <span class="meta-label">Limitations and tradeoffs</span>
             <ul class="missing-list">
               {project.caseStudy.limitations.map((item) => <li>{item}</li>)}
             </ul>
           </article>
           <article class="case-panel">
-            <span class="meta-label">Next evidence needed</span>
+            <span class="meta-label">Next proof needed</span>
             <ul class="missing-list">
               {project.caseStudy.nextEvidenceNeeded.map((item) => <li>{item}</li>)}
             </ul>
