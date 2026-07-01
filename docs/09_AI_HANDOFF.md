@@ -1,12 +1,12 @@
 # 09_AI_HANDOFF.md
 
-Date: 2026-06-30
+Date: 2026-07-01
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, and a conservative design-system polish pass. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, and fresh polished screenshot QA. The strategy is strong and should not be redesigned.
 
-The repository now has a continuity system under `docs/00..20`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, and resume publication plan.
+The repository now has a continuity system under `docs/00..22`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, and polished screenshot QA review.
 
 Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
 
@@ -22,7 +22,7 @@ Conservative design-system polish status:
 - Featured project modules render status-aware evidence panels plus small candidate visual previews without upgrading Known assets to Verified proof.
 - Hybrid benchmark presentation is visually framed as local classifier/routing evidence only, not production SLA, endpoint latency, fallback latency, cost, or fallback-rate proof.
 - Timeline, secondary work, lab projects, and systems map remain visually smaller than the featured trio.
-- Fresh screenshot recapture was attempted but blocked by local Chrome/Edge headless GPU-process failures. Existing screenshots remain in `docs/reviews/screenshots/`; updated recapture is still Needed.
+- Fresh polished screenshot QA was captured on 2026-07-01 with Microsoft Edge headless and GPU-safe flags. Review notes live in `docs/22_SCREENSHOT_QA_REVIEW.md`; updated PNGs live in `docs/reviews/screenshots/`.
 
 Evidence import and case-study hardening status:
 - Real candidate visuals were imported from verified external repos into `public/assets/projects/...`.
@@ -80,6 +80,7 @@ Imported asset visual/privacy review status:
 - Hybrid History AI Insight evidence review completed on 2026-06-30: source inspection confirmed the opened-transaction panel and `/transaction-insight` behavior, while the existing `history.png` remained list-view evidence only.
 - Conservative static shell design-system polish completed on 2026-06-30 without activating pending CTAs or changing evidence states.
 - Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
+- Fresh polished screenshot QA captured on 2026-07-01 for the homepage desktop/mobile and the three featured case-study desktop routes.
 
 ## Missing Work
 
@@ -95,7 +96,7 @@ Imported asset visual/privacy review status:
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
 - Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback path if endpoint/fallback latency, cost, fallback-rate, or production claims are needed.
 - Add concrete design token values for typography, breakpoints, focus rings, and z-index.
-- Recapture updated screenshot QA after the local browser/headless GPU issue is resolved.
+- Use the fresh polished screenshot QA in `docs/22_SCREENSHOT_QA_REVIEW.md` as the current visual QA baseline.
 - Plan and test major dependency upgrades needed to remediate current audit findings.
 
 ## Current Blockers
@@ -121,7 +122,7 @@ Imported asset visual/privacy review status:
 
 ## Next Recommended Task
 
-Recapture screenshot QA once the local browser/headless GPU issue is resolved, then replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, add role/contribution details, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
+Replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, add role/contribution details, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, and confirm the public email.
 
 ## Imported Candidate Assets
 
@@ -157,10 +158,18 @@ Captured files:
 - `docs/reviews/screenshots/mahoraga-mobile.png`
 - `docs/reviews/screenshots/hybrid-categorizer-mobile.png`
 - `docs/reviews/screenshots/the-loop-mobile.png`
+- `docs/reviews/screenshots/homepage-desktop-polished.png`
+- `docs/reviews/screenshots/homepage-mobile-polished.png`
+- `docs/reviews/screenshots/mahoraga-desktop-polished.png`
+- `docs/reviews/screenshots/hybrid-desktop-polished.png`
+- `docs/reviews/screenshots/the-loop-desktop-polished.png`
 
 Capture notes:
-- Microsoft Edge headless succeeded with GPU/software-rasterizer disable flags.
+- Earlier Microsoft Edge headless succeeded with GPU/software-rasterizer disable flags.
 - Chrome headless failed earlier with `GPU process isn't usable`; do not treat that as a site failure.
+- The 2026-07-01 polished recapture used Microsoft Edge headless with `--disable-gpu`, `--disable-software-rasterizer`, `--disable-dev-shm-usage`, `--no-sandbox`, and `--disable-features=VizDisplayCompositor`.
+- Astro preview worked in foreground, but background preview launch was unreliable in this shell; the successful capture served the built `dist/` directory with the bundled Python static server.
+- Full-page capture required scrolling first so lazy images loaded, and sticky header positioning was disabled only during screenshot stitching to avoid duplicate headers.
 
 ## Dependency Audit
 

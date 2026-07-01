@@ -1,10 +1,10 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-06-30
+Date: 2026-07-01
 
 ## Current Phase
 
-Astro static scaffold created, first implementation hardening pass completed, and conservative design-system polish completed; evidence hardening continues before production launch.
+Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, and fresh polished screenshot QA captured; evidence hardening continues before production launch.
 
 The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
 
@@ -29,7 +29,7 @@ Conservative design-system polish status:
 - Featured project modules now show status-aware evidence panels and small visual-candidate previews while keeping every asset labeled as Known rather than Verified proof.
 - Case-study pages now frame Hybrid benchmark evidence as a local classifier/routing benchmark only, not a production SLA or endpoint/fallback benchmark.
 - Timeline, secondary work, lab projects, and systems map remain visually smaller than featured work.
-- Fresh screenshot capture was attempted against the rebuilt static output, but local Chrome/Edge headless capture failed with GPU-process errors. Existing earlier screenshots remain in `docs/reviews/screenshots/`; recapture remains Needed when the browser environment is stable.
+- Fresh polished screenshot QA was captured on 2026-07-01 under `docs/reviews/screenshots/` after serving the rebuilt static output and using Microsoft Edge headless with GPU-safe flags. Review notes live in `docs/22_SCREENSHOT_QA_REVIEW.md`.
 
 Imported asset visual/privacy review status:
 - Review results are recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
@@ -83,7 +83,7 @@ Reason:
 | Hybrid routing proof | Known | `docs/19_HYBRID_ROUTING_PROOF.md` and the Hybrid case study include documented sample routing rows only; every row is `sample/unmeasured`. |
 | Case-study hardening | Verified | The three featured case-study routes now render documented architecture, evidence, limitation, missing-proof, and next-evidence sections. |
 | Conservative design-system polish | Verified | Static shell visual hierarchy, section rhythm, evidence panels, focus states, and responsive behavior were polished without changing evidence states or activating blocked CTAs. |
-| Fresh screenshot recapture | Needed | Attempted on 2026-06-30 against rebuilt static output, but Chrome/Edge headless failed with GPU-process errors. Existing earlier screenshots remain available; updated recapture is still Needed. |
+| Fresh screenshot recapture | Verified | Captured on 2026-07-01 with Microsoft Edge headless and GPU-safe flags; review notes are in `docs/22_SCREENSHOT_QA_REVIEW.md`. |
 
 ## Verified Evidence Links
 
@@ -108,7 +108,7 @@ Verification notes:
 
 ## Next Milestone
 
-Screenshot and evidence completion after conservative static polish.
+Evidence completion after conservative static polish and screenshot QA recapture.
 
 Completion criteria:
 - Copy final resume PDF into repo/public assets and manually verify LinkedIn before public resume/contact CTAs.

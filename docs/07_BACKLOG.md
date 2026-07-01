@@ -1,6 +1,6 @@
 # 07_BACKLOG.md
 
-Date: 2026-06-30
+Date: 2026-07-01
 
 ## P0
 
@@ -43,7 +43,7 @@ Date: 2026-06-30
 - [x] Locate Hybrid `models/distilbert.onnx` for local benchmark verification without copying it into the portfolio repo.
 - [ ] Finalize featured project tradeoff/limitation copy.
 - [x] Complete conservative design-system polish for the static Astro shell without changing evidence states.
-- [ ] Recapture updated screenshot QA after local Chrome/Edge headless GPU failure is resolved.
+- [x] Recapture updated screenshot QA after local Chrome/Edge headless GPU failure is resolved or worked around.
 - [ ] Plan Astro/Vitest major dependency upgrade path for audit remediation.
 
 ## P2

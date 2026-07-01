@@ -298,3 +298,28 @@ Screenshot QA:
 Status:
 - Conservative static polish is complete.
 - Production launch remains blocked by missing screenshots/demos, role/contribution details, resume publication, LinkedIn/email readiness, diagram QA, The Loop screenshot access, Hybrid AI Insight screenshot proof, and full Hybrid endpoint/Qwen fallback benchmark evidence.
+
+### 2026-07-01 Polished Screenshot QA Recapture
+
+Completed:
+- Confirmed the working tree was clean before screenshot work.
+- Confirmed `docs/22_MAHORAGA_README_DATA.md` was absent, so there was no untracked Mahoraga evidence file to inspect or commit.
+- Re-ran validation with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
+- Confirmed Astro preview works in foreground at `http://127.0.0.1:4321/`.
+- Worked around unreliable background preview launch by serving the built `dist/` output with the bundled Python static server.
+- Captured fresh polished screenshots with Microsoft Edge headless and GPU-safe flags.
+- Created `docs/22_SCREENSHOT_QA_REVIEW.md`.
+- Added the following files under `docs/reviews/screenshots/`:
+  - `homepage-desktop-polished.png`
+  - `homepage-mobile-polished.png`
+  - `mahoraga-desktop-polished.png`
+  - `hybrid-desktop-polished.png`
+  - `the-loop-desktop-polished.png`
+
+Validation:
+- `npm.cmd test` passed.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages.
+
+Status:
+- Fresh polished screenshot QA is complete.
+- Production launch remains blocked by resume publication, LinkedIn/email readiness, role/contribution details, final diagram QA, missing demos/workflow screenshots, The Loop replacement screenshots, Hybrid AI Insight screenshot proof, and full Hybrid endpoint/Qwen fallback benchmark evidence.

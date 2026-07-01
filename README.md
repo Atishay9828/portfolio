@@ -11,7 +11,7 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, and conservative design-system polish are complete; evidence hardening continues before production launch.
+Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, conservative design-system polish, and polished screenshot QA recapture are complete; evidence hardening continues before production launch.
 
 The current implementation is a conservative static content shell backed by the evidence docs. It has been visually tightened, but production launch remains blocked until portfolio-local assets, role/contribution details, resume publication, full endpoint/fallback benchmark evidence, and workflow evidence are complete.
 
@@ -67,6 +67,7 @@ Created:
 - Added `docs/20_HYBRID_BENCHMARK_RESULTS.md` with local read-only ONNX classifier/routing benchmark results.
 - Added `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md` documenting the click-through History AI Insight panel and the limits of the current list-view screenshot.
 - Conservative Signal Lab-aligned design-system polish for the static shell without changing evidence states or activating blocked CTAs.
+- Fresh polished screenshot QA under `docs/reviews/screenshots/` with review notes in `docs/22_SCREENSHOT_QA_REVIEW.md`.
 
 Still blocked:
 - Public resume CTA until a final PDF exists under `public/resume/`.
@@ -76,7 +77,6 @@ Still blocked:
 - Hybrid backend/model-output claims until the model/backend path is captured or benchmarked end to end.
 - Hybrid History AI Insight visual proof until a safe sample transaction is opened and the real AI Insight panel is captured from `/transaction-insight`.
 - The Loop workflow screenshot polish until the deployment/server access issue is fixed by the teammate/friend with access.
-- Fresh updated screenshot QA until local Chrome/Edge headless GPU failures are resolved.
 - Ownership/role claims until contribution details are documented.
 - Audit remediation until Astro/Vitest major dependency upgrades are planned and tested.
 
@@ -105,7 +105,7 @@ Future agents should start here:
 - `SITE_BLUEPRINT.md`
 - `DESIGN_SYSTEM.md`
 - `ASSET_REQUIREMENTS.md`
-- `docs/00_READ_FIRST.md` through `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`
+- `docs/00_READ_FIRST.md` through `docs/22_SCREENSHOT_QA_REVIEW.md`
 
 ## Locked Decisions
 
