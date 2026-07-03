@@ -3,55 +3,43 @@
 Date: 2026-07-03
 
 Purpose:
-- Create a claim-safe framework for featured project role and contribution evidence.
-- Prevent the portfolio from implying ownership, leadership, module responsibility, or teammate role splits before AJ confirms them.
-- Prepare the exact questions needed to turn current pending states into public-ready contribution copy.
+- Record owner-reviewed contribution wording for the three featured projects.
+- Keep public case-study role copy specific without inventing module ownership, metrics, screenshots, teammate details, or production maturity.
+- Preserve the unsafe wording and remaining evidence gaps that still block stronger claims.
 
 Status vocabulary follows the repo evidence model: Known, Verified, Missing, Needed, Not applicable.
 
 ## Summary
 
-Role/contribution details remain Needed for all three featured projects.
+Owner-reviewed contribution wording available for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop.
 
-Current repo evidence proves that the projects, links, code references, screenshots, benchmark docs, and workflow docs exist at different evidence levels. It does not prove which parts AJ personally built, which parts teammates built, which decisions AJ owned, or which files/modules should be attributed to AJ in public copy.
+AJ supplied project-by-project contribution context on 2026-07-03. This supports public role labels and contribution summaries, but does not create new proof for exact file/module ownership, production SLAs, endpoint/Qwen benchmarks, final screenshots, or teammate-specific implementation details beyond the provided role split.
 
-Safe current public wording:
+Public copy may now include:
+- Role label.
+- Contribution summary.
+- Contribution bullets.
+- Collaborative scope where relevant.
+- Still-to-verify evidence limits.
 
-```text
-Contribution details pending final owner review.
-Role split needs confirmation before public launch.
-```
-
-Unsafe current public wording:
-- "I built the entire project."
+Unsafe Wording To Avoid:
 - "I led the team."
-- "I owned the backend/frontend/model pipeline."
-- "My contribution was the routing system/reward loop/WebSocket system."
-- "I solved the main performance issue."
-- "I designed the architecture."
-
-Those may become usable only after AJ supplies source-backed contribution evidence.
+- "I owned every module."
+- "I built the entire project" except Hybrid, where solo/end-to-end ownership is owner-reviewed.
+- "Production-grade game engine."
+- "Robust adaptive RL performance."
+- "Production SLA."
+- Unsupported endpoint latency, Qwen fallback latency, cost, fallback-rate, and accuracy claims.
+- Unsupported win-rate, user-scale, or reliability claims.
+- Do not mention the late YouTube submission, failed/late hackathon submission, or failure to qualify publicly.
 
 ## Required Evidence Standard
 
-Before detailed role claims appear in public case studies, each project needs:
-- A plain-language description of what AJ personally built.
-- A plain-language description of what teammates built.
-- File, module, feature, commit, PR, notebook, demo, or issue evidence for AJ's contribution.
-- A hard technical decision AJ can explain without exaggeration.
-- A bug, performance, design, or product issue AJ actually solved.
+Before stronger role claims appear in public case studies, each project still needs:
+- File, module, feature, commit, PR, notebook, demo, or issue evidence if exact ownership is claimed.
+- Methodology and source artifacts for benchmark, accuracy, cost, latency, fallback-rate, or performance claims.
+- Reviewed screenshots/demos before visual proof is upgraded.
 - Explicit exclusions for what should not be claimed.
-
-## Shared Questions AJ Must Answer
-
-For each featured project:
-1. What did you personally build?
-2. What did teammates build?
-3. Which files, modules, routes, notebooks, UI screens, diagrams, or features were yours?
-4. What hard technical decision did you make?
-5. What bug, performance issue, design issue, or product issue did you solve?
-6. What evidence proves this contribution? Use commits, files, screenshots, demo timestamps, docs, PRs, or teammate confirmation if available.
-7. What should not be claimed publicly?
 
 ## Mahoraga
 
@@ -61,35 +49,27 @@ Mahoraga is the flagship adaptive AI systems project. The current case study fra
 
 ### Currently Documented Contribution Details
 
-Status: Needed.
+Status: Owner-reviewed contribution wording available.
 
-The repo currently documents project architecture and evidence, but not AJ's personal contribution scope. Verified public links exist for GitHub, Kaggle, and HuggingFace. Source-backed technical areas include environment mechanics, enemy curriculum behavior, reward components, Gym wrapper, training workflow references, and demo/API surfaces. None of that proves AJ personally owned those parts.
+Role label: Backend / RL Systems Engineer.
 
-### Unclear Contribution Details
+Public contribution summary:
+AJ owned the adaptive backend/game-system logic, agent behavior, reward/training constraints, and LLM/backend integration under hackathon constraints.
 
-- Whether AJ built the environment mechanics.
-- Whether AJ designed the reward components.
-- Whether AJ implemented the enemy curriculum behavior.
-- Whether AJ worked on Qwen/LoRA training or only documented/used it.
-- Whether AJ built the FastAPI/Gradio demo paths.
-- Whether teammates contributed code, design, training, demo, or presentation work.
-- Which files/modules can be safely attributed to AJ.
+Contribution bullets:
+- Built around the adaptive loop: repeated player behavior should increase Mahoraga pressure and force tactics to change.
+- Worked on agent handling, backend integration, LLM integration, and reward/training behavior.
+- Reduced training/time complexity enough to keep the adaptive-system prototype workable under hackathon constraints.
 
-### Questions AJ Must Answer
+Collaborative scope:
+- Teammate Negi primarily handled frontend aesthetics, deployment, presentation, and related design decisions.
+- Public copy should frame Mahoraga as an applied adaptive-system prototype, not a production-grade game engine or generalized RL result.
 
-1. What did you personally build in Mahoraga?
-2. What did teammates build?
-3. Which files/modules were yours: `env/mahoraga_env.py`, `env/mechanics.py`, `env/enemy.py`, `env/rewards.py`, `env/gym_wrapper.py`, `api.py`, `app.py`, notebook code, frontend code, docs, or something else?
-4. What hard technical decision did you make around the reward loop, environment mechanics, enemy behavior, training path, or demo interface?
-5. What bug, reward-design issue, exploit behavior, performance issue, or evaluation issue did you solve?
-6. What evidence proves your contribution? Name files, commits, notebook cells, demo timestamps, docs, or teammate confirmation.
-7. What should not be claimed publicly about your role, results, training performance, or teammate work?
+### Still To Verify
 
-### Safe Public Wording Available Now
-
-- `Contribution details pending final owner review.`
-- `Role split needs confirmation before public launch.`
-- `The current evidence supports project-level environment, reward, and demo architecture, but not personal ownership claims.`
+- Exact file/module ownership remains not documented.
+- Training/evaluation artifacts still need review before robust-performance claims.
+- Demo media and final architecture diagram QA remain pending.
 
 ### Unsafe Wording To Avoid
 
@@ -99,100 +79,87 @@ The repo currently documents project architecture and evidence, but not AJ's per
 - "I led Mahoraga."
 - "My reward design produced robust adaptive behavior."
 - "I solved reward hacking."
+- "Production-grade game engine."
 
 ### Launch Readiness Status
 
-Blocked for role/contribution claims. The project can remain visible with pending contribution wording, but public ownership, leadership, module-ownership, and performance claims are not launch-ready.
+Partially ready for role/contribution copy. Public role label and contribution summary can be used with the still-to-verify caveats above. Exact file/module ownership, production maturity, robust RL performance, and broad evaluation claims remain blocked.
 
 ## Hybrid GenAI Transaction Categorizer
 
 ### Current Project Summary
 
-Hybrid GenAI Transaction Categorizer is the production-minded AI systems proof. The current case study frames it as layered transaction routing: merchant override, local ONNX inference, confidence/rule checks, optional LLM fallback, feedback, history, and merchant memory.
+Hybrid GenAI Transaction Categorizer is the production-minded AI systems proof. The current case study frames it as layered transaction routing: merchant override, local ONNX inference, confidence/rule checks, optional LLM fallback, feedback, history, AI insights, and merchant memory.
 
 ### Currently Documented Contribution Details
 
-Status: Needed.
+Status: Owner-reviewed contribution wording available.
 
-The repo currently documents verified GitHub/YouTube links, sample-data UI proof, local read-only ONNX classifier/routing benchmark results, and source-backed History AI Insight behavior. It does not document AJ's personal role, teammate role split, or feature ownership.
+Role label: Solo Full-Stack AI Systems Builder.
 
-### Unclear Contribution Details
+Public contribution summary:
+AJ built the full-stack offline-first AI categorization system end-to-end, including backend, frontend, local routing, merchant memory, history, AI insights, and benchmark evidence.
 
-- Whether AJ built the FastAPI `/predict` backend path.
-- Whether AJ implemented ONNX inference, merchant extraction, semantic fallback, or LLM fallback.
-- Whether AJ built merchant memory or frontend history behavior.
-- Whether AJ built the React/Vite UI screens.
-- Whether AJ created the walkthrough video or benchmark methodology.
-- Which teammate, if any, built model training, frontend, backend, docs, or demo pieces.
-- Which files/modules can be safely attributed to AJ.
+Contribution bullets:
+- Built the UI/API path for categorizing transactions from known merchants and local or ambiguous vendors.
+- Implemented merchant memory, local ONNX routing, fallback routing, history, and AI insights based on previous expenditure context.
+- Chose an offline/local model strategy because the hackathon constraint required local execution without cloud help.
 
-### Questions AJ Must Answer
+Collaborative scope:
+- Solo project; public copy may say full-stack, solo, and end-to-end because AJ confirmed ownership.
+- Benchmark copy must stay scoped to the local read-only classifier/routing evidence already documented.
 
-1. What did you personally build in Hybrid?
-2. What did teammates build?
-3. Which files/modules/features were yours: `backend/main.py`, `backend/classify.py`, preprocessing, merchant memory, feedback route, History AI Insight, React screens, benchmark docs, demo video, or something else?
-4. What hard technical decision did you make around merchant override, confidence threshold, ONNX routing, semantic rules, fallback behavior, or memory?
-5. What bug, performance issue, fallback-design issue, model/runtime issue, or UX issue did you solve?
-6. What evidence proves your contribution? Name commits, files, demo timestamps, benchmark artifacts, docs, or teammate confirmation.
-7. What should not be claimed publicly about your role, deployment, accuracy, cost, fallback rate, Qwen fallback, or production behavior?
+### Still To Verify
 
-### Safe Public Wording Available Now
-
-- `Contribution details pending final owner review.`
-- `Role split needs confirmation before public launch.`
-- `The current evidence supports project-level hybrid routing, local benchmark scope, and UI behavior, but not personal feature ownership claims.`
+- Endpoint latency remains blocked.
+- Qwen fallback latency remains blocked.
+- Cost, fallback-rate, and accuracy claims remain blocked.
+- Deployment link and opened History AI Insight screenshot remain pending.
 
 ### Unsafe Wording To Avoid
 
-- "I built the ONNX classifier."
-- "I designed the full routing architecture."
-- "I owned the backend."
-- "I built the merchant memory system."
-- "I optimized latency/cost."
-- "I solved accuracy."
-- "I deployed the system."
+- "Production SLA."
+- "Optimized cost."
+- "Measured fallback-rate improvement."
+- "Measured endpoint latency."
+- "Measured Qwen fallback latency."
+- "Solved accuracy."
+- "Deployed production system."
+- Any public mention of the late YouTube submission or failure to qualify.
 
 ### Launch Readiness Status
 
-Blocked for role/contribution claims. The project can stay visible with pending contribution wording and local-only benchmark framing, but personal ownership, endpoint performance, cost, fallback-rate, accuracy, deployment, and Qwen fallback claims are not launch-ready.
+Partially ready for role/contribution copy. Solo/end-to-end/full-stack wording is owner-reviewed and usable. Endpoint latency, Qwen fallback latency, cost, fallback-rate, and accuracy remain blocked; benchmark limitations are unchanged.
 
 ## The Loop
 
 ### Current Project Summary
 
-The Loop is the main Product Engineer proof. The current case study frames it as a campus event coordination platform connecting authentication, profiles/interests, event discovery, RSVP/join behavior, friend flows, chat history, WebSocket chat, carpool coordination, and admin event endpoints.
+The Loop is the main Product Engineer proof. The current case study frames it as a campus event coordination platform connecting authentication, profiles/interests, event discovery, RSVP/join behavior, friend flows, chat history, WebSocket chat, carpool coordination, maps, recommendations, and admin event workflows.
 
 ### Currently Documented Contribution Details
 
-Status: Needed.
+Status: Owner-reviewed collaborative contribution wording available.
 
-The repo currently documents verified deployment/repo links, product workflow structure, backend models/routes, JWT/WebSocket architecture, and imported candidate screenshots. It does not document AJ's personal contribution scope or teammate role split.
+Role label: Collaborative Full-Stack Contributor.
 
-### Unclear Contribution Details
+Public contribution summary:
+AJ collaborated across product flow and implementation on a campus event-discovery and coordination platform; ownership is not cleanly separable by module.
 
-- Whether AJ built the FastAPI backend.
-- Whether AJ designed SQLAlchemy models.
-- Whether AJ implemented auth/JWT behavior.
-- Whether AJ implemented WebSocket chat or `useChatSystem.js`.
-- Whether AJ worked on frontend screens, interests, RSVP/join, carpool, admin features, or deployment.
-- Whether teammates built parts of frontend, backend, design, product workflow, or deployment.
-- Which files/modules can be safely attributed to AJ.
+Contribution bullets:
+- Worked across the product flow for centralized campus and outside-campus event discovery.
+- Contributed to implementation effort and coordination across RSVP/social coordination, carpool, maps, recommendations, and admin/event workflows.
+- Kept the case study focused on the platform workflow instead of assigning unsupported solo ownership to individual modules.
 
-### Questions AJ Must Answer
+Collaborative scope:
+- Event discovery, RSVP/social coordination, friends, chat, carpool, maps, recommendations, and admin/event workflows should be described as collaborative platform areas.
+- Do not claim solo ownership of auth, RSVP, chat, carpool, maps, recommendations, admin, or deployment.
 
-1. What did you personally build in The Loop?
-2. What did teammates build?
-3. Which files/modules/features were yours: `main.py`, SQLAlchemy models, auth routes, event routes, carpool routes, friend routes, WebSocket chat, `src/hooks/useChatSystem.js`, frontend screens, Render config, or something else?
-4. What hard technical decision did you make around product workflow, persistence, auth, realtime chat, carpool coordination, or deployment?
-5. What bug, performance issue, realtime issue, session issue, database issue, or product-design issue did you solve?
-6. What evidence proves your contribution? Name commits, files, screenshots, deployment logs, demo steps, docs, or teammate confirmation.
-7. What should not be claimed publicly about your role, active deployment behavior, production reliability, user scale, recommendation quality, or teammate work?
+### Still To Verify
 
-### Safe Public Wording Available Now
-
-- `Contribution details pending final owner review.`
-- `Role split needs confirmation before public launch.`
-- `The current evidence supports project-level full-stack workflow architecture, but not personal feature ownership claims.`
+- Exact module ownership remains collaborative/not separated.
+- Workflow screenshots remain blocked by the deployment/server access issue.
+- Manual deployed workflow verification and system diagram revision remain pending.
 
 ### Unsafe Wording To Avoid
 
@@ -203,18 +170,8 @@ The repo currently documents verified deployment/repo links, product workflow st
 - "I deployed and operated the production app."
 - "I solved realtime reliability."
 - "I built the recommendation system."
+- Any exact ownership claim for auth, RSVP, chat, carpool, maps, recommendations, admin, or deployment unless later evidence separates it.
 
 ### Launch Readiness Status
 
-Blocked for role/contribution claims. The project can remain visible with pending contribution wording and verified links, but personal ownership, deployment-operation, reliability, scale, recommendation-quality, and full-stack ownership claims are not launch-ready.
-
-## Public Copy Rule Until AJ Answers
-
-Keep every featured project in this state:
-
-```text
-Contribution details pending final owner review.
-Role split needs confirmation before public launch.
-```
-
-Do not replace this with detailed role bullets until AJ supplies project-by-project evidence.
+Partially ready for collaborative role/contribution copy. Public copy may describe AJ as a collaborative full-stack contributor across product flow and implementation, but exact module ownership remains collaborative/not separated.

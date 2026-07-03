@@ -38,7 +38,9 @@ Date: 2026-07-01
 - [ ] Collect remaining portfolio-local screenshots/demos after blockers clear.
 - [ ] Capture The Loop workflow screenshots after the deployment/server access issue is fixed by teammate/friend.
 - [x] Create role/contribution evidence framework and AJ question set without inventing details.
-- [ ] Add verified role/contribution details per featured project after final owner review.
+- [x] Add owner-reviewed role/contribution wording per featured project after final owner review.
+- [ ] Map exact Mahoraga file/module ownership only if supporting evidence is supplied.
+- [ ] Keep The Loop module ownership collaborative unless teammate-confirmed evidence separates it.
 - [x] Execute Hybrid local read-only ONNX classifier/routing benchmark using the located local ONNX runtime asset.
 - [ ] Benchmark Hybrid full FastAPI endpoint and Qwen fallback path before endpoint latency, fallback latency, cost, fallback-rate, or production claims.
 - [x] Locate Hybrid `models/distilbert.onnx` for local benchmark verification without copying it into the portfolio repo.

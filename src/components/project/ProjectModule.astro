@@ -32,9 +32,16 @@ const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCa
         <strong>Limitation / tradeoff</strong>
         <span>{project.tradeoff}</span>
       </div>
-      <div class="fact fact-pending">
-        <strong>{project.roleStatus}</strong>
-      </div>
+      {project.contribution ? (
+        <div class="fact fact-pending">
+          <strong>{project.contribution.roleLabel}</strong>
+          <span>{project.contribution.summary}</span>
+        </div>
+      ) : (
+        <div class="fact fact-pending">
+          <strong>{project.roleStatus}</strong>
+        </div>
+      )}
     </div>
     <div class="link-row" aria-label={`${project.title} links`}>
       {project.links.map((link) => (

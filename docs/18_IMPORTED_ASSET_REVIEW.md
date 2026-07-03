@@ -317,4 +317,4 @@ Notes:
 - Hybrid History AI Insight panel screenshot remains Needed before AI insights are used as visual portfolio evidence.
 - The Loop needs high-resolution landing/auth, event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots after the deployment/server access issue is fixed by the teammate/friend with access.
 - Mahoraga still needs demo media, architecture diagram revision, and interpreted evaluation evidence before metric claims.
-- Role/contribution details remain pending for all featured projects.
+- Owner-reviewed role/contribution wording now exists for all featured projects; exact module/file ownership and stronger proof claims remain governed by `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`.

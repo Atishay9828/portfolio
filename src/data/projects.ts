@@ -34,6 +34,15 @@ export type WorkflowStep = {
   detail: string;
 };
 
+export type ProjectContribution = {
+  status: string;
+  roleLabel: string;
+  summary: string;
+  bullets: string[];
+  collaborativeScope: string[];
+  stillToVerify: string[];
+};
+
 export type CaseStudy = {
   whatWasBuilt: string;
   architectureSummary: string;
@@ -57,6 +66,7 @@ export type Project = {
   keyDecision: string;
   tradeoff: string;
   roleStatus: string;
+  contribution?: ProjectContribution;
   stack: string[];
   links: ProjectLink[];
   visual: VisualEvidence;
@@ -75,7 +85,27 @@ export const featuredProjects: Project[] = [
     problem: "Explore whether adaptive behavior can be shaped through environment rules, reward incentives, and anti-exploit constraints instead of presenting another model wrapper.",
     keyDecision: "Make the environment loop the proof surface: mechanics, curriculum enemy behavior, reward components, Gym-style stepping, and optional Qwen/LoRA paths stay separated.",
     tradeoff: "The design is technically interesting, but reward hacking and narrow evaluation still block claims of robust adaptive intelligence.",
-    roleStatus: "Contribution details pending final owner review. Role split needs confirmation before public launch.",
+    roleStatus: "Owner-reviewed contribution wording available; exact file/module ownership still not mapped.",
+    contribution: {
+      status: "Owner-reviewed contribution wording available; file/module ownership remains not documented.",
+      roleLabel: "Backend / RL Systems Engineer",
+      summary:
+        "AJ owned the adaptive backend/game-system logic, agent behavior, reward/training constraints, and LLM/backend integration under hackathon constraints.",
+      bullets: [
+        "Built around the adaptive loop: repeated player behavior should increase Mahoraga pressure and force tactics to change.",
+        "Worked on agent handling, backend integration, LLM integration, and reward/training constraints.",
+        "Reduced training/time complexity enough to keep the adaptive-system prototype workable under hackathon constraints.",
+      ],
+      collaborativeScope: [
+        "Teammate Negi primarily handled frontend aesthetics, deployment, presentation, and related design decisions.",
+        "Public copy should frame Mahoraga as an applied adaptive-system prototype, not a production-grade game engine or generalized RL result.",
+      ],
+      stillToVerify: [
+        "Exact file/module ownership remains not documented.",
+        "Training/evaluation artifacts still need review before robust-performance claims.",
+        "Demo media and final architecture diagram QA remain pending.",
+      ],
+    },
     stack: ["Python", "Gymnasium", "FastAPI", "Gradio", "Qwen 2.5", "LoRA"],
     links: [
       {
@@ -127,7 +157,7 @@ export const featuredProjects: Project[] = [
       "portfolio-local demo GIF/video",
       "architecture diagram revision",
       "selected screenshot or training artifact",
-      "role/contribution details",
+      "exact file/module ownership still not mapped",
     ],
     caseStudy: {
       whatWasBuilt:
@@ -159,7 +189,7 @@ export const featuredProjects: Project[] = [
         "Final adaptive-behavior demo GIF/video that shows the loop responding to agent choices.",
         "Revised architecture diagram separating training, runtime/demo, and optional API/UI surfaces, followed by rendered/mobile diagram QA.",
         "Reviewed training/evaluation artifact selection.",
-        "Verified role/contribution details from final owner review.",
+        "File/module ownership mapping if the final public case study needs per-file attribution.",
       ],
     },
   },
@@ -173,7 +203,28 @@ export const featuredProjects: Project[] = [
     problem: "Categorize transactions without making the LLM the default path, while still handling low-confidence and ambiguous inputs honestly.",
     keyDecision: "Route in layers: merchant overrides for known entities, ONNX classification for confident local inference, semantic checks for obvious rules, and LLM fallback only when the local path is not enough.",
     tradeoff: "The architecture is cost-conscious, but the current proof is local-only; endpoint behavior, fallback latency, cost, fallback-rate, and accuracy remain unmeasured.",
-    roleStatus: "Contribution details pending final owner review. Role split needs confirmation before public launch.",
+    roleStatus: "Owner-reviewed contribution wording available; benchmark limits remain visible.",
+    contribution: {
+      status: "Owner-reviewed contribution wording available; benchmark limitations unchanged.",
+      roleLabel: "Solo Full-Stack AI Systems Builder",
+      summary:
+        "AJ built the full-stack offline-first AI categorization system end-to-end, including backend, frontend, local routing, merchant memory, history, AI insights, and benchmark evidence.",
+      bullets: [
+        "Built the UI/API path for categorizing transactions from known merchants and local or ambiguous vendors.",
+        "Implemented merchant memory, local ONNX routing, fallback routing, history, and AI insights based on previous expenditure context.",
+        "Chose an offline/local model strategy because the hackathon constraint required local execution without cloud help.",
+      ],
+      collaborativeScope: [
+        "Solo project; public copy may say full-stack, solo, and end-to-end because AJ confirmed ownership.",
+        "Benchmark copy must stay scoped to the local read-only classifier/routing evidence already documented.",
+      ],
+      stillToVerify: [
+        "Endpoint latency remains blocked.",
+        "Qwen fallback latency remains blocked.",
+        "Cost, fallback-rate, and accuracy claims remain blocked.",
+        "Deployment link and opened History AI Insight screenshot remain pending.",
+      ],
+    },
     stack: ["FastAPI", "React", "Vite", "ONNX", "LLM fallback", "Client-side memory"],
     links: [
       {
@@ -227,7 +278,7 @@ export const featuredProjects: Project[] = [
       "deployment link",
       "endpoint-level latency benchmark",
       "Qwen fallback latency/cost benchmark",
-      "role/contribution details",
+      "cost/fallback-rate/accuracy proof",
       "full backend/model-output capture if final proof requires end-to-end inference",
     ],
     caseStudy: {
@@ -317,7 +368,7 @@ export const featuredProjects: Project[] = [
         "Replacement History screenshot showing the real `AI Insight` panel with safe sample data and a real `/transaction-insight` response.",
         "Add a repo-owned Hybrid benchmark script if this benchmark should become repeatable outside Codex.",
         "End-to-end backend/model-output capture only if the final case study needs inference proof beyond frontend UI state.",
-        "Verified role/contribution details from final owner review.",
+        "Endpoint/Qwen/cost/fallback-rate/accuracy proof before stronger performance wording.",
       ],
     },
   },
@@ -330,8 +381,28 @@ export const featuredProjects: Project[] = [
     statusLabel: "Verified deployment/repo, screenshots pending",
     problem: "Make campus event participation less fragmented by connecting discovery, interest context, RSVP/join actions, social coordination, chat, and carpool planning in one product flow.",
     keyDecision: "Use persisted backend models, JWT auth, and WebSocket chat so the product has real coordination state rather than only a static event listing UI.",
-    tradeoff: "The product flow is credible, but workflow screenshots, deployed behavior checks, role details, and realtime hardening evidence remain pending.",
-    roleStatus: "Contribution details pending final owner review. Role split needs confirmation before public launch.",
+    tradeoff: "The product flow is credible, but workflow screenshots, deployed behavior checks, exact module ownership, and realtime hardening evidence remain pending.",
+    roleStatus: "Owner-reviewed collaborative contribution wording available; exact module ownership is not separated.",
+    contribution: {
+      status: "Owner-reviewed collaborative contribution wording available; exact module ownership remains collaborative/not separated.",
+      roleLabel: "Collaborative Full-Stack Contributor",
+      summary:
+        "AJ collaborated across product flow and implementation on a campus event-discovery and coordination platform; ownership is not cleanly separable by module.",
+      bullets: [
+        "Worked across the product flow for centralized campus and outside-campus event discovery.",
+        "Contributed to implementation effort and coordination across RSVP/social coordination, carpool, maps, recommendations, and admin/event workflows.",
+        "Kept the case study focused on the platform workflow instead of assigning unsupported solo ownership to individual modules.",
+      ],
+      collaborativeScope: [
+        "Event discovery, RSVP/social coordination, friends, chat, carpool, maps, recommendations, and admin/event workflows should be described as collaborative platform areas.",
+        "Do not claim solo ownership of auth, RSVP, chat, carpool, maps, recommendations, admin, or deployment.",
+      ],
+      stillToVerify: [
+        "Exact module ownership remains collaborative/not separated.",
+        "Workflow screenshots remain blocked by the deployment/server access issue.",
+        "Manual deployed workflow verification and system diagram revision remain pending.",
+      ],
+    },
     stack: ["React", "FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "WebSockets", "Render"],
     links: [
       {
@@ -372,7 +443,7 @@ export const featuredProjects: Project[] = [
       "workflow screenshots blocked by deployment/server access issue",
       "system diagram revision",
       "demo/walkthrough media",
-      "role/contribution details",
+      "exact module ownership still collaborative/not separated",
       "validation/testing evidence",
     ],
     caseStudy: {
@@ -428,7 +499,7 @@ export const featuredProjects: Project[] = [
         "Event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots after the deployment/server access issue is fixed by the teammate/friend with access.",
         "System diagram revision plus rendered/mobile QA.",
         "Manual deployed workflow verification before launch copy.",
-        "Verified role/contribution details from final owner review.",
+        "Module ownership detail only if teammate-confirmed and still framed as collaborative.",
       ],
     },
   },

@@ -4,9 +4,9 @@ Date: 2026-07-01
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, and a role/contribution evidence framework. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, and owner-reviewed featured contribution wording. The strategy is strong and should not be redesigned.
 
-The repository now has a continuity system under `docs/00..23`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, and role/contribution evidence framework.
+The repository now has a continuity system under `docs/00..23`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, role/contribution evidence framework, and owner-reviewed contribution wording.
 
 Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
 
@@ -29,8 +29,8 @@ Evidence import and case-study hardening status:
 - Imported visuals are Known candidates, not final Verified polished assets.
 - Case-study pages now render documented evidence sections for all three featured projects.
 - Featured case-study copy has been sharpened around problem/build, architecture, proof status, limitations, and next proof without promoting any Known/Needed evidence state.
-- Role/contribution details remain pending; visible case-study copy now says `Contribution details pending final owner review. Role split needs confirmation before public launch.`
-- `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` defines the safe pending wording, unsafe wording to avoid, and AJ's project-by-project contribution questions.
+- Role/contribution details are now owner-reviewed for featured projects and rendered in public case-study data with role labels, contribution summaries, collaborative scope, and still-to-verify items.
+- `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` defines the safe owner-reviewed wording, unsafe wording to avoid, and remaining proof limits.
 - Mahoraga is framed around adaptive-agent environment design, curriculum pressure, reward-loop proof, and reward-hacking limits rather than anime/game novelty.
 - Hybrid is framed around merchant override, local ONNX classification, confidence/rule fallback, local-only benchmark scope, and unmeasured endpoint/Qwen/cost/fallback-rate/accuracy gaps.
 - The Loop is framed around campus-event coordination workflows with persisted state, RSVP/join, friends/chat/carpool, and explicit screenshot/deployment-access limitations.
@@ -88,7 +88,8 @@ Imported asset visual/privacy review status:
 - Validation passed with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`.
 - Fresh polished screenshot QA captured on 2026-07-01 for the homepage desktop/mobile and the three featured case-study desktop routes.
 - Featured case-study copy polish completed on 2026-07-01 while preserving pending proof, local-only benchmark scope, blocked The Loop workflow screenshots, and missing role/contribution details.
-- Role/contribution evidence framework completed on 2026-07-03 in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` without adding personal ownership claims.
+- Role/contribution evidence framework completed on 2026-07-03 in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`.
+- Owner-reviewed contribution wording added on 2026-07-03 for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop without inventing exact file/module ownership.
 
 ## Missing Work
 
@@ -100,7 +101,7 @@ Imported asset visual/privacy review status:
 - Collect screenshots/demos after blockers clear.
 - Replace remaining weak/mismatched imported assets and keep Hybrid category/history screenshots sample-labeled if used.
 - Capture a safe sample-data Hybrid History screenshot with one transaction opened and the real AI Insight panel visible if AI insights should be used as portfolio screenshot evidence.
-- Answer the `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` question set, then add verified role/contribution details for featured and secondary projects.
+- Map exact Mahoraga file/module ownership only if supporting evidence is supplied, and keep The Loop module ownership collaborative unless teammate-confirmed evidence separates it.
 - Finalize limitations/failure modes and tradeoff copy for featured projects.
 - Revisit final case-study tradeoff/limitation copy after role/contribution details, diagram QA, and missing visual/benchmark evidence are supplied.
 - Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback path if endpoint/fallback latency, cost, fallback-rate, or production claims are needed.
@@ -111,7 +112,7 @@ Imported asset visual/privacy review status:
 ## Current Blockers
 
 - Global contact assets are Known/Verified but not fully public-ready.
-- Featured project evidence is improved but incomplete; diagram review and limitation notes are Known, while screenshots/demos, role details, final rendered diagram QA, and deeper proof artifacts remain incomplete.
+- Featured project evidence is improved but incomplete; diagram review, limitation notes, and owner-reviewed contribution wording are Known, while screenshots/demos, exact ownership details where needed, final rendered diagram QA, and deeper proof artifacts remain incomplete.
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - Website scaffold exists, but it is a conservative static shell only.
 - Static shell design is cleaner and more Signal Lab-aligned, but production launch is still blocked.
@@ -131,7 +132,7 @@ Imported asset visual/privacy review status:
 
 ## Next Recommended Task
 
-Have AJ answer the role/contribution questions in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`, then update featured case studies with only verified contribution details. After that, replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, confirm the public email, and then do the final case-study proof/launch pass.
+After the owner-reviewed contribution wording pass, replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, confirm the public email, and then do the final case-study proof/launch pass.
 
 ## Imported Candidate Assets
 
@@ -203,7 +204,7 @@ Status:
 - Hybrid routing proof: `docs/19_HYBRID_ROUTING_PROOF.md`; safe sample table only.
 - Hybrid benchmark results: `docs/20_HYBRID_BENCHMARK_RESULTS.md`; local read-only ONNX classifier/routing benchmark only, no endpoint/Qwen fallback/cost proof.
 - Hybrid History AI Insight evidence: `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`; click-through panel source-backed, screenshot proof Needed.
-- Role/contribution evidence framework: `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; contribution details Needed until AJ answers and evidence is attached.
+- Role/contribution evidence framework: `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed contribution wording exists, while exact module ownership and stronger benchmark/performance claims remain limited by the still-to-verify items.
 
 ## Verified Links
 
@@ -248,5 +249,5 @@ Verification caveats:
 ## Exact Next Prompt Recommendation
 
 ```text
-Continue from the conservative Astro static scaffold. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Do not attempt The Loop screenshot capture until the deployment/server access issue is fixed. Use `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` to collect AJ's role/contribution answers before adding any personal ownership claims. If using Hybrid History AI insights visually, open one safe sample transaction and capture the real AI Insight panel from `/transaction-insight`; do not invent insight text. Extend Hybrid benchmarking to the full endpoint/Qwen fallback path before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims, copy the selected public resume into `public/resume/`, manually verify LinkedIn, confirm the public email, and then harden the case-study pages.
+Continue from the conservative Astro static scaffold. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Owner-reviewed contribution wording exists for featured projects, but do not invent exact Mahoraga file/module ownership or exact The Loop module ownership. Do not attempt The Loop screenshot capture until the deployment/server access issue is fixed. If using Hybrid History AI insights visually, open one safe sample transaction and capture the real AI Insight panel from `/transaction-insight`; do not invent insight text. Extend Hybrid benchmarking to the full endpoint/Qwen fallback path before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims, copy the selected public resume into `public/resume/`, manually verify LinkedIn, confirm the public email, and then harden the case-study pages.
 ```

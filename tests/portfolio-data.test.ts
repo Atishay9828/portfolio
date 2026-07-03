@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { featuredProjects, getProjectBySlug, routes, secondaryProjects } from "../src/data/projects";
+import {
+  featuredProjects,
+  getProjectBySlug,
+  routes,
+  secondaryProjects,
+  type Project,
+  type ProjectContribution,
+} from "../src/data/projects";
 import { links } from "../src/data/links";
 import hybridRoutingProof from "../docs/19_HYBRID_ROUTING_PROOF.md?raw";
 import hybridBenchmarkResults from "../docs/20_HYBRID_BENCHMARK_RESULTS.md?raw";
@@ -28,13 +35,17 @@ const importedProjectAssets = [
   loopLanding,
 ];
 
+const requireContribution = (project: Project | undefined): ProjectContribution => {
+  expect(project).toBeDefined();
+  expect(project?.contribution).toBeDefined();
+  return project!.contribution!;
+};
+
 const rootModelFiles = import.meta.glob("../models/distilbert.onnx", { eager: true, query: "?url" });
 const publicHybridModelFiles = import.meta.glob("../public/assets/projects/hybrid-categorizer/distilbert.onnx", {
   eager: true,
   query: "?url",
 });
-const pendingContributionStatus =
-  "Contribution details pending final owner review. Role split needs confirmation before public launch.";
 
 describe("portfolio scaffold data", () => {
   it("keeps the locked featured project order", () => {
@@ -82,7 +93,7 @@ describe("portfolio scaffold data", () => {
   it("keeps missing proof explicit for every featured project", () => {
     for (const project of featuredProjects) {
       expect(project.missingProof.length).toBeGreaterThan(0);
-      expect(project.roleStatus).toBe(pendingContributionStatus);
+      expect(requireContribution(project).stillToVerify.length).toBeGreaterThan(0);
     }
   });
 
@@ -103,33 +114,65 @@ describe("portfolio scaffold data", () => {
       expect(project.caseStudy?.evidenceStatus.length).toBeGreaterThan(0);
       expect(project.caseStudy?.limitations.length).toBeGreaterThan(0);
       expect(project.caseStudy?.nextEvidenceNeeded.length).toBeGreaterThan(0);
-      expect(project.roleStatus).toBe(pendingContributionStatus);
+      expect(requireContribution(project).status).toContain("Owner-reviewed");
     }
   });
 
-  it("keeps featured contribution claims pending until owner review", () => {
-    for (const project of featuredProjects) {
-      const projectText = JSON.stringify(project).toLowerCase();
-      const roleStatus = project.roleStatus.toLowerCase();
+  it("adds owner-reviewed contribution wording without inventing exact module ownership", () => {
+    const mahoraga = getProjectBySlug("mahoraga");
+    const hybrid = getProjectBySlug("hybrid-categorizer");
+    const loop = getProjectBySlug("the-loop");
+    const mahoragaContribution = requireContribution(mahoraga);
+    const hybridContribution = requireContribution(hybrid);
+    const loopContribution = requireContribution(loop);
 
-      expect(roleStatus).toContain("pending final owner review");
-      expect(roleStatus).toContain("role split needs confirmation");
-      expect(projectText).not.toMatch(/\bi built\b/);
-      expect(projectText).not.toMatch(/\bmy role\b/);
-      expect(projectText).not.toMatch(/\bpersonally built\b/);
-      expect(projectText).not.toMatch(/\bi led\b/);
-      expect(projectText).not.toMatch(/\bi owned\b/);
-    }
+    expect(mahoragaContribution.roleLabel).toBe("Backend / RL Systems Engineer");
+    expect(mahoragaContribution.summary).toContain("adaptive backend/game-system logic");
+    expect(mahoragaContribution.summary).toContain("LLM/backend integration");
+    expect(mahoragaContribution.bullets.join(" ")).toContain("reward/training constraints");
+    expect(mahoragaContribution.collaborativeScope.join(" ")).toContain("frontend aesthetics");
+    expect(mahoragaContribution.stillToVerify.join(" ")).toContain("Exact file/module ownership");
+
+    expect(hybridContribution.roleLabel).toBe("Solo Full-Stack AI Systems Builder");
+    expect(hybridContribution.summary).toContain("end-to-end");
+    expect(hybridContribution.bullets.join(" ")).toContain("merchant memory");
+    expect(hybridContribution.bullets.join(" ")).toContain("local ONNX routing");
+    expect(hybridContribution.bullets.join(" ")).toContain("AI insights");
+    expect(hybridContribution.stillToVerify.join(" ").toLowerCase()).toContain("endpoint latency");
+    expect(hybridContribution.stillToVerify.join(" ")).toContain("Qwen fallback latency");
+
+    expect(loopContribution.roleLabel).toBe("Collaborative Full-Stack Contributor");
+    expect(loopContribution.summary).toContain("collaborated across product flow and implementation");
+    expect(loopContribution.collaborativeScope.join(" ").toLowerCase()).toContain("event discovery");
+    expect(loopContribution.collaborativeScope.join(" ")).toContain("admin/event workflows");
+    expect(loopContribution.stillToVerify.join(" ")).toContain("Exact module ownership remains collaborative/not separated");
   });
 
-  it("documents role contribution questions without upgrading launch readiness", () => {
-    expect(roleContributionEvidence).toContain("Role/contribution details remain Needed");
-    expect(roleContributionEvidence).toContain("Contribution details pending final owner review.");
-    expect(roleContributionEvidence).toContain("Role split needs confirmation before public launch.");
-    expect(roleContributionEvidence).toContain("What did you personally build?");
-    expect(roleContributionEvidence).toContain("What did teammates build?");
-    expect(roleContributionEvidence).toContain("What should not be claimed publicly?");
-    expect(roleContributionEvidence).toContain("Blocked for role/contribution claims");
+  it("keeps contribution guardrails after owner review", () => {
+    const allProjectText = JSON.stringify(featuredProjects).toLowerCase();
+    const loop = getProjectBySlug("the-loop");
+    const loopText = JSON.stringify(loop).toLowerCase();
+    const loopContribution = requireContribution(loop);
+    const loopAssertiveText = [loopContribution.summary, ...loopContribution.bullets].join(" ").toLowerCase();
+
+    expect(allProjectText).not.toContain("late youtube");
+    expect(allProjectText).not.toContain("failed to qualify");
+    expect(allProjectText).not.toMatch(/\b(sla-backed|production sla:|guaranteed)\b/);
+    expect(allProjectText).not.toMatch(/\b\d+(\.\d+)?%\s*(accuracy|cost|fallback|win|improvement)\b/);
+    expect(loopAssertiveText).not.toMatch(/\baj owned\b.*\b(auth|rsvp|chat|carpool|maps|recommendations|admin|deployment)\b/);
+    expect(loopAssertiveText).not.toMatch(/\bsolo\b.*\b(auth|rsvp|chat|carpool|maps|recommendations|admin|deployment)\b/);
+    expect(loopText).toContain("do not claim solo ownership");
+  });
+
+  it("documents owner-reviewed contribution wording while preserving unsafe wording to avoid", () => {
+    expect(roleContributionEvidence).toContain("Owner-reviewed contribution wording available");
+    expect(roleContributionEvidence).toContain("Backend / RL Systems Engineer");
+    expect(roleContributionEvidence).toContain("Solo Full-Stack AI Systems Builder");
+    expect(roleContributionEvidence).toContain("Collaborative Full-Stack Contributor");
+    expect(roleContributionEvidence).toContain("Exact file/module ownership remains not documented");
+    expect(roleContributionEvidence).toContain("endpoint latency, Qwen fallback latency, cost, fallback-rate, and accuracy");
+    expect(roleContributionEvidence).toContain("Unsafe Wording To Avoid");
+    expect(roleContributionEvidence).toContain("Do not mention the late YouTube submission");
   });
 
   it("records Hybrid benchmark proof as a local benchmark, not a production claim", () => {

@@ -13,9 +13,9 @@ Status vocabulary follows `ASSET_REQUIREMENTS.md`: Known, Verified, Missing, Nee
 
 | Project | Public-readiness | Diagram source confidence | Main remaining blocker |
 |---|---|---|---|
-| Mahoraga | Partial, static-scaffold ready with constraints | High for reward system; Medium for combined architecture/training UI | Local demo media, architecture diagram revision, role/contribution detail |
+| Mahoraga | Partial, static-scaffold ready with constraints | High for reward system; Medium for combined architecture/training UI | Local demo media, architecture diagram revision, exact file/module ownership detail |
 | Hybrid GenAI Transaction Categorizer | Partial, static-scaffold ready with constraints | High for routing concept; Medium for final visual diagrams | Deployment link, endpoint/fallback/cost benchmark evidence, portfolio-local screenshots |
-| The Loop | Partial, static-scaffold ready with constraints | High for auth/realtime; Medium for system/deployment topology | Portfolio-local product screenshots, system diagram revision, role/contribution detail |
+| The Loop | Partial, static-scaffold ready with constraints | High for auth/realtime; Medium for system/deployment topology | Portfolio-local product screenshots, system diagram revision, collaborative module ownership detail |
 
 ## Mahoraga
 
@@ -41,11 +41,11 @@ Flagship technical-depth project and primary proof of adaptive AI systems engine
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; reward-system diagram is Ready, architecture diagram needs revision.
 - Repo-contained visual artifacts: Known; repo contains `docs/training_metrics.png`, `docs/dashboard_preview.png`, and related dashboard assets, but they are not portfolio-local and have not been visually reviewed for final use.
 - Local demo GIF/video: Needed.
-- Role/contribution detail: Needed.
+- Role/contribution detail: Known/Partial; owner-reviewed role wording exists, exact file/module ownership remains not documented.
 
 ### Public-Readiness Status
 
-Partial. Verified links, conservative copy, and the reward-system diagram can inform the first static homepage. The project is not ready for final featured polish until demo media, architecture diagram revision, rendered/mobile diagram QA, role/contribution details, and limitation framing are finalized.
+Partial. Verified links, conservative copy, owner-reviewed contribution wording, and the reward-system diagram can inform the first static homepage. The project is not ready for final featured polish until demo media, architecture diagram revision, rendered/mobile diagram QA, exact file/module ownership if needed, and limitation framing are finalized.
 
 ### Required Evidence Assets
 
@@ -54,7 +54,7 @@ Partial. Verified links, conservative copy, and the reward-system diagram can in
 - Training timeline or metrics chart.
 - Demo GIF/video.
 - Failure mode or limitation note.
-- Role/contribution details.
+- Exact file/module ownership details if needed for public attribution.
 - Project screenshot if the UI is used visually.
 
 ### Existing Evidence
@@ -74,7 +74,7 @@ Partial. Verified links, conservative copy, and the reward-system diagram can in
 - Local demo GIF/video showing adaptive behavior.
 - Portfolio-local screenshots or selected visual assets.
 - Visual review of Mermaid diagrams.
-- Role/contribution details.
+- Exact file/module ownership details if needed for public attribution.
 - Clear training/evaluation artifact selection.
 - Concise tradeoff note.
 
@@ -101,7 +101,8 @@ Reward hacking remains a real risk. The code includes anti-cowardice and opportu
 - [ ] Portfolio-local demo GIF/video.
 - [ ] Portfolio-local screenshot or selected visual artifact.
 - [ ] Training metrics reviewed and selected.
-- [ ] AJ role/contribution scope.
+- [x] AJ owner-reviewed contribution wording.
+- [ ] Exact file/module ownership scope.
 - [ ] Tradeoff explanation.
 
 ### Homepage Proof Checklist
@@ -111,7 +112,7 @@ Reward hacking remains a real risk. The code includes anti-cowardice and opportu
 - [x] Limitation note exists.
 - [ ] Demo media is ready.
 - [ ] Screenshot/visual asset is ready.
-- [ ] Short role/contribution line is ready.
+- [x] Short role/contribution line is ready.
 - [ ] Copy avoids leading with game/anime context.
 
 ### What Must Be Collected Before Frontend Implementation
@@ -148,11 +149,11 @@ Production-minded AI systems proof: local classifier first, LLM only when confid
 - Latency/cost benchmark: Known/Needed; local classifier/routing benchmark exists in `docs/20_HYBRID_BENCHMARK_RESULTS.md`, but endpoint latency, Qwen fallback latency, cost, fallback-rate, and production claims remain Needed/blocked.
 - Benchmark/routing methodology: Known in `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Measured routing decision table: Needed.
-- Role/contribution detail: Needed.
+- Role/contribution detail: Known/Partial; owner-reviewed solo/end-to-end contribution wording exists, benchmark limitations remain unchanged.
 
 ### Public-Readiness Status
 
-Partial. This project has strong architecture evidence in the repo, a verified walkthrough, and local classifier/routing benchmark evidence, so it can support conservative static scaffolding. Full featured presentation remains blocked by missing endpoint/fallback/cost benchmark proof, deployment status, role details, diagram revisions, and portfolio-local screenshots.
+Partial. This project has strong architecture evidence in the repo, a verified walkthrough, owner-reviewed solo contribution wording, and local classifier/routing benchmark evidence, so it can support conservative static scaffolding. Full featured presentation remains blocked by missing endpoint/fallback/cost benchmark proof, deployment status, diagram revisions, and portfolio-local screenshots.
 
 ### Required Evidence Assets
 
@@ -164,7 +165,7 @@ Partial. This project has strong architecture evidence in the repo, a verified w
 - Routing decision table.
 - UI screenshots.
 - Limitation/failure-mode note.
-- Role/contribution details.
+- Remaining endpoint/Qwen/cost/fallback-rate/accuracy proof.
 
 ### Existing Evidence
 
@@ -183,7 +184,7 @@ Partial. This project has strong architecture evidence in the repo, a verified w
 - Endpoint/fallback latency or cost comparison. Do not reuse qualitative "fast" wording as a metric.
 - Real or clearly representative routing decision table.
 - Portfolio-local screenshot selection.
-- Role/contribution details.
+- Remaining benchmark and deployment proof.
 - Final tradeoff note.
 
 ### Architecture Diagram Candidate
@@ -212,7 +213,7 @@ The fallback path can increase latency and depends on confidence threshold tunin
 - [x] Local classifier/routing benchmark.
 - [ ] Endpoint/fallback/cost benchmark.
 - [ ] Routing decision table.
-- [ ] Role/contribution scope.
+- [x] Role/contribution scope.
 
 ### Homepage Proof Checklist
 
@@ -221,7 +222,7 @@ The fallback path can increase latency and depends on confidence threshold tunin
 - [x] Limitation note exists.
 - [ ] Screenshot/visual asset selected.
 - [x] One local benchmark or routing example available.
-- [ ] Short role/contribution line ready.
+- [x] Short role/contribution line ready.
 
 ### What Must Be Collected Before Frontend Implementation
 
@@ -229,7 +230,7 @@ The fallback path can increase latency and depends on confidence threshold tunin
 - Produce a small routing decision table using documented examples.
 - Measure endpoint latency, fallback latency, and cost if those claims will appear.
 - Confirm deployment status.
-- Add role/contribution details.
+- Keep owner-reviewed role/contribution details within documented benchmark limits.
 
 ## The Loop
 
@@ -255,11 +256,11 @@ Main Product Engineer proof: a full-stack student event coordination platform wi
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime and auth diagrams are Ready, system diagram needs revision.
 - Repo-contained screenshots: Known; repo contains `assets/landing_page.jpg` and `assets/interest_selection.png`, but they are not portfolio-local and have not been visually reviewed.
 - Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots still Needed.
-- Role/contribution detail: Needed.
+- Role/contribution detail: Known/Partial; owner-reviewed collaborative contribution wording exists, exact module ownership remains collaborative/not separated.
 
 ### Public-Readiness Status
 
-Partial. The project has verified repo/deployment evidence, a documented workflow walkthrough, and clear full-stack components. The public case study still needs reviewed screenshots, system diagram revision, limitation/tradeoff copy, and contribution scope.
+Partial. The project has verified repo/deployment evidence, a documented workflow walkthrough, clear full-stack components, and owner-reviewed collaborative contribution wording. The public case study still needs reviewed screenshots, system diagram revision, limitation/tradeoff copy, and any exact module ownership evidence if claims are separated later.
 
 ### Required Evidence Assets
 
@@ -270,7 +271,7 @@ Partial. The project has verified repo/deployment evidence, a documented workflo
 - Auth flow diagram.
 - User workflow walkthrough.
 - Limitation/failure-mode note.
-- Role/contribution details.
+- Collaborative module ownership detail if later separated by evidence.
 
 ### Existing Evidence
 
@@ -287,7 +288,7 @@ Partial. The project has verified repo/deployment evidence, a documented workflo
 - Portfolio-local product screenshots.
 - User workflow walkthrough.
 - Visual review of diagram specs.
-- Role/contribution details.
+- Collaborative module ownership detail if later separated by evidence.
 - Final limitation/tradeoff language.
 - Any testing/QA evidence if production-minded language is used.
 
@@ -316,7 +317,8 @@ WebSocket chat depends on valid JWTs and active connections. Disconnects, expire
 - [x] Repo-contained screenshot candidates found.
 - [ ] Portfolio-local screenshots.
 - [ ] User workflow walkthrough.
-- [ ] Role/contribution scope.
+- [x] Collaborative role/contribution scope.
+- [ ] Exact module ownership if later separated by evidence.
 - [ ] Validation/testing evidence.
 
 ### Homepage Proof Checklist
@@ -326,12 +328,12 @@ WebSocket chat depends on valid JWTs and active connections. Disconnects, expire
 - [x] Limitation note exists.
 - [ ] Screenshot/visual asset selected.
 - [ ] Short product workflow line ready.
-- [ ] Short role/contribution line ready.
+- [x] Short role/contribution line ready.
 
 ### What Must Be Collected Before Frontend Implementation
 
 - Select or capture product screenshots.
 - Write a concise user workflow walkthrough.
-- Add ownership/contribution details.
+- Keep collaborative contribution wording; add exact ownership only if later evidence separates it.
 - Confirm deployed frontend/backend behavior manually if linking public CTAs.
 - Decide whether to mention Render free-tier constraints.

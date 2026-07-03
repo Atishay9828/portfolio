@@ -33,7 +33,7 @@ Evidence status:
 - Imported screenshot/metrics candidates: Known portfolio-local files under `public/assets/projects/mahoraga/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Local demo media: Needed.
 - Metrics: Known in external repo, not selected or reviewed for portfolio.
-- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; detailed contribution claims remain Needed until AJ answers the project questions with evidence.
+- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed role label and contribution summary are available, while exact file/module ownership remains not documented.
 
 Required assets:
 - Architecture diagram.
@@ -41,13 +41,13 @@ Required assets:
 - Training timeline or metrics chart.
 - Demo GIF/video.
 - Failure mode or limitation note.
-- Role/contribution details.
+- Exact file/module ownership detail.
 
 Missing assets:
 - Local demo media.
-- Demo media, final training/evaluation interpretation, and role/contribution detail.
+- Demo media, final training/evaluation interpretation, and exact file/module ownership detail.
 - Final reviewed training/evaluation artifact.
-- Role/contribution detail.
+- Exact file/module ownership detail.
 - Final tradeoff note.
 
 Verification notes:
@@ -58,10 +58,10 @@ Verification notes:
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md` and `docs/14_SCREENSHOT_IMPORT_PLAN.md`.
 - Imported asset review added `docs/18_IMPORTED_ASSET_REVIEW.md`; `dashboard_preview.png` is homepage-approved, `stitch_aero_screenshot.png` is case-study-only, and `training_metrics.png` remains Candidate only.
-- Role/contribution evidence framework added `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; ownership is still not explicitly documented and must not be invented.
+- Role/contribution evidence framework updated in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed role wording exists, but exact file/module ownership is still not explicitly documented and must not be invented.
 
 Can be shown publicly yet:
-- Partially. Verified links, conservative copy, and the reward-system diagram can support a first static homepage section, but full featured presentation remains blocked by architecture diagram revision, rendered/mobile diagram QA, demo media, selected screenshots/metrics, verified role details, and final tradeoff copy.
+- Partially. Verified links, conservative copy, owner-reviewed contribution wording, and the reward-system diagram can support a first static homepage section, but full featured presentation remains blocked by architecture diagram revision, rendered/mobile diagram QA, demo media, selected screenshots/metrics, exact file/module ownership if needed, and final tradeoff copy.
 
 ### Hybrid GenAI Transaction Categorizer
 
@@ -84,7 +84,7 @@ Evidence status:
 - Measured local classifier/routing table: Known in `docs/20_HYBRID_BENCHMARK_RESULTS.md` and `src/data/projects.ts`.
 - Full endpoint/Qwen fallback/cost benchmark: Needed.
 - Local ONNX runtime asset: Known at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`; not portfolio-local and not benchmark evidence by itself.
-- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; detailed contribution claims remain Needed until AJ answers the project questions with evidence.
+- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed solo/end-to-end contribution wording is available, while benchmark limitations remain unchanged.
 
 Required assets:
 - Repo link.
@@ -95,14 +95,14 @@ Required assets:
 - Routing decision table.
 - UI screenshots.
 - Limitation/failure-mode note.
-- Role/contribution details.
+- Remaining endpoint/Qwen/cost/fallback-rate/accuracy proof.
 
 Missing assets:
 - Deployment link.
 - Full endpoint/Qwen fallback/cost benchmarks.
 - Category/history sample-labeling in final case-study presentation if those screenshots are used.
 - Opened-transaction History AI Insight screenshot with safe sample data and a real generated `/transaction-insight` response.
-- Role/contribution detail.
+- Remaining benchmark and deployment proof.
 - Final tradeoff note.
 - End-to-end backend/model-output capture only if final proof needs more than frontend UI state.
 
@@ -139,7 +139,7 @@ Evidence status:
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, system diagram needs revision.
 - Imported product screenshot candidates: Known portfolio-local files under `public/assets/projects/the-loop/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots are temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it.
-- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; detailed contribution claims remain Needed until AJ answers the project questions with evidence.
+- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed collaborative contribution wording is available, while exact module ownership remains collaborative/not separated.
 
 Required assets:
 - Repo link.
@@ -149,13 +149,13 @@ Required assets:
 - Auth flow diagram.
 - User workflow walkthrough.
 - Limitation/failure-mode note.
-- Role/contribution details.
+- Collaborative module ownership detail if later separated by evidence.
 
 Missing assets:
 - Replace low-resolution landing image and capture missing workflow screenshots after the deployment/server access issue is fixed.
 - User workflow walkthrough.
 - Demo/walkthrough.
-- Role/contribution detail.
+- Collaborative module ownership detail if later separated by evidence.
 - Final tradeoff note.
 
 Verification notes:
@@ -170,7 +170,7 @@ Verification notes:
 - `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` records The Loop contribution questions, safe pending wording, and unsafe ownership/deployment/reliability wording to avoid.
 
 Can be shown publicly yet:
-- Partially. Verified deployment, repo, workflow walkthrough, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by workflow screenshots, system diagram revision, rendered/mobile diagram QA, verified role details, and final tradeoff copy. Screenshot capture is intentionally paused until the deployment/server access issue is fixed.
+- Partially. Verified deployment, repo, workflow walkthrough, owner-reviewed collaborative contribution wording, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by workflow screenshots, system diagram revision, rendered/mobile diagram QA, exact module ownership if later separated by evidence, and final tradeoff copy. Screenshot capture is intentionally paused until the deployment/server access issue is fixed.
 
 ## Secondary Projects
 

@@ -15,7 +15,7 @@ Important scope note:
 
 Astro static scaffolding can begin if it is limited to structure, routing, content placeholders backed by existing docs, and conservative evidence labels.
 
-Production-ready UI polish remains blocked because portfolio-local screenshots, demo media, role/contribution details, resume publication, and full endpoint/fallback benchmark evidence are not complete.
+Production-ready UI polish remains blocked because portfolio-local screenshots, demo media, exact ownership details where needed, resume publication, and full endpoint/fallback benchmark evidence are not complete.
 
 ## Diagram Review Summary
 
@@ -59,7 +59,7 @@ Flagship technical-depth project and primary proof of adaptive AI systems engine
 - Portfolio-local demo GIF/video.
 - Portfolio-local screenshots or selected visual assets.
 - Reviewed training/evaluation artifact.
-- Role/contribution details.
+- Exact file/module ownership details if public attribution needs per-file specificity.
 - Final tradeoff copy tied to documented constraints.
 
 ### Diagram Review
@@ -78,9 +78,9 @@ Flagship technical-depth project and primary proof of adaptive AI systems engine
 
 ### Role / Contribution Status
 
-Needed.
+Known/Partial.
 
-Ownership is not explicitly documented in the current source docs. Do not invent it.
+Owner-reviewed contribution wording is available, but exact file/module ownership is not explicitly documented. Do not invent it.
 
 ### Limitation Status
 
@@ -123,7 +123,7 @@ Production-minded AI systems proof: local classifier first, LLM fallback only wh
 - Portfolio-local screenshots.
 - Full endpoint/fallback/cost benchmark measurements.
 - Routing decision table with real or clearly representative examples.
-- Role/contribution details.
+- Remaining endpoint/Qwen/cost/fallback-rate/accuracy proof.
 - Final tradeoff copy.
 
 ### Diagram Review
@@ -142,9 +142,9 @@ Production-minded AI systems proof: local classifier first, LLM fallback only wh
 
 ### Role / Contribution Status
 
-Needed.
+Known/Partial.
 
-Ownership is not explicitly documented in the current source docs. Do not invent it.
+Owner-reviewed solo/end-to-end contribution wording is available. Benchmark, deployment, endpoint, Qwen fallback, cost, fallback-rate, and accuracy limits remain unchanged.
 
 ### Limitation Status
 
@@ -185,7 +185,7 @@ Main Product Engineer proof: a full-stack student event coordination platform wi
 
 - Portfolio-local product screenshots.
 - Demo video or GIF.
-- Role/contribution details.
+- Collaborative module ownership detail if later separated by evidence.
 - Validation/testing evidence if production-minded reliability claims are used.
 - Final deployed frontend/backend behavior check before launch copy.
 
@@ -205,9 +205,9 @@ Main Product Engineer proof: a full-stack student event coordination platform wi
 
 ### Role / Contribution Status
 
-Needed.
+Known/Partial.
 
-Ownership is not explicitly documented in the current source docs. Do not invent it.
+Owner-reviewed collaborative contribution wording is available. Exact module ownership remains collaborative/not separated and should not be invented.
 
 ### Limitation Status
 

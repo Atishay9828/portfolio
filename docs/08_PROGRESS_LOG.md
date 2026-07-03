@@ -350,4 +350,19 @@ Completed:
 Status:
 - Role/contribution framework is complete.
 - No personal contribution, teammate role split, ownership, leadership, module ownership, or solved-issue claim was added.
-- Production launch remains blocked until AJ answers the project-by-project contribution questions with evidence.
+- Production launch remained blocked until AJ answered the project-by-project contribution questions with evidence; this was resolved for safe public wording in the following owner-reviewed contribution pass, while exact ownership and benchmark limits remain blocked where noted.
+
+### 2026-07-03 Owner-Reviewed Contribution Wording
+
+Completed:
+- Converted AJ's role/contribution answers into safe public wording for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop.
+- Added structured contribution data to featured project records: role label, contribution summary, contribution bullets, collaborative scope, and still-to-verify items.
+- Rendered contribution sections on case-study pages with `My contribution`, `Collaborative scope`, and `Still to verify`.
+- Updated tests so Hybrid may use solo/end-to-end/full-stack wording, Mahoraga may describe AJ-owned adaptive backend/game-system, reward/training, and LLM/backend integration work, and The Loop remains collaborative without exact solo module ownership.
+- Preserved guardrails against unsupported metrics, screenshots, production SLA, endpoint/Qwen/cost/fallback-rate/accuracy claims, and public mention of the late YouTube submission or failure to qualify.
+
+Status:
+- Featured contribution wording is now public-ready within the documented caveats.
+- Mahoraga exact file/module ownership remains not mapped.
+- The Loop exact module ownership remains collaborative/not separated.
+- Hybrid endpoint latency, Qwen fallback latency, cost, fallback-rate, and accuracy remain blocked.
