@@ -7,7 +7,8 @@ Date: 2026-07-01
 - [x] Create repo knowledge system.
 - [x] Verify known project links.
 - [x] Add GitHub remote.
-- [ ] Make global contact assets public-ready.
+- [ ] Make remaining global contact assets public-ready.
+- [x] Publish primary SDE resume CTA from repo-local PDF.
 - [x] Build featured project evidence registry.
 - [x] Create featured project evidence pack.
 - [x] Create featured project diagram specs.

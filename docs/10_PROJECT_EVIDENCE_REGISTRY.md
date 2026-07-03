@@ -15,6 +15,16 @@ Purpose:
 - Needed: must be created.
 - Not applicable: not relevant for this project.
 
+## Global Public CTA Evidence
+
+| Item | Status | Notes |
+|---|---|---|
+| GitHub profile | Verified | Public profile link remains active. |
+| SDE resume | Verified | Primary public resume copied from `E:\Downloads\ATISHAY_Software_Intern.pdf` to `public/resume/atishay-jain-sde-resume.pdf` on 2026-07-03. CTA href is `/resume/atishay-jain-sde-resume.pdf`. |
+| Data Analyst resume | Not applicable | Not published in this pass and not exposed by public CTA. |
+| LinkedIn | Known | Remains inactive until manually verified public-ready. |
+| Email | Known | Remains inactive until preferred public email is confirmed. |
+
 ## Featured Projects
 
 ### Mahoraga

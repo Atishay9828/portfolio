@@ -11,9 +11,9 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, conservative design-system polish, polished screenshot QA recapture, featured case-study copy polish, role/contribution evidence framework, and owner-reviewed featured contribution wording are complete; evidence hardening continues before production launch.
+Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, conservative design-system polish, polished screenshot QA recapture, featured case-study copy polish, role/contribution evidence framework, owner-reviewed featured contribution wording, and SDE resume CTA publication are complete; evidence hardening continues before production launch.
 
-The current implementation is a conservative static content shell backed by the evidence docs. It has been visually tightened, but production launch remains blocked until portfolio-local assets, exact ownership details where needed, resume publication, full endpoint/fallback benchmark evidence, and workflow evidence are complete.
+The current implementation is a conservative static content shell backed by the evidence docs. It has been visually tightened, but production launch remains blocked until remaining portfolio-local assets, exact ownership details where needed, LinkedIn/email readiness, full endpoint/fallback benchmark evidence, and workflow evidence are complete.
 
 ## Run Locally
 
@@ -59,7 +59,8 @@ Created:
 - Evidence-safe pending visual panels for missing assets.
 - Tests for featured ordering, verified links, missing evidence states, resume gating, and route definitions.
 - Desktop and mobile screenshot QA under `docs/reviews/screenshots/`.
-- Public CTA gating for Known-but-not-public-ready LinkedIn, email, and resume assets.
+- Public CTA gating for Known-but-not-public-ready LinkedIn and email assets.
+- Published primary SDE resume CTA at `/resume/atishay-jain-sde-resume.pdf`.
 - Imported real candidate visuals under `public/assets/projects/...` from verified external repos.
 - Hardened featured case-study pages with documented architecture, evidence status, limitations, missing proof, and next-evidence sections.
 - Replaced Hybrid `predict.png` and `memory.png` with safe sample-data frontend UI captures.
@@ -73,7 +74,6 @@ Created:
 - Public case-study contribution sections for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop.
 
 Still blocked:
-- Public resume CTA until a final PDF exists under `public/resume/`.
 - LinkedIn and email CTAs until they are verified/confirmed public-ready.
 - Production visual polish until imported candidate visuals, missing screenshots/demos, and diagram render/mobile QA are complete.
 - Hybrid endpoint latency, Qwen fallback latency, cost, fallback-rate, and production claims until full endpoint/fallback benchmark evidence exists.

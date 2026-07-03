@@ -19,7 +19,7 @@ Link registry:
 
 | Area | Known | Verified | Missing | Needed | Public-ready? |
 |---|---:|---:|---:|---:|---|
-| Global contact assets | 3 | 1 | 0 | 3 | No |
+| Global contact assets | 2 | 2 | 0 | 2 | Partial |
 | Portfolio repository | 0 | 1 | 0 | 0 | Yes |
 | Mahoraga | 6 | 3 | 0 | 1 | No |
 | Hybrid Categorizer | 7 | 2 | 1 | 2 | No |
@@ -48,7 +48,8 @@ Link registry:
 
 | Asset | Status | Priority | Next action |
 |---|---|---|---|
-| Resume PDF | Known | Required | Choose final PDF and copy into repo/public asset path before linking. |
+| SDE resume PDF | Verified | Required | Published at `public/resume/atishay-jain-sde-resume.pdf`; CTA active at `/resume/atishay-jain-sde-resume.pdf`. |
+| Data Analyst resume PDF | Not applicable | Optional | Not published; do not expose unless AJ explicitly selects it later. |
 | GitHub profile URL | Verified | Required | Use `https://github.com/Atishay9828/` after implementation begins. |
 | LinkedIn URL | Known | Required | Manually verify `https://www.linkedin.com/in/atishay9828/` in browser before public CTA. |
 | Email address | Known | Required | Use `ajain8_be23@thapar.edu`; verify preferred public email before launch. |
@@ -109,8 +110,8 @@ Do not build public final project CTAs until each featured project has:
 
 ## Next Asset Tasks
 
-1. Choose final resume PDF and move it into `public/resume/`.
-2. Manually verify LinkedIn in browser and confirm public email preference.
+1. Manually verify LinkedIn in browser and confirm public email preference.
+2. Keep the Data Analyst resume unpublished unless AJ explicitly selects it later.
 3. Add remaining deployment links where marked Missing.
 4. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 5. Render and mobile-QA selected Mermaid diagrams before final visual use.

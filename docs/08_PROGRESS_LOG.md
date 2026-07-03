@@ -366,3 +366,17 @@ Status:
 - Mahoraga exact file/module ownership remains not mapped.
 - The Loop exact module ownership remains collaborative/not separated.
 - Hybrid endpoint latency, Qwen fallback latency, cost, fallback-rate, and accuracy remain blocked.
+
+### 2026-07-03 SDE Resume CTA Publication
+
+Completed:
+- Confirmed local `master` was clean and aligned with `origin/master` before changes.
+- Checked SDE resume metadata without editing the PDF: `E:\Downloads\ATISHAY_Software_Intern.pdf`, `.pdf`, 55,900 bytes, last modified `2026-07-01 21:40:57 +05:30`.
+- Copied the selected SDE resume to `public/resume/atishay-jain-sde-resume.pdf`.
+- Activated the public resume CTA at `/resume/atishay-jain-sde-resume.pdf` in shared link data, the hero, the contact section, and the header.
+- Kept GitHub active and kept LinkedIn/email inactive because they remain Known rather than Verified public-ready.
+- Did not publish the Data Analyst resume.
+
+Status:
+- Primary SDE resume CTA is public-ready.
+- Remaining public CTA blockers are LinkedIn manual verification and preferred public email confirmation.

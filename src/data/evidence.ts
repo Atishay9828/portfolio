@@ -12,7 +12,7 @@ export const evidenceSummary = [
   {
     label: "Asset boundary",
     value: "No fake media",
-    detail: "Missing screenshots, demos, metrics, and resume files are surfaced as pending evidence.",
+    detail: "Missing screenshots, demos, and metrics are surfaced as pending evidence; the SDE resume is repo-local and active.",
   },
   {
     label: "Current status",

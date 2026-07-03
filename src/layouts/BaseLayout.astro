@@ -4,6 +4,7 @@ import { links } from "../data/links";
 
 const { title = "AJ | AI Systems Engineer", description = "AJ's evidence-driven portfolio shell." } = Astro.props;
 const githubHref = links.github.href;
+const resumeHref = links.resume.href;
 ---
 
 <!doctype html>
@@ -24,7 +25,7 @@ const githubHref = links.github.href;
             <a href="/#lab-projects">Lab</a>
             <a href="/#systems-map">Systems</a>
             <a href="/#contact">Contact</a>
-            <span class="button disabled" aria-disabled="true" title="Repo-local public resume is pending">Resume pending</span>
+            {resumeHref && <a href={resumeHref}>{links.resume.label}</a>}
             {githubHref && <a href={githubHref}>GitHub</a>}
             <span class="button disabled" aria-disabled="true" title={links.linkedin.note}>LinkedIn pending</span>
           </div>

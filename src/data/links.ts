@@ -28,9 +28,10 @@ export const links: Record<string, LinkRecord> = {
     note: "Preferred public email still needs confirmation before launch.",
   },
   resume: {
-    label: "Resume",
-    status: "Known",
-    note: "Local resume candidates exist outside the repo; no public resume exists under public/resume yet.",
+    label: "SDE Resume",
+    href: "/resume/atishay-jain-sde-resume.pdf",
+    status: "Verified",
+    note: "Primary public SDE resume published under public/resume on 2026-07-03.",
   },
   portfolioRepo: {
     label: "Portfolio repository",

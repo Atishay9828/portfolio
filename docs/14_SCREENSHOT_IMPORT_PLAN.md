@@ -38,7 +38,7 @@ Do not mark assets Verified until the files exist in these paths or another docu
 | Webcam Motion Alert System | Streamlit app screenshot | `public/assets/projects/webcam-alert/` | Missing |
 | Webcam Motion Alert System | Motion detection state screenshot | `public/assets/projects/webcam-alert/` | Missing |
 | Webcam Motion Alert System | Redacted email alert screenshot | `public/assets/projects/webcam-alert/` | Missing |
-| Resume | Final public resume PDF | `public/resume/` | Known locally, not imported |
+| Resume | Primary SDE resume PDF | `public/resume/atishay-jain-sde-resume.pdf` | Verified |
 
 ## Manual Screenshots Needed
 
@@ -91,7 +91,7 @@ Do not mark assets Verified until the files exist in these paths or another docu
 
 | Asset | Why blocked | Unblock condition |
 |---|---|---|
-| Public resume PDF | Local candidates are outside repo and not selected for publication. | Choose final version, redact if needed, copy to `public/resume/`, and record status. |
+| Public resume PDF | Primary SDE resume is published at `public/resume/atishay-jain-sde-resume.pdf`; Data Analyst resume is not published. | Keep Data Analyst resume unpublished unless AJ explicitly selects it later. |
 | Hybrid deployment screenshot | No deployment link is documented. | Provide and verify hosted deployment, or mark deployment not applicable. |
 | Hybrid latency/cost chart | Local classifier/routing benchmark exists in `docs/20_HYBRID_BENCHMARK_RESULTS.md`, but cost, fallback-rate, endpoint latency, and Qwen fallback latency remain unmeasured. | Use the local benchmark only with its limitations visible; run full endpoint/fallback benchmark before stronger claims. |
 | Hybrid backend/model-output screenshot | The replacement screenshots were captured from the frontend with controlled synthetic sample responses, not the backend model path. A local classifier/routing benchmark now exists, but no end-to-end backend screenshot was captured. | Run the local backend/model path with the located ONNX asset or use a verified hosted/demo environment, then capture end-to-end inference if final proof requires it. |

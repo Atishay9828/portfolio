@@ -18,7 +18,7 @@ import { links } from "../../data/links";
       <div class="cta-row">
         <a class="button primary" href="#featured-projects">Featured work</a>
         {links.github.href && <a class="button secondary" href={links.github.href}>GitHub</a>}
-        <span class="button disabled" aria-disabled="true" title={links.resume.note}>Resume pending</span>
+        {links.resume.href && <a class="button secondary" href={links.resume.href}>{links.resume.label}</a>}
       </div>
     </div>
     <aside class="anchor-panel" aria-label="Featured project anchors">

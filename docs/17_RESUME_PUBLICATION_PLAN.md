@@ -1,64 +1,47 @@
 # 17_RESUME_PUBLICATION_PLAN.md
 
-Date: 2026-06-26
+Date: 2026-07-03
 
 Purpose:
 - Prevent local resume PDFs from being published accidentally.
-- Define the safe path for adding a public resume asset later.
+- Record the selected public resume asset and the remaining public CTA boundaries.
 
 ## Current Local Resume Candidates
 
 | Candidate | Current location | Exists locally? | Publication status |
 |---|---|---|---|
-| Software intern resume | `E:\Downloads\ATISHAY_Software_Intern.pdf` | Yes | Decision Needed |
-| Data analyst resume | `E:\Downloads\ATISHAY_Data_Analyst.pdf` | Yes | Decision Needed |
+| SDE / software intern resume | `E:\Downloads\ATISHAY_Software_Intern.pdf` | Yes | Published as primary public resume on 2026-07-03 |
+| Data analyst resume | `E:\Downloads\ATISHAY_Data_Analyst.pdf` | Not rechecked in this pass | Not published |
 
-These files are outside the portfolio repository. Their status remains Known, not Verified public portfolio evidence.
+## Published Public Resume
 
-## Recommended Public Filename
+Primary public resume:
+- Source: `E:\Downloads\ATISHAY_Software_Intern.pdf`
+- Destination: `public/resume/atishay-jain-sde-resume.pdf`
+- Public CTA href: `/resume/atishay-jain-sde-resume.pdf`
+- Publication date: 2026-07-03
+- Source metadata checked before copy: `.pdf` extension, 55,900 bytes, last modified `2026-07-01 21:40:57 +05:30`.
 
-Recommended filename:
-- `aj-atishay-jain-resume.pdf`
+The PDF content was not edited. The file was copied into the repo under a clean public filename.
 
-Reason:
-- Stable, readable, role-neutral enough for the portfolio.
-- Avoids exposing local naming or private application context.
+## Not Published
 
-## Recommended Repository Destination
+The Data Analyst resume was not copied into the repository and is not exposed by any public CTA.
 
-Recommended path:
-- `public/resume/aj-atishay-jain-resume.pdf`
+Do not add it later unless AJ explicitly selects it for a separate public use case and the same evidence/CTA guardrails are updated.
 
-Do not add a public resume link until the selected file exists at this path and is intended for publication.
+## Privacy Checklist Status
 
-## Privacy Checklist
+AJ explicitly approved the SDE resume as the primary public resume CTA for this pass.
 
-Before copying a resume into the repo:
-
-- Confirm the selected resume version is intended for public distribution.
-- Confirm phone number visibility is acceptable.
-- Confirm public email address is correct.
-- Remove address or private location details if unnecessary.
-- Remove private application, recruiter, or company-specific wording.
-- Check embedded PDF metadata if possible.
-- Confirm no hidden comments or tracked edits exist.
-- Confirm filename is generic and public-safe.
-
-## Recommended Version
-
-Decision Needed.
-
-The current docs identify two local candidates, but they do not document which one is the canonical public portfolio resume.
-
-First evidence import pass note, 2026-06-26:
-- Decision remains Needed.
-- No resume file was copied into `public/resume/`.
-- Resume CTA must remain disabled until AJ explicitly selects the public PDF and it is copied into the repository.
-
-Recommendation:
-- Use the Software Intern resume if the portfolio targets software engineering, AI/ML, and product engineering opportunities.
-- Do not publish either file until AJ explicitly selects the public version.
+Still not changed by this pass:
+- LinkedIn remains Known and inactive until manually verified public-ready.
+- Email remains Known and inactive until AJ confirms the preferred public email.
+- Resume content was not modified.
+- No fake certifications, links, metrics, or project claims were added.
 
 ## Status Rule
 
-Status remains Known until the selected PDF is copied into the repository and intentionally marked public-ready.
+The SDE resume is Verified as a repo-local public asset because it exists at `public/resume/atishay-jain-sde-resume.pdf` and was intentionally selected for publication.
+
+Other resume candidates remain non-public unless explicitly selected later.

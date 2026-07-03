@@ -22,6 +22,7 @@ import hybridMemory from "../public/assets/projects/hybrid-categorizer/memory.pn
 import hybridPredict from "../public/assets/projects/hybrid-categorizer/predict.png?url";
 import loopInterestSelection from "../public/assets/projects/the-loop/interest_selection.png?url";
 import loopLanding from "../public/assets/projects/the-loop/landing_page.jpg?url";
+import sdeResume from "../public/resume/atishay-jain-sde-resume.pdf?url";
 
 const importedProjectAssets = [
   mahoragaDashboard,
@@ -46,7 +47,6 @@ const publicHybridModelFiles = import.meta.glob("../public/assets/projects/hybri
   eager: true,
   query: "?url",
 });
-
 describe("portfolio scaffold data", () => {
   it("keeps the locked featured project order", () => {
     expect(featuredProjects.map((project) => project.slug)).toEqual([
@@ -80,9 +80,13 @@ describe("portfolio scaffold data", () => {
     expect(links.email.href).toBeUndefined();
   });
 
-  it("does not expose a resume CTA until a repo-local public resume exists", () => {
-    expect(links.resume.status).not.toBe("Verified");
-    expect(links.resume.href).toBeUndefined();
+  it("exposes only the repo-local SDE resume CTA when the public PDF exists", () => {
+    expect(links.resume.status).toBe("Verified");
+    expect(links.resume.href).toBe("/resume/atishay-jain-sde-resume.pdf");
+    expect(links.resume.label).toBe("SDE Resume");
+    expect(sdeResume).toContain("atishay-jain-sde-resume.pdf");
+    expect(JSON.stringify(links.resume).toLowerCase()).not.toContain("data_analyst");
+    expect(JSON.stringify(links.resume).toLowerCase()).not.toContain("data analyst");
   });
 
   it("defines static routes for the homepage and featured case-study shells", () => {

@@ -4,7 +4,7 @@ Date: 2026-07-01
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, and owner-reviewed featured contribution wording. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, owner-reviewed featured contribution wording, and a published primary SDE resume CTA. The strategy is strong and should not be redesigned.
 
 The repository now has a continuity system under `docs/00..23`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, role/contribution evidence framework, and owner-reviewed contribution wording.
 
@@ -12,7 +12,7 @@ Limited Astro static scaffolding has been completed for the homepage and three f
 
 First hardening pass status:
 - Project/link/evidence data remains centralized and routes are data-driven.
-- Known-but-not-public-ready personal CTAs are gated in the UI: LinkedIn, email, and resume are pending rather than active links.
+- Known-but-not-public-ready personal CTAs are gated in the UI: the SDE resume is active from a repo-local PDF, while LinkedIn and email remain pending rather than active links.
 - Desktop and mobile screenshot QA exists under `docs/reviews/screenshots/`.
 - `npm audit` reports 17 vulnerabilities; available fixes require major dependency upgrades, so no automatic fix was applied.
 
@@ -72,7 +72,7 @@ Imported asset visual/privacy review status:
 - Static case-study shells created for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop.
 - Evidence-safe pending visual panels are used instead of fake screenshots, fake dashboards, fake metrics, or invented links.
 - First implementation review and hardening pass completed on 2026-06-26.
-- Personal CTAs hardened so only Verified GitHub is active; LinkedIn, email, and resume remain pending.
+- Personal CTAs hardened so only Verified GitHub and the repo-local SDE resume are active; LinkedIn and email remain pending.
 - Mobile wrapping/responsiveness hardened without redesigning the layout.
 - Screenshot QA captured for the homepage and all three case-study routes at desktop and mobile widths.
 - Dependency audit run with `npm audit`; results recorded as 14 moderate, 2 high, and 1 critical vulnerabilities.
@@ -90,10 +90,10 @@ Imported asset visual/privacy review status:
 - Featured case-study copy polish completed on 2026-07-01 while preserving pending proof, local-only benchmark scope, blocked The Loop workflow screenshots, and missing role/contribution details.
 - Role/contribution evidence framework completed on 2026-07-03 in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`.
 - Owner-reviewed contribution wording added on 2026-07-03 for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop without inventing exact file/module ownership.
+- Primary SDE resume CTA published on 2026-07-03 from `E:\Downloads\ATISHAY_Software_Intern.pdf` to `public/resume/atishay-jain-sde-resume.pdf`; Data Analyst resume was not published.
 
 ## Missing Work
 
-- Choose final resume PDF and copy it into repo/public assets.
 - Manually verify LinkedIn in browser.
 - Confirm preferred public email.
 - Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
@@ -132,7 +132,7 @@ Imported asset visual/privacy review status:
 
 ## Next Recommended Task
 
-After the owner-reviewed contribution wording pass, replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, copy the final resume PDF into repo/public assets only after AJ selects it, manually verify LinkedIn, confirm the public email, and then do the final case-study proof/launch pass.
+After the SDE resume CTA publication pass, replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, manually verify LinkedIn, confirm the public email, and then do the final case-study proof/launch pass.
 
 ## Imported Candidate Assets
 
@@ -222,8 +222,7 @@ Status:
 
 ## Known But Not Public-Ready Links
 
-- Resume PDF candidates: `E:\Downloads\ATISHAY_Software_Intern.pdf` and `E:\Downloads\ATISHAY_Data_Analyst.pdf`; both exist locally but are outside the repo.
-- Resume publication decision remains Needed; no resume was copied into `public/resume/`.
+- Primary SDE resume: `public/resume/atishay-jain-sde-resume.pdf`; copied from `E:\Downloads\ATISHAY_Software_Intern.pdf` on 2026-07-03. The Data Analyst resume was not published.
 - LinkedIn: `https://www.linkedin.com/in/atishay9828/`; automated verification was blocked by LinkedIn HTTP 999.
 - Email: `ajain8_be23@thapar.edu`; provided but not externally verified.
 
@@ -249,5 +248,5 @@ Verification caveats:
 ## Exact Next Prompt Recommendation
 
 ```text
-Continue from the conservative Astro static scaffold. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Owner-reviewed contribution wording exists for featured projects, but do not invent exact Mahoraga file/module ownership or exact The Loop module ownership. Do not attempt The Loop screenshot capture until the deployment/server access issue is fixed. If using Hybrid History AI insights visually, open one safe sample transaction and capture the real AI Insight panel from `/transaction-insight`; do not invent insight text. Extend Hybrid benchmarking to the full endpoint/Qwen fallback path before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims, copy the selected public resume into `public/resume/`, manually verify LinkedIn, confirm the public email, and then harden the case-study pages.
+Continue from the conservative Astro static scaffold. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Owner-reviewed contribution wording exists for featured projects, but do not invent exact Mahoraga file/module ownership or exact The Loop module ownership. The primary SDE resume is already published at `public/resume/atishay-jain-sde-resume.pdf`; do not publish the Data Analyst resume unless AJ explicitly asks. Do not attempt The Loop screenshot capture until the deployment/server access issue is fixed. If using Hybrid History AI insights visually, open one safe sample transaction and capture the real AI Insight panel from `/transaction-insight`; do not invent insight text. Extend Hybrid benchmarking to the full endpoint/Qwen fallback path before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims, manually verify LinkedIn, confirm the public email, and then harden the case-study pages.
 ```
