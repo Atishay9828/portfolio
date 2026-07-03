@@ -11,7 +11,7 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, conservative design-system polish, polished screenshot QA recapture, and featured case-study copy polish are complete; evidence hardening continues before production launch.
+Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, conservative design-system polish, polished screenshot QA recapture, featured case-study copy polish, and role/contribution evidence framework are complete; evidence hardening continues before production launch.
 
 The current implementation is a conservative static content shell backed by the evidence docs. It has been visually tightened, but production launch remains blocked until portfolio-local assets, role/contribution details, resume publication, full endpoint/fallback benchmark evidence, and workflow evidence are complete.
 
@@ -69,6 +69,7 @@ Created:
 - Conservative Signal Lab-aligned design-system polish for the static shell without changing evidence states or activating blocked CTAs.
 - Fresh polished screenshot QA under `docs/reviews/screenshots/` with review notes in `docs/22_SCREENSHOT_QA_REVIEW.md`.
 - Featured case-study copy polish for Mahoraga, Hybrid, and The Loop while preserving evidence gaps, local-only benchmark scope, and pending role/contribution details.
+- Role/contribution evidence framework in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` with safe pending wording and AJ question sets for the three featured projects.
 
 Still blocked:
 - Public resume CTA until a final PDF exists under `public/resume/`.
@@ -78,7 +79,7 @@ Still blocked:
 - Hybrid backend/model-output claims until the model/backend path is captured or benchmarked end to end.
 - Hybrid History AI Insight visual proof until a safe sample transaction is opened and the real AI Insight panel is captured from `/transaction-insight`.
 - The Loop workflow screenshot polish until the deployment/server access issue is fixed by the teammate/friend with access.
-- Ownership/role claims until contribution details are documented.
+- Ownership/role claims until AJ answers the role/contribution question set and supporting evidence is documented.
 - Audit remediation until Astro/Vitest major dependency upgrades are planned and tested.
 
 ## Read First
@@ -106,7 +107,7 @@ Future agents should start here:
 - `SITE_BLUEPRINT.md`
 - `DESIGN_SYSTEM.md`
 - `ASSET_REQUIREMENTS.md`
-- `docs/00_READ_FIRST.md` through `docs/22_SCREENSHOT_QA_REVIEW.md`
+- `docs/00_READ_FIRST.md` through `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`
 
 ## Locked Decisions
 

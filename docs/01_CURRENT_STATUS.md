@@ -4,9 +4,9 @@ Date: 2026-07-01
 
 ## Current Phase
 
-Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, and featured case-study copy polished; evidence hardening continues before production launch.
+Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, featured case-study copy polished, and role/contribution evidence framework created; evidence hardening continues before production launch.
 
-The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, and conservative Astro scaffold exist.
+The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, role/contribution evidence framework, and conservative Astro scaffold exist.
 
 First implementation review status:
 - Architecture remains clean enough for the next milestone: project/link/evidence data is centralized, route definitions are data-driven, and homepage/case-study rendering is separated into section/project components.
@@ -21,7 +21,8 @@ First evidence import and case-study hardening status:
 - Mahoraga now frames the project around adaptive-agent environment design, curriculum pressure, and reward-loop constraints without robust-performance or win-rate claims.
 - Hybrid now explains merchant override vs local ONNX vs fallback routing more clearly, while cost, fallback-rate, endpoint latency, Qwen fallback latency, accuracy, and production SLA claims remain blocked.
 - The Loop now frames the product as a campus coordination workflow across discovery, RSVP/join, friends/chat/carpool, admin, and edge cases while preserving screenshot/deployment-access blockers.
-- Role/contribution copy remains `Role/contribution details pending verification.`
+- Role/contribution copy remains pending and now uses `Contribution details pending final owner review. Role split needs confirmation before public launch.`
+- `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` records current documented contribution evidence, unclear ownership areas, unsafe wording, and the questions AJ must answer for each featured project.
 
 Conservative design-system polish status:
 - Global spacing, section rhythm, dark surface layering, focus states, and responsive wrapping were tightened without adding GSAP, WebGL, scroll animations, purple/blue gradients, blobs, fake screenshots, fake metrics, or public pending CTAs.
@@ -70,6 +71,7 @@ Reason:
 | Featured project diagram review | Known | Spec-level review exists in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; final rendered/mobile QA is still required before production polish. |
 | Featured project screenshots/demos | Known/Needed/Missing | Hybrid prediction-flow and merchant-memory UI screenshots now exist as safe sample-data portfolio-local assets; The Loop workflow screenshots, Mahoraga demo media, and final screenshot/demo coverage are still required before final visual implementation. |
 | Role/contribution details | Needed | Required for ownership clarity. |
+| Role/contribution evidence framework | Known | `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` defines the question set and safe pending wording; it does not verify any detailed contribution claim. |
 | Hybrid benchmark/routing evidence | Known/Partial | Sample routing proof exists in `docs/19_HYBRID_ROUTING_PROOF.md`; local read-only ONNX classifier/routing benchmark results exist in `docs/20_HYBRID_BENCHMARK_RESULTS.md`. Full FastAPI endpoint latency, Qwen fallback latency, cost, fallback-rate, and production SLA claims remain Needed/blocked. |
 | The Loop workflow walkthrough | Known/Blocked | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshot capture is temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it. |
 | Astro static scaffold | Verified | Homepage and `/projects/mahoraga`, `/projects/hybrid-categorizer`, `/projects/the-loop` build successfully. Verified locally on 2026-06-26 with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`. |
@@ -115,7 +117,8 @@ Completion criteria:
 - Copy final resume PDF into repo/public assets and manually verify LinkedIn before public resume/contact CTAs.
 - Confirm preferred public email before enabling email CTA.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
-- Add featured project role/contribution details, remaining portfolio-local screenshots, and demos.
+- Answer the role/contribution question set in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`, then add only verified featured project role/contribution details.
+- Add remaining portfolio-local screenshots and demos.
 - Replace weak/mismatched imported assets, especially The Loop `landing_page.jpg`.
 - Keep Hybrid category/history transaction screenshots explicitly sample-labeled in site copy/data if used.
 - Capture or replace Hybrid History AI Insight screenshot only with a safe sample-data transaction opened and a real generated `/transaction-insight` response.

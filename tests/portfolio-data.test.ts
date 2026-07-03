@@ -4,6 +4,7 @@ import { links } from "../src/data/links";
 import hybridRoutingProof from "../docs/19_HYBRID_ROUTING_PROOF.md?raw";
 import hybridBenchmarkResults from "../docs/20_HYBRID_BENCHMARK_RESULTS.md?raw";
 import hybridHistoryInsightsEvidence from "../docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md?raw";
+import roleContributionEvidence from "../docs/23_ROLE_CONTRIBUTION_EVIDENCE.md?raw";
 
 import mahoragaDashboard from "../public/assets/projects/mahoraga/dashboard_preview.png?url";
 import mahoragaScreenshot from "../public/assets/projects/mahoraga/stitch_aero_screenshot.png?url";
@@ -32,6 +33,8 @@ const publicHybridModelFiles = import.meta.glob("../public/assets/projects/hybri
   eager: true,
   query: "?url",
 });
+const pendingContributionStatus =
+  "Contribution details pending final owner review. Role split needs confirmation before public launch.";
 
 describe("portfolio scaffold data", () => {
   it("keeps the locked featured project order", () => {
@@ -79,7 +82,7 @@ describe("portfolio scaffold data", () => {
   it("keeps missing proof explicit for every featured project", () => {
     for (const project of featuredProjects) {
       expect(project.missingProof.length).toBeGreaterThan(0);
-      expect(project.roleStatus).toBe("Role/contribution details pending verification.");
+      expect(project.roleStatus).toBe(pendingContributionStatus);
     }
   });
 
@@ -100,8 +103,33 @@ describe("portfolio scaffold data", () => {
       expect(project.caseStudy?.evidenceStatus.length).toBeGreaterThan(0);
       expect(project.caseStudy?.limitations.length).toBeGreaterThan(0);
       expect(project.caseStudy?.nextEvidenceNeeded.length).toBeGreaterThan(0);
-      expect(project.roleStatus).toBe("Role/contribution details pending verification.");
+      expect(project.roleStatus).toBe(pendingContributionStatus);
     }
+  });
+
+  it("keeps featured contribution claims pending until owner review", () => {
+    for (const project of featuredProjects) {
+      const projectText = JSON.stringify(project).toLowerCase();
+      const roleStatus = project.roleStatus.toLowerCase();
+
+      expect(roleStatus).toContain("pending final owner review");
+      expect(roleStatus).toContain("role split needs confirmation");
+      expect(projectText).not.toMatch(/\bi built\b/);
+      expect(projectText).not.toMatch(/\bmy role\b/);
+      expect(projectText).not.toMatch(/\bpersonally built\b/);
+      expect(projectText).not.toMatch(/\bi led\b/);
+      expect(projectText).not.toMatch(/\bi owned\b/);
+    }
+  });
+
+  it("documents role contribution questions without upgrading launch readiness", () => {
+    expect(roleContributionEvidence).toContain("Role/contribution details remain Needed");
+    expect(roleContributionEvidence).toContain("Contribution details pending final owner review.");
+    expect(roleContributionEvidence).toContain("Role split needs confirmation before public launch.");
+    expect(roleContributionEvidence).toContain("What did you personally build?");
+    expect(roleContributionEvidence).toContain("What did teammates build?");
+    expect(roleContributionEvidence).toContain("What should not be claimed publicly?");
+    expect(roleContributionEvidence).toContain("Blocked for role/contribution claims");
   });
 
   it("records Hybrid benchmark proof as a local benchmark, not a production claim", () => {

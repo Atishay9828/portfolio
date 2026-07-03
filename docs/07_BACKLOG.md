@@ -37,7 +37,8 @@ Date: 2026-07-01
 - [ ] Capture Hybrid History AI Insight panel with one safe sample transaction opened and a real `/transaction-insight` response before using AI insights as visual evidence.
 - [ ] Collect remaining portfolio-local screenshots/demos after blockers clear.
 - [ ] Capture The Loop workflow screenshots after the deployment/server access issue is fixed by teammate/friend.
-- [ ] Add role/contribution details per featured project.
+- [x] Create role/contribution evidence framework and AJ question set without inventing details.
+- [ ] Add verified role/contribution details per featured project after final owner review.
 - [x] Execute Hybrid local read-only ONNX classifier/routing benchmark using the located local ONNX runtime asset.
 - [ ] Benchmark Hybrid full FastAPI endpoint and Qwen fallback path before endpoint latency, fallback latency, cost, fallback-rate, or production claims.
 - [x] Locate Hybrid `models/distilbert.onnx` for local benchmark verification without copying it into the portfolio repo.

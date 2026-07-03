@@ -337,3 +337,17 @@ Completed:
 Status:
 - Featured case-study copy is sharper, but no evidence status was promoted.
 - Production launch remains blocked by public contact assets, role/contribution details, final diagram QA, remaining screenshots/demos, The Loop deployment/server screenshot access, Hybrid AI Insight screenshot proof, and full Hybrid endpoint/Qwen fallback benchmark evidence.
+
+### 2026-07-03 Role Contribution Evidence Framework
+
+Completed:
+- Confirmed local `master` was clean and aligned with `origin/master` before changes.
+- Created `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop.
+- Recorded current project summaries, documented contribution evidence, unclear contribution areas, AJ question sets, safe pending wording, unsafe wording to avoid, and launch readiness status.
+- Updated featured project data so visible contribution copy says final owner review and role-split confirmation are still required.
+- Added tests to keep featured project contribution claims pending and reject accidental `I built`, `my role`, `personally built`, `I led`, or `I owned` claims in featured project data.
+
+Status:
+- Role/contribution framework is complete.
+- No personal contribution, teammate role split, ownership, leadership, module ownership, or solved-issue claim was added.
+- Production launch remains blocked until AJ answers the project-by-project contribution questions with evidence.

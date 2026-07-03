@@ -75,7 +75,7 @@ export const featuredProjects: Project[] = [
     problem: "Explore whether adaptive behavior can be shaped through environment rules, reward incentives, and anti-exploit constraints instead of presenting another model wrapper.",
     keyDecision: "Make the environment loop the proof surface: mechanics, curriculum enemy behavior, reward components, Gym-style stepping, and optional Qwen/LoRA paths stay separated.",
     tradeoff: "The design is technically interesting, but reward hacking and narrow evaluation still block claims of robust adaptive intelligence.",
-    roleStatus: "Role/contribution details pending verification.",
+    roleStatus: "Contribution details pending final owner review. Role split needs confirmation before public launch.",
     stack: ["Python", "Gymnasium", "FastAPI", "Gradio", "Qwen 2.5", "LoRA"],
     links: [
       {
@@ -159,7 +159,7 @@ export const featuredProjects: Project[] = [
         "Final adaptive-behavior demo GIF/video that shows the loop responding to agent choices.",
         "Revised architecture diagram separating training, runtime/demo, and optional API/UI surfaces, followed by rendered/mobile diagram QA.",
         "Reviewed training/evaluation artifact selection.",
-        "Verified role/contribution details.",
+        "Verified role/contribution details from final owner review.",
       ],
     },
   },
@@ -173,7 +173,7 @@ export const featuredProjects: Project[] = [
     problem: "Categorize transactions without making the LLM the default path, while still handling low-confidence and ambiguous inputs honestly.",
     keyDecision: "Route in layers: merchant overrides for known entities, ONNX classification for confident local inference, semantic checks for obvious rules, and LLM fallback only when the local path is not enough.",
     tradeoff: "The architecture is cost-conscious, but the current proof is local-only; endpoint behavior, fallback latency, cost, fallback-rate, and accuracy remain unmeasured.",
-    roleStatus: "Role/contribution details pending verification.",
+    roleStatus: "Contribution details pending final owner review. Role split needs confirmation before public launch.",
     stack: ["FastAPI", "React", "Vite", "ONNX", "LLM fallback", "Client-side memory"],
     links: [
       {
@@ -317,7 +317,7 @@ export const featuredProjects: Project[] = [
         "Replacement History screenshot showing the real `AI Insight` panel with safe sample data and a real `/transaction-insight` response.",
         "Add a repo-owned Hybrid benchmark script if this benchmark should become repeatable outside Codex.",
         "End-to-end backend/model-output capture only if the final case study needs inference proof beyond frontend UI state.",
-        "Verified role/contribution details.",
+        "Verified role/contribution details from final owner review.",
       ],
     },
   },
@@ -331,7 +331,7 @@ export const featuredProjects: Project[] = [
     problem: "Make campus event participation less fragmented by connecting discovery, interest context, RSVP/join actions, social coordination, chat, and carpool planning in one product flow.",
     keyDecision: "Use persisted backend models, JWT auth, and WebSocket chat so the product has real coordination state rather than only a static event listing UI.",
     tradeoff: "The product flow is credible, but workflow screenshots, deployed behavior checks, role details, and realtime hardening evidence remain pending.",
-    roleStatus: "Role/contribution details pending verification.",
+    roleStatus: "Contribution details pending final owner review. Role split needs confirmation before public launch.",
     stack: ["React", "FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "WebSockets", "Render"],
     links: [
       {
@@ -428,7 +428,7 @@ export const featuredProjects: Project[] = [
         "Event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots after the deployment/server access issue is fixed by the teammate/friend with access.",
         "System diagram revision plus rendered/mobile QA.",
         "Manual deployed workflow verification before launch copy.",
-        "Verified role/contribution details.",
+        "Verified role/contribution details from final owner review.",
       ],
     },
   },

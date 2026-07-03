@@ -33,6 +33,7 @@ Evidence status:
 - Imported screenshot/metrics candidates: Known portfolio-local files under `public/assets/projects/mahoraga/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Local demo media: Needed.
 - Metrics: Known in external repo, not selected or reviewed for portfolio.
+- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; detailed contribution claims remain Needed until AJ answers the project questions with evidence.
 
 Required assets:
 - Architecture diagram.
@@ -57,9 +58,10 @@ Verification notes:
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md` and `docs/14_SCREENSHOT_IMPORT_PLAN.md`.
 - Imported asset review added `docs/18_IMPORTED_ASSET_REVIEW.md`; `dashboard_preview.png` is homepage-approved, `stitch_aero_screenshot.png` is case-study-only, and `training_metrics.png` remains Candidate only.
+- Role/contribution evidence framework added `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; ownership is still not explicitly documented and must not be invented.
 
 Can be shown publicly yet:
-- Partially. Verified links, conservative copy, and the reward-system diagram can support a first static homepage section, but full featured presentation remains blocked by architecture diagram revision, rendered/mobile diagram QA, demo media, selected screenshots/metrics, role details, and final tradeoff copy.
+- Partially. Verified links, conservative copy, and the reward-system diagram can support a first static homepage section, but full featured presentation remains blocked by architecture diagram revision, rendered/mobile diagram QA, demo media, selected screenshots/metrics, verified role details, and final tradeoff copy.
 
 ### Hybrid GenAI Transaction Categorizer
 
@@ -82,6 +84,7 @@ Evidence status:
 - Measured local classifier/routing table: Known in `docs/20_HYBRID_BENCHMARK_RESULTS.md` and `src/data/projects.ts`.
 - Full endpoint/Qwen fallback/cost benchmark: Needed.
 - Local ONNX runtime asset: Known at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`; not portfolio-local and not benchmark evidence by itself.
+- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; detailed contribution claims remain Needed until AJ answers the project questions with evidence.
 
 Required assets:
 - Repo link.
@@ -113,12 +116,13 @@ Verification notes:
 - A local Hybrid repo runtime asset was found at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` on 2026-06-28. File size: 267,956,781 bytes. It is inside the Hybrid repo, outside the portfolio repo, not Git-tracked, ignored by `.gitignore` via `**/models/`, and should remain uncommitted.
 - `docs/20_HYBRID_BENCHMARK_RESULTS.md` records a 2026-06-30 local read-only ONNX classifier/routing benchmark with 20 measured runs and 5 warmups per sample. Qwen fallback was not called; endpoint latency, fallback latency, cost, fallback-rate, and production SLA claims remain blocked.
 - `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md` records that the existing History screenshot shows transaction history, category confidence, and route tags, but no AI Insight panel or in-image sample-data label. The AI Insight panel is code-backed but still needs a safe opened-transaction capture before it is used as screenshot evidence.
+- `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` records the Hybrid contribution questions, safe pending wording, and unsafe ownership/performance wording to avoid.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/15_HYBRID_BENCHMARK_AND_ROUTING_PLAN.md`.
 - Imported asset review found the original `predict.png` was not prediction flow and the original `memory.png` was not merchant-memory proof; both were replaced on 2026-06-27. Remaining transaction-detail screenshots require sample/demo labeling before public use.
 
 Can be shown publicly yet:
-- Partially. Verified walkthrough, repo, conservative routing copy, sample-data UI screenshots, sample routing proof, local classifier/routing benchmark evidence, and source-backed History AI Insight behavior can support a first static section, but full featured presentation remains blocked by missing deployment status, endpoint/Qwen fallback/cost benchmark evidence, opened-transaction AI Insight screenshot proof, diagram revisions, role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
+- Partially. Verified walkthrough, repo, conservative routing copy, sample-data UI screenshots, sample routing proof, local classifier/routing benchmark evidence, and source-backed History AI Insight behavior can support a first static section, but full featured presentation remains blocked by missing deployment status, endpoint/Qwen fallback/cost benchmark evidence, opened-transaction AI Insight screenshot proof, diagram revisions, verified role detail, final tradeoff copy, and any end-to-end model-output capture needed for final inference proof.
 
 ### The Loop
 
@@ -135,6 +139,7 @@ Evidence status:
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, system diagram needs revision.
 - Imported product screenshot candidates: Known portfolio-local files under `public/assets/projects/the-loop/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots are temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it.
+- Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; detailed contribution claims remain Needed until AJ answers the project questions with evidence.
 
 Required assets:
 - Repo link.
@@ -162,9 +167,10 @@ Verification notes:
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`.
 - Imported asset review marks `landing_page.jpg` Replace before polish and `interest_selection.png` Approved for case study only.
 - Workflow screenshots are blocked for this milestone because the deployed server has an access/server issue and the teammate/friend with access will fix it later.
+- `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` records The Loop contribution questions, safe pending wording, and unsafe ownership/deployment/reliability wording to avoid.
 
 Can be shown publicly yet:
-- Partially. Verified deployment, repo, workflow walkthrough, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by workflow screenshots, system diagram revision, rendered/mobile diagram QA, role details, and final tradeoff copy. Screenshot capture is intentionally paused until the deployment/server access issue is fixed.
+- Partially. Verified deployment, repo, workflow walkthrough, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by workflow screenshots, system diagram revision, rendered/mobile diagram QA, verified role details, and final tradeoff copy. Screenshot capture is intentionally paused until the deployment/server access issue is fixed.
 
 ## Secondary Projects
 
