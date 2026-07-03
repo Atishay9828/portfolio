@@ -1,14 +1,15 @@
 # 07_BACKLOG.md
 
-Date: 2026-07-01
+Date: 2026-07-03
 
 ## P0
 
 - [x] Create repo knowledge system.
 - [x] Verify known project links.
 - [x] Add GitHub remote.
-- [ ] Make remaining global contact assets public-ready.
+- [x] Make remaining global contact CTAs public-ready.
 - [x] Publish primary SDE resume CTA from repo-local PDF.
+- [x] Activate owner-approved LinkedIn and email CTAs.
 - [x] Build featured project evidence registry.
 - [x] Create featured project evidence pack.
 - [x] Create featured project diagram specs.

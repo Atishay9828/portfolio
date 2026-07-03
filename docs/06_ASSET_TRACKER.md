@@ -1,6 +1,6 @@
 # 06_ASSET_TRACKER.md
 
-Date: 2026-06-30
+Date: 2026-07-03
 
 Purpose:
 - Track global and project-specific asset readiness.
@@ -19,7 +19,7 @@ Link registry:
 
 | Area | Known | Verified | Missing | Needed | Public-ready? |
 |---|---:|---:|---:|---:|---|
-| Global contact assets | 2 | 2 | 0 | 2 | Partial |
+| Global contact assets | 0 | 4 | 0 | 2 | Partial |
 | Portfolio repository | 0 | 1 | 0 | 0 | Yes |
 | Mahoraga | 6 | 3 | 0 | 1 | No |
 | Hybrid Categorizer | 7 | 2 | 1 | 2 | No |
@@ -51,8 +51,8 @@ Link registry:
 | SDE resume PDF | Verified | Required | Published at `public/resume/atishay-jain-sde-resume.pdf`; CTA active at `/resume/atishay-jain-sde-resume.pdf`. |
 | Data Analyst resume PDF | Not applicable | Optional | Not published; do not expose unless AJ explicitly selects it later. |
 | GitHub profile URL | Verified | Required | Use `https://github.com/Atishay9828/` after implementation begins. |
-| LinkedIn URL | Known | Required | Manually verify `https://www.linkedin.com/in/atishay9828/` in browser before public CTA. |
-| Email address | Known | Required | Use `ajain8_be23@thapar.edu`; verify preferred public email before launch. |
+| LinkedIn URL | Verified | Required | Owner-approved public CTA active at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |
+| Email address | Verified | Required | Owner-approved public CTA active at `mailto:ajain8_be23@thapar.edu`. |
 | Profile photo or identity mark | Needed | Recommended | Choose or create if useful. |
 | Open Graph image | Needed | Recommended | Create after visual direction is stable. |
 | Favicon/AJ monogram | Needed | Recommended | Create before deployment. |
@@ -110,12 +110,11 @@ Do not build public final project CTAs until each featured project has:
 
 ## Next Asset Tasks
 
-1. Manually verify LinkedIn in browser and confirm public email preference.
-2. Keep the Data Analyst resume unpublished unless AJ explicitly selects it later.
-3. Add remaining deployment links where marked Missing.
-4. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
-5. Render and mobile-QA selected Mermaid diagrams before final visual use.
-6. Finish remaining weak imported assets, keep Hybrid category/history visuals sample-labeled if used, and collect missing demos/workflow screenshots after blockers are cleared.
-7. Add role/contribution details and final tradeoff copy.
-8. Capture or replace the Hybrid History screenshot with one safe sample transaction opened and the real AI Insight panel visible before using History AI insights as portfolio screenshot evidence.
-9. Extend Hybrid benchmarking to the full endpoint and Qwen fallback before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims.
+1. Keep the Data Analyst resume unpublished unless AJ explicitly selects it later.
+2. Add remaining deployment links where marked Missing.
+3. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
+4. Render and mobile-QA selected Mermaid diagrams before final visual use.
+5. Finish remaining weak imported assets, keep Hybrid category/history visuals sample-labeled if used, and collect missing demos/workflow screenshots after blockers are cleared.
+6. Add role/contribution details and final tradeoff copy.
+7. Capture or replace the Hybrid History screenshot with one safe sample transaction opened and the real AI Insight panel visible before using History AI insights as portfolio screenshot evidence.
+8. Extend Hybrid benchmarking to the full endpoint and Qwen fallback before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims.

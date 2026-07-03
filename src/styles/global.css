@@ -563,6 +563,30 @@ h3 {
   color: var(--text-muted);
 }
 
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.footer-links a {
+  color: var(--accent-link);
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 .case-hero {
   padding: 84px 0 52px;
   border-bottom: 1px solid var(--border-subtle);

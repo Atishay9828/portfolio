@@ -24,14 +24,14 @@ import { links } from "../../data/links";
     <div>
       <div class="eyebrow">Contact</div>
       <h2>Inspect the work or reach out.</h2>
-      <p class="lead">GitHub and the SDE resume are verified. LinkedIn and email are rendered with Known status until they are verified public-ready.</p>
+      <p class="lead">GitHub, SDE resume, LinkedIn, and email are owner-approved public contact paths.</p>
     </div>
     <div class="case-panel">
       <div class="link-row">
         {links.github.href && <a class="button secondary" href={links.github.href}>GitHub</a>}
         {links.resume.href && <a class="button secondary" href={links.resume.href}>{links.resume.label}</a>}
-        <span class="button disabled" aria-disabled="true" title={links.linkedin.note}>LinkedIn pending</span>
-        <span class="button disabled" aria-disabled="true" title={links.email.note}>Email pending</span>
+        {links.linkedin.href && <a class="button secondary" href={links.linkedin.href}>LinkedIn</a>}
+        {links.email.href && <a class="button secondary" href={links.email.href}>Email</a>}
       </div>
     </div>
   </div>

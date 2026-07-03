@@ -71,13 +71,32 @@ describe("portfolio scaffold data", () => {
     }
   });
 
-  it("does not expose active personal CTAs until links are verified public-ready", () => {
+  it("exposes only owner-approved personal CTAs with exact public destinations", () => {
     expect(links.github.status).toBe("Verified");
     expect(links.github.href).toBe("https://github.com/Atishay9828/");
-    expect(links.linkedin.status).toBe("Known");
-    expect(links.linkedin.href).toBeUndefined();
-    expect(links.email.status).toBe("Known");
-    expect(links.email.href).toBeUndefined();
+    expect(links.linkedin.status).toBe("Verified");
+    expect(links.linkedin.href).toBe("https://www.linkedin.com/in/atishay9828/");
+    expect(links.email.status).toBe("Verified");
+    expect(links.email.href).toBe("mailto:ajain8_be23@thapar.edu");
+    expect(links.resume.status).toBe("Verified");
+    expect(links.resume.href).toBe("/resume/atishay-jain-sde-resume.pdf");
+  });
+
+  it("keeps active personal links well-formed and public-safe", () => {
+    for (const [key, link] of Object.entries(links)) {
+      if (!link.href) {
+        continue;
+      }
+
+      const allowedPersonalLink =
+        link.href.startsWith("https://") ||
+        link.href.startsWith("mailto:") ||
+        link.href.startsWith("/resume/");
+
+      expect(allowedPersonalLink, `${key} has malformed href ${link.href}`).toBe(true);
+      expect(link.href, `${key} should not contain whitespace`).not.toMatch(/\s/);
+      expect(link.status, `${key} active href must be Verified`).toBe("Verified");
+    }
   });
 
   it("exposes only the repo-local SDE resume CTA when the public PDF exists", () => {
@@ -85,8 +104,8 @@ describe("portfolio scaffold data", () => {
     expect(links.resume.href).toBe("/resume/atishay-jain-sde-resume.pdf");
     expect(links.resume.label).toBe("SDE Resume");
     expect(sdeResume).toContain("atishay-jain-sde-resume.pdf");
-    expect(JSON.stringify(links.resume).toLowerCase()).not.toContain("data_analyst");
-    expect(JSON.stringify(links.resume).toLowerCase()).not.toContain("data analyst");
+    expect(JSON.stringify(links).toLowerCase()).not.toContain("data_analyst");
+    expect(JSON.stringify(links).toLowerCase()).not.toContain("data analyst");
   });
 
   it("defines static routes for the homepage and featured case-study shells", () => {

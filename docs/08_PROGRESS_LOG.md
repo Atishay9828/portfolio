@@ -380,3 +380,16 @@ Completed:
 Status:
 - Primary SDE resume CTA is public-ready.
 - Remaining public CTA blockers are LinkedIn manual verification and preferred public email confirmation.
+
+### 2026-07-03 Public Contact CTA Activation
+
+Completed:
+- Activated owner-approved LinkedIn CTA at `https://www.linkedin.com/in/atishay9828/`.
+- Activated owner-approved email CTA at `mailto:ajain8_be23@thapar.edu`.
+- Kept GitHub active and kept the SDE resume active at `/resume/atishay-jain-sde-resume.pdf`.
+- Kept the Data Analyst resume unpublished and unexposed.
+- Updated header/navigation, contact section, and footer link surfaces without adding LinkedIn/email to the hero CTA row.
+
+Status:
+- Public contact CTAs are now active for GitHub, SDE resume, LinkedIn, and email.
+- Remaining launch blockers are project evidence, visual assets, workflow screenshots, Hybrid endpoint/Qwen fallback proof, dependency audit remediation, and final launch QA.

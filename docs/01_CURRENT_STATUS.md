@@ -1,16 +1,16 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-07-01
+Date: 2026-07-03
 
 ## Current Phase
 
-Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, featured case-study copy polished, role/contribution evidence framework created, owner-reviewed featured contribution wording added, and the primary SDE resume CTA published; evidence hardening continues before production launch.
+Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, featured case-study copy polished, role/contribution evidence framework created, owner-reviewed featured contribution wording added, the primary SDE resume CTA published, and owner-approved LinkedIn/email CTAs activated; evidence hardening continues before production launch.
 
 The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, role/contribution evidence framework, owner-reviewed contribution wording, and conservative Astro scaffold exist.
 
 First implementation review status:
 - Architecture remains clean enough for the next milestone: project/link/evidence data is centralized, route definitions are data-driven, and homepage/case-study rendering is separated into section/project components.
-- Known-but-not-public-ready personal CTAs are gated. GitHub remains active because it is Verified; the SDE resume is now active because the repo-local PDF exists; LinkedIn and email remain pending until verification/publication is complete.
+- Personal CTAs are now gated by verified/owner-approved destinations. GitHub remains active, the SDE resume is active from the repo-local PDF, LinkedIn is active at the owner-approved public profile, and email is active as the owner-approved `mailto:` contact.
 - Responsive CSS was hardened for mobile wrapping and viewport clipping without changing the site structure or adding motion.
 - Screenshot QA was captured under `docs/reviews/screenshots/` for desktop and mobile views.
 - `npm audit` currently reports 17 vulnerabilities: 14 moderate, 2 high, and 1 critical. Direct dependencies are affected (`@astrojs/check`, `@astrojs/mdx`, `astro`, `vitest`), but available fixes require major version changes, so no automatic fix was applied.
@@ -26,7 +26,7 @@ First evidence import and case-study hardening status:
 
 Conservative design-system polish status:
 - Global spacing, section rhythm, dark surface layering, focus states, and responsive wrapping were tightened without adding GSAP, WebGL, scroll animations, purple/blue gradients, blobs, fake screenshots, fake metrics, or public pending CTAs.
-- Hero identity copy was sharpened and proof anchors now link to the three case-study shells. The SDE resume CTA is active; LinkedIn and email remain pending.
+- Hero identity copy was sharpened and proof anchors now link to the three case-study shells. The SDE resume CTA is active; LinkedIn and email are active in the contact/navigation surfaces without overcrowding the hero.
 - Featured project modules now show status-aware evidence panels and small visual-candidate previews while keeping every asset labeled as Known rather than Verified proof.
 - Case-study pages now frame Hybrid benchmark evidence as a local classifier/routing benchmark only, not a production SLA or endpoint/fallback benchmark.
 - Timeline, secondary work, lab projects, and systems map remain visually smaller than featured work.
@@ -53,7 +53,7 @@ Production-ready UI polish: No.
 
 Reason:
 - Static scaffolding can use conservative copy, verified links, source-of-truth docs, and placeholder-free content structure.
-- Global contact assets are Known/Verified. The SDE resume is public-ready; LinkedIn/browser verification and preferred public email confirmation are still not complete.
+- Global contact CTAs are Verified or owner-approved and active: GitHub, SDE resume, LinkedIn, and email. Production polish remains blocked by project evidence and visual proof rather than public contact links.
 - Featured project evidence is documented enough for a first static shell, but portfolio-local screenshots/demos, role/contribution details, final rendered diagram QA, and deeper proof artifacts are not ready.
 
 ## Current Blockers
@@ -64,8 +64,8 @@ Reason:
 | GitHub repository health | Verified | `gh repo view` confirms `Atishay9828/portfolio`, default branch `master`, visibility `PUBLIC`; README exists on GitHub. |
 | Resume PDF | Verified | Primary SDE resume copied from `E:\Downloads\ATISHAY_Software_Intern.pdf` to `public/resume/atishay-jain-sde-resume.pdf` on 2026-07-03. Data Analyst resume was not published. |
 | GitHub profile URL | Verified | Global identity link available. |
-| LinkedIn URL | Known | Recruiter contact path available but still needs manual browser verification before public CTA. |
-| Email address | Known | Contact address available; confirm preferred public email before launch. |
+| LinkedIn URL | Verified | Owner-approved public CTA active at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |
+| Email address | Verified | Owner-approved public CTA active at `mailto:ajain8_be23@thapar.edu`. |
 | Known project links | Verified | Known project links were checked on 2026-06-26. |
 | Additional project repo links | Verified | Hybrid Categorizer, The Loop, AI Resume Tailoring Engine, and Webcam Motion Alert repos were verified on 2026-06-26. |
 | Featured project diagram review | Known | Spec-level review exists in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; final rendered/mobile QA is still required before production polish. |
@@ -101,6 +101,8 @@ Reason:
 - Webcam Motion Alert System repo: `https://github.com/Atishay9828/Webcam-Alert-App`
 - GitHub profile: `https://github.com/Atishay9828/`
 - Portfolio GitHub repository: `https://github.com/Atishay9828/portfolio`
+- LinkedIn profile: `https://www.linkedin.com/in/atishay9828/`
+- Email CTA: `mailto:ajain8_be23@thapar.edu`
 
 Verification notes:
 - Kaggle `/edit` URL loads via GET and canonicalizes to the notebook page; HEAD returned 404.
@@ -114,8 +116,7 @@ Verification notes:
 Evidence completion after conservative static polish and screenshot QA recapture.
 
 Completion criteria:
-- SDE resume is published; manually verify LinkedIn before enabling LinkedIn CTA.
-- Confirm preferred public email before enabling email CTA.
+- SDE resume, GitHub, LinkedIn, and email CTAs are active; keep the Data Analyst resume unpublished unless AJ explicitly selects it later.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
 - Map exact Mahoraga file/module ownership and The Loop module ownership only if supporting evidence or teammate confirmation is supplied.
 - Add remaining portfolio-local screenshots and demos.

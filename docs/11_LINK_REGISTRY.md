@@ -1,6 +1,6 @@
 # 11_LINK_REGISTRY.md
 
-Date: 2026-06-26
+Date: 2026-07-03
 
 Purpose:
 - Centralize all known, verified, missing, and TODO links.
@@ -28,8 +28,8 @@ Purpose:
 | SDE resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. Source was `E:\Downloads\ATISHAY_Software_Intern.pdf`; copied into `public/resume/` on 2026-07-03. |
 | Data Analyst resume PDF | Not public | Not applicable | Not published and not exposed by any CTA. |
 | GitHub profile | `https://github.com/Atishay9828/` | Verified | GitHub API confirms public user `Atishay9828`. Verified 2026-06-26. |
-| LinkedIn | `https://www.linkedin.com/in/atishay9828/` | Known | Provided; automated verification blocked by LinkedIn HTTP 999. |
-| Email | `ajain8_be23@thapar.edu` | Known | Provided; not externally verified. |
+| LinkedIn | `https://www.linkedin.com/in/atishay9828/` | Verified | Owner-approved public LinkedIn CTA activated on 2026-07-03. Earlier automated verification was blocked by LinkedIn HTTP 999, so this status is owner-approval based. |
+| Email | `mailto:ajain8_be23@thapar.edu` | Verified | Owner-approved public email CTA activated on 2026-07-03. |
 
 ## Featured Project Repos
 

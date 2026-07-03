@@ -17,15 +17,15 @@ export const links: Record<string, LinkRecord> = {
   },
   linkedin: {
     label: "LinkedIn",
-    referenceHref: "https://www.linkedin.com/in/atishay9828/",
-    status: "Known",
-    note: "Provided, but automated verification was blocked by LinkedIn HTTP 999.",
+    href: "https://www.linkedin.com/in/atishay9828/",
+    status: "Verified",
+    note: "Owner-approved public LinkedIn profile activated on 2026-07-03.",
   },
   email: {
     label: "Email",
-    referenceHref: "mailto:ajain8_be23@thapar.edu",
-    status: "Known",
-    note: "Preferred public email still needs confirmation before launch.",
+    href: "mailto:ajain8_be23@thapar.edu",
+    status: "Verified",
+    note: "Owner-approved public contact email activated on 2026-07-03.",
   },
   resume: {
     label: "SDE Resume",
