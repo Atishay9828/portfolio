@@ -1,6 +1,6 @@
 # 06_ASSET_TRACKER.md
 
-Date: 2026-07-03
+Date: 2026-07-04
 
 Purpose:
 - Track global and project-specific asset readiness.
@@ -112,9 +112,10 @@ Do not build public final project CTAs until each featured project has:
 
 1. Keep the Data Analyst resume unpublished unless AJ explicitly selects it later.
 2. Add remaining deployment links where marked Missing.
-3. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
-4. Render and mobile-QA selected Mermaid diagrams before final visual use.
-5. Finish remaining weak imported assets, keep Hybrid category/history visuals sample-labeled if used, and collect missing demos/workflow screenshots after blockers are cleared.
-6. Add role/contribution details and final tradeoff copy.
-7. Capture or replace the Hybrid History screenshot with one safe sample transaction opened and the real AI Insight panel visible before using History AI insights as portfolio screenshot evidence.
-8. Extend Hybrid benchmarking to the full endpoint and Qwen fallback before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims.
+3. Recapture current screenshot QA after the public CTA and contribution-section updates.
+4. Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
+5. Render and mobile-QA selected Mermaid diagrams before final visual use.
+6. Finish remaining weak imported assets, keep Hybrid category/history visuals sample-labeled if used, and collect missing demos/workflow screenshots after blockers are cleared.
+7. Add role/contribution details and final tradeoff copy.
+8. Capture or replace the Hybrid History screenshot with one safe sample transaction opened and the real AI Insight panel visible before using History AI insights as portfolio screenshot evidence.
+9. Extend Hybrid benchmarking to the full endpoint and Qwen fallback before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims.

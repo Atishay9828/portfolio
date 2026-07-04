@@ -1,6 +1,6 @@
 # 07_BACKLOG.md
 
-Date: 2026-07-03
+Date: 2026-07-04
 
 ## P0
 
@@ -20,6 +20,7 @@ Date: 2026-07-03
 - [x] Complete first implementation review and hardening pass.
 - [x] Gate Known-but-not-public-ready personal CTAs in the implementation.
 - [x] Capture desktop and mobile screenshot QA for current Astro shell.
+- [x] Run final proof/visual launch-readiness audit.
 
 ## P1
 
@@ -50,6 +51,7 @@ Date: 2026-07-03
 - [ ] Finalize featured project tradeoff/limitation copy after role/contribution details, remaining screenshots, diagram QA, and deeper proof artifacts are supplied.
 - [x] Complete conservative design-system polish for the static Astro shell without changing evidence states.
 - [x] Recapture updated screenshot QA after local Chrome/Edge headless GPU failure is resolved or worked around.
+- [ ] Recapture current screenshot QA after public CTA and contribution-section updates.
 - [ ] Plan Astro/Vitest major dependency upgrade path for audit remediation.
 
 ## P2

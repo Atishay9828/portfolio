@@ -1,6 +1,6 @@
 # ASSET_REQUIREMENTS.md
 
-Date: 2026-06-30
+Date: 2026-07-04
 
 Source documents:
 - `PROJECT_CONTEXT.md`
@@ -40,10 +40,10 @@ Purpose:
 
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
-| Resume PDF | Required | Known | Local files exist outside repo: `E:\Downloads\ATISHAY_Software_Intern.pdf` and `E:\Downloads\ATISHAY_Data_Analyst.pdf`. Not Verified for public use until copied into repo/public asset path. Checked 2026-06-26. |
+| SDE resume PDF | Required | Verified | Primary public resume is repo-local at `public/resume/atishay-jain-sde-resume.pdf`; source was `E:\Downloads\ATISHAY_Software_Intern.pdf`. Data Analyst resume remains unpublished and unexposed. |
 | GitHub profile URL | Required | Verified | `https://github.com/Atishay9828/`; GitHub API confirms user `Atishay9828`. Verified 2026-06-26. |
-| LinkedIn URL | Required | Known | `https://www.linkedin.com/in/atishay9828/`; provided but automated verification was blocked by LinkedIn HTTP 999. |
-| Email address | Required | Known | `ajain8_be23@thapar.edu`; provided but not externally verified. |
+| LinkedIn URL | Required | Verified | Owner-approved public CTA active at `https://www.linkedin.com/in/atishay9828/`; automated verification was previously blocked by LinkedIn HTTP 999. |
+| Email address | Required | Verified | Owner-approved public CTA active at `mailto:ajain8_be23@thapar.edu`. |
 | Profile photo or intentional identity mark | Recommended | Needed | Create or choose only if it improves trust and design. |
 | Open Graph image | Recommended | Needed | Needed before deployment/public sharing. |
 | Favicon or AJ monogram | Recommended | Needed | Needed for polish. |
@@ -142,7 +142,7 @@ Purpose:
 
 | Area | Required Items | Known | Verified | Missing/Needed | Completion |
 |---|---:|---:|---:|---:|---:|
-| Global identity/contact | 4 | 3 | 1 | 0 | 100% required Known/Verified; public-ready after repo-local resume and LinkedIn verification |
+| Global identity/contact | 4 | 0 | 4 | 0 | Required public CTAs are active: GitHub, SDE resume, LinkedIn, and email |
 | Mahoraga | 6 | 5 | 1 required, 3 links total | 1 | One homepage asset approved; demo media, metric interpretation, and role detail still Needed |
 | Hybrid Categorizer | 7 | 6 | 2 | 1 plus 1 missing deployment | Prediction-flow and merchant-memory screenshots replaced with safe demo-data UI proof; local classifier/routing benchmark added; History AI Insight panel screenshot remains Needed; deployment status, role details, Qwen fallback/cost measurement, endpoint benchmark, and any end-to-end model-output proof still Needed |
 | The Loop | 7 | 5 | 2 | 2 | Interest selection approved case-study-only; landing/workflow screenshots, role detail, and demo media still Needed |
@@ -153,7 +153,7 @@ Purpose:
 
 1. Known is not the same as Verified.
 2. Required assets block final implementation polish until they are Known or Verified.
-3. Public CTAs may use Known links only after a verification pass confirms they load and match the project.
+3. Public CTAs may use only Verified or owner-approved public destinations.
 4. Recommended assets improve credibility but should not block scaffolding.
 5. Optional assets are useful only if real and easy to verify.
 6. Do not include placeholder public links.

@@ -128,7 +128,7 @@ export const featuredProjects: Project[] = [
       kind: "evidence-panel",
       status: "Known",
       label: "Imported candidate visuals",
-      detail: "Repo-contained dashboard, screenshot, and training-metrics candidates are now portfolio-local, but still need final visual review before production polish.",
+      detail: "Repo-contained dashboard, screenshot, and training-metrics candidates are portfolio-local and reviewed, but still need final launch selection, diagram QA, and evidence labeling before production polish.",
       assets: [
         {
           src: "/assets/projects/mahoraga/dashboard_preview.png",
@@ -420,7 +420,7 @@ export const featuredProjects: Project[] = [
       kind: "evidence-panel",
       status: "Known",
       label: "Imported candidate screenshots",
-      detail: "Landing and interest-selection screenshots are portfolio-local candidates, but workflow screenshot capture is blocked by a deployment/server access issue until a teammate/friend with access fixes it.",
+      detail: "Landing and interest-selection screenshots are portfolio-local candidates. Interest selection is case-study usable, but the landing image needs replacement and workflow screenshot capture remains blocked by a deployment/server access issue.",
       assets: [
         {
           src: "/assets/projects/the-loop/landing_page.jpg",

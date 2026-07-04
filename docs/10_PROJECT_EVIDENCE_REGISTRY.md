@@ -1,6 +1,6 @@
 # 10_PROJECT_EVIDENCE_REGISTRY.md
 
-Date: 2026-06-30
+Date: 2026-07-04
 
 Purpose:
 - Track portfolio evidence by project.
@@ -24,6 +24,12 @@ Purpose:
 | Data Analyst resume | Not applicable | Not published in this pass and not exposed by public CTA. |
 | LinkedIn | Verified | Owner-approved public CTA activated on 2026-07-03 at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |
 | Email | Verified | Owner-approved public CTA activated on 2026-07-03 at `mailto:ajain8_be23@thapar.edu`. |
+
+## Launch Readiness
+
+| Item | Status | Notes |
+|---|---|---|
+| Final proof/visual launch-readiness audit | Verified | `docs/24_LAUNCH_READINESS_AUDIT.md` records a 72/100 score: conditionally ready for conservative soft launch, blocked for polished/final launch by visual/proof gaps. |
 
 ## Featured Projects
 

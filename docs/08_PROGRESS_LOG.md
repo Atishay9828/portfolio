@@ -393,3 +393,17 @@ Completed:
 Status:
 - Public contact CTAs are now active for GitHub, SDE resume, LinkedIn, and email.
 - Remaining launch blockers are project evidence, visual assets, workflow screenshots, Hybrid endpoint/Qwen fallback proof, dependency audit remediation, and final launch QA.
+
+### 2026-07-04 Launch Readiness Audit
+
+Completed:
+- Created `docs/24_LAUNCH_READINESS_AUDIT.md`.
+- Audited generated pages for `/`, `/projects/mahoraga/`, `/projects/hybrid-categorizer/`, and `/projects/the-loop/`.
+- Confirmed generated local page, image, stylesheet, and resume paths resolve inside `dist/`.
+- Classified launch readiness as 72/100: conditionally ready for conservative soft launch, blocked for polished/final launch.
+- Clarified that public CTAs are no longer launch blockers; visual/proof blockers remain.
+- Updated stale global contact status in `ASSET_REQUIREMENTS.md`.
+- Added a caveat that `docs/reviews/screenshots/*-polished.png` predate the latest CTA and contribution-section updates.
+
+Status:
+- The Loop visuals/workflow screenshots, Hybrid AI Insight screenshot, diagram QA, current screenshot recapture, deeper Hybrid endpoint/Qwen proof, and dependency audit remediation remain the key final-launch blockers.

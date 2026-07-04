@@ -1,12 +1,12 @@
 # 09_AI_HANDOFF.md
 
-Date: 2026-07-03
+Date: 2026-07-04
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, and owner-approved LinkedIn/email CTAs. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, and a final proof/visual launch-readiness audit. The strategy is strong and should not be redesigned.
 
-The repository now has a continuity system under `docs/00..23`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, role/contribution evidence framework, and owner-reviewed contribution wording.
+The repository now has a continuity system under `docs/00..24`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, role/contribution evidence framework, owner-reviewed contribution wording, and launch-readiness audit.
 
 Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
 
@@ -23,6 +23,7 @@ Conservative design-system polish status:
 - Hybrid benchmark presentation is visually framed as local classifier/routing evidence only, not production SLA, endpoint latency, fallback latency, cost, or fallback-rate proof.
 - Timeline, secondary work, lab projects, and systems map remain visually smaller than the featured trio.
 - Fresh polished screenshot QA was captured on 2026-07-01 with Microsoft Edge headless and GPU-safe flags. Review notes live in `docs/22_SCREENSHOT_QA_REVIEW.md`; updated PNGs live in `docs/reviews/screenshots/`.
+- `docs/24_LAUNCH_READINESS_AUDIT.md` is the current readiness split: 72/100, conditionally ready for conservative soft launch, blocked for polished/final launch by visual/proof gaps. Existing polished screenshot PNGs predate public CTA and contribution-section updates.
 
 Evidence import and case-study hardening status:
 - Real candidate visuals were imported from verified external repos into `public/assets/projects/...`.
@@ -93,6 +94,7 @@ Imported asset visual/privacy review status:
 - Primary SDE resume CTA published on 2026-07-03 from `E:\Downloads\ATISHAY_Software_Intern.pdf` to `public/resume/atishay-jain-sde-resume.pdf`; Data Analyst resume was not published.
 - Owner-approved public LinkedIn CTA activated on 2026-07-03 at `https://www.linkedin.com/in/atishay9828/`.
 - Owner-approved public email CTA activated on 2026-07-03 at `mailto:ajain8_be23@thapar.edu`.
+- Launch-readiness audit completed on 2026-07-04 in `docs/24_LAUNCH_READINESS_AUDIT.md`; public CTAs are no longer launch blockers.
 
 ## Missing Work
 
@@ -107,6 +109,7 @@ Imported asset visual/privacy review status:
 - Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback path if endpoint/fallback latency, cost, fallback-rate, or production claims are needed.
 - Add concrete design token values for typography, breakpoints, focus rings, and z-index.
 - Use the fresh polished screenshot QA in `docs/22_SCREENSHOT_QA_REVIEW.md` as the current visual QA baseline.
+- Recapture current screenshot QA because the 2026-07-01 polished screenshots predate the public CTA and contribution-section updates.
 - Plan and test major dependency upgrades needed to remediate current audit findings.
 
 ## Current Blockers
@@ -115,7 +118,7 @@ Imported asset visual/privacy review status:
 - Featured project evidence is improved but incomplete; diagram review, limitation notes, and owner-reviewed contribution wording are Known, while screenshots/demos, exact ownership details where needed, final rendered diagram QA, and deeper proof artifacts remain incomplete.
 - Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
 - Website scaffold exists, but it is a conservative static shell only.
-- Static shell design is cleaner and more Signal Lab-aligned, but production launch is still blocked.
+- Static shell design is cleaner and more Signal Lab-aligned. It is conditionally ready for a conservative soft launch, but polished/final launch is still blocked.
 - Current dependency audit has unresolved vulnerabilities because remediation requires major version changes.
 - Imported screenshots are not final polished proof; Hybrid has safe sample-data UI proof plus local classifier/routing benchmark evidence, but The Loop workflow screenshots are blocked by deployment/server access and Hybrid still needs endpoint/Qwen fallback/model-output evidence before stronger AI-system claims.
 - Hybrid History AI Insight panel is not yet screenshot-verified; the current History asset shows transaction rows and route tags only.
@@ -132,7 +135,7 @@ Imported asset visual/privacy review status:
 
 ## Next Recommended Task
 
-After the public contact CTA activation pass, replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, and then do the final case-study proof/launch pass.
+After the launch-readiness audit, recapture current screenshots for the post-CTA/post-contribution pages, replace remaining weak/mismatched imported assets, capture missing workflow/demo screenshots after blockers clear, capture the Hybrid History AI Insight panel with safe sample data if needed, extend Hybrid benchmarking to the full endpoint/Qwen fallback path if needed, optionally capture end-to-end Hybrid backend/model-output proof, and then do the final case-study proof/launch pass.
 
 ## Imported Candidate Assets
 
@@ -244,9 +247,10 @@ Verification caveats:
 10. `docs/11_LINK_REGISTRY.md`
 11. `docs/13_FEATURED_EVIDENCE_REVIEW.md`
 12. `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`
+13. `docs/24_LAUNCH_READINESS_AUDIT.md`
 
 ## Exact Next Prompt Recommendation
 
 ```text
-Continue from the conservative Astro static scaffold. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Owner-reviewed contribution wording exists for featured projects, but do not invent exact Mahoraga file/module ownership or exact The Loop module ownership. The primary SDE resume is already published at `public/resume/atishay-jain-sde-resume.pdf`; LinkedIn is active at `https://www.linkedin.com/in/atishay9828/`; email is active at `mailto:ajain8_be23@thapar.edu`; do not publish the Data Analyst resume unless AJ explicitly asks. Do not attempt The Loop screenshot capture until the deployment/server access issue is fixed. If using Hybrid History AI insights visually, open one safe sample transaction and capture the real AI Insight panel from `/transaction-insight`; do not invent insight text. Extend Hybrid benchmarking to the full endpoint/Qwen fallback path before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims, and then harden the case-study pages.
+Continue from the conservative Astro static scaffold and `docs/24_LAUNCH_READINESS_AUDIT.md`. The current score is 72/100: conditionally ready for conservative soft launch, blocked for polished/final launch by visual/proof gaps. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Owner-reviewed contribution wording exists for featured projects, but do not invent exact Mahoraga file/module ownership or exact The Loop module ownership. The primary SDE resume is already published at `public/resume/atishay-jain-sde-resume.pdf`; LinkedIn is active at `https://www.linkedin.com/in/atishay9828/`; email is active at `mailto:ajain8_be23@thapar.edu`; do not publish the Data Analyst resume unless AJ explicitly asks. Recapture current screenshots before claiming final visual QA, because existing polished screenshots predate the public CTA and contribution-section updates. Do not attempt The Loop screenshot capture until the deployment/server access issue is fixed. If using Hybrid History AI insights visually, open one safe sample transaction and capture the real AI Insight panel from `/transaction-insight`; do not invent insight text. Extend Hybrid benchmarking to the full endpoint/Qwen fallback path before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims, and then harden the case-study pages.
 ```

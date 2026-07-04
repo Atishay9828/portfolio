@@ -7,6 +7,9 @@ Purpose:
 - Replace the prior screenshot-recapture blocker with concrete updated PNG artifacts.
 - Keep visual evidence scoped to layout QA only; these screenshots do not verify missing demos, role/contribution details, production metrics, or public CTAs.
 
+Current-use caveat:
+- These PNGs remain useful as layout QA evidence, but they predate the 2026-07-03 SDE resume, LinkedIn/email CTA activation, and owner-reviewed contribution-section updates. Use `docs/24_LAUNCH_READINESS_AUDIT.md` plus current generated HTML/build output for current CTA status.
+
 ## Capture Result
 
 Automated capture succeeded on 2026-07-01.
@@ -46,12 +49,12 @@ Capture notes:
 
 Homepage desktop:
 - Signal Lab visual hierarchy, proof-first order, featured project modules, and compact supporting sections render without obvious overlap.
-- Resume, LinkedIn, and email/contact states remain pending where required.
+- Contact CTA state in these screenshots is stale; current generated pages render SDE resume, GitHub, LinkedIn, and email as active public contact paths.
 - Candidate visuals remain labeled as Known/candidate rather than Verified proof.
 
 Homepage mobile:
 - Content stacks correctly at 390 px width with no obvious horizontal clipping.
-- The page is long and dense, but the order remains readable and the disabled/pending CTA states remain visible.
+- The page is long and dense, but the order remains readable. Current CTA state must be checked against generated HTML because these screenshots predate public contact activation.
 
 Mahoraga desktop:
 - Candidate visuals render after lazy-loading is accounted for.
@@ -75,4 +78,4 @@ The Loop desktop:
 - Capture The Loop workflow screenshots only after the deployment/server access issue is fixed.
 - Capture Hybrid History AI Insight panel with safe sample/demo data and a real `/transaction-insight` response before using it as AI Insight visual proof.
 - Add role/contribution details before ownership claims are strengthened.
-- Keep production launch blocked until resume, LinkedIn/email readiness, final diagram QA, remaining demos/screenshots, and deeper benchmark evidence are complete.
+- Keep polished production launch blocked until final diagram QA, remaining demos/screenshots, The Loop workflow evidence, Hybrid AI Insight screenshot evidence, and deeper benchmark evidence are complete. Public contact CTA readiness is no longer the blocker.

@@ -1,10 +1,10 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-07-03
+Date: 2026-07-04
 
 ## Current Phase
 
-Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, featured case-study copy polished, role/contribution evidence framework created, owner-reviewed featured contribution wording added, the primary SDE resume CTA published, and owner-approved LinkedIn/email CTAs activated; evidence hardening continues before production launch.
+Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, featured case-study copy polished, role/contribution evidence framework created, owner-reviewed featured contribution wording added, the primary SDE resume CTA published, owner-approved LinkedIn/email CTAs activated, and final proof/visual launch-readiness audit completed; evidence hardening continues before production launch.
 
 The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, role/contribution evidence framework, owner-reviewed contribution wording, and conservative Astro scaffold exist.
 
@@ -30,7 +30,8 @@ Conservative design-system polish status:
 - Featured project modules now show status-aware evidence panels and small visual-candidate previews while keeping every asset labeled as Known rather than Verified proof.
 - Case-study pages now frame Hybrid benchmark evidence as a local classifier/routing benchmark only, not a production SLA or endpoint/fallback benchmark.
 - Timeline, secondary work, lab projects, and systems map remain visually smaller than featured work.
-- Fresh polished screenshot QA was captured on 2026-07-01 under `docs/reviews/screenshots/` after serving the rebuilt static output and using Microsoft Edge headless with GPU-safe flags. Review notes live in `docs/22_SCREENSHOT_QA_REVIEW.md`.
+- Fresh polished screenshot QA was captured on 2026-07-01 under `docs/reviews/screenshots/` after serving the rebuilt static output and using Microsoft Edge headless with GPU-safe flags. Review notes live in `docs/22_SCREENSHOT_QA_REVIEW.md`. Those screenshots remain useful as layout QA, but they predate the 2026-07-03 CTA and contribution-section updates.
+- Final proof/visual launch-readiness audit was added on 2026-07-04 in `docs/24_LAUNCH_READINESS_AUDIT.md`: score 72/100, conditionally ready for conservative soft launch, blocked for polished/final launch by visual/proof gaps rather than CTA readiness.
 
 Imported asset visual/privacy review status:
 - Review results are recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
@@ -87,6 +88,7 @@ Reason:
 | Featured case-study copy polish | Verified | Copy sharpened on 2026-07-01 while preserving Known/Needed states, local-only Hybrid benchmark framing, blocked The Loop screenshots, and pending role/contribution details. |
 | Conservative design-system polish | Verified | Static shell visual hierarchy, section rhythm, evidence panels, focus states, and responsive behavior were polished without changing evidence states or activating blocked CTAs. |
 | Fresh screenshot recapture | Verified | Captured on 2026-07-01 with Microsoft Edge headless and GPU-safe flags; review notes are in `docs/22_SCREENSHOT_QA_REVIEW.md`. |
+| Launch-readiness audit | Verified | `docs/24_LAUNCH_READINESS_AUDIT.md` records a 72/100 score: conditionally ready for conservative soft launch, blocked for polished/final launch by The Loop visuals/workflow screenshots, Hybrid AI Insight screenshot, diagram QA, current screenshot recapture, deeper Hybrid endpoint/Qwen proof, and dependency audit remediation. |
 
 ## Verified Evidence Links
 
@@ -113,10 +115,12 @@ Verification notes:
 
 ## Next Milestone
 
-Evidence completion after conservative static polish and screenshot QA recapture.
+Evidence completion after final proof/visual launch-readiness audit.
 
 Completion criteria:
 - SDE resume, GitHub, LinkedIn, and email CTAs are active; keep the Data Analyst resume unpublished unless AJ explicitly selects it later.
+- Use `docs/24_LAUNCH_READINESS_AUDIT.md` as the current blocker split: conservative soft launch is conditionally possible, polished/final launch remains blocked.
+- Recapture current screenshots after public CTA and contribution updates.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
 - Map exact Mahoraga file/module ownership and The Loop module ownership only if supporting evidence or teammate confirmation is supplied.
 - Add remaining portfolio-local screenshots and demos.
