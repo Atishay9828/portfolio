@@ -158,7 +158,7 @@ Collaborative scope:
 ### Still To Verify
 
 - Exact module ownership remains collaborative/not separated.
-- Workflow screenshots remain blocked by the deployment/server access issue.
+- Public-safe owner-provided workflow screenshots now exist for key visual states; raw profile/friends captures remain excluded, and exact module ownership is still collaborative/not separated.
 - Manual deployed workflow verification and system diagram revision remain pending.
 
 ### Unsafe Wording To Avoid

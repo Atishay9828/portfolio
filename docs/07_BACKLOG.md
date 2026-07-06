@@ -1,6 +1,6 @@
 # 07_BACKLOG.md
 
-Date: 2026-07-04
+Date: 2026-07-06
 
 ## P0
 
@@ -21,6 +21,7 @@ Date: 2026-07-04
 - [x] Gate Known-but-not-public-ready personal CTAs in the implementation.
 - [x] Capture desktop and mobile screenshot QA for current Astro shell.
 - [x] Run final proof/visual launch-readiness audit.
+- [x] Import verified The Loop live-deployment workflow visuals.
 
 ## P1
 
@@ -35,11 +36,12 @@ Date: 2026-07-04
 - [x] Replace Hybrid `predict.png` and `memory.png` with safe sample-data frontend UI captures.
 - [x] Add explicit sample/demo labeling for Hybrid visual proof in project data/docs.
 - [x] Add safe Hybrid sample routing proof without benchmark claims.
-- [ ] Replace weak/mismatched imported assets.
+- [x] Replace weak/mismatched The Loop landing/workflow visuals with owner-provided public-safe live-deployment screenshots.
 - [ ] Keep Hybrid category/history screenshots sample-labeled in final case-study presentation if used.
 - [ ] Capture Hybrid History AI Insight panel with one safe sample transaction opened and a real `/transaction-insight` response before using AI insights as visual evidence.
 - [ ] Collect remaining portfolio-local screenshots/demos after blockers clear.
-- [ ] Capture The Loop workflow screenshots after the deployment/server access issue is fixed by teammate/friend.
+- [x] Capture/import The Loop events-list, event-detail, map-view, landing/login, and redacted profile/friends screenshots from the live deployment.
+- [ ] Capture additional The Loop admin/chat/carpool proof only if those flows will be visually featured.
 - [x] Create role/contribution evidence framework and AJ question set without inventing details.
 - [x] Add owner-reviewed role/contribution wording per featured project after final owner review.
 - [ ] Map exact Mahoraga file/module ownership only if supporting evidence is supplied.

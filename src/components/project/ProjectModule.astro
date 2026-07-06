@@ -63,7 +63,7 @@ const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCa
         <div class="evidence-assets" aria-label={`${project.title} visual evidence candidates`}>
           {visualAssets.slice(0, 2).map((asset) => (
             <figure class="evidence-asset">
-              <img src={asset.src} alt={asset.label} loading="lazy" />
+              <img src={asset.src} alt={asset.alt ?? asset.label} loading="lazy" />
               <figcaption>
                 <strong>{asset.label}</strong>
                 <span>{asset.status}</span>

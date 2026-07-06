@@ -407,3 +407,19 @@ Completed:
 
 Status:
 - The Loop visuals/workflow screenshots, Hybrid AI Insight screenshot, diagram QA, current screenshot recapture, deeper Hybrid endpoint/Qwen proof, and dependency audit remediation remain the key final-launch blockers.
+
+### 2026-07-06 The Loop Visual Evidence Update
+
+Completed:
+- Imported owner-provided live-deployment screenshots from `https://the-loop-5m7u.onrender.com/` into `public/assets/projects/the-loop/`.
+- Chose `the-loop-events-list-live.png` as the primary public visual.
+- Added supporting public visuals for event detail, map view, landing/login, and redacted profile/friends views.
+- Redacted the profile contact area and friends sent-request username before publishing those screenshots under `public/assets`.
+- Updated The Loop project data, labels, alt text, evidence status, and tests without adding production-readiness, active-user, SLA, or exact module-ownership claims.
+- Kept the Data Analyst resume unpublished and left approved GitHub, SDE resume, LinkedIn, and email CTAs unchanged.
+
+Status:
+- The Loop visual blocker is materially improved and no longer depends on the earlier deployment/server access issue for public-safe workflow visuals.
+- Raw profile/friends captures remain excluded from public use.
+- Hybrid fallback timing remains anecdotal only: owner reported roughly 10 seconds on laptop hardware, but it is not repeatably benchmarked and is not used as public performance copy.
+- Polished/final launch still needs Hybrid AI Insight visual proof, diagram QA, current screenshot QA, deeper Hybrid endpoint/Qwen proof if performance claims are desired, dependency audit remediation, and final launch QA.

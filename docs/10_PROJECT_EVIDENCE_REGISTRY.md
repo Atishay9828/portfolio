@@ -29,7 +29,7 @@ Purpose:
 
 | Item | Status | Notes |
 |---|---|---|
-| Final proof/visual launch-readiness audit | Verified | `docs/24_LAUNCH_READINESS_AUDIT.md` records a 72/100 score: conditionally ready for conservative soft launch, blocked for polished/final launch by visual/proof gaps. |
+| Final proof/visual launch-readiness audit | Verified | `docs/24_LAUNCH_READINESS_AUDIT.md` records the pre-Loop-visual 72/100 score; `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md` estimates 82/100 after The Loop live visual import. Conservative soft launch is conditionally stronger; polished/final launch remains blocked by remaining proof gaps. |
 
 ## Featured Projects
 
@@ -153,8 +153,8 @@ Evidence status:
 - Repo link: Verified.
 - Diagram specs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, system diagram needs revision.
-- Imported product screenshot candidates: Known portfolio-local files under `public/assets/projects/the-loop/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
-- Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshots are temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it.
+- Imported product screenshots: Verified owner-provided live-deployment files under `public/assets/projects/the-loop/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md` and `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`.
+- Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; events-list, event-detail, map-view, landing/login, and redacted profile/friends screenshots now provide public-safe visual workflow evidence.
 - Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed collaborative contribution wording is available, while exact module ownership remains collaborative/not separated.
 
 Required assets:
@@ -168,8 +168,8 @@ Required assets:
 - Collaborative module ownership detail if later separated by evidence.
 
 Missing assets:
-- Replace low-resolution landing image and capture missing workflow screenshots after the deployment/server access issue is fixed.
-- User workflow walkthrough.
+- Manual deployed workflow verification before stronger reliability or production-readiness copy.
+- Admin/chat/carpool screenshots only if those flows will be visually featured.
 - Demo/walkthrough.
 - Collaborative module ownership detail if later separated by evidence.
 - Final tradeoff note.
@@ -178,15 +178,16 @@ Verification notes:
 - Render deployment loads with page title `The Loop`.
 - GitHub API confirms public repo `Atishay9828/TIET-LOOP`.
 - Created diagram/spec files: `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, and `docs/diagrams/the-loop-auth-flow.md`.
-- Repo contains screenshot candidates under `assets/`; these are Known but not portfolio-local.
+- Repo contains older screenshot candidates under `assets/`; these are superseded by the owner-provided live-deployment captures where available.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.
 - Evidence hardening pass added `docs/13_FEATURED_EVIDENCE_REVIEW.md`, `docs/14_SCREENSHOT_IMPORT_PLAN.md`, and `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`.
-- Imported asset review marks `landing_page.jpg` Replace before polish and `interest_selection.png` Approved for case study only.
-- Workflow screenshots are blocked for this milestone because the deployed server has an access/server issue and the teammate/friend with access will fix it later.
+- Imported asset review originally marked `landing_page.jpg` Replace before polish and `interest_selection.png` Approved for case study only. The 2026-07-06 update supersedes the weak landing asset with `the-loop-landing-live.png`.
+- Public-safe workflow screenshots are now imported: `the-loop-events-list-live.png`, `the-loop-events-list-alt-live.png`, `the-loop-event-detail-live.png`, `the-loop-map-view-live.png`, `the-loop-landing-live.png`, `the-loop-profile-live-redacted.png`, and `the-loop-friends-live-redacted.png`.
+- Raw profile/friends screenshots were not published because they exposed personal account or username details; only redacted copies are public assets.
 - `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` records The Loop contribution questions, safe pending wording, and unsafe ownership/deployment/reliability wording to avoid.
 
 Can be shown publicly yet:
-- Partially. Verified deployment, repo, workflow walkthrough, owner-reviewed collaborative contribution wording, and conservative product-flow copy can support a first static homepage section, but full featured presentation remains blocked by workflow screenshots, system diagram revision, rendered/mobile diagram QA, exact module ownership if later separated by evidence, and final tradeoff copy. Screenshot capture is intentionally paused until the deployment/server access issue is fixed.
+- Yes for a conservative visual-backed soft launch. Verified deployment, repo, owner-provided public-safe workflow screenshots, workflow walkthrough, owner-reviewed collaborative contribution wording, and conservative product-flow copy can support the public The Loop section. Polished/final presentation remains blocked by system diagram revision, rendered/mobile diagram QA, manual reliability verification, exact module ownership only if later separated by evidence, and final tradeoff copy.
 
 ## Secondary Projects
 

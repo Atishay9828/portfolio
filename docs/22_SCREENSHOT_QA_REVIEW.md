@@ -1,6 +1,6 @@
 # 22_SCREENSHOT_QA_REVIEW.md
 
-Date: 2026-07-01
+Date: 2026-07-06
 
 Purpose:
 - Record fresh screenshot QA for the polished Astro static shell.
@@ -8,7 +8,13 @@ Purpose:
 - Keep visual evidence scoped to layout QA only; these screenshots do not verify missing demos, role/contribution details, production metrics, or public CTAs.
 
 Current-use caveat:
-- These PNGs remain useful as layout QA evidence, but they predate the 2026-07-03 SDE resume, LinkedIn/email CTA activation, and owner-reviewed contribution-section updates. Use `docs/24_LAUNCH_READINESS_AUDIT.md` plus current generated HTML/build output for current CTA status.
+- These PNGs remain useful as layout QA evidence, but they predate the 2026-07-03 SDE resume, LinkedIn/email CTA activation, owner-reviewed contribution-section updates, and 2026-07-06 The Loop visual import. Use `docs/24_LAUNCH_READINESS_AUDIT.md`, `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`, and current generated HTML/build output for current CTA and visual status.
+
+2026-07-06 addendum:
+- Owner-provided The Loop live-deployment screenshots were imported after this screenshot QA capture.
+- Public-safe The Loop assets now include events list, alternate events list, event detail, map view, landing/login, redacted profile, and redacted friends screenshots under `public/assets/projects/the-loop/`.
+- The profile contact area and friends sent-request username were masked before public import.
+- Full-page portfolio screenshot QA still needs recapture because the current QA PNGs do not show the updated Loop visual grid.
 
 ## Capture Result
 
@@ -68,14 +74,13 @@ Hybrid desktop:
 
 The Loop desktop:
 - Layout renders without obvious overlap.
-- Existing evidence weakness remains visible: `landing_page.jpg` is low resolution and still needs replacement.
-- Workflow screenshot capture remains blocked by the external deployment/server access issue.
+- Existing QA PNG is stale for current Loop visuals: `landing_page.jpg` was later superseded by `the-loop-landing-live.png`, and owner-provided workflow screenshots were imported on 2026-07-06.
+- Recapture this page before final visual QA so the events-list, event-detail, map-view, landing/login, and redacted profile/friends assets are checked in the actual portfolio layout.
 
 ## Remaining Issues
 
 - Add a real favicon or intentionally document that it is out of scope.
-- Replace The Loop `landing_page.jpg` before production polish.
-- Capture The Loop workflow screenshots only after the deployment/server access issue is fixed.
+- Recapture The Loop case-study QA after the 2026-07-06 visual import.
 - Capture Hybrid History AI Insight panel with safe sample/demo data and a real `/transaction-insight` response before using it as AI Insight visual proof.
 - Add role/contribution details before ownership claims are strengthened.
 - Keep polished production launch blocked until final diagram QA, remaining demos/screenshots, The Loop workflow evidence, Hybrid AI Insight screenshot evidence, and deeper benchmark evidence are complete. Public contact CTA readiness is no longer the blocker.

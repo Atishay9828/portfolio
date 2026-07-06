@@ -1,12 +1,12 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-07-04
+Date: 2026-07-06
 
 ## Current Phase
 
-Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, featured case-study copy polished, role/contribution evidence framework created, owner-reviewed featured contribution wording added, the primary SDE resume CTA published, owner-approved LinkedIn/email CTAs activated, and final proof/visual launch-readiness audit completed; evidence hardening continues before production launch.
+Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, featured case-study copy polished, role/contribution evidence framework created, owner-reviewed featured contribution wording added, the primary SDE resume CTA published, owner-approved LinkedIn/email CTAs activated, final proof/visual launch-readiness audit completed, and verified The Loop live-deployment workflow visuals imported; evidence hardening continues before production launch.
 
-The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, resume publication plan, role/contribution evidence framework, owner-reviewed contribution wording, and conservative Astro scaffold exist.
+The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, The Loop visual evidence update, resume publication plan, role/contribution evidence framework, owner-reviewed contribution wording, and conservative Astro scaffold exist.
 
 First implementation review status:
 - Architecture remains clean enough for the next milestone: project/link/evidence data is centralized, route definitions are data-driven, and homepage/case-study rendering is separated into section/project components.
@@ -20,7 +20,7 @@ First evidence import and case-study hardening status:
 - Featured case-study pages now render sharper evidence-bound sections for problem/build, architecture, decisions, proof status, limitations/tradeoffs, missing proof, and next proof needed.
 - Mahoraga now frames the project around adaptive-agent environment design, curriculum pressure, and reward-loop constraints without robust-performance or win-rate claims.
 - Hybrid now explains merchant override vs local ONNX vs fallback routing more clearly, while cost, fallback-rate, endpoint latency, Qwen fallback latency, accuracy, and production SLA claims remain blocked.
-- The Loop now frames the product as a campus coordination workflow across discovery, RSVP/join, friends/chat/carpool, admin, and edge cases while preserving screenshot/deployment-access blockers.
+- The Loop now frames the product as a campus coordination workflow across discovery, RSVP/join, friends/chat/carpool, admin, and edge cases. Owner-provided live-deployment screenshots now support events-list, event-detail, map-view, landing/login, and redacted profile/friends visual states.
 - Role/contribution copy now uses owner-reviewed public wording for the featured projects while keeping exact module ownership and unsupported benchmark/performance claims blocked.
 - `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` records owner-reviewed role labels, public contribution summaries, collaborative scope, still-to-verify items, and unsafe wording to avoid.
 
@@ -31,7 +31,7 @@ Conservative design-system polish status:
 - Case-study pages now frame Hybrid benchmark evidence as a local classifier/routing benchmark only, not a production SLA or endpoint/fallback benchmark.
 - Timeline, secondary work, lab projects, and systems map remain visually smaller than featured work.
 - Fresh polished screenshot QA was captured on 2026-07-01 under `docs/reviews/screenshots/` after serving the rebuilt static output and using Microsoft Edge headless with GPU-safe flags. Review notes live in `docs/22_SCREENSHOT_QA_REVIEW.md`. Those screenshots remain useful as layout QA, but they predate the 2026-07-03 CTA and contribution-section updates.
-- Final proof/visual launch-readiness audit was added on 2026-07-04 in `docs/24_LAUNCH_READINESS_AUDIT.md`: score 72/100, conditionally ready for conservative soft launch, blocked for polished/final launch by visual/proof gaps rather than CTA readiness.
+- Final proof/visual launch-readiness audit was added on 2026-07-04 in `docs/24_LAUNCH_READINESS_AUDIT.md`; The Loop visual evidence was updated on 2026-07-06 in `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`. Current score estimate is 82/100: conditionally ready for conservative soft launch, still blocked for polished/final launch by remaining proof gaps rather than CTA readiness.
 
 Imported asset visual/privacy review status:
 - Review results are recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
@@ -42,8 +42,8 @@ Imported asset visual/privacy review status:
 - Hybrid `categories.png` and `history.png` remain case-study candidates only and must be explicitly labeled as sample/demo transaction data if used.
 - Hybrid History AI Insight behavior is documented in `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`: click one transaction in History to open a side panel that calls `POST /transaction-insight` and summarizes that transaction plus recent same-category history. The current `history.png` does not show this opened panel, so AI Insight screenshot proof remains Needed.
 - Hybrid safe routing proof was added on 2026-06-28 in `docs/19_HYBRID_ROUTING_PROOF.md`; local classifier/routing benchmark results were added on 2026-06-30 in `docs/20_HYBRID_BENCHMARK_RESULTS.md`.
-- The Loop `landing_page.jpg` must still be replaced before polish.
-- The Loop workflow screenshot capture is temporarily blocked by a deployment/server access issue; a teammate/friend with access will fix it later.
+- The Loop weak `landing_page.jpg` is superseded by `the-loop-landing-live.png`.
+- The Loop workflow screenshot blocker is resolved for public-safe events-list, event-detail, map-view, landing/login, and redacted profile/friends views. Raw profile/friends screenshots remain excluded from public use.
 - Hybrid replacement screenshots are frontend UI proof only; the local benchmark used `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` outside this repo. The model was not copied into this portfolio repo.
 
 ## Frontend Implementation Allowed?
@@ -70,11 +70,11 @@ Reason:
 | Known project links | Verified | Known project links were checked on 2026-06-26. |
 | Additional project repo links | Verified | Hybrid Categorizer, The Loop, AI Resume Tailoring Engine, and Webcam Motion Alert repos were verified on 2026-06-26. |
 | Featured project diagram review | Known | Spec-level review exists in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; final rendered/mobile QA is still required before production polish. |
-| Featured project screenshots/demos | Known/Needed/Missing | Hybrid prediction-flow and merchant-memory UI screenshots now exist as safe sample-data portfolio-local assets; The Loop workflow screenshots, Mahoraga demo media, and final screenshot/demo coverage are still required before final visual implementation. |
+| Featured project screenshots/demos | Known/Needed/Missing | Hybrid prediction-flow and merchant-memory UI screenshots now exist as safe sample-data portfolio-local assets; The Loop now has owner-provided public-safe live-deployment screenshots for events-list, event-detail, map-view, landing/login, and redacted profile/friends states. Mahoraga demo media and final screenshot/demo coverage are still required before final polished launch. |
 | Role/contribution details | Known/Partial | AJ supplied owner-reviewed role/contribution wording for featured projects; exact Mahoraga file/module ownership and The Loop module ownership remain not mapped/separated. |
 | Role/contribution evidence framework | Known | `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` defines safe owner-reviewed wording, collaborative scope, still-to-verify items, and unsafe wording to avoid. |
 | Hybrid benchmark/routing evidence | Known/Partial | Sample routing proof exists in `docs/19_HYBRID_ROUTING_PROOF.md`; local read-only ONNX classifier/routing benchmark results exist in `docs/20_HYBRID_BENCHMARK_RESULTS.md`. Full FastAPI endpoint latency, Qwen fallback latency, cost, fallback-rate, and production SLA claims remain Needed/blocked. |
-| The Loop workflow walkthrough | Known/Blocked | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; screenshot capture is temporarily blocked by a deployment/server access issue until the teammate/friend with access fixes it. |
+| The Loop workflow walkthrough | Known/Partial | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; owner-provided live-deployment screenshots now cover the public-safe visual states, but manual reliability verification, admin proof, and stronger social/realtime proof remain incomplete. |
 | Astro static scaffold | Verified | Homepage and `/projects/mahoraga`, `/projects/hybrid-categorizer`, `/projects/the-loop` build successfully. Verified locally on 2026-06-26 with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`. |
 | First implementation hardening pass | Verified | Evidence-gating, test coverage, responsive CSS hardening, screenshot QA, and dependency audit completed on 2026-06-26. |
 | Dependency audit | Known | `npm audit` reports 17 vulnerabilities; safe non-breaking fixes are not clearly available because fixes require major dependency changes. |
@@ -88,7 +88,7 @@ Reason:
 | Featured case-study copy polish | Verified | Copy sharpened on 2026-07-01 while preserving Known/Needed states, local-only Hybrid benchmark framing, blocked The Loop screenshots, and pending role/contribution details. |
 | Conservative design-system polish | Verified | Static shell visual hierarchy, section rhythm, evidence panels, focus states, and responsive behavior were polished without changing evidence states or activating blocked CTAs. |
 | Fresh screenshot recapture | Verified | Captured on 2026-07-01 with Microsoft Edge headless and GPU-safe flags; review notes are in `docs/22_SCREENSHOT_QA_REVIEW.md`. |
-| Launch-readiness audit | Verified | `docs/24_LAUNCH_READINESS_AUDIT.md` records a 72/100 score: conditionally ready for conservative soft launch, blocked for polished/final launch by The Loop visuals/workflow screenshots, Hybrid AI Insight screenshot, diagram QA, current screenshot recapture, deeper Hybrid endpoint/Qwen proof, and dependency audit remediation. |
+| Launch-readiness audit | Verified | `docs/24_LAUNCH_READINESS_AUDIT.md` recorded a 72/100 score before The Loop visual update. `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md` estimates 82/100 after importing reviewed live-deployment Loop screenshots; polished/final launch remains blocked by Hybrid AI Insight screenshot, diagram QA, current screenshot recapture, deeper Hybrid endpoint/Qwen proof, dependency audit remediation, and remaining demo/ownership proof. |
 
 ## Verified Evidence Links
 
@@ -119,15 +119,15 @@ Evidence completion after final proof/visual launch-readiness audit.
 
 Completion criteria:
 - SDE resume, GitHub, LinkedIn, and email CTAs are active; keep the Data Analyst resume unpublished unless AJ explicitly selects it later.
-- Use `docs/24_LAUNCH_READINESS_AUDIT.md` as the current blocker split: conservative soft launch is conditionally possible, polished/final launch remains blocked.
+- Use `docs/24_LAUNCH_READINESS_AUDIT.md` plus `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md` as the current blocker split: conservative soft launch is stronger after The Loop visual update, polished/final launch remains blocked.
 - Recapture current screenshots after public CTA and contribution updates.
 - Render and mobile-QA selected Mermaid diagrams before using them as final visuals.
 - Map exact Mahoraga file/module ownership and The Loop module ownership only if supporting evidence or teammate confirmation is supplied.
 - Add remaining portfolio-local screenshots and demos.
-- Replace weak/mismatched imported assets, especially The Loop `landing_page.jpg`.
+- Keep the new The Loop live-deployment screenshots as the preferred public visuals; the old low-resolution `landing_page.jpg` remains superseded.
 - Keep Hybrid category/history transaction screenshots explicitly sample-labeled in site copy/data if used.
 - Capture or replace Hybrid History AI Insight screenshot only with a safe sample-data transaction opened and a real generated `/transaction-insight` response.
 - Extend Hybrid benchmarking to the full FastAPI endpoint and Qwen fallback before publishing endpoint, fallback latency, cost, fallback-rate, or production claims.
-- Wait for the teammate/friend with access to fix The Loop deployment/server issue before attempting workflow screenshot capture.
+- Do not publish raw profile/friends Loop screenshots; use only the redacted public copies unless a cleaner recapture is supplied.
 - Plan dependency major-version upgrades separately from evidence/content hardening.
 - Update `docs/06_ASSET_TRACKER.md`, `docs/10_PROJECT_EVIDENCE_REGISTRY.md`, and `docs/11_LINK_REGISTRY.md`.

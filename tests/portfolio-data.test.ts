@@ -22,6 +22,13 @@ import hybridMemory from "../public/assets/projects/hybrid-categorizer/memory.pn
 import hybridPredict from "../public/assets/projects/hybrid-categorizer/predict.png?url";
 import loopInterestSelection from "../public/assets/projects/the-loop/interest_selection.png?url";
 import loopLanding from "../public/assets/projects/the-loop/landing_page.jpg?url";
+import loopEventDetailLive from "../public/assets/projects/the-loop/the-loop-event-detail-live.png?url";
+import loopEventsListAltLive from "../public/assets/projects/the-loop/the-loop-events-list-alt-live.png?url";
+import loopEventsListLive from "../public/assets/projects/the-loop/the-loop-events-list-live.png?url";
+import loopLandingLive from "../public/assets/projects/the-loop/the-loop-landing-live.png?url";
+import loopMapViewLive from "../public/assets/projects/the-loop/the-loop-map-view-live.png?url";
+import loopFriendsLiveRedacted from "../public/assets/projects/the-loop/the-loop-friends-live-redacted.png?url";
+import loopProfileLiveRedacted from "../public/assets/projects/the-loop/the-loop-profile-live-redacted.png?url";
 import sdeResume from "../public/resume/atishay-jain-sde-resume.pdf?url";
 
 const importedProjectAssets = [
@@ -34,6 +41,13 @@ const importedProjectAssets = [
   hybridPredict,
   loopInterestSelection,
   loopLanding,
+  loopEventDetailLive,
+  loopEventsListAltLive,
+  loopEventsListLive,
+  loopLandingLive,
+  loopMapViewLive,
+  loopFriendsLiveRedacted,
+  loopProfileLiveRedacted,
 ];
 
 const requireContribution = (project: Project | undefined): ProjectContribution => {
@@ -56,12 +70,17 @@ describe("portfolio scaffold data", () => {
     ]);
   });
 
-  it("marks missing media as pending instead of using fake screenshots", () => {
-    for (const project of featuredProjects) {
+  it("keeps unresolved media pending while allowing verified Loop workflow screenshots", () => {
+    for (const project of featuredProjects.filter((project) => project.slug !== "the-loop")) {
       expect(project.visual.status).not.toBe("Verified");
       expect(project.visual.kind).not.toBe("screenshot");
       expect(project.visual.detail.toLowerCase()).toContain("candidate");
     }
+
+    const loop = getProjectBySlug("the-loop");
+    expect(loop?.visual.status).toBe("Verified");
+    expect(loop?.visual.detail.toLowerCase()).toContain("owner-provided");
+    expect(loop?.visual.detail.toLowerCase()).toContain("redacting profile/friends");
   });
 
   it("renders only verified public project links as enabled CTAs", () => {
@@ -125,9 +144,39 @@ describe("portfolio scaffold data", () => {
       for (const asset of project.visual.assets ?? []) {
         expect(asset.src.startsWith("/assets/projects/")).toBe(true);
         expect(importedProjectAssets.some((importedAsset) => importedAsset.includes(asset.src))).toBe(true);
+        if (project.slug === "the-loop") {
+          expect(asset.status).toBe("Verified");
+          expect(asset.source).toContain("Owner-provided clean live-deployment screenshot");
+          continue;
+        }
+
         expect(asset.status).not.toBe("Verified");
       }
     }
+  });
+
+  it("uses approved alt text for public The Loop workflow screenshots", () => {
+    const loopAssets = getProjectBySlug("the-loop")?.visual.assets ?? [];
+
+    expect(loopAssets.map((asset) => asset.alt)).toEqual([
+      "The Loop events list showing dated campus events and category tags",
+      "The Loop event detail page showing event actions and location map",
+      "The Loop map view showing event pins near Thapar Institute",
+      "The Loop landing/login screen",
+      "The Loop profile page with personal contact details redacted",
+      "The Loop friends page with sent-request username redacted",
+    ]);
+  });
+
+  it("exposes only redacted Loop profile and friends screenshots", () => {
+    const loopAssetText = JSON.stringify(getProjectBySlug("the-loop")?.visual.assets ?? []).toLowerCase();
+
+    expect(loopAssetText).toContain("profile-live-redacted");
+    expect(loopAssetText).toContain("friends-live-redacted");
+    expect(loopAssetText).not.toContain("private-review");
+    expect(loopAssetText).not.toContain("gmail.com");
+    expect(loopAssetText).not.toContain("negimridul2005");
+    expect(loopAssetText).not.toContain("adishfab");
   });
 
   it("has hardened case-study content for every featured project", () => {
@@ -285,7 +334,7 @@ describe("portfolio scaffold data", () => {
     expect(doc).toContain("AI Insight screenshot proof remains Needed");
   });
 
-  it("documents The Loop workflow without screenshots or private data", () => {
+  it("documents The Loop workflow with verified public screenshots and without private data", () => {
     const loop = getProjectBySlug("the-loop");
     expect(loop?.caseStudy?.workflow?.map((step) => step.label)).toEqual([
       "Discovery",
@@ -295,7 +344,10 @@ describe("portfolio scaffold data", () => {
       "Admin / event management",
       "Edge cases / pending evidence",
     ]);
-    expect(loop?.visual.detail.toLowerCase()).toContain("deployment/server access issue");
-    expect(loop?.missingProof).toContain("workflow screenshots blocked by deployment/server access issue");
+    expect(loop?.visual.detail.toLowerCase()).toContain("live-deployment workflow screenshots");
+    expect(loop?.missingProof).toContain(
+      "unredacted private profile/friends screenshots intentionally excluded from public use",
+    );
+    expect(JSON.stringify(loop).toLowerCase()).not.toContain("gmail.com");
   });
 });

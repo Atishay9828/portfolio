@@ -17,6 +17,7 @@ export type VisualEvidence = {
 export type VisualAsset = {
   src: string;
   label: string;
+  alt?: string;
   status: EvidenceStatus;
   note: string;
   source: string;
@@ -378,7 +379,7 @@ export const featuredProjects: Project[] = [
     subtitle: "Campus event coordination platform connecting discovery, RSVP, friends, chat, and carpool workflows.",
     tier: "Featured",
     portfolioRole: "Main Product Engineer proof and AI-only balance.",
-    statusLabel: "Verified deployment/repo, screenshots pending",
+    statusLabel: "Verified deployment/repo, live workflow visuals added",
     problem: "Make campus event participation less fragmented by connecting discovery, interest context, RSVP/join actions, social coordination, chat, and carpool planning in one product flow.",
     keyDecision: "Use persisted backend models, JWT auth, and WebSocket chat so the product has real coordination state rather than only a static event listing UI.",
     tradeoff: "The product flow is credible, but workflow screenshots, deployed behavior checks, exact module ownership, and realtime hardening evidence remain pending.",
@@ -399,7 +400,8 @@ export const featuredProjects: Project[] = [
       ],
       stillToVerify: [
         "Exact module ownership remains collaborative/not separated.",
-        "Workflow screenshots remain blocked by the deployment/server access issue.",
+        "Event-list, event-detail, map-view, landing/auth, and redacted profile/friends visuals are now owner-provided live-deployment screenshots.",
+        "Raw profile/friends screenshots remain excluded from public use; only redacted copies may be shown.",
         "Manual deployed workflow verification and system diagram revision remain pending.",
       ],
     },
@@ -418,29 +420,69 @@ export const featuredProjects: Project[] = [
     ],
     visual: {
       kind: "evidence-panel",
-      status: "Known",
-      label: "Imported candidate screenshots",
-      detail: "Landing and interest-selection screenshots are portfolio-local candidates. Interest selection is case-study usable, but the landing image needs replacement and workflow screenshot capture remains blocked by a deployment/server access issue.",
+      status: "Verified",
+      label: "Owner-captured deployment screenshots",
+      detail:
+        "Owner-provided live-deployment workflow screenshots are portfolio-local, privacy-reviewed, and public-safe after redacting profile/friends identifiers. The events list is the primary visual; event detail, map view, landing/login, and redacted profile/friends screens support prototype workflow evidence.",
       assets: [
         {
-          src: "/assets/projects/the-loop/landing_page.jpg",
-          label: "Landing screenshot candidate",
-          status: "Known",
-          note: "Reviewed 2026-06-27; replace before polish because the 320px-wide file is too low-resolution for homepage or case-study use.",
-          source: "Atishay9828/TIET-LOOP:assets/landing_page.jpg",
+          src: "/assets/projects/the-loop/the-loop-events-list-live.png",
+          label: "Live deployment workflow screenshot",
+          alt: "The Loop events list showing dated campus events and category tags",
+          status: "Verified",
+          note:
+            "Owner-captured deployment screenshot reviewed 2026-07-06. Primary public visual showing the dated event timeline and category tags; prototype workflow evidence, not production-readiness proof.",
+          source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/events.",
         },
         {
-          src: "/assets/projects/the-loop/interest_selection.png",
-          label: "Interest selection screenshot candidate",
-          status: "Known",
-          note: "Reviewed 2026-06-27; approved for case-study-only workflow support, not homepage proof.",
-          source: "Atishay9828/TIET-LOOP:assets/interest_selection.png",
+          src: "/assets/projects/the-loop/the-loop-event-detail-live.png",
+          label: "Event detail deployment screenshot",
+          alt: "The Loop event detail page showing event actions and location map",
+          status: "Verified",
+          note:
+            "Owner-captured deployment screenshot reviewed 2026-07-06. Supports event detail, location, and action-flow evidence; does not prove reliability, usage, or production SLA.",
+          source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/events.",
+        },
+        {
+          src: "/assets/projects/the-loop/the-loop-map-view-live.png",
+          label: "Map view deployment screenshot",
+          alt: "The Loop map view showing event pins near Thapar Institute",
+          status: "Verified",
+          note:
+            "Owner-captured deployment screenshot reviewed 2026-07-06. Supports map-view event discovery evidence; map labels are public map-provider labels.",
+          source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/events.",
+        },
+        {
+          src: "/assets/projects/the-loop/the-loop-landing-live.png",
+          label: "Landing/login deployment screenshot",
+          alt: "The Loop landing/login screen",
+          status: "Verified",
+          note:
+            "Owner-captured deployment screenshot reviewed 2026-07-06. Optional support visual with placeholder login text only; not used as the primary workflow proof.",
+          source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/.",
+        },
+        {
+          src: "/assets/projects/the-loop/the-loop-profile-live-redacted.png",
+          label: "Redacted profile deployment screenshot",
+          alt: "The Loop profile page with personal contact details redacted",
+          status: "Verified",
+          note:
+            "Owner-captured deployment screenshot reviewed and redacted 2026-07-06. Personal contact details are masked; supporting profile-flow evidence only.",
+          source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/profile, redacted before import.",
+        },
+        {
+          src: "/assets/projects/the-loop/the-loop-friends-live-redacted.png",
+          label: "Redacted friends deployment screenshot",
+          alt: "The Loop friends page with sent-request username redacted",
+          status: "Verified",
+          note:
+            "Owner-captured deployment screenshot reviewed and redacted 2026-07-06. The sent-request username is masked; supporting social-flow evidence only.",
+          source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/profile, redacted before import.",
         },
       ],
     },
     missingProof: [
-      "portfolio-local product screenshots",
-      "workflow screenshots blocked by deployment/server access issue",
+      "unredacted private profile/friends screenshots intentionally excluded from public use",
       "system diagram revision",
       "demo/walkthrough media",
       "exact module ownership still collaborative/not separated",
@@ -458,9 +500,10 @@ export const featuredProjects: Project[] = [
       ],
       evidenceStatus: [
         "Deployment and GitHub repo are Verified.",
-        "Workflow walkthrough is Known from docs, but screenshots are temporarily blocked by a deployment/server access issue.",
+        "Owner-provided live-deployment screenshots now verify the public-safe events list, event detail, map view, landing/login, and redacted profile/friends visual states.",
+        "Raw profile/friends screenshots were reviewed but excluded from public assets because they expose personal account or username details.",
         "Realtime and auth diagrams are approved at spec level; system diagram needs revision.",
-        "Imported landing and interest screenshots are Known candidates, not final polished assets.",
+        "Live workflow screenshots support prototype workflow evidence, not production reliability, active-user, or SLA claims.",
       ],
       workflow: [
         {
@@ -492,13 +535,14 @@ export const featuredProjects: Project[] = [
         "WebSocket delivery depends on valid JWT state and active connections.",
         "Offline delivery and reconnect/session behavior are not proven as hardened production features.",
         "Matching is a product workflow, not proven recommendation-system research.",
-        "Workflow screenshots are blocked by the deployment/server access issue, so no active deployment proof should be inferred from visuals.",
+        "Workflow screenshots prove visible deployment UI states only; they do not prove hardened production behavior, scale, or active-user usage.",
         "Render/free-tier constraints may affect perceived reliability.",
       ],
       nextEvidenceNeeded: [
-        "Event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots after the deployment/server access issue is fixed by the teammate/friend with access.",
+        "Unredacted profile/friends screenshots stay out of public assets; recapture or redact again only if stronger social-flow proof is needed.",
+        "Safe admin screenshots only if admin/event management is visually featured.",
         "System diagram revision plus rendered/mobile QA.",
-        "Manual deployed workflow verification before launch copy.",
+        "Manual deployed workflow verification before stronger reliability or production-readiness copy.",
         "Module ownership detail only if teammate-confirmed and still framed as collaborative.",
       ],
     },

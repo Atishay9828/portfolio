@@ -1,6 +1,6 @@
 # ASSET_REQUIREMENTS.md
 
-Date: 2026-07-04
+Date: 2026-07-06
 
 Source documents:
 - `PROJECT_CONTEXT.md`
@@ -16,6 +16,7 @@ Source documents:
 - `docs/19_HYBRID_ROUTING_PROOF.md`
 - `docs/20_HYBRID_BENCHMARK_RESULTS.md`
 - `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`
+- `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`
 
 Purpose:
 - Track every asset required to make the portfolio credible.
@@ -84,11 +85,11 @@ Purpose:
 |---|---|---|---|
 | Deployment link | Required | Verified | `https://the-loop-5m7u.onrender.com/`; loads Render deployment with page title `The Loop`. Verified 2026-06-26. |
 | Repo link | Required | Verified | `https://github.com/Atishay9828/TIET-LOOP`; GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. |
-| Product screenshots | Required | Known | Visual review marks `landing_page.jpg` Replace before polish and approves `interest_selection.png` for case-study-only workflow support. Workflow screenshots are temporarily blocked by a deployment/server access issue; a teammate/friend with access will fix it later. |
+| Product screenshots | Required | Verified/Known | Owner-provided live-deployment screenshots were imported on 2026-07-06 for events list, alternate events list, event detail, map view, landing/login, and redacted profile/friends states. `landing_page.jpg` is superseded; `interest_selection.png` remains legacy case-study-only support. Raw profile/friends screenshots are not public. |
 | Database diagram | Required | Known | `docs/diagrams/the-loop-system.md` includes documented database tables and system boundaries; `docs/13_FEATURED_EVIDENCE_REVIEW.md` marks it Needs Revision before final frontend use. |
 | WebSocket architecture diagram | Required | Known | `docs/diagrams/the-loop-realtime-flow.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
 | Auth flow diagram | Required | Known | `docs/diagrams/the-loop-auth-flow.md` exists as a Mermaid/spec file; spec-level review marks it Ready, but rendered/mobile QA is still required before final polish. |
-| User workflow walkthrough | Required | Known | `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md` exists; workflow screenshots remain blocked until the deployment/server access issue is fixed by the teammate/friend with access. |
+| User workflow walkthrough | Required | Known/Partial | `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md` exists; owner-provided public-safe screenshots now cover the main visual workflow states. Manual reliability verification, admin proof, and stronger realtime/social proof remain incomplete. |
 | Demo video or GIF | Recommended | Needed | End-to-end product flow. |
 | Limitation/failure-mode note | Required | Known | Drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`; needs final case-study copy review. |
 
@@ -145,7 +146,7 @@ Purpose:
 | Global identity/contact | 4 | 0 | 4 | 0 | Required public CTAs are active: GitHub, SDE resume, LinkedIn, and email |
 | Mahoraga | 6 | 5 | 1 required, 3 links total | 1 | One homepage asset approved; demo media, metric interpretation, and role detail still Needed |
 | Hybrid Categorizer | 7 | 6 | 2 | 1 plus 1 missing deployment | Prediction-flow and merchant-memory screenshots replaced with safe demo-data UI proof; local classifier/routing benchmark added; History AI Insight panel screenshot remains Needed; deployment status, role details, Qwen fallback/cost measurement, endpoint benchmark, and any end-to-end model-output proof still Needed |
-| The Loop | 7 | 5 | 2 | 2 | Interest selection approved case-study-only; landing/workflow screenshots, role detail, and demo media still Needed |
+| The Loop | 7 | 5 | 3 | 2 | Live deployment workflow visuals now imported and privacy-reviewed; diagram QA, demo media, exact module ownership if later separated, manual reliability proof, and optional admin/chat/carpool visuals still Needed |
 | Secondary projects | 10 | 0 | 2 | 8 | 20% required verified |
 | Lab projects | 8 | 0 | 0 | 8 | 0% |
 

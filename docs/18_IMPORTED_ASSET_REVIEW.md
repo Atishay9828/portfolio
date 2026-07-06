@@ -1,6 +1,6 @@
 # 18_IMPORTED_ASSET_REVIEW.md
 
-Date: 2026-06-28
+Date: 2026-07-06
 
 Purpose:
 - Record the visual and privacy review of imported portfolio project assets.
@@ -24,7 +24,14 @@ Scope:
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | Sample-label required in site copy/data | Case-study candidate only for History list/route tags; opened AI Insight panel not shown |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | Replaced with sample-data UI proof | Case-study candidate as frontend merchant-memory proof |
 | The Loop | `public/assets/projects/the-loop/landing_page.jpg` | Replace before polish | Do not use for final polish |
-| The Loop | `public/assets/projects/the-loop/interest_selection.png` | Approved for case study only | Case study workflow support; broader workflow capture is blocked by deployment/server access issue |
+| The Loop | `public/assets/projects/the-loop/interest_selection.png` | Approved for case study only | Legacy case-study workflow support; broader live workflow visuals now supersede it |
+| The Loop | `public/assets/projects/the-loop/the-loop-events-list-live.png` | Verified public workflow visual | Primary public visual |
+| The Loop | `public/assets/projects/the-loop/the-loop-events-list-alt-live.png` | Verified supporting workflow visual | Supporting case-study visual |
+| The Loop | `public/assets/projects/the-loop/the-loop-event-detail-live.png` | Verified supporting workflow visual | Case-study event-detail and action proof |
+| The Loop | `public/assets/projects/the-loop/the-loop-map-view-live.png` | Verified supporting workflow visual | Case-study map-discovery proof |
+| The Loop | `public/assets/projects/the-loop/the-loop-landing-live.png` | Verified supporting visual | Supersedes low-resolution `landing_page.jpg` |
+| The Loop | `public/assets/projects/the-loop/the-loop-profile-live-redacted.png` | Verified redacted supporting visual | Profile-flow support only; contact details masked |
+| The Loop | `public/assets/projects/the-loop/the-loop-friends-live-redacted.png` | Verified redacted supporting visual | Friends-flow support only; sent-request username masked |
 
 ## Asset Reviews
 
@@ -252,7 +259,7 @@ Final status:
 - Replace before polish.
 
 Notes:
-- Capture a fresh high-resolution landing/auth screenshot only after the deployment/server access issue is fixed by the teammate/friend with access.
+- Superseded by `the-loop-landing-live.png` imported from the owner-provided live-deployment screenshot batch on 2026-07-06.
 
 ### The Loop Interest Selection
 
@@ -279,7 +286,51 @@ Final status:
 - Approved for case study only.
 
 Notes:
-- Pair with event discovery, RSVP/join, chat, carpool, and admin screenshots before claiming full product workflow coverage. Those screenshots are temporarily blocked by a deployment/server access issue and should not be captured in this milestone.
+- Superseded for preferred public use by the 2026-07-06 live events-list, event-detail, map-view, landing/login, and redacted profile/friends screenshots.
+
+### The Loop Live Deployment Screenshots
+
+File paths:
+- `public/assets/projects/the-loop/the-loop-events-list-live.png`
+- `public/assets/projects/the-loop/the-loop-events-list-alt-live.png`
+- `public/assets/projects/the-loop/the-loop-event-detail-live.png`
+- `public/assets/projects/the-loop/the-loop-map-view-live.png`
+- `public/assets/projects/the-loop/the-loop-landing-live.png`
+- `public/assets/projects/the-loop/the-loop-profile-live-redacted.png`
+- `public/assets/projects/the-loop/the-loop-friends-live-redacted.png`
+
+Project:
+- The Loop
+
+Source:
+- Owner-provided clean live-deployment screenshots from `https://the-loop-5m7u.onrender.com/`, reviewed and imported on 2026-07-06.
+
+Visual quality:
+- Strong for the events-list, event-detail, map-view, and landing/login screenshots.
+- Acceptable for redacted profile/friends support; masks are intentionally visible so private contact or username details are not published.
+
+Readability:
+- Homepage card size: `the-loop-events-list-live.png` is the preferred primary visual. `the-loop-event-detail-live.png` is also readable as supporting evidence.
+- Case-study page size: All imported live screenshots are usable, with redacted profile/friends visuals treated as secondary support.
+
+Privacy risk:
+- Low after review for events-list, event-detail, map-view, and landing/login.
+- Profile screenshot originally exposed a personal Gmail address and app handle; the public imported copy masks that contact area.
+- Friends screenshot originally exposed another username in a sent request; the public imported copy masks that row.
+- Raw profile/friends captures were not copied into public assets.
+
+Recommended usage:
+- Use `the-loop-events-list-live.png` as the primary public visual.
+- Use event detail and map view as supporting case-study evidence.
+- Use landing/login as optional setup context.
+- Use redacted profile/friends screenshots only as supporting workflow evidence, not as polished hero visuals.
+
+Final status:
+- Verified public workflow visuals.
+
+Notes:
+- These screenshots prove visible deployed UI states and prototype workflow coverage only. They do not prove active users, production hardening, reliability, scale, WebSocket robustness, or production SLA.
+- The old `landing_page.jpg` remains in the repo but is superseded by `the-loop-landing-live.png`.
 
 ## Homepage-Approved Assets
 
@@ -292,7 +343,7 @@ Notes:
 
 ## Replacement Needed
 
-- `public/assets/projects/the-loop/landing_page.jpg`
+- `public/assets/projects/the-loop/landing_page.jpg` is superseded by `the-loop-landing-live.png`; do not use the old file for final polish.
 
 ## Redaction Or Sample-Labeling Needed
 
@@ -315,6 +366,6 @@ Notes:
 - Hybrid still needs measured benchmark/routing evidence and any end-to-end backend/model-output capture required for final inference proof.
 - Hybrid `categories.png` and `history.png` need sample-data labeling in final surrounding copy if used.
 - Hybrid History AI Insight panel screenshot remains Needed before AI insights are used as visual portfolio evidence.
-- The Loop needs high-resolution landing/auth, event discovery, RSVP/join, friend/chat, carpool, and safe admin screenshots after the deployment/server access issue is fixed by the teammate/friend with access.
+- The Loop now has high-resolution public-safe live visuals for landing/auth, event discovery/list, event detail/actions, map view, and redacted profile/friends states. Remaining Loop visual work is optional admin/chat/carpool proof only if those flows are featured, plus final diagram QA and manual reliability verification.
 - Mahoraga still needs demo media, architecture diagram revision, and interpreted evaluation evidence before metric claims.
 - Owner-reviewed role/contribution wording now exists for all featured projects; exact module/file ownership and stronger proof claims remain governed by `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`.

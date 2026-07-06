@@ -11,9 +11,9 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, conservative design-system polish, polished screenshot QA recapture, featured case-study copy polish, role/contribution evidence framework, owner-reviewed featured contribution wording, SDE resume CTA publication, owner-approved LinkedIn/email CTA activation, and launch-readiness audit are complete; evidence hardening continues before production launch.
+Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, conservative design-system polish, polished screenshot QA recapture, featured case-study copy polish, role/contribution evidence framework, owner-reviewed featured contribution wording, SDE resume CTA publication, owner-approved LinkedIn/email CTA activation, launch-readiness audit, and The Loop live visual evidence update are complete; evidence hardening continues before production launch.
 
-The current implementation is a conservative static content shell backed by the evidence docs. It is conditionally ready for a conservative soft launch, but polished/final launch remains blocked until remaining portfolio-local assets, exact ownership details where needed, full endpoint/fallback benchmark evidence, workflow evidence, current screenshot QA, and final launch QA are complete.
+The current implementation is a conservative static content shell backed by the evidence docs. It is conditionally ready for a conservative soft launch, now with verified public-safe The Loop workflow visuals. Polished/final launch remains blocked until current screenshot QA, diagram QA, Hybrid AI Insight visual proof, full endpoint/fallback benchmark evidence if performance copy is desired, exact ownership details where needed, and final launch QA are complete.
 
 ## Run Locally
 
@@ -73,14 +73,15 @@ Created:
 - Role/contribution evidence framework in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` with owner-reviewed role labels, contribution summaries, collaborative scope, still-to-verify items, and unsafe wording to avoid.
 - Public case-study contribution sections for Mahoraga, Hybrid GenAI Transaction Categorizer, and The Loop.
 - Launch-readiness audit in `docs/24_LAUNCH_READINESS_AUDIT.md` with a 72/100 score: conditionally ready for conservative soft launch, blocked for polished/final launch by visual/proof gaps.
+- The Loop live visual evidence update in `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md` with owner-provided public-safe deployment screenshots and an updated 82/100 launch-readiness estimate.
 
 Still blocked:
-- Production visual polish until imported candidate visuals, missing screenshots/demos, and diagram render/mobile QA are complete.
-- Current screenshot QA recapture after public CTA and contribution-section updates.
+- Production visual polish until remaining missing screenshots/demos, diagram render/mobile QA, and final screenshot QA are complete.
+- Current screenshot QA recapture after public CTA, contribution-section, and The Loop visual updates.
 - Hybrid endpoint latency, Qwen fallback latency, cost, fallback-rate, and production claims until full endpoint/fallback benchmark evidence exists.
 - Hybrid backend/model-output claims until the model/backend path is captured or benchmarked end to end.
 - Hybrid History AI Insight visual proof until a safe sample transaction is opened and the real AI Insight panel is captured from `/transaction-insight`.
-- The Loop workflow screenshot polish until the deployment/server access issue is fixed by the teammate/friend with access.
+- Optional The Loop admin/chat/carpool visuals only if those flows will be visually featured; raw profile/friends screenshots remain unpublished and only redacted copies are public assets.
 - Exact Mahoraga file/module ownership and exact The Loop module ownership unless supporting evidence or teammate confirmation is documented.
 - Audit remediation until Astro/Vitest major dependency upgrades are planned and tested.
 
@@ -109,7 +110,7 @@ Future agents should start here:
 - `SITE_BLUEPRINT.md`
 - `DESIGN_SYSTEM.md`
 - `ASSET_REQUIREMENTS.md`
-- `docs/00_READ_FIRST.md` through `docs/24_LAUNCH_READINESS_AUDIT.md`
+- `docs/00_READ_FIRST.md` through `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`
 
 ## Locked Decisions
 

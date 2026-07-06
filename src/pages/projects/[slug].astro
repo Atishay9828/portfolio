@@ -109,7 +109,7 @@ if (!project) {
             <div class="asset-grid">
               {project.visual.assets.map((asset) => (
                 <figure class="asset-card">
-                  <img src={asset.src} alt={asset.label} loading="lazy" />
+                  <img src={asset.src} alt={asset.alt ?? asset.label} loading="lazy" />
                   <figcaption>
                     <strong>{asset.label}</strong>
                     <span>{asset.status}: {asset.note}</span>
