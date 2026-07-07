@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { links } from "../data/links";
+import Icon from "../components/ui/Icon.astro";
 
 const { title = "AJ | AI Systems Engineer", description = "AJ's evidence-driven portfolio shell." } = Astro.props;
 const githubHref = links.github.href;
@@ -27,9 +28,30 @@ const emailHref = links.email.href;
             <a href="/#lab-projects">Lab</a>
             <a href="/#systems-map">Systems</a>
             <a href="/#contact">Contact</a>
-            {resumeHref && <a href={resumeHref}>{links.resume.label}</a>}
-            {githubHref && <a href={githubHref}>GitHub</a>}
-            {linkedinHref && <a href={linkedinHref}>LinkedIn</a>}
+            {
+              resumeHref && (
+                <a class="icon-link" href={resumeHref}>
+                  <Icon name="resume" />
+                  <span>{links.resume.label}</span>
+                </a>
+              )
+            }
+            {
+              githubHref && (
+                <a class="icon-link" href={githubHref}>
+                  <Icon name="github" />
+                  <span>GitHub</span>
+                </a>
+              )
+            }
+            {
+              linkedinHref && (
+                <a class="icon-link" href={linkedinHref}>
+                  <Icon name="linkedin" />
+                  <span>LinkedIn</span>
+                </a>
+              )
+            }
           </div>
         </nav>
       </header>
@@ -40,10 +62,38 @@ const emailHref = links.email.href;
         <div class="section-inner footer-inner">
           <span>Static scaffold. Evidence-safe by default; production polish waits for portfolio-local assets.</span>
           <div class="footer-links">
-            {resumeHref && <a href={resumeHref}>{links.resume.label}</a>}
-            {githubHref && <a href={githubHref}>GitHub</a>}
-            {linkedinHref && <a href={linkedinHref}>LinkedIn</a>}
-            {emailHref && <a href={emailHref}>Email</a>}
+            {
+              resumeHref && (
+                <a class="icon-link" href={resumeHref}>
+                  <Icon name="resume" />
+                  <span>{links.resume.label}</span>
+                </a>
+              )
+            }
+            {
+              githubHref && (
+                <a class="icon-link" href={githubHref}>
+                  <Icon name="github" />
+                  <span>GitHub</span>
+                </a>
+              )
+            }
+            {
+              linkedinHref && (
+                <a class="icon-link" href={linkedinHref}>
+                  <Icon name="linkedin" />
+                  <span>LinkedIn</span>
+                </a>
+              )
+            }
+            {
+              emailHref && (
+                <a class="icon-link" href={emailHref}>
+                  <Icon name="mail" />
+                  <span>Email</span>
+                </a>
+              )
+            }
           </div>
         </div>
       </footer>

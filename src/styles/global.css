@@ -105,6 +105,31 @@ button:focus-visible {
   text-underline-offset: 4px;
 }
 
+.icon-link,
+.button {
+  gap: 8px;
+}
+
+.icon-link {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+}
+
+.link-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  color: currentColor;
+}
+
+.nav-links .link-icon,
+.footer-links .link-icon {
+  width: 0.95em;
+  height: 0.95em;
+  opacity: 0.86;
+}
+
 .nav-links a:hover,
 .text-link:hover {
   text-decoration: underline;
@@ -241,6 +266,11 @@ h3 {
   background: var(--accent-live);
   color: var(--text-inverse);
   border-color: var(--accent-live);
+}
+
+.button.primary .link-icon {
+  width: 0.95em;
+  height: 0.95em;
 }
 
 .button.secondary {
@@ -578,6 +608,9 @@ h3 {
 }
 
 .footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   color: var(--accent-link);
   text-decoration: none;
   text-underline-offset: 4px;

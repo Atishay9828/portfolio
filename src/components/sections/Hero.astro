@@ -1,6 +1,7 @@
 ---
 import { featuredProjects } from "../../data/projects";
 import { links } from "../../data/links";
+import Icon from "../ui/Icon.astro";
 ---
 
 <section class="hero" id="top">
@@ -16,9 +17,26 @@ import { links } from "../../data/links";
         I build software where models, data, APIs, memory, interfaces, and user workflows meet real constraints.
       </p>
       <div class="cta-row">
-        <a class="button primary" href="#featured-projects">Featured work</a>
-        {links.github.href && <a class="button secondary" href={links.github.href}>GitHub</a>}
-        {links.resume.href && <a class="button secondary" href={links.resume.href}>{links.resume.label}</a>}
+        <a class="button primary" href="#featured-projects">
+          <span>Featured work</span>
+          <Icon name="arrowRight" />
+        </a>
+        {
+          links.github.href && (
+            <a class="button secondary" href={links.github.href}>
+              <Icon name="github" />
+              <span>GitHub</span>
+            </a>
+          )
+        }
+        {
+          links.resume.href && (
+            <a class="button secondary" href={links.resume.href}>
+              <Icon name="resume" />
+              <span>{links.resume.label}</span>
+            </a>
+          )
+        }
       </div>
     </div>
     <aside class="anchor-panel" aria-label="Featured project anchors">

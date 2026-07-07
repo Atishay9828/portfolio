@@ -1,6 +1,7 @@
 ---
 import SectionHeader from "../ui/SectionHeader.astro";
 import { links } from "../../data/links";
+import Icon from "../ui/Icon.astro";
 ---
 
 <section class="section" id="about">
@@ -28,10 +29,38 @@ import { links } from "../../data/links";
     </div>
     <div class="case-panel">
       <div class="link-row">
-        {links.github.href && <a class="button secondary" href={links.github.href}>GitHub</a>}
-        {links.resume.href && <a class="button secondary" href={links.resume.href}>{links.resume.label}</a>}
-        {links.linkedin.href && <a class="button secondary" href={links.linkedin.href}>LinkedIn</a>}
-        {links.email.href && <a class="button secondary" href={links.email.href}>Email</a>}
+        {
+          links.github.href && (
+            <a class="button secondary" href={links.github.href}>
+              <Icon name="github" />
+              <span>GitHub</span>
+            </a>
+          )
+        }
+        {
+          links.resume.href && (
+            <a class="button secondary" href={links.resume.href}>
+              <Icon name="resume" />
+              <span>{links.resume.label}</span>
+            </a>
+          )
+        }
+        {
+          links.linkedin.href && (
+            <a class="button secondary" href={links.linkedin.href}>
+              <Icon name="linkedin" />
+              <span>LinkedIn</span>
+            </a>
+          )
+        }
+        {
+          links.email.href && (
+            <a class="button secondary" href={links.email.href}>
+              <Icon name="mail" />
+              <span>Email</span>
+            </a>
+          )
+        }
       </div>
     </div>
   </div>

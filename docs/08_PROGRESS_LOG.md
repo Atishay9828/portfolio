@@ -423,3 +423,14 @@ Status:
 - Raw profile/friends captures remain excluded from public use.
 - Hybrid fallback timing remains anecdotal only: owner reported roughly 10 seconds on laptop hardware, but it is not repeatably benchmarked and is not used as public performance copy.
 - Polished/final launch still needs Hybrid AI Insight visual proof, diagram QA, current screenshot QA, deeper Hybrid endpoint/Qwen proof if performance claims are desired, dependency audit remediation, and final launch QA.
+
+### 2026-07-07 Public Link Icon Polish
+
+Completed:
+- Added local inline SVG icons for GitHub, LinkedIn, email, SDE resume, and the subtle Featured work arrow without adding a new icon dependency.
+- Updated the header, hero CTA row, contact section, and footer so approved public CTAs are easier to scan while keeping text labels visible.
+- Kept all public CTA destinations unchanged: GitHub, SDE resume, LinkedIn, and email still resolve from the approved shared link data.
+- Kept the Data Analyst resume unpublished and unexposed.
+
+Status:
+- This was visual/discoverability polish only; no evidence states, claims, or link destinations changed.

@@ -29,6 +29,12 @@ Reason:
 - The Loop no longer depends on the earlier deployment/server access blocker for public-safe events-list, event-detail, map-view, landing/login, and redacted profile/friends visuals.
 - Remaining polished/final launch blockers are Hybrid AI Insight screenshot proof, final diagram render/mobile QA, current screenshot QA recapture, deeper Hybrid endpoint/Qwen proof if performance copy is desired, dependency audit remediation, and final launch QA.
 
+2026-07-07 addendum:
+- Public CTA discoverability improved with compact local inline SVG icons in the header, hero, contact section, and footer.
+- Public CTA destinations remain unchanged: GitHub, SDE resume, LinkedIn, and email still use the verified shared link registry values.
+- Data Analyst resume remains inactive and unexposed.
+- Readiness score remains 82 / 100 because this was visual polish, not new proof or final launch QA.
+
 ## Audit Method
 
 Checks completed:
@@ -66,6 +72,10 @@ Fresh screenshot capture:
 | LinkedIn | Active | `https://www.linkedin.com/in/atishay9828/` remains owner-approved and active. Automated LinkedIn verification may still be blocked externally, so the evidence source is owner approval. |
 | Email | Active | `mailto:ajain8_be23@thapar.edu` is active in contact/footer. |
 | Data Analyst resume | Inactive | Not copied into the repo, not exposed in generated HTML, and not part of public CTAs. |
+
+2026-07-07 note:
+- GitHub, SDE Resume, LinkedIn, and Email now include compact decorative icons where rendered publicly.
+- The icon pass did not add new destinations, publish additional resumes, or change target/rel behavior.
 
 ## Visual Asset Status
 

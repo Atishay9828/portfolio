@@ -4,7 +4,7 @@ Date: 2026-07-06
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a final proof/visual launch-readiness audit, and imported verified The Loop live-deployment visuals. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a final proof/visual launch-readiness audit, imported verified The Loop live-deployment visuals, and compact public-link icon polish. The strategy is strong and should not be redesigned.
 
 The repository now has a continuity system under `docs/00..25`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, role/contribution evidence framework, owner-reviewed contribution wording, launch-readiness audit, and The Loop visual evidence update.
 
@@ -13,6 +13,7 @@ Limited Astro static scaffolding has been completed for the homepage and three f
 First hardening pass status:
 - Project/link/evidence data remains centralized and routes are data-driven.
 - Personal CTAs are active only where the destination is verified or owner-approved: GitHub, the repo-local SDE resume, LinkedIn, and email. The Data Analyst resume remains unpublished and unexposed.
+- Public-link icons are visual polish only. The header, hero, contact section, and footer now show compact icons for approved public CTA surfaces without changing destinations or evidence status.
 - Desktop and mobile screenshot QA exists under `docs/reviews/screenshots/`.
 - `npm audit` reports 17 vulnerabilities; available fixes require major dependency upgrades, so no automatic fix was applied.
 
@@ -96,6 +97,7 @@ Imported asset visual/privacy review status:
 - Owner-approved public email CTA activated on 2026-07-03 at `mailto:ajain8_be23@thapar.edu`.
 - Launch-readiness audit completed on 2026-07-04 in `docs/24_LAUNCH_READINESS_AUDIT.md`; public CTAs are no longer launch blockers.
 - The Loop visual evidence update completed on 2026-07-06 in `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`; profile/friends captures were redacted before public import.
+- Public link icon polish completed on 2026-07-07 using local inline SVGs for GitHub, LinkedIn, email, SDE resume, and a subtle Featured work arrow; approved destinations remained unchanged.
 
 ## Missing Work
 
