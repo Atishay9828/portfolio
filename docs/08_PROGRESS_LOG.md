@@ -434,3 +434,14 @@ Completed:
 
 Status:
 - This was visual/discoverability polish only; no evidence states, claims, or link destinations changed.
+
+### 2026-07-07 Public Link Icon Simplification
+
+Completed:
+- Simplified compact public CTA areas after owner feedback that the header/footer labels felt repetitive.
+- Kept text labels in the main navigation and contact section, while making GitHub/LinkedIn icon-only in the header and GitHub/LinkedIn/email icon-only in the footer.
+- Kept Resume as the only visible text CTA in compact header/footer surfaces.
+- Preserved all approved public CTA destinations and kept the Data Analyst resume unpublished.
+
+Status:
+- Presentation cleanup only; no link destinations, evidence states, claims, or public assets changed.

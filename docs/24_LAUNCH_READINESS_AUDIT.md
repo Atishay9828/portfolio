@@ -35,6 +35,13 @@ Reason:
 - Data Analyst resume remains inactive and unexposed.
 - Readiness score remains 82 / 100 because this was visual polish, not new proof or final launch QA.
 
+2026-07-07 compact-icon update:
+- Header/footer CTA presentation was simplified after owner feedback.
+- Header keeps Work, Lab, Systems, Contact, and Resume visible as text; GitHub and LinkedIn are icon-only with accessible labels.
+- Footer keeps Resume visible as text and uses icon-only GitHub, LinkedIn, and Email controls with accessible labels.
+- Hero/contact remain descriptive CTA surfaces.
+- Public CTA destinations, evidence status, and Data Analyst resume exposure remain unchanged.
+
 ## Audit Method
 
 Checks completed:
@@ -76,6 +83,7 @@ Fresh screenshot capture:
 2026-07-07 note:
 - GitHub, SDE Resume, LinkedIn, and Email now include compact decorative icons where rendered publicly.
 - The icon pass did not add new destinations, publish additional resumes, or change target/rel behavior.
+- Compact header/footer icon-only links use accessible labels; visible descriptive labels remain in the contact section.
 
 ## Visual Asset Status
 

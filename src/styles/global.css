@@ -94,7 +94,7 @@ button:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: 8px 18px;
+  gap: 8px 14px;
   font-size: 0.9rem;
 }
 
@@ -116,6 +116,25 @@ button:focus-visible {
   align-items: center;
 }
 
+.icon-only {
+  width: 34px;
+  height: 34px;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--accent-link);
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.icon-only:hover {
+  background: rgba(124, 199, 255, 0.1);
+  color: var(--accent-live);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 .link-icon {
   width: 1em;
   height: 1em;
@@ -125,8 +144,8 @@ button:focus-visible {
 
 .nav-links .link-icon,
 .footer-links .link-icon {
-  width: 0.95em;
-  height: 0.95em;
+  width: 1em;
+  height: 1em;
   opacity: 0.86;
 }
 
@@ -604,7 +623,8 @@ h3 {
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 16px;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-links a {
@@ -618,6 +638,11 @@ h3 {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+.footer-links .icon-only:hover,
+.nav-links .icon-only:hover {
+  text-decoration: none;
 }
 
 .case-hero {
