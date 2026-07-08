@@ -117,8 +117,8 @@ button:focus-visible {
 }
 
 .icon-only {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   justify-content: center;
   border-radius: 8px;
   color: var(--accent-link);
@@ -144,9 +144,9 @@ button:focus-visible {
 
 .nav-links .link-icon,
 .footer-links .link-icon {
-  width: 1em;
-  height: 1em;
-  opacity: 0.86;
+  width: 1.08em;
+  height: 1.08em;
+  opacity: 0.94;
 }
 
 .nav-links a:hover,
@@ -613,34 +613,9 @@ h3 {
 }
 
 .footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--accent-link);
-  text-decoration: none;
-  text-underline-offset: 4px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-links .icon-only:hover,
 .nav-links .icon-only:hover {
   text-decoration: none;
 }

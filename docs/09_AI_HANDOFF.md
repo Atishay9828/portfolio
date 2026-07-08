@@ -13,7 +13,7 @@ Limited Astro static scaffolding has been completed for the homepage and three f
 First hardening pass status:
 - Project/link/evidence data remains centralized and routes are data-driven.
 - Personal CTAs are active only where the destination is verified or owner-approved: GitHub, the repo-local SDE resume, LinkedIn, and email. The Data Analyst resume remains unpublished and unexposed.
-- Public-link icons are visual polish only. The header keeps Resume as the only compact text CTA and uses icon-only GitHub/LinkedIn links; the footer keeps Resume text plus icon-only GitHub/LinkedIn/email links. Hero and contact remain descriptive. Destinations and evidence status are unchanged.
+- Public-link icons are visual polish only. The header keeps Resume as the only compact text CTA and uses icon-only GitHub/LinkedIn links. Hero and contact remain descriptive, and the footer is now only a quiet static-first build note with no repeated CTA cluster. Destinations and evidence status are unchanged.
 - Desktop and mobile screenshot QA exists under `docs/reviews/screenshots/`.
 - `npm audit` reports 17 vulnerabilities; available fixes require major dependency upgrades, so no automatic fix was applied.
 
@@ -99,6 +99,7 @@ Imported asset visual/privacy review status:
 - The Loop visual evidence update completed on 2026-07-06 in `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`; profile/friends captures were redacted before public import.
 - Public link icon polish completed on 2026-07-07 using local inline SVGs for GitHub, LinkedIn, email, SDE resume, and a subtle Featured work arrow; approved destinations remained unchanged.
 - Compact public link icon simplification completed on 2026-07-07 after owner feedback: header/footer social/contact labels were reduced to icon-only controls with accessible labels, while Resume remains text-visible.
+- Final CTA hierarchy polish completed on 2026-07-08: footer CTA repetition was removed, header stayed compact, and contact remains the full CTA surface.
 
 ## Missing Work
 

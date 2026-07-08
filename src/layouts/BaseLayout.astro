@@ -7,7 +7,6 @@ const { title = "AJ | AI Systems Engineer", description = "AJ's evidence-driven 
 const githubHref = links.github.href;
 const resumeHref = links.resume.href;
 const linkedinHref = links.linkedin.href;
-const emailHref = links.email.href;
 ---
 
 <!doctype html>
@@ -58,38 +57,7 @@ const emailHref = links.email.href;
       </main>
       <footer class="site-footer">
         <div class="section-inner footer-inner">
-          <span>Static scaffold. Evidence-safe by default; production polish waits for portfolio-local assets.</span>
-          <div class="footer-links">
-            {
-              resumeHref && (
-                <a class="icon-link" href={resumeHref}>
-                  <Icon name="resume" />
-                  <span>Resume</span>
-                </a>
-              )
-            }
-            {
-              githubHref && (
-                <a class="icon-link icon-only" href={githubHref} aria-label="GitHub">
-                  <Icon name="github" />
-                </a>
-              )
-            }
-            {
-              linkedinHref && (
-                <a class="icon-link icon-only" href={linkedinHref} aria-label="LinkedIn">
-                  <Icon name="linkedin" />
-                </a>
-              )
-            }
-            {
-              emailHref && (
-                <a class="icon-link icon-only" href={emailHref} aria-label="Email">
-                  <Icon name="mail" />
-                </a>
-              )
-            }
-          </div>
+          <span>Built static-first with Astro, TypeScript, and evidence-safe project notes.</span>
         </div>
       </footer>
     </div>

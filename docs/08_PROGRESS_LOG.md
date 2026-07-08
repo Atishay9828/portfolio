@@ -7,6 +7,19 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-07-08 Final CTA Hierarchy Polish
+
+Completed:
+- Removed repeated public CTA links from the footer so contact actions live in the contact section, while the header stays focused on navigation plus compact Resume, GitHub, and LinkedIn access.
+- Kept GitHub, SDE resume, LinkedIn, and email destinations unchanged in shared link data.
+- Kept the Data Analyst resume unpublished and unexposed.
+- Increased compact header icon hit areas slightly while preserving icon-only GitHub/LinkedIn accessible labels.
+
+Validation:
+- `npm.cmd test` passed with 23 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:

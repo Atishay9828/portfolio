@@ -42,6 +42,13 @@ Reason:
 - Hero/contact remain descriptive CTA surfaces.
 - Public CTA destinations, evidence status, and Data Analyst resume exposure remain unchanged.
 
+2026-07-08 final CTA hierarchy update:
+- Header remains navigation plus compact public outbound links: Resume with visible text, GitHub icon-only, and LinkedIn icon-only.
+- Email is intentionally absent from the header and remains available in the contact section.
+- Contact remains the full action area for GitHub, SDE resume, LinkedIn, and email.
+- Footer no longer repeats CTA links; it is now a quiet static-first/evidence-safe closing note.
+- Public CTA destinations, evidence status, and Data Analyst resume exposure remain unchanged.
+
 ## Audit Method
 
 Checks completed:
