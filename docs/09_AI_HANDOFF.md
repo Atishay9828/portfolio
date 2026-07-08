@@ -106,6 +106,7 @@ Imported asset visual/privacy review status:
 - The Loop visual verification completed on 2026-07-08: existing public workflow screenshots were present in `public/assets/projects/the-loop/`, no new import was needed, and labels were tightened to owner-captured/prototype-evidence wording.
 - Hybrid observed fallback wording added on 2026-07-08: public copy may mention approximate owner-observed CPU-only/offline fallback improvement from ~60-80s to ~5-13s, but this remains separate from the formal ONNX benchmark and does not unblock production, endpoint, cost, fallback-rate, or accuracy claims.
 - Favicon and OG polish completed on 2026-07-08 with static AJ/Signal Lab SVG assets and metadata; no fake proof assets were introduced.
+- Dependency audit safe fix completed on 2026-07-08: non-force `npm audit fix` reduced current audit findings from 12 to 7; remaining issues require a breaking Astro 7 upgrade and were left for a separate milestone.
 
 ## Missing Work
 

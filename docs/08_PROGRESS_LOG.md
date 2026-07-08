@@ -96,6 +96,19 @@ Validation:
 - `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
 - `git diff --check` passed with line-ending warnings only.
 
+### 2026-07-08 Dependency Audit Safe Fix
+
+Completed:
+- Ran `npm.cmd audit`; sandboxed audit failed, then elevated audit completed.
+- Initial current audit result: 12 vulnerabilities total, 9 moderate, 2 high, 1 critical.
+- Ran non-force `npm.cmd audit fix`; it updated only transitive lockfile packages and reduced the audit result to 7 vulnerabilities total, 4 moderate, 2 high, 1 critical.
+- Did not run `npm audit fix --force` because the remaining remediation requires a breaking Astro 7 upgrade.
+
+Validation:
+- `npm.cmd test` passed with 24 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:

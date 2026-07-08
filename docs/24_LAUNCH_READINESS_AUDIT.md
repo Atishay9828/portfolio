@@ -73,6 +73,11 @@ Reason:
 - This wording is explicitly not a formal benchmark, endpoint latency result, production latency, production SLA, cost proof, fallback-rate proof, or accuracy proof.
 - The measured ONNX classifier/routing benchmark remains separate, and repeatable Qwen/fallback benchmarking is still a polished-launch blocker for stronger performance claims.
 
+2026-07-08 dependency audit update:
+- Current `npm.cmd audit` initially reported 12 vulnerabilities: 9 moderate, 2 high, and 1 critical.
+- Safe non-force `npm.cmd audit fix` updated transitive lockfile packages and reduced the result to 7 vulnerabilities: 4 moderate, 2 high, and 1 critical.
+- Remaining vulnerabilities are in the Astro/Vite/esbuild chain and require `npm audit fix --force`, which would install Astro 7 as a breaking upgrade. That remediation is intentionally deferred to a separate tested dependency-upgrade milestone.
+
 ## Audit Method
 
 Checks completed:
