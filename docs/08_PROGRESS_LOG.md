@@ -20,6 +20,19 @@ Validation:
 - `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
 - `git diff --check` passed with line-ending warnings only.
 
+### 2026-07-08 Homepage Signal Corridor Polish
+
+Completed:
+- Added a CSS-only homepage signal corridor that links the major story beats: Signal, Proof Anchors, Featured Builds, Evolution, Systems Map, and Contact.
+- Added compact numbered section markers without changing project claims, links, or evidence status.
+- Kept the corridor static-first with no JavaScript, scroll hijacking, GSAP, WebGL, or new animation dependencies.
+- Added reduced-motion handling so the node pulse is disabled for users who prefer reduced motion.
+
+Validation:
+- `npm.cmd test` passed with 23 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:

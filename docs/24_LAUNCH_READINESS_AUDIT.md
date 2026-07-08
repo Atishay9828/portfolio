@@ -49,6 +49,11 @@ Reason:
 - Footer no longer repeats CTA links; it is now a quiet static-first/evidence-safe closing note.
 - Public CTA destinations, evidence status, and Data Analyst resume exposure remain unchanged.
 
+2026-07-08 Signal Corridor update:
+- Homepage now has a CSS-only visual path with compact numbered markers for Signal, Proof Anchors, Featured Builds, Evolution, Systems Map, and Contact.
+- The corridor is decorative and does not change evidence status, links, project ordering, screenshots, metrics, or role claims.
+- Motion remains CSS-only and respects `prefers-reduced-motion`.
+
 ## Audit Method
 
 Checks completed:

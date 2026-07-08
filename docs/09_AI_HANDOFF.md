@@ -100,6 +100,7 @@ Imported asset visual/privacy review status:
 - Public link icon polish completed on 2026-07-07 using local inline SVGs for GitHub, LinkedIn, email, SDE resume, and a subtle Featured work arrow; approved destinations remained unchanged.
 - Compact public link icon simplification completed on 2026-07-07 after owner feedback: header/footer social/contact labels were reduced to icon-only controls with accessible labels, while Resume remains text-visible.
 - Final CTA hierarchy polish completed on 2026-07-08: footer CTA repetition was removed, header stayed compact, and contact remains the full CTA surface.
+- Homepage Signal Corridor polish completed on 2026-07-08: CSS-only numbered markers now connect the main proof path without adding JS, fake visuals, or claim changes.
 
 ## Missing Work
 
