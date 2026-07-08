@@ -78,6 +78,11 @@ Reason:
 - Safe non-force `npm.cmd audit fix` updated transitive lockfile packages and reduced the result to 7 vulnerabilities: 4 moderate, 2 high, and 1 critical.
 - Remaining vulnerabilities are in the Astro/Vite/esbuild chain and require `npm audit fix --force`, which would install Astro 7 as a breaking upgrade. That remediation is intentionally deferred to a separate tested dependency-upgrade milestone.
 
+2026-07-08 final screenshot QA update:
+- Final-polish viewport screenshots were captured for homepage desktop/mobile and the three featured project pages.
+- Screenshot QA caught a mobile hero/header clipping issue; the CSS and H1 structure were adjusted before the final mobile capture was accepted.
+- Current screenshot QA no longer carries the stale post-CTA/post-Loop visual caveat for the final-polish UI, though full-page stitched QA is still a possible future improvement.
+
 ## Audit Method
 
 Checks completed:

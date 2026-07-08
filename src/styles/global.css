@@ -179,6 +179,7 @@ button:focus-visible {
 .nav-links a,
 .text-link,
 .case-back-link {
+  flex: 0 0 auto;
   color: var(--accent-link);
   text-decoration: none;
   text-underline-offset: 4px;
@@ -287,6 +288,10 @@ h1 {
   max-width: 760px;
   margin: 14px 0 22px;
   font-size: 4.25rem;
+}
+
+.hero-title-line {
+  display: block;
 }
 
 h2 {
@@ -1012,11 +1017,21 @@ th {
 
   .cta-row .button,
   .link-row .button {
-    flex: 1 1 calc(50% - 8px);
+    flex: 1 1 100%;
   }
 
   .nav-links .button {
     flex: 0 1 auto;
+  }
+
+  .nav-links {
+    gap: 8px 11px;
+    font-size: 0.84rem;
+  }
+
+  .nav-links .icon-only {
+    width: 34px;
+    height: 34px;
   }
 
   .button {
@@ -1054,7 +1069,7 @@ th {
 
   h1 {
     max-width: 100%;
-    font-size: 2.28rem;
+    font-size: 2.05rem;
     line-height: 1.12;
   }
 
@@ -1068,7 +1083,12 @@ th {
   }
 
   .lead {
+    max-width: 100%;
     font-size: 1rem;
+  }
+
+  .hero-copy .lead {
+    width: min(32ch, calc(100vw - 40px));
   }
 
   .proof-cell,
@@ -1089,6 +1109,18 @@ th {
 
   .signal-chain {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .signal-map-header {
+    display: grid;
+    justify-content: start;
+  }
+
+  .hero-signal-map,
+  .hero-copy,
+  .anchor-panel {
+    width: calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
   }
 
   .signal-chain::before,

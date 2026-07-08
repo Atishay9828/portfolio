@@ -109,6 +109,19 @@ Validation:
 - `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
 - `git diff --check` passed with line-ending warnings only.
 
+### 2026-07-08 Final Polish Screenshot Recapture
+
+Completed:
+- Started the Astro dev server on `http://127.0.0.1:4321/`.
+- Captured final-polish screenshots for homepage desktop/mobile and Mahoraga, Hybrid, and The Loop desktop views under `docs/reviews/screenshots/`.
+- Found and fixed mobile hero/header clipping before accepting the final mobile capture.
+- Recorded capture dimensions and QA notes in `docs/22_SCREENSHOT_QA_REVIEW.md`.
+
+Validation:
+- `npm.cmd test` passed with 24 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:

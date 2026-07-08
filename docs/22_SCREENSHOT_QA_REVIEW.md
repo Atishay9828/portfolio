@@ -20,6 +20,31 @@ Current-use caveat:
 - The Loop public workflow screenshots were verified as already present in `public/assets/projects/the-loop/`; no new import or crop was performed.
 - Current full-page QA screenshots are still stale for the final-polish UI and must be recaptured after the Signal Corridor, hero visual, and project-page density updates.
 
+## 2026-07-08 Final Polish Recapture
+
+Automated capture succeeded against the local Astro dev server at `http://127.0.0.1:4321/`.
+
+Browser used:
+- Microsoft Edge headless from `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`.
+
+Captured files:
+- `docs/reviews/screenshots/homepage-desktop-final-polish.png` at 1440 x 1200.
+- `docs/reviews/screenshots/homepage-mobile-final-polish.png` at 390 x 844.
+- `docs/reviews/screenshots/mahoraga-desktop-final-polish.png` at 1440 x 1200.
+- `docs/reviews/screenshots/hybrid-desktop-final-polish.png` at 1440 x 1200.
+- `docs/reviews/screenshots/the-loop-desktop-final-polish.png` at 1440 x 1200.
+
+QA notes:
+- The first mobile capture exposed right-edge clipping in the header/hero CTA/text area.
+- The final captured mobile version stacks the hero CTAs, uses a short-line hero headline, constrains the lead text, and avoids the observed clipping.
+- Homepage desktop shows the Signal Corridor marker, denser hero signal visual, and quiet footer hierarchy.
+- Project desktop captures show the smaller `← Featured work` link and reduced top-level disclaimer clutter.
+- The Loop capture uses the owner-provided workflow visuals already present in project data.
+
+Remaining visual QA notes:
+- Edge headless logged registry usage-stat warnings during capture; screenshots were still written at the expected dimensions.
+- These screenshots are viewport captures, not stitched full-page screenshots.
+
 ## Capture Result
 
 Automated capture succeeded on 2026-07-01.
