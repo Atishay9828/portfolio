@@ -45,6 +45,19 @@ Validation:
 - `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
 - `git diff --check` passed with line-ending warnings only.
 
+### 2026-07-08 Project Page Density Polish
+
+Completed:
+- Replaced the case-study back link text with the smaller `← Featured work` link.
+- Removed the repeated top publication-boundary aside from case-study pages.
+- Consolidated limitations, still-to-verify items, and next proof into one compact `Evidence boundary` section.
+- Kept Mahoraga prototype boundaries, Hybrid local-only benchmark limits, and The Loop collaborative ownership limits visible.
+
+Validation:
+- `npm.cmd test` passed with 23 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:

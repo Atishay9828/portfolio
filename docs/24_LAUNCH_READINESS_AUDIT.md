@@ -58,6 +58,11 @@ Reason:
 - Hero now has a lightweight abstract signal module showing Model, API, Memory, UI, and Proof as the first-viewport systems chain.
 - The module is decorative/architectural framing only; it does not introduce fake dashboards, fake terminal output, screenshots, metrics, or production claims.
 
+2026-07-08 project page density update:
+- Case-study pages now use a smaller `← Featured work` return link.
+- Repeated publication/still-to-verify/next-proof boxes were consolidated into a compact Evidence boundary section.
+- Evidence gaps remain visible; Mahoraga prototype limits, Hybrid local-only benchmark boundaries, and The Loop collaborative ownership limits were not removed or upgraded.
+
 ## Audit Method
 
 Checks completed:

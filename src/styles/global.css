@@ -177,7 +177,8 @@ button:focus-visible {
 }
 
 .nav-links a,
-.text-link {
+.text-link,
+.case-back-link {
   color: var(--accent-link);
   text-decoration: none;
   text-underline-offset: 4px;
@@ -228,7 +229,8 @@ button:focus-visible {
 }
 
 .nav-links a:hover,
-.text-link:hover {
+.text-link:hover,
+.case-back-link:hover {
   text-decoration: underline;
 }
 
@@ -808,10 +810,22 @@ h3 {
   background: var(--bg-base);
 }
 
+.case-back-link {
+  display: inline-flex;
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.82rem;
+}
+
 .case-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr);
   gap: 24px;
+}
+
+.case-page-lead .project-module {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.48fr);
 }
 
 .case-study-stack {
@@ -878,6 +892,23 @@ td {
   margin-top: 10px;
 }
 
+.evidence-boundary-panel {
+  display: grid;
+  gap: 22px;
+  border-color: rgba(255, 106, 61, 0.34);
+  background: rgba(17, 20, 23, 0.84);
+}
+
+.evidence-boundary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.evidence-boundary-grid h3 {
+  font-size: 1rem;
+}
+
 table {
   width: 100%;
   min-width: 860px;
@@ -939,6 +970,7 @@ th {
   .hero-grid,
   .section-header,
   .project-module,
+  .case-page-lead .project-module,
   .project-module:first-child,
   .compact-grid,
   .asset-grid,
@@ -955,7 +987,8 @@ th {
   .proof-grid,
   .lab-grid,
   .capability-grid,
-  .workflow-grid {
+  .workflow-grid,
+  .evidence-boundary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1014,7 +1047,8 @@ th {
   .proof-grid,
   .lab-grid,
   .capability-grid,
-  .workflow-grid {
+  .workflow-grid,
+  .evidence-boundary-grid {
     grid-template-columns: 1fr;
   }
 

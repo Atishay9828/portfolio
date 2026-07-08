@@ -102,6 +102,7 @@ Imported asset visual/privacy review status:
 - Final CTA hierarchy polish completed on 2026-07-08: footer CTA repetition was removed, header stayed compact, and contact remains the full CTA surface.
 - Homepage Signal Corridor polish completed on 2026-07-08: CSS-only numbered markers now connect the main proof path without adding JS, fake visuals, or claim changes.
 - Hero visual density polish completed on 2026-07-08: the right rail now includes an abstract Model/API/Memory/UI/Proof chain plus compact role stack, with no fake dashboard or metric content.
+- Project page density polish completed on 2026-07-08: case-study pages now use a smaller `← Featured work` link and one compact Evidence boundary section instead of repeated disclaimer boxes.
 
 ## Missing Work
 
