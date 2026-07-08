@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#070809"/>
+  <path d="M0 0H1200V630H0V0Z" fill="url(#grid)"/>
+  <rect x="72" y="70" width="1056" height="490" rx="8" stroke="#273039"/>
+  <path d="M132 452H1068" stroke="#2EF2C5" stroke-width="2"/>
+  <path d="M132 492H680" stroke="#E7F75A" stroke-width="2"/>
+  <circle cx="132" cy="452" r="7" fill="#2EF2C5"/>
+  <circle cx="450" cy="452" r="7" fill="#2EF2C5"/>
+  <circle cx="768" cy="452" r="7" fill="#E7F75A"/>
+  <circle cx="1068" cy="452" r="7" fill="#FF6A3D"/>
+  <text x="132" y="196" fill="#F2F5F7" font-family="Space Grotesk, IBM Plex Sans, Arial, sans-serif" font-size="86" font-weight="700">AJ</text>
+  <text x="132" y="278" fill="#F2F5F7" font-family="Space Grotesk, IBM Plex Sans, Arial, sans-serif" font-size="54" font-weight="700">AI Systems Engineer</text>
+  <text x="132" y="336" fill="#9AA4AF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="30">Product workflows, local inference, and evidence-first engineering.</text>
+  <text x="132" y="414" fill="#2EF2C5" font-family="JetBrains Mono, Consolas, monospace" font-size="22">Signal Lab / Static portfolio</text>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="white" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+</svg>

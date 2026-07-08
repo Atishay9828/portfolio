@@ -83,6 +83,19 @@ Validation:
 - `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
 - `git diff --check` passed with line-ending warnings only.
 
+### 2026-07-08 Favicon And OG Image Polish
+
+Completed:
+- Added a static AJ Signal Lab favicon at `public/favicon.svg`.
+- Added a static portfolio Open Graph image at `public/og-image.svg`.
+- Added base layout metadata for favicon, Open Graph, and Twitter summary image.
+- Kept the assets abstract and claim-safe: no fake screenshots, fake metrics, generated people, or stock visuals.
+
+Validation:
+- `npm.cmd test` passed with 24 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:
