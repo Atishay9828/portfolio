@@ -103,6 +103,7 @@ Imported asset visual/privacy review status:
 - Homepage Signal Corridor polish completed on 2026-07-08: CSS-only numbered markers now connect the main proof path without adding JS, fake visuals, or claim changes.
 - Hero visual density polish completed on 2026-07-08: the right rail now includes an abstract Model/API/Memory/UI/Proof chain plus compact role stack, with no fake dashboard or metric content.
 - Project page density polish completed on 2026-07-08: case-study pages now use a smaller `← Featured work` link and one compact Evidence boundary section instead of repeated disclaimer boxes.
+- The Loop visual verification completed on 2026-07-08: existing public workflow screenshots were present in `public/assets/projects/the-loop/`, no new import was needed, and labels were tightened to owner-captured/prototype-evidence wording.
 
 ## Missing Work
 

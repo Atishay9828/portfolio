@@ -63,6 +63,11 @@ Reason:
 - Repeated publication/still-to-verify/next-proof boxes were consolidated into a compact Evidence boundary section.
 - Evidence gaps remain visible; Mahoraga prototype limits, Hybrid local-only benchmark boundaries, and The Loop collaborative ownership limits were not removed or upgraded.
 
+2026-07-08 The Loop visual verification:
+- Existing The Loop public workflow screenshots were verified in `public/assets/projects/the-loop/`; no new assets were imported and no crop/manipulation was performed.
+- Project data continues to use the events list as the primary public visual with event detail, map view, landing/login, and redacted profile/friends as supporting workflow evidence.
+- The screenshots remain prototype workflow evidence only, not reliability, scale, usage, WebSocket robustness, or production-SLA proof.
+
 ## Audit Method
 
 Checks completed:

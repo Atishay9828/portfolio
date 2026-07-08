@@ -16,6 +16,10 @@ Current-use caveat:
 - The profile contact area and friends sent-request username were masked before public import.
 - Full-page portfolio screenshot QA still needs recapture because the current QA PNGs do not show the updated Loop visual grid.
 
+2026-07-08 addendum:
+- The Loop public workflow screenshots were verified as already present in `public/assets/projects/the-loop/`; no new import or crop was performed.
+- Current full-page QA screenshots are still stale for the final-polish UI and must be recaptured after the Signal Corridor, hero visual, and project-page density updates.
+
 ## Capture Result
 
 Automated capture succeeded on 2026-07-01.

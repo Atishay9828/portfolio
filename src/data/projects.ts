@@ -436,7 +436,7 @@ export const featuredProjects: Project[] = [
         },
         {
           src: "/assets/projects/the-loop/the-loop-event-detail-live.png",
-          label: "Event detail deployment screenshot",
+          label: "Owner-captured deployment screenshot",
           alt: "The Loop event detail page showing event actions and location map",
           status: "Verified",
           note:
@@ -445,7 +445,7 @@ export const featuredProjects: Project[] = [
         },
         {
           src: "/assets/projects/the-loop/the-loop-map-view-live.png",
-          label: "Map view deployment screenshot",
+          label: "Owner-captured deployment screenshot",
           alt: "The Loop map view showing event pins near Thapar Institute",
           status: "Verified",
           note:
@@ -454,7 +454,7 @@ export const featuredProjects: Project[] = [
         },
         {
           src: "/assets/projects/the-loop/the-loop-landing-live.png",
-          label: "Landing/login deployment screenshot",
+          label: "Owner-captured deployment screenshot",
           alt: "The Loop landing/login screen",
           status: "Verified",
           note:
@@ -463,7 +463,7 @@ export const featuredProjects: Project[] = [
         },
         {
           src: "/assets/projects/the-loop/the-loop-profile-live-redacted.png",
-          label: "Redacted profile deployment screenshot",
+          label: "Prototype workflow evidence",
           alt: "The Loop profile page with personal contact details redacted",
           status: "Verified",
           note:
@@ -472,7 +472,7 @@ export const featuredProjects: Project[] = [
         },
         {
           src: "/assets/projects/the-loop/the-loop-friends-live-redacted.png",
-          label: "Redacted friends deployment screenshot",
+          label: "Prototype workflow evidence",
           alt: "The Loop friends page with sent-request username redacted",
           status: "Verified",
           note:

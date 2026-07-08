@@ -58,6 +58,19 @@ Validation:
 - `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
 - `git diff --check` passed with line-ending warnings only.
 
+### 2026-07-08 The Loop Visual Verification
+
+Completed:
+- Verified existing public The Loop workflow screenshots are already present under `public/assets/projects/the-loop/`.
+- Confirmed events-list, event-detail, map-view, landing/login, and redacted profile/friends screenshots are already referenced from project data.
+- Confirmed no additional screenshot import was needed from `C:\Users\adish\Pictures\Screenshots`; that directory was not available in this environment.
+- Tightened existing The Loop public labels toward live-deployment, owner-captured, and prototype workflow evidence wording without changing claims.
+
+Validation:
+- `npm.cmd test` passed with 23 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:

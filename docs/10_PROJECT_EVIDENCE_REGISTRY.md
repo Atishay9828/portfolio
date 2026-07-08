@@ -184,6 +184,7 @@ Verification notes:
 - Imported asset review originally marked `landing_page.jpg` Replace before polish and `interest_selection.png` Approved for case study only. The 2026-07-06 update supersedes the weak landing asset with `the-loop-landing-live.png`.
 - Public-safe workflow screenshots are now imported: `the-loop-events-list-live.png`, `the-loop-events-list-alt-live.png`, `the-loop-event-detail-live.png`, `the-loop-map-view-live.png`, `the-loop-landing-live.png`, `the-loop-profile-live-redacted.png`, and `the-loop-friends-live-redacted.png`.
 - Raw profile/friends screenshots were not published because they exposed personal account or username details; only redacted copies are public assets.
+- 2026-07-08 verification confirmed the public files remain present in `public/assets/projects/the-loop/`; no new import was needed.
 - `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` records The Loop contribution questions, safe pending wording, and unsafe ownership/deployment/reliability wording to avoid.
 
 Can be shown publicly yet:

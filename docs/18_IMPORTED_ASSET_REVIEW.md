@@ -331,6 +331,7 @@ Final status:
 Notes:
 - These screenshots prove visible deployed UI states and prototype workflow coverage only. They do not prove active users, production hardening, reliability, scale, WebSocket robustness, or production SLA.
 - The old `landing_page.jpg` remains in the repo but is superseded by `the-loop-landing-live.png`.
+- 2026-07-08 verification confirmed these public files were already present in `public/assets/projects/the-loop/`; no new import or crop was performed in this pass.
 
 ## Homepage-Approved Assets
 
