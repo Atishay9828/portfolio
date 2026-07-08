@@ -284,7 +284,7 @@ export const featuredProjects: Project[] = [
     ],
     caseStudy: {
       whatWasBuilt:
-        "A transaction categorization system that combines merchant overrides, a local ONNX classifier, confidence and rule checks, optional LLM fallback, feedback, history, and merchant-memory behavior documented in the repo architecture and AI pipeline notes.",
+        "A transaction categorization system that combines merchant overrides, a local ONNX classifier, confidence and rule checks, optional offline Qwen2.5-7B GGUF fallback, feedback, history, and merchant-memory behavior documented in the repo architecture and AI pipeline notes. Owner-observed local CPU-only/offline testing cut approximate fallback latency from ~60-80s to ~5-13s; this remains an observation, not a formal benchmark or production SLA.",
       architectureSummary:
         "The routing flow is intentionally layered: known merchants can bypass inference, confident local ONNX results can return without an LLM call, low-confidence or semantically ambiguous inputs route toward fallback, and frontend history/memory keeps repeated ambiguity visible to the user. The routing and memory diagrams still need revision before final visual use.",
       engineeringDecisions: [
@@ -299,6 +299,7 @@ export const featuredProjects: Project[] = [
         "History AI Insight is source-code-backed through a slide-in `HistoryPanel` calling `POST /transaction-insight`, but the current `history.png` list screenshot does not show that panel.",
         "Routing and memory diagram specs are Known but need revision.",
         "Local ONNX classifier/routing benchmark is documented; production latency, endpoint latency, Qwen fallback latency, cost, fallback-rate, and accuracy claims remain blocked.",
+        "Owner-observed CPU-only/offline fallback improvement is approximate local testing only and remains separate from the formal ONNX classifier/routing benchmark.",
       ],
       routingProof: {
         label: "Local benchmark measured",
@@ -360,6 +361,7 @@ export const featuredProjects: Project[] = [
         "Confidence threshold tuning affects fallback frequency and correctness.",
         "LLM fallback can add latency and cost, but Qwen fallback was not called in the local benchmark.",
         "Measured numbers are local read-only harness results, not production SLA, endpoint latency, or Qwen fallback latency.",
+        "The ~60-80s to ~5-13s fallback improvement is owner-observed local CPU-only/offline testing, not a formal benchmark.",
         "The History AI Insight flow is source-backed, but the current screenshot does not show the opened insight panel.",
         "Merchant memory can encode wrong mappings if correction or extraction quality is weak.",
       ],

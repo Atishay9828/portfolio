@@ -68,6 +68,11 @@ Reason:
 - Project data continues to use the events list as the primary public visual with event detail, map view, landing/login, and redacted profile/friends as supporting workflow evidence.
 - The screenshots remain prototype workflow evidence only, not reliability, scale, usage, WebSocket robustness, or production-SLA proof.
 
+2026-07-08 Hybrid fallback wording update:
+- Hybrid public copy now includes approximate owner-observed local CPU-only/offline fallback improvement from ~60-80s to ~5-13s.
+- This wording is explicitly not a formal benchmark, endpoint latency result, production latency, production SLA, cost proof, fallback-rate proof, or accuracy proof.
+- The measured ONNX classifier/routing benchmark remains separate, and repeatable Qwen/fallback benchmarking is still a polished-launch blocker for stronger performance claims.
+
 ## Audit Method
 
 Checks completed:

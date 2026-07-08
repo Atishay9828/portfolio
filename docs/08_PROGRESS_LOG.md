@@ -71,6 +71,18 @@ Validation:
 - `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
 - `git diff --check` passed with line-ending warnings only.
 
+### 2026-07-08 Hybrid Observed Fallback Wording
+
+Completed:
+- Added safe public Hybrid wording for AJ's owner-observed CPU-only/offline fallback improvement from ~60-80s to ~5-13s.
+- Kept the observed fallback note separate from the measured ONNX classifier/routing benchmark.
+- Preserved blocks on formal endpoint latency, Qwen fallback latency benchmark, production SLA, cost, fallback-rate, and accuracy claims.
+
+Validation:
+- `npm.cmd test` passed with 24 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:

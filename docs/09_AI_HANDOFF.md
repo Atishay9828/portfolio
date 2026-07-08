@@ -104,6 +104,7 @@ Imported asset visual/privacy review status:
 - Hero visual density polish completed on 2026-07-08: the right rail now includes an abstract Model/API/Memory/UI/Proof chain plus compact role stack, with no fake dashboard or metric content.
 - Project page density polish completed on 2026-07-08: case-study pages now use a smaller `← Featured work` link and one compact Evidence boundary section instead of repeated disclaimer boxes.
 - The Loop visual verification completed on 2026-07-08: existing public workflow screenshots were present in `public/assets/projects/the-loop/`, no new import was needed, and labels were tightened to owner-captured/prototype-evidence wording.
+- Hybrid observed fallback wording added on 2026-07-08: public copy may mention approximate owner-observed CPU-only/offline fallback improvement from ~60-80s to ~5-13s, but this remains separate from the formal ONNX benchmark and does not unblock production, endpoint, cost, fallback-rate, or accuracy claims.
 
 ## Missing Work
 

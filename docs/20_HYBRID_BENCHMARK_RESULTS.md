@@ -102,3 +102,9 @@ The backend also imports local Qwen fallback modules eagerly, so a full endpoint
 ## Portfolio-Safe Summary
 
 Hybrid now has a measured local ONNX classifier/routing benchmark for four safe sample inputs using the located `distilbert.onnx` model. The safe public framing is: local classifier/routing latency was measured in a read-only harness, one row required unmeasured LLM fallback, and cost, fallback-rate, production SLA, and endpoint-level claims remain blocked.
+
+## 2026-07-08 Observed Fallback Note
+
+AJ reported an owner-observed local CPU-only/offline fallback improvement from approximately ~60-80s to ~5-13s.
+
+This note is separate from the measured ONNX classifier/routing benchmark above. It is not a formal benchmark, not endpoint latency, not production latency, not a production SLA, not cost proof, not fallback-rate proof, and not accuracy proof. A repeatable fallback harness is still required before stronger fallback-latency claims are published.

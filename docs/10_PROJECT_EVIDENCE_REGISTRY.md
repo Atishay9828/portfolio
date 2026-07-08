@@ -100,6 +100,7 @@ Evidence status:
 - Measured local classifier/routing table: Known in `docs/20_HYBRID_BENCHMARK_RESULTS.md` and `src/data/projects.ts`.
 - Full endpoint/Qwen fallback/cost benchmark: Needed.
 - Local ONNX runtime asset: Known at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`; not portfolio-local and not benchmark evidence by itself.
+- Owner-observed fallback improvement: Known owner observation from local CPU-only/offline testing; approximate fallback latency improved from ~60-80s to ~5-13s. This is not a formal benchmark, endpoint latency result, production SLA, cost proof, fallback-rate proof, or accuracy proof.
 - Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed solo/end-to-end contribution wording is available, while benchmark limitations remain unchanged.
 
 Required assets:
@@ -131,6 +132,7 @@ Verification notes:
 - `docs/19_HYBRID_ROUTING_PROOF.md` records documented sample routing rows for `dominos order 750`, `bharat petrol payment 500`, `smart class monthly 899`, and `volvo bus booking 1200`. The table is qualitative and unmeasured.
 - A local Hybrid repo runtime asset was found at `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx` on 2026-06-28. File size: 267,956,781 bytes. It is inside the Hybrid repo, outside the portfolio repo, not Git-tracked, ignored by `.gitignore` via `**/models/`, and should remain uncommitted.
 - `docs/20_HYBRID_BENCHMARK_RESULTS.md` records a 2026-06-30 local read-only ONNX classifier/routing benchmark with 20 measured runs and 5 warmups per sample. Qwen fallback was not called; endpoint latency, fallback latency, cost, fallback-rate, and production SLA claims remain blocked.
+- 2026-07-08 copy update allows only approximate owner-observed CPU-only/offline fallback wording: ~60-80s to ~5-13s. Keep it separate from the measured ONNX benchmark.
 - `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md` records that the existing History screenshot shows transaction history, category confidence, and route tags, but no AI Insight panel or in-image sample-data label. The AI Insight panel is code-backed but still needs a safe opened-transaction capture before it is used as screenshot evidence.
 - `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md` records the Hybrid contribution questions, safe pending wording, and unsafe ownership/performance wording to avoid.
 - Limitation note drafted in `docs/12_FEATURED_PROJECT_EVIDENCE_PACK.md`.

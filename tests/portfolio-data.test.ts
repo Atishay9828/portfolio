@@ -323,6 +323,16 @@ describe("portfolio scaffold data", () => {
     expect(hybrid?.caseStudy?.nextEvidenceNeeded.join(" ")).toContain("Replacement History screenshot");
   });
 
+  it("allows only approximate observed Hybrid fallback wording outside formal benchmark claims", () => {
+    const hybrid = getProjectBySlug("hybrid-categorizer");
+    const hybridText = JSON.stringify(hybrid);
+
+    expect(hybridText).toContain("Owner-observed local CPU-only/offline testing");
+    expect(hybridText).toContain("~60-80s to ~5-13s");
+    expect(hybridText).toContain("not a formal benchmark or production SLA");
+    expect(hybridText).toContain("Endpoint latency remains blocked");
+  });
+
   it("documents how Hybrid History AI insights are generated without inventing insight text", () => {
     const doc = hybridHistoryInsightsEvidence;
 
