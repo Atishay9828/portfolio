@@ -54,6 +54,10 @@ Reason:
 - The corridor is decorative and does not change evidence status, links, project ordering, screenshots, metrics, or role claims.
 - Motion remains CSS-only and respects `prefers-reduced-motion`.
 
+2026-07-08 hero visual update:
+- Hero now has a lightweight abstract signal module showing Model, API, Memory, UI, and Proof as the first-viewport systems chain.
+- The module is decorative/architectural framing only; it does not introduce fake dashboards, fake terminal output, screenshots, metrics, or production claims.
+
 ## Audit Method
 
 Checks completed:

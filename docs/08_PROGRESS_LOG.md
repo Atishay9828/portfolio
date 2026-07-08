@@ -33,6 +33,18 @@ Validation:
 - `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
 - `git diff --check` passed with line-ending warnings only.
 
+### 2026-07-08 Hero Signal Visual Polish
+
+Completed:
+- Added a lightweight hero signal module that shows an abstract Model -> API -> Memory -> UI -> Proof chain.
+- Added a compact role stack for AI systems, product workflows, local inference, and evidence-first work.
+- Kept the existing proof-anchor links and did not add fake dashboards, fake terminals, fake metrics, fake screenshots, WebGL, GSAP, or JavaScript.
+
+Validation:
+- `npm.cmd test` passed with 23 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell again printed trailing esbuild cancellation noise after Astro completed, but the process exited 0.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-06-17
 
 Completed:

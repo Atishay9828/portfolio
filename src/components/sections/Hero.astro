@@ -43,7 +43,23 @@ import Icon from "../ui/Icon.astro";
         }
       </div>
     </div>
-    <aside class="anchor-panel" aria-label="Featured project anchors">
+    <aside class="anchor-panel hero-visual-panel" aria-label="Featured project anchors">
+      <div class="hero-signal-map" aria-label="Abstract systems chain">
+        <div class="signal-map-header">
+          <span class="meta-label">Signal path</span>
+          <span>static proof chain</span>
+        </div>
+        <div class="signal-chain" aria-hidden="true">
+          {["Model", "API", "Memory", "UI", "Proof"].map((item) => (
+            <span>{item}</span>
+          ))}
+        </div>
+        <div class="signal-role-stack" aria-label="Current role stack">
+          {["AI Systems", "Product Workflows", "Local Inference", "Evidence First"].map((item) => (
+            <span>{item}</span>
+          ))}
+        </div>
+      </div>
       <div class="meta-label">Proof anchors</div>
       <div class="anchor-list">
         {featuredProjects.map((project) => (
