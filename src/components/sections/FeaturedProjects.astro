@@ -4,16 +4,16 @@ import ProjectModule from "../project/ProjectModule.astro";
 import { featuredProjects } from "../../data/projects";
 ---
 
-<section class="section" id="featured-projects">
+<section class="section" id="featured-projects" data-journey-section data-journey-label="Featured builds" data-journey-index="3">
   <div class="section-inner">
     <div class="section-marker" aria-hidden="true">
-      <span>03</span>
+      <span>04</span>
       <strong>Featured Builds</strong>
     </div>
     <SectionHeader
       eyebrow="Featured projects"
       title="The strongest proof first"
-      body="Project cards show verified links, reviewed candidate visuals, and explicit missing-proof indicators. Screenshots and metrics stay labeled until the supporting evidence is complete."
+      body="Project names lead. Evidence, links, and boundaries support the claim without turning the UI into a backlog."
     />
     <div class="featured-stack">
       {featuredProjects.map((project) => <ProjectModule project={project} />)}

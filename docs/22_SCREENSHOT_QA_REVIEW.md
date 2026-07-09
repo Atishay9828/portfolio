@@ -45,6 +45,25 @@ Remaining visual QA notes:
 - Edge headless logged registry usage-stat warnings during capture; screenshots were still written at the expected dimensions.
 - These screenshots are viewport captures, not stitched full-page screenshots.
 
+## 2026-07-09 Final Screening Capture
+
+Automated capture succeeded for the deep-screening pass after rebuilding the Astro static output.
+
+Captured files:
+- `docs/reviews/screenshots/homepage-desktop-final-screening.png` at 1440 x 1200.
+- `docs/reviews/screenshots/homepage-mobile-final-screening.png` at 390 x 844.
+- `docs/reviews/screenshots/mahoraga-desktop-final-screening.png` at 1440 x 1200.
+- `docs/reviews/screenshots/hybrid-desktop-final-screening.png` at 1440 x 1200.
+- `docs/reviews/screenshots/the-loop-desktop-final-screening.png` at 1440 x 1200.
+
+QA notes:
+- Homepage desktop shows the sticky Signal Journey rail and static hero Signal Path as separate systems.
+- Homepage mobile hides the desktop rail, wraps the header, stacks CTAs, and showed no obvious viewport clipping in the captured first screen.
+- Mahoraga and Hybrid project pages render compact proof/action tiles and no large missing-proof public cards.
+- The Loop project page renders verified deployment/repo proof links and owner-captured workflow visuals.
+- After the The Loop capture, one awkward public phrase (`AI-only balance`) was changed in `src/data/projects.ts` to `Product engineering proof alongside the AI systems work.` Tests and build passed after that source fix, but the existing The Loop final-screening PNG still shows the pre-fix phrase.
+- Edge headless emitted a task-manager fallback warning during some captures; screenshots were still written at nonzero sizes.
+
 ## Capture Result
 
 Automated capture succeeded on 2026-07-01.

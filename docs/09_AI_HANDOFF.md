@@ -4,9 +4,15 @@ Date: 2026-07-06
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a final proof/visual launch-readiness audit, imported verified The Loop live-deployment visuals, and simplified compact public-link icon polish. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a final proof/visual launch-readiness audit, imported verified The Loop live-deployment visuals, simplified compact public-link icon polish, and a scroll-responsive homepage Signal Journey correction. The strategy is strong and should not be redesigned.
 
 The repository now has a continuity system under `docs/00..25`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, role/contribution evidence framework, owner-reviewed contribution wording, launch-readiness audit, and The Loop visual evidence update.
+
+2026-07-09 deep-screening addendum:
+- Use `docs/31_DEEP_SCREENING_CONTEXT_HANDOFF.md` for the mid-pass handoff and this file for the current repo brain.
+- Public UI cleanup, About/Contact split, compact secondary cards, verified timeline repo links, Hybrid local endpoint/fallback evidence update, The Loop system SVG, and evidence-derived Toolkit are implemented.
+- Current checked validation in this pass: `npm.cmd test` passes with 30/30 tests; build passed before final browser QA and must be rerun after final docs/report updates.
+- Remaining closeout work is browser QA/screenshot capture, final report, final validation, commit, and push.
 
 Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
 
@@ -101,6 +107,7 @@ Imported asset visual/privacy review status:
 - Compact public link icon simplification completed on 2026-07-07 after owner feedback: header/footer social/contact labels were reduced to icon-only controls with accessible labels, while Resume remains text-visible.
 - Final CTA hierarchy polish completed on 2026-07-08: footer CTA repetition was removed, header stayed compact, and contact remains the full CTA surface.
 - Homepage Signal Corridor polish completed on 2026-07-08: CSS-only numbered markers now connect the main proof path without adding JS, fake visuals, or claim changes.
+- Scroll-responsive Signal Journey correction completed on 2026-07-08: the previous static corridor was upgraded to a lightweight vanilla JS/CSS progress system with a desktop rail, active stations, section reveal states, mobile rail fallback, and reduced-motion support. No project claims, CTA destinations, screenshots, metrics, or evidence states were changed.
 - Hero visual density polish completed on 2026-07-08: the right rail now includes an abstract Model/API/Memory/UI/Proof chain plus compact role stack, with no fake dashboard or metric content.
 - Project page density polish completed on 2026-07-08: case-study pages now use a smaller `← Featured work` link and one compact Evidence boundary section instead of repeated disclaimer boxes.
 - The Loop visual verification completed on 2026-07-08: existing public workflow screenshots were present in `public/assets/projects/the-loop/`, no new import was needed, and labels were tightened to owner-captured/prototype-evidence wording.

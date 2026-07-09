@@ -8,6 +8,15 @@ Astro static scaffold created, first implementation hardening pass completed, co
 
 The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, The Loop visual evidence update, resume publication plan, role/contribution evidence framework, owner-reviewed contribution wording, and conservative Astro scaffold exist.
 
+2026-07-09 deep-screening addendum:
+- Public UI copy has been cleaned so recruiter-facing pages no longer show large missing-proof, text-only, candidate-visual, launch-selection, or internal backlog language.
+- Pending proof and future evidence work now live in `docs/29_PENDING_FEATURES_AND_EVIDENCE.md` instead of public cards.
+- About appears immediately after the hero; Contact remains near the bottom.
+- Homepage Signal Journey order is Signal, About, Proof, Builds, Evolution, Toolkit, Systems, Contact.
+- Hybrid public data now reflects local `/predict` and offline Qwen fallback examples while keeping deployment, dataset accuracy, fallback-rate, zero-compute-cost, and hosted-production latency claims out of public copy.
+- The Loop now includes `public/assets/projects/the-loop/the-loop-system-diagram.svg` as a repo-backed topology asset, not scale, reliability, or ownership proof.
+- Toolkit rendering is backed by `src/data/toolkit.ts` and documented in `docs/30_TECH_STACK_EVIDENCE.md`.
+
 First implementation review status:
 - Architecture remains clean enough for the next milestone: project/link/evidence data is centralized, route definitions are data-driven, and homepage/case-study rendering is separated into section/project components.
 - Personal CTAs are now gated by verified/owner-approved destinations. GitHub remains active, the SDE resume is active from the repo-local PDF, LinkedIn is active at the owner-approved public profile, and email is active as the owner-approved `mailto:` contact.

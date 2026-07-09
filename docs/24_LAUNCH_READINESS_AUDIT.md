@@ -54,6 +54,15 @@ Reason:
 - The corridor is decorative and does not change evidence status, links, project ordering, screenshots, metrics, or role claims.
 - Motion remains CSS-only and respects `prefers-reduced-motion`.
 
+2026-07-08 scroll-motion correction:
+- Owner feedback showed the CSS-only Signal Corridor was too static and did not satisfy the reference-video intent for scroll-following storytelling.
+- Homepage now has a scroll-responsive Signal Journey using lightweight vanilla JavaScript, CSS variables, `requestAnimationFrame`, and `IntersectionObserver`.
+- Desktop behavior includes a signal rail with progress fill, moving orb, active station labels, and subtle section/card/timeline activation.
+- Mobile hides the rail and keeps content readable with no fixed element covering the page.
+- Reduced-motion users keep readable active states without continuous transition effects.
+- Evidence status, CTA destinations, project ordering, screenshots, metrics, role wording, and launch claims remain unchanged.
+- Readiness estimate remains 90 / 100 for conservative soft launch because this corrects presentation quality, not the remaining proof/audit blockers.
+
 2026-07-08 hero visual update:
 - Hero now has a lightweight abstract signal module showing Model, API, Memory, UI, and Proof as the first-viewport systems chain.
 - The module is decorative/architectural framing only; it does not introduce fake dashboards, fake terminal output, screenshots, metrics, or production claims.
@@ -82,6 +91,16 @@ Reason:
 - Final-polish viewport screenshots were captured for homepage desktop/mobile and the three featured project pages.
 - Screenshot QA caught a mobile hero/header clipping issue; the CSS and H1 structure were adjusted before the final mobile capture was accepted.
 - Current screenshot QA no longer carries the stale post-CTA/post-Loop visual caveat for the final-polish UI, though full-page stitched QA is still a possible future improvement.
+
+2026-07-09 deep-screening update:
+- Public UI copy no longer exposes large missing-proof, text-only, candidate-visual, launch-selection, or internal backlog language.
+- Pending proof details have moved into `docs/29_PENDING_FEATURES_AND_EVIDENCE.md`.
+- About now appears immediately after the hero, with Contact retained as the full CTA surface near the bottom.
+- Signal Journey has one ordered rail: Signal, About, Proof, Builds, Evolution, Toolkit, Systems, Contact. The hero Signal Path remains a static systems visual, not a second tracker.
+- Hybrid public evidence now reflects local `/predict` and offline Qwen fallback examples while keeping hosted-production latency, dataset accuracy, fallback-rate, zero-compute-cost, and deployment claims out of public copy.
+- The Loop now includes a repo-backed public system topology SVG; it supports topology/boundary explanation only.
+- Toolkit display is evidence-derived and documented in `docs/30_TECH_STACK_EVIDENCE.md`.
+- Provisional readiness estimate: 92 / 100 for conservative launch if final browser QA, final build, and push complete cleanly. Remaining blockers are manual visual QA/screenshot capture, unresolved dependency audit remediation, optional stronger Hybrid benchmark harness, Hybrid AI Insight screenshot, and deeper proof for stronger performance/reliability claims.
 
 ## Audit Method
 

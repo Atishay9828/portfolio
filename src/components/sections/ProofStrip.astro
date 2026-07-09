@@ -3,16 +3,16 @@ import SectionHeader from "../ui/SectionHeader.astro";
 import { evidenceSummary } from "../../data/evidence";
 ---
 
-<section class="section" id="proof-strip">
+<section class="section" id="proof-strip" data-journey-section data-journey-label="Proof anchors" data-journey-index="2">
   <div class="section-inner">
     <div class="section-marker" aria-hidden="true">
-      <span>02</span>
+      <span>03</span>
       <strong>Proof Anchors</strong>
     </div>
     <SectionHeader
       eyebrow="Proof strip"
       title="Evidence before claims"
-      body="This shell exposes what is verified, what is Known, and what still blocks production polish."
+      body="Verified links, local measurements, and prototype boundaries stay separated."
     />
     <div class="proof-grid">
       {evidenceSummary.map((item) => (

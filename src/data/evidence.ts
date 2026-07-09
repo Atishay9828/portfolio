@@ -12,11 +12,11 @@ export const evidenceSummary = [
   {
     label: "Asset boundary",
     value: "No fake media",
-    detail: "Missing screenshots, demos, and metrics are surfaced as pending evidence; the SDE resume is repo-local and active.",
+    detail: "Real screenshots, diagrams, and local measurements stay separated from product claims.",
   },
   {
     label: "Current status",
-    value: "Static shell",
-    detail: "Production polish remains blocked until proof assets are collected and reviewed.",
+    value: "Soft-launch ready",
+    detail: "Public copy stays concise while every claim stays tied to tracked proof.",
   },
 ];

@@ -69,7 +69,7 @@ Collaborative scope:
 
 - Exact file/module ownership remains not documented.
 - Training/evaluation artifacts still need review before robust-performance claims.
-- Demo media and final architecture diagram QA remain pending.
+- Demo media and rendered architecture diagram review remain pending.
 
 ### Unsafe Wording To Avoid
 
@@ -111,25 +111,25 @@ Collaborative scope:
 
 ### Still To Verify
 
-- Endpoint latency remains blocked.
-- Qwen fallback latency remains blocked.
-- Cost, fallback-rate, and accuracy claims remain blocked.
-- Deployment link and opened History AI Insight screenshot remain pending.
+- Hosted production/deployment latency is not claimed.
+- Fallback-rate, dataset accuracy, and repeatable public benchmark harness evidence remain unverified.
+- External API fallback cost can be described only as zero paid third-party inference cost for local Qwen runs, not zero compute cost.
+- Deployment link and opened History AI Insight screenshot are not public proof yet.
 
 ### Unsafe Wording To Avoid
 
 - "Production SLA."
 - "Optimized cost."
 - "Measured fallback-rate improvement."
-- "Measured endpoint latency."
-- "Measured Qwen fallback latency."
+- "Hosted production endpoint latency."
+- "Production Qwen fallback latency."
 - "Solved accuracy."
 - "Deployed production system."
 - Any public mention of the late YouTube submission or failure to qualify.
 
 ### Launch Readiness Status
 
-Partially ready for role/contribution copy. Solo/end-to-end/full-stack wording is owner-reviewed and usable. Endpoint latency, Qwen fallback latency, cost, fallback-rate, and accuracy remain blocked; benchmark limitations are unchanged.
+Partially ready for role/contribution copy. Solo/end-to-end/full-stack wording is owner-reviewed and usable. Local endpoint/fallback examples may be used with CPU-only and non-production caveats; hosted deployment latency, fallback-rate, dataset accuracy, and zero-compute-cost claims remain blocked.
 
 ## The Loop
 
@@ -159,7 +159,7 @@ Collaborative scope:
 
 - Exact module ownership remains collaborative/not separated.
 - Public-safe owner-provided workflow screenshots now exist for key visual states; raw profile/friends captures remain excluded, and exact module ownership is still collaborative/not separated.
-- Manual deployed workflow verification and system diagram revision remain pending.
+- Manual deployed workflow verification and rendered system diagram review remain pending.
 
 ### Unsafe Wording To Avoid
 

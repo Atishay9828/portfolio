@@ -19,8 +19,8 @@ if (!project) {
 <BaseLayout title={`${project.title} | AJ Portfolio`}>
   <section class="case-hero">
     <div class="section-inner">
-      <a class="case-back-link" href="/#featured-projects">← Featured work</a>
-      <div class="eyebrow">{project.tier} evidence-bound case study</div>
+      <a class="case-back-link" href="/#featured-projects">&lt;- Featured work</a>
+      <div class="eyebrow">{project.tier} case study</div>
       <h1>{project.title}</h1>
       <p class="lead">{project.subtitle}</p>
     </div>
@@ -35,18 +35,15 @@ if (!project) {
       <div class="section-inner case-study-stack">
         <div class="section-header">
           <div>
-            <span class="meta-label">Evidence-bound case study</span>
+            <span class="meta-label">Case study</span>
             <h2>{project.title}</h2>
           </div>
-          <p>
-            Built from the current evidence docs and imported repo artifacts. Candidate visuals are
-            real files, but remain labeled until final launch selection and QA.
-          </p>
+          <p>{project.problem}</p>
         </div>
 
         <div class="case-grid">
           <article class="case-panel">
-            <span class="meta-label">Problem and build</span>
+            <span class="meta-label">What I built</span>
             <p>{project.caseStudy.whatWasBuilt}</p>
           </article>
           <article class="case-panel">
@@ -82,7 +79,7 @@ if (!project) {
             </ul>
           </article>
           <article class="case-panel">
-            <span class="meta-label">Proof status</span>
+            <span class="meta-label">Proof highlights</span>
             <ul class="missing-list">
               {project.caseStudy.evidenceStatus.map((item) => <li>{item}</li>)}
             </ul>
@@ -91,15 +88,14 @@ if (!project) {
 
         {project.visual.assets && project.visual.assets.length > 0 && (
           <article class="case-panel">
-            <span class="meta-label">Visual evidence candidates</span>
+            <span class="meta-label">Visual proof</span>
             <div class="asset-grid">
               {project.visual.assets.map((asset) => (
                 <figure class="asset-card">
                   <img src={asset.src} alt={asset.alt ?? asset.label} loading="lazy" />
                   <figcaption>
                     <strong>{asset.label}</strong>
-                    <span>{asset.status}: {asset.note}</span>
-                    <small>{asset.source}</small>
+                    <span>{asset.note}</span>
                   </figcaption>
                 </figure>
               ))}
@@ -121,7 +117,7 @@ if (!project) {
             <span class="meta-label">{project.caseStudy.routingProof.label}</span>
             <h3>Local classifier/routing benchmark only</h3>
             <p>{project.caseStudy.routingProof.note}</p>
-            <div class="table-shell" role="region" aria-label="Pending routing decision table">
+            <div class="table-shell" role="region" aria-label="Routing evidence table">
               <table>
                 <thead>
                   <tr>
@@ -132,7 +128,7 @@ if (!project) {
                   {project.caseStudy.routingProof.rows.length === 0 ? (
                     <tr>
                       <td colspan={project.caseStudy.routingProof.columns.length}>
-                        No benchmark examples selected yet. Latency, cost, and routing numbers remain pending.
+                        No table rows selected.
                       </td>
                     </tr>
                   ) : (
@@ -160,34 +156,19 @@ if (!project) {
           </article>
         )}
 
-        <article class="case-panel evidence-boundary-panel">
+        <article class="case-panel boundary-panel">
           <div>
-            <span class="meta-label">Evidence boundary</span>
+            <span class="meta-label">Boundary</span>
             <p>
-              This page stays evidence-bound: no fake screenshots, fake dashboards, unsupported
-              benchmark numbers, deployment maturity, or ownership claims beyond the verified links
+              Evidence shown here is limited to verified links, reviewed visuals, local measurements,
               and owner-reviewed contribution notes.
             </p>
           </div>
-          <div class="evidence-boundary-grid">
+          <div class="boundary-grid">
             <div>
               <h3>Limitations / boundaries</h3>
               <ul class="missing-list">
                 {project.caseStudy.limitations.map((item) => <li>{item}</li>)}
-              </ul>
-            </div>
-            {project.contribution && (
-              <div>
-                <h3>Still to verify</h3>
-                <ul class="missing-list">
-                  {project.contribution.stillToVerify.map((item) => <li>{item}</li>)}
-                </ul>
-              </div>
-            )}
-            <div>
-              <h3>Next proof needed</h3>
-              <ul class="missing-list">
-                {project.caseStudy.nextEvidenceNeeded.map((item) => <li>{item}</li>)}
               </ul>
             </div>
           </div>

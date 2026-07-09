@@ -7,18 +7,167 @@ import Timeline from "../components/sections/Timeline.astro";
 import SecondaryWork from "../components/sections/SecondaryWork.astro";
 import LabProjects from "../components/sections/LabProjects.astro";
 import SystemsMap from "../components/sections/SystemsMap.astro";
-import AboutContact from "../components/sections/AboutContact.astro";
+import About from "../components/sections/About.astro";
+import Toolkit from "../components/sections/Toolkit.astro";
+import Contact from "../components/sections/Contact.astro";
 ---
 
 <BaseLayout title="AJ | AI Systems Engineer + Product Engineer">
-  <div class="signal-corridor">
+  <div class="signal-journey signal-corridor" data-journey-root>
+    <nav class="journey-rail" aria-label="Homepage signal journey">
+      <div class="journey-rail-track" aria-hidden="true">
+        <span class="journey-rail-fill"></span>
+        <span class="journey-rail-orb"></span>
+      </div>
+      <div class="journey-stations">
+        <a class="journey-station" href="#top" data-journey-nav="0">
+          <span>01</span>
+          <strong>Signal</strong>
+        </a>
+        <a class="journey-station" href="#about" data-journey-nav="1">
+          <span>02</span>
+          <strong>About</strong>
+        </a>
+        <a class="journey-station" href="#proof-strip" data-journey-nav="2">
+          <span>03</span>
+          <strong>Proof</strong>
+        </a>
+        <a class="journey-station" href="#featured-projects" data-journey-nav="3">
+          <span>04</span>
+          <strong>Builds</strong>
+        </a>
+        <a class="journey-station" href="#signal-evolution" data-journey-nav="4">
+          <span>05</span>
+          <strong>Evolution</strong>
+        </a>
+        <a class="journey-station" href="#toolkit" data-journey-nav="5">
+          <span>06</span>
+          <strong>Toolkit</strong>
+        </a>
+        <a class="journey-station" href="#systems-map" data-journey-nav="6">
+          <span>07</span>
+          <strong>Systems</strong>
+        </a>
+        <a class="journey-station" href="#contact" data-journey-nav="7">
+          <span>08</span>
+          <strong>Contact</strong>
+        </a>
+      </div>
+    </nav>
     <Hero />
+    <About />
     <ProofStrip />
     <FeaturedProjects />
     <Timeline />
+    <Toolkit />
+    <SystemsMap />
     <SecondaryWork />
     <LabProjects />
-    <SystemsMap />
-    <AboutContact />
+    <Contact />
   </div>
+  <script>
+    const initSignalJourney = () => {
+      const journeyRoot = document.querySelector<HTMLElement>("[data-journey-root]");
+
+      if (!journeyRoot) {
+        return;
+      }
+
+      const journeySections = Array.from(journeyRoot.querySelectorAll<HTMLElement>("[data-journey-section]"));
+      const journeyStations = Array.from(journeyRoot.querySelectorAll<HTMLElement>("[data-journey-nav]"));
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let frameRequested = false;
+
+      const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
+
+      const setActiveJourneySection = (activeIndex: number) => {
+        journeyRoot.dataset.activeJourney = String(activeIndex);
+
+        journeySections.forEach((section, index) => {
+          section.classList.toggle("is-active", index === activeIndex);
+          section.classList.toggle("is-before", index < activeIndex);
+          section.classList.toggle("is-after", index > activeIndex);
+        });
+
+        journeyStations.forEach((station, index) => {
+          station.classList.toggle("is-active", index === activeIndex);
+          station.classList.toggle("is-before", index < activeIndex);
+        });
+      };
+
+      const updateJourney = () => {
+        frameRequested = false;
+
+        if (journeySections.length === 0) {
+          return;
+        }
+
+        const viewportHeight = window.innerHeight || 1;
+        const firstSection = journeySections[0];
+        const lastSection = journeySections[journeySections.length - 1];
+        const journeyStart = firstSection.offsetTop - viewportHeight * 0.42;
+        const journeyEnd = lastSection.offsetTop + lastSection.offsetHeight - viewportHeight * 0.68;
+        const range = Math.max(journeyEnd - journeyStart, 1);
+        const rawProgress = clamp((window.scrollY - journeyStart) / range, 0, 1);
+        const targetLine = viewportHeight * 0.42;
+
+        let activeIndex = 0;
+        let closestDistance = Number.POSITIVE_INFINITY;
+
+        journeySections.forEach((section, index) => {
+          const rect = section.getBoundingClientRect();
+          const sectionAnchor = rect.top + rect.height * 0.28;
+          const distance = Math.abs(sectionAnchor - targetLine);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            activeIndex = index;
+          }
+        });
+
+        const progress = reducedMotion.matches
+          ? activeIndex / Math.max(journeySections.length - 1, 1)
+          : rawProgress;
+
+        journeyRoot.style.setProperty("--journey-progress", progress.toFixed(4));
+        journeyRoot.style.setProperty("--journey-progress-percent", `${(progress * 100).toFixed(2)}%`);
+        journeyRoot.style.setProperty("--journey-depth", (rawProgress * 100).toFixed(2));
+        setActiveJourneySection(activeIndex);
+      };
+
+      const requestJourneyUpdate = () => {
+        if (!frameRequested) {
+          frameRequested = true;
+          window.requestAnimationFrame(updateJourney);
+        }
+      };
+
+      const enterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("has-entered");
+            }
+          });
+        },
+        {
+          rootMargin: "0px 0px -12% 0px",
+          threshold: 0.12,
+        },
+      );
+
+      journeySections.forEach((section) => enterObserver.observe(section));
+
+      window.addEventListener("scroll", requestJourneyUpdate, { passive: true });
+      window.addEventListener("resize", requestJourneyUpdate);
+      reducedMotion.addEventListener("change", requestJourneyUpdate);
+      updateJourney();
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initSignalJourney, { once: true });
+    } else {
+      initSignalJourney();
+    }
+  </script>
 </BaseLayout>

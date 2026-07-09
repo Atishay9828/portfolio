@@ -22,6 +22,11 @@ Date: 2026-07-06
 - [x] Capture desktop and mobile screenshot QA for current Astro shell.
 - [x] Run final proof/visual launch-readiness audit.
 - [x] Import verified The Loop live-deployment workflow visuals.
+- [x] Remove public placeholder/backlog copy from recruiter-facing UI.
+- [x] Move pending proof details into `docs/29_PENDING_FEATURES_AND_EVIDENCE.md`.
+- [x] Move About near the top of the homepage and keep Contact near the bottom.
+- [x] Add evidence-derived Toolkit section and `docs/30_TECH_STACK_EVIDENCE.md`.
+- [x] Consolidate Signal Journey order around Signal, About, Proof, Builds, Evolution, Toolkit, Systems, and Contact.
 
 ## P1
 
@@ -30,6 +35,7 @@ Date: 2026-07-06
 - [x] Create The Loop workflow walkthrough.
 - [ ] Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
 - [ ] Render and mobile-QA selected Mermaid diagrams.
+- [x] Add The Loop repo-backed system topology SVG for public case-study support.
 - [ ] Add concrete design tokens.
 - [x] Import first portfolio-local candidate visuals from verified external repos.
 - [x] Visually review imported candidate visuals.

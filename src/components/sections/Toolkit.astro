@@ -1,0 +1,37 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import { toolkit } from "../../data/toolkit";
+
+const groupedToolkit = toolkit.reduce<Record<string, typeof toolkit>>((groups, item) => {
+  groups[item.category] = [...(groups[item.category] ?? []), item];
+  return groups;
+}, {});
+---
+
+<section class="section" id="toolkit" data-journey-section data-journey-label="Toolkit" data-journey-index="5">
+  <div class="section-inner">
+    <div class="section-marker" aria-hidden="true">
+      <span>06</span>
+      <strong>Toolkit</strong>
+    </div>
+    <SectionHeader
+      eyebrow="Toolkit"
+      title="Evidence-derived stack"
+      body="Technologies listed here come from dependencies, imports, configs, or project docs."
+    />
+    <div class="toolkit-grid">
+      {Object.entries(groupedToolkit).map(([category, items]) => (
+        <article class="toolkit-group">
+          <span class="meta-label">{category}</span>
+          <div class="toolkit-list">
+            {items.map((item) => (
+              <span class="toolkit-chip" title={`${item.sourceRepo} / ${item.proofFile}`}>
+                {item.name}
+              </span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,18 +1,28 @@
 ---
 import SectionHeader from "../ui/SectionHeader.astro";
-import { timelineStages } from "../../data/projects";
+import { featuredProjects, secondaryProjects, timelineStages } from "../../data/projects";
+
+const verifiedProjectRepoLinks = new Map(
+  [...featuredProjects, ...secondaryProjects].flatMap((project) => {
+    const repoLink = project.links.find(
+      (link) => link.status === "Verified" && link.label.toLowerCase().includes("github"),
+    );
+
+    return repoLink ? [[project.title, repoLink.href]] : [];
+  }),
+);
 ---
 
-<section class="section" id="signal-evolution">
+<section class="section" id="signal-evolution" data-journey-section data-journey-label="Evolution" data-journey-index="4">
   <div class="section-inner">
     <div class="section-marker" aria-hidden="true">
-      <span>04</span>
+      <span>05</span>
       <strong>Evolution</strong>
     </div>
     <SectionHeader
       eyebrow="Signal evolution"
-      title="Progression without project dumping"
-      body="Older and smaller projects stay as capability markers instead of competing with the featured work."
+      title="Build progression"
+      body="A concise path from fundamentals to product systems."
     />
     <div class="timeline">
       {timelineStages.map((stage, index) => (
@@ -22,8 +32,25 @@ import { timelineStages } from "../../data/projects";
             <span class="meta-label">{stage.label}</span>
           </div>
           <div>
-            <h3>{stage.capability}</h3>
-            <p>{stage.projects.join(" / ")}</p>
+            <h3>
+              {stage.projects.map((projectName, projectIndex) => {
+                const repoHref = verifiedProjectRepoLinks.get(projectName);
+
+                return (
+                  <>
+                    {projectIndex > 0 && <span class="project-separator"> / </span>}
+                    {repoHref ? (
+                      <a class="timeline-project-link" href={repoHref} target="_blank" rel="noreferrer">
+                        {projectName}
+                      </a>
+                    ) : (
+                      <span>{projectName}</span>
+                    )}
+                  </>
+                );
+              })}
+            </h3>
+            <p>{stage.capability}</p>
           </div>
         </article>
       ))}

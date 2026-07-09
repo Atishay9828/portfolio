@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">The Loop system diagram</title>
+  <desc id="desc">React frontend, FastAPI backend, auth, event discovery, RSVP, friends, chat, carpool, maps, recommendation logic, admin routes, WebSocket realtime, and database layers.</desc>
+  <rect width="1280" height="760" fill="#070809"/>
+  <g fill="none" stroke="#273039" stroke-width="1">
+    <path d="M80 120h1120M80 260h1120M80 400h1120M80 540h1120"/>
+    <path d="M240 70v620M520 70v620M800 70v620M1080 70v620"/>
+  </g>
+  <text x="80" y="72" fill="#F2F5F7" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">The Loop</text>
+  <text x="80" y="104" fill="#9AA4AF" font-family="JetBrains Mono, Consolas, monospace" font-size="14">Campus event coordination system map</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2EF2C5"/>
+    </marker>
+    <style>
+      .node{fill:#111417;stroke:#3B4651;stroke-width:2;rx:8}
+      .node-strong{fill:#111417;stroke:#2EF2C5;stroke-width:2;rx:8}
+      .node-proof{fill:#111417;stroke:#E7F75A;stroke-width:2;rx:8}
+      .label{fill:#F2F5F7;font-family:Space Grotesk,Arial,sans-serif;font-size:18px;font-weight:700}
+      .small{fill:#9AA4AF;font-family:JetBrains Mono,Consolas,monospace;font-size:12px}
+      .edge{stroke:#2EF2C5;stroke-width:2.5;marker-end:url(#arrow)}
+      .muted-edge{stroke:#3B4651;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <g>
+    <rect class="node-strong" x="80" y="170" width="190" height="86"/>
+    <text class="label" x="104" y="204">React / Vite</text>
+    <text class="small" x="104" y="230">events, maps, profile, chat</text>
+
+    <rect class="node-strong" x="360" y="170" width="190" height="86"/>
+    <text class="label" x="384" y="204">FastAPI</text>
+    <text class="small" x="384" y="230">REST routes / main.py</text>
+
+    <rect class="node" x="640" y="126" width="210" height="74"/>
+    <text class="label" x="664" y="158">Auth</text>
+    <text class="small" x="664" y="182">JWT, Google OAuth</text>
+
+    <rect class="node" x="640" y="222" width="210" height="74"/>
+    <text class="label" x="664" y="254">Events / RSVP</text>
+    <text class="small" x="664" y="278">list, join, admin</text>
+
+    <rect class="node" x="640" y="318" width="210" height="74"/>
+    <text class="label" x="664" y="350">Social</text>
+    <text class="small" x="664" y="374">friends, chat history</text>
+
+    <rect class="node" x="640" y="414" width="210" height="74"/>
+    <text class="label" x="664" y="446">Carpool / Maps</text>
+    <text class="small" x="664" y="470">coordination + location</text>
+
+    <rect class="node" x="640" y="510" width="210" height="74"/>
+    <text class="label" x="664" y="542">Recommendation</text>
+    <text class="small" x="664" y="566">interest matching logic</text>
+
+    <rect class="node-proof" x="970" y="210" width="210" height="112"/>
+    <text class="label" x="994" y="246">Database layer</text>
+    <text class="small" x="994" y="272">Users, Events, Interests</text>
+    <text class="small" x="994" y="292">Carpool, Friends, Chat</text>
+
+    <rect class="node-proof" x="970" y="394" width="210" height="96"/>
+    <text class="label" x="994" y="430">WebSocket</text>
+    <text class="small" x="994" y="456">/ws/chat/{client_id}</text>
+    <text class="small" x="994" y="476">ConnectionManager</text>
+  </g>
+  <g fill="none">
+    <path class="edge" d="M270 213h90"/>
+    <path class="edge" d="M550 213c44 0 48-50 90-50"/>
+    <path class="edge" d="M550 213h90"/>
+    <path class="edge" d="M550 213c44 0 48 142 90 142"/>
+    <path class="edge" d="M550 213c44 0 48 238 90 238"/>
+    <path class="edge" d="M550 213c44 0 48 334 90 334"/>
+    <path class="muted-edge" d="M850 259h120"/>
+    <path class="muted-edge" d="M850 355c58 0 64 87 120 87"/>
+    <path class="muted-edge" d="M850 451h120"/>
+    <path class="muted-edge" d="M850 547c54 0 62-105 120-105"/>
+  </g>
+  <text x="80" y="676" fill="#9AA4AF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="15">Evidence scope: repo-backed app topology only. This diagram does not claim production scale, reliability, monitoring, backups, or exact module ownership.</text>
+</svg>

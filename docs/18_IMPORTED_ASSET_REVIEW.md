@@ -1,6 +1,6 @@
 # 18_IMPORTED_ASSET_REVIEW.md
 
-Date: 2026-07-06
+Date: 2026-07-09
 
 Purpose:
 - Record the visual and privacy review of imported portfolio project assets.
@@ -32,6 +32,7 @@ Scope:
 | The Loop | `public/assets/projects/the-loop/the-loop-landing-live.png` | Verified supporting visual | Supersedes low-resolution `landing_page.jpg` |
 | The Loop | `public/assets/projects/the-loop/the-loop-profile-live-redacted.png` | Verified redacted supporting visual | Profile-flow support only; contact details masked |
 | The Loop | `public/assets/projects/the-loop/the-loop-friends-live-redacted.png` | Verified redacted supporting visual | Friends-flow support only; sent-request username masked |
+| The Loop | `public/assets/projects/the-loop/the-loop-system-diagram.svg` | Verified repo-backed topology diagram | Case-study system boundary support only; not scale or reliability proof |
 
 ## Asset Reviews
 
@@ -333,6 +334,30 @@ Notes:
 - The old `landing_page.jpg` remains in the repo but is superseded by `the-loop-landing-live.png`.
 - 2026-07-08 verification confirmed these public files were already present in `public/assets/projects/the-loop/`; no new import or crop was performed in this pass.
 
+### The Loop System Diagram SVG
+
+File path:
+- `public/assets/projects/the-loop/the-loop-system-diagram.svg`
+
+Project:
+- The Loop
+
+Source:
+- Generated from `docs/diagrams/the-loop-system.md`, `docs/diagrams/the-loop-realtime-flow.md`, and `docs/diagrams/the-loop-auth-flow.md`.
+
+Visual quality:
+- Good for case-study system-boundary support. The diagram shows the React/Vite client, FastAPI backend, auth, event/RSVP, social, carpool/maps, recommendation, persistence, and WebSocket layers without inventing cloud infrastructure.
+
+Privacy risk:
+- Low. No private account data, tokens, chat content, or user identifiers are included.
+
+Recommended usage:
+- Use as supporting case-study proof for documented topology and boundaries.
+- Do not use it as production scale, reliability, monitoring, backup, or exact module-ownership evidence.
+
+Final status:
+- Verified repo-backed topology diagram.
+
 ## Homepage-Approved Assets
 
 - `public/assets/projects/mahoraga/dashboard_preview.png`
@@ -341,6 +366,7 @@ Notes:
 
 - `public/assets/projects/mahoraga/stitch_aero_screenshot.png`
 - `public/assets/projects/the-loop/interest_selection.png`
+- `public/assets/projects/the-loop/the-loop-system-diagram.svg`
 
 ## Replacement Needed
 
@@ -367,6 +393,6 @@ Notes:
 - Hybrid still needs measured benchmark/routing evidence and any end-to-end backend/model-output capture required for final inference proof.
 - Hybrid `categories.png` and `history.png` need sample-data labeling in final surrounding copy if used.
 - Hybrid History AI Insight panel screenshot remains Needed before AI insights are used as visual portfolio evidence.
-- The Loop now has high-resolution public-safe live visuals for landing/auth, event discovery/list, event detail/actions, map view, and redacted profile/friends states. Remaining Loop visual work is optional admin/chat/carpool proof only if those flows are featured, plus final diagram QA and manual reliability verification.
+- The Loop now has high-resolution public-safe live visuals for landing/auth, event discovery/list, event detail/actions, map view, and redacted profile/friends states, plus a repo-backed system topology SVG. Remaining Loop visual work is optional admin/chat/carpool proof only if those flows are featured, rendered/mobile review for the diagram, and manual reliability verification.
 - Mahoraga still needs demo media, architecture diagram revision, and interpreted evaluation evidence before metric claims.
 - Owner-reviewed role/contribution wording now exists for all featured projects; exact module/file ownership and stronger proof claims remain governed by `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`.

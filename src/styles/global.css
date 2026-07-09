@@ -55,9 +55,16 @@ button:focus-visible {
   min-height: 100vh;
 }
 
+.signal-journey {
+  --journey-progress: 0;
+  --journey-progress-percent: 0%;
+  --journey-depth: 0;
+  position: relative;
+  overflow: clip;
+}
+
 .signal-corridor {
   position: relative;
-  overflow: hidden;
 }
 
 .signal-corridor::before {
@@ -68,17 +75,141 @@ button:focus-visible {
   left: max(24px, calc((100vw - 1200px) / 2 + 24px));
   width: 1px;
   pointer-events: none;
+  opacity: 0.34;
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(46, 242, 197, 0.12) 9%,
-    rgba(46, 242, 197, 0.46) 24%,
-    rgba(231, 247, 90, 0.36) 55%,
-    rgba(255, 106, 61, 0.28) 78%,
+    rgba(46, 242, 197, 0.1) 12%,
+    rgba(46, 242, 197, 0.2) 32%,
+    rgba(231, 247, 90, 0.18) 62%,
+    rgba(255, 106, 61, 0.14) 82%,
     transparent 100%
   );
-  box-shadow: 0 0 22px rgba(46, 242, 197, 0.18);
+  box-shadow: 0 0 22px rgba(46, 242, 197, 0.1);
   mask-image: linear-gradient(180deg, transparent 0%, #000 9%, #000 88%, transparent 100%);
+}
+
+.journey-rail {
+  position: fixed;
+  z-index: 9;
+  top: 118px;
+  left: max(18px, calc((100vw - 1200px) / 2 + 18px));
+  display: none;
+  width: 128px;
+  color: var(--text-muted);
+}
+
+.journey-rail-track {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 13px;
+  width: 2px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(59, 70, 81, 0.74);
+}
+
+.journey-rail-fill {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: inherit;
+  background: linear-gradient(180deg, var(--accent-live), var(--accent-proof), var(--accent-alert));
+  box-shadow: 0 0 22px rgba(46, 242, 197, 0.4);
+  transform: scaleY(var(--journey-progress));
+  transform-origin: top;
+  transition: transform 120ms linear;
+}
+
+.journey-rail-orb {
+  position: absolute;
+  top: var(--journey-progress-percent);
+  left: 50%;
+  display: block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--bg-base);
+  border-radius: 999px;
+  background: var(--accent-live);
+  box-shadow:
+    0 0 0 6px rgba(46, 242, 197, 0.1),
+    0 0 24px rgba(46, 242, 197, 0.58);
+  transform: translate(-50%, -50%);
+  transition: top 120ms linear;
+}
+
+.journey-stations {
+  display: grid;
+  gap: 9px;
+  padding-left: 30px;
+}
+
+.journey-station {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 30px;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.46;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.journey-station span {
+  color: var(--accent-proof);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.68rem;
+}
+
+.journey-station strong {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.journey-station.is-before {
+  opacity: 0.62;
+}
+
+.journey-station.is-active {
+  color: var(--text-primary);
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.journey-station.is-active strong {
+  color: var(--accent-live);
+}
+
+.signal-journey [data-journey-section] {
+  opacity: 0.74;
+  transform: translateY(16px);
+  transition:
+    opacity 360ms ease,
+    transform 360ms ease,
+    border-color 240ms ease,
+    background-color 240ms ease;
+}
+
+.signal-journey [data-journey-section].has-entered {
+  opacity: 0.9;
+  transform: translateY(8px);
+}
+
+.signal-journey [data-journey-section].is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.signal-journey [data-journey-section].is-before {
+  opacity: 0.92;
 }
 
 .section-marker {
@@ -116,6 +247,21 @@ button:focus-visible {
 .section-marker strong {
   color: var(--text-primary);
   font-weight: 700;
+}
+
+.is-active .section-marker {
+  border-color: rgba(46, 242, 197, 0.55);
+  color: var(--text-primary);
+  box-shadow:
+    0 0 0 1px rgba(46, 242, 197, 0.08),
+    0 14px 36px rgba(46, 242, 197, 0.08);
+}
+
+.is-active .section-marker::before {
+  background: var(--accent-proof);
+  box-shadow:
+    0 0 0 6px rgba(231, 247, 90, 0.12),
+    0 0 26px rgba(231, 247, 90, 0.52);
 }
 
 @keyframes signal-node-pulse {
@@ -209,7 +355,7 @@ button:focus-visible {
 }
 
 .icon-only:hover {
-  background: rgba(124, 199, 255, 0.1);
+  background: rgba(46, 242, 197, 0.1);
   color: var(--accent-live);
   text-decoration: none;
   transform: translateY(-1px);
@@ -232,6 +378,7 @@ button:focus-visible {
 .nav-links a:hover,
 .text-link:hover,
 .case-back-link:hover {
+  color: var(--accent-live);
   text-decoration: underline;
 }
 
@@ -470,6 +617,7 @@ h3 {
 
 .signal-chain span {
   position: relative;
+  z-index: 1;
   display: grid;
   min-height: 58px;
   place-items: center;
@@ -481,6 +629,11 @@ h3 {
   font-size: 0.72rem;
   text-align: center;
   box-shadow: 0 0 20px rgba(46, 242, 197, 0.05);
+  transition:
+    border-color 200ms ease,
+    color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .signal-chain span:nth-child(3) {
@@ -506,6 +659,10 @@ h3 {
   background: rgba(7, 8, 9, 0.82);
   color: var(--text-muted);
   font-size: 0.78rem;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background-color 180ms ease;
 }
 
 .anchor-list {
@@ -573,6 +730,48 @@ h3 {
   background: var(--bg-soft);
 }
 
+.signal-journey .proof-cell,
+.signal-journey .project-module,
+.signal-journey .compact-module,
+.signal-journey .lab-entry,
+.signal-journey .timeline-card,
+.signal-journey .case-panel {
+  transition:
+    border-color 240ms ease,
+    box-shadow 240ms ease,
+    opacity 280ms ease,
+    transform 280ms ease,
+    background-color 240ms ease;
+}
+
+.signal-journey [data-journey-section]:not(.is-active) .proof-cell,
+.signal-journey [data-journey-section]:not(.is-active) .project-module,
+.signal-journey [data-journey-section]:not(.is-active) .compact-module,
+.signal-journey [data-journey-section]:not(.is-active) .lab-entry,
+.signal-journey [data-journey-section]:not(.is-active) .timeline-card,
+.signal-journey [data-journey-section]:not(.is-active) .case-panel {
+  opacity: 0.78;
+  transform: translateY(10px);
+}
+
+.signal-journey [data-journey-section].is-active .proof-cell,
+.signal-journey [data-journey-section].is-active .project-module,
+.signal-journey [data-journey-section].is-active .compact-module,
+.signal-journey [data-journey-section].is-active .lab-entry,
+.signal-journey [data-journey-section].is-active .timeline-card,
+.signal-journey [data-journey-section].is-active .case-panel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.signal-journey [data-journey-section].is-active .proof-cell,
+.signal-journey [data-journey-section].is-active .project-module:first-child,
+.signal-journey [data-journey-section].is-active .timeline-card:last-child,
+.signal-journey [data-journey-section].is-active .lab-entry:hover {
+  border-color: rgba(46, 242, 197, 0.42);
+  box-shadow: 0 18px 58px rgba(46, 242, 197, 0.07);
+}
+
 .proof-cell strong {
   display: block;
   margin: 4px 0;
@@ -591,6 +790,14 @@ h3 {
 .featured-stack {
   display: grid;
   gap: 28px;
+}
+
+.signal-journey .featured-stack .project-module:nth-child(2) {
+  transition-delay: 70ms;
+}
+
+.signal-journey .featured-stack .project-module:nth-child(3) {
+  transition-delay: 140ms;
 }
 
 .project-module {
@@ -637,7 +844,7 @@ h3 {
   padding-left: 12px;
 }
 
-.fact-pending {
+.fact-note {
   border-left-color: var(--accent-alert);
 }
 
@@ -659,6 +866,56 @@ h3 {
   margin-top: 18px;
 }
 
+.proof-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.proof-link {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 54px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: rgba(7, 8, 9, 0.5);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.proof-link:hover {
+  border-color: var(--accent-live);
+  background: rgba(46, 242, 197, 0.08);
+  color: var(--accent-live);
+  transform: translateY(-1px);
+}
+
+.proof-link strong,
+.proof-link small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.proof-link strong {
+  color: currentColor;
+  font-size: 0.88rem;
+}
+
+.proof-link small {
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
 .evidence-panel {
   align-self: stretch;
   display: flex;
@@ -678,6 +935,52 @@ h3 {
 .evidence-missing .status-pill {
   color: var(--accent-alert);
   border-color: rgba(255, 106, 61, 0.5);
+}
+
+.about-focus-grid,
+.toolkit-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.focus-line {
+  color: var(--accent-proof);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.86rem;
+}
+
+.focus-card,
+.toolkit-group {
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(17, 20, 23, 0.86);
+}
+
+.focus-card p {
+  margin: 8px 0 0;
+  color: var(--text-muted);
+}
+
+.toolkit-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.toolkit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.toolkit-chip {
+  border: 1px solid rgba(46, 242, 197, 0.25);
+  border-radius: 8px;
+  padding: 6px 8px;
+  color: var(--text-primary);
+  background: rgba(46, 242, 197, 0.06);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.72rem;
 }
 
 .evidence-assets {
@@ -734,8 +1037,43 @@ h3 {
   border-left: 2px solid var(--border-strong);
 }
 
+.signal-journey .timeline-card:nth-child(2),
+.signal-journey .compact-grid .compact-module:nth-child(2),
+.signal-journey .lab-grid .lab-entry:nth-child(2),
+.signal-journey .capability-grid .lab-entry:nth-child(2) {
+  transition-delay: 60ms;
+}
+
+.signal-journey .timeline-card:nth-child(3),
+.signal-journey .lab-grid .lab-entry:nth-child(3),
+.signal-journey .capability-grid .lab-entry:nth-child(3) {
+  transition-delay: 120ms;
+}
+
+.signal-journey .timeline-card:nth-child(4),
+.signal-journey .lab-grid .lab-entry:nth-child(4),
+.signal-journey .capability-grid .lab-entry:nth-child(4) {
+  transition-delay: 180ms;
+}
+
 .timeline-card:last-child {
   border-left-color: var(--accent-live);
+}
+
+.timeline-project-link {
+  color: var(--text-strong);
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.timeline-project-link:hover,
+.timeline-project-link:focus-visible {
+  color: var(--accent-live);
+  text-decoration: underline;
+}
+
+.project-separator {
+  color: var(--text-muted);
 }
 
 .timeline-index {
@@ -766,6 +1104,11 @@ h3 {
 .compact-module {
   padding: 20px;
   background: rgba(17, 20, 23, 0.72);
+}
+
+.compact-summary {
+  margin: 8px 0 0;
+  color: var(--text-muted);
 }
 
 .lab-grid,
@@ -897,20 +1240,20 @@ td {
   margin-top: 10px;
 }
 
-.evidence-boundary-panel {
+.boundary-panel {
   display: grid;
   gap: 22px;
   border-color: rgba(255, 106, 61, 0.34);
   background: rgba(17, 20, 23, 0.84);
 }
 
-.evidence-boundary-grid {
+.boundary-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
 }
 
-.evidence-boundary-grid h3 {
+.boundary-grid h3 {
   font-size: 1rem;
 }
 
@@ -945,6 +1288,20 @@ th {
   padding-left: 12px;
 }
 
+@media (min-width: 1180px) {
+  .journey-rail {
+    display: block;
+  }
+
+  .signal-journey .section-inner {
+    padding-left: 156px;
+  }
+
+  .signal-journey .hero-grid {
+    grid-template-columns: minmax(0, 6.7fr) minmax(280px, 4fr);
+  }
+}
+
 @media (max-width: 860px) {
   .nav-inner,
   .section-inner {
@@ -972,6 +1329,10 @@ th {
     opacity: 0.48;
   }
 
+  .journey-rail {
+    display: none;
+  }
+
   .hero-grid,
   .section-header,
   .project-module,
@@ -993,7 +1354,8 @@ th {
   .lab-grid,
   .capability-grid,
   .workflow-grid,
-  .evidence-boundary-grid {
+  .toolkit-grid,
+  .boundary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1011,7 +1373,8 @@ th {
 
   .nav-links,
   .cta-row,
-  .link-row {
+  .link-row,
+  .proof-link-grid {
     align-items: stretch;
   }
 
@@ -1054,6 +1417,19 @@ th {
     display: none;
   }
 
+  .signal-journey [data-journey-section],
+  .signal-journey [data-journey-section].has-entered,
+  .signal-journey [data-journey-section].is-active,
+  .signal-journey [data-journey-section]:not(.is-active) .proof-cell,
+  .signal-journey [data-journey-section]:not(.is-active) .project-module,
+  .signal-journey [data-journey-section]:not(.is-active) .compact-module,
+  .signal-journey [data-journey-section]:not(.is-active) .lab-entry,
+  .signal-journey [data-journey-section]:not(.is-active) .timeline-card,
+  .signal-journey [data-journey-section]:not(.is-active) .case-panel {
+    opacity: 1;
+    transform: none;
+  }
+
   .section-marker {
     margin-bottom: 14px;
     font-size: 0.7rem;
@@ -1063,7 +1439,8 @@ th {
   .lab-grid,
   .capability-grid,
   .workflow-grid,
-  .evidence-boundary-grid {
+  .toolkit-grid,
+  .boundary-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1140,5 +1517,28 @@ th {
 
   .section-marker::before {
     animation: none;
+  }
+
+  .journey-rail-fill,
+  .journey-rail-orb,
+  .signal-journey [data-journey-section],
+  .signal-journey .proof-cell,
+  .signal-journey .project-module,
+  .signal-journey .compact-module,
+  .signal-journey .lab-entry,
+  .signal-journey .timeline-card,
+  .signal-journey .case-panel {
+    transition: none !important;
+  }
+
+  .signal-journey [data-journey-section],
+  .signal-journey [data-journey-section]:not(.is-active) .proof-cell,
+  .signal-journey [data-journey-section]:not(.is-active) .project-module,
+  .signal-journey [data-journey-section]:not(.is-active) .compact-module,
+  .signal-journey [data-journey-section]:not(.is-active) .lab-entry,
+  .signal-journey [data-journey-section]:not(.is-active) .timeline-card,
+  .signal-journey [data-journey-section]:not(.is-active) .case-panel {
+    opacity: 1;
+    transform: none;
   }
 }

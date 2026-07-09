@@ -1,6 +1,6 @@
 # 11_LINK_REGISTRY.md
 
-Date: 2026-07-03
+Date: 2026-07-09
 
 Purpose:
 - Centralize all known, verified, missing, and TODO links.
@@ -35,9 +35,9 @@ Purpose:
 
 | Project | URL | Status | Notes |
 |---|---|---|---|
-| Mahoraga | `https://github.com/Atishay9828/meta_Mahoraga` | Verified | Loads as public GitHub repo `Atishay9828/meta_Mahoraga`. Verified 2026-06-26. |
-| Hybrid GenAI Transaction Categorizer | `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization` | Verified | GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`. Verified 2026-06-26. |
-| The Loop | `https://github.com/Atishay9828/TIET-LOOP` | Verified | GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. |
+| Mahoraga | `https://github.com/Atishay9828/meta_Mahoraga` | Verified | Loads as public GitHub repo `Atishay9828/meta_Mahoraga`. Verified 2026-06-26. Used for compact proof links and timeline project-name link. |
+| Hybrid GenAI Transaction Categorizer | `https://github.com/Atishay9828/Hybrid-GenAI-Transaction-Categorization` | Verified | GitHub API confirms public repo `Atishay9828/Hybrid-GenAI-Transaction-Categorization`. Verified 2026-06-26. Used for compact proof links and timeline project-name link. |
+| The Loop | `https://github.com/Atishay9828/TIET-LOOP` | Verified | GitHub API confirms public repo `Atishay9828/TIET-LOOP`. Verified 2026-06-26. Used for compact proof links and timeline project-name link. |
 
 ## Featured Project Demos
 
@@ -51,8 +51,8 @@ Purpose:
 
 | Project | URL | Status | Notes |
 |---|---|---|---|
-| AI Resume Tailoring Engine | `https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly` | Verified | GitHub API confirms public repo `Atishay9828/AI_Resume_Builder_ATS_Friendly`. Verified 2026-06-26. |
-| Webcam Motion Alert System | `https://github.com/Atishay9828/Webcam-Alert-App` | Verified | GitHub API confirms public repo `Atishay9828/Webcam-Alert-App`. Verified 2026-06-26. |
+| AI Resume Tailoring Engine | `https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly` | Verified | GitHub API confirms public repo `Atishay9828/AI_Resume_Builder_ATS_Friendly`. Verified 2026-06-26. Used for compact proof links and timeline project-name link. |
+| Webcam Motion Alert System | `https://github.com/Atishay9828/Webcam-Alert-App` | Verified | GitHub API confirms public repo `Atishay9828/Webcam-Alert-App`. Verified 2026-06-26. Used for compact proof links and timeline project-name link. |
 
 ## Lab Project Repos
 

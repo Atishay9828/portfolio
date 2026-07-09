@@ -4,7 +4,7 @@ import { links } from "../../data/links";
 import Icon from "../ui/Icon.astro";
 ---
 
-<section class="hero" id="top">
+<section class="hero" id="top" data-journey-section data-journey-label="Signal" data-journey-index="0">
   <div class="section-inner hero-grid">
     <div class="hero-copy">
       <div class="section-marker" aria-hidden="true">
@@ -31,7 +31,7 @@ import Icon from "../ui/Icon.astro";
         </a>
         {
           links.github.href && (
-            <a class="button secondary" href={links.github.href}>
+            <a class="button secondary" href={links.github.href} target="_blank" rel="noreferrer">
               <Icon name="github" />
               <span>GitHub</span>
             </a>
@@ -51,7 +51,7 @@ import Icon from "../ui/Icon.astro";
       <div class="hero-signal-map" aria-label="Abstract systems chain">
         <div class="signal-map-header">
           <span class="meta-label">Signal path</span>
-          <span>static proof chain</span>
+          <span>Model to proof chain</span>
         </div>
         <div class="signal-chain" aria-hidden="true">
           {["Model", "API", "Memory", "UI", "Proof"].map((item) => (

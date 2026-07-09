@@ -1,10 +1,39 @@
 ---
 import type { Project } from "../../data/projects";
+import Icon from "../ui/Icon.astro";
 
 const { project, compact = false } = Astro.props as { project: Project; compact?: boolean };
 const moduleClass = compact ? "compact-module" : "project-module";
 const visualAssets = project.visual.assets ?? [];
 const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCase().replaceAll(" ", "-")}`;
+
+type ProjectActionIcon = "github" | "notebook" | "demo" | "video" | "deployment" | "page" | "arrowRight";
+
+const getAction = (label: string): { icon: ProjectActionIcon; label: string; description: string } => {
+  const normalizedLabel = label.toLowerCase();
+
+  if (normalizedLabel.includes("github")) {
+    return { icon: "github", label: "GitHub", description: "Source repo" };
+  }
+
+  if (normalizedLabel.includes("kaggle") || normalizedLabel.includes("notebook")) {
+    return { icon: "notebook", label: "Kaggle", description: "Training notebook" };
+  }
+
+  if (normalizedLabel.includes("hugging")) {
+    return { icon: "demo", label: "Hugging Face", description: "Interactive demo" };
+  }
+
+  if (normalizedLabel.includes("youtube")) {
+    return { icon: "video", label: "YouTube", description: "Walkthrough" };
+  }
+
+  if (normalizedLabel.includes("deployment") || normalizedLabel.includes("live")) {
+    return { icon: "deployment", label: "Live", description: "Deployment" };
+  }
+
+  return { icon: "arrowRight", label, description: "External proof" };
+};
 ---
 
 <article class={moduleClass}>
@@ -15,41 +44,60 @@ const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCa
     <div class="project-meta">
       {project.stack.map((item) => <span class="tag">{item}</span>)}
     </div>
-    <div class="project-facts">
-      <div class="fact">
-        <strong>Portfolio role</strong>
-        <span>{project.portfolioRole}</span>
-      </div>
-      <div class="fact">
-        <strong>Problem</strong>
-        <span>{project.problem}</span>
-      </div>
-      <div class="fact">
-        <strong>Key engineering decision</strong>
-        <span>{project.keyDecision}</span>
-      </div>
-      <div class="fact">
-        <strong>Limitation / tradeoff</strong>
-        <span>{project.tradeoff}</span>
-      </div>
-      {project.contribution ? (
-        <div class="fact fact-pending">
-          <strong>{project.contribution.roleLabel}</strong>
-          <span>{project.contribution.summary}</span>
+    {compact ? (
+      <p class="compact-summary">{project.problem}</p>
+    ) : (
+      <div class="project-facts">
+        <div class="fact">
+          <strong>Portfolio role</strong>
+          <span>{project.portfolioRole}</span>
         </div>
-      ) : (
-        <div class="fact fact-pending">
-          <strong>{project.roleStatus}</strong>
+        <div class="fact">
+          <strong>Problem</strong>
+          <span>{project.problem}</span>
         </div>
-      )}
-    </div>
-    <div class="link-row" aria-label={`${project.title} links`}>
-      {project.links.map((link) => (
-        <a class="button secondary" href={link.href}>
-          {link.label}
+        <div class="fact">
+          <strong>Key engineering decision</strong>
+          <span>{project.keyDecision}</span>
+        </div>
+        <div class="fact">
+          <strong>Limitation / tradeoff</strong>
+          <span>{project.tradeoff}</span>
+        </div>
+        {project.contribution ? (
+          <div class="fact fact-note">
+            <strong>{project.contribution.roleLabel}</strong>
+            <span>{project.contribution.summary}</span>
+          </div>
+        ) : (
+          <div class="fact fact-note">
+            <strong>{project.roleStatus}</strong>
+          </div>
+        )}
+      </div>
+    )}
+    <div class="proof-link-grid" aria-label={`${project.title} links`}>
+      {project.links.map((link) => {
+        const action = getAction(link.label);
+        return (
+          <a class="proof-link" href={link.href} target="_blank" rel="noreferrer">
+            <Icon name={action.icon} />
+            <span>
+              <strong>{action.label}</strong>
+              <small>{action.description}</small>
+            </span>
+          </a>
+        );
+      })}
+      {project.tier === "Featured" && (
+        <a class="proof-link" href={`/projects/${project.slug}`}>
+          <Icon name="page" />
+          <span>
+            <strong>Case study</strong>
+            <small>Evidence page</small>
+          </span>
         </a>
-      ))}
-      {project.tier === "Featured" && <a class="button secondary" href={`/projects/${project.slug}`}>Case study shell</a>}
+      )}
     </div>
   </div>
   {!compact && (
@@ -60,7 +108,7 @@ const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCa
         <p>{project.visual.detail}</p>
       </div>
       {visualAssets.length > 0 && (
-        <div class="evidence-assets" aria-label={`${project.title} visual evidence candidates`}>
+        <div class="evidence-assets" aria-label={`${project.title} visual evidence`}>
           {visualAssets.slice(0, 2).map((asset) => (
             <figure class="evidence-asset">
               <img src={asset.src} alt={asset.alt ?? asset.label} loading="lazy" />
@@ -72,12 +120,6 @@ const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCa
           ))}
         </div>
       )}
-      <div>
-        <strong>Missing proof</strong>
-        <ul class="missing-list">
-          {project.missingProof.map((item) => <li>{item}</li>)}
-        </ul>
-      </div>
     </aside>
   )}
 </article>

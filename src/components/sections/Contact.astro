@@ -1,41 +1,24 @@
 ---
-import SectionHeader from "../ui/SectionHeader.astro";
 import { links } from "../../data/links";
 import Icon from "../ui/Icon.astro";
 ---
 
-<section class="section" id="about">
-  <div class="section-inner about-grid">
-    <div>
-      <SectionHeader
-        eyebrow="About"
-        title="Computer Engineering, product-minded systems work"
-        body="AJ is a 3rd-year Computer Engineering student focused on software engineering, AI/ML, system design, DSA, automation, startups, product development, AI memory systems, and scalable architecture."
-      />
-    </div>
-    <aside class="case-panel">
-      <span class="meta-label">Current focus</span>
-      <p>AI agents, LLM applications, automation systems, product engineering, and maintainable software architecture.</p>
-    </aside>
-  </div>
-</section>
-
-<section class="section" id="contact">
+<section class="section" id="contact" data-journey-section data-journey-label="Contact" data-journey-index="7">
   <div class="section-inner contact-grid">
     <div>
       <div class="section-marker" aria-hidden="true">
-        <span>06</span>
+        <span>08</span>
         <strong>Contact</strong>
       </div>
       <div class="eyebrow">Contact</div>
       <h2>Inspect the work or reach out.</h2>
-      <p class="lead">GitHub, SDE resume, LinkedIn, and email are owner-approved public contact paths.</p>
+      <p class="lead">GitHub, SDE resume, LinkedIn, and email are the approved public contact paths.</p>
     </div>
     <div class="case-panel">
       <div class="link-row">
         {
           links.github.href && (
-            <a class="button secondary" href={links.github.href}>
+            <a class="button secondary" href={links.github.href} target="_blank" rel="noreferrer">
               <Icon name="github" />
               <span>GitHub</span>
             </a>
@@ -51,7 +34,7 @@ import Icon from "../ui/Icon.astro";
         }
         {
           links.linkedin.href && (
-            <a class="button secondary" href={links.linkedin.href}>
+            <a class="button secondary" href={links.linkedin.href} target="_blank" rel="noreferrer">
               <Icon name="linkedin" />
               <span>LinkedIn</span>
             </a>

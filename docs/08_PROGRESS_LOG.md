@@ -7,6 +7,40 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-07-09 Deep Screening Public Cleanup
+
+Completed:
+- Removed recruiter-facing placeholder/backlog language from public source surfaces.
+- Split About and Contact so About appears directly after the hero while Contact remains the full CTA surface near the bottom.
+- Reordered the Signal Journey to Signal, About, Proof, Builds, Evolution, Toolkit, Systems, and Contact.
+- Kept the hero Signal Path as a static systems visual instead of a duplicate scroll tracker.
+- Made secondary cards compact and linked timeline project names only when a verified GitHub repo exists.
+- Updated Hybrid public evidence with local `/predict` and offline Qwen fallback examples while keeping hosted-production latency, dataset accuracy, fallback-rate, and zero-compute-cost claims out of public copy.
+- Added The Loop repo-backed system topology SVG and wired it into public case-study visuals.
+- Added evidence-derived toolkit data and documentation.
+
+Validation:
+- `npm.cmd test` passed with 30 tests.
+- `$env:ASTRO_TELEMETRY_DISABLED='1'; npm.cmd run build` passed before the final browser-QA/doc-closeout step.
+- Public-source scans showed no forbidden placeholder/backlog terms or local Windows paths in `src`/`public`.
+
+### 2026-07-08 Scroll-Responsive Signal Journey Correction
+
+Completed:
+- Replaced the static-feeling Signal Corridor with a scroll-responsive Signal Journey on the homepage.
+- Added section journey metadata for Signal, Proof, Builds, Evolution, Support, Lab, Systems, and Contact.
+- Added a lightweight vanilla controller using `requestAnimationFrame`, `IntersectionObserver`, CSS variables, and active `is-active`/`is-before`/`is-after` states.
+- Added a desktop sticky signal rail with progress fill, moving orb, and active station labels.
+- Added subtle section/card/timeline/capability activation without changing project claims, CTA destinations, screenshots, metrics, or evidence status.
+- Kept mobile clean by hiding the desktop rail and disabling heavy transforms on narrow screens.
+- Added reduced-motion behavior that removes continuous transition effects while preserving active section readability.
+
+Validation:
+- `npm.cmd test` passed with 24 tests.
+- `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build` passed and generated 4 static pages; this shell printed trailing esbuild cancellation/access noise after Astro completed, but the process exited 0.
+- No-server Playwright/Edge smoke check passed: desktop rail displayed and advanced Signal -> Builds -> Contact during scroll; mobile rail was hidden; no horizontal overflow was detected at 390px; console errors were empty.
+- `git diff --check` passed with line-ending warnings only.
+
 ### 2026-07-08 Final CTA Hierarchy Polish
 
 Completed:

@@ -6,10 +6,14 @@ import { secondaryProjects } from "../../data/projects";
 
 <section class="section" id="secondary-work">
   <div class="section-inner">
+    <div class="section-marker" aria-hidden="true">
+      <span>07A</span>
+      <strong>Support</strong>
+    </div>
     <SectionHeader
       eyebrow="Secondary work"
       title="Supporting systems"
-      body="These projects add automation and workflow breadth, but remain smaller until missing proof is collected."
+      body="Automation and workflow builds that support the featured systems story."
     />
     <div class="compact-grid">
       {secondaryProjects.map((project) => <ProjectModule project={project} compact />)}
