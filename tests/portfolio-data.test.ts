@@ -5,6 +5,7 @@ import {
   labProjects,
   routes,
   secondaryProjects,
+  timelineProjectLinks,
   timelineStages,
   type Project,
   type ProjectContribution,
@@ -18,7 +19,6 @@ import aboutSource from "../src/components/sections/About.astro?raw";
 import contactSource from "../src/components/sections/Contact.astro?raw";
 import heroSource from "../src/components/sections/Hero.astro?raw";
 import indexPageSource from "../src/pages/index.astro?raw";
-import proofStripSource from "../src/components/sections/ProofStrip.astro?raw";
 import systemsMapSource from "../src/components/sections/SystemsMap.astro?raw";
 import toolkitSource from "../src/components/sections/Toolkit.astro?raw";
 import labProjectsSource from "../src/components/sections/LabProjects.astro?raw";
@@ -111,7 +111,6 @@ const publicProjectAssetModules = import.meta.glob("../public/assets/projects/**
   query: "?url",
   import: "default",
 });
-
 const publicFacingSourceText = [
   evidenceDataSource,
   projectsDataSource,
@@ -129,7 +128,6 @@ const publicFacingSourceText = [
 const journeySectionSourceText = [
   heroSource,
   aboutSource,
-  proofStripSource,
   featuredProjectsSource,
   timelineSource,
   toolkitSource,
@@ -195,25 +193,26 @@ describe("portfolio scaffold data", () => {
 
   it("keeps the homepage journey order aligned with the approved story", () => {
     expect(indexPageSource).toContain('href="#about" data-journey-nav="1"');
-    expect(indexPageSource).toContain('href="#proof-strip" data-journey-nav="2"');
-    expect(indexPageSource).toContain('href="#featured-projects" data-journey-nav="3"');
-    expect(indexPageSource).toContain('href="#signal-evolution" data-journey-nav="4"');
-    expect(indexPageSource).toContain('href="#systems-map" data-journey-nav="6"');
-    expect(indexPageSource).toContain('href="#contact" data-journey-nav="7"');
+    expect(indexPageSource).toContain('href="#featured-projects" data-journey-nav="2"');
+    expect(indexPageSource).toContain('href="#signal-evolution" data-journey-nav="3"');
+    expect(indexPageSource).toContain('href="#toolkit" data-journey-nav="4"');
+    expect(indexPageSource).toContain('href="#systems-map" data-journey-nav="5"');
+    expect(indexPageSource).toContain('href="#contact" data-journey-nav="6"');
+    expect(indexPageSource).not.toContain("<ProofStrip");
+    expect(indexPageSource).not.toContain('href="#proof-strip"');
     expect(indexPageSource.indexOf("<About")).toBeGreaterThan(indexPageSource.indexOf("<Hero"));
-    expect(indexPageSource.indexOf("<About")).toBeLessThan(indexPageSource.indexOf("<ProofStrip"));
+    expect(indexPageSource.indexOf("<About")).toBeLessThan(indexPageSource.indexOf("<FeaturedProjects"));
   });
 
   it("keeps Signal Journey marker position derived from active station index", () => {
     const expectedStations = [
       ["0", "#top", "Signal"],
       ["1", "#about", "About"],
-      ["2", "#proof-strip", "Proof"],
-      ["3", "#featured-projects", "Builds"],
-      ["4", "#signal-evolution", "Evolution"],
-      ["5", "#toolkit", "Toolkit"],
-      ["6", "#systems-map", "Systems"],
-      ["7", "#contact", "Contact"],
+      ["2", "#featured-projects", "Builds"],
+      ["3", "#signal-evolution", "Evolution"],
+      ["4", "#toolkit", "Toolkit"],
+      ["5", "#systems-map", "Systems"],
+      ["6", "#contact", "Contact"],
     ];
 
     for (const [index, href, label] of expectedStations) {
@@ -714,6 +713,29 @@ describe("portfolio scaffold data", () => {
     expect(projectModuleSource).not.toContain("action.description");
   });
 
+  it("adds existing public cover visuals to featured homepage cards", () => {
+    const coverAssets = featuredProjects.map((project) => project.homepageCover?.src);
+
+    for (const asset of coverAssets) {
+      expect(asset).toBeTruthy();
+      const assetPath = String(asset);
+      expect(publicAssetExists(assetPath), `${assetPath} should exist under public`).toBe(true);
+    }
+
+    expect(projectModuleSource).toContain("project.homepageCover");
+    expect(projectModuleSource).toContain('class="project-cover"');
+    expect(projectModuleSource).toContain("project.homepageCover.src");
+  });
+
+  it("keeps the site buddy premium, non-image, and above card content", () => {
+    expect(indexPageSource).toContain('class="site-buddy"');
+    expect(indexPageSource).toContain("buddy-body");
+    expect(indexPageSource).toContain("buddy-face");
+    expect(indexPageSource).toContain("hey what up");
+    expect(indexPageSource).not.toContain("buddy-shell");
+    expect(indexPageSource).not.toContain("<img");
+  });
+
   it("keeps Signal Evolution as a hierarchy instead of repeating Lab projects", () => {
     const timelineText = JSON.stringify(timelineStages);
     const labTitles = labProjects.map((project) => project.title);
@@ -732,5 +754,17 @@ describe("portfolio scaffold data", () => {
     for (const labTitle of labTitles) {
       expect(timelineText).not.toContain(labTitle);
     }
+  });
+
+  it("keeps Evolution links consistent and explicit", () => {
+    expect(timelineProjectLinks).toMatchObject({
+      "The Loop": { href: "/projects/the-loop/", external: false },
+      "Hybrid GenAI Transaction Categorizer": { href: "/projects/hybrid-categorizer/", external: false },
+      Mahoraga: { href: "/projects/mahoraga/", external: false },
+      ReceiptSplit: { href: "https://github.com/Atishay9828/ReceiptSplit", external: true },
+    });
+    expect(timelineSource).toContain('class:list={["timeline-project-link", link.external && "is-external"]}');
+    expect(timelineSource).toContain('aria-label={link.external ? `${projectName} GitHub repo` : undefined}');
+    expect(timelineSource).toContain('Icon name="github"');
   });
 });

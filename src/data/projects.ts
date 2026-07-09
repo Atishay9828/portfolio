@@ -65,6 +65,10 @@ export type Project = {
   statusLabel: string;
   homepageHighlights?: string[];
   homepageBoundary?: string;
+  homepageCover?: {
+    src: string;
+    alt: string;
+  };
   problem: string;
   keyDecision: string;
   tradeoff: string;
@@ -91,6 +95,10 @@ export const featuredProjects: Project[] = [
       "Repo, Kaggle, and Hugging Face proof links",
     ],
     homepageBoundary: "Prototype evidence only.",
+    homepageCover: {
+      src: "/assets/projects/mahoraga/mahoraga-reward-loop-diagram.svg",
+      alt: "Mahoraga reward-loop diagram cover",
+    },
     problem: "Adaptive enemy behavior shaped through environment rules and reward signals.",
     keyDecision:
       "Separate state, mechanics, enemy curriculum, reward scoring, Gym stepping, and optional LLM paths.",
@@ -238,6 +246,10 @@ export const featuredProjects: Project[] = [
       "27 backend assertions passing",
     ],
     homepageBoundary: "Local/offline benchmark only.",
+    homepageCover: {
+      src: "/assets/projects/hybrid-categorizer/hybrid-routing-diagram.svg",
+      alt: "Hybrid transaction routing diagram cover",
+    },
     problem: "Categorize transactions without making the LLM the default path.",
     keyDecision:
       "Route in layers: merchant overrides, ONNX local inference, semantic checks, then offline Qwen fallback for ambiguity.",
@@ -396,6 +408,10 @@ export const featuredProjects: Project[] = [
       "Repo/deployment screenshots and diagrams",
     ],
     homepageBoundary: "Collaborative project.",
+    homepageCover: {
+      src: "/assets/projects/the-loop/the-loop-system-diagram.svg",
+      alt: "The Loop system diagram cover",
+    },
     problem: "Connect event discovery, interest context, RSVP, social coordination, chat, and carpool planning.",
     keyDecision:
       "Use persisted backend models, JWT auth, and WebSocket chat so coordination state is not UI-only.",
@@ -697,6 +713,10 @@ export const timelineProjectLinks = {
   Mahoraga: {
     href: "/projects/mahoraga/",
     external: false,
+  },
+  ReceiptSplit: {
+    href: "https://github.com/Atishay9828/ReceiptSplit",
+    external: true,
   },
 } satisfies Record<string, { href: string; external: boolean }>;
 

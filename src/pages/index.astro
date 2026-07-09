@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/sections/Hero.astro";
-import ProofStrip from "../components/sections/ProofStrip.astro";
 import FeaturedProjects from "../components/sections/FeaturedProjects.astro";
 import Timeline from "../components/sections/Timeline.astro";
 import SecondaryWork from "../components/sections/SecondaryWork.astro";
@@ -30,46 +29,46 @@ import Contact from "../components/sections/Contact.astro";
               <span>02</span>
               <strong>About</strong>
             </a>
-            <a class="journey-station" href="#proof-strip" data-journey-nav="2">
+            <a class="journey-station" href="#featured-projects" data-journey-nav="2">
               <span>03</span>
-              <strong>Proof</strong>
-            </a>
-            <a class="journey-station" href="#featured-projects" data-journey-nav="3">
-              <span>04</span>
               <strong>Builds</strong>
             </a>
-            <a class="journey-station" href="#signal-evolution" data-journey-nav="4">
-              <span>05</span>
+            <a class="journey-station" href="#signal-evolution" data-journey-nav="3">
+              <span>04</span>
               <strong>Evolution</strong>
             </a>
-            <a class="journey-station" href="#toolkit" data-journey-nav="5">
-              <span>06</span>
+            <a class="journey-station" href="#toolkit" data-journey-nav="4">
+              <span>05</span>
               <strong>Toolkit</strong>
             </a>
-            <a class="journey-station" href="#systems-map" data-journey-nav="6">
-              <span>07</span>
+            <a class="journey-station" href="#systems-map" data-journey-nav="5">
+              <span>06</span>
               <strong>Systems</strong>
             </a>
-            <a class="journey-station" href="#contact" data-journey-nav="7">
-              <span>08</span>
+            <a class="journey-station" href="#contact" data-journey-nav="6">
+              <span>07</span>
               <strong>Contact</strong>
             </a>
           </div>
         </nav>
-        <button class="site-buddy" type="button" aria-label="Site buddy">
-          <span class="buddy-shell" aria-hidden="true">
-            <span class="buddy-eye buddy-eye-left"></span>
-            <span class="buddy-eye buddy-eye-right"></span>
-            <span class="buddy-core"></span>
+        <button class="site-buddy" type="button" aria-label="Site buddy message">
+          <span class="buddy-glow" aria-hidden="true"></span>
+          <span class="buddy-body" aria-hidden="true">
+            <span class="buddy-face">
+              <span class="buddy-eye buddy-eye-left"></span>
+              <span class="buddy-eye buddy-eye-right"></span>
+              <span class="buddy-mouth"></span>
+            </span>
+            <span class="buddy-fin buddy-fin-left"></span>
+            <span class="buddy-fin buddy-fin-right"></span>
           </span>
-          <span class="buddy-bubble">hey what up - ready to see some greatness?</span>
+          <span class="buddy-bubble">hey what up — ready to see some greatness?</span>
         </button>
       </div>
     </aside>
     <main class="journey-content">
       <Hero />
       <About />
-      <ProofStrip />
       <FeaturedProjects />
       <Timeline />
       <Toolkit />

@@ -1,5 +1,6 @@
 ---
 import SectionHeader from "../ui/SectionHeader.astro";
+import Icon from "../ui/Icon.astro";
 import { featuredProjects, secondaryProjects, timelineProjectLinks, timelineStages } from "../../data/projects";
 
 const projectLinks = new Map<string, { href: string; external: boolean }>(
@@ -19,10 +20,10 @@ const projectLinks = new Map<string, { href: string; external: boolean }>(
 );
 ---
 
-<section class="section" id="signal-evolution" data-journey-section data-journey-label="Evolution" data-journey-index="4">
+<section class="section" id="signal-evolution" data-journey-section data-journey-label="Evolution" data-journey-index="3">
   <div class="section-inner">
     <div class="section-marker" aria-hidden="true">
-      <span>05</span>
+      <span>04</span>
       <strong>Evolution</strong>
     </div>
     <SectionHeader
@@ -47,12 +48,14 @@ const projectLinks = new Map<string, { href: string; external: boolean }>(
                     {projectIndex > 0 && <span class="project-separator"> / </span>}
                     {link ? (
                       <a
-                        class="timeline-project-link"
                         href={link.href}
+                        class:list={["timeline-project-link", link.external && "is-external"]}
                         target={link.external ? "_blank" : undefined}
                         rel={link.external ? "noreferrer" : undefined}
+                        aria-label={link.external ? `${projectName} GitHub repo` : undefined}
                       >
                         {projectName}
+                        {link.external && <Icon name="github" class="timeline-link-icon" />}
                       </a>
                     ) : (
                       <span>{projectName}</span>

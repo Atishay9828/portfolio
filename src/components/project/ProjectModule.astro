@@ -54,6 +54,11 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string } =>
 ---
 
 <article class={moduleClass}>
+  {!compact && project.homepageCover && (
+    <figure class="project-cover" aria-label={`${project.title} cover visual`}>
+      <img src={project.homepageCover.src} alt={project.homepageCover.alt} loading="lazy" />
+    </figure>
+  )}
   <div>
     <div class="status-label">{project.tier.toUpperCase()} / {project.statusLabel.toUpperCase()}</div>
     <h3>
