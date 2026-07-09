@@ -63,6 +63,8 @@ export type Project = {
   tier: ProjectTier;
   portfolioRole: string;
   statusLabel: string;
+  homepageHighlights?: string[];
+  homepageBoundary?: string;
   problem: string;
   keyDecision: string;
   tradeoff: string;
@@ -82,7 +84,13 @@ export const featuredProjects: Project[] = [
     subtitle: "Adaptive RL/game-system prototype with reward shaping, curriculum pressure, and LLM integration.",
     tier: "Featured",
     portfolioRole: "Flagship technical depth and adaptive AI systems proof.",
-    statusLabel: "Prototype evidence",
+    statusLabel: "Prototype",
+    homepageHighlights: [
+      "Reward-loop and environment mechanics",
+      "Gym-style stepping with FastAPI/Gradio surfaces",
+      "Repo, Kaggle, and Hugging Face proof links",
+    ],
+    homepageBoundary: "Prototype evidence only.",
     problem: "Adaptive enemy behavior shaped through environment rules and reward signals.",
     keyDecision:
       "Separate state, mechanics, enemy curriculum, reward scoring, Gym stepping, and optional LLM paths.",
@@ -223,7 +231,13 @@ export const featuredProjects: Project[] = [
       "Privacy-first transaction categorizer using merchant overrides, ONNX DistilBERT, and offline Qwen fallback.",
     tier: "Featured",
     portfolioRole: "Production-minded AI systems architecture proof.",
-    statusLabel: "Repo, walkthrough, and local routing proof",
+    statusLabel: "Local AI system",
+    homepageHighlights: [
+      "/predict validated locally on port 8001",
+      "Merchant override: 0.01s; offline Qwen fallback: ~5-13s local CPU testing",
+      "27 backend assertions passing",
+    ],
+    homepageBoundary: "Local/offline benchmark only.",
     problem: "Categorize transactions without making the LLM the default path.",
     keyDecision:
       "Route in layers: merchant overrides, ONNX local inference, semantic checks, then offline Qwen fallback for ambiguity.",
@@ -375,7 +389,13 @@ export const featuredProjects: Project[] = [
     subtitle: "Campus event platform for discovery, RSVP, friends, chat, maps, and carpool workflows.",
     tier: "Featured",
     portfolioRole: "Product engineering proof alongside the AI systems work.",
-    statusLabel: "Verified repo, deployment, and workflow visuals",
+    statusLabel: "Product system",
+    homepageHighlights: [
+      "Event list/detail/map workflows",
+      "Realtime chat and carpool coordination",
+      "Repo/deployment screenshots and diagrams",
+    ],
+    homepageBoundary: "Collaborative project.",
     problem: "Connect event discovery, interest context, RSVP, social coordination, chat, and carpool planning.",
     keyDecision:
       "Use persisted backend models, JWT auth, and WebSocket chat so coordination state is not UI-only.",
@@ -666,47 +686,25 @@ export const labProjects = [
 ];
 
 export const timelineProjectLinks = {
-  "Custom Linear Regression Model": {
-    href: "https://github.com/Atishay9828/Custom-Linear-Regression-Model",
-    external: true,
+  "The Loop": {
+    href: "/projects/the-loop/",
+    external: false,
   },
-  "Iris Classification": {
-    href: "https://github.com/Atishay9828/IRIS-Flower-Classification",
-    external: true,
+  "Hybrid GenAI Transaction Categorizer": {
+    href: "/projects/hybrid-categorizer/",
+    external: false,
   },
-  "Netflix EDA": {
-    href: "https://github.com/Atishay9828/Netflix-EDA",
-    external: true,
-  },
-  "Music Web Scraper": {
-    href: "https://github.com/Atishay9828/app10--web-scrape-music",
-    external: true,
-  },
-  "Global Super Store Database Project": {
-    href: "https://github.com/Atishay9828/Global-Super-Store-Database",
-    external: true,
-  },
-  "Fast and Curious Car Analysis": {
-    href: "https://github.com/Atishay9828/Fast-and-Curious_Car-Analysis",
-    external: true,
+  Mahoraga: {
+    href: "/projects/mahoraga/",
+    external: false,
   },
 } satisfies Record<string, { href: string; external: boolean }>;
 
 export const timelineStages = [
   {
     label: "Foundations",
-    capability: "C++/DSA, ML basics, and analysis fundamentals.",
-    projects: ["Custom Linear Regression Model", "Iris Classification", "Netflix EDA"],
-  },
-  {
-    label: "Automation & Practical Tooling",
-    capability: "Small tools that turn manual workflows into repeatable systems.",
-    projects: ["Music Web Scraper", "Webcam Motion Alert System"],
-  },
-  {
-    label: "Systems & Data Engineering",
-    capability: "Data models, query structure, and backend-oriented thinking.",
-    projects: ["Global Super Store Database Project"],
+    capability: "C++/DSA, ML basics, SQL foundations, and analysis fundamentals.",
+    projects: ["C++/DSA", "ML basics", "SQL foundations"],
   },
   {
     label: "Product Engineering",
@@ -715,13 +713,18 @@ export const timelineStages = [
   },
   {
     label: "AI Systems",
-    capability: "Routing, fallback behavior, workflow automation, and memory.",
-    projects: ["Hybrid GenAI Transaction Categorizer", "AI Resume Tailoring Engine"],
+    capability: "Routing, fallback behavior, local inference, and memory-aware workflow design.",
+    projects: ["Hybrid GenAI Transaction Categorizer"],
   },
   {
-    label: "Adaptive Intelligence",
+    label: "Adaptive Systems",
     capability: "Reward design, agent behavior, environment mechanics, and evaluation constraints.",
     projects: ["Mahoraga"],
+  },
+  {
+    label: "Current Direction",
+    capability: "Receipt splitting, AI workflow systems, and production-minded automation.",
+    projects: ["ReceiptSplit", "AI workflow systems"],
   },
 ];
 

@@ -14,56 +14,70 @@ import Contact from "../components/sections/Contact.astro";
 
 <BaseLayout title="AJ | AI Systems Engineer + Product Engineer">
   <div class="signal-journey signal-corridor" data-journey-root>
-    <nav class="journey-rail" aria-label="Homepage signal journey">
-      <div class="journey-rail-track" aria-hidden="true">
-        <span class="journey-rail-fill"></span>
-        <span class="journey-rail-orb"></span>
+    <aside class="journey-gutter" aria-label="Homepage journey controls">
+      <div class="journey-gutter-inner">
+        <nav class="journey-rail" aria-label="Homepage signal journey">
+          <div class="journey-rail-track" aria-hidden="true">
+            <span class="journey-rail-fill"></span>
+            <span class="journey-rail-orb"></span>
+          </div>
+          <div class="journey-stations">
+            <a class="journey-station" href="#top" data-journey-nav="0">
+              <span>01</span>
+              <strong>Signal</strong>
+            </a>
+            <a class="journey-station" href="#about" data-journey-nav="1">
+              <span>02</span>
+              <strong>About</strong>
+            </a>
+            <a class="journey-station" href="#proof-strip" data-journey-nav="2">
+              <span>03</span>
+              <strong>Proof</strong>
+            </a>
+            <a class="journey-station" href="#featured-projects" data-journey-nav="3">
+              <span>04</span>
+              <strong>Builds</strong>
+            </a>
+            <a class="journey-station" href="#signal-evolution" data-journey-nav="4">
+              <span>05</span>
+              <strong>Evolution</strong>
+            </a>
+            <a class="journey-station" href="#toolkit" data-journey-nav="5">
+              <span>06</span>
+              <strong>Toolkit</strong>
+            </a>
+            <a class="journey-station" href="#systems-map" data-journey-nav="6">
+              <span>07</span>
+              <strong>Systems</strong>
+            </a>
+            <a class="journey-station" href="#contact" data-journey-nav="7">
+              <span>08</span>
+              <strong>Contact</strong>
+            </a>
+          </div>
+        </nav>
+        <button class="site-buddy" type="button" aria-label="Site buddy">
+          <span class="buddy-shell" aria-hidden="true">
+            <span class="buddy-eye buddy-eye-left"></span>
+            <span class="buddy-eye buddy-eye-right"></span>
+            <span class="buddy-core"></span>
+          </span>
+          <span class="buddy-bubble">hey what up - ready to see some greatness?</span>
+        </button>
       </div>
-      <div class="journey-stations">
-        <a class="journey-station" href="#top" data-journey-nav="0">
-          <span>01</span>
-          <strong>Signal</strong>
-        </a>
-        <a class="journey-station" href="#about" data-journey-nav="1">
-          <span>02</span>
-          <strong>About</strong>
-        </a>
-        <a class="journey-station" href="#proof-strip" data-journey-nav="2">
-          <span>03</span>
-          <strong>Proof</strong>
-        </a>
-        <a class="journey-station" href="#featured-projects" data-journey-nav="3">
-          <span>04</span>
-          <strong>Builds</strong>
-        </a>
-        <a class="journey-station" href="#signal-evolution" data-journey-nav="4">
-          <span>05</span>
-          <strong>Evolution</strong>
-        </a>
-        <a class="journey-station" href="#toolkit" data-journey-nav="5">
-          <span>06</span>
-          <strong>Toolkit</strong>
-        </a>
-        <a class="journey-station" href="#systems-map" data-journey-nav="6">
-          <span>07</span>
-          <strong>Systems</strong>
-        </a>
-        <a class="journey-station" href="#contact" data-journey-nav="7">
-          <span>08</span>
-          <strong>Contact</strong>
-        </a>
-      </div>
-    </nav>
-    <Hero />
-    <About />
-    <ProofStrip />
-    <FeaturedProjects />
-    <Timeline />
-    <Toolkit />
-    <SystemsMap />
-    <SecondaryWork />
-    <LabProjects />
-    <Contact />
+    </aside>
+    <main class="journey-content">
+      <Hero />
+      <About />
+      <ProofStrip />
+      <FeaturedProjects />
+      <Timeline />
+      <Toolkit />
+      <SystemsMap />
+      <SecondaryWork />
+      <LabProjects />
+      <Contact />
+    </main>
   </div>
   <script>
     const initSignalJourney = () => {

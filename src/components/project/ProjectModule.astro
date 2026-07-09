@@ -7,6 +7,13 @@ const moduleClass = compact ? "compact-module" : "project-module";
 const visualAssets = project.visual.assets ?? [];
 const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCase().replaceAll(" ", "-")}`;
 const caseStudyHref = project.tier === "Featured" ? `/projects/${project.slug}/` : undefined;
+const visibleStack = project.stack.slice(0, compact ? 4 : 5);
+const homepageHighlights = project.homepageHighlights ?? [
+  project.problem,
+  project.keyDecision,
+  project.visual.label,
+].slice(0, 3);
+const homepageBoundary = project.homepageBoundary ?? project.tradeoff;
 
 type ProjectActionIcon =
   | "github"
@@ -19,36 +26,36 @@ type ProjectActionIcon =
   | "page"
   | "arrowRight";
 
-const getAction = (label: string): { icon: ProjectActionIcon; label: string; description: string } => {
+const getAction = (label: string): { icon: ProjectActionIcon; label: string } => {
   const normalizedLabel = label.toLowerCase();
 
   if (normalizedLabel.includes("github")) {
-    return { icon: "github", label: "GitHub", description: "Source repo" };
+    return { icon: "github", label: "GitHub" };
   }
 
   if (normalizedLabel.includes("kaggle") || normalizedLabel.includes("notebook")) {
-    return { icon: "kaggle", label: "Kaggle", description: "Training notebook" };
+    return { icon: "kaggle", label: "Kaggle" };
   }
 
   if (normalizedLabel.includes("hugging")) {
-    return { icon: "huggingFace", label: "Hugging Face", description: "Interactive demo" };
+    return { icon: "huggingFace", label: "Hugging Face" };
   }
 
   if (normalizedLabel.includes("youtube")) {
-    return { icon: "video", label: "YouTube", description: "Walkthrough" };
+    return { icon: "video", label: "YouTube" };
   }
 
   if (normalizedLabel.includes("deployment") || normalizedLabel.includes("live")) {
-    return { icon: "deployment", label: "Live", description: "Deployment" };
+    return { icon: "deployment", label: "Live" };
   }
 
-  return { icon: "arrowRight", label, description: "External proof" };
+  return { icon: "arrowRight", label };
 };
 ---
 
 <article class={moduleClass}>
   <div>
-    <div class="status-label">{project.tier} / {project.statusLabel}</div>
+    <div class="status-label">{project.tier.toUpperCase()} / {project.statusLabel.toUpperCase()}</div>
     <h3>
       {caseStudyHref ? (
         <a class="project-title-link" href={caseStudyHref}>{project.title}</a>
@@ -58,39 +65,17 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string; des
     </h3>
     <p>{project.subtitle}</p>
     <div class="project-meta">
-      {project.stack.map((item) => <span class="tag">{item}</span>)}
+      {visibleStack.map((item) => <span class="tag">{item}</span>)}
     </div>
     {compact ? (
       <p class="compact-summary">{project.problem}</p>
     ) : (
-      <div class="project-facts">
-        <div class="fact">
-          <strong>Portfolio role</strong>
-          <span>{project.portfolioRole}</span>
-        </div>
-        <div class="fact">
-          <strong>Problem</strong>
-          <span>{project.problem}</span>
-        </div>
-        <div class="fact">
-          <strong>Key engineering decision</strong>
-          <span>{project.keyDecision}</span>
-        </div>
-        <div class="fact">
-          <strong>Limitation / tradeoff</strong>
-          <span>{project.tradeoff}</span>
-        </div>
-        {project.contribution ? (
-          <div class="fact fact-note">
-            <strong>{project.contribution.roleLabel}</strong>
-            <span>{project.contribution.summary}</span>
-          </div>
-        ) : (
-          <div class="fact fact-note">
-            <strong>{project.roleStatus}</strong>
-          </div>
-        )}
-      </div>
+      <>
+        <ul class="project-highlight-list">
+          {homepageHighlights.slice(0, 3).map((highlight) => <li>{highlight}</li>)}
+        </ul>
+        <p class="project-boundary">{homepageBoundary}</p>
+      </>
     )}
     <div class="project-action-row" aria-label={`${project.title} links`}>
       {caseStudyHref && (
@@ -112,7 +97,6 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string; des
           >
             <Icon name={action.icon} />
             <span>{action.label}</span>
-            <small>{action.description}</small>
           </a>
         );
       })}
@@ -123,7 +107,6 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string; des
       <div>
         <span class="status-pill">{project.visual.status}</span>
         <h3>{project.visual.label}</h3>
-        <p>{project.visual.detail}</p>
       </div>
       {visualAssets.length > 0 && (
         <div class="evidence-assets" aria-label={`${project.title} visual evidence`}>

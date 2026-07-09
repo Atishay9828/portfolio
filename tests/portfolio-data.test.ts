@@ -5,6 +5,7 @@ import {
   labProjects,
   routes,
   secondaryProjects,
+  timelineStages,
   type Project,
   type ProjectContribution,
 } from "../src/data/projects";
@@ -165,6 +166,7 @@ const forbiddenPublicPhrases = [
   "Technologies listed here come from",
   "Evidence, links, and boundaries",
   "without turning the UI into a backlog",
+  "support the featured systems story",
 ];
 
 const publicAssetExists = (src: string) =>
@@ -633,7 +635,7 @@ describe("portfolio scaffold data", () => {
     expect(String(Object.values(techEvidenceDocs)[0])).toContain("Evidence source");
   });
 
-  it("renders grouped toolkit chips with icons and evidence for broad project stack", () => {
+  it("renders grouped toolkit chips with clean labels and evidence for broad project stack", () => {
     const requiredToolkit = [
       "Python",
       "TypeScript",
@@ -683,10 +685,52 @@ describe("portfolio scaffold data", () => {
       expect(item.evidenceSource.toLowerCase()).not.toContain("guessed");
     }
 
-    expect(toolkitSource).toContain("toolkit-chip-icon");
+    expect(toolkitSource).toContain("toolkit-chip");
+    expect(toolkitSource).not.toContain("toolkit-chip-icon");
+    expect(toolkitSource).not.toContain("slice(0, 2).toUpperCase()");
     expect(toolkitSource).not.toContain("proficiency");
     expect(String(Object.values(techEvidenceDocs)[0])).toContain("| Python |");
     expect(String(Object.values(techEvidenceDocs)[0])).toContain("| C++ |");
     expect(String(Object.values(techEvidenceDocs)[0])).toContain("| Docker |");
+  });
+
+  it("keeps featured homepage cards short and bullet-led", () => {
+    expect(featuredProjects.map((project) => project.statusLabel)).toEqual([
+      "Prototype",
+      "Local AI system",
+      "Product system",
+    ]);
+
+    for (const project of featuredProjects) {
+      expect(project.homepageHighlights).toHaveLength(3);
+      expect(project.homepageBoundary).toBeTruthy();
+    }
+
+    expect(projectModuleSource).toContain("project-highlight-list");
+    expect(projectModuleSource).toContain("homepageHighlights.slice(0, 3)");
+    expect(projectModuleSource).toContain("project-boundary");
+    expect(projectModuleSource).not.toContain("Portfolio role");
+    expect(projectModuleSource).not.toContain("Key engineering decision");
+    expect(projectModuleSource).not.toContain("action.description");
+  });
+
+  it("keeps Signal Evolution as a hierarchy instead of repeating Lab projects", () => {
+    const timelineText = JSON.stringify(timelineStages);
+    const labTitles = labProjects.map((project) => project.title);
+
+    expect(timelineStages.map((stage) => stage.label)).toEqual([
+      "Foundations",
+      "Product Engineering",
+      "AI Systems",
+      "Adaptive Systems",
+      "Current Direction",
+    ]);
+    expect(timelineText).toContain("The Loop");
+    expect(timelineText).toContain("Hybrid GenAI Transaction Categorizer");
+    expect(timelineText).toContain("Mahoraga");
+
+    for (const labTitle of labTitles) {
+      expect(timelineText).not.toContain(labTitle);
+    }
   });
 });
