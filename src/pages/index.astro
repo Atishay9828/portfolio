@@ -78,10 +78,18 @@ import Contact from "../components/sections/Contact.astro";
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
       let frameRequested = false;
 
-      const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
+      const getStickyOffset = () => {
+        const header = document.querySelector<HTMLElement>(".site-header");
+        return (header?.offsetHeight ?? 68) + 18;
+      };
 
       const setActiveJourneySection = (activeIndex: number) => {
+        const progress = activeIndex / Math.max(journeySections.length - 1, 1);
+
         journeyRoot.dataset.activeJourney = String(activeIndex);
+        journeyRoot.style.setProperty("--journey-progress", progress.toFixed(4));
+        journeyRoot.style.setProperty("--journey-progress-percent", `${(progress * 100).toFixed(2)}%`);
+        journeyRoot.style.setProperty("--journey-depth", (progress * 100).toFixed(2));
 
         journeySections.forEach((section, index) => {
           section.classList.toggle("is-active", index === activeIndex);
@@ -95,6 +103,13 @@ import Contact from "../components/sections/Contact.astro";
         });
       };
 
+      const syncScrollMargins = () => {
+        const scrollMarginTop = `${getStickyOffset() + 8}px`;
+        journeySections.forEach((section) => {
+          section.style.scrollMarginTop = scrollMarginTop;
+        });
+      };
+
       const updateJourney = () => {
         frameRequested = false;
 
@@ -103,20 +118,14 @@ import Contact from "../components/sections/Contact.astro";
         }
 
         const viewportHeight = window.innerHeight || 1;
-        const firstSection = journeySections[0];
-        const lastSection = journeySections[journeySections.length - 1];
-        const journeyStart = firstSection.offsetTop - viewportHeight * 0.42;
-        const journeyEnd = lastSection.offsetTop + lastSection.offsetHeight - viewportHeight * 0.68;
-        const range = Math.max(journeyEnd - journeyStart, 1);
-        const rawProgress = clamp((window.scrollY - journeyStart) / range, 0, 1);
-        const targetLine = viewportHeight * 0.42;
+        const targetLine = Math.min(viewportHeight * 0.38, 260) + getStickyOffset();
 
         let activeIndex = 0;
         let closestDistance = Number.POSITIVE_INFINITY;
 
         journeySections.forEach((section, index) => {
           const rect = section.getBoundingClientRect();
-          const sectionAnchor = rect.top + rect.height * 0.28;
+          const sectionAnchor = rect.top + Math.min(rect.height * 0.24, 180);
           const distance = Math.abs(sectionAnchor - targetLine);
 
           if (distance < closestDistance) {
@@ -125,13 +134,6 @@ import Contact from "../components/sections/Contact.astro";
           }
         });
 
-        const progress = reducedMotion.matches
-          ? activeIndex / Math.max(journeySections.length - 1, 1)
-          : rawProgress;
-
-        journeyRoot.style.setProperty("--journey-progress", progress.toFixed(4));
-        journeyRoot.style.setProperty("--journey-progress-percent", `${(progress * 100).toFixed(2)}%`);
-        journeyRoot.style.setProperty("--journey-depth", (rawProgress * 100).toFixed(2));
         setActiveJourneySection(activeIndex);
       };
 
@@ -157,9 +159,33 @@ import Contact from "../components/sections/Contact.astro";
       );
 
       journeySections.forEach((section) => enterObserver.observe(section));
+      syncScrollMargins();
+
+      journeyStations.forEach((station) => {
+        station.addEventListener("click", (event) => {
+          const href = station.getAttribute("href");
+          const targetIndex = Number(station.dataset.journeyNav ?? "0");
+          const target = href ? document.querySelector<HTMLElement>(href) : null;
+
+          if (!target) {
+            return;
+          }
+
+          event.preventDefault();
+          syncScrollMargins();
+          setActiveJourneySection(targetIndex);
+          window.scrollTo({
+            top: target.getBoundingClientRect().top + window.scrollY - getStickyOffset(),
+            behavior: reducedMotion.matches ? "auto" : "smooth",
+          });
+        });
+      });
 
       window.addEventListener("scroll", requestJourneyUpdate, { passive: true });
-      window.addEventListener("resize", requestJourneyUpdate);
+      window.addEventListener("resize", () => {
+        syncScrollMargins();
+        requestJourneyUpdate();
+      });
       reducedMotion.addEventListener("change", requestJourneyUpdate);
       updateJourney();
     };

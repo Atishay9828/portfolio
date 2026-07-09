@@ -58,10 +58,10 @@ Purpose:
 
 | Project | URL | Status | Notes |
 |---|---|---|---|
-| Minimal RAG Implementation | TODO | Missing | Repo link not provided. |
-| Music Web Scraper | TODO | Missing | Repo link not provided. |
-| Global Super Store Database Project | TODO | Missing | Repo/report link not provided. |
-| Fast and Curious Car Analysis | TODO | Missing | Notebook/repo link not provided. |
+| Minimal RAG Implementation | `https://github.com/Atishay9828/RAG` | Verified | Verified from GitHub repo inventory on 2026-07-09. Used for the lab card link. |
+| Music Web Scraper | `https://github.com/Atishay9828/app10--web-scrape-music` | Verified | Verified from GitHub repo inventory on 2026-07-09. Used for the lab card link. |
+| Global Super Store Database Project | `https://github.com/Atishay9828/Global-Super-Store-Database` | Verified | Verified from GitHub repo inventory on 2026-07-09. Used for the lab card link. |
+| Fast and Curious Car Analysis | `https://github.com/Atishay9828/Fast-and-Curious_Car-Analysis` | Verified | Verified from GitHub repo inventory on 2026-07-09. Used for the lab card link. |
 
 ## External Notebooks, Demos, Videos
 

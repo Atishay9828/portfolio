@@ -44,11 +44,15 @@ if (!project) {
         <div class="case-grid">
           <article class="case-panel">
             <span class="meta-label">What I built</span>
-            <p>{project.caseStudy.whatWasBuilt}</p>
+            <ul class="case-bullet-list">
+              {project.caseStudy.whatWasBuilt.map((item) => <li>{item}</li>)}
+            </ul>
           </article>
           <article class="case-panel">
             <span class="meta-label">Architecture</span>
-            <p>{project.caseStudy.architectureSummary}</p>
+            <ul class="case-bullet-list">
+              {project.caseStudy.architectureSummary.map((item) => <li>{item}</li>)}
+            </ul>
           </article>
         </div>
 
@@ -58,13 +62,13 @@ if (!project) {
               <span class="meta-label">My contribution</span>
               <h3>{project.contribution.roleLabel}</h3>
               <p>{project.contribution.summary}</p>
-              <ul class="missing-list">
+              <ul class="case-bullet-list">
                 {project.contribution.bullets.map((item) => <li>{item}</li>)}
               </ul>
             </article>
             <article class="case-panel">
               <span class="meta-label">Collaborative scope</span>
-              <ul class="missing-list">
+              <ul class="case-bullet-list">
                 {project.contribution.collaborativeScope.map((item) => <li>{item}</li>)}
               </ul>
             </article>
@@ -74,13 +78,13 @@ if (!project) {
         <div class="case-grid">
           <article class="case-panel">
             <span class="meta-label">Key engineering decisions</span>
-            <ul class="missing-list">
+            <ul class="case-bullet-list">
               {project.caseStudy.engineeringDecisions.map((item) => <li>{item}</li>)}
             </ul>
           </article>
           <article class="case-panel">
             <span class="meta-label">Proof highlights</span>
-            <ul class="missing-list">
+            <ul class="case-bullet-list">
               {project.caseStudy.evidenceStatus.map((item) => <li>{item}</li>)}
             </ul>
           </article>
@@ -106,7 +110,7 @@ if (!project) {
         {project.caseStudy.rewardProof && (
           <article class="case-panel">
             <span class="meta-label">Reward-loop proof</span>
-            <ul class="missing-list">
+            <ul class="case-bullet-list">
               {project.caseStudy.rewardProof.map((item) => <li>{item}</li>)}
             </ul>
           </article>
@@ -167,7 +171,7 @@ if (!project) {
           <div class="boundary-grid">
             <div>
               <h3>Limitations / boundaries</h3>
-              <ul class="missing-list">
+              <ul class="case-bullet-list">
                 {project.caseStudy.limitations.map((item) => <li>{item}</li>)}
               </ul>
             </div>

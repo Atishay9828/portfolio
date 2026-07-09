@@ -12,16 +12,25 @@ import { labProjects } from "../../data/projects";
     <SectionHeader
       eyebrow="Lab Projects"
       title="Focused Experiments"
-      body="Small builds that show foundations without competing with the featured work."
+      body="Focused experiments across retrieval, scraping, data, and analysis."
     />
     <div class="lab-grid">
       {labProjects.map((project) => (
-        <article class="lab-entry">
-          <span class="meta-label">{project.category}</span>
-          <h3>{project.title}</h3>
-          <p>{project.purpose}</p>
-          <p>{project.status}</p>
-        </article>
+        project.repoHref ? (
+          <a class="lab-entry lab-card-link" href={project.repoHref} target="_blank" rel="noreferrer">
+            <span class="meta-label">{project.category}</span>
+            <h3>{project.title}</h3>
+            <p>{project.purpose}</p>
+            <p>{project.status}</p>
+          </a>
+        ) : (
+          <article class="lab-entry lab-card-static">
+            <span class="meta-label">{project.category}</span>
+            <h3>{project.title}</h3>
+            <p>{project.purpose}</p>
+            <p>{project.status}</p>
+          </article>
+        )
       ))}
     </div>
   </div>

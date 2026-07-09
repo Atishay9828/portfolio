@@ -9,11 +9,17 @@ import {
   type ProjectContribution,
 } from "../src/data/projects";
 import { links } from "../src/data/links";
+import { toolkit } from "../src/data/toolkit";
 import evidenceDataSource from "../src/data/evidence.ts?raw";
 import projectsDataSource from "../src/data/projects.ts?raw";
 import featuredProjectsSource from "../src/components/sections/FeaturedProjects.astro?raw";
+import aboutSource from "../src/components/sections/About.astro?raw";
+import contactSource from "../src/components/sections/Contact.astro?raw";
 import heroSource from "../src/components/sections/Hero.astro?raw";
 import indexPageSource from "../src/pages/index.astro?raw";
+import proofStripSource from "../src/components/sections/ProofStrip.astro?raw";
+import systemsMapSource from "../src/components/sections/SystemsMap.astro?raw";
+import toolkitSource from "../src/components/sections/Toolkit.astro?raw";
 import labProjectsSource from "../src/components/sections/LabProjects.astro?raw";
 import projectModuleSource from "../src/components/project/ProjectModule.astro?raw";
 import projectPageSource from "../src/pages/projects/[slug].astro?raw";
@@ -25,14 +31,20 @@ import hybridHistoryInsightsEvidence from "../docs/21_HYBRID_HISTORY_AI_INSIGHTS
 import roleContributionEvidence from "../docs/23_ROLE_CONTRIBUTION_EVIDENCE.md?raw";
 
 import mahoragaDashboard from "../public/assets/projects/mahoraga/dashboard_preview.png?url";
+import mahoragaRewardLoopDiagram from "../public/assets/projects/mahoraga/mahoraga-reward-loop-diagram.svg?url";
+import mahoragaSystemDiagram from "../public/assets/projects/mahoraga/mahoraga-system-diagram.svg?url";
 import mahoragaScreenshot from "../public/assets/projects/mahoraga/stitch_aero_screenshot.png?url";
 import mahoragaTraining from "../public/assets/projects/mahoraga/training_metrics.png?url";
 import hybridCategories from "../public/assets/projects/hybrid-categorizer/categories.png?url";
 import hybridHistory from "../public/assets/projects/hybrid-categorizer/history.png?url";
+import hybridMemoryFeedbackDiagram from "../public/assets/projects/hybrid-categorizer/hybrid-memory-feedback-diagram.svg?url";
 import hybridMemory from "../public/assets/projects/hybrid-categorizer/memory.png?url";
 import hybridPredict from "../public/assets/projects/hybrid-categorizer/predict.png?url";
+import hybridRoutingDiagram from "../public/assets/projects/hybrid-categorizer/hybrid-routing-diagram.svg?url";
 import loopInterestSelection from "../public/assets/projects/the-loop/interest_selection.png?url";
 import loopLanding from "../public/assets/projects/the-loop/landing_page.jpg?url";
+import loopCarpoolChatFlow from "../public/assets/projects/the-loop/the-loop-carpool-chat-flow.svg?url";
+import loopDeploymentDiagram from "../public/assets/projects/the-loop/the-loop-deployment-diagram.svg?url";
 import loopEventDetailLive from "../public/assets/projects/the-loop/the-loop-event-detail-live.png?url";
 import loopEventsListAltLive from "../public/assets/projects/the-loop/the-loop-events-list-alt-live.png?url";
 import loopEventsListLive from "../public/assets/projects/the-loop/the-loop-events-list-live.png?url";
@@ -40,19 +52,26 @@ import loopLandingLive from "../public/assets/projects/the-loop/the-loop-landing
 import loopMapViewLive from "../public/assets/projects/the-loop/the-loop-map-view-live.png?url";
 import loopFriendsLiveRedacted from "../public/assets/projects/the-loop/the-loop-friends-live-redacted.png?url";
 import loopProfileLiveRedacted from "../public/assets/projects/the-loop/the-loop-profile-live-redacted.png?url";
+import loopRecommendationFlow from "../public/assets/projects/the-loop/the-loop-recommendation-flow.svg?url";
 import loopSystemDiagram from "../public/assets/projects/the-loop/the-loop-system-diagram.svg?url";
 import sdeResume from "../public/resume/atishay-jain-sde-resume.pdf?url";
 
 const importedProjectAssets = [
   mahoragaDashboard,
+  mahoragaRewardLoopDiagram,
+  mahoragaSystemDiagram,
   mahoragaScreenshot,
   mahoragaTraining,
   hybridCategories,
   hybridHistory,
+  hybridMemoryFeedbackDiagram,
   hybridMemory,
   hybridPredict,
+  hybridRoutingDiagram,
   loopInterestSelection,
   loopLanding,
+  loopCarpoolChatFlow,
+  loopDeploymentDiagram,
   loopEventDetailLive,
   loopEventsListAltLive,
   loopEventsListLive,
@@ -60,6 +79,7 @@ const importedProjectAssets = [
   loopMapViewLive,
   loopFriendsLiveRedacted,
   loopProfileLiveRedacted,
+  loopRecommendationFlow,
   loopSystemDiagram,
 ];
 
@@ -85,6 +105,11 @@ const techEvidenceDocs = import.meta.glob("../docs/*TECH_STACK_EVIDENCE.md", {
   import: "default",
 });
 const toolkitModules = import.meta.glob("../src/data/toolkit.ts", { eager: true });
+const publicProjectAssetModules = import.meta.glob("../public/assets/projects/**/*", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
 
 const publicFacingSourceText = [
   evidenceDataSource,
@@ -96,7 +121,19 @@ const publicFacingSourceText = [
   projectModuleSource,
   projectPageSource,
   secondaryWorkSource,
+  toolkitSource,
   timelineSource,
+].join("\n");
+
+const journeySectionSourceText = [
+  heroSource,
+  aboutSource,
+  proofStripSource,
+  featuredProjectsSource,
+  timelineSource,
+  toolkitSource,
+  systemsMapSource,
+  contactSource,
 ].join("\n");
 
 const forbiddenPublicPhrases = [
@@ -123,7 +160,15 @@ const forbiddenPublicPhrases = [
   "notebook/repo",
   "unredacted private",
   "Case study shell",
+  "Project names lead",
+  "Small builds that show foundations",
+  "Technologies listed here come from",
+  "Evidence, links, and boundaries",
+  "without turning the UI into a backlog",
 ];
+
+const publicAssetExists = (src: string) =>
+  Object.values(publicProjectAssetModules).some((asset) => String(asset).includes(src));
 
 describe("portfolio scaffold data", () => {
   it("keeps internal backlog wording out of public-facing source text", () => {
@@ -157,13 +202,34 @@ describe("portfolio scaffold data", () => {
     expect(indexPageSource.indexOf("<About")).toBeLessThan(indexPageSource.indexOf("<ProofStrip"));
   });
 
-  it("keeps the hero Signal Path as a static visual, not a duplicate scroll tracker", () => {
-    expect(heroSource).toContain("Model");
-    expect(heroSource).toContain("API");
-    expect(heroSource).toContain("Memory");
-    expect(heroSource).toContain("UI");
-    expect(heroSource).toContain("Proof");
-    expect(heroSource).not.toContain("scroll-linked proof chain");
+  it("keeps Signal Journey marker position derived from active station index", () => {
+    const expectedStations = [
+      ["0", "#top", "Signal"],
+      ["1", "#about", "About"],
+      ["2", "#proof-strip", "Proof"],
+      ["3", "#featured-projects", "Builds"],
+      ["4", "#signal-evolution", "Evolution"],
+      ["5", "#toolkit", "Toolkit"],
+      ["6", "#systems-map", "Systems"],
+      ["7", "#contact", "Contact"],
+    ];
+
+    for (const [index, href, label] of expectedStations) {
+      expect(indexPageSource).toContain(`href="${href}" data-journey-nav="${index}"`);
+      expect(indexPageSource).toContain(`<strong>${label}</strong>`);
+    }
+
+    expect(journeySectionSourceText.match(/data-journey-section/g) ?? []).toHaveLength(expectedStations.length);
+    expect(indexPageSource).toContain("const progress = activeIndex / Math.max(journeySections.length - 1, 1)");
+    expect(indexPageSource).toContain("scrollMarginTop");
+    expect(indexPageSource).not.toContain("rawProgress");
+    expect(indexPageSource).not.toContain("journeyEnd");
+  });
+
+  it("keeps the hero right side focused on proof anchors, not a duplicate Signal Path", () => {
+    expect(heroSource).toContain("Proof anchors");
+    expect(heroSource).not.toContain("Signal path");
+    expect(heroSource).not.toContain("Model to proof chain");
     expect(heroSource).not.toContain("signal-cursor");
   });
 
@@ -201,6 +267,39 @@ describe("portfolio scaffold data", () => {
       expect(project.links.every((link) => link.status === "Verified")).toBe(true);
       expect(project.links.every((link) => link.href.startsWith("https://"))).toBe(true);
     }
+  });
+
+  it("makes featured project cards and titles route to internal case studies", () => {
+    expect(projectModuleSource).toContain("project-card-link");
+    expect(projectModuleSource).toContain("project-title-link");
+
+    for (const project of featuredProjects) {
+      expect(projectModuleSource).toContain('href={caseStudyHref}');
+      expect(projectModuleSource).toContain('class="project-action project-card-link"');
+      expect(`/projects/${project.slug}/`).toMatch(/^\/projects\/[a-z0-9-]+\/$/);
+    }
+
+    expect(projectModuleSource).toContain('class="project-action-row"');
+    expect(projectModuleSource).toContain('target={link.isExternal ? "_blank" : undefined}');
+    expect(projectModuleSource).toContain('rel={link.isExternal ? "noreferrer" : undefined}');
+  });
+
+  it("keeps lab project cards intentionally linked only when repos are verified", () => {
+    const labLinks = new Map(
+      (labProjects as Array<{ title: string; repoHref?: string }>).map((project) => [project.title, project.repoHref]),
+    );
+
+    expect(labLinks.get("Minimal RAG Implementation")).toBe("https://github.com/Atishay9828/RAG");
+    expect(labLinks.get("Music Web Scraper")).toBe("https://github.com/Atishay9828/app10--web-scrape-music");
+    expect(labLinks.get("Global Super Store Database Project")).toBe(
+      "https://github.com/Atishay9828/Global-Super-Store-Database",
+    );
+    expect(labLinks.get("Fast and Curious Car Analysis")).toBe(
+      "https://github.com/Atishay9828/Fast-and-Curious_Car-Analysis",
+    );
+
+    expect(labProjectsSource).toContain("lab-card-link");
+    expect(labProjectsSource).toContain("project.repoHref");
   });
 
   it("exposes only owner-approved personal CTAs with exact public destinations", () => {
@@ -241,7 +340,7 @@ describe("portfolio scaffold data", () => {
   });
 
   it("defines static routes for the homepage and featured case-study shells", () => {
-    expect(routes).toEqual(["/", ...featuredProjects.map((project) => `/projects/${project.slug}`)]);
+    expect(routes).toEqual(["/", ...featuredProjects.map((project) => `/projects/${project.slug}/`)]);
     expect(getProjectBySlug("the-loop")?.title).toBe("The Loop");
   });
 
@@ -258,6 +357,7 @@ describe("portfolio scaffold data", () => {
     for (const project of featuredProjects) {
       for (const asset of project.visual.assets ?? []) {
         expect(asset.src.startsWith("/assets/projects/")).toBe(true);
+        expect(publicAssetExists(asset.src), `${asset.src} should exist under public`).toBe(true);
         expect(importedProjectAssets.some((importedAsset) => importedAsset.includes(asset.src))).toBe(true);
         if (project.slug === "the-loop") {
           expect(asset.status).toBe("Verified");
@@ -274,6 +374,26 @@ describe("portfolio scaffold data", () => {
     }
   });
 
+  it("ships diagram assets for all main project visual panels", () => {
+    const expectedDiagrams = [
+      "/assets/projects/mahoraga/mahoraga-system-diagram.svg",
+      "/assets/projects/mahoraga/mahoraga-reward-loop-diagram.svg",
+      "/assets/projects/hybrid-categorizer/hybrid-routing-diagram.svg",
+      "/assets/projects/hybrid-categorizer/hybrid-memory-feedback-diagram.svg",
+      "/assets/projects/the-loop/the-loop-system-diagram.svg",
+      "/assets/projects/the-loop/the-loop-recommendation-flow.svg",
+      "/assets/projects/the-loop/the-loop-carpool-chat-flow.svg",
+      "/assets/projects/the-loop/the-loop-deployment-diagram.svg",
+    ];
+
+    const allVisualSrcs = featuredProjects.flatMap((project) => project.visual.assets?.map((asset) => asset.src) ?? []);
+
+    for (const diagram of expectedDiagrams) {
+      expect(allVisualSrcs).toContain(diagram);
+      expect(publicAssetExists(diagram), `${diagram} should exist under public`).toBe(true);
+    }
+  });
+
   it("uses approved alt text for public The Loop workflow screenshots", () => {
     const loopAssets = getProjectBySlug("the-loop")?.visual.assets ?? [];
 
@@ -285,6 +405,9 @@ describe("portfolio scaffold data", () => {
       "The Loop profile page with personal contact details redacted",
       "The Loop friends page with sent-request username redacted",
       "The Loop system diagram showing React, FastAPI, database, auth, realtime, maps, and carpool layers",
+      "The Loop recommendation flow diagram showing interests, event tags, cosine similarity, joins, and updated user interests",
+      "The Loop carpool and chat flow showing join, carpool request, friend request, chat history, and WebSocket delivery",
+      "The Loop deployment diagram showing React Vite frontend, FastAPI Uvicorn backend, database, Google OAuth, Maps, and Render services",
     ]);
   });
 
@@ -353,7 +476,8 @@ describe("portfolio scaffold data", () => {
     expect(allProjectText).not.toMatch(/\b\d+(\.\d+)?%\s*(accuracy|cost|fallback|win|improvement)\b/);
     expect(loopAssertiveText).not.toMatch(/\baj owned\b.*\b(auth|rsvp|chat|carpool|maps|recommendations|admin|deployment)\b/);
     expect(loopAssertiveText).not.toMatch(/\bsolo\b.*\b(auth|rsvp|chat|carpool|maps|recommendations|admin|deployment)\b/);
-    expect(loopText).toContain("do not claim solo ownership");
+    expect(loopText).not.toContain("do not claim solo ownership");
+    expect(loopText).toContain("collaborative/not separated");
   });
 
   it("documents owner-reviewed contribution wording while preserving unsafe wording to avoid", () => {
@@ -498,12 +622,71 @@ describe("portfolio scaffold data", () => {
     for (const item of toolkit.toolkit) {
       expect(item.name).toBeTruthy();
       expect(item.category).toBeTruthy();
-      expect(item.sourceRepo).toMatch(/portfolio|meta_Mahoraga|Hybrid-GenAI|TIET-LOOP|ReceiptSplit/);
+      expect(item.sourceRepo).toMatch(
+        /portfolio|meta_Mahoraga|Hybrid-GenAI|TIET-LOOP|ReceiptSplit|Global-Super-Store-Database/,
+      );
       expect(item.proofFile).toBeTruthy();
       expect(item.proofType).toMatch(/dependency|config|import|docs/i);
     }
 
     expect(Object.keys(techEvidenceDocs)).toHaveLength(1);
     expect(String(Object.values(techEvidenceDocs)[0])).toContain("Evidence source");
+  });
+
+  it("renders grouped toolkit chips with icons and evidence for broad project stack", () => {
+    const requiredToolkit = [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "React",
+      "Next.js",
+      "Astro",
+      "Vite",
+      "Tailwind CSS",
+      "FastAPI",
+      "Node.js",
+      "REST APIs",
+      "WebSockets",
+      "Uvicorn",
+      "ONNX Runtime",
+      "DistilBERT",
+      "Qwen2.5 GGUF",
+      "llama.cpp",
+      "PyTorch",
+      "Gymnasium",
+      "LoRA",
+      "PostgreSQL",
+      "SQLite",
+      "Supabase",
+      "SQLAlchemy",
+      "Docker",
+      "GitHub Actions",
+      "Render",
+      "Auth/JWT",
+      "Realtime",
+      "OCR pipelines",
+      "UPI deep links",
+      "Maps",
+      "Recommendations",
+    ];
+
+    for (const name of requiredToolkit) {
+      expect(toolkit.map((item) => item.name)).toContain(name);
+    }
+
+    for (const item of toolkit) {
+      expect(item.evidenceSource).toBeTruthy();
+      expect(item.proofFile).toBeTruthy();
+      expect(item.iconKey).toBeTruthy();
+      expect(item.evidenceSource.toLowerCase()).not.toContain("guessed");
+    }
+
+    expect(toolkitSource).toContain("toolkit-chip-icon");
+    expect(toolkitSource).not.toContain("proficiency");
+    expect(String(Object.values(techEvidenceDocs)[0])).toContain("| Python |");
+    expect(String(Object.values(techEvidenceDocs)[0])).toContain("| C++ |");
+    expect(String(Object.values(techEvidenceDocs)[0])).toContain("| Docker |");
   });
 });

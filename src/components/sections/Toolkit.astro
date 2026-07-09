@@ -17,7 +17,7 @@ const groupedToolkit = toolkit.reduce<Record<string, typeof toolkit>>((groups, i
     <SectionHeader
       eyebrow="Toolkit"
       title="Evidence-derived stack"
-      body="Technologies listed here come from dependencies, imports, configs, or project docs."
+      body="Tools I've used across shipped projects, prototypes, and coursework."
     />
     <div class="toolkit-grid">
       {Object.entries(groupedToolkit).map(([category, items]) => (
@@ -25,8 +25,9 @@ const groupedToolkit = toolkit.reduce<Record<string, typeof toolkit>>((groups, i
           <span class="meta-label">{category}</span>
           <div class="toolkit-list">
             {items.map((item) => (
-              <span class="toolkit-chip" title={`${item.sourceRepo} / ${item.proofFile}`}>
-                {item.name}
+              <span class="toolkit-chip" title={`${item.project}: ${item.evidenceSource} (${item.proofFile})`}>
+                <span class="toolkit-chip-icon" aria-hidden="true">{item.iconKey.slice(0, 2).toUpperCase()}</span>
+                <span>{item.name}</span>
               </span>
             ))}
           </div>

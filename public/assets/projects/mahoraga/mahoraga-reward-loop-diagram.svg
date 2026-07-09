@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Mahoraga reward loop diagram</title>
+  <desc id="desc">Reward shaping flow showing state, action, reward components, anti-cowardice checks, opportunity checks, terminal signals, and known prototype boundaries.</desc>
+  <rect width="1200" height="720" fill="#070809"/>
+  <text x="72" y="66" fill="#f2f5f7" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">Reward Loop</text>
+  <text x="72" y="98" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="14">Mahoraga prototype reward components and exploit-pressure checks</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2ef2c5"/>
+    </marker>
+    <style>
+      .node{fill:#111417;stroke:#3b4651;stroke-width:2;rx:8}
+      .strong{fill:#111417;stroke:#2ef2c5;stroke-width:2;rx:8}
+      .warn{fill:#111417;stroke:#ff6a3d;stroke-width:2;rx:8}
+      .proof{fill:#111417;stroke:#e7f75a;stroke-width:2;rx:8}
+      .label{fill:#f2f5f7;font-family:Space Grotesk,Arial,sans-serif;font-size:18px;font-weight:700}
+      .small{fill:#9aa4af;font-family:JetBrains Mono,Consolas,monospace;font-size:12px}
+      .edge{stroke:#2ef2c5;stroke-width:2.4;marker-end:url(#arrow)}
+      .muted{stroke:#3b4651;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <g>
+    <rect class="strong" x="78" y="154" width="190" height="82"/>
+    <text class="label" x="102" y="188">Current state</text>
+    <text class="small" x="102" y="212">player, boss, distance</text>
+
+    <rect class="strong" x="364" y="154" width="190" height="82"/>
+    <text class="label" x="388" y="188">Action</text>
+    <text class="small" x="388" y="212">move, attack, heal, dodge</text>
+
+    <rect class="proof" x="650" y="154" width="218" height="82"/>
+    <text class="label" x="674" y="188">Reward function</text>
+    <text class="small" x="674" y="212">weighted behavior signals</text>
+
+    <rect class="node" x="88" y="330" width="200" height="86"/>
+    <text class="label" x="112" y="364">Survival / combat</text>
+    <text class="small" x="112" y="390">health, damage, wins</text>
+
+    <rect class="node" x="336" y="330" width="200" height="86"/>
+    <text class="label" x="360" y="364">Adaptation</text>
+    <text class="small" x="360" y="390">respond to repeated behavior</text>
+
+    <rect class="warn" x="584" y="330" width="200" height="86"/>
+    <text class="label" x="608" y="364">Anti-cowardice</text>
+    <text class="small" x="608" y="390">discourage passive loops</text>
+
+    <rect class="warn" x="832" y="330" width="200" height="86"/>
+    <text class="label" x="856" y="364">Opportunity</text>
+    <text class="small" x="856" y="390">penalize missed openings</text>
+
+    <rect class="proof" x="650" y="510" width="218" height="82"/>
+    <text class="label" x="674" y="544">Total reward</text>
+    <text class="small" x="674" y="568">signal passed to training</text>
+
+    <rect class="node" x="936" y="154" width="190" height="82"/>
+    <text class="label" x="960" y="188">Next state</text>
+    <text class="small" x="960" y="212">step result and terminal</text>
+
+    <path class="edge" d="M268 195h90"/>
+    <path class="edge" d="M554 195h90"/>
+    <path class="edge" d="M868 195h62"/>
+    <path class="muted" d="M188 330V242"/>
+    <path class="muted" d="M436 330V242"/>
+    <path class="muted" d="M684 330V242"/>
+    <path class="muted" d="M932 330V242"/>
+    <path class="edge" d="M288 373h42"/>
+    <path class="edge" d="M536 373h42"/>
+    <path class="edge" d="M784 373h42"/>
+    <path class="edge" d="M932 416v54c0 26-22 40-64 40"/>
+    <path class="edge" d="M684 416v88"/>
+  </g>
+  <text x="72" y="650" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="13">Boundary: reward design evidence does not prove robustness or generalized adaptive intelligence.</text>
+</svg>

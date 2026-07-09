@@ -1,15 +1,21 @@
 ---
 import SectionHeader from "../ui/SectionHeader.astro";
-import { featuredProjects, secondaryProjects, timelineStages } from "../../data/projects";
+import { featuredProjects, secondaryProjects, timelineProjectLinks, timelineStages } from "../../data/projects";
 
-const verifiedProjectRepoLinks = new Map(
-  [...featuredProjects, ...secondaryProjects].flatMap((project) => {
-    const repoLink = project.links.find(
-      (link) => link.status === "Verified" && link.label.toLowerCase().includes("github"),
-    );
+const projectLinks = new Map<string, { href: string; external: boolean }>(
+  [
+    ...featuredProjects.map(
+      (project) => [project.title, { href: `/projects/${project.slug}/`, external: false }] as const,
+    ),
+    ...secondaryProjects.flatMap((project) => {
+      const repoLink = project.links.find(
+        (link) => link.status === "Verified" && link.label.toLowerCase().includes("github"),
+      );
 
-    return repoLink ? [[project.title, repoLink.href]] : [];
-  }),
+      return repoLink ? ([[project.title, { href: repoLink.href, external: true }] as const] as const) : [];
+    }),
+    ...Object.entries(timelineProjectLinks),
+  ],
 );
 ---
 
@@ -22,7 +28,7 @@ const verifiedProjectRepoLinks = new Map(
     <SectionHeader
       eyebrow="Signal evolution"
       title="Build progression"
-      body="A concise path from fundamentals to product systems."
+      body="Projects that shaped the stack."
     />
     <div class="timeline">
       {timelineStages.map((stage, index) => (
@@ -34,13 +40,18 @@ const verifiedProjectRepoLinks = new Map(
           <div>
             <h3>
               {stage.projects.map((projectName, projectIndex) => {
-                const repoHref = verifiedProjectRepoLinks.get(projectName);
+                const link = projectLinks.get(projectName);
 
                 return (
                   <>
                     {projectIndex > 0 && <span class="project-separator"> / </span>}
-                    {repoHref ? (
-                      <a class="timeline-project-link" href={repoHref} target="_blank" rel="noreferrer">
+                    {link ? (
+                      <a
+                        class="timeline-project-link"
+                        href={link.href}
+                        target={link.external ? "_blank" : undefined}
+                        rel={link.external ? "noreferrer" : undefined}
+                      >
                         {projectName}
                       </a>
                     ) : (

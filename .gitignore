@@ -9,3 +9,4 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 docs/reviews/motion-reference/
+.codex-dev-server*.log

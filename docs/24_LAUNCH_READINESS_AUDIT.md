@@ -102,6 +102,14 @@ Reason:
 - Toolkit display is evidence-derived and documented in `docs/30_TECH_STACK_EVIDENCE.md`.
 - Provisional readiness estimate: 92 / 100 for conservative launch if final browser QA, final build, and push complete cleanly. Remaining blockers are manual visual QA/screenshot capture, unresolved dependency audit remediation, optional stronger Hybrid benchmark harness, Hybrid AI Insight screenshot, and deeper proof for stronger performance/reliability claims.
 
+2026-07-09 manual-review fix update:
+- Manual review fixes completed after the deep-screening checkpoint: active-index Signal Journey progress, duplicate hero Signal Path removal, compact icon action rows, verified lab repo links, expanded evidence-derived toolkit, and generated SVG diagrams for Mahoraga, Hybrid, and The Loop.
+- Validation passed with `npm.cmd test` at 35/35 and `npm.cmd run build` with 0 Astro diagnostics.
+- Static `dist/` smoke checks confirmed all 4 generated routes exist, include titles, and do not expose Windows drive paths.
+- Generated HTML scan found no forbidden public backlog/private-data strings.
+- Dev-server/browser QA was attempted. Astro dev printed ready on `http://127.0.0.1:4321/`, then exited inside the sandbox with parent-directory access errors; escalation was unavailable because the environment rejected the request due the usage limit. Live browser screenshot QA therefore remains not completed in this pass.
+- Current readiness estimate: 94 / 100 for conservative launch after commit/push. Remaining blockers are live browser QA/screenshot capture, unresolved dependency audit remediation, optional stronger Hybrid benchmark harness, Hybrid AI Insight screenshot, and deeper reliability/performance evidence for stronger claims.
+
 ## Audit Method
 
 Checks completed:
@@ -124,7 +132,7 @@ Fresh screenshot capture:
 | `/` | Conditionally ready | Hero is not overcrowded; GitHub and SDE resume are primary CTAs. Contact/footer expose GitHub, SDE resume, LinkedIn, and email. Missing-proof states remain visible. Mobile layout is long but readable based on existing screenshot QA. |
 | `/projects/mahoraga/` | Conditionally ready | Verified project links and owner-reviewed contribution wording render. Candidate visuals load. Training metrics remain labeled as candidate-only, and robust adaptive-performance claims stay blocked. Needs architecture diagram revision, demo media, and final visual selection for polished launch. |
 | `/projects/hybrid-categorizer/` | Conditionally ready | Verified repo/walkthrough links render. Local classifier/routing benchmark is clearly labeled as local-only and not production SLA. Predict/memory screenshots are safe sample-data UI proof. Category/history images remain case-study candidates only; AI Insight screenshot is still missing. |
-| `/projects/the-loop/` | Blocked for polished launch | Verified deployment and repo links render, and collaborative contribution boundaries are visible. Current landing image is low-resolution and workflow screenshots remain blocked by the deployment/server access issue. This is the weakest featured visual surface. |
+| `/projects/the-loop/` | Conditionally ready | Verified deployment and repo links render, collaborative contribution boundaries are visible, live-deployment screenshots are public-safe, and the system/recommendation/carpool/deployment diagrams render from public assets. Still not reliability/SLA proof. |
 
 2026-07-06 update:
 - `/projects/the-loop/` is no longer the weakest visual surface. It now has owner-provided live-deployment screenshots for events list, event detail/actions, map view, landing/login, and redacted profile/friends states.
@@ -156,7 +164,7 @@ Fresh screenshot capture:
 | Hybrid | `memory.png` | Acceptable with label | Safe sample-data merchant-memory UI proof. Not measured usage or model-quality evidence. |
 | Hybrid | `categories.png` | Acceptable with label | Case-study candidate only with sample/demo transaction label. Not real spending or metric proof. |
 | Hybrid | `history.png` | Acceptable with label, blocked for AI Insight proof | Useful for history list and route tags only. Does not show opened AI Insight panel. |
-| The Loop | `landing_page.jpg` | Needs replacement | Too low-resolution for polished homepage or case-study launch. |
+| The Loop | `landing_page.jpg` | Superseded | Low-resolution legacy asset remains in repo but is no longer preferred public visual. |
 | The Loop | `interest_selection.png` | Acceptable with label | Case-study-only support. Does not prove the full event coordination workflow. |
 | The Loop | `the-loop-events-list-live.png` | Launch-ready with label | Primary public visual. Owner-captured deployment screenshot; proves visible event timeline UI state only. |
 | The Loop | `the-loop-event-detail-live.png` | Launch-ready with label | Supporting case-study visual for event detail, map, and actions. Not reliability proof. |
@@ -165,7 +173,7 @@ Fresh screenshot capture:
 | The Loop | `the-loop-profile-live-redacted.png` | Acceptable with label | Supporting profile visual only; contact details masked. |
 | The Loop | `the-loop-friends-live-redacted.png` | Acceptable with label | Supporting social-flow visual only; sent-request username masked. |
 | Screenshot QA PNGs | `docs/reviews/screenshots/*-polished.png` | Acceptable as layout QA baseline | Useful for spacing/readability, but stale for current CTA and contribution state. |
-| Diagrams | Mermaid/spec docs | Blocked for final visual use unless already approved and rendered | Several diagrams need revision; all selected diagrams need rendered/mobile QA before final public visual use. |
+| Diagrams | SVG assets and Mermaid/spec docs | Acceptable for conservative launch with label | New generated SVGs exist for main project visual panels. Live browser/rendered mobile QA remains needed before treating them as polished final visuals. |
 
 ## Evidence Blocker Table
 

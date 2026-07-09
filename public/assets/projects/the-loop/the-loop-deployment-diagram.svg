@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">The Loop deployment diagram</title>
+  <desc id="desc">Deployment topology showing React Vite frontend, FastAPI Uvicorn backend, database, Google OAuth, Maps, and Render service boundaries.</desc>
+  <rect width="1200" height="720" fill="#070809"/>
+  <text x="72" y="66" fill="#f2f5f7" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">The Loop Deployment</text>
+  <text x="72" y="98" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="14">Render service topology and third-party integration boundary</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2ef2c5"/>
+    </marker>
+    <style>
+      .node{fill:#111417;stroke:#3b4651;stroke-width:2;rx:8}
+      .strong{fill:#111417;stroke:#2ef2c5;stroke-width:2;rx:8}
+      .proof{fill:#111417;stroke:#e7f75a;stroke-width:2;rx:8}
+      .label{fill:#f2f5f7;font-family:Space Grotesk,Arial,sans-serif;font-size:18px;font-weight:700}
+      .small{fill:#9aa4af;font-family:JetBrains Mono,Consolas,monospace;font-size:12px}
+      .edge{stroke:#2ef2c5;stroke-width:2.5;marker-end:url(#arrow)}
+      .muted{stroke:#3b4651;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <g>
+    <rect class="strong" x="74" y="178" width="204" height="88"/>
+    <text class="label" x="98" y="212">Browser</text>
+    <text class="small" x="98" y="238">student or admin client</text>
+
+    <rect class="proof" x="368" y="178" width="222" height="88"/>
+    <text class="label" x="392" y="212">React / Vite app</text>
+    <text class="small" x="392" y="238">Render static service</text>
+
+    <rect class="proof" x="680" y="178" width="222" height="88"/>
+    <text class="label" x="704" y="212">FastAPI / Uvicorn</text>
+    <text class="small" x="704" y="238">Render web service</text>
+
+    <rect class="node" x="960" y="178" width="170" height="88"/>
+    <text class="label" x="984" y="212">Database</text>
+    <text class="small" x="984" y="238">SQLite/PostgreSQL path</text>
+
+    <rect class="node" x="368" y="382" width="222" height="88"/>
+    <text class="label" x="392" y="416">Google OAuth</text>
+    <text class="small" x="392" y="442">login provider boundary</text>
+
+    <rect class="node" x="680" y="382" width="222" height="88"/>
+    <text class="label" x="704" y="416">Google Maps</text>
+    <text class="small" x="704" y="442">map/location rendering</text>
+
+    <rect class="node" x="368" y="548" width="534" height="72"/>
+    <text class="label" x="392" y="580">Boundary</text>
+    <text class="small" x="392" y="604">topology evidence only; no monitoring, backup, scale, or SLA claim</text>
+
+    <path class="edge" d="M278 222h84"/>
+    <path class="edge" d="M590 222h84"/>
+    <path class="edge" d="M902 222h52"/>
+    <path class="muted" d="M479 382V272"/>
+    <path class="muted" d="M791 382V272"/>
+    <path class="muted" d="M635 548v-72"/>
+  </g>
+  <text x="72" y="650" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="13">Boundary: verified deployment link and repo config support topology, not operational maturity claims.</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Hybrid categorizer routing diagram</title>
+  <desc id="desc">Routing path for a transaction through merchant override, ONNX DistilBERT, confidence gate, semantic checks, and offline Qwen fallback.</desc>
+  <rect width="1200" height="720" fill="#070809"/>
+  <text x="72" y="66" fill="#f2f5f7" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">Hybrid Categorizer</text>
+  <text x="72" y="98" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="14">Offline-first routing before LLM fallback</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2ef2c5"/>
+    </marker>
+    <style>
+      .node{fill:#111417;stroke:#3b4651;stroke-width:2;rx:8}
+      .strong{fill:#111417;stroke:#2ef2c5;stroke-width:2;rx:8}
+      .proof{fill:#111417;stroke:#e7f75a;stroke-width:2;rx:8}
+      .warn{fill:#111417;stroke:#ff6a3d;stroke-width:2;rx:8}
+      .label{fill:#f2f5f7;font-family:Space Grotesk,Arial,sans-serif;font-size:18px;font-weight:700}
+      .small{fill:#9aa4af;font-family:JetBrains Mono,Consolas,monospace;font-size:12px}
+      .edge{stroke:#2ef2c5;stroke-width:2.5;marker-end:url(#arrow)}
+      .muted{stroke:#3b4651;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <g>
+    <rect class="strong" x="72" y="166" width="198" height="86"/>
+    <text class="label" x="96" y="200">Transaction</text>
+    <text class="small" x="96" y="226">merchant text and amount</text>
+
+    <rect class="proof" x="350" y="166" width="214" height="86"/>
+    <text class="label" x="374" y="200">Merchant override</text>
+    <text class="small" x="374" y="226">known mapping wins first</text>
+
+    <rect class="strong" x="650" y="166" width="220" height="86"/>
+    <text class="label" x="674" y="200">ONNX DistilBERT</text>
+    <text class="small" x="674" y="226">local classifier path</text>
+
+    <rect class="node" x="950" y="166" width="178" height="86"/>
+    <text class="label" x="974" y="200">Confidence gate</text>
+    <text class="small" x="974" y="226">accept or inspect</text>
+
+    <rect class="node" x="650" y="342" width="220" height="86"/>
+    <text class="label" x="674" y="376">Semantic checks</text>
+    <text class="small" x="674" y="402">ambiguous vendor handling</text>
+
+    <rect class="warn" x="950" y="342" width="178" height="86"/>
+    <text class="label" x="974" y="376">Qwen fallback</text>
+    <text class="small" x="974" y="402">offline ambiguous path</text>
+
+    <rect class="proof" x="650" y="518" width="220" height="86"/>
+    <text class="label" x="674" y="552">Category result</text>
+    <text class="small" x="674" y="578">route tag stays visible</text>
+
+    <rect class="node" x="350" y="518" width="214" height="86"/>
+    <text class="label" x="374" y="552">History</text>
+    <text class="small" x="374" y="578">store input and route</text>
+
+    <path class="edge" d="M270 209h74"/>
+    <path class="edge" d="M564 209h80"/>
+    <path class="edge" d="M870 209h74"/>
+    <path class="muted" d="M1039 252v84"/>
+    <path class="edge" d="M870 385h74"/>
+    <path class="edge" d="M1039 428v86c0 30-26 46-78 46h-84"/>
+    <path class="edge" d="M760 428v84"/>
+    <path class="muted" d="M650 561h-80"/>
+  </g>
+  <text x="72" y="650" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="13">Boundary: local/offline routing evidence only; no production latency, cost, or dataset accuracy claim.</text>
+</svg>

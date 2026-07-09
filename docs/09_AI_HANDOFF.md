@@ -1,18 +1,19 @@
 # 09_AI_HANDOFF.md
 
-Date: 2026-07-06
+Date: 2026-07-09
 
 ## Current Project State
 
-The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, fresh polished screenshot QA, a featured case-study copy polish pass, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a final proof/visual launch-readiness audit, imported verified The Loop live-deployment visuals, simplified compact public-link icon polish, and a scroll-responsive homepage Signal Journey correction. The strategy is strong and should not be redesigned.
+The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, screenshot QA history, featured case-study copy polish, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a proof/visual launch-readiness audit, imported verified The Loop live-deployment visuals, compact public-link icon polish, a scroll-responsive homepage Signal Journey, and the 2026-07-09 manual review fix pass. The strategy is strong and should not be redesigned.
 
 The repository now has a continuity system under `docs/00..25`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, role/contribution evidence framework, owner-reviewed contribution wording, launch-readiness audit, and The Loop visual evidence update.
 
-2026-07-09 deep-screening addendum:
+2026-07-09 manual-review closeout addendum:
 - Use `docs/31_DEEP_SCREENING_CONTEXT_HANDOFF.md` for the mid-pass handoff and this file for the current repo brain.
-- Public UI cleanup, About/Contact split, compact secondary cards, verified timeline repo links, Hybrid local endpoint/fallback evidence update, The Loop system SVG, and evidence-derived Toolkit are implemented.
-- Current checked validation in this pass: `npm.cmd test` passes with 30/30 tests; build passed before final browser QA and must be rerun after final docs/report updates.
-- Remaining closeout work is browser QA/screenshot capture, final report, final validation, commit, and push.
+- Public UI cleanup, About/Contact split, compact secondary cards, verified timeline/lab repo links, Hybrid local endpoint/fallback evidence update, diagram SVGs, compact project action rows, and evidence-derived Toolkit are implemented.
+- Current checked validation in this pass: `npm.cmd test` passes with 35/35 tests; `npm.cmd run build` passes with 0 Astro diagnostics and generates 4 pages.
+- Static `dist/` smoke checks passed for the homepage and all three featured project pages. Dev-server browser QA could not be completed because Astro dev exited under sandbox parent-directory access errors, and the environment rejected escalation due the usage limit.
+- Remaining closeout work is final validation after doc edits, commit, and push.
 
 Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
 
@@ -118,8 +119,8 @@ Imported asset visual/privacy review status:
 
 ## Missing Work
 
-- Revise diagrams marked Not Ready in `docs/13_FEATURED_EVIDENCE_REVIEW.md`.
-- Render and mobile-QA selected Mermaid diagrams.
+- Review the newly generated SVG diagrams on desktop/mobile when live browser QA is available.
+- Revise older diagram-spec docs only if they remain part of the public visual story.
 - Collect remaining screenshots/demos after blockers clear.
 - Replace remaining weak/mismatched imported assets and keep Hybrid category/history screenshots sample-labeled if used.
 - Capture a safe sample-data Hybrid History screenshot with one transaction opened and the real AI Insight panel visible if AI insights should be used as portfolio screenshot evidence.
@@ -136,11 +137,11 @@ Imported asset visual/privacy review status:
 
 - Global contact CTAs are now active for GitHub, SDE resume, LinkedIn, and email; the Data Analyst resume remains unpublished.
 - Featured project evidence is improved but incomplete; diagram review, limitation notes, and owner-reviewed contribution wording are Known, while screenshots/demos, exact ownership details where needed, final rendered diagram QA, and deeper proof artifacts remain incomplete.
-- Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and lab project links remain Missing.
+- Hybrid Categorizer deployment link, AI Resume sample output/ATS report, Webcam screenshots/demo, and deeper lab visual artifacts remain Missing.
 - Website scaffold exists, but it is a conservative static shell only.
 - Static shell design is cleaner and more Signal Lab-aligned. It is conditionally ready for a conservative soft launch, but polished/final launch is still blocked.
 - Current dependency audit has unresolved vulnerabilities because remediation requires major version changes.
-- Imported screenshots are not all final polished proof; Hybrid has safe sample-data UI proof plus local classifier/routing benchmark evidence, and The Loop now has verified public-safe live-deployment visual states. Hybrid still needs endpoint/Qwen fallback/model-output evidence before stronger AI-system claims.
+- Imported screenshots are not all final polished proof; Hybrid has safe sample-data UI proof plus local classifier/routing benchmark evidence, and The Loop now has verified public-safe live-deployment visual states plus repo/docs-backed diagrams. Hybrid still needs repeatable endpoint/Qwen fallback/model-output evidence before stronger AI-system claims.
 - Hybrid History AI Insight panel is not yet screenshot-verified; the current History asset shows transaction rows and route tags only.
 
 ## Known Risks
@@ -161,7 +162,7 @@ After the Loop visual evidence update, recapture current screenshots for the pos
 
 - Mahoraga: `public/assets/projects/mahoraga/dashboard_preview.png`, `stitch_aero_screenshot.png`, `training_metrics.png`.
 - Hybrid Categorizer: `public/assets/projects/hybrid-categorizer/predict.png`, `categories.png`, `history.png`, `memory.png`.
-- The Loop: `public/assets/projects/the-loop/the-loop-events-list-live.png`, `the-loop-events-list-alt-live.png`, `the-loop-event-detail-live.png`, `the-loop-map-view-live.png`, `the-loop-landing-live.png`, `the-loop-profile-live-redacted.png`, `the-loop-friends-live-redacted.png`; legacy `landing_page.jpg` and `interest_selection.png` remain in the repo but are no longer preferred public visuals.
+- The Loop: `public/assets/projects/the-loop/the-loop-events-list-live.png`, `the-loop-events-list-alt-live.png`, `the-loop-event-detail-live.png`, `the-loop-map-view-live.png`, `the-loop-landing-live.png`, `the-loop-profile-live-redacted.png`, `the-loop-friends-live-redacted.png`, `the-loop-system-diagram.svg`, `the-loop-recommendation-flow.svg`, `the-loop-carpool-chat-flow.svg`, and `the-loop-deployment-diagram.svg`; legacy `landing_page.jpg` and `interest_selection.png` remain in the repo but are no longer preferred public visuals.
 
 Notes:
 - The Loop `landing_page.jpg` is low resolution and superseded by `the-loop-landing-live.png`.

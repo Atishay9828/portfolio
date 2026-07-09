@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">The Loop carpool and chat flow</title>
+  <desc id="desc">Coordination flow from event join through carpool request, friend request, chat history, active WebSocket delivery, and persisted database state.</desc>
+  <rect width="1200" height="720" fill="#070809"/>
+  <text x="72" y="66" fill="#f2f5f7" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">Carpool + Chat Flow</text>
+  <text x="72" y="98" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="14">Coordination state is persisted, not UI-only</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2ef2c5"/>
+    </marker>
+    <style>
+      .node{fill:#111417;stroke:#3b4651;stroke-width:2;rx:8}
+      .strong{fill:#111417;stroke:#2ef2c5;stroke-width:2;rx:8}
+      .proof{fill:#111417;stroke:#e7f75a;stroke-width:2;rx:8}
+      .label{fill:#f2f5f7;font-family:Space Grotesk,Arial,sans-serif;font-size:18px;font-weight:700}
+      .small{fill:#9aa4af;font-family:JetBrains Mono,Consolas,monospace;font-size:12px}
+      .edge{stroke:#2ef2c5;stroke-width:2.5;marker-end:url(#arrow)}
+      .muted{stroke:#3b4651;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <g>
+    <rect class="strong" x="74" y="162" width="208" height="86"/>
+    <text class="label" x="98" y="196">Event join</text>
+    <text class="small" x="98" y="222">student joins an event</text>
+
+    <rect class="node" x="374" y="162" width="220" height="86"/>
+    <text class="label" x="398" y="196">Carpool request</text>
+    <text class="small" x="398" y="222">ride coordination intent</text>
+
+    <rect class="node" x="674" y="162" width="220" height="86"/>
+    <text class="label" x="698" y="196">Friend request</text>
+    <text class="small" x="698" y="222">social coordination gate</text>
+
+    <rect class="proof" x="374" y="356" width="220" height="86"/>
+    <text class="label" x="398" y="390">Chat history</text>
+    <text class="small" x="398" y="416">stored conversation rows</text>
+
+    <rect class="strong" x="674" y="356" width="220" height="86"/>
+    <text class="label" x="698" y="390">WebSocket path</text>
+    <text class="small" x="698" y="416">active delivery channel</text>
+
+    <rect class="proof" x="956" y="260" width="180" height="86"/>
+    <text class="label" x="980" y="294">Database</text>
+    <text class="small" x="980" y="320">relationships and messages</text>
+
+    <rect class="node" x="374" y="532" width="520" height="72"/>
+    <text class="label" x="398" y="564">Boundary</text>
+    <text class="small" x="398" y="588">offline delivery, reconnect behavior, and production reliability are not claimed</text>
+
+    <path class="edge" d="M282 205h86"/>
+    <path class="edge" d="M594 205h74"/>
+    <path class="muted" d="M784 248v102"/>
+    <path class="edge" d="M674 399h-74"/>
+    <path class="muted" d="M894 399c70 0 100-28 100-74"/>
+    <path class="muted" d="M594 399c168 0 250-18 360-74"/>
+    <path class="muted" d="M634 532v-84"/>
+  </g>
+  <text x="72" y="650" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="13">Boundary: prototype workflow evidence only; no SLA, active-user, or hardened messaging claim.</text>
+</svg>

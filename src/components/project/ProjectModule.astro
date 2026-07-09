@@ -6,8 +6,18 @@ const { project, compact = false } = Astro.props as { project: Project; compact?
 const moduleClass = compact ? "compact-module" : "project-module";
 const visualAssets = project.visual.assets ?? [];
 const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCase().replaceAll(" ", "-")}`;
+const caseStudyHref = project.tier === "Featured" ? `/projects/${project.slug}/` : undefined;
 
-type ProjectActionIcon = "github" | "notebook" | "demo" | "video" | "deployment" | "page" | "arrowRight";
+type ProjectActionIcon =
+  | "github"
+  | "notebook"
+  | "kaggle"
+  | "huggingFace"
+  | "demo"
+  | "video"
+  | "deployment"
+  | "page"
+  | "arrowRight";
 
 const getAction = (label: string): { icon: ProjectActionIcon; label: string; description: string } => {
   const normalizedLabel = label.toLowerCase();
@@ -17,11 +27,11 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string; des
   }
 
   if (normalizedLabel.includes("kaggle") || normalizedLabel.includes("notebook")) {
-    return { icon: "notebook", label: "Kaggle", description: "Training notebook" };
+    return { icon: "kaggle", label: "Kaggle", description: "Training notebook" };
   }
 
   if (normalizedLabel.includes("hugging")) {
-    return { icon: "demo", label: "Hugging Face", description: "Interactive demo" };
+    return { icon: "huggingFace", label: "Hugging Face", description: "Interactive demo" };
   }
 
   if (normalizedLabel.includes("youtube")) {
@@ -39,7 +49,13 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string; des
 <article class={moduleClass}>
   <div>
     <div class="status-label">{project.tier} / {project.statusLabel}</div>
-    <h3>{project.title}</h3>
+    <h3>
+      {caseStudyHref ? (
+        <a class="project-title-link" href={caseStudyHref}>{project.title}</a>
+      ) : (
+        project.title
+      )}
+    </h3>
     <p>{project.subtitle}</p>
     <div class="project-meta">
       {project.stack.map((item) => <span class="tag">{item}</span>)}
@@ -76,28 +92,30 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string; des
         )}
       </div>
     )}
-    <div class="proof-link-grid" aria-label={`${project.title} links`}>
-      {project.links.map((link) => {
-        const action = getAction(link.label);
+    <div class="project-action-row" aria-label={`${project.title} links`}>
+      {caseStudyHref && (
+        <a class="project-action project-card-link" href={caseStudyHref}>
+          <Icon name="page" />
+          <span>Case study</span>
+        </a>
+      )}
+      {project.links.map((projectLink) => {
+        const action = getAction(projectLink.label);
+        const link = { ...projectLink, isExternal: projectLink.href.startsWith("https://") };
         return (
-          <a class="proof-link" href={link.href} target="_blank" rel="noreferrer">
+          <a
+            class="project-action"
+            href={link.href}
+            target={link.isExternal ? "_blank" : undefined}
+            rel={link.isExternal ? "noreferrer" : undefined}
+            aria-label={`${action.label}: ${project.title}`}
+          >
             <Icon name={action.icon} />
-            <span>
-              <strong>{action.label}</strong>
-              <small>{action.description}</small>
-            </span>
+            <span>{action.label}</span>
+            <small>{action.description}</small>
           </a>
         );
       })}
-      {project.tier === "Featured" && (
-        <a class="proof-link" href={`/projects/${project.slug}`}>
-          <Icon name="page" />
-          <span>
-            <strong>Case study</strong>
-            <small>Evidence page</small>
-          </span>
-        </a>
-      )}
     </div>
   </div>
   {!compact && (

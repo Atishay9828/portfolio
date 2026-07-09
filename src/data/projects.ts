@@ -45,8 +45,8 @@ export type ProjectContribution = {
 };
 
 export type CaseStudy = {
-  whatWasBuilt: string;
-  architectureSummary: string;
+  whatWasBuilt: string[];
+  architectureSummary: string[];
   engineeringDecisions: string[];
   evidenceStatus: string[];
   limitations: string[];
@@ -83,9 +83,9 @@ export const featuredProjects: Project[] = [
     tier: "Featured",
     portfolioRole: "Flagship technical depth and adaptive AI systems proof.",
     statusLabel: "Prototype evidence",
-    problem: "Explore whether adaptive enemy behavior can be shaped through environment rules and reward signals.",
+    problem: "Adaptive enemy behavior shaped through environment rules and reward signals.",
     keyDecision:
-      "Keep the environment loop as the proof surface: mechanics, curriculum pressure, reward components, Gym-style stepping, and optional LLM paths stay separated.",
+      "Separate state, mechanics, enemy curriculum, reward scoring, Gym stepping, and optional LLM paths.",
     tradeoff: "Prototype evidence only; no broad claims of robust adaptive intelligence.",
     roleStatus: "Owner-reviewed contribution wording available; exact file/module ownership is not public.",
     contribution: {
@@ -94,18 +94,18 @@ export const featuredProjects: Project[] = [
       summary:
         "AJ owned the adaptive backend/game-system logic, agent behavior, reward/training constraints, and LLM/backend integration under hackathon constraints.",
       bullets: [
-        "Built around the adaptive loop: repeated player behavior should increase Mahoraga pressure and force tactics to change.",
+        "Built around an adaptive loop where repeated player behavior increases pressure.",
         "Worked on agent handling, backend integration, LLM integration, and reward/training constraints.",
-        "Reduced training/time complexity enough to keep the adaptive-system prototype workable under hackathon constraints.",
+        "Reduced training/time complexity enough to keep the prototype workable under hackathon constraints.",
       ],
       collaborativeScope: [
         "Teammate Negi primarily handled frontend aesthetics, deployment, presentation, and related design decisions.",
-        "Public copy frames Mahoraga as an applied adaptive-system prototype, not a production-grade game engine or generalized RL result.",
+        "Public copy frames Mahoraga as an applied adaptive-system prototype, not a production-grade game engine.",
       ],
       stillToVerify: [
         "Exact file/module ownership remains not documented.",
         "Training/evaluation artifacts require review before robust-performance claims.",
-        "Demo media and architecture diagram rendering remain outside public claims.",
+        "Demo media and rendered architecture review remain outside public claims.",
       ],
     },
     stack: ["Python", "Gymnasium", "FastAPI", "Gradio", "Qwen 2.5", "LoRA"],
@@ -129,67 +129,88 @@ export const featuredProjects: Project[] = [
     visual: {
       kind: "evidence-panel",
       status: "Known",
-      label: "Reviewed project visuals",
+      label: "Environment and reward loop",
       detail:
-        "Repo-sourced dashboard and environment captures support the prototype story; training charts are treated as context, not performance proof.",
+        "Repo-backed diagrams and reviewed captures explain the prototype loop without turning training charts into performance claims.",
       assets: [
+        {
+          src: "/assets/projects/mahoraga/mahoraga-system-diagram.svg",
+          label: "System loop diagram",
+          alt: "Mahoraga system diagram showing UI, API, environment, enemy, rewards, Gym wrapper, and LoRA training loop",
+          status: "Known",
+          note: "Generated from repo diagram docs and Mahoraga source inspection.",
+          source: "docs/diagrams/mahoraga-architecture.md; D:/meta_Mahoraga/README.md",
+        },
+        {
+          src: "/assets/projects/mahoraga/mahoraga-reward-loop-diagram.svg",
+          label: "Reward-loop diagram",
+          alt: "Mahoraga reward-loop diagram showing state, action, reward components, anti-cowardice, opportunity, and terminal signals",
+          status: "Known",
+          note: "Shows reward components and known exploit-pressure boundaries.",
+          source: "docs/diagrams/mahoraga-reward-system.md; D:/meta_Mahoraga/docs/SYSTEM_REPORT.md",
+        },
         {
           src: "/assets/projects/mahoraga/dashboard_preview.png",
           label: "Dashboard preview",
           status: "Known",
-          note: "Reviewed for homepage and case-study use as a real project artifact; not performance proof.",
+          note: "Real project artifact; not performance proof.",
           source: "Atishay9828/meta_Mahoraga:docs/dashboard_preview.png",
         },
         {
           src: "/assets/projects/mahoraga/stitch_aero_screenshot.png",
           label: "Environment UI screenshot",
           status: "Known",
-          note: "Use as supporting environment evidence; the asset is too dense to carry the whole story alone.",
+          note: "Supporting environment evidence; too dense to carry the story alone.",
           source: "Atishay9828/meta_Mahoraga:docs/stitch_aero_screenshot.png",
         },
         {
           src: "/assets/projects/mahoraga/training_metrics.png",
           label: "Training chart context",
           status: "Known",
-          note: "Chart artifact only. Metric interpretation requires methodology context before any performance claim.",
+          note: "Chart artifact only; no metric interpretation without methodology context.",
           source: "Atishay9828/meta_Mahoraga:docs/training_metrics.png",
         },
       ],
     },
     missingProof: [
       "demo media",
-      "architecture diagram revision",
       "reviewed training/evaluation interpretation",
       "exact file/module ownership evidence",
     ],
     caseStudy: {
-      whatWasBuilt:
-        "An adaptive-agent prototype where the core artifact is the environment loop: state, combat mechanics, curriculum enemy behavior, reward shaping, Gymnasium interaction, FastAPI/Gradio surfaces, and optional Qwen/LoRA paths.",
-      architectureSummary:
-        "The system is strongest when read as RL environment design: mechanics update state, the curriculum enemy changes pressure over time, reward components score behavior, and the Gym wrapper keeps training code outside the environment.",
+      whatWasBuilt: [
+        "Adaptive-agent environment with state, combat mechanics, and curriculum enemy pressure.",
+        "Reward shaping around survival, combat, adaptation, anti-cowardice, efficiency, terminal, and opportunity signals.",
+        "Gymnasium wrapper plus FastAPI/Gradio surfaces and optional Qwen/LoRA paths.",
+      ],
+      architectureSummary: [
+        "Mechanics update state and expose the next decision point.",
+        "Curriculum enemy changes pressure over time.",
+        "Reward components score behavior and expose reward-hacking risks.",
+        "Training code stays outside the environment through the Gym wrapper.",
+      ],
       engineeringDecisions: [
-        "Treat the boss-fight frame as a controlled adaptive environment, not as the main selling point.",
-        "Separate state/mechanics, enemy curriculum, reward calculation, and Gym-compatible stepping so each part can be reviewed independently.",
-        "Add anti-cowardice and opportunity signals to discourage passive exploit behavior while keeping reward hacking visible as a risk.",
+        "Treat the boss-fight frame as a controlled adaptive environment.",
+        "Keep state/mechanics, enemy curriculum, reward calculation, and Gym stepping reviewable.",
+        "Add anti-cowardice and opportunity signals to discourage passive exploit behavior.",
       ],
       evidenceStatus: [
         "GitHub, Kaggle, and HuggingFace links are Verified.",
-        "Reward components documented in env/rewards.py support the reward-loop explanation.",
-        "Reviewed dashboard and environment captures support prototype UI/state evidence.",
+        "Reward components are documented in env/rewards.py.",
+        "Generated system and reward diagrams are repo/docs-backed.",
       ],
       rewardProof: [
-        "Reward components documented in env/rewards.py include survival, combat, adaptation, anti-cowardice, efficiency, terminal, and opportunity signals.",
+        "Reward components include survival, combat, adaptation, anti-cowardice, efficiency, terminal, and opportunity signals.",
         "Anti-cowardice and opportunity penalties show the loop was designed against passive healing or non-engagement behavior.",
         "The portfolio does not claim broad adaptive intelligence without stronger evaluation scope.",
       ],
       limitations: [
         "Reward hacking remains possible despite explicit penalties.",
-        "Current evidence supports environment/reward design, not broad win-rate, generalization, or robustness claims.",
+        "Current evidence supports environment/reward design, not broad generalization or robustness claims.",
         "Hackathon/prototype constraints apply.",
       ],
       nextEvidenceNeeded: [
-        "Adaptive-behavior demo GIF/video showing the loop responding to agent choices.",
-        "Revised architecture diagram with rendered desktop/mobile review.",
+        "Adaptive-behavior demo GIF/video.",
         "Reviewed training/evaluation artifact selection.",
         "File/module ownership mapping if public attribution becomes necessary.",
       ],
@@ -203,10 +224,9 @@ export const featuredProjects: Project[] = [
     tier: "Featured",
     portfolioRole: "Production-minded AI systems architecture proof.",
     statusLabel: "Repo, walkthrough, and local routing proof",
-    problem:
-      "Categorize transactions without making the LLM the default path, while still handling low-confidence and ambiguous inputs honestly.",
+    problem: "Categorize transactions without making the LLM the default path.",
     keyDecision:
-      "Route in layers: merchant overrides for known entities, ONNX classification for confident local inference, semantic checks for obvious rules, and offline Qwen fallback for ambiguity.",
+      "Route in layers: merchant overrides, ONNX local inference, semantic checks, then offline Qwen fallback for ambiguity.",
     tradeoff:
       "Local/offline benchmark evidence only; this is not hosted production latency or dataset-level accuracy proof.",
     roleStatus: "Owner-reviewed contribution wording available; performance claims stay scoped to local evidence.",
@@ -216,9 +236,9 @@ export const featuredProjects: Project[] = [
       summary:
         "AJ built the full-stack offline-first AI categorization system end-to-end, including backend, frontend, local routing, merchant memory, history, AI insights, and benchmark evidence.",
       bullets: [
-        "Built the UI/API path for categorizing transactions from known merchants and local or ambiguous vendors.",
-        "Implemented merchant memory, local ONNX routing, fallback routing, history, and AI insights based on previous expenditure context.",
-        "Chose an offline/local model strategy because the hackathon constraint required local execution without cloud help.",
+        "Built the UI/API path for categorizing transactions from known merchants and ambiguous vendors.",
+        "Implemented merchant memory, local ONNX routing, fallback routing, history, and AI insights.",
+        "Chose an offline/local model strategy because the hackathon constraint required local execution.",
       ],
       collaborativeScope: [
         "Solo project; public copy may say full-stack, solo, and end-to-end because AJ confirmed ownership.",
@@ -247,59 +267,79 @@ export const featuredProjects: Project[] = [
     visual: {
       kind: "evidence-panel",
       status: "Known",
-      label: "Sample-data UI proof",
+      label: "Routing and memory flow",
       detail:
-        "Prediction, history, category, and merchant-memory screens use safe sample transaction data. Endpoint and fallback examples are local CPU-only evidence, not hosted production proof.",
+        "Generated routing diagrams and sample-data UI captures show the local/offline architecture without hosted-production claims.",
       assets: [
+        {
+          src: "/assets/projects/hybrid-categorizer/hybrid-routing-diagram.svg",
+          label: "Routing diagram",
+          alt: "Hybrid categorizer routing diagram showing merchant override, ONNX DistilBERT, confidence gate, semantic checks, and Qwen fallback",
+          status: "Known",
+          note: "Generated from Hybrid architecture docs and backend source inspection.",
+          source: "docs/diagrams/hybrid-categorizer-routing.md; D:/Hybrid-GenAI-Transaction-Categorization/backend/classify.py",
+        },
+        {
+          src: "/assets/projects/hybrid-categorizer/hybrid-memory-feedback-diagram.svg",
+          label: "Memory feedback diagram",
+          alt: "Hybrid categorizer memory feedback diagram showing prediction, correction, merchant map, history, and insight flow",
+          status: "Known",
+          note: "Shows correction and merchant-memory boundaries.",
+          source: "docs/diagrams/hybrid-categorizer-memory.md; D:/Hybrid-GenAI-Transaction-Categorization/backend/feedback.py",
+        },
         {
           src: "/assets/projects/hybrid-categorizer/predict.png",
           label: "Prediction flow screenshot",
           status: "Known",
-          note: "Frontend prediction-flow capture using synthetic sample input; UI proof, not model-quality proof.",
+          note: "Synthetic sample input UI proof; not model-quality proof.",
+          source: "Hybrid frontend screenshot source from verified repo capture workflow.",
+        },
+        {
+          src: "/assets/projects/hybrid-categorizer/memory.png",
+          label: "Merchant memory screenshot",
+          status: "Known",
+          note: "Synthetic merchant-memory view; not usage metrics or model-quality proof.",
           source: "Hybrid frontend screenshot source from verified repo capture workflow.",
         },
         {
           src: "/assets/projects/hybrid-categorizer/categories.png",
           label: "Category detail screenshot",
           status: "Known",
-          note: "Case-study support only. Visible merchants, dates, and amounts are sample/demo transaction data.",
+          note: "Case-study support only. Visible merchants, dates, and amounts are sample/demo data.",
           source: "Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/categories.png",
         },
         {
           src: "/assets/projects/hybrid-categorizer/history.png",
           label: "History screenshot",
           status: "Known",
-          note:
-            "Useful for transaction history, category confidence, and route tags only. It does not show the slide-in AI Insight panel.",
+          note: "Shows transaction history and route tags; does not show the slide-in AI Insight panel.",
           source: "Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/history.png",
-        },
-        {
-          src: "/assets/projects/hybrid-categorizer/memory.png",
-          label: "Merchant memory screenshot",
-          status: "Known",
-          note: "Merchant-memory view uses synthetic merchants and amounts; not usage metrics or model-quality proof.",
-          source: "Hybrid frontend screenshot source from verified repo capture workflow.",
         },
       ],
     },
     missingProof: ["deployment link", "opened History AI Insight screenshot", "repeatable fallback harness"],
     caseStudy: {
-      whatWasBuilt:
-        "A transaction categorization system combining merchant overrides, ONNX DistilBERT inference, offline Qwen2.5-7B GGUF fallback, feedback, history, AI insights, and merchant-memory behavior. Owner-observed local CPU-only/offline testing reduced approximate fallback latency from ~60-80s to ~5-13s; this is not a formal benchmark or production SLA.",
-      architectureSummary:
-        "The routing flow is layered: known merchants can bypass inference, confident local ONNX results can return without an LLM call, low-confidence or semantically ambiguous inputs route to offline Qwen fallback, and frontend history/memory keeps ambiguity visible to the user.",
+      whatWasBuilt: [
+        "Offline-first transaction categorizer with merchant overrides and ONNX DistilBERT inference.",
+        "Qwen2.5 GGUF fallback for ambiguous or low-confidence inputs.",
+        "Feedback, history, AI insights, and merchant-memory behavior.",
+      ],
+      architectureSummary: [
+        "Known merchants can bypass inference.",
+        "Confident local ONNX results return without an LLM call.",
+        "Low-confidence or semantically ambiguous inputs route to offline Qwen fallback.",
+        "Frontend history and memory keep ambiguity visible to the user.",
+      ],
       engineeringDecisions: [
-        "Prefer deterministic merchant overrides before model inference when the merchant is already known.",
-        "Use ONNX classification as the local path, but avoid treating every local prediction as trustworthy.",
-        "Reserve merchant learning for explicit feedback so prediction calls do not write noisy first-token mappings.",
+        "Prefer deterministic merchant overrides before model inference.",
+        "Use ONNX classification as the local path without treating every prediction as trustworthy.",
+        "Reserve merchant learning for explicit feedback so first-token mappings do not pollute memory.",
       ],
       evidenceStatus: [
         "GitHub repo and YouTube walkthrough are Verified.",
-        "POST /predict was validated locally on port 8001 with merchant override and offline Qwen fallback examples.",
-        "History AI Insight is source-code-backed through a slide-in HistoryPanel calling POST /transaction-insight.",
-        "ONNX dtype mismatch was fixed by casting tokenizer outputs to int64 before ONNX Runtime inference.",
+        "POST /predict was validated locally with merchant override and offline Qwen fallback examples.",
+        "History AI Insight is source-code-backed through POST /transaction-insight.",
         "Backend tests cover 27 assertions in backend/tests/test_predict.py.",
-        "External API fallback cost is 0 INR / 0 USD for these local Qwen runs; this excludes local compute cost.",
       ],
       routingProof: {
         label: "Endpoint and fallback proof captured",
@@ -318,14 +358,13 @@ export const featuredProjects: Project[] = [
       limitations: [
         "Confidence threshold tuning affects fallback frequency and correctness.",
         "Measured values are local CPU-only runs, not hosted production latency.",
-        "The ~60-80s to ~5-13s fallback improvement is owner-observed local testing, not a formal benchmark.",
-        "The History AI Insight flow is source-backed, but the current screenshot does not show the opened insight panel.",
-        "Merchant memory can encode wrong mappings if correction or extraction quality is weak.",
+        "Owner-observed local CPU-only/offline testing suggests ~60-80s to ~5-13s fallback improvement; not a formal benchmark or production SLA.",
+        "The current History screenshot does not show the opened insight panel.",
       ],
       nextEvidenceNeeded: [
-        "Replacement History screenshot showing the real AI Insight panel with safe sample data and a real /transaction-insight response.",
-        "Repo-owned fallback benchmark script if this evidence should be repeatable outside Codex.",
-        "Hosted deployment link only if the project is intentionally deployed.",
+        "Replacement History screenshot with real /transaction-insight response.",
+        "Repo-owned fallback benchmark script for repeatable Qwen evidence.",
+        "Hosted deployment link only if intentionally deployed.",
         "Dataset-level accuracy evaluation before any accuracy claim.",
       ],
     },
@@ -337,10 +376,9 @@ export const featuredProjects: Project[] = [
     tier: "Featured",
     portfolioRole: "Product engineering proof alongside the AI systems work.",
     statusLabel: "Verified repo, deployment, and workflow visuals",
-    problem:
-      "Make campus event participation less fragmented by connecting discovery, interest context, RSVP/join actions, social coordination, chat, and carpool planning in one product flow.",
+    problem: "Connect event discovery, interest context, RSVP, social coordination, chat, and carpool planning.",
     keyDecision:
-      "Use persisted backend models, JWT auth, and WebSocket chat so the product has real coordination state rather than only a static event listing UI.",
+      "Use persisted backend models, JWT auth, and WebSocket chat so coordination state is not UI-only.",
     tradeoff: "Collaborative project; exact module split is not public.",
     roleStatus: "Owner-reviewed collaborative contribution wording available; exact module ownership is not separated.",
     contribution: {
@@ -350,18 +388,18 @@ export const featuredProjects: Project[] = [
         "AJ collaborated across product flow and implementation on a campus event-discovery and coordination platform; ownership is not cleanly separable by module.",
       bullets: [
         "Worked across the product flow for centralized campus and outside-campus event discovery.",
-        "Contributed to implementation effort and coordination across RSVP/social coordination, carpool, maps, recommendations, and admin/event workflows.",
-        "Kept the case study focused on the platform workflow instead of assigning unsupported solo ownership to individual modules.",
+        "Contributed across RSVP/social coordination, carpool, maps, recommendations, and admin/event workflows.",
+        "Kept the case study focused on workflow evidence instead of unsupported solo module ownership.",
       ],
       collaborativeScope: [
-        "Event discovery, RSVP/social coordination, friends, chat, carpool, maps, recommendations, and admin/event workflows should be described as collaborative platform areas.",
-        "Do not claim solo ownership of auth, RSVP, chat, carpool, maps, recommendations, admin, or deployment.",
+        "Event discovery, RSVP/social coordination, friends, chat, carpool, maps, recommendations, and admin/event workflows are collaborative platform areas.",
+        "Exact ownership for auth, RSVP, chat, carpool, maps, recommendations, admin, or deployment is not separated in public evidence.",
       ],
       stillToVerify: [
         "Exact module ownership remains collaborative/not separated.",
         "Event-list, event-detail, map-view, landing/auth, and redacted profile/friends visuals are owner-captured live-deployment screenshots.",
         "Raw profile/friends screenshots stay out of public use; only redacted copies may be shown.",
-        "Manual deployed workflow verification and rendered diagram review remain outside public claims.",
+        "Manual deployed workflow verification remains outside public claims.",
       ],
     },
     stack: ["React", "FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "WebSockets", "Render"],
@@ -380,16 +418,16 @@ export const featuredProjects: Project[] = [
     visual: {
       kind: "evidence-panel",
       status: "Verified",
-      label: "Owner-captured deployment screenshots",
+      label: "Workflow and system diagrams",
       detail:
-        "Live-deployment workflow screenshots cover events list, event detail, map view, landing/login, and redacted profile/friends states. These support prototype workflow evidence.",
+        "Public-safe live-deployment workflow screenshots and generated repo-backed diagrams cover the prototype workflow and system boundaries.",
       assets: [
         {
           src: "/assets/projects/the-loop/the-loop-events-list-live.png",
           label: "Live deployment workflow screenshot",
           alt: "The Loop events list showing dated campus events and category tags",
           status: "Verified",
-          note: "Primary public visual showing the dated event timeline and category tags; prototype workflow evidence.",
+          note: "Primary public visual showing the dated event timeline and category tags.",
           source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/events.",
         },
         {
@@ -397,7 +435,7 @@ export const featuredProjects: Project[] = [
           label: "Owner-captured deployment screenshot",
           alt: "The Loop event detail page showing event actions and location map",
           status: "Verified",
-          note: "Supports event detail, location, and action-flow evidence; not reliability or usage proof.",
+          note: "Supports event detail, location, and action-flow evidence.",
           source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/events.",
         },
         {
@@ -437,64 +475,97 @@ export const featuredProjects: Project[] = [
           label: "System diagram",
           alt: "The Loop system diagram showing React, FastAPI, database, auth, realtime, maps, and carpool layers",
           status: "Verified",
-          note: "Repo-backed topology diagram for app boundaries; not production scale or reliability proof.",
+          note: "Repo-backed topology diagram for app boundaries.",
           source: "Generated from docs/diagrams/the-loop-system.md, the-loop-realtime-flow.md, and the-loop-auth-flow.md.",
+        },
+        {
+          src: "/assets/projects/the-loop/the-loop-recommendation-flow.svg",
+          label: "Recommendation flow",
+          alt: "The Loop recommendation flow diagram showing interests, event tags, cosine similarity, joins, and updated user interests",
+          status: "Verified",
+          note: "Shows interest/tag matching flow; not recommendation-system research proof.",
+          source: "Generated from docs/diagrams/the-loop-system.md and D:/The-Loop/main.py event recommendation code.",
+        },
+        {
+          src: "/assets/projects/the-loop/the-loop-carpool-chat-flow.svg",
+          label: "Carpool and chat flow",
+          alt: "The Loop carpool and chat flow showing join, carpool request, friend request, chat history, and WebSocket delivery",
+          status: "Verified",
+          note: "Shows persisted coordination flow and active WebSocket path.",
+          source: "Generated from docs/diagrams/the-loop-system.md, the-loop-realtime-flow.md, and D:/The-Loop/main.py.",
+        },
+        {
+          src: "/assets/projects/the-loop/the-loop-deployment-diagram.svg",
+          label: "Deployment diagram",
+          alt: "The Loop deployment diagram showing React Vite frontend, FastAPI Uvicorn backend, database, Google OAuth, Maps, and Render services",
+          status: "Verified",
+          note: "Render service topology only; not monitoring, backup, or SLA proof.",
+          source: "Generated from docs/diagrams/the-loop-system.md and D:/The-Loop/render.yaml.",
         },
       ],
     },
     missingProof: ["demo/walkthrough media", "module ownership evidence", "manual workflow validation notes"],
     caseStudy: {
-      whatWasBuilt:
-        "A full-stack student event coordination platform with authentication, profiles/interests, event discovery, RSVP/join behavior, friend flows, chat history, WebSocket chat, carpool coordination, and documented admin event endpoints.",
-      architectureSummary:
-        "The system combines a React frontend, FastAPI backend, SQLAlchemy models for users/events/interests/social/carpool/chat data, JWT auth, WebSocket delivery, and Render deployment configuration.",
+      whatWasBuilt: [
+        "Central event feed with list/map views.",
+        "RSVP/join flows and event detail pages.",
+        "Friend requests, chat, and carpool coordination.",
+        "Admin event workflows.",
+        "Recommendation flow using interest/tag matching.",
+      ],
+      architectureSummary: [
+        "React/Vite frontend.",
+        "FastAPI/Uvicorn backend.",
+        "SQLAlchemy data models.",
+        "WebSockets for chat.",
+        "Google Maps/OAuth integrations.",
+        "SQLite/PostgreSQL depending environment.",
+      ],
       engineeringDecisions: [
-        "Frame the project around campus coordination outcomes, not a generic social/event board.",
-        "Persist event joins, friend requests, carpool groups, and chat history so the workflow has backend state.",
-        "Keep deployment, screenshot, and realtime limitations visible without implying mature production operations.",
+        "Frame the project around campus coordination outcomes.",
+        "Persist event joins, friend requests, carpool groups, and chat history.",
+        "Keep deployment, screenshot, and realtime limitations visible without production-ops claims.",
       ],
       evidenceStatus: [
         "Deployment and GitHub repo are Verified.",
-        "Live-deployment screenshots cover public-safe events list, event detail, map view, landing/login, and redacted profile/friends visual states.",
-        "Realtime, auth, and system topology evidence now have documented diagram sources; the public SVG is a repo-backed topology diagram.",
+        "Live screenshots cover events list, event detail, map view, landing/login, and redacted profile/friends states.",
+        "System, recommendation, carpool/chat, and deployment diagrams are repo/docs-backed.",
         "Workflow screenshots support prototype evidence, not production reliability, active-user, or SLA claims.",
       ],
       workflow: [
         {
           label: "Discovery",
-          detail: "Student signs up or logs in, creates profile/interest context, and reaches event discovery from a personalized starting point.",
+          detail: "Student logs in, creates profile/interest context, and reaches event discovery.",
         },
         {
           label: "Interest matching",
-          detail: "Interests shape the event feed and matching context; this is product-flow evidence, not recommendation-system research.",
+          detail: "Interests and event tags shape feed ordering through cosine similarity.",
         },
         {
           label: "RSVP / join",
-          detail: "Student joins or RSVPs to an event, and the backend records the user-event relationship rather than leaving the action as UI-only state.",
+          detail: "Joining an event writes a user-event relationship and updates interest weights.",
         },
         {
           label: "Friends, chat, and carpool",
-          detail: "Friend connections, chat history, active WebSocket delivery, and carpool groups/requests connect event intent to coordination.",
+          detail: "Friend requests, chat history, active WebSocket delivery, and carpool requests connect event intent to coordination.",
         },
         {
           label: "Admin / event management",
-          detail: "Admin event endpoints are documented; visual proof should use safe UI evidence only.",
+          detail: "Admin endpoints support event create, update, delete, and admin-owned event listing.",
         },
         {
           label: "Operational boundaries",
-          detail: "Disconnects, expired JWTs, multi-tab state, offline delivery, matching quality, and Render/free-tier behavior need deeper proof before reliability or scale claims.",
+          detail: "Prototype/MVP evidence only; no reliability, SLA, or user-scale claims.",
         },
       ],
       limitations: [
         "WebSocket delivery depends on valid JWT state and active connections.",
         "Offline delivery and reconnect/session behavior are not proven as hardened production features.",
         "Matching is a product workflow, not recommendation-system research.",
-        "Workflow screenshots prove visible deployment UI states only; they do not prove scale or active-user usage.",
         "Render/free-tier constraints may affect perceived reliability.",
       ],
       nextEvidenceNeeded: [
         "Safe admin screenshots only if admin/event management is visually featured.",
-        "Rendered desktop/mobile review for the system diagram asset.",
         "Manual deployed workflow verification before stronger reliability copy.",
         "Module ownership detail only if teammate-confirmed and still framed as collaborative.",
       ],
@@ -563,28 +634,63 @@ export const labProjects = [
   {
     title: "Minimal RAG Implementation",
     category: "Lab",
-    purpose: "Retrieval, chunking, and grounded-answer workflow.",
+    purpose: "Retrieval, chunking, embeddings, and grounded-answer workflow.",
     status: "Focused retrieval experiment.",
+    repoHref: "https://github.com/Atishay9828/RAG",
+    repoStatus: "Verified",
   },
   {
     title: "Music Web Scraper",
     category: "Lab",
     purpose: "Scraping pipeline for collecting and structuring music data.",
     status: "Practical data extraction build.",
+    repoHref: "https://github.com/Atishay9828/app10--web-scrape-music",
+    repoStatus: "Verified",
   },
   {
     title: "Global Super Store Database Project",
     category: "Lab",
     purpose: "SQL schema design, queries, and dashboard-ready business data.",
     status: "Database fundamentals proof.",
+    repoHref: "https://github.com/Atishay9828/Global-Super-Store-Database",
+    repoStatus: "Verified",
   },
   {
     title: "Fast and Curious Car Analysis",
     category: "Lab",
     purpose: "Exploratory car dataset analysis with visual insights.",
     status: "EDA and visualization exercise.",
+    repoHref: "https://github.com/Atishay9828/Fast-and-Curious_Car-Analysis",
+    repoStatus: "Verified",
   },
 ];
+
+export const timelineProjectLinks = {
+  "Custom Linear Regression Model": {
+    href: "https://github.com/Atishay9828/Custom-Linear-Regression-Model",
+    external: true,
+  },
+  "Iris Classification": {
+    href: "https://github.com/Atishay9828/IRIS-Flower-Classification",
+    external: true,
+  },
+  "Netflix EDA": {
+    href: "https://github.com/Atishay9828/Netflix-EDA",
+    external: true,
+  },
+  "Music Web Scraper": {
+    href: "https://github.com/Atishay9828/app10--web-scrape-music",
+    external: true,
+  },
+  "Global Super Store Database Project": {
+    href: "https://github.com/Atishay9828/Global-Super-Store-Database",
+    external: true,
+  },
+  "Fast and Curious Car Analysis": {
+    href: "https://github.com/Atishay9828/Fast-and-Curious_Car-Analysis",
+    external: true,
+  },
+} satisfies Record<string, { href: string; external: boolean }>;
 
 export const timelineStages = [
   {
@@ -626,7 +732,7 @@ export const capabilities = [
   },
   {
     label: "Product engineering",
-    evidence: ["The Loop"],
+    evidence: ["The Loop", "ReceiptSplit"],
   },
   {
     label: "Automation",
@@ -638,15 +744,15 @@ export const capabilities = [
   },
   {
     label: "Full-stack implementation",
-    evidence: ["The Loop", "Hybrid Categorizer"],
+    evidence: ["The Loop", "Hybrid Categorizer", "ReceiptSplit"],
   },
   {
     label: "C++/DSA foundations",
-    evidence: ["Coursework and foundations signal"],
+    evidence: ["Coursework and resume signal"],
   },
 ];
 
-export const routes = ["/", "/projects/mahoraga", "/projects/hybrid-categorizer", "/projects/the-loop"];
+export const routes = ["/", "/projects/mahoraga/", "/projects/hybrid-categorizer/", "/projects/the-loop/"];
 
 export const getProjectBySlug = (slug: string) =>
   [...featuredProjects, ...secondaryProjects].find((project) => project.slug === slug);

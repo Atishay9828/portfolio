@@ -7,6 +7,25 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-07-09 Manual Review Fix Pass
+
+Completed:
+- Finished the manual review repair pass on top of commit `f2239fd`.
+- Kept the Signal Journey as one rail and made the marker position derive from the active station index instead of raw page scroll.
+- Removed the duplicate hero Signal Path module and kept the hero right side focused on proof anchors.
+- Made featured project titles route to internal case studies and replaced large proof tiles with compact icon actions.
+- Linked verified lab repos for RAG, Music Web Scraper, Global Super Store Database, and Fast and Curious Car Analysis.
+- Expanded the evidence-derived toolkit to languages, frontend, backend/API, AI/ML, data/database, deployment, and product-system categories.
+- Added repo/docs-backed SVG diagrams for Mahoraga, Hybrid, and The Loop visual proof panels.
+- Updated public copy so pending-proof language stays out of the rendered site and unresolved proof stays in docs.
+
+Validation:
+- `npm.cmd test` passed with 35 tests.
+- `npm.cmd run build` passed with 0 Astro diagnostics and generated 4 pages.
+- Static `dist/` smoke check confirmed `/`, `/projects/mahoraga/`, `/projects/hybrid-categorizer/`, and `/projects/the-loop/` exist with titles and no generated Windows drive paths.
+- Generated HTML scan found no forbidden public backlog/private-data phrases.
+- Dev server startup printed ready on `http://127.0.0.1:4321/`, then exited inside the sandbox because Vite could not read parent-directory dependency paths. Escalated rerun was unavailable due the environment usage limit, so live browser QA remains not completed in this pass.
+
 ### 2026-07-09 Deep Screening Public Cleanup
 
 Completed:
@@ -20,8 +39,8 @@ Completed:
 - Added evidence-derived toolkit data and documentation.
 
 Validation:
-- `npm.cmd test` passed with 30 tests.
-- `$env:ASTRO_TELEMETRY_DISABLED='1'; npm.cmd run build` passed before the final browser-QA/doc-closeout step.
+- `npm.cmd test` passed with 30 tests during the midpoint checkpoint.
+- `$env:ASTRO_TELEMETRY_DISABLED='1'; npm.cmd run build` passed before the final manual-review closeout step.
 - Public-source scans showed no forbidden placeholder/backlog terms or local Windows paths in `src`/`public`.
 
 ### 2026-07-08 Scroll-Responsive Signal Journey Correction

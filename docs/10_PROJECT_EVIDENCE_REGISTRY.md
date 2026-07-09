@@ -29,7 +29,7 @@ Purpose:
 
 | Item | Status | Notes |
 |---|---|---|
-| Final proof/visual launch-readiness audit | Verified | `docs/24_LAUNCH_READINESS_AUDIT.md` records the pre-Loop-visual 72/100 score; `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md` estimates 82/100 after The Loop live visual import. Conservative soft launch is conditionally stronger; polished/final launch remains blocked by remaining proof gaps. |
+| Final proof/visual launch-readiness audit | Verified | `docs/24_LAUNCH_READINESS_AUDIT.md` records the pre-Loop-visual 72/100 score; `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md` estimates 82/100 after The Loop live visual import; `docs/33_MANUAL_REVIEW_FIX_PASS.md` records the 2026-07-09 manual review fix pass. Conservative soft launch is stronger after tests/build/static smoke; polished/final launch remains blocked by remaining proof gaps and live browser QA. |
 
 ## Featured Projects
 
@@ -44,7 +44,7 @@ Verified links:
 
 Evidence status:
 - Links: Verified.
-- Diagram specs: Known.
+- Diagram specs and generated SVGs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; reward-system diagram is Ready, architecture diagram needs revision.
 - Imported screenshot/metrics candidates: Known portfolio-local files under `public/assets/projects/mahoraga/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md`.
 - Local demo media: Needed.
@@ -52,8 +52,8 @@ Evidence status:
 - Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed role label and contribution summary are available, while exact file/module ownership remains not documented.
 
 Required assets:
-- Architecture diagram.
-- Reward-system visualization.
+- Architecture diagram review.
+- Reward-system visualization review.
 - Training timeline or metrics chart.
 - Demo GIF/video.
 - Failure mode or limitation note.
@@ -91,7 +91,7 @@ Evidence status:
 - Walkthrough: Verified.
 - Repo link: Verified.
 - Deployment link: Missing.
-- Diagram specs: Known.
+- Diagram specs and generated SVGs: Known.
 - Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; both diagrams need revision before final frontend use.
 - UI screenshots: Known portfolio-local files under `public/assets/projects/hybrid-categorizer/`; `predict.png` and `memory.png` were replaced on 2026-06-27 with running-frontend captures using synthetic demo data. `categories.png` and `history.png` remain case-study candidates that must be sample-labeled if used. The current `history.png` shows the History list view only, not the opened-transaction AI Insight panel.
 - History AI Insight behavior: Known in `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`; clicking one History transaction opens `HistoryPanel`, which calls `POST /transaction-insight` using the selected transaction plus recent same-category history. Screenshot proof of that opened panel remains Needed.
@@ -107,8 +107,8 @@ Evidence status:
 Required assets:
 - Repo link.
 - Deployment link if hosted.
-- Confidence-routing diagram.
-- Merchant memory visualization.
+- Confidence-routing diagram review.
+- Merchant memory visualization review.
 - Latency comparison benchmark.
 - Routing decision table.
 - UI screenshots.
@@ -154,8 +154,8 @@ Verified links:
 Evidence status:
 - Deployment: Verified.
 - Repo link: Verified.
-- Diagram specs: Known.
-- Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, and `public/assets/projects/the-loop/the-loop-system-diagram.svg` now provides a repo-backed system topology diagram from the existing diagram docs.
+- Diagram specs and generated SVGs: Known.
+- Diagram review: Known in `docs/13_FEATURED_EVIDENCE_REVIEW.md`; realtime/auth diagrams are Ready, and `public/assets/projects/the-loop/the-loop-system-diagram.svg`, `the-loop-recommendation-flow.svg`, `the-loop-carpool-chat-flow.svg`, and `the-loop-deployment-diagram.svg` now provide repo/docs-backed system, recommendation, coordination, and deployment diagrams.
 - Imported product screenshots: Verified owner-provided live-deployment files under `public/assets/projects/the-loop/`; visual/privacy review recorded in `docs/18_IMPORTED_ASSET_REVIEW.md` and `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`.
 - Product workflow walkthrough: Known in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; events-list, event-detail, map-view, landing/login, and redacted profile/friends screenshots now provide public-safe visual workflow evidence.
 - Role/contribution framework: Known in `docs/23_ROLE_CONTRIBUTION_EVIDENCE.md`; owner-reviewed collaborative contribution wording is available, while exact module ownership remains collaborative/not separated.
@@ -172,7 +172,7 @@ Required assets:
 
 Missing assets:
 - Manual deployed workflow verification before stronger reliability or production-readiness copy.
-- Rendered desktop/mobile review of `public/assets/projects/the-loop/the-loop-system-diagram.svg`.
+- Rendered desktop/mobile review of the The Loop SVG diagram set.
 - Admin/chat/carpool screenshots only if those flows will be visually featured.
 - Demo/walkthrough.
 - Collaborative module ownership detail if later separated by evidence.
@@ -263,11 +263,11 @@ Can be shown publicly yet:
 
 Portfolio tier: Lab
 
-Known links:
-- None.
+Verified links:
+- GitHub repo: `https://github.com/Atishay9828/RAG`
 
 Evidence status:
-- Repo link: Missing.
+- Repo link: Verified.
 - Retrieval diagram/example output: Needed.
 
 Required assets:
@@ -276,24 +276,23 @@ Required assets:
 - Example query output.
 
 Missing assets:
-- Repo link.
 - Example output.
 
 Verification notes:
-- No external evidence was provided.
+- GitHub repo was verified in the 2026-07-09 manual review pass.
 
 Can be shown publicly yet:
-- No, except as a text-only lab note after evidence is clarified.
+- Yes, as a compact lab card linked to the verified repo. Still needs example output before stronger proof.
 
 ### Music Web Scraper
 
 Portfolio tier: Lab
 
-Known links:
-- None.
+Verified links:
+- GitHub repo: `https://github.com/Atishay9828/app10--web-scrape-music`
 
 Evidence status:
-- Repo link: Missing.
+- Repo link: Verified.
 - Input/output artifact: Needed.
 
 Required assets:
@@ -302,24 +301,23 @@ Required assets:
 - Short purpose explanation.
 
 Missing assets:
-- Repo link.
 - Output artifact.
 
 Verification notes:
-- No external evidence was provided.
+- GitHub repo was verified in the 2026-07-09 manual review pass.
 
 Can be shown publicly yet:
-- No.
+- Yes, as a compact lab card linked to the verified repo. Still needs output artifact before stronger proof.
 
 ### Global Super Store Database Project
 
 Portfolio tier: Lab
 
-Known links:
-- None.
+Verified links:
+- GitHub repo: `https://github.com/Atishay9828/Global-Super-Store-Database`
 
 Evidence status:
-- Repo/report link: Missing.
+- Repo link: Verified.
 - Schema/query artifacts: Needed.
 
 Required assets:
@@ -328,24 +326,23 @@ Required assets:
 - Query examples.
 
 Missing assets:
-- Repo/report link.
 - Schema/query artifacts.
 
 Verification notes:
-- No external evidence was provided.
+- GitHub repo was verified in the 2026-07-09 manual review pass. Local SQL files were also inspected for toolkit SQL evidence.
 
 Can be shown publicly yet:
-- No.
+- Yes, as a compact lab card linked to the verified repo. Still needs schema/query screenshots or diagrams before stronger proof.
 
 ### Fast and Curious Car Analysis
 
 Portfolio tier: Lab
 
-Known links:
-- None.
+Verified links:
+- GitHub repo: `https://github.com/Atishay9828/Fast-and-Curious_Car-Analysis`
 
 Evidence status:
-- Notebook/repo link: Missing.
+- Repo link: Verified.
 - Dataset/source note: Needed.
 
 Required assets:
@@ -354,14 +351,13 @@ Required assets:
 - Final insight screenshot.
 
 Missing assets:
-- Notebook/repo link.
 - Dataset/source note.
 
 Verification notes:
-- No external evidence was provided.
+- GitHub repo was verified in the 2026-07-09 manual review pass.
 
 Can be shown publicly yet:
-- No.
+- Yes, as a compact lab card linked to the verified repo. Still needs dataset/source note and final insight screenshot before stronger proof.
 
 ## Timeline Projects
 

@@ -18,13 +18,13 @@ Purpose:
 
 Remaining real blockers:
 - Demo GIF/video showing adaptive behavior responding to player choices.
-- Revised architecture diagram with desktop/mobile render review.
+- Desktop/mobile visual review for the generated architecture and reward-loop SVGs.
 - Training/evaluation artifact interpretation before stronger performance wording.
 - Exact file/module ownership only if source-backed attribution is needed.
 
 Nice-to-have:
 - Short walkthrough clip.
-- Cleaner reward-loop diagram export.
+- Cleaner diagram exports if the current SVGs feel too dense after browser QA.
 
 ## Hybrid GenAI Transaction Categorizer
 
@@ -33,6 +33,7 @@ Remaining real blockers:
 - Opened History AI Insight screenshot using safe sample data and a real `/transaction-insight` response.
 - Repeatable fallback benchmark harness if stronger latency wording is desired.
 - Dataset-level accuracy evaluation before any accuracy claim.
+- Desktop/mobile visual review for the generated routing and memory SVGs.
 
 Items intentionally excluded from public UI:
 - Full local Windows model paths.
@@ -43,7 +44,7 @@ Items intentionally excluded from public UI:
 ## The Loop
 
 Remaining real blockers:
-- Rendered desktop/mobile review for the system diagram asset.
+- Rendered desktop/mobile review for the system, recommendation, carpool/chat, and deployment SVG assets.
 - Manual deployed workflow verification before stronger reliability wording.
 - Exact module ownership only if teammate-confirmed evidence separates it.
 
@@ -58,7 +59,7 @@ Items intentionally excluded from public UI:
 Remaining real blockers:
 - AI Resume Tailoring Engine redacted sample output and ATS report.
 - Webcam Motion Alert screenshots/demo and workflow diagram.
-- Lab project repo/report/notebook links only when verified.
+- Lab project visual artifacts only when available; repo links for RAG, Music Web Scraper, Global Super Store Database, and Fast and Curious Car Analysis are now verified.
 
 Nice-to-have:
 - Compact diagrams for RAG, scraper, database, and EDA workflows.

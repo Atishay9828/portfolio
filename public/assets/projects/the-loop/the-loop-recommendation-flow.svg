@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">The Loop recommendation flow</title>
+  <desc id="desc">Campus event recommendation flow using profile interests, event tags, cosine similarity, joins, and updated user interests.</desc>
+  <rect width="1200" height="720" fill="#070809"/>
+  <text x="72" y="66" fill="#f2f5f7" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">The Loop Recommendations</text>
+  <text x="72" y="98" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="14">Interest and tag matching for campus event discovery</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2ef2c5"/>
+    </marker>
+    <style>
+      .node{fill:#111417;stroke:#3b4651;stroke-width:2;rx:8}
+      .strong{fill:#111417;stroke:#2ef2c5;stroke-width:2;rx:8}
+      .proof{fill:#111417;stroke:#e7f75a;stroke-width:2;rx:8}
+      .label{fill:#f2f5f7;font-family:Space Grotesk,Arial,sans-serif;font-size:18px;font-weight:700}
+      .small{fill:#9aa4af;font-family:JetBrains Mono,Consolas,monospace;font-size:12px}
+      .edge{stroke:#2ef2c5;stroke-width:2.5;marker-end:url(#arrow)}
+      .muted{stroke:#3b4651;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <g>
+    <rect class="strong" x="74" y="168" width="208" height="86"/>
+    <text class="label" x="98" y="202">Profile interests</text>
+    <text class="small" x="98" y="228">selected user categories</text>
+
+    <rect class="strong" x="74" y="354" width="208" height="86"/>
+    <text class="label" x="98" y="388">Event tags</text>
+    <text class="small" x="98" y="414">stored with event records</text>
+
+    <rect class="proof" x="390" y="260" width="226" height="92"/>
+    <text class="label" x="414" y="294">Cosine similarity</text>
+    <text class="small" x="414" y="320">score interest-tag overlap</text>
+
+    <rect class="node" x="724" y="260" width="210" height="92"/>
+    <text class="label" x="748" y="294">Ranked event feed</text>
+    <text class="small" x="748" y="320">discovery order signal</text>
+
+    <rect class="node" x="724" y="456" width="210" height="86"/>
+    <text class="label" x="748" y="490">Join event</text>
+    <text class="small" x="748" y="516">persist user-event record</text>
+
+    <rect class="proof" x="390" y="456" width="226" height="86"/>
+    <text class="label" x="414" y="490">Interest update</text>
+    <text class="small" x="414" y="516">adjust profile weights</text>
+
+    <path class="edge" d="M282 211c70 0 70 72 102 86"/>
+    <path class="edge" d="M282 397c70 0 70-72 102-86"/>
+    <path class="edge" d="M616 306h102"/>
+    <path class="muted" d="M829 352v98"/>
+    <path class="edge" d="M724 499H622"/>
+    <path class="muted" d="M390 499c-120 0-170-68-170-158v-82"/>
+  </g>
+  <text x="72" y="650" fill="#9aa4af" font-family="JetBrains Mono, Consolas, monospace" font-size="13">Boundary: product matching workflow only; not a recommendation-system research claim.</text>
+</svg>
