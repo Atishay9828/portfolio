@@ -1,0 +1,70 @@
+<button
+  class="gym-coder"
+  type="button"
+  aria-label="Play Gym Coder mascot animation"
+  data-gym-coder
+  data-click-phrases="commit. learn. repeat.|let's build!"
+>
+  <span class="gym-coder__bubble" data-gym-coder-bubble>npm run glowup</span>
+  <span class="gym-coder__sprite" aria-hidden="true">
+    <span class="gym-coder__spark gym-coder__spark--one"></span>
+    <span class="gym-coder__spark gym-coder__spark--two"></span>
+    <span class="gym-coder__spark gym-coder__spark--three"></span>
+    <span class="gym-coder__hair"></span>
+    <span class="gym-coder__head">
+      <span class="gym-coder__headband">AJ</span>
+      <span class="gym-coder__eye gym-coder__eye--left"></span>
+      <span class="gym-coder__eye gym-coder__eye--right"></span>
+      <span class="gym-coder__mouth"></span>
+    </span>
+    <span class="gym-coder__hood">
+      <span class="gym-coder__zip"></span>
+      <span class="gym-coder__mark">&lt;/&gt;</span>
+    </span>
+    <span class="gym-coder__arm gym-coder__arm--left"></span>
+    <span class="gym-coder__arm gym-coder__arm--right">
+      <span class="gym-coder__dumbbell"></span>
+    </span>
+    <span class="gym-coder__laptop">
+      <span>&gt;_</span>
+    </span>
+    <span class="gym-coder__terminal"></span>
+    <span class="gym-coder__leg gym-coder__leg--left"></span>
+    <span class="gym-coder__leg gym-coder__leg--right"></span>
+  </span>
+</button>
+
+<script is:inline>
+  (() => {
+    const mascots = document.querySelectorAll("[data-gym-coder]");
+
+    mascots.forEach((mascot) => {
+      if (mascot.dataset.gymCoderReady === "true") {
+        return;
+      }
+
+      mascot.dataset.gymCoderReady = "true";
+      const bubble = mascot.querySelector("[data-gym-coder-bubble]");
+      const defaultText = bubble?.textContent?.trim() || "npm run glowup";
+      const phrases = (mascot.getAttribute("data-click-phrases") || "commit. learn. repeat.").split("|");
+      let resetTimer;
+
+      mascot.addEventListener("click", () => {
+        const phrase = phrases[Math.floor(Math.random() * phrases.length)] || "commit. learn. repeat.";
+
+        mascot.classList.add("is-pumped");
+        if (bubble) {
+          bubble.textContent = phrase;
+        }
+
+        window.clearTimeout(resetTimer);
+        resetTimer = window.setTimeout(() => {
+          mascot.classList.remove("is-pumped");
+          if (bubble) {
+            bubble.textContent = defaultText;
+          }
+        }, 1100);
+      });
+    });
+  })();
+</script>

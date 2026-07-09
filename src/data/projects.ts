@@ -96,8 +96,8 @@ export const featuredProjects: Project[] = [
     ],
     homepageBoundary: "Prototype evidence only.",
     homepageCover: {
-      src: "/assets/projects/mahoraga/mahoraga-reward-loop-diagram.svg",
-      alt: "Mahoraga reward-loop diagram cover",
+      src: "/assets/projects/mahoraga/mahoraga-cover.svg",
+      alt: "Mahoraga adaptive boss system cover",
     },
     problem: "Adaptive enemy behavior shaped through environment rules and reward signals.",
     keyDecision:
@@ -247,8 +247,8 @@ export const featuredProjects: Project[] = [
     ],
     homepageBoundary: "Local/offline benchmark only.",
     homepageCover: {
-      src: "/assets/projects/hybrid-categorizer/hybrid-routing-diagram.svg",
-      alt: "Hybrid transaction routing diagram cover",
+      src: "/assets/projects/hybrid-categorizer/hybrid-cover.svg",
+      alt: "Hybrid transaction routing and local AI fallback cover",
     },
     problem: "Categorize transactions without making the LLM the default path.",
     keyDecision:
@@ -409,8 +409,8 @@ export const featuredProjects: Project[] = [
     ],
     homepageBoundary: "Collaborative project.",
     homepageCover: {
-      src: "/assets/projects/the-loop/the-loop-system-diagram.svg",
-      alt: "The Loop system diagram cover",
+      src: "/assets/projects/the-loop/the-loop-cover.svg",
+      alt: "The Loop campus event workflow cover",
     },
     problem: "Connect event discovery, interest context, RSVP, social coordination, chat, and carpool planning.",
     keyDecision:

@@ -18,6 +18,7 @@ import featuredProjectsSource from "../src/components/sections/FeaturedProjects.
 import aboutSource from "../src/components/sections/About.astro?raw";
 import contactSource from "../src/components/sections/Contact.astro?raw";
 import heroSource from "../src/components/sections/Hero.astro?raw";
+import gymCoderSource from "../src/components/ui/GymCoderMascot.astro?raw";
 import indexPageSource from "../src/pages/index.astro?raw";
 import systemsMapSource from "../src/components/sections/SystemsMap.astro?raw";
 import toolkitSource from "../src/components/sections/Toolkit.astro?raw";
@@ -32,11 +33,13 @@ import hybridHistoryInsightsEvidence from "../docs/21_HYBRID_HISTORY_AI_INSIGHTS
 import roleContributionEvidence from "../docs/23_ROLE_CONTRIBUTION_EVIDENCE.md?raw";
 
 import mahoragaDashboard from "../public/assets/projects/mahoraga/dashboard_preview.png?url";
+import mahoragaCover from "../public/assets/projects/mahoraga/mahoraga-cover.svg?url";
 import mahoragaRewardLoopDiagram from "../public/assets/projects/mahoraga/mahoraga-reward-loop-diagram.svg?url";
 import mahoragaSystemDiagram from "../public/assets/projects/mahoraga/mahoraga-system-diagram.svg?url";
 import mahoragaScreenshot from "../public/assets/projects/mahoraga/stitch_aero_screenshot.png?url";
 import mahoragaTraining from "../public/assets/projects/mahoraga/training_metrics.png?url";
 import hybridCategories from "../public/assets/projects/hybrid-categorizer/categories.png?url";
+import hybridCover from "../public/assets/projects/hybrid-categorizer/hybrid-cover.svg?url";
 import hybridHistory from "../public/assets/projects/hybrid-categorizer/history.png?url";
 import hybridMemoryFeedbackDiagram from "../public/assets/projects/hybrid-categorizer/hybrid-memory-feedback-diagram.svg?url";
 import hybridMemory from "../public/assets/projects/hybrid-categorizer/memory.png?url";
@@ -45,6 +48,7 @@ import hybridRoutingDiagram from "../public/assets/projects/hybrid-categorizer/h
 import loopInterestSelection from "../public/assets/projects/the-loop/interest_selection.png?url";
 import loopLanding from "../public/assets/projects/the-loop/landing_page.jpg?url";
 import loopCarpoolChatFlow from "../public/assets/projects/the-loop/the-loop-carpool-chat-flow.svg?url";
+import loopCover from "../public/assets/projects/the-loop/the-loop-cover.svg?url";
 import loopDeploymentDiagram from "../public/assets/projects/the-loop/the-loop-deployment-diagram.svg?url";
 import loopEventDetailLive from "../public/assets/projects/the-loop/the-loop-event-detail-live.png?url";
 import loopEventsListAltLive from "../public/assets/projects/the-loop/the-loop-events-list-alt-live.png?url";
@@ -59,11 +63,13 @@ import sdeResume from "../public/resume/atishay-jain-sde-resume.pdf?url";
 
 const importedProjectAssets = [
   mahoragaDashboard,
+  mahoragaCover,
   mahoragaRewardLoopDiagram,
   mahoragaSystemDiagram,
   mahoragaScreenshot,
   mahoragaTraining,
   hybridCategories,
+  hybridCover,
   hybridHistory,
   hybridMemoryFeedbackDiagram,
   hybridMemory,
@@ -72,6 +78,7 @@ const importedProjectAssets = [
   loopInterestSelection,
   loopLanding,
   loopCarpoolChatFlow,
+  loopCover,
   loopDeploymentDiagram,
   loopEventDetailLive,
   loopEventsListAltLive,
@@ -83,6 +90,8 @@ const importedProjectAssets = [
   loopRecommendationFlow,
   loopSystemDiagram,
 ];
+
+const importedCoverAssets = [mahoragaCover, hybridCover, loopCover];
 
 const requireContribution = (project: Project | undefined): ProjectContribution => {
   expect(project).toBeDefined();
@@ -116,6 +125,7 @@ const publicFacingSourceText = [
   projectsDataSource,
   featuredProjectsSource,
   heroSource,
+  gymCoderSource,
   indexPageSource,
   labProjectsSource,
   projectModuleSource,
@@ -713,13 +723,20 @@ describe("portfolio scaffold data", () => {
     expect(projectModuleSource).not.toContain("action.description");
   });
 
-  it("adds existing public cover visuals to featured homepage cards", () => {
+  it("adds personalized public cover visuals to featured homepage cards", () => {
     const coverAssets = featuredProjects.map((project) => project.homepageCover?.src);
+
+    expect(coverAssets).toEqual([
+      "/assets/projects/mahoraga/mahoraga-cover.svg",
+      "/assets/projects/hybrid-categorizer/hybrid-cover.svg",
+      "/assets/projects/the-loop/the-loop-cover.svg",
+    ]);
 
     for (const asset of coverAssets) {
       expect(asset).toBeTruthy();
       const assetPath = String(asset);
       expect(publicAssetExists(assetPath), `${assetPath} should exist under public`).toBe(true);
+      expect(importedCoverAssets.some((importedAsset) => importedAsset.includes(assetPath))).toBe(true);
     }
 
     expect(projectModuleSource).toContain("project.homepageCover");
@@ -727,12 +744,19 @@ describe("portfolio scaffold data", () => {
     expect(projectModuleSource).toContain("project.homepageCover.src");
   });
 
-  it("keeps the site buddy premium, non-image, and above card content", () => {
-    expect(indexPageSource).toContain('class="site-buddy"');
-    expect(indexPageSource).toContain("buddy-body");
-    expect(indexPageSource).toContain("buddy-face");
-    expect(indexPageSource).toContain("hey what up");
-    expect(indexPageSource).not.toContain("buddy-shell");
+  it("replaces the old site buddy with the interactive Gym Coder mascot", () => {
+    expect(indexPageSource).toContain('import GymCoderMascot from "../components/ui/GymCoderMascot.astro"');
+    expect(indexPageSource).toContain("<GymCoderMascot />");
+    expect(indexPageSource).not.toContain('class="site-buddy"');
+    expect(indexPageSource).not.toContain("hey what up");
+    expect(gymCoderSource).toContain('class="gym-coder"');
+    expect(gymCoderSource).toContain('aria-label="Play Gym Coder mascot animation"');
+    expect(gymCoderSource).toContain("data-gym-coder");
+    expect(gymCoderSource).toContain("gym-coder__headband");
+    expect(gymCoderSource).toContain("gym-coder__laptop");
+    expect(gymCoderSource).toContain("gym-coder__dumbbell");
+    expect(gymCoderSource).toContain("npm run glowup");
+    expect(gymCoderSource).toContain("commit. learn. repeat.");
     expect(indexPageSource).not.toContain("<img");
   });
 
