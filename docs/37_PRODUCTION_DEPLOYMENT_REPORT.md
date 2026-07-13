@@ -1,9 +1,9 @@
 # Production Deployment Report
 
-Date: 2026-07-13  
-Platform: Vercel  
-Production URL: `https://atishay-jain-portfolio.vercel.app`  
-Application release commit: `a53f44f942060b92ceb7a44945d3331e3001adb0`  
+Date: 2026-07-13
+Platform: Vercel
+Production URL: `https://atishay-jain-portfolio.vercel.app`
+Application release commit: `a53f44f942060b92ceb7a44945d3331e3001adb0`
 Release branch: `release/portfolio-production`
 
 ## Build and deployment
