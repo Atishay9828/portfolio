@@ -188,10 +188,94 @@ button:focus-visible {
 
 .journey-depth-scene__viewport {
   position: relative;
-  height: clamp(142px, 12vw, 168px);
+  height: clamp(190px, 16vw, 218px);
   overflow: hidden;
   perspective: 760px;
-  background: radial-gradient(circle at 50% 54%, rgba(var(--scene-color), 0.12), transparent 54%);
+  background:
+    linear-gradient(90deg, rgba(7, 9, 11, 0.98) 0%, rgba(7, 9, 11, 0.88) 62%, transparent 100%),
+    radial-gradient(circle at 82% 52%, rgba(var(--scene-color), 0.15), transparent 50%);
+}
+
+.journey-depth-scene__context {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  height: 100%;
+  align-content: space-between;
+  gap: 10px;
+  padding: 18px 16px 15px;
+}
+
+.journey-depth-scene__eyebrow {
+  color: rgba(var(--scene-color), 0.82);
+  font: 600 0.51rem/1.2 "JetBrains Mono", ui-monospace, monospace;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.journey-depth-scene__states {
+  position: relative;
+  min-height: 108px;
+}
+
+.journey-depth-scene__states > div {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 220ms ease, transform 280ms ease;
+}
+
+.journey-depth-scene__states strong {
+  display: block;
+  max-width: 78%;
+  color: var(--text-primary);
+  font-size: clamp(0.96rem, 1.35vw, 1.12rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.journey-depth-scene__states p {
+  max-width: 82%;
+  margin-top: 9px;
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  line-height: 1.48;
+}
+
+.journey-depth-scene__trace {
+  position: relative;
+  display: grid;
+  width: min(82%, 188px);
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.journey-depth-scene__trace::before,
+.journey-depth-scene__trace::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: rgba(var(--scene-color), 0.18);
+}
+
+.journey-depth-scene__trace::after {
+  width: var(--journey-progress-percent);
+  background: rgb(var(--scene-color));
+  box-shadow: 0 0 12px rgba(var(--scene-color), 0.4);
+}
+
+.journey-depth-scene__trace span {
+  width: 5px;
+  height: 5px;
+  border: 1px solid rgba(var(--scene-color), 0.5);
+  border-radius: 50%;
+  background: var(--bg-base);
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .journey-depth-scene__grid {
@@ -202,6 +286,7 @@ button:focus-visible {
     linear-gradient(90deg, rgba(var(--scene-color), 0.1) 1px, transparent 1px);
   background-size: 24px 24px;
   mask-image: radial-gradient(circle, #000 18%, transparent 68%);
+  opacity: 0.55;
   transform: rotateX(62deg) rotateZ(calc(-8deg + var(--journey-scroll) * 32deg));
 }
 
@@ -213,18 +298,20 @@ button:focus-visible {
   width: 1px;
   background: linear-gradient(transparent, rgba(var(--scene-color), 0.9), transparent);
   box-shadow: 0 0 24px rgba(var(--scene-color), 0.55);
+  opacity: 0.42;
   transform: rotate(calc(var(--journey-scroll) * 260deg));
   transform-origin: center;
 }
 
 .signal-glyph {
   position: absolute;
-  inset: 18px;
+  inset: 22px -46px 18px 44%;
   display: grid;
   place-items: center;
   color: rgb(var(--scene-color));
   opacity: 0;
-  transform: translateY(12px) scale(0.9) rotateX(-8deg);
+  filter: saturate(0.9);
+  transform: translateY(12px) scale(0.76) rotateX(-8deg);
   transition: opacity 280ms ease, transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -390,23 +477,26 @@ button:focus-visible {
 }
 
 .journey-depth-scene__footer {
-  min-height: 42px;
+  display: grid;
+  justify-items: start;
+  gap: 5px;
+  min-height: 58px;
   border-top: 1px solid rgba(var(--scene-color), 0.18);
 }
 
 .journey-depth-scene__footer > small {
-  flex: 0 0 auto;
   color: var(--text-muted);
-  font-size: 0.52rem;
+  font-size: 0.47rem;
   letter-spacing: 0.08em;
 }
 
 .journey-depth-scene__readout {
   position: relative;
-  min-height: 18px;
-  flex: 1 1 auto;
+  width: 100%;
+  min-height: 26px;
   font-size: 0.57rem;
   letter-spacing: 0.08em;
+  line-height: 1.35;
 }
 
 .journey-depth-scene__readout span {
@@ -432,6 +522,17 @@ button:focus-visible {
 .signal-journey[data-active-journey="4"] [data-scene-count="4"],
 .signal-journey[data-active-journey="5"] [data-scene-count="5"],
 .signal-journey[data-active-journey="6"] [data-scene-count="6"],
+.signal-journey[data-active-journey="0"] [data-scene-detail="0"],
+.signal-journey[data-active-journey="1"] [data-scene-detail="1"],
+.signal-journey[data-active-journey="2"] [data-scene-detail="2"],
+.signal-journey[data-active-journey="3"] [data-scene-detail="3"],
+.signal-journey[data-active-journey="4"] [data-scene-detail="4"],
+.signal-journey[data-active-journey="5"] [data-scene-detail="5"],
+.signal-journey[data-active-journey="6"] [data-scene-detail="6"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .signal-journey[data-active-journey="0"] [data-scene-glyph="0"],
 .signal-journey[data-active-journey="1"] [data-scene-glyph="1"],
 .signal-journey[data-active-journey="2"] [data-scene-glyph="2"],
@@ -439,8 +540,20 @@ button:focus-visible {
 .signal-journey[data-active-journey="4"] [data-scene-glyph="4"],
 .signal-journey[data-active-journey="5"] [data-scene-glyph="5"],
 .signal-journey[data-active-journey="6"] [data-scene-glyph="6"] {
-  opacity: 1;
-  transform: translateY(0) scale(1) rotateX(0);
+  opacity: 0.28;
+  transform: translateY(0) scale(0.82) rotateX(0);
+}
+
+.signal-journey[data-active-journey="0"] [data-scene-marker="0"],
+.signal-journey[data-active-journey="1"] [data-scene-marker="1"],
+.signal-journey[data-active-journey="2"] [data-scene-marker="2"],
+.signal-journey[data-active-journey="3"] [data-scene-marker="3"],
+.signal-journey[data-active-journey="4"] [data-scene-marker="4"],
+.signal-journey[data-active-journey="5"] [data-scene-marker="5"],
+.signal-journey[data-active-journey="6"] [data-scene-marker="6"] {
+  background: rgb(var(--scene-color));
+  box-shadow: 0 0 12px rgba(var(--scene-color), 0.7);
+  transform: scale(1.5);
 }
 
 .signal-journey[data-active-journey="1"] .journey-depth-scene { --scene-color: 124, 199, 255; }

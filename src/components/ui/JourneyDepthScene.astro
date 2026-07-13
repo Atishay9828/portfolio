@@ -4,7 +4,7 @@ import { journeyStopCount, journeyStops } from "../../data/journey";
 
 <aside class="journey-depth-scene" aria-hidden="true">
   <header class="journey-depth-scene__header">
-    <span>Signal core</span>
+    <span>Signal journey</span>
     <div class="journey-depth-scene__counts">
       {
         journeyStops.map((stop) => (
@@ -18,6 +18,23 @@ import { journeyStopCount, journeyStops } from "../../data/journey";
   <div class="journey-depth-scene__viewport">
     <div class="journey-depth-scene__grid"></div>
     <div class="journey-depth-scene__sweep"></div>
+
+    <div class="journey-depth-scene__context">
+      <span class="journey-depth-scene__eyebrow">Section in view</span>
+      <div class="journey-depth-scene__states">
+        {
+          journeyStops.map((stop) => (
+            <div data-scene-detail={stop.index}>
+              <strong>{stop.sectionLabel}</strong>
+              <p>{stop.sceneSummary}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="journey-depth-scene__trace">
+        {journeyStops.map((stop) => <span data-scene-marker={stop.index}></span>)}
+      </div>
+    </div>
 
     <div class="signal-glyph signal-glyph--identity" data-scene-glyph="0">
       <span class="signal-glyph__ring signal-glyph__ring--one"></span>
@@ -58,6 +75,6 @@ import { journeyStopCount, journeyStops } from "../../data/journey";
     <div class="journey-depth-scene__readout">
       {journeyStops.map((stop) => <span data-scene-state={stop.index}>{stop.sceneLabel}</span>)}
     </div>
-    <small>Scroll linked</small>
+    <small>Tracks the page beside it</small>
   </footer>
 </aside>

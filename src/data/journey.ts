@@ -4,6 +4,7 @@ export type JourneyStop = {
   navLabel: string;
   sectionLabel: string;
   sceneLabel: string;
+  sceneSummary: string;
 };
 
 export const journeyStops = [
@@ -13,6 +14,7 @@ export const journeyStops = [
     navLabel: "Signal",
     sectionLabel: "Signal",
     sceneLabel: "Identity / direction",
+    sceneSummary: "What I build, how I think, and the proof behind the work.",
   },
   {
     index: 1,
@@ -20,6 +22,7 @@ export const journeyStops = [
     navLabel: "About",
     sectionLabel: "About",
     sceneLabel: "Operating model / constraints",
+    sceneSummary: "The principles and constraints that shape my engineering decisions.",
   },
   {
     index: 2,
@@ -27,6 +30,7 @@ export const journeyStops = [
     navLabel: "Builds",
     sectionLabel: "Featured builds",
     sceneLabel: "Build / test / refine",
+    sceneSummary: "Three complete systems, each connected to architecture and evidence.",
   },
   {
     index: 3,
@@ -34,6 +38,7 @@ export const journeyStops = [
     navLabel: "Evolution",
     sectionLabel: "Evolution",
     sceneLabel: "Lessons / trajectory",
+    sceneSummary: "How each project changed the way I design and deliver systems.",
   },
   {
     index: 4,
@@ -41,6 +46,7 @@ export const journeyStops = [
     navLabel: "Toolkit",
     sectionLabel: "Toolkit",
     sceneLabel: "Evidence-derived toolkit",
+    sceneSummary: "Tools grouped by the work they enable, not as a keyword wall.",
   },
   {
     index: 5,
@@ -48,6 +54,7 @@ export const journeyStops = [
     navLabel: "Systems",
     sectionLabel: "Systems map",
     sceneLabel: "Systems / architecture",
+    sceneSummary: "Capabilities traced back to the projects that made them real.",
   },
   {
     index: 6,
@@ -55,6 +62,7 @@ export const journeyStops = [
     navLabel: "Contact",
     sectionLabel: "Contact",
     sceneLabel: "Inspect / collaborate",
+    sceneSummary: "Inspect the evidence, open the repositories, or start a conversation.",
   },
 ] as const satisfies readonly JourneyStop[];
 

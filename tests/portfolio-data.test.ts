@@ -247,8 +247,12 @@ describe("portfolio scaffold data", () => {
     expect(journeyDepthSceneSource).toContain("data-scene-state={stop.index}");
     expect(journeyDepthSceneSource).toContain("data-scene-count={stop.index}");
     expect(journeyDepthSceneSource.match(/data-scene-glyph=/g) ?? []).toHaveLength(7);
-    expect(journeyDepthSceneSource).toContain("Signal core");
-    expect(journeyDepthSceneSource).toContain("Scroll linked");
+    expect(journeyDepthSceneSource).toContain("Signal journey");
+    expect(journeyDepthSceneSource).toContain("Section in view");
+    expect(journeyDepthSceneSource).toContain("Tracks the page beside it");
+    expect(journeyDepthSceneSource).toContain("data-scene-detail={stop.index}");
+    expect(journeyDepthSceneSource).toContain("data-scene-marker={stop.index}");
+    expect(journeyStops.every((stop) => stop.sceneSummary.length >= 48)).toBe(true);
   });
 
   it("keeps the learning journey progressively enhanced and landmark-safe", () => {
