@@ -266,6 +266,10 @@ describe("portfolio scaffold data", () => {
 
   it("keeps the hero right side focused on proof anchors, not a duplicate Signal Path", () => {
     expect(heroSource).toContain("Proof anchors");
+    expect(heroSource).toContain("/assets/profile/atishay-jain-portrait.webp");
+    expect(heroSource).toContain("Builder profile");
+    expect(heroSource).toContain("Builder behind the systems");
+    expect(heroSource).toContain('alt="Atishay Jain in a black shirt, smiling with his arms crossed"');
     expect(heroSource).not.toContain("Signal path");
     expect(heroSource).not.toContain("Model to proof chain");
     expect(heroSource).not.toContain("signal-cursor");

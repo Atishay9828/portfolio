@@ -1,6 +1,6 @@
 # 06_ASSET_TRACKER.md
 
-Date: 2026-07-06
+Date: 2026-07-13
 
 Purpose:
 - Track global and project-specific asset readiness.
@@ -53,7 +53,7 @@ Link registry:
 | GitHub profile URL | Verified | Required | Use `https://github.com/Atishay9828/` after implementation begins. |
 | LinkedIn URL | Verified | Required | Owner-approved public CTA active at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |
 | Email address | Verified | Required | Owner-approved public CTA active at `mailto:ajain8_be23@thapar.edu`. |
-| Profile photo or identity mark | Needed | Recommended | Choose or create if useful. |
+| Profile photo or identity mark | Verified | Recommended | Owner-selected portrait visually/privacy reviewed, metadata-stripped, optimized to 37,280-byte WebP, and published at `public/assets/profile/atishay-jain-portrait.webp`. |
 | Open Graph image | Needed | Recommended | Create after visual direction is stable. |
 | Favicon/AJ monogram | Needed | Recommended | Create before deployment. |
 

@@ -7,6 +7,14 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-07-13 Personal Landing Identity Pass
+
+Completed:
+- Added the owner-selected black-shirt portrait as a compact builder-profile card above the hero proof anchors.
+- Preserved the proof-first opening, Signal Journey, and mascot while adding a real human identity surface.
+- Cropped the source to a 4:5 chest-up portrait, reviewed it for public privacy/readability, stripped source metadata, and optimized it to a 37,280-byte WebP.
+- Kept the personal image separate from navigation and project evidence so it adds identity without becoming the page's primary proof.
+
 ### 2026-07-09 Manual Review Fix Pass
 
 Completed:

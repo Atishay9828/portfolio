@@ -12,6 +12,20 @@ import Icon from "../ui/Icon.astro";
         <strong>Signal</strong>
       </div>
       <div class="eyebrow">Atishay Jain / Computer Engineering</div>
+      <div class="hero-mobile-profile" aria-hidden="true">
+        <img
+          src="/assets/profile/atishay-jain-portrait.webp"
+          alt=""
+          width="720"
+          height="900"
+          loading="eager"
+          decoding="async"
+        />
+        <div>
+          <strong>Atishay Jain</strong>
+          <span>Builder behind the systems</span>
+        </div>
+      </div>
       <h1>
         <span class="hero-title-line">AI systems.</span>
         <span class="hero-title-line">Product workflows.</span>
@@ -49,7 +63,28 @@ import Icon from "../ui/Icon.astro";
       </div>
     </div>
     <aside class="anchor-panel hero-visual-panel" aria-label="Featured project anchors">
-      <div class="meta-label">Proof anchors</div>
+      <figure class="hero-profile">
+        <div class="hero-profile__portrait">
+          <img
+            src="/assets/profile/atishay-jain-portrait.webp"
+            alt="Atishay Jain in a black shirt, smiling with his arms crossed"
+            width="720"
+            height="900"
+            loading="eager"
+            decoding="async"
+          />
+          <span aria-hidden="true">AJ / 01</span>
+        </div>
+        <figcaption>
+          <span class="meta-label">Builder profile</span>
+          <strong>Atishay Jain</strong>
+          <p>Computer Engineering student building complete AI systems and practical product workflows.</p>
+        </figcaption>
+      </figure>
+      <div class="hero-proof-heading">
+        <div class="meta-label">Proof anchors</div>
+        <span>Inspect the work</span>
+      </div>
       <div class="anchor-list">
         {featuredProjects.map((project) => (
           <a class="anchor-item" href={`/projects/${project.slug}/`}>
