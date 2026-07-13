@@ -65,10 +65,7 @@ export type Project = {
   statusLabel: string;
   homepageHighlights?: string[];
   homepageBoundary?: string;
-  homepageCover?: {
-    src: string;
-    alt: string;
-  };
+  homepageLesson?: string;
   problem: string;
   keyDecision: string;
   tradeoff: string;
@@ -95,10 +92,8 @@ export const featuredProjects: Project[] = [
       "Repo, Kaggle, and Hugging Face proof links",
     ],
     homepageBoundary: "Prototype evidence only.",
-    homepageCover: {
-      src: "/assets/projects/mahoraga/mahoraga-cover.svg",
-      alt: "Mahoraga adaptive boss system cover",
-    },
+    homepageLesson:
+      "Reward design is system design: environment rules, pressure, and failure modes shape behavior as much as the model.",
     problem: "Adaptive enemy behavior shaped through environment rules and reward signals.",
     keyDecision:
       "Separate state, mechanics, enemy curriculum, reward scoring, Gym stepping, and optional LLM paths.",
@@ -108,7 +103,7 @@ export const featuredProjects: Project[] = [
       status: "Owner-reviewed contribution wording available; file/module ownership is not public.",
       roleLabel: "Backend / RL Systems Engineer",
       summary:
-        "AJ owned the adaptive backend/game-system logic, agent behavior, reward/training constraints, and LLM/backend integration under hackathon constraints.",
+        "Atishay Jain owned the adaptive backend/game-system logic, agent behavior, reward/training constraints, and LLM/backend integration under hackathon constraints.",
       bullets: [
         "Built around an adaptive loop where repeated player behavior increases pressure.",
         "Worked on agent handling, backend integration, LLM integration, and reward/training constraints.",
@@ -133,7 +128,7 @@ export const featuredProjects: Project[] = [
       },
       {
         label: "Kaggle notebook",
-        href: "https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit",
+        href: "https://www.kaggle.com/code/atishay9828/meta-mahoraga",
         status: "Verified",
       },
       {
@@ -178,13 +173,6 @@ export const featuredProjects: Project[] = [
           status: "Known",
           note: "Supporting environment evidence; too dense to carry the story alone.",
           source: "Atishay9828/meta_Mahoraga:docs/stitch_aero_screenshot.png",
-        },
-        {
-          src: "/assets/projects/mahoraga/training_metrics.png",
-          label: "Training chart context",
-          status: "Known",
-          note: "Chart artifact only; no metric interpretation without methodology context.",
-          source: "Atishay9828/meta_Mahoraga:docs/training_metrics.png",
         },
       ],
     },
@@ -246,10 +234,7 @@ export const featuredProjects: Project[] = [
       "27 backend assertions passing",
     ],
     homepageBoundary: "Local/offline benchmark only.",
-    homepageCover: {
-      src: "/assets/projects/hybrid-categorizer/hybrid-cover.svg",
-      alt: "Hybrid transaction routing and local AI fallback cover",
-    },
+    homepageLesson: "Uncertainty should be routed, not handed to the largest model by default.",
     problem: "Categorize transactions without making the LLM the default path.",
     keyDecision:
       "Route in layers: merchant overrides, ONNX local inference, semantic checks, then offline Qwen fallback for ambiguity.",
@@ -260,14 +245,14 @@ export const featuredProjects: Project[] = [
       status: "Owner-reviewed contribution wording available; performance limits unchanged.",
       roleLabel: "Solo Full-Stack AI Systems Builder",
       summary:
-        "AJ built the full-stack offline-first AI categorization system end-to-end, including backend, frontend, local routing, merchant memory, history, AI insights, and benchmark evidence.",
+        "Atishay Jain built the full-stack offline-first AI categorization system end-to-end, including backend, frontend, local routing, merchant memory, history, AI insights, and benchmark evidence.",
       bullets: [
         "Built the UI/API path for categorizing transactions from known merchants and ambiguous vendors.",
         "Implemented merchant memory, local ONNX routing, fallback routing, history, and AI insights.",
         "Chose an offline/local model strategy because the hackathon constraint required local execution.",
       ],
       collaborativeScope: [
-        "Solo project; public copy may say full-stack, solo, and end-to-end because AJ confirmed ownership.",
+        "Solo project; public copy may say full-stack, solo, and end-to-end because Atishay Jain confirmed ownership.",
         "Benchmark copy stays scoped to local endpoint and CPU-only fallback evidence.",
       ],
       stillToVerify: [
@@ -408,10 +393,8 @@ export const featuredProjects: Project[] = [
       "Repo/deployment screenshots and diagrams",
     ],
     homepageBoundary: "Collaborative project.",
-    homepageCover: {
-      src: "/assets/projects/the-loop/the-loop-cover.svg",
-      alt: "The Loop campus event workflow cover",
-    },
+    homepageLesson:
+      "A product becomes useful when discovery connects to persisted coordination workflows.",
     problem: "Connect event discovery, interest context, RSVP, social coordination, chat, and carpool planning.",
     keyDecision:
       "Use persisted backend models, JWT auth, and WebSocket chat so coordination state is not UI-only.",
@@ -421,7 +404,7 @@ export const featuredProjects: Project[] = [
       status: "Owner-reviewed collaborative contribution wording available; exact module ownership remains collaborative/not separated.",
       roleLabel: "Collaborative Full-Stack Contributor",
       summary:
-        "AJ collaborated across product flow and implementation on a campus event-discovery and coordination platform; ownership is not cleanly separable by module.",
+        "Atishay Jain collaborated across product flow and implementation on a campus event-discovery and coordination platform; ownership is not cleanly separable by module.",
       bullets: [
         "Worked across the product flow for centralized campus and outside-campus event discovery.",
         "Contributed across RSVP/social coordination, carpool, maps, recommendations, and admin/event workflows.",
@@ -467,7 +450,7 @@ export const featuredProjects: Project[] = [
           source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/events.",
         },
         {
-          src: "/assets/projects/the-loop/the-loop-event-detail-live.png",
+          src: "/assets/projects/the-loop/the-loop-event-detail-live.webp",
           label: "Owner-captured deployment screenshot",
           alt: "The Loop event detail page showing event actions and location map",
           status: "Verified",
@@ -475,7 +458,7 @@ export const featuredProjects: Project[] = [
           source: "Owner-provided clean live-deployment screenshot from https://the-loop-5m7u.onrender.com/events.",
         },
         {
-          src: "/assets/projects/the-loop/the-loop-map-view-live.png",
+          src: "/assets/projects/the-loop/the-loop-map-view-live.webp",
           label: "Owner-captured deployment screenshot",
           alt: "The Loop map view showing event pins near Thapar Institute",
           status: "Verified",
@@ -723,27 +706,27 @@ export const timelineProjectLinks = {
 export const timelineStages = [
   {
     label: "Foundations",
-    capability: "C++/DSA, ML basics, SQL foundations, and analysis fundamentals.",
+    capability: "Learned to reason from algorithms, data shape, and query structure before reaching for frameworks.",
     projects: ["C++/DSA", "ML basics", "SQL foundations"],
   },
   {
     label: "Product Engineering",
-    capability: "Campus event discovery, RSVP, friends, chat, maps, and carpool workflows.",
+    capability: "Learned that useful products connect discovery to persisted coordination, not isolated screens.",
     projects: ["The Loop"],
   },
   {
     label: "AI Systems",
-    capability: "Routing, fallback behavior, local inference, and memory-aware workflow design.",
+    capability: "Learned to route ambiguity through rules, local inference, memory, and fallback paths.",
     projects: ["Hybrid GenAI Transaction Categorizer"],
   },
   {
     label: "Adaptive Systems",
-    capability: "Reward design, agent behavior, environment mechanics, and evaluation constraints.",
+    capability: "Learned that environments, reward signals, and evaluation limits shape agent behavior.",
     projects: ["Mahoraga"],
   },
   {
     label: "Current Direction",
-    capability: "Receipt splitting, AI workflow systems, and production-minded automation.",
+    capability: "Applying those lessons to clearer contracts, validation, and production-minded workflows.",
     projects: ["ReceiptSplit", "AI workflow systems"],
   },
 ];

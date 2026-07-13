@@ -613,3 +613,41 @@ Completed:
 
 Status:
 - Presentation cleanup only; no link destinations, evidence states, claims, or public assets changed.
+
+### 2026-07-10 Learning Story And Signal Architecture Pass
+
+Completed:
+- Ran independent content/story, visual-motion, and implementation/QA streams in separate Git worktrees.
+- Added `docs/34_PORTFOLIO_STORY_AND_LEARNING_PLAN.md`, `docs/35_VISUAL_MOTION_DIRECTION.md`, and `docs/36_IMPLEMENTATION_AND_QA_PLAN.md`.
+- Reframed About around learned engineering principles and added one distinct evidence-safe lesson to each featured project.
+- Centralized the seven journey states in `src/data/journey.ts` and rendered navigation/readouts from that contract.
+- Moved the Signal Core into a reserved sticky desktop lane so it cannot cover proof content.
+- Added progressive-enhancement fallbacks, one main landmark, skip navigation, larger navigation targets, and keyboard mascot resizing.
+- Captured the verified homepage into Figma at `https://www.figma.com/design/bjHX9mvjM57LPTfJ3fJAEh?node-id=1-2`.
+
+Validation:
+- `npm.cmd test`: 43/43 passed.
+- `npm.cmd run build`: Astro check reported 0 errors, warnings, or hints; four pages generated.
+- `git diff --check`: clean apart from existing line-ending notices.
+- Browser checks passed at 1440px, 1200px, 900px, and 390px with no horizontal overflow or console errors.
+- Signal Path click travel activated Systems state 06 and updated `aria-current`.
+
+Status:
+- The learning-story foundation and first visual implementation are complete.
+- Remaining work is performance/media hardening, deeper project proof, final screenshot evidence, dependency upgrades, and deployment/launch QA.
+
+### 2026-07-11 Identity And Featured-Project Polish
+
+Completed:
+- Changed public identity copy and page metadata to `Atishay Jain` while preserving `AJ` as the visual monogram.
+- Raised the mascot control layer above homepage content so the speech bubble no longer sits behind the hero heading.
+- Removed repeated homepage highlight bullets and boundary copy from featured modules; retained evidence-safe details in structured project data and case-study pages.
+- Rebuilt the three featured case-study routes around project signal, reviewed visual proof, system/build detail, ownership, engineering decisions, and explicit limitations.
+- Tightened the mobile header into a predictable two-row navigation grid.
+
+Validation:
+- `npm.cmd test`: 45/45 passed.
+- `npm.cmd run build`: Astro check reported 0 errors, warnings, or hints; four pages generated.
+- `git diff --check`: clean apart from existing line-ending notices.
+- Desktop homepage, featured-project, and Mahoraga case-study browser checks showed no horizontal overflow; mobile Mahoraga check also showed no horizontal overflow.
+- Reviewed project assets keep their existing Known/Verified statuses; no new asset or performance claims were introduced.

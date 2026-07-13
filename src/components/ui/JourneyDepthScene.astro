@@ -1,0 +1,63 @@
+---
+import { journeyStopCount, journeyStops } from "../../data/journey";
+---
+
+<aside class="journey-depth-scene" aria-hidden="true">
+  <header class="journey-depth-scene__header">
+    <span>Signal core</span>
+    <div class="journey-depth-scene__counts">
+      {
+        journeyStops.map((stop) => (
+          <strong data-scene-count={stop.index}>{String(stop.index + 1).padStart(2, "0")}</strong>
+        ))
+      }
+      <small>/ {String(journeyStopCount).padStart(2, "0")}</small>
+    </div>
+  </header>
+
+  <div class="journey-depth-scene__viewport">
+    <div class="journey-depth-scene__grid"></div>
+    <div class="journey-depth-scene__sweep"></div>
+
+    <div class="signal-glyph signal-glyph--identity" data-scene-glyph="0">
+      <span class="signal-glyph__ring signal-glyph__ring--one"></span>
+      <span class="signal-glyph__ring signal-glyph__ring--two"></span>
+      <strong>AJ</strong>
+    </div>
+
+    <div class="signal-glyph signal-glyph--context" data-scene-glyph="1">
+      <span></span><span></span><span></span><strong>HOW</strong>
+    </div>
+
+    <div class="signal-glyph signal-glyph--builds" data-scene-glyph="2">
+      <span>01</span><span>02</span><span>03</span>
+    </div>
+
+    <div class="signal-glyph signal-glyph--evolution" data-scene-glyph="3">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <div class="signal-glyph signal-glyph--toolkit" data-scene-glyph="4">
+      <span>TS</span><span>PY</span><span>API</span><span>AI</span>
+    </div>
+
+    <div class="signal-glyph signal-glyph--systems" data-scene-glyph="5">
+      <span class="signal-node signal-node--one"></span>
+      <span class="signal-node signal-node--two"></span>
+      <span class="signal-node signal-node--three"></span>
+      <span class="signal-node signal-node--four"></span>
+      <i></i><i></i><i></i>
+    </div>
+
+    <div class="signal-glyph signal-glyph--contact" data-scene-glyph="6">
+      <span></span><span></span><strong>→</strong>
+    </div>
+  </div>
+
+  <footer class="journey-depth-scene__footer">
+    <div class="journey-depth-scene__readout">
+      {journeyStops.map((stop) => <span data-scene-state={stop.index}>{stop.sceneLabel}</span>)}
+    </div>
+    <small>Scroll linked</small>
+  </footer>
+</aside>

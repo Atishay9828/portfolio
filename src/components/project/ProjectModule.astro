@@ -7,13 +7,7 @@ const moduleClass = compact ? "compact-module" : "project-module";
 const visualAssets = project.visual.assets ?? [];
 const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCase().replaceAll(" ", "-")}`;
 const caseStudyHref = project.tier === "Featured" ? `/projects/${project.slug}/` : undefined;
-const visibleStack = project.stack.slice(0, compact ? 4 : 5);
-const homepageHighlights = project.homepageHighlights ?? [
-  project.problem,
-  project.keyDecision,
-  project.visual.label,
-].slice(0, 3);
-const homepageBoundary = project.homepageBoundary ?? project.tradeoff;
+const visibleStack = project.stack.slice(0, compact ? 4 : 3);
 
 type ProjectActionIcon =
   | "github"
@@ -54,11 +48,6 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string } =>
 ---
 
 <article class={moduleClass}>
-  {!compact && project.homepageCover && (
-    <figure class="project-cover" aria-label={`${project.title} cover visual`}>
-      <img src={project.homepageCover.src} alt={project.homepageCover.alt} loading="lazy" />
-    </figure>
-  )}
   <div>
     <div class="status-label">{project.tier.toUpperCase()} / {project.statusLabel.toUpperCase()}</div>
     <h3>
@@ -68,20 +57,17 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string } =>
         project.title
       )}
     </h3>
-    <p>{project.subtitle}</p>
+    <p class="project-summary">{compact ? project.subtitle : project.problem}</p>
     <div class="project-meta">
       {visibleStack.map((item) => <span class="tag">{item}</span>)}
     </div>
-    {compact ? (
-      <p class="compact-summary">{project.problem}</p>
-    ) : (
-      <>
-        <ul class="project-highlight-list">
-          {homepageHighlights.slice(0, 3).map((highlight) => <li>{highlight}</li>)}
-        </ul>
-        <p class="project-boundary">{homepageBoundary}</p>
-      </>
+    {!compact && project.homepageLesson && (
+      <div class="project-lesson">
+        <span class="meta-label">What I learned</span>
+        <p>{project.homepageLesson}</p>
+      </div>
     )}
+    {compact && <p class="compact-summary">{project.problem}</p>}
     <div class="project-action-row" aria-label={`${project.title} links`}>
       {caseStudyHref && (
         <a class="project-action project-card-link" href={caseStudyHref}>
@@ -109,9 +95,12 @@ const getAction = (label: string): { icon: ProjectActionIcon; label: string } =>
   </div>
   {!compact && (
     <aside class={evidenceClass} aria-label={`${project.title} evidence status`}>
-      <div>
+      <div class="evidence-panel__heading">
         <span class="status-pill">{project.visual.status}</span>
-        <h3>{project.visual.label}</h3>
+        <div>
+          <span class="meta-label">Proof on file</span>
+          <h3>{project.visual.label}</h3>
+        </div>
       </div>
       {visualAssets.length > 0 && (
         <div class="evidence-assets" aria-label={`${project.title} visual evidence`}>

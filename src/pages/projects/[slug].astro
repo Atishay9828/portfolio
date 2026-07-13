@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectModule from "../../components/project/ProjectModule.astro";
 import { featuredProjects, getProjectBySlug } from "../../data/projects";
 
 export function getStaticPaths() {
@@ -14,87 +13,76 @@ const project = getProjectBySlug(Astro.params.slug ?? "");
 if (!project) {
   throw new Error(`Unknown project slug: ${Astro.params.slug}`);
 }
+
+const visualAssets = project.visual.assets ?? [];
 ---
 
-<BaseLayout title={`${project.title} | AJ Portfolio`}>
+<BaseLayout title={`${project.title} | Atishay Jain`} description={project.subtitle}>
   <section class="case-hero">
-    <div class="section-inner">
-      <a class="case-back-link" href="/#featured-projects">&lt;- Featured work</a>
-      <div class="eyebrow">{project.tier} case study</div>
-      <h1>{project.title}</h1>
-      <p class="lead">{project.subtitle}</p>
+    <div class="section-inner case-hero-grid">
+      <div class="case-hero-copy">
+        <a class="case-back-link" href="/#featured-projects">&lt;- Featured work</a>
+        <div class="status-label">{project.tier.toUpperCase()} / {project.statusLabel.toUpperCase()}</div>
+        <h1>{project.title}</h1>
+        <p class="lead">{project.subtitle}</p>
+        <div class="project-meta" aria-label={`${project.title} technology stack`}>
+          {project.stack.slice(0, 5).map((item) => <span class="tag">{item}</span>)}
+        </div>
+        <div class="project-action-row" aria-label={`${project.title} links`}>
+          {project.links.map((link) => {
+            const isExternal = link.href.startsWith("https://");
+            return (
+              <a
+                class="project-action"
+                href={link.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noreferrer" : undefined}
+              >
+                <span>{link.label}</span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+      <aside class="case-signal" aria-label="Project signal">
+        <div>
+          <span class="meta-label">What changed</span>
+          <p>{project.homepageLesson ?? project.keyDecision}</p>
+        </div>
+        <div>
+          <span class="meta-label">Key decision</span>
+          <p>{project.keyDecision}</p>
+        </div>
+        <div class="case-signal__status">
+          <span class="status-pill">{project.visual.status}</span>
+          <span>{project.visual.label}</span>
+        </div>
+      </aside>
     </div>
   </section>
-  <section class="section">
-    <div class="section-inner case-page-lead">
-      <ProjectModule project={project} />
-    </div>
-  </section>
+
   {project.caseStudy && (
-    <section class="section">
-      <div class="section-inner case-study-stack">
-        <div class="section-header">
-          <div>
-            <span class="meta-label">Case study</span>
-            <h2>{project.title}</h2>
-          </div>
-          <p>{project.problem}</p>
+    <div class="case-body">
+      <section class="section case-intro-section">
+        <div class="section-inner case-section-intro">
+          <span class="meta-label">The system</span>
+          <h2>{project.problem}</h2>
+          <p>{project.portfolioRole}</p>
         </div>
+      </section>
 
-        <div class="case-grid">
-          <article class="case-panel">
-            <span class="meta-label">What I built</span>
-            <ul class="case-bullet-list">
-              {project.caseStudy.whatWasBuilt.map((item) => <li>{item}</li>)}
-            </ul>
-          </article>
-          <article class="case-panel">
-            <span class="meta-label">Architecture</span>
-            <ul class="case-bullet-list">
-              {project.caseStudy.architectureSummary.map((item) => <li>{item}</li>)}
-            </ul>
-          </article>
-        </div>
-
-        {project.contribution && (
-          <div class="case-grid">
-            <article class="case-panel">
-              <span class="meta-label">My contribution</span>
-              <h3>{project.contribution.roleLabel}</h3>
-              <p>{project.contribution.summary}</p>
-              <ul class="case-bullet-list">
-                {project.contribution.bullets.map((item) => <li>{item}</li>)}
-              </ul>
-            </article>
-            <article class="case-panel">
-              <span class="meta-label">Collaborative scope</span>
-              <ul class="case-bullet-list">
-                {project.contribution.collaborativeScope.map((item) => <li>{item}</li>)}
-              </ul>
-            </article>
-          </div>
-        )}
-
-        <div class="case-grid">
-          <article class="case-panel">
-            <span class="meta-label">Key engineering decisions</span>
-            <ul class="case-bullet-list">
-              {project.caseStudy.engineeringDecisions.map((item) => <li>{item}</li>)}
-            </ul>
-          </article>
-          <article class="case-panel">
-            <span class="meta-label">Proof highlights</span>
-            <ul class="case-bullet-list">
-              {project.caseStudy.evidenceStatus.map((item) => <li>{item}</li>)}
-            </ul>
-          </article>
-        </div>
-
-        {project.visual.assets && project.visual.assets.length > 0 && (
-          <article class="case-panel">
-            <span class="meta-label">Visual proof</span>
+      {visualAssets.length > 0 && (
+        <section class="section case-proof-section">
+          <div class="section-inner">
+            <div class="case-section-heading">
+              <div>
+                <span class="meta-label">Visual proof</span>
+                <h2>See the system before the explanation.</h2>
+              </div>
+              <p>Reviewed project artifacts, shown with their existing evidence status.</p>
+            </div>
             <div class="asset-grid">
-              {project.visual.assets.map((asset) => (
+              {visualAssets.map((asset) => (
                 <figure class="asset-card">
                   <img src={asset.src} alt={asset.alt ?? asset.label} loading="lazy" />
                   <figcaption>
@@ -104,80 +92,143 @@ if (!project) {
                 </figure>
               ))}
             </div>
-          </article>
-        )}
+          </div>
+        </section>
+      )}
 
-        {project.caseStudy.rewardProof && (
-          <article class="case-panel">
-            <span class="meta-label">Reward-loop proof</span>
+      <section class="section">
+        <div class="section-inner case-study-stack case-study-stack--editorial">
+          <article class="case-band">
+            <div class="case-band__label">
+              <span class="meta-label">01 / Build</span>
+              <h2>What exists</h2>
+            </div>
+            <div class="case-grid">
+              <div>
+                <h3>What I built</h3>
+                <ul class="case-bullet-list">
+                  {project.caseStudy.whatWasBuilt.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+              <div>
+                <h3>Architecture</h3>
+                <ul class="case-bullet-list">
+                  {project.caseStudy.architectureSummary.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          {project.contribution && (
+            <article class="case-band">
+              <div class="case-band__label">
+                <span class="meta-label">02 / Ownership</span>
+                <h2>{project.contribution.roleLabel}</h2>
+                <p>{project.contribution.summary}</p>
+              </div>
+              <div class="case-grid">
+                <div>
+                  <h3>Contribution</h3>
+                  <ul class="case-bullet-list">
+                    {project.contribution.bullets.map((item) => <li>{item}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h3>Collaborative scope</h3>
+                  <ul class="case-bullet-list">
+                    {project.contribution.collaborativeScope.map((item) => <li>{item}</li>)}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          )}
+
+          <article class="case-band">
+            <div class="case-band__label">
+              <span class="meta-label">03 / Decisions</span>
+              <h2>Engineering judgment</h2>
+            </div>
+            <div class="case-grid">
+              <div>
+                <h3>Key decisions</h3>
+                <ul class="case-bullet-list">
+                  {project.caseStudy.engineeringDecisions.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+              <div>
+                <h3>Proof highlights</h3>
+                <ul class="case-bullet-list">
+                  {project.caseStudy.evidenceStatus.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          {project.caseStudy.rewardProof && (
+            <article class="case-band case-band--single">
+              <div class="case-band__label">
+                <span class="meta-label">Reward-loop proof</span>
+                <h2>Behavior is shaped by the environment.</h2>
+              </div>
+              <ul class="case-bullet-list">
+                {project.caseStudy.rewardProof.map((item) => <li>{item}</li>)}
+              </ul>
+            </article>
+          )}
+
+          {project.caseStudy.routingProof && (
+            <article class="case-band benchmark-panel">
+              <div class="case-band__label">
+                <span class="meta-label">{project.caseStudy.routingProof.label}</span>
+                <h2>Local classifier/routing benchmark only</h2>
+                <p>{project.caseStudy.routingProof.note}</p>
+              </div>
+              <div class="table-shell" role="region" aria-label="Routing evidence table">
+                <table>
+                  <thead>
+                    <tr>{project.caseStudy.routingProof.columns.map((column) => <th>{column}</th>)}</tr>
+                  </thead>
+                  <tbody>
+                    {project.caseStudy.routingProof.rows.length === 0 ? (
+                      <tr><td colspan={project.caseStudy.routingProof.columns.length}>No table rows selected.</td></tr>
+                    ) : (
+                      project.caseStudy.routingProof.rows.map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          )}
+
+          {project.caseStudy.workflow && (
+            <article class="case-band case-band--single">
+              <div class="case-band__label">
+                <span class="meta-label">Product workflow</span>
+                <h2>From discovery to coordination.</h2>
+              </div>
+              <div class="workflow-grid">
+                {project.caseStudy.workflow.map((step) => (
+                  <div class="workflow-step">
+                    <strong>{step.label}</strong>
+                    <p>{step.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
+          )}
+
+          <article class="case-band boundary-panel">
+            <div class="case-band__label">
+              <span class="meta-label">Boundary</span>
+              <h2>What this evidence does not claim</h2>
+              <p>{project.tradeoff}</p>
+            </div>
             <ul class="case-bullet-list">
-              {project.caseStudy.rewardProof.map((item) => <li>{item}</li>)}
+              {project.caseStudy.limitations.map((item) => <li>{item}</li>)}
             </ul>
           </article>
-        )}
-
-        {project.caseStudy.routingProof && (
-          <article class="case-panel benchmark-panel">
-            <span class="meta-label">{project.caseStudy.routingProof.label}</span>
-            <h3>Local classifier/routing benchmark only</h3>
-            <p>{project.caseStudy.routingProof.note}</p>
-            <div class="table-shell" role="region" aria-label="Routing evidence table">
-              <table>
-                <thead>
-                  <tr>
-                    {project.caseStudy.routingProof.columns.map((column) => <th>{column}</th>)}
-                  </tr>
-                </thead>
-                <tbody>
-                  {project.caseStudy.routingProof.rows.length === 0 ? (
-                    <tr>
-                      <td colspan={project.caseStudy.routingProof.columns.length}>
-                        No table rows selected.
-                      </td>
-                    </tr>
-                  ) : (
-                    project.caseStudy.routingProof.rows.map((row) => (
-                      <tr>{row.map((cell) => <td>{cell}</td>)}</tr>
-                    ))
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </article>
-        )}
-
-        {project.caseStudy.workflow && (
-          <article class="case-panel">
-            <span class="meta-label">Product workflow</span>
-            <div class="workflow-grid">
-              {project.caseStudy.workflow.map((step) => (
-                <div class="workflow-step">
-                  <strong>{step.label}</strong>
-                  <p>{step.detail}</p>
-                </div>
-              ))}
-            </div>
-          </article>
-        )}
-
-        <article class="case-panel boundary-panel">
-          <div>
-            <span class="meta-label">Boundary</span>
-            <p>
-              Evidence shown here is limited to verified links, reviewed visuals, local measurements,
-              and owner-reviewed contribution notes.
-            </p>
-          </div>
-          <div class="boundary-grid">
-            <div>
-              <h3>Limitations / boundaries</h3>
-              <ul class="case-bullet-list">
-                {project.caseStudy.limitations.map((item) => <li>{item}</li>)}
-              </ul>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   )}
 </BaseLayout>

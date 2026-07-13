@@ -1,41 +1,59 @@
-<button
+---
+const frameRoot = "/assets/mascot/gym-coder";
+const frameGroups = {
+  idle: ["idle-1.webp", "idle-2.webp", "idle-3.webp", "idle-4.webp"],
+  lift: ["lift-1.webp", "lift-2.webp", "lift-3.webp", "lift-4.webp"],
+  pump: ["pump-1.webp", "pump-2.webp", "pump-3.webp", "pump-4.webp"],
+};
+---
+
+<div
   class="gym-coder"
-  type="button"
-  aria-label="Play Gym Coder mascot animation"
   data-gym-coder
   data-click-phrases="commit. learn. repeat.|let's build!"
+  style="--gym-x: 0px; --gym-y: 0px; --gym-scale: 1;"
 >
   <span class="gym-coder__bubble" data-gym-coder-bubble>npm run glowup</span>
-  <span class="gym-coder__sprite" aria-hidden="true">
-    <span class="gym-coder__spark gym-coder__spark--one"></span>
-    <span class="gym-coder__spark gym-coder__spark--two"></span>
-    <span class="gym-coder__spark gym-coder__spark--three"></span>
-    <span class="gym-coder__hair"></span>
-    <span class="gym-coder__head">
-      <span class="gym-coder__headband">AJ</span>
-      <span class="gym-coder__eye gym-coder__eye--left"></span>
-      <span class="gym-coder__eye gym-coder__eye--right"></span>
-      <span class="gym-coder__mouth"></span>
+
+  <button
+    class="gym-coder__drag-button"
+    type="button"
+    aria-label="Play Gym Coder mascot animation. Drag to move."
+    data-gym-drag-handle
+  >
+    <span class="gym-coder__frames" aria-hidden="true">
+      {
+        Object.entries(frameGroups).map(([state, frames]) => (
+          <span class:list={["gym-coder__frame-set", `gym-coder__frame-set--${state}`]}>
+            {frames.map((frame, index) => (
+              <img
+                class="gym-coder__frame"
+                src={`${frameRoot}/${frame}`}
+                alt=""
+                loading={state === "idle" ? "eager" : "lazy"}
+                decoding="async"
+                style={`--frame-index: ${index};`}
+              />
+            ))}
+          </span>
+        ))
+      }
     </span>
-    <span class="gym-coder__hood">
-      <span class="gym-coder__zip"></span>
-      <span class="gym-coder__mark">&lt;/&gt;</span>
-    </span>
-    <span class="gym-coder__arm gym-coder__arm--left"></span>
-    <span class="gym-coder__arm gym-coder__arm--right">
-      <span class="gym-coder__dumbbell"></span>
-    </span>
-    <span class="gym-coder__laptop">
-      <span>&gt;_</span>
-    </span>
-    <span class="gym-coder__terminal"></span>
-    <span class="gym-coder__leg gym-coder__leg--left"></span>
-    <span class="gym-coder__leg gym-coder__leg--right"></span>
-  </span>
-</button>
+  </button>
+
+  <button
+    class="gym-coder__resize-grip"
+    type="button"
+    aria-label="Resize Gym Coder mascot. Use arrow keys or drag."
+    data-gym-resize
+  >
+  </button>
+</div>
 
 <script is:inline>
   (() => {
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+    const storageKey = "gym-coder-mascot-state";
     const mascots = document.querySelectorAll("[data-gym-coder]");
 
     mascots.forEach((mascot) => {
@@ -44,12 +62,64 @@
       }
 
       mascot.dataset.gymCoderReady = "true";
+
+      const dragHandle = mascot.querySelector("[data-gym-drag-handle]");
+      const resizeHandle = mascot.querySelector("[data-gym-resize]");
       const bubble = mascot.querySelector("[data-gym-coder-bubble]");
       const defaultText = bubble?.textContent?.trim() || "npm run glowup";
       const phrases = (mascot.getAttribute("data-click-phrases") || "commit. learn. repeat.").split("|");
-      let resetTimer;
 
-      mascot.addEventListener("click", () => {
+      let x = 0;
+      let y = 0;
+      let scale = 1;
+      let resetTimer;
+      let suppressClick = false;
+      let dragState = null;
+      let resizeState = null;
+
+      const readSavedState = () => {
+        try {
+          const saved = JSON.parse(window.localStorage.getItem(storageKey) || "{}");
+          x = Number.isFinite(saved.x) ? saved.x : 0;
+          y = Number.isFinite(saved.y) ? saved.y : 0;
+          scale = Number.isFinite(saved.scale) ? saved.scale : 1;
+        } catch {
+          x = 0;
+          y = 0;
+          scale = 1;
+        }
+      };
+
+      const writeSavedState = () => {
+        try {
+          window.localStorage.setItem(storageKey, JSON.stringify({ x, y, scale }));
+        } catch {
+          // Personalization is optional; keep the mascot usable when storage is unavailable.
+        }
+      };
+
+      const applyState = () => {
+        scale = clamp(scale, 0.82, 1.24);
+        x = clamp(x, -90, Math.max(220, window.innerWidth - 160));
+        y = clamp(y, -180, Math.max(260, window.innerHeight - 170));
+        mascot.style.setProperty("--gym-x", `${x}px`);
+        mascot.style.setProperty("--gym-y", `${y}px`);
+        mascot.style.setProperty("--gym-scale", String(scale));
+      };
+
+      const setHoveredFromPoint = (clientX, clientY) => {
+        const rect = mascot.getBoundingClientRect();
+        const isInside =
+          clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom;
+
+        mascot.classList.toggle("is-hovered", isInside);
+
+        if (!isInside && !dragState && !resizeState) {
+          mascot.querySelectorAll("button").forEach((button) => button.blur());
+        }
+      };
+
+      const pump = () => {
         const phrase = phrases[Math.floor(Math.random() * phrases.length)] || "commit. learn. repeat.";
 
         mascot.classList.add("is-pumped");
@@ -64,6 +134,160 @@
             bubble.textContent = defaultText;
           }
         }, 1100);
+      };
+
+      readSavedState();
+      applyState();
+
+      dragHandle?.addEventListener("pointerdown", (event) => {
+        if (event.button !== 0) {
+          return;
+        }
+
+        dragState = {
+          pointerId: event.pointerId,
+          startClientX: event.clientX,
+          startClientY: event.clientY,
+          startX: x,
+          startY: y,
+          moved: false,
+        };
+        dragHandle.setPointerCapture(event.pointerId);
+        mascot.classList.add("is-dragging");
+      });
+
+      dragHandle?.addEventListener("pointermove", (event) => {
+        if (!dragState || event.pointerId !== dragState.pointerId) {
+          return;
+        }
+
+        const dx = event.clientX - dragState.startClientX;
+        const dy = event.clientY - dragState.startClientY;
+        dragState.moved = dragState.moved || Math.abs(dx) + Math.abs(dy) > 6;
+        x = dragState.startX + dx;
+        y = dragState.startY + dy;
+        applyState();
+      });
+
+      dragHandle?.addEventListener("pointerup", (event) => {
+        if (!dragState || event.pointerId !== dragState.pointerId) {
+          return;
+        }
+
+        suppressClick = dragState.moved;
+        dragState = null;
+        mascot.classList.remove("is-dragging");
+        writeSavedState();
+      });
+
+      dragHandle?.addEventListener("click", (event) => {
+        if (suppressClick) {
+          suppressClick = false;
+          event.preventDefault();
+          return;
+        }
+
+        pump();
+      });
+
+      dragHandle?.addEventListener("keydown", (event) => {
+        const step = event.shiftKey ? 20 : 8;
+        if (event.key === "ArrowLeft") {
+          x -= step;
+        } else if (event.key === "ArrowRight") {
+          x += step;
+        } else if (event.key === "ArrowUp") {
+          y -= step;
+        } else if (event.key === "ArrowDown") {
+          y += step;
+        } else {
+          return;
+        }
+
+        event.preventDefault();
+        applyState();
+        writeSavedState();
+      });
+
+      resizeHandle?.addEventListener("pointerdown", (event) => {
+        if (event.button !== 0) {
+          return;
+        }
+
+        resizeState = {
+          pointerId: event.pointerId,
+          startClientX: event.clientX,
+          startScale: scale,
+        };
+        resizeHandle.setPointerCapture(event.pointerId);
+        mascot.classList.add("is-resizing");
+      });
+
+      resizeHandle?.addEventListener("pointermove", (event) => {
+        if (!resizeState || event.pointerId !== resizeState.pointerId) {
+          return;
+        }
+
+        scale = resizeState.startScale + (event.clientX - resizeState.startClientX) / 260;
+        applyState();
+      });
+
+      resizeHandle?.addEventListener("pointerup", (event) => {
+        if (!resizeState || event.pointerId !== resizeState.pointerId) {
+          return;
+        }
+
+        resizeState = null;
+        mascot.classList.remove("is-resizing");
+        writeSavedState();
+      });
+
+      resizeHandle?.addEventListener("keydown", (event) => {
+        const step = event.shiftKey ? 0.1 : 0.04;
+
+        if (event.key === "ArrowRight" || event.key === "ArrowUp") {
+          scale += step;
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowDown") {
+          scale -= step;
+        } else if (event.key === "Home") {
+          scale = 1;
+        } else {
+          return;
+        }
+
+        event.preventDefault();
+        applyState();
+        writeSavedState();
+      });
+
+      mascot.addEventListener("pointerenter", () => {
+        mascot.classList.add("is-hovered");
+      });
+
+      mascot.addEventListener("pointerleave", () => {
+        if (dragState || resizeState) {
+          return;
+        }
+
+        mascot.classList.remove("is-hovered");
+        mascot.querySelectorAll("button").forEach((button) => button.blur());
+      });
+
+      document.addEventListener(
+        "pointermove",
+        (event) => {
+          if (dragState || resizeState) {
+            return;
+          }
+
+          setHoveredFromPoint(event.clientX, event.clientY);
+        },
+        { passive: true },
+      );
+
+      window.addEventListener("resize", () => {
+        applyState();
+        writeSavedState();
       });
     });
   })();

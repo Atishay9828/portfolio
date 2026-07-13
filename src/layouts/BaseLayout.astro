@@ -3,10 +3,16 @@ import "../styles/global.css";
 import { links } from "../data/links";
 import Icon from "../components/ui/Icon.astro";
 
-const { title = "AJ | AI Systems Engineer", description = "AJ's evidence-driven portfolio shell." } = Astro.props;
+const {
+  title = "Atishay Jain | AI Systems Engineer",
+  description = "Atishay Jain's evidence-driven engineering portfolio.",
+  robots = "index, follow",
+} = Astro.props;
 const githubHref = links.github.href;
 const resumeHref = links.resume.href;
 const linkedinHref = links.linkedin.href;
+const canonicalUrl = Astro.site && !robots.startsWith("noindex") ? new URL(Astro.url.pathname, Astro.site) : undefined;
+const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undefined;
 ---
 
 <!doctype html>
@@ -15,22 +21,37 @@ const linkedinHref = links.linkedin.href;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070809" />
+    <meta name="robots" content={robots} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.svg" />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    {socialImageUrl && <meta property="og:image" content={socialImageUrl} />}
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Atishay Jain - AI systems and product engineering portfolio" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/og-image.svg" />
+    {socialImageUrl && <meta name="twitter:image" content={socialImageUrl} />}
+    <meta name="twitter:image:alt" content="Atishay Jain - AI systems and product engineering portfolio" />
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="page-shell">
       <header class="site-header">
         <nav class="nav-inner" aria-label="Primary navigation">
-          <a class="brand" href="/">AJ</a>
+          <a class="brand" href="/" aria-label="Atishay Jain portfolio home">
+            <span class="brand-mark">AJ</span>
+            <span class="brand-copy">
+              <strong>Atishay Jain</strong>
+              <small>Systems × Product</small>
+            </span>
+          </a>
           <div class="nav-links">
             <a href="/#featured-projects">Work</a>
             <a href="/#lab-projects">Lab</a>
@@ -61,7 +82,7 @@ const linkedinHref = links.linkedin.href;
           </div>
         </nav>
       </header>
-      <main>
+      <main id="main-content">
         <slot />
       </main>
       <footer class="site-footer">

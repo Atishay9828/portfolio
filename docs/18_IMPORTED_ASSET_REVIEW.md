@@ -1,6 +1,6 @@
 # 18_IMPORTED_ASSET_REVIEW.md
 
-Date: 2026-07-09
+Date: 2026-07-13
 
 Purpose:
 - Record the visual and privacy review of imported portfolio project assets.
@@ -10,7 +10,15 @@ Purpose:
 Scope:
 - Review covers only files currently imported under `public/assets/projects/`.
 - This is a visual/privacy review, not a benchmark, role/contribution, deployment, or resume-publication verification pass.
-- No asset was deleted. No fake assets, fake metrics, or invented role details were added.
+- This document preserves historical review context. On 2026-07-13, unselected/superseded assets were removed from deployable `public/` output and remain available in Git history.
+
+## Production Release Disposition (2026-07-13)
+
+- Mahoraga `training_metrics.png`: removed from rendered data and public output; no methodology-free metric chart is shipped.
+- The Loop `the-loop-event-detail-live.png` and `the-loop-map-view-live.png`: replaced by visually reviewed `.webp` encodes at 117,952 and 224,682 bytes.
+- The Loop alternate events list, legacy landing image, and interest-selection screenshot: removed from deployable public output because they were superseded or unrendered.
+- Unreferenced cover SVGs and public `.gitkeep` placeholders: removed from deployable output.
+- The selected redacted screenshots and sample-labeled Hybrid visuals remain public with their prior evidence boundaries unchanged.
 
 ## Summary
 

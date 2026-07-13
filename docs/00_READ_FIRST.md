@@ -1,6 +1,6 @@
 # 00_READ_FIRST.md
 
-Date: 2026-06-26
+Date: 2026-07-10
 
 Purpose:
 - Orient future AI agents and contributors before any implementation work.
@@ -9,9 +9,9 @@ Purpose:
 
 ## Current Rule
 
-Do not implement the website yet.
+The website is in active evidence-safe implementation and visual QA.
 
-The repository is in the continuity and evidence-registry phase. Frontend implementation begins only after the current blockers in `docs/01_CURRENT_STATUS.md` are addressed.
+Implementation may improve the learning story, hierarchy, motion, accessibility, and maintainability. It must preserve verified destinations, project maturity, ownership boundaries, privacy rules, and Known/Verified evidence states.
 
 ## Required Reading Order
 
@@ -28,6 +28,9 @@ Read these first, in order:
 9. `docs/10_PROJECT_EVIDENCE_REGISTRY.md`
 10. `docs/11_LINK_REGISTRY.md`
 11. `docs/13_FEATURED_EVIDENCE_REVIEW.md`
+12. `docs/34_PORTFOLIO_STORY_AND_LEARNING_PLAN.md`
+13. `docs/35_VISUAL_MOTION_DIRECTION.md`
+14. `docs/36_IMPLEMENTATION_AND_QA_PLAN.md`
 
 Read these next when relevant:
 

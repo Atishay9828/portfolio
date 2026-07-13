@@ -1,18 +1,42 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-07-06
+Date: 2026-07-13
 
 ## Current Phase
 
-Astro static scaffold created, first implementation hardening pass completed, conservative design-system polish completed, fresh polished screenshot QA captured, featured case-study copy polished, role/contribution evidence framework created, owner-reviewed featured contribution wording added, the primary SDE resume CTA published, owner-approved LinkedIn/email CTAs activated, final proof/visual launch-readiness audit completed, and verified The Loop live-deployment workflow visuals imported; evidence hardening continues before production launch.
+Astro static portfolio release candidate is in final production validation. Evidence hardening, learning-story implementation, responsive/browser QA, production metadata, static route discovery, asset optimization, and browser-security configuration are implemented; Vercel preview and production verification remain the active release steps.
+
+2026-07-13 production-release addendum:
+- The unsupported Mahoraga training chart was removed from the rendered case study and public output because methodology/evaluation interpretation remains incomplete.
+- The Loop map and event-detail evidence images were re-encoded as visually reviewed WebP assets at 224,682 and 117,952 bytes respectively, both below the 500KB single-raster budget.
+- The twelve mascot frames were losslessly re-encoded as WebP and non-idle states are no longer marked eager.
+- Superseded/unrendered public assets and placeholder `.gitkeep` files were removed from the deployable output; Git history remains the archive.
+- Canonical/Open Graph support, a PNG social card, custom 404, robots, sitemap, and Vercel security headers were added for release validation.
 
 The strategy, positioning, content architecture, risk audit, site blueprint, design system, asset requirements, continuity docs, evidence registry, featured evidence pack, diagram specs, evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid local benchmark results, The Loop workflow walkthrough, The Loop visual evidence update, resume publication plan, role/contribution evidence framework, owner-reviewed contribution wording, and conservative Astro scaffold exist.
+
+2026-07-10 learning-story addendum:
+- The homepage argument now centers on what AJ learned across complete systems: contracts, routed uncertainty, persisted workflows, adaptive constraints, and proof as part of engineering.
+- About is an operating-principles section rather than a biography block.
+- Each featured project has one distinct evidence-safe `What I learned` statement.
+- The approved journey is Signal, About, Builds, Evolution, Toolkit, Systems, Contact; Secondary and Lab stay supporting material inside the Systems-to-Contact span.
+- `src/data/journey.ts` is the single source of truth for journey order, labels, section ids, and Signal Core readouts.
+- The Signal Core is sticky in a reserved desktop column at 1180px and above; it is hidden below that breakpoint so it cannot cover content.
+- The document now has one `main`, a skip link, progressive-enhancement fallbacks, 44px navigation targets, and keyboard-accessible mascot resizing.
+- Integrated browser checks passed at desktop, breakpoint, tablet, and mobile widths with no horizontal overflow or console errors.
+- The verified homepage implementation was captured into Figma at `https://www.figma.com/design/bjHX9mvjM57LPTfJ3fJAEh?node-id=1-2`.
+
+2026-07-11 identity and project-page polish addendum:
+- Public identity text and metadata now use `Atishay Jain`; `AJ` remains only as the visual monogram on the logo, mascot, Signal Core, favicon, and social image.
+- The mascot gutter now owns a higher stacking layer so its speech bubble renders above hero copy.
+- Featured homepage modules now use one short system summary, three stack tags, one learning statement, proof actions, and compact evidence instead of repeating a three-bullet summary and boundary note.
+- Featured case-study routes now lead with project signal and visual proof, then use editorial build, ownership, engineering-decision, and boundary sections without repeating the homepage module.
 
 2026-07-09 deep-screening addendum:
 - Public UI copy has been cleaned so recruiter-facing pages no longer show large missing-proof, text-only, candidate-visual, launch-selection, or internal backlog language.
 - Pending proof and future evidence work now live in `docs/29_PENDING_FEATURES_AND_EVIDENCE.md` instead of public cards.
 - About appears immediately after the hero; Contact remains near the bottom.
-- Homepage Signal Journey order is Signal, About, Proof, Builds, Evolution, Toolkit, Systems, Contact.
+- Homepage Signal Journey order is Signal, About, Builds, Evolution, Toolkit, Systems, Contact.
 - Hybrid public data now reflects local `/predict` and offline Qwen fallback examples while keeping deployment, dataset accuracy, fallback-rate, zero-compute-cost, and hosted-production latency claims out of public copy.
 - The Loop now includes `public/assets/projects/the-loop/the-loop-system-diagram.svg` as a repo-backed topology asset, not scale, reliability, or ownership proof.
 - Toolkit rendering is backed by `src/data/toolkit.ts` and documented in `docs/30_TECH_STACK_EVIDENCE.md`.

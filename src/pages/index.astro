@@ -10,10 +10,13 @@ import About from "../components/sections/About.astro";
 import Toolkit from "../components/sections/Toolkit.astro";
 import Contact from "../components/sections/Contact.astro";
 import GymCoderMascot from "../components/ui/GymCoderMascot.astro";
+import JourneyDepthScene from "../components/ui/JourneyDepthScene.astro";
+import { journeyStops } from "../data/journey";
 ---
 
-<BaseLayout title="AJ | AI Systems Engineer + Product Engineer">
+<BaseLayout title="Atishay Jain | AI Systems Engineer + Product Engineer">
   <div class="signal-journey signal-corridor" data-journey-root>
+    <JourneyDepthScene />
     <aside class="journey-gutter" aria-label="Homepage journey controls">
       <div class="journey-gutter-inner">
         <nav class="journey-rail" aria-label="Homepage signal journey">
@@ -21,41 +24,24 @@ import GymCoderMascot from "../components/ui/GymCoderMascot.astro";
             <span class="journey-rail-fill"></span>
             <span class="journey-rail-orb"></span>
           </div>
-          <div class="journey-stations">
-            <a class="journey-station" href="#top" data-journey-nav="0">
-              <span>01</span>
-              <strong>Signal</strong>
-            </a>
-            <a class="journey-station" href="#about" data-journey-nav="1">
-              <span>02</span>
-              <strong>About</strong>
-            </a>
-            <a class="journey-station" href="#featured-projects" data-journey-nav="2">
-              <span>03</span>
-              <strong>Builds</strong>
-            </a>
-            <a class="journey-station" href="#signal-evolution" data-journey-nav="3">
-              <span>04</span>
-              <strong>Evolution</strong>
-            </a>
-            <a class="journey-station" href="#toolkit" data-journey-nav="4">
-              <span>05</span>
-              <strong>Toolkit</strong>
-            </a>
-            <a class="journey-station" href="#systems-map" data-journey-nav="5">
-              <span>06</span>
-              <strong>Systems</strong>
-            </a>
-            <a class="journey-station" href="#contact" data-journey-nav="6">
-              <span>07</span>
-              <strong>Contact</strong>
-            </a>
-          </div>
+          <ol class="journey-stations">
+            {
+              journeyStops.map((stop) => (
+                <li>
+                  <a class="journey-station" href={`#${stop.id}`} data-journey-nav={stop.index}>
+                    <span>{String(stop.index + 1).padStart(2, "0")}</span>
+                    <strong>{stop.navLabel}</strong>
+                  </a>
+                </li>
+              ))
+            }
+          </ol>
+          <p class="journey-rail-hint">Click to travel</p>
         </nav>
         <GymCoderMascot />
       </div>
     </aside>
-    <main class="journey-content">
+    <div class="journey-content">
       <Hero />
       <About />
       <FeaturedProjects />
@@ -65,7 +51,7 @@ import GymCoderMascot from "../components/ui/GymCoderMascot.astro";
       <SecondaryWork />
       <LabProjects />
       <Contact />
-    </main>
+    </div>
   </div>
   <script>
     const initSignalJourney = () => {
@@ -75,10 +61,34 @@ import GymCoderMascot from "../components/ui/GymCoderMascot.astro";
         return;
       }
 
-      const journeySections = Array.from(journeyRoot.querySelectorAll<HTMLElement>("[data-journey-section]"));
-      const journeyStations = Array.from(journeyRoot.querySelectorAll<HTMLElement>("[data-journey-nav]"));
+      const readJourneyIndex = (element: HTMLElement, attribute: "journeyIndex" | "journeyNav") => {
+        const value = Number.parseInt(element.dataset[attribute] ?? "", 10);
+        return Number.isFinite(value) ? value : null;
+      };
+
+      const journeySections = Array.from(journeyRoot.querySelectorAll<HTMLElement>("[data-journey-section]"))
+        .filter((section) => readJourneyIndex(section, "journeyIndex") !== null)
+        .sort(
+          (left, right) =>
+            (readJourneyIndex(left, "journeyIndex") ?? 0) - (readJourneyIndex(right, "journeyIndex") ?? 0),
+        );
+      const journeyStations = Array.from(
+        journeyRoot.querySelectorAll<HTMLAnchorElement>("[data-journey-nav]"),
+      );
+      const journeySectionByIndex = new Map(
+        journeySections.map((section) => [readJourneyIndex(section, "journeyIndex") ?? 0, section]),
+      );
+      const journeyPositionByIndex = new Map(
+        journeySections.map((section, position) => [readJourneyIndex(section, "journeyIndex") ?? 0, position]),
+      );
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
       let frameRequested = false;
+
+      if (journeySections.length === 0 || journeyStations.length === 0) {
+        return;
+      }
+
+      journeyRoot.classList.add("is-journey-ready");
 
       const getStickyOffset = () => {
         const header = document.querySelector<HTMLElement>(".site-header");
@@ -86,23 +96,40 @@ import GymCoderMascot from "../components/ui/GymCoderMascot.astro";
       };
 
       const setActiveJourneySection = (activeIndex: number) => {
-        const progress = activeIndex / Math.max(journeySections.length - 1, 1);
+        const activePosition = journeyPositionByIndex.get(activeIndex) ?? 0;
+        const progress = activePosition / Math.max(journeySections.length - 1, 1);
 
         journeyRoot.dataset.activeJourney = String(activeIndex);
         journeyRoot.style.setProperty("--journey-progress", progress.toFixed(4));
         journeyRoot.style.setProperty("--journey-progress-percent", `${(progress * 100).toFixed(2)}%`);
         journeyRoot.style.setProperty("--journey-depth", (progress * 100).toFixed(2));
 
-        journeySections.forEach((section, index) => {
-          section.classList.toggle("is-active", index === activeIndex);
-          section.classList.toggle("is-before", index < activeIndex);
-          section.classList.toggle("is-after", index > activeIndex);
+        journeySections.forEach((section) => {
+          const sectionIndex = readJourneyIndex(section, "journeyIndex") ?? 0;
+          section.classList.toggle("is-active", sectionIndex === activeIndex);
+          section.classList.toggle("is-before", sectionIndex < activeIndex);
+          section.classList.toggle("is-after", sectionIndex > activeIndex);
         });
 
-        journeyStations.forEach((station, index) => {
-          station.classList.toggle("is-active", index === activeIndex);
-          station.classList.toggle("is-before", index < activeIndex);
+        journeyStations.forEach((station) => {
+          const stationIndex = readJourneyIndex(station, "journeyNav") ?? 0;
+          station.classList.toggle("is-active", stationIndex === activeIndex);
+          station.classList.toggle("is-before", stationIndex < activeIndex);
+
+          if (stationIndex === activeIndex) {
+            station.setAttribute("aria-current", "location");
+          } else {
+            station.removeAttribute("aria-current");
+          }
         });
+      };
+
+      const setContinuousJourneyProgress = () => {
+        const journeyTop = journeyRoot.getBoundingClientRect().top + window.scrollY;
+        const scrollRange = Math.max(journeyRoot.scrollHeight - window.innerHeight, 1);
+        const progress = Math.min(Math.max((window.scrollY - journeyTop) / scrollRange, 0), 1);
+
+        journeyRoot.style.setProperty("--journey-scroll", progress.toFixed(4));
       };
 
       const syncScrollMargins = () => {
@@ -122,21 +149,22 @@ import GymCoderMascot from "../components/ui/GymCoderMascot.astro";
         const viewportHeight = window.innerHeight || 1;
         const targetLine = Math.min(viewportHeight * 0.38, 260) + getStickyOffset();
 
-        let activeIndex = 0;
+        let activeIndex = readJourneyIndex(journeySections[0], "journeyIndex") ?? 0;
         let closestDistance = Number.POSITIVE_INFINITY;
 
-        journeySections.forEach((section, index) => {
+        journeySections.forEach((section) => {
           const rect = section.getBoundingClientRect();
           const sectionAnchor = rect.top + Math.min(rect.height * 0.24, 180);
           const distance = Math.abs(sectionAnchor - targetLine);
 
           if (distance < closestDistance) {
             closestDistance = distance;
-            activeIndex = index;
+            activeIndex = readJourneyIndex(section, "journeyIndex") ?? activeIndex;
           }
         });
 
         setActiveJourneySection(activeIndex);
+        setContinuousJourneyProgress();
       };
 
       const requestJourneyUpdate = () => {
@@ -146,30 +174,34 @@ import GymCoderMascot from "../components/ui/GymCoderMascot.astro";
         }
       };
 
-      const enterObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("has-entered");
-            }
-          });
-        },
-        {
-          rootMargin: "0px 0px -12% 0px",
-          threshold: 0.12,
-        },
-      );
+      if ("IntersectionObserver" in window) {
+        const enterObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("has-entered");
+              }
+            });
+          },
+          {
+            rootMargin: "0px 0px -12% 0px",
+            threshold: 0.12,
+          },
+        );
 
-      journeySections.forEach((section) => enterObserver.observe(section));
+        journeySections.forEach((section) => enterObserver.observe(section));
+      } else {
+        journeySections.forEach((section) => section.classList.add("has-entered"));
+      }
       syncScrollMargins();
 
       journeyStations.forEach((station) => {
         station.addEventListener("click", (event) => {
           const href = station.getAttribute("href");
-          const targetIndex = Number(station.dataset.journeyNav ?? "0");
-          const target = href ? document.querySelector<HTMLElement>(href) : null;
+          const targetIndex = readJourneyIndex(station, "journeyNav");
+          const target = targetIndex === null ? null : journeySectionByIndex.get(targetIndex);
 
-          if (!target) {
+          if (!href || targetIndex === null || !target || `#${target.id}` !== href) {
             return;
           }
 

@@ -67,7 +67,7 @@ Purpose:
 
 | Label | URL | Status | Notes |
 |---|---|---|---|
-| Mahoraga Kaggle notebook | `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit` | Verified | GET loads notebook title `MEta_Mahoraga`; canonical URL is `/code/atishay9828/meta-mahoraga`; HEAD returned 404. |
+| Mahoraga Kaggle notebook | `https://www.kaggle.com/code/atishay9828/meta-mahoraga` | Verified | Canonical public notebook URL returns 200 in the 2026-07-13 release check; automated HEAD checks are unreliable for this destination. |
 | Mahoraga HuggingFace demo | `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga` | Verified | Duplicate of featured demo entry; kept here for external demo tracking. |
 | Hybrid Categorizer YouTube walkthrough | `https://youtu.be/fsTXVh9JpoE` | Verified | Duplicate of featured demo entry; kept here for video tracking. |
 

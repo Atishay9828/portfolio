@@ -72,15 +72,15 @@ Review document:
 
 Summary:
 - Homepage approved: Mahoraga `dashboard_preview.png`.
-- Case-study only: Mahoraga `stitch_aero_screenshot.png`, The Loop `interest_selection.png`.
-- Candidate only: Mahoraga `training_metrics.png`.
+- Case-study only: Mahoraga `stitch_aero_screenshot.png`.
+- Removed from public output before launch: Mahoraga `training_metrics.png`; it remains available in Git history but is not rendered without methodology/evaluation interpretation.
 - Replaced with safe demo-data UI proof: Hybrid `predict.png`, Hybrid `memory.png`.
 - Safe sample routing proof: Hybrid `docs/19_HYBRID_ROUTING_PROOF.md`.
 - Local measured classifier/routing benchmark: Hybrid `docs/20_HYBRID_BENCHMARK_RESULTS.md` and case-study routing table; local only, not endpoint/Qwen fallback/cost proof.
 - History AI Insight evidence review: Hybrid `docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md`; current `history.png` shows the list view only, so a safe sample-data opened-transaction panel capture remains Needed before using AI insights as screenshot evidence.
 - Local ONNX runtime asset found outside this repo: `D:\Hybrid-GenAI-Transaction-Categorization\models\distilbert.onnx`; keep uncommitted and do not copy into the portfolio repo.
-- The Loop live-deployment visuals imported: events list, alternate events list, event detail, map view, landing/login, redacted profile, and redacted friends.
-- Superseded legacy asset: The Loop `landing_page.jpg`.
+- The Loop live-deployment visuals selected for production: events list, optimized event detail/map WebP files, landing/login, redacted profile, and redacted friends.
+- Removed from public output as superseded/unrendered: alternate events list, interest-selection, and legacy `landing_page.jpg`; Git history remains the archive.
 - Sample-label in site copy/data before public use: Hybrid `categories.png`, Hybrid `history.png`.
 
 ## Imported Candidate Visuals
@@ -89,17 +89,14 @@ Summary:
 |---|---|---|---|---|
 | Mahoraga | `public/assets/projects/mahoraga/dashboard_preview.png` | `Atishay9828/meta_Mahoraga:docs/dashboard_preview.png` | Known | Approved for homepage/case-study visual use; do not treat as performance proof. |
 | Mahoraga | `public/assets/projects/mahoraga/stitch_aero_screenshot.png` | `Atishay9828/meta_Mahoraga:docs/stitch_aero_screenshot.png` | Known | Approved for case-study-only support. |
-| Mahoraga | `public/assets/projects/mahoraga/training_metrics.png` | `Atishay9828/meta_Mahoraga:docs/training_metrics.png` | Known | Candidate only; interpret methodology before publishing metric claims. |
+| Mahoraga | `training_metrics.png` (Git history only) | `Atishay9828/meta_Mahoraga:docs/training_metrics.png` | Needed | Removed from public output; restore only after methodology and evaluation interpretation are reviewed. |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/predict.png` | Local capture from verified repo frontend with synthetic sample input `demo cafe payment 750` | Known | Replaced 2026-06-27 with a prediction-flow UI screenshot. This is safe demo-data UI proof, not backend benchmark/model-output evidence. |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/categories.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/categories.png` | Known | Case-study candidate only; site copy/data must label visible merchants, dates, and amounts as sample/demo transaction data if used. |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/history.png` | `Atishay9828/Hybrid-GenAI-Transaction-Categorization:frontend/public/screenshots/history.png` | Known | Case-study candidate only for the History list, category confidence, and route tags; site copy/data must label visible merchants, dates, route tags, confidence values, and amounts as sample/demo transaction data if used. Does not show the opened-transaction AI Insight panel. |
 | Hybrid Categorizer | `public/assets/projects/hybrid-categorizer/memory.png` | Local capture from verified repo frontend with synthetic merchants `Demo Cafe` and `Sample Transit` | Known | Replaced 2026-06-27 with a merchant-memory UI screenshot. This proves the memory view with sample data, not measured model quality. |
-| The Loop | `public/assets/projects/the-loop/landing_page.jpg` | `Atishay9828/TIET-LOOP:assets/landing_page.jpg` | Known | Replace before polish due low resolution. |
-| The Loop | `public/assets/projects/the-loop/interest_selection.png` | `Atishay9828/TIET-LOOP:assets/interest_selection.png` | Known | Approved for case-study-only workflow support. |
 | The Loop | `public/assets/projects/the-loop/the-loop-events-list-live.png` | Owner-provided live deployment screenshot | Verified | Primary public visual; proves visible events timeline UI state only. |
-| The Loop | `public/assets/projects/the-loop/the-loop-events-list-alt-live.png` | Owner-provided live deployment screenshot | Verified | Supporting case-study visual. |
-| The Loop | `public/assets/projects/the-loop/the-loop-event-detail-live.png` | Owner-provided live deployment screenshot | Verified | Supporting event-detail/action visual. |
-| The Loop | `public/assets/projects/the-loop/the-loop-map-view-live.png` | Owner-provided live deployment screenshot | Verified | Supporting map-discovery visual. |
+| The Loop | `public/assets/projects/the-loop/the-loop-event-detail-live.webp` | Owner-provided live deployment screenshot | Verified | Supporting event-detail/action visual; production WebP is 117,952 bytes. |
+| The Loop | `public/assets/projects/the-loop/the-loop-map-view-live.webp` | Owner-provided live deployment screenshot | Verified | Supporting map-discovery visual; production WebP is 224,682 bytes. |
 | The Loop | `public/assets/projects/the-loop/the-loop-landing-live.png` | Owner-provided live deployment screenshot | Verified | Supersedes low-resolution `landing_page.jpg`. |
 | The Loop | `public/assets/projects/the-loop/the-loop-profile-live-redacted.png` | Owner-provided live deployment screenshot, redacted before import | Verified | Supporting profile visual only; contact details masked. |
 | The Loop | `public/assets/projects/the-loop/the-loop-friends-live-redacted.png` | Owner-provided live deployment screenshot, redacted before import | Verified | Supporting friends visual only; sent-request username masked. |

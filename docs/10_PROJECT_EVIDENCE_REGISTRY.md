@@ -1,11 +1,13 @@
 # 10_PROJECT_EVIDENCE_REGISTRY.md
 
-Date: 2026-07-04
+Date: 2026-07-13
 
 Purpose:
 - Track portfolio evidence by project.
 - Separate Known evidence from Verified evidence.
 - Prevent public claims from outrunning proof.
+
+Production-release note (2026-07-13): Mahoraga `training_metrics.png` is no longer rendered or copied to the public build because methodology/evaluation interpretation remains Needed. The selected Loop event-detail and map evidence now use visually reviewed `.webp` production encodes; evidence meaning and source status are unchanged.
 
 ## Status Meanings
 
@@ -39,7 +41,7 @@ Portfolio tier: Featured
 
 Verified links:
 - GitHub: `https://github.com/Atishay9828/meta_Mahoraga`
-- Kaggle notebook: `https://www.kaggle.com/code/atishay9828/meta-mahoraga/edit`
+- Kaggle notebook: `https://www.kaggle.com/code/atishay9828/meta-mahoraga`
 - HuggingFace demo: `https://huggingface.co/spaces/MridulNegi2005/Project-Mahoraga`
 
 Evidence status:

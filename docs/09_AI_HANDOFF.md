@@ -1,8 +1,10 @@
 # 09_AI_HANDOFF.md
 
-Date: 2026-07-09
+Date: 2026-07-13
 
 ## Current Project State
+
+2026-07-13 release handoff: the current worktree is a production release candidate. The release pass removed the unvalidated Mahoraga chart from public output, optimized large Loop/mascot media, added canonical/social metadata plus 404/robots/sitemap, and added a Vercel response-header policy. Treat older launch-readiness scores and asset paths below as historical context; current release truth is `docs/01_CURRENT_STATUS.md`, `docs/06_ASSET_TRACKER.md`, `docs/36_IMPLEMENTATION_AND_QA_PLAN.md`, the current build output, and the final deployment report once written.
 
 The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, screenshot QA history, featured case-study copy polish, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a proof/visual launch-readiness audit, imported verified The Loop live-deployment visuals, compact public-link icon polish, a scroll-responsive homepage Signal Journey, and the 2026-07-09 manual review fix pass. The strategy is strong and should not be redesigned.
 
@@ -279,3 +281,28 @@ Verification caveats:
 ```text
 Continue from the conservative Astro static scaffold, `docs/24_LAUNCH_READINESS_AUDIT.md`, and `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md`. The current score estimate is 82/100: conditionally ready for conservative soft launch, blocked for polished/final launch by remaining proof gaps. Do not add fake screenshots, fake metrics, fake demos, or unverified public claims. Owner-reviewed contribution wording exists for featured projects, but do not invent exact Mahoraga file/module ownership or exact The Loop module ownership. The primary SDE resume is already published at `public/resume/atishay-jain-sde-resume.pdf`; LinkedIn is active at `https://www.linkedin.com/in/atishay9828/`; email is active at `mailto:ajain8_be23@thapar.edu`; do not publish the Data Analyst resume unless AJ explicitly asks. Recapture current screenshots before claiming final visual QA, because existing polished screenshots predate the public CTA, contribution-section, and Loop visual updates. The Loop now has owner-provided deployment screenshots; use only the redacted profile/friends copies. If using Hybrid History AI insights visually, open one safe sample transaction and capture the real AI Insight panel from `/transaction-insight`; do not invent insight text. Extend Hybrid benchmarking to the full endpoint/Qwen fallback path before publishing endpoint latency, fallback latency, cost, fallback-rate, or production claims, and then harden the case-study pages.
 ```
+
+## 2026-07-10 Learning-Story Handoff
+
+The current homepage direction is implemented and browser-checked.
+
+Read next:
+1. `docs/34_PORTFOLIO_STORY_AND_LEARNING_PLAN.md`
+2. `docs/35_VISUAL_MOTION_DIRECTION.md`
+3. `docs/36_IMPLEMENTATION_AND_QA_PLAN.md`
+4. `src/data/journey.ts`
+
+Current contract:
+- Keep the seven states: Signal, About, Builds, Evolution, Toolkit, Systems, Contact.
+- About explains learned operating principles; it is not a long biography.
+- Every featured project carries a distinct evidence-safe lesson.
+- Secondary and Lab remain supporting content between Systems and Contact.
+- Signal Core stays in its reserved sticky desktop lane and remains hidden below 1180px.
+- Do not add GSAP, Three.js, or WebGL without a concrete interaction requirement that the current CSS/controller cannot satisfy.
+- Preserve verified links, evidence status, privacy rules, role wording, and project maturity.
+
+Figma reference:
+- `https://www.figma.com/design/bjHX9mvjM57LPTfJ3fJAEh?node-id=1-2`
+
+Next engineering priority:
+- optimize mascot/evidence media and run final deployed performance/accessibility QA before treating the site as polished-launch ready.

@@ -11,6 +11,7 @@ import {
   type ProjectContribution,
 } from "../src/data/projects";
 import { links } from "../src/data/links";
+import { journeyStops } from "../src/data/journey";
 import { toolkit } from "../src/data/toolkit";
 import evidenceDataSource from "../src/data/evidence.ts?raw";
 import projectsDataSource from "../src/data/projects.ts?raw";
@@ -19,7 +20,13 @@ import aboutSource from "../src/components/sections/About.astro?raw";
 import contactSource from "../src/components/sections/Contact.astro?raw";
 import heroSource from "../src/components/sections/Hero.astro?raw";
 import gymCoderSource from "../src/components/ui/GymCoderMascot.astro?raw";
+import journeyDepthSceneSource from "../src/components/ui/JourneyDepthScene.astro?raw";
 import indexPageSource from "../src/pages/index.astro?raw";
+import baseLayoutSource from "../src/layouts/BaseLayout.astro?raw";
+import notFoundPageSource from "../src/pages/404.astro?raw";
+import robotsSource from "../src/pages/robots.txt.ts?raw";
+import sitemapSource from "../src/pages/sitemap.xml.ts?raw";
+import vercelConfigSource from "../vercel.json?raw";
 import systemsMapSource from "../src/components/sections/SystemsMap.astro?raw";
 import toolkitSource from "../src/components/sections/Toolkit.astro?raw";
 import labProjectsSource from "../src/components/sections/LabProjects.astro?raw";
@@ -31,30 +38,24 @@ import hybridRoutingProof from "../docs/19_HYBRID_ROUTING_PROOF.md?raw";
 import hybridBenchmarkResults from "../docs/20_HYBRID_BENCHMARK_RESULTS.md?raw";
 import hybridHistoryInsightsEvidence from "../docs/21_HYBRID_HISTORY_AI_INSIGHTS_EVIDENCE.md?raw";
 import roleContributionEvidence from "../docs/23_ROLE_CONTRIBUTION_EVIDENCE.md?raw";
+import storyLearningPlan from "../docs/34_PORTFOLIO_STORY_AND_LEARNING_PLAN.md?raw";
 
 import mahoragaDashboard from "../public/assets/projects/mahoraga/dashboard_preview.png?url";
-import mahoragaCover from "../public/assets/projects/mahoraga/mahoraga-cover.svg?url";
 import mahoragaRewardLoopDiagram from "../public/assets/projects/mahoraga/mahoraga-reward-loop-diagram.svg?url";
 import mahoragaSystemDiagram from "../public/assets/projects/mahoraga/mahoraga-system-diagram.svg?url";
 import mahoragaScreenshot from "../public/assets/projects/mahoraga/stitch_aero_screenshot.png?url";
-import mahoragaTraining from "../public/assets/projects/mahoraga/training_metrics.png?url";
 import hybridCategories from "../public/assets/projects/hybrid-categorizer/categories.png?url";
-import hybridCover from "../public/assets/projects/hybrid-categorizer/hybrid-cover.svg?url";
 import hybridHistory from "../public/assets/projects/hybrid-categorizer/history.png?url";
 import hybridMemoryFeedbackDiagram from "../public/assets/projects/hybrid-categorizer/hybrid-memory-feedback-diagram.svg?url";
 import hybridMemory from "../public/assets/projects/hybrid-categorizer/memory.png?url";
 import hybridPredict from "../public/assets/projects/hybrid-categorizer/predict.png?url";
 import hybridRoutingDiagram from "../public/assets/projects/hybrid-categorizer/hybrid-routing-diagram.svg?url";
-import loopInterestSelection from "../public/assets/projects/the-loop/interest_selection.png?url";
-import loopLanding from "../public/assets/projects/the-loop/landing_page.jpg?url";
 import loopCarpoolChatFlow from "../public/assets/projects/the-loop/the-loop-carpool-chat-flow.svg?url";
-import loopCover from "../public/assets/projects/the-loop/the-loop-cover.svg?url";
 import loopDeploymentDiagram from "../public/assets/projects/the-loop/the-loop-deployment-diagram.svg?url";
-import loopEventDetailLive from "../public/assets/projects/the-loop/the-loop-event-detail-live.png?url";
-import loopEventsListAltLive from "../public/assets/projects/the-loop/the-loop-events-list-alt-live.png?url";
+import loopEventDetailLive from "../public/assets/projects/the-loop/the-loop-event-detail-live.webp?url";
 import loopEventsListLive from "../public/assets/projects/the-loop/the-loop-events-list-live.png?url";
 import loopLandingLive from "../public/assets/projects/the-loop/the-loop-landing-live.png?url";
-import loopMapViewLive from "../public/assets/projects/the-loop/the-loop-map-view-live.png?url";
+import loopMapViewLive from "../public/assets/projects/the-loop/the-loop-map-view-live.webp?url";
 import loopFriendsLiveRedacted from "../public/assets/projects/the-loop/the-loop-friends-live-redacted.png?url";
 import loopProfileLiveRedacted from "../public/assets/projects/the-loop/the-loop-profile-live-redacted.png?url";
 import loopRecommendationFlow from "../public/assets/projects/the-loop/the-loop-recommendation-flow.svg?url";
@@ -63,25 +64,18 @@ import sdeResume from "../public/resume/atishay-jain-sde-resume.pdf?url";
 
 const importedProjectAssets = [
   mahoragaDashboard,
-  mahoragaCover,
   mahoragaRewardLoopDiagram,
   mahoragaSystemDiagram,
   mahoragaScreenshot,
-  mahoragaTraining,
   hybridCategories,
-  hybridCover,
   hybridHistory,
   hybridMemoryFeedbackDiagram,
   hybridMemory,
   hybridPredict,
   hybridRoutingDiagram,
-  loopInterestSelection,
-  loopLanding,
   loopCarpoolChatFlow,
-  loopCover,
   loopDeploymentDiagram,
   loopEventDetailLive,
-  loopEventsListAltLive,
   loopEventsListLive,
   loopLandingLive,
   loopMapViewLive,
@@ -90,8 +84,6 @@ const importedProjectAssets = [
   loopRecommendationFlow,
   loopSystemDiagram,
 ];
-
-const importedCoverAssets = [mahoragaCover, hybridCover, loopCover];
 
 const requireContribution = (project: Project | undefined): ProjectContribution => {
   expect(project).toBeDefined();
@@ -116,6 +108,11 @@ const techEvidenceDocs = import.meta.glob("../docs/*TECH_STACK_EVIDENCE.md", {
 });
 const toolkitModules = import.meta.glob("../src/data/toolkit.ts", { eager: true });
 const publicProjectAssetModules = import.meta.glob("../public/assets/projects/**/*", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+const publicMascotAssetModules = import.meta.glob("../public/assets/mascot/gym-coder/*.webp", {
   eager: true,
   query: "?url",
   import: "default",
@@ -202,12 +199,19 @@ describe("portfolio scaffold data", () => {
   });
 
   it("keeps the homepage journey order aligned with the approved story", () => {
-    expect(indexPageSource).toContain('href="#about" data-journey-nav="1"');
-    expect(indexPageSource).toContain('href="#featured-projects" data-journey-nav="2"');
-    expect(indexPageSource).toContain('href="#signal-evolution" data-journey-nav="3"');
-    expect(indexPageSource).toContain('href="#toolkit" data-journey-nav="4"');
-    expect(indexPageSource).toContain('href="#systems-map" data-journey-nav="5"');
-    expect(indexPageSource).toContain('href="#contact" data-journey-nav="6"');
+    expect(journeyStops.map((stop) => stop.navLabel)).toEqual([
+      "Signal",
+      "About",
+      "Builds",
+      "Evolution",
+      "Toolkit",
+      "Systems",
+      "Contact",
+    ]);
+    expect(journeyStops.map((stop) => stop.index)).toEqual([0, 1, 2, 3, 4, 5, 6]);
+    expect(indexPageSource).toContain("journeyStops.map");
+    expect(indexPageSource).toContain("href={`#${stop.id}`}");
+    expect(indexPageSource).toContain("data-journey-nav={stop.index}");
     expect(indexPageSource).not.toContain("<ProofStrip");
     expect(indexPageSource).not.toContain('href="#proof-strip"');
     expect(indexPageSource.indexOf("<About")).toBeGreaterThan(indexPageSource.indexOf("<Hero"));
@@ -215,26 +219,45 @@ describe("portfolio scaffold data", () => {
   });
 
   it("keeps Signal Journey marker position derived from active station index", () => {
-    const expectedStations = [
-      ["0", "#top", "Signal"],
-      ["1", "#about", "About"],
-      ["2", "#featured-projects", "Builds"],
-      ["3", "#signal-evolution", "Evolution"],
-      ["4", "#toolkit", "Toolkit"],
-      ["5", "#systems-map", "Systems"],
-      ["6", "#contact", "Contact"],
-    ];
-
-    for (const [index, href, label] of expectedStations) {
-      expect(indexPageSource).toContain(`href="${href}" data-journey-nav="${index}"`);
-      expect(indexPageSource).toContain(`<strong>${label}</strong>`);
+    for (const stop of journeyStops) {
+      expect(journeySectionSourceText).toContain(`id="${stop.id}"`);
+      expect(journeySectionSourceText).toContain(`data-journey-index="${stop.index}"`);
+      expect(journeySectionSourceText).toContain(`data-journey-label="${stop.sectionLabel}"`);
     }
 
-    expect(journeySectionSourceText.match(/data-journey-section/g) ?? []).toHaveLength(expectedStations.length);
-    expect(indexPageSource).toContain("const progress = activeIndex / Math.max(journeySections.length - 1, 1)");
+    expect(journeySectionSourceText.match(/data-journey-section/g) ?? []).toHaveLength(journeyStops.length);
+    expect(indexPageSource).toContain("const journeySectionByIndex = new Map");
+    expect(indexPageSource).toContain("const journeyPositionByIndex = new Map");
+    expect(indexPageSource).toContain("const progress = activePosition / Math.max(journeySections.length - 1, 1)");
     expect(indexPageSource).toContain("scrollMarginTop");
+    expect(indexPageSource).toContain("Click to travel");
+    expect(indexPageSource).toContain('station.setAttribute("aria-current", "location")');
     expect(indexPageSource).not.toContain("rawProgress");
     expect(indexPageSource).not.toContain("journeyEnd");
+  });
+
+  it("adds a compact identity lockup and a section-specific Signal Core", () => {
+    expect(baseLayoutSource).toContain('class="brand-mark"');
+    expect(baseLayoutSource).toContain("Systems × Product");
+    expect(indexPageSource).toContain("<JourneyDepthScene />");
+    expect(indexPageSource).toContain('setProperty("--journey-scroll"');
+    expect(indexPageSource).toContain("requestAnimationFrame(updateJourney)");
+    expect(journeyDepthSceneSource).toContain('class="journey-depth-scene"');
+    expect(journeyDepthSceneSource).toContain("journeyStops.map");
+    expect(journeyDepthSceneSource).toContain("data-scene-state={stop.index}");
+    expect(journeyDepthSceneSource).toContain("data-scene-count={stop.index}");
+    expect(journeyDepthSceneSource.match(/data-scene-glyph=/g) ?? []).toHaveLength(7);
+    expect(journeyDepthSceneSource).toContain("Signal core");
+    expect(journeyDepthSceneSource).toContain("Scroll linked");
+  });
+
+  it("keeps the learning journey progressively enhanced and landmark-safe", () => {
+    expect(baseLayoutSource).toContain('class="skip-link" href="#main-content"');
+    expect(baseLayoutSource).toContain('<main id="main-content">');
+    expect(indexPageSource).not.toContain('<main class="journey-content">');
+    expect(indexPageSource).toContain('<div class="journey-content">');
+    expect(indexPageSource).toContain('journeyRoot.classList.add("is-journey-ready")');
+    expect(indexPageSource).toContain('"IntersectionObserver" in window');
   });
 
   it("keeps the hero right side focused on proof anchors, not a duplicate Signal Path", () => {
@@ -258,6 +281,19 @@ describe("portfolio scaffold data", () => {
       "hybrid-categorizer",
       "the-loop",
     ]);
+  });
+
+  it("makes the learning progression explicit without changing project evidence status", () => {
+    const lessons = featuredProjects.map((project) => project.homepageLesson);
+
+    expect(lessons.every(Boolean)).toBe(true);
+    expect(new Set(lessons).size).toBe(featuredProjects.length);
+    expect(projectModuleSource).toContain("What I learned");
+    expect(aboutSource).toContain("I learned to design the whole decision path.");
+    expect(timelineStages.every((stage) => /^(Learned|Applying)/.test(stage.capability))).toBe(true);
+    expect(storyLearningPlan).toContain("## What AJ Learned");
+    expect(storyLearningPlan).toContain("## Audience Reading Paths");
+    expect(storyLearningPlan).toContain("## Evidence-Safe Boundaries");
   });
 
   it("keeps visual labels public-ready while allowing verified Loop workflow screenshots", () => {
@@ -420,6 +456,29 @@ describe("portfolio scaffold data", () => {
       "The Loop carpool and chat flow showing join, carpool request, friend request, chat history, and WebSocket delivery",
       "The Loop deployment diagram showing React Vite frontend, FastAPI Uvicorn backend, database, Google OAuth, Maps, and Render services",
     ]);
+  });
+
+  it("keeps unvalidated training metrics out of the public Mahoraga page", () => {
+    const mahoragaAssets = getProjectBySlug("mahoraga")?.visual.assets ?? [];
+
+    expect(mahoragaAssets.map((asset) => asset.src)).not.toContain(
+      "/assets/projects/mahoraga/training_metrics.png",
+    );
+    expect(projectsDataSource).not.toContain("training_metrics.png");
+  });
+
+  it("ships production discovery metadata and browser security headers", () => {
+    expect(baseLayoutSource).toContain('rel="canonical"');
+    expect(baseLayoutSource).toContain('property="og:url"');
+    expect(baseLayoutSource).toContain('/og-image.png');
+    expect(notFoundPageSource).toContain("404 / SIGNAL LOST");
+    expect(notFoundPageSource).toContain('robots="noindex, follow"');
+    expect(robotsSource).toContain("Sitemap:");
+    expect(sitemapSource).toContain("routes");
+    expect(vercelConfigSource).toContain("Content-Security-Policy");
+    expect(vercelConfigSource).toContain("frame-ancestors 'none'");
+    expect(vercelConfigSource).toContain("X-Content-Type-Options");
+    expect(vercelConfigSource).toContain("Permissions-Policy");
   });
 
   it("exposes only redacted Loop profile and friends screenshots", () => {
@@ -703,7 +762,7 @@ describe("portfolio scaffold data", () => {
     expect(String(Object.values(techEvidenceDocs)[0])).toContain("| Docker |");
   });
 
-  it("keeps featured homepage cards short and bullet-led", () => {
+  it("keeps featured homepage cards concise and lesson-led", () => {
     expect(featuredProjects.map((project) => project.statusLabel)).toEqual([
       "Prototype",
       "Local AI system",
@@ -715,49 +774,83 @@ describe("portfolio scaffold data", () => {
       expect(project.homepageBoundary).toBeTruthy();
     }
 
-    expect(projectModuleSource).toContain("project-highlight-list");
-    expect(projectModuleSource).toContain("homepageHighlights.slice(0, 3)");
-    expect(projectModuleSource).toContain("project-boundary");
+    expect(projectModuleSource).toContain('project.problem');
+    expect(projectModuleSource).toContain('project.stack.slice(0, compact ? 4 : 3)');
+    expect(projectModuleSource).toContain("Proof on file");
+    expect(projectModuleSource).not.toContain("project-highlight-list");
+    expect(projectModuleSource).not.toContain("project-boundary");
     expect(projectModuleSource).not.toContain("Portfolio role");
     expect(projectModuleSource).not.toContain("Key engineering decision");
     expect(projectModuleSource).not.toContain("action.description");
   });
 
-  it("adds personalized public cover visuals to featured homepage cards", () => {
-    const coverAssets = featuredProjects.map((project) => project.homepageCover?.src);
-
-    expect(coverAssets).toEqual([
-      "/assets/projects/mahoraga/mahoraga-cover.svg",
-      "/assets/projects/hybrid-categorizer/hybrid-cover.svg",
-      "/assets/projects/the-loop/the-loop-cover.svg",
-    ]);
-
-    for (const asset of coverAssets) {
-      expect(asset).toBeTruthy();
-      const assetPath = String(asset);
-      expect(publicAssetExists(assetPath), `${assetPath} should exist under public`).toBe(true);
-      expect(importedCoverAssets.some((importedAsset) => importedAsset.includes(assetPath))).toBe(true);
-    }
-
-    expect(projectModuleSource).toContain("project.homepageCover");
-    expect(projectModuleSource).toContain('class="project-cover"');
-    expect(projectModuleSource).toContain("project.homepageCover.src");
+  it("uses the full public name while preserving AJ as a visual mark", () => {
+    expect(baseLayoutSource).toContain('aria-label="Atishay Jain portfolio home"');
+    expect(baseLayoutSource).toContain('<strong>Atishay Jain</strong>');
+    expect(baseLayoutSource).toContain('<span class="brand-mark">AJ</span>');
+    expect(heroSource).toContain("Atishay Jain / Computer Engineering");
+    expect(indexPageSource).toContain("Atishay Jain | AI Systems Engineer + Product Engineer");
+    expect(projectPageSource).toContain("| Atishay Jain");
   });
 
-  it("replaces the old site buddy with the interactive Gym Coder mascot", () => {
+  it("uses an editorial case-study hierarchy without repeating the homepage module", () => {
+    expect(projectPageSource).not.toContain("ProjectModule");
+    expect(projectPageSource).toContain("case-signal");
+    expect(projectPageSource).toContain("See the system before the explanation.");
+    expect(projectPageSource.indexOf("Visual proof")).toBeLessThan(projectPageSource.indexOf("01 / Build"));
+    expect(projectPageSource).toContain("What this evidence does not claim");
+  });
+
+  it("keeps featured homepage cards focused on project details without cover thumbnails", () => {
+    expect(projectsDataSource).not.toContain("homepageCover");
+    expect(projectModuleSource).not.toContain('class="project-cover"');
+    expect(projectModuleSource).not.toContain("project.homepageCover");
+  });
+
+  it("uses real draggable and resizable Gym Coder sprite frames", () => {
+    const expectedMascotFrames = [
+      "idle-1.webp",
+      "idle-2.webp",
+      "idle-3.webp",
+      "idle-4.webp",
+      "lift-1.webp",
+      "lift-2.webp",
+      "lift-3.webp",
+      "lift-4.webp",
+      "pump-1.webp",
+      "pump-2.webp",
+      "pump-3.webp",
+      "pump-4.webp",
+    ];
+    const mascotAssets = Object.values(publicMascotAssetModules).map((asset) => String(asset));
+
     expect(indexPageSource).toContain('import GymCoderMascot from "../components/ui/GymCoderMascot.astro"');
     expect(indexPageSource).toContain("<GymCoderMascot />");
     expect(indexPageSource).not.toContain('class="site-buddy"');
     expect(indexPageSource).not.toContain("hey what up");
     expect(gymCoderSource).toContain('class="gym-coder"');
-    expect(gymCoderSource).toContain('aria-label="Play Gym Coder mascot animation"');
+    expect(gymCoderSource).toContain('aria-label="Play Gym Coder mascot animation. Drag to move."');
     expect(gymCoderSource).toContain("data-gym-coder");
-    expect(gymCoderSource).toContain("gym-coder__headband");
-    expect(gymCoderSource).toContain("gym-coder__laptop");
-    expect(gymCoderSource).toContain("gym-coder__dumbbell");
+    expect(gymCoderSource).toContain("data-gym-drag-handle");
+    expect(gymCoderSource).toContain("data-gym-resize");
+    expect(gymCoderSource).not.toContain("data-gym-size-slider");
+    expect(gymCoderSource).not.toContain('type="range"');
+    expect(gymCoderSource).not.toContain('data-gym-size="up"');
+    expect(gymCoderSource).not.toContain('data-gym-size="down"');
+    expect(gymCoderSource).toContain("resizeHandle.setPointerCapture");
+    expect(gymCoderSource).toContain("setPointerCapture");
+    expect(gymCoderSource).toContain('resizeHandle?.addEventListener("keydown"');
+    expect(gymCoderSource).toContain('event.key === "Home"');
+    expect(gymCoderSource).toContain("localStorage");
+    expect(gymCoderSource).toContain("--gym-scale");
+    expect(gymCoderSource).toContain("<img");
+    expect(gymCoderSource).toContain("/assets/mascot/gym-coder");
     expect(gymCoderSource).toContain("npm run glowup");
     expect(gymCoderSource).toContain("commit. learn. repeat.");
-    expect(indexPageSource).not.toContain("<img");
+    for (const frame of expectedMascotFrames) {
+      expect(gymCoderSource).toContain(frame);
+      expect(mascotAssets.some((asset) => asset.includes(frame))).toBe(true);
+    }
   });
 
   it("keeps Signal Evolution as a hierarchy instead of repeating Lab projects", () => {
