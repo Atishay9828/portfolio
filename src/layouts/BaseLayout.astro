@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 import { links } from "../data/links";
 import Icon from "../components/ui/Icon.astro";
 
@@ -39,6 +40,7 @@ const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undef
     {socialImageUrl && <meta name="twitter:image" content={socialImageUrl} />}
     <meta name="twitter:image:alt" content="Atishay Jain - AI systems and product engineering portfolio" />
     <title>{title}</title>
+    <Analytics mode="production" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
