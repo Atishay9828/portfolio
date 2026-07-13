@@ -4,7 +4,9 @@ Date: 2026-07-13
 
 ## Current Phase
 
-Astro static portfolio release candidate is in final production validation. Evidence hardening, learning-story implementation, responsive/browser QA, production metadata, static route discovery, asset optimization, and browser-security configuration are implemented; Vercel preview and production verification remain the active release steps.
+The Astro static portfolio is deployed and verified in Vercel production at `https://atishay-jain-portfolio.vercel.app`. The exact application release commit is `a53f44f942060b92ceb7a44945d3331e3001adb0`; preview and production browser, route, security-header, metadata, responsive, resume, link, and Lighthouse checks passed on 2026-07-13. `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
+
+Current dependency-audit interpretation: `npm audit --omit=dev` reports two moderate and two high advisories, but the high advisories are limited to Astro SSR/server-island paths and Vite's network-exposed Windows development server. This portfolio is a static Vercel build with no server adapter, server islands, or public development server, so no applicable critical/high production vulnerability remains. Major Astro/Vitest upgrades remain a separate maintenance task rather than a release hotfix.
 
 2026-07-13 production-release addendum:
 - The unsupported Mahoraga training chart was removed from the rendered case study and public output because methodology/evaluation interpretation remains incomplete.
@@ -83,12 +85,12 @@ Imported asset visual/privacy review status:
 
 Limited Astro static scaffolding: Completed for the homepage and three featured case-study shells.
 
-Production-ready UI polish: No.
+Production-ready UI polish: Yes for the current evidence-safe public scope.
 
 Reason:
-- Static scaffolding can use conservative copy, verified links, source-of-truth docs, and placeholder-free content structure.
-- Global contact CTAs are Verified or owner-approved and active: GitHub, SDE resume, LinkedIn, and email. Production polish remains blocked by project evidence and visual proof rather than public contact links.
-- Featured project evidence is documented enough for a first static shell, but portfolio-local screenshots/demos, role/contribution details, final rendered diagram QA, and deeper proof artifacts are not ready.
+- The published copy is conservative, evidence-gated, and backed by verified links and source-of-truth documents.
+- Global contact CTAs are Verified or owner-approved and active: GitHub, SDE resume, LinkedIn, and email.
+- Remaining project-proof gaps limit future claims and optional media only; they are not blockers for the current production scope.
 
 ## Current Blockers
 
@@ -110,7 +112,7 @@ Reason:
 | The Loop workflow walkthrough | Known/Partial | Draft workflow source exists in `docs/16_THE_LOOP_WORKFLOW_WALKTHROUGH.md`; owner-provided live-deployment screenshots now cover the public-safe visual states, but manual reliability verification, admin proof, and stronger social/realtime proof remain incomplete. |
 | Astro static scaffold | Verified | Homepage and `/projects/mahoraga`, `/projects/hybrid-categorizer`, `/projects/the-loop` build successfully. Verified locally on 2026-06-26 with `npm.cmd test` and `ASTRO_TELEMETRY_DISABLED=1 npm.cmd run build`. |
 | First implementation hardening pass | Verified | Evidence-gating, test coverage, responsive CSS hardening, screenshot QA, and dependency audit completed on 2026-06-26. |
-| Dependency audit | Known | `npm audit` reports 17 vulnerabilities; safe non-breaking fixes are not clearly available because fixes require major dependency changes. |
+| Dependency audit | Verified/Accepted | Final `npm audit --omit=dev` reports two moderate and two high advisories; high paths require Astro SSR/server islands or a network-exposed Windows dev server and are not reachable in this static deployment. No applicable critical/high production finding remains. |
 | Screenshot QA | Verified | Desktop and mobile screenshots exist in `docs/reviews/screenshots/`; Edge headless was used because Chrome headless failed with a GPU-process error. |
 | Imported project visuals | Known | Real candidate assets were copied from verified external repos into `public/assets/projects/...`; visual/privacy review is still required before production polish. |
 | Imported asset review | Known | `docs/18_IMPORTED_ASSET_REVIEW.md` classifies imported assets by homepage approval, case-study-only use, replacement need, sample-labeling need, and Hybrid sample-data UI replacement status. |

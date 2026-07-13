@@ -1,6 +1,6 @@
 # 00_READ_FIRST.md
 
-Date: 2026-07-10
+Date: 2026-07-13
 
 Purpose:
 - Orient future AI agents and contributors before any implementation work.
@@ -9,7 +9,7 @@ Purpose:
 
 ## Current Rule
 
-The website is in active evidence-safe implementation and visual QA.
+The website is deployed and production-verified at `https://atishay-jain-portfolio.vercel.app`. Release truth is recorded in `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md`; future work remains evidence-safe iteration, not launch-blocker cleanup.
 
 Implementation may improve the learning story, hierarchy, motion, accessibility, and maintainability. It must preserve verified destinations, project maturity, ownership boundaries, privacy rules, and Known/Verified evidence states.
 
@@ -19,18 +19,19 @@ Read these first, in order:
 
 1. `docs/01_CURRENT_STATUS.md`
 2. `docs/09_AI_HANDOFF.md`
-3. `PROJECT_CONTEXT.md`
-4. `POSITIONING.md`
-5. `FEATURED_PROJECT_SELECTION.md`
-6. `PORTFOLIO_RISK_AUDIT.md`
-7. `SITE_BLUEPRINT.md`
-8. `DESIGN_SYSTEM.md`
-9. `docs/10_PROJECT_EVIDENCE_REGISTRY.md`
-10. `docs/11_LINK_REGISTRY.md`
-11. `docs/13_FEATURED_EVIDENCE_REVIEW.md`
-12. `docs/34_PORTFOLIO_STORY_AND_LEARNING_PLAN.md`
-13. `docs/35_VISUAL_MOTION_DIRECTION.md`
-14. `docs/36_IMPLEMENTATION_AND_QA_PLAN.md`
+3. `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md`
+4. `PROJECT_CONTEXT.md`
+5. `POSITIONING.md`
+6. `FEATURED_PROJECT_SELECTION.md`
+7. `PORTFOLIO_RISK_AUDIT.md`
+8. `SITE_BLUEPRINT.md`
+9. `DESIGN_SYSTEM.md`
+10. `docs/10_PROJECT_EVIDENCE_REGISTRY.md`
+11. `docs/11_LINK_REGISTRY.md`
+12. `docs/13_FEATURED_EVIDENCE_REVIEW.md`
+13. `docs/34_PORTFOLIO_STORY_AND_LEARNING_PLAN.md`
+14. `docs/35_VISUAL_MOTION_DIRECTION.md`
+15. `docs/36_IMPLEMENTATION_AND_QA_PLAN.md`
 
 Read these next when relevant:
 

@@ -11,16 +11,18 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 ## Current Phase
 
-Astro static scaffold, first implementation hardening pass, first evidence import/case-study hardening pass, imported asset review, Hybrid sample-data visual replacement pass, Hybrid sample routing proof pass, Hybrid local benchmark pass, Hybrid History AI Insight evidence review, conservative design-system polish, polished screenshot QA recapture, featured case-study copy polish, role/contribution evidence framework, owner-reviewed featured contribution wording, SDE resume CTA publication, owner-approved LinkedIn/email CTA activation, launch-readiness audit, and The Loop live visual evidence update are complete; evidence hardening continues before production launch.
+The portfolio is deployed and production-verified on Vercel:
 
-The current implementation is a conservative static content shell backed by the evidence docs. It is conditionally ready for a conservative soft launch, now with verified public-safe The Loop workflow visuals. Polished/final launch remains blocked until current screenshot QA, diagram QA, Hybrid AI Insight visual proof, full endpoint/fallback benchmark evidence if performance copy is desired, exact ownership details where needed, and final launch QA are complete.
+**Live site:** <https://atishay-jain-portfolio.vercel.app>
+
+The current implementation is a production static portfolio backed by evidence-gated project data. Remaining project-proof gaps restrict only future claims and optional visuals; they are not release blockers for the published wording. Build, route, browser, responsive, accessibility, SEO, security-header, secret-scan, dependency-reachability, resume, and link checks are recorded in `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md`.
 
 ## Run Locally
 
-Install dependencies:
+Install locked dependencies:
 
 ```bash
-npm install
+npm ci
 ```
 
 Run the dev server:
@@ -75,15 +77,13 @@ Created:
 - Launch-readiness audit in `docs/24_LAUNCH_READINESS_AUDIT.md` with a 72/100 score: conditionally ready for conservative soft launch, blocked for polished/final launch by visual/proof gaps.
 - The Loop live visual evidence update in `docs/25_THE_LOOP_VISUAL_EVIDENCE_UPDATE.md` with owner-provided public-safe deployment screenshots and an updated 82/100 launch-readiness estimate.
 
-Still blocked:
-- Production visual polish until remaining missing screenshots/demos, diagram render/mobile QA, and final screenshot QA are complete.
-- Current screenshot QA recapture after public CTA, contribution-section, and The Loop visual updates.
+Evidence still gated for future claims and optional media:
 - Hybrid endpoint latency, Qwen fallback latency, cost, fallback-rate, and production claims until full endpoint/fallback benchmark evidence exists.
 - Hybrid backend/model-output claims until the model/backend path is captured or benchmarked end to end.
 - Hybrid History AI Insight visual proof until a safe sample transaction is opened and the real AI Insight panel is captured from `/transaction-insight`.
 - Optional The Loop admin/chat/carpool visuals only if those flows will be visually featured; raw profile/friends screenshots remain unpublished and only redacted copies are public assets.
 - Exact Mahoraga file/module ownership and exact The Loop module ownership unless supporting evidence or teammate confirmation is documented.
-- Audit remediation until Astro/Vitest major dependency upgrades are planned and tested.
+- Astro/Vitest major-version maintenance remains separate from the verified static release; current high advisories are not reachable in the deployed architecture.
 
 ## Read First
 

@@ -4,7 +4,7 @@ Date: 2026-07-13
 
 ## Current Project State
 
-2026-07-13 release handoff: the current worktree is a production release candidate. The release pass removed the unvalidated Mahoraga chart from public output, optimized large Loop/mascot media, added canonical/social metadata plus 404/robots/sitemap, and added a Vercel response-header policy. Treat older launch-readiness scores and asset paths below as historical context; current release truth is `docs/01_CURRENT_STATUS.md`, `docs/06_ASSET_TRACKER.md`, `docs/36_IMPLEMENTATION_AND_QA_PLAN.md`, the current build output, and the final deployment report once written.
+2026-07-13 production handoff: the portfolio is live and verified at `https://atishay-jain-portfolio.vercel.app`. The exact application release commit is `a53f44f942060b92ceb7a44945d3331e3001adb0`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` records the release evidence. The release pass removed the unvalidated Mahoraga chart from public output, optimized large Loop/mascot media, added canonical/social metadata plus 404/robots/sitemap, configured the Vercel `dist` output, and added a tested response-header policy. Treat older launch-readiness scores and asset paths below as historical context.
 
 The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, screenshot QA history, featured case-study copy polish, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a proof/visual launch-readiness audit, imported verified The Loop live-deployment visuals, compact public-link icon polish, a scroll-responsive homepage Signal Journey, and the 2026-07-09 manual review fix pass. The strategy is strong and should not be redesigned.
 
@@ -17,14 +17,14 @@ The repository now has a continuity system under `docs/00..25`, including curren
 - Static `dist/` smoke checks passed for the homepage and all three featured project pages. Dev-server browser QA could not be completed because Astro dev exited under sandbox parent-directory access errors, and the environment rejected escalation due the usage limit.
 - Remaining closeout work is final validation after doc edits, commit, and push.
 
-Limited Astro static scaffolding has been completed for the homepage and three featured case-study shells. Production-ready UI polish is still blocked.
+The homepage and three featured case studies are deployed and production-verified. Remaining evidence gaps constrain future copy/media additions; they do not block the current public release.
 
 First hardening pass status:
 - Project/link/evidence data remains centralized and routes are data-driven.
 - Personal CTAs are active only where the destination is verified or owner-approved: GitHub, the repo-local SDE resume, LinkedIn, and email. The Data Analyst resume remains unpublished and unexposed.
 - Public-link icons are visual polish only. The header keeps Resume as the only compact text CTA and uses icon-only GitHub/LinkedIn links. Hero and contact remain descriptive, and the footer is now only a quiet static-first build note with no repeated CTA cluster. Destinations and evidence status are unchanged.
 - Desktop and mobile screenshot QA exists under `docs/reviews/screenshots/`.
-- `npm audit` reports 17 vulnerabilities; available fixes require major dependency upgrades, so no automatic fix was applied.
+- Final `npm audit --omit=dev` reports two moderate and two high advisories. The high paths require Astro SSR/server islands or a network-exposed Windows dev server and are not reachable in the static production deployment; major upgrades remain a separate maintenance milestone.
 
 Conservative design-system polish status:
 - Global CSS now has tighter spacing rhythm, section bands, focus states, dark surface layering, compact timeline styling, and stronger responsive constraints.
