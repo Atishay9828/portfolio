@@ -11,23 +11,19 @@ import {
   type ProjectContribution,
 } from "../src/data/projects";
 import { links } from "../src/data/links";
-import { journeyStops } from "../src/data/journey";
 import { toolkit } from "../src/data/toolkit";
 import evidenceDataSource from "../src/data/evidence.ts?raw";
 import projectsDataSource from "../src/data/projects.ts?raw";
 import featuredProjectsSource from "../src/components/sections/FeaturedProjects.astro?raw";
 import aboutSource from "../src/components/sections/About.astro?raw";
-import contactSource from "../src/components/sections/Contact.astro?raw";
 import heroSource from "../src/components/sections/Hero.astro?raw";
 import gymCoderSource from "../src/components/ui/GymCoderMascot.astro?raw";
-import journeyDepthSceneSource from "../src/components/ui/JourneyDepthScene.astro?raw";
 import indexPageSource from "../src/pages/index.astro?raw";
 import baseLayoutSource from "../src/layouts/BaseLayout.astro?raw";
 import notFoundPageSource from "../src/pages/404.astro?raw";
 import robotsSource from "../src/pages/robots.txt.ts?raw";
 import sitemapSource from "../src/pages/sitemap.xml.ts?raw";
 import vercelConfigSource from "../vercel.json?raw";
-import systemsMapSource from "../src/components/sections/SystemsMap.astro?raw";
 import toolkitSource from "../src/components/sections/Toolkit.astro?raw";
 import labProjectsSource from "../src/components/sections/LabProjects.astro?raw";
 import projectModuleSource from "../src/components/project/ProjectModule.astro?raw";
@@ -132,16 +128,6 @@ const publicFacingSourceText = [
   timelineSource,
 ].join("\n");
 
-const journeySectionSourceText = [
-  heroSource,
-  aboutSource,
-  featuredProjectsSource,
-  timelineSource,
-  toolkitSource,
-  systemsMapSource,
-  contactSource,
-].join("\n");
-
 const forbiddenPublicPhrases = [
   "Text-only until",
   "until real links",
@@ -198,69 +184,57 @@ describe("portfolio scaffold data", () => {
     expect(pendingDoc).toContain("Remaining real blockers");
   });
 
-  it("keeps the homepage journey order aligned with the approved story", () => {
-    expect(journeyStops.map((stop) => stop.navLabel)).toEqual([
-      "Signal",
-      "About",
-      "Builds",
-      "Evolution",
-      "Toolkit",
-      "Systems",
-      "Contact",
-    ]);
-    expect(journeyStops.map((stop) => stop.index)).toEqual([0, 1, 2, 3, 4, 5, 6]);
-    expect(indexPageSource).toContain("journeyStops.map");
-    expect(indexPageSource).toContain("href={`#${stop.id}`}");
-    expect(indexPageSource).toContain("data-journey-nav={stop.index}");
-    expect(indexPageSource).not.toContain("<ProofStrip");
-    expect(indexPageSource).not.toContain('href="#proof-strip"');
-    expect(indexPageSource.indexOf("<About")).toBeGreaterThan(indexPageSource.indexOf("<Hero"));
-    expect(indexPageSource.indexOf("<About")).toBeLessThan(indexPageSource.indexOf("<FeaturedProjects"));
-  });
+  it("keeps the homepage journey order aligned with the approved Built Under Load story", () => {
+    const orderedAnchors = [
+      'id="top"',
+      'id="proof"',
+      'id="about"',
+      'id="featured-projects"',
+      'id="systems"',
+      'id="lab-projects"',
+      'id="contact"',
+    ];
 
-  it("keeps Signal Journey marker position derived from active station index", () => {
-    for (const stop of journeyStops) {
-      expect(journeySectionSourceText).toContain(`id="${stop.id}"`);
-      expect(journeySectionSourceText).toContain(`data-journey-index="${stop.index}"`);
-      expect(journeySectionSourceText).toContain(`data-journey-label="${stop.sectionLabel}"`);
+    for (let index = 1; index < orderedAnchors.length; index += 1) {
+      expect(indexPageSource.indexOf(orderedAnchors[index])).toBeGreaterThan(
+        indexPageSource.indexOf(orderedAnchors[index - 1]),
+      );
     }
 
-    expect(journeySectionSourceText.match(/data-journey-section/g) ?? []).toHaveLength(journeyStops.length);
-    expect(indexPageSource).toContain("const journeySectionByIndex = new Map");
-    expect(indexPageSource).toContain("const journeyPositionByIndex = new Map");
-    expect(indexPageSource).toContain("const progress = activePosition / Math.max(journeySections.length - 1, 1)");
-    expect(indexPageSource).toContain("scrollMarginTop");
-    expect(indexPageSource).toContain("Click to travel");
-    expect(indexPageSource).toContain('station.setAttribute("aria-current", "location")');
-    expect(indexPageSource).not.toContain("rawProgress");
-    expect(indexPageSource).not.toContain("journeyEnd");
+    expect(indexPageSource).toContain("I build systems that hold up under uncertainty.");
+    expect(indexPageSource).toContain("Three systems.<br />Three kinds of pressure.");
+    expect(indexPageSource).toContain("Pressure reveals the system.");
+    expect(indexPageSource).not.toContain("journeyStops.map");
   });
 
-  it("adds a compact identity lockup and a section-specific Signal Core", () => {
+  it("keeps the cinematic story scene derived from the active story step", () => {
+    expect(indexPageSource.match(/data-story-step="/g) ?? []).toHaveLength(3);
+    expect(indexPageSource.match(/data-story-scene="/g) ?? []).toHaveLength(3);
+    expect(indexPageSource.match(/data-story-progress="/g) ?? []).toHaveLength(3);
+    expect(indexPageSource).toContain("const setStoryScene = (index: number)");
+    expect(indexPageSource).toContain('scene.setAttribute("aria-hidden", String(!isActive))');
+    expect(indexPageSource).toContain('rootMargin: "-32% 0px -32% 0px"');
+    expect(indexPageSource).toContain("setStoryScene(index)");
+    expect(indexPageSource).toContain("requestAnimationFrame(syncHero)");
+  });
+
+  it("adds a compact identity lockup and a portrait-led cinematic core", () => {
     expect(baseLayoutSource).toContain('class="brand-mark"');
     expect(baseLayoutSource).toContain("Systems × Product");
-    expect(indexPageSource).toContain("<JourneyDepthScene />");
-    expect(indexPageSource).toContain('setProperty("--journey-scroll"');
-    expect(indexPageSource).toContain("requestAnimationFrame(updateJourney)");
-    expect(journeyDepthSceneSource).toContain('class="journey-depth-scene"');
-    expect(journeyDepthSceneSource).toContain("journeyStops.map");
-    expect(journeyDepthSceneSource).toContain("data-scene-state={stop.index}");
-    expect(journeyDepthSceneSource).toContain("data-scene-count={stop.index}");
-    expect(journeyDepthSceneSource.match(/data-scene-glyph=/g) ?? []).toHaveLength(7);
-    expect(journeyDepthSceneSource).toContain("Signal journey");
-    expect(journeyDepthSceneSource).toContain("Section in view");
-    expect(journeyDepthSceneSource).toContain("Tracks the page beside it");
-    expect(journeyDepthSceneSource).toContain("data-scene-detail={stop.index}");
-    expect(journeyDepthSceneSource).toContain("data-scene-marker={stop.index}");
-    expect(journeyStops.every((stop) => stop.sceneSummary.length >= 48)).toBe(true);
+    expect(indexPageSource).toContain("/assets/cinematic/aj-hero-primary-approved.png");
+    expect(indexPageSource).toContain("/assets/cinematic/aj-builder-studio.webp");
+    expect(indexPageSource).toContain("/assets/cinematic/aj-creator-studio.webp");
+    expect(indexPageSource).toContain("/assets/cinematic/aj-closer-gallery.webp");
+    expect(indexPageSource).toContain('setProperty("--hero-shift-x"');
+    expect(indexPageSource).toContain('setProperty("--hero-tilt"');
+    expect(indexPageSource).not.toContain("<JourneyDepthScene />");
   });
 
-  it("keeps the learning journey progressively enhanced and landmark-safe", () => {
+  it("keeps the cinematic journey progressively enhanced and landmark-safe", () => {
     expect(baseLayoutSource).toContain('class="skip-link" href="#main-content"');
     expect(baseLayoutSource).toContain('<main id="main-content">');
-    expect(indexPageSource).not.toContain('<main class="journey-content">');
-    expect(indexPageSource).toContain('<div class="journey-content">');
-    expect(indexPageSource).toContain('journeyRoot.classList.add("is-journey-ready")');
+    expect(indexPageSource).toContain('<div class="bul-page" data-bul-root>');
+    expect(indexPageSource).toContain('window.matchMedia("(prefers-reduced-motion: reduce)")');
     expect(indexPageSource).toContain('"IntersectionObserver" in window');
   });
 
@@ -797,7 +771,7 @@ describe("portfolio scaffold data", () => {
     expect(baseLayoutSource).toContain('<strong>Atishay Jain</strong>');
     expect(baseLayoutSource).toContain('<span class="brand-mark">AJ</span>');
     expect(heroSource).toContain("Atishay Jain / Computer Engineering");
-    expect(indexPageSource).toContain("Atishay Jain | AI Systems Engineer + Product Engineer");
+    expect(indexPageSource).toContain("Atishay Jain | AI Systems Engineer × Product Engineer");
     expect(projectPageSource).toContain("| Atishay Jain");
   });
 
@@ -815,7 +789,7 @@ describe("portfolio scaffold data", () => {
     expect(projectModuleSource).not.toContain("project.homepageCover");
   });
 
-  it("uses real draggable and resizable Gym Coder sprite frames", () => {
+  it("uses the owned Gym Coder as restrained personality while preserving the full sprite set", () => {
     const expectedMascotFrames = [
       "idle-1.webp",
       "idle-2.webp",
@@ -832,8 +806,9 @@ describe("portfolio scaffold data", () => {
     ];
     const mascotAssets = Object.values(publicMascotAssetModules).map((asset) => String(asset));
 
-    expect(indexPageSource).toContain('import GymCoderMascot from "../components/ui/GymCoderMascot.astro"');
-    expect(indexPageSource).toContain("<GymCoderMascot />");
+    expect(indexPageSource).toContain("/assets/mascot/gym-coder/idle-1.webp");
+    expect(indexPageSource).toContain("/assets/mascot/gym-coder/lift-3.webp");
+    expect(indexPageSource.match(/assets\/mascot\/gym-coder/g) ?? []).toHaveLength(2);
     expect(indexPageSource).not.toContain('class="site-buddy"');
     expect(indexPageSource).not.toContain("hey what up");
     expect(gymCoderSource).toContain('class="gym-coder"');

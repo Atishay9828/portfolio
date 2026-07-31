@@ -1,233 +1,520 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/sections/Hero.astro";
-import FeaturedProjects from "../components/sections/FeaturedProjects.astro";
-import Timeline from "../components/sections/Timeline.astro";
-import SecondaryWork from "../components/sections/SecondaryWork.astro";
-import LabProjects from "../components/sections/LabProjects.astro";
-import SystemsMap from "../components/sections/SystemsMap.astro";
-import About from "../components/sections/About.astro";
-import Toolkit from "../components/sections/Toolkit.astro";
-import Contact from "../components/sections/Contact.astro";
-import GymCoderMascot from "../components/ui/GymCoderMascot.astro";
-import JourneyDepthScene from "../components/ui/JourneyDepthScene.astro";
-import { journeyStops } from "../data/journey";
+import {
+  capabilities,
+  featuredProjects,
+  labProjects,
+  secondaryProjects,
+  timelineProjectLinks,
+  timelineStages,
+} from "../data/projects";
+import { toolkit } from "../data/toolkit";
+import { links } from "../data/links";
+
+const coverBySlug: Record<string, { src: string; alt: string }> = {
+  mahoraga: {
+    src: "/assets/projects/mahoraga/dashboard_preview.png",
+    alt: "Mahoraga adaptive environment dashboard",
+  },
+  "hybrid-categorizer": {
+    src: "/assets/projects/hybrid-categorizer/predict.png",
+    alt: "Hybrid transaction categorizer prediction flow",
+  },
+  "the-loop": {
+    src: "/assets/projects/the-loop/the-loop-event-detail-live.webp",
+    alt: "The Loop campus event detail workflow",
+  },
+};
+
+const displayTitleBySlug: Record<string, string> = {
+  mahoraga: "Mahoraga",
+  "hybrid-categorizer": "Hybrid",
+  "the-loop": "The Loop",
+};
+
+const proofSignals = [
+  "AI systems",
+  "Product workflows",
+  "Local inference",
+  "Adaptive environments",
+  "Realtime coordination",
+  "Evidence first",
+];
+
+const toolkitGroups = toolkit.reduce<Record<string, string[]>>((groups, item) => {
+  const names = groups[item.category] ?? [];
+
+  if (!names.includes(item.name)) {
+    names.push(item.name);
+  }
+
+  groups[item.category] = names;
+  return groups;
+}, {});
 ---
 
-<BaseLayout title="Atishay Jain | AI Systems Engineer + Product Engineer">
-  <div class="signal-journey signal-corridor" data-journey-root>
-    <JourneyDepthScene />
-    <aside class="journey-gutter" aria-label="Homepage journey controls">
-      <div class="journey-gutter-inner">
-        <nav class="journey-rail" aria-label="Homepage signal journey">
-          <div class="journey-rail-track" aria-hidden="true">
-            <span class="journey-rail-fill"></span>
-            <span class="journey-rail-orb"></span>
+<BaseLayout
+  title="Atishay Jain | AI Systems Engineer × Product Engineer"
+  description="Atishay Jain builds AI systems and product workflows that hold up under uncertainty."
+>
+  <div class="bul-page" data-bul-root>
+    <section class="bul-hero-wrap" id="top" data-hero-wrap>
+      <div class="bul-hero">
+        <div class="bul-hero__grain" aria-hidden="true"></div>
+        <div class="bul-hero__wordmark" aria-hidden="true">
+          <span class="bul-hero__name bul-hero__name--first">ATISHAY</span>
+          <span class="bul-hero__name bul-hero__name--last">JAIN</span>
+        </div>
+
+        <div class="bul-hero__media" data-hero-media>
+          <img
+            src="/assets/cinematic/aj-hero-primary-approved.png"
+            alt="Atishay Jain standing confidently with his arms crossed"
+            width="392"
+            height="865"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+
+        <div class="bul-hero__role">
+          <span>AI Systems Engineer</span>
+          <i class="ph ph-x" aria-hidden="true"></i>
+          <span>Product Engineer</span>
+        </div>
+
+        <div class="bul-hero__copy">
+          <p class="bul-kicker">Atishay Jain / Computer Engineering</p>
+          <h1>I build systems that hold up under uncertainty.</h1>
+          <div class="bul-actions">
+            <a class="bul-button bul-button--primary" href="#featured-projects">
+              <span>View selected work</span>
+              <i class="ph ph-arrow-down-right" aria-hidden="true"></i>
+            </a>
+            {links.resume.href && (
+              <a class="bul-button bul-button--secondary" href={links.resume.href}>
+                <span>Resume</span>
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            )}
           </div>
-          <ol class="journey-stations">
-            {
-              journeyStops.map((stop) => (
-                <li>
-                  <a class="journey-station" href={`#${stop.id}`} data-journey-nav={stop.index}>
-                    <span>{String(stop.index + 1).padStart(2, "0")}</span>
-                    <strong>{stop.navLabel}</strong>
-                  </a>
-                </li>
-              ))
-            }
-          </ol>
-          <p class="journey-rail-hint">Click to travel</p>
-        </nav>
-        <GymCoderMascot />
+          <p class="bul-hero__education">B.Tech Computer Engineering · Thapar University · 2027</p>
+        </div>
+
+        <figure class="bul-hero__mascot">
+          <img
+            src="/assets/mascot/gym-coder/idle-1.webp"
+            alt="AJ's Gym Coder mascot working on a laptop"
+            width="420"
+            height="420"
+            loading="eager"
+          />
+          <figcaption>Built under load.</figcaption>
+        </figure>
+
+        <div class="bul-hero__scroll" aria-hidden="true">
+          <span>Scroll to inspect</span>
+          <i class="ph ph-arrow-down"></i>
+        </div>
       </div>
-    </aside>
-    <div class="journey-content">
-      <Hero />
-      <About />
-      <FeaturedProjects />
-      <Timeline />
-      <Toolkit />
-      <SystemsMap />
-      <SecondaryWork />
-      <LabProjects />
-      <Contact />
-    </div>
+    </section>
+
+    <section class="bul-proof-strip" id="proof" aria-label="Engineering proof signals">
+      <div class="bul-proof-strip__track">
+        {[...proofSignals, ...proofSignals].map((signal, index) => (
+          <span aria-hidden={index >= proofSignals.length ? "true" : undefined}>
+            {signal}
+            <i class="ph ph-asterisk" aria-hidden="true"></i>
+          </span>
+        ))}
+      </div>
+    </section>
+
+    <section class="bul-story" id="about">
+      <div class="bul-section-head bul-section-head--paper" data-reveal>
+        <span>01 / How I build</span>
+        <h2>Pressure reveals the system.</h2>
+        <p>
+          I design the whole decision path: contracts first, uncertainty routed deliberately, and proof attached to
+          the work.
+        </p>
+      </div>
+
+      <div class="bul-story__layout" data-story-root>
+        <div class="bul-story__steps">
+          <article class="bul-story-step is-active" data-story-step="0" data-reveal>
+            <span class="bul-story-step__index">01</span>
+            <p class="bul-kicker">The builder / Systems</p>
+            <h3>Start with the environment, not the demo.</h3>
+            <p>
+              State, constraints, routing, and failure paths come before model choice. Mahoraga taught me that
+              behavior is shaped by the environment around the agent.
+            </p>
+            <ul>
+              <li>Explicit state and contracts</li>
+              <li>Reviewable system boundaries</li>
+              <li>Evaluation before spectacle</li>
+            </ul>
+          </article>
+
+          <article class="bul-story-step" data-story-step="1" data-reveal>
+            <span class="bul-story-step__index">02</span>
+            <p class="bul-kicker">The product thinker / Workflow</p>
+            <h3>Route uncertainty where it earns the complexity.</h3>
+            <p>
+              Rules, local models, memory, and LLM fallback each have a job. Hybrid turned that architecture into a
+              user-visible decision path instead of a mysterious model call.
+            </p>
+            <ul>
+              <li>Deterministic paths first</li>
+              <li>Fallbacks with honest limits</li>
+              <li>Interfaces that expose decisions</li>
+            </ul>
+          </article>
+
+          <article class="bul-story-step" data-story-step="2" data-reveal>
+            <span class="bul-story-step__index">03</span>
+            <p class="bul-kicker">The closer / Proof</p>
+            <h3>Ship the workflow. Show the artifact.</h3>
+            <p>
+              A product is more than a clean screen. The Loop connected discovery to persisted coordination, while
+              the portfolio keeps screenshots, diagrams, and project boundaries close to every claim.
+            </p>
+            <ul>
+              <li>Real product artifacts</li>
+              <li>Contribution boundaries</li>
+              <li>Static-first, resilient delivery</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="bul-story__visual" aria-live="polite">
+          <figure class="bul-story-scene is-active" data-story-scene="0">
+            <img
+              src="/assets/cinematic/aj-builder-studio.webp"
+              alt="Atishay Jain reviewing Mahoraga and Hybrid project interfaces at a dark studio desk"
+              width="1680"
+              height="945"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              <span>01 / Systems</span>
+              <strong>Build the decision path.</strong>
+            </figcaption>
+          </figure>
+          <figure class="bul-story-scene" data-story-scene="1" aria-hidden="true">
+            <img
+              src="/assets/cinematic/aj-creator-studio.webp"
+              alt="Atishay Jain presenting real product interfaces in a cinematic review studio"
+              width="1680"
+              height="945"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              <span>02 / Product</span>
+              <strong>Make the system usable.</strong>
+            </figcaption>
+          </figure>
+          <figure class="bul-story-scene" data-story-scene="2" aria-hidden="true">
+            <img
+              src="/assets/cinematic/aj-closer-gallery.webp"
+              alt="Atishay Jain standing in a gallery of Mahoraga, Hybrid, and The Loop project artifacts"
+              width="1680"
+              height="945"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              <span>03 / Proof</span>
+              <strong>Put evidence behind the claim.</strong>
+            </figcaption>
+          </figure>
+          <div class="bul-story__progress" aria-hidden="true">
+            <span data-story-progress="0"></span>
+            <span data-story-progress="1"></span>
+            <span data-story-progress="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bul-projects" id="featured-projects">
+      <div class="bul-section-head bul-section-head--dark" data-reveal>
+        <span>02 / Selected work</span>
+        <h2>Three systems.<br />Three kinds of pressure.</h2>
+        <p>Adaptive behavior, routed uncertainty, and persisted coordination—each backed by inspectable artifacts.</p>
+      </div>
+
+      <div class="bul-project-stack">
+        {featuredProjects.map((project, index) => {
+          const projectIndex = String(index + 1).padStart(2, "0");
+          const repo = project.links.find((link) => link.status === "Verified" && link.label.toLowerCase().includes("github"));
+          const cover = coverBySlug[project.slug];
+
+          return (
+            <article class:list={["bul-project", index % 2 === 1 && "bul-project--reverse"]} data-reveal>
+              <div class="bul-project__copy">
+                <div class="bul-project__meta">
+                  <span>{projectIndex}</span>
+                  <span>{project.statusLabel}</span>
+                </div>
+                <h3>{displayTitleBySlug[project.slug] ?? project.title}</h3>
+                <p class="bul-project__lesson">{project.homepageLesson}</p>
+                <p class="bul-project__subtitle">{project.subtitle}</p>
+                <div class="bul-project__stack" aria-label={`${project.title} technology stack`}>
+                  {project.stack.slice(0, 6).map((item) => <span>{item}</span>)}
+                </div>
+                <div class="bul-actions">
+                  <a class="bul-button bul-button--project" href={`/projects/${project.slug}/`}>
+                    <span>Explore case study</span>
+                    <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                  </a>
+                  {repo && (
+                    <a class="bul-text-link" href={repo.href} target="_blank" rel="noreferrer">
+                      <span>GitHub</span>
+                      <i class="ph ph-github-logo" aria-hidden="true"></i>
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <a class="bul-project__visual" href={`/projects/${project.slug}/`} aria-label={`Open ${project.title} case study`}>
+                <div class="bul-project__visual-index" aria-hidden="true">{projectIndex}</div>
+                <img src={cover.src} alt={cover.alt} width="1440" height="900" loading="lazy" decoding="async" />
+                <span class="bul-project__visual-caption">{project.visual.label}</span>
+              </a>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <section class="bul-evolution">
+      <div class="bul-section-head bul-section-head--paper" data-reveal>
+        <span>03 / Evolution</span>
+        <h2>Built by adding constraints.</h2>
+      </div>
+      <div class="bul-timeline">
+        {timelineStages.map((stage, index) => (
+          <article data-reveal>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <p class="bul-kicker">{stage.label}</p>
+              <h3>
+                {stage.projects.map((projectName, projectIndex) => {
+                  const link = timelineProjectLinks[projectName as keyof typeof timelineProjectLinks];
+                  return (
+                    <>
+                      {projectIndex > 0 && <span class="bul-separator"> / </span>}
+                      {link ? (
+                        <a
+                          href={link.href}
+                          target={link.external ? "_blank" : undefined}
+                          rel={link.external ? "noreferrer" : undefined}
+                        >
+                          {projectName}
+                        </a>
+                      ) : (
+                        projectName
+                      )}
+                    </>
+                  );
+                })}
+              </h3>
+              <p>{stage.capability}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="bul-toolkit" id="systems">
+      <div class="bul-toolkit__intro" data-reveal>
+        <span>04 / Working set</span>
+        <h2>Tools are choices,<br />not personality traits.</h2>
+        <p>The stack is grounded in project evidence and changes when the job changes.</p>
+      </div>
+      <div class="bul-toolkit__groups">
+        {Object.entries(toolkitGroups).map(([category, items], index) => (
+          <article data-reveal>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{category}</h3>
+            <p>{items.join(" · ")}</p>
+          </article>
+        ))}
+      </div>
+      <div class="bul-capabilities" aria-label="Capability map">
+        {capabilities.map((capability) => (
+          <div data-reveal>
+            <span>{capability.label}</span>
+            <small>{capability.evidence.join(" / ")}</small>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="bul-more-work" id="lab-projects">
+      <div class="bul-section-head bul-section-head--dark" data-reveal>
+        <span>05 / The rest of the bench</span>
+        <h2>Smaller builds.<br />Still real.</h2>
+      </div>
+      <div class="bul-more-work__list">
+        {secondaryProjects.map((project, index) => {
+          const repo = project.links.find((link) => link.status === "Verified");
+          return (
+            <a href={repo?.href ?? "#"} target="_blank" rel="noreferrer" data-reveal>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <h3>{project.title}</h3>
+                <p>{project.keyDecision}</p>
+              </div>
+              <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          );
+        })}
+        {labProjects.map((project, index) => (
+          <a href={project.repoHref} target="_blank" rel="noreferrer" data-reveal>
+            <span>{String(index + secondaryProjects.length + 1).padStart(2, "0")}</span>
+            <div>
+              <h3>{project.title}</h3>
+              <p>{project.purpose}</p>
+            </div>
+            <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="bul-contact" id="contact">
+      <div class="bul-contact__noise" aria-hidden="true"></div>
+      <p class="bul-kicker">Available for internships and early-career roles</p>
+      <h2>Bring me a system<br />worth testing.</h2>
+      <p>
+        Software engineering, AI systems, or product engineering—if the work has real constraints, I want to hear
+        about it.
+      </p>
+      <div class="bul-actions">
+        {links.email.href && (
+          <a class="bul-button bul-button--contact" href={links.email.href}>
+            <span>Let's talk</span>
+            <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+          </a>
+        )}
+        {links.linkedin.href && (
+          <a class="bul-text-link bul-text-link--contact" href={links.linkedin.href} target="_blank" rel="noreferrer">
+            <span>LinkedIn</span>
+            <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
+          </a>
+        )}
+        {links.github.href && (
+          <a class="bul-text-link bul-text-link--contact" href={links.github.href} target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <i class="ph ph-github-logo" aria-hidden="true"></i>
+          </a>
+        )}
+      </div>
+      <img
+        class="bul-contact__mascot"
+        src="/assets/mascot/gym-coder/lift-3.webp"
+        alt="AJ's Gym Coder mascot lifting a dumbbell"
+        width="420"
+        height="420"
+        loading="lazy"
+      />
+    </section>
   </div>
+
   <script>
-    const initSignalJourney = () => {
-      const journeyRoot = document.querySelector<HTMLElement>("[data-journey-root]");
+    const root = document.querySelector<HTMLElement>("[data-bul-root]");
+    const heroWrap = document.querySelector<HTMLElement>("[data-hero-wrap]");
+    const storyRoot = document.querySelector<HTMLElement>("[data-story-root]");
+    const storySteps = Array.from(document.querySelectorAll<HTMLElement>("[data-story-step]"));
+    const storyScenes = Array.from(document.querySelectorAll<HTMLElement>("[data-story-scene]"));
+    const storyProgress = Array.from(document.querySelectorAll<HTMLElement>("[data-story-progress]"));
+    const revealItems = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let frameRequested = false;
 
-      if (!journeyRoot) {
-        return;
-      }
+    const setStoryScene = (index: number) => {
+      storyRoot?.setAttribute("data-active-scene", String(index));
 
-      const readJourneyIndex = (element: HTMLElement, attribute: "journeyIndex" | "journeyNav") => {
-        const value = Number.parseInt(element.dataset[attribute] ?? "", 10);
-        return Number.isFinite(value) ? value : null;
-      };
-
-      const journeySections = Array.from(journeyRoot.querySelectorAll<HTMLElement>("[data-journey-section]"))
-        .filter((section) => readJourneyIndex(section, "journeyIndex") !== null)
-        .sort(
-          (left, right) =>
-            (readJourneyIndex(left, "journeyIndex") ?? 0) - (readJourneyIndex(right, "journeyIndex") ?? 0),
-        );
-      const journeyStations = Array.from(
-        journeyRoot.querySelectorAll<HTMLAnchorElement>("[data-journey-nav]"),
-      );
-      const journeySectionByIndex = new Map(
-        journeySections.map((section) => [readJourneyIndex(section, "journeyIndex") ?? 0, section]),
-      );
-      const journeyPositionByIndex = new Map(
-        journeySections.map((section, position) => [readJourneyIndex(section, "journeyIndex") ?? 0, position]),
-      );
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-      let frameRequested = false;
-
-      if (journeySections.length === 0 || journeyStations.length === 0) {
-        return;
-      }
-
-      journeyRoot.classList.add("is-journey-ready");
-
-      const getStickyOffset = () => {
-        const header = document.querySelector<HTMLElement>(".site-header");
-        return (header?.offsetHeight ?? 68) + 18;
-      };
-
-      const setActiveJourneySection = (activeIndex: number) => {
-        const activePosition = journeyPositionByIndex.get(activeIndex) ?? 0;
-        const progress = activePosition / Math.max(journeySections.length - 1, 1);
-
-        journeyRoot.dataset.activeJourney = String(activeIndex);
-        journeyRoot.style.setProperty("--journey-progress", progress.toFixed(4));
-        journeyRoot.style.setProperty("--journey-progress-percent", `${(progress * 100).toFixed(2)}%`);
-        journeyRoot.style.setProperty("--journey-depth", (progress * 100).toFixed(2));
-
-        journeySections.forEach((section) => {
-          const sectionIndex = readJourneyIndex(section, "journeyIndex") ?? 0;
-          section.classList.toggle("is-active", sectionIndex === activeIndex);
-          section.classList.toggle("is-before", sectionIndex < activeIndex);
-          section.classList.toggle("is-after", sectionIndex > activeIndex);
-        });
-
-        journeyStations.forEach((station) => {
-          const stationIndex = readJourneyIndex(station, "journeyNav") ?? 0;
-          station.classList.toggle("is-active", stationIndex === activeIndex);
-          station.classList.toggle("is-before", stationIndex < activeIndex);
-
-          if (stationIndex === activeIndex) {
-            station.setAttribute("aria-current", "location");
-          } else {
-            station.removeAttribute("aria-current");
-          }
-        });
-      };
-
-      const setContinuousJourneyProgress = () => {
-        const journeyTop = journeyRoot.getBoundingClientRect().top + window.scrollY;
-        const scrollRange = Math.max(journeyRoot.scrollHeight - window.innerHeight, 1);
-        const progress = Math.min(Math.max((window.scrollY - journeyTop) / scrollRange, 0), 1);
-
-        journeyRoot.style.setProperty("--journey-scroll", progress.toFixed(4));
-      };
-
-      const syncScrollMargins = () => {
-        const scrollMarginTop = `${getStickyOffset() + 8}px`;
-        journeySections.forEach((section) => {
-          section.style.scrollMarginTop = scrollMarginTop;
-        });
-      };
-
-      const updateJourney = () => {
-        frameRequested = false;
-
-        if (journeySections.length === 0) {
-          return;
-        }
-
-        const viewportHeight = window.innerHeight || 1;
-        const targetLine = Math.min(viewportHeight * 0.38, 260) + getStickyOffset();
-
-        let activeIndex = readJourneyIndex(journeySections[0], "journeyIndex") ?? 0;
-        let closestDistance = Number.POSITIVE_INFINITY;
-
-        journeySections.forEach((section) => {
-          const rect = section.getBoundingClientRect();
-          const sectionAnchor = rect.top + Math.min(rect.height * 0.24, 180);
-          const distance = Math.abs(sectionAnchor - targetLine);
-
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            activeIndex = readJourneyIndex(section, "journeyIndex") ?? activeIndex;
-          }
-        });
-
-        setActiveJourneySection(activeIndex);
-        setContinuousJourneyProgress();
-      };
-
-      const requestJourneyUpdate = () => {
-        if (!frameRequested) {
-          frameRequested = true;
-          window.requestAnimationFrame(updateJourney);
-        }
-      };
-
-      if ("IntersectionObserver" in window) {
-        const enterObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("has-entered");
-              }
-            });
-          },
-          {
-            rootMargin: "0px 0px -12% 0px",
-            threshold: 0.12,
-          },
-        );
-
-        journeySections.forEach((section) => enterObserver.observe(section));
-      } else {
-        journeySections.forEach((section) => section.classList.add("has-entered"));
-      }
-      syncScrollMargins();
-
-      journeyStations.forEach((station) => {
-        station.addEventListener("click", (event) => {
-          const href = station.getAttribute("href");
-          const targetIndex = readJourneyIndex(station, "journeyNav");
-          const target = targetIndex === null ? null : journeySectionByIndex.get(targetIndex);
-
-          if (!href || targetIndex === null || !target || `#${target.id}` !== href) {
-            return;
-          }
-
-          event.preventDefault();
-          syncScrollMargins();
-          setActiveJourneySection(targetIndex);
-          window.scrollTo({
-            top: target.getBoundingClientRect().top + window.scrollY - getStickyOffset(),
-            behavior: reducedMotion.matches ? "auto" : "smooth",
-          });
-        });
+      storySteps.forEach((step, stepIndex) => step.classList.toggle("is-active", stepIndex === index));
+      storyScenes.forEach((scene, sceneIndex) => {
+        const isActive = sceneIndex === index;
+        scene.classList.toggle("is-active", isActive);
+        scene.setAttribute("aria-hidden", String(!isActive));
       });
-
-      window.addEventListener("scroll", requestJourneyUpdate, { passive: true });
-      window.addEventListener("resize", () => {
-        syncScrollMargins();
-        requestJourneyUpdate();
-      });
-      reducedMotion.addEventListener("change", requestJourneyUpdate);
-      updateJourney();
+      storyProgress.forEach((item, itemIndex) => item.classList.toggle("is-active", itemIndex === index));
     };
 
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initSignalJourney, { once: true });
+    const syncHero = () => {
+      frameRequested = false;
+
+      if (!root || !heroWrap || reduceMotion.matches) {
+        return;
+      }
+
+      const rect = heroWrap.getBoundingClientRect();
+      const range = Math.max(heroWrap.offsetHeight - window.innerHeight, 1);
+      const progress = Math.min(Math.max(-rect.top / range, 0), 1);
+      const eased = progress * progress * (3 - 2 * progress);
+
+      root.style.setProperty("--hero-progress", progress.toFixed(4));
+      root.style.setProperty("--hero-shift-x", `${((eased - 0.5) * 5).toFixed(2)}vw`);
+      root.style.setProperty("--hero-shift-y", `${(-eased * 3).toFixed(2)}vh`);
+      root.style.setProperty("--hero-scale", (1 + eased * 0.08).toFixed(4));
+      root.style.setProperty("--hero-tilt", `${((eased - 0.5) * 5).toFixed(2)}deg`);
+      root.style.setProperty("--hero-name-x", `${(-eased * 7).toFixed(2)}vw`);
+    };
+
+    const requestHeroSync = () => {
+      if (!frameRequested) {
+        frameRequested = true;
+        window.requestAnimationFrame(syncHero);
+      }
+    };
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("has-entered");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -9% 0px", threshold: 0.08 },
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+
+      const storyObserver = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+
+          if (visible) {
+            const index = Number.parseInt((visible.target as HTMLElement).dataset.storyStep ?? "0", 10);
+            setStoryScene(index);
+          }
+        },
+        { rootMargin: "-32% 0px -32% 0px", threshold: [0.1, 0.35, 0.6] },
+      );
+
+      storySteps.forEach((step) => storyObserver.observe(step));
     } else {
-      initSignalJourney();
+      revealItems.forEach((item) => item.classList.add("has-entered"));
     }
+
+    window.addEventListener("scroll", requestHeroSync, { passive: true });
+    window.addEventListener("resize", requestHeroSync);
+    reduceMotion.addEventListener("change", requestHeroSync);
+    setStoryScene(0);
+    syncHero();
   </script>
 </BaseLayout>

@@ -1,8 +1,17 @@
 ---
 import "../styles/global.css";
+import "../styles/revamp.css";
+import "@fontsource/bebas-neue";
+import "@fontsource/dm-sans/400.css";
+import "@fontsource/dm-sans/500.css";
+import "@fontsource/dm-sans/600.css";
+import "@fontsource/newsreader/400.css";
+import "@fontsource/newsreader/400-italic.css";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/600.css";
+import "@phosphor-icons/web/regular";
 import Analytics from "@vercel/analytics/astro";
 import { links } from "../data/links";
-import Icon from "../components/ui/Icon.astro";
 
 const {
   title = "Atishay Jain | AI Systems Engineer",
@@ -14,6 +23,7 @@ const resumeHref = links.resume.href;
 const linkedinHref = links.linkedin.href;
 const canonicalUrl = Astro.site && !robots.startsWith("noindex") ? new URL(Astro.url.pathname, Astro.site) : undefined;
 const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undefined;
+const currentYear = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -22,7 +32,7 @@ const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undef
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#070809" />
+    <meta name="theme-color" content="#eee9dd" />
     <meta name="robots" content={robots} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -40,44 +50,34 @@ const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undef
     {socialImageUrl && <meta name="twitter:image" content={socialImageUrl} />}
     <meta name="twitter:image:alt" content="Atishay Jain - AI systems and product engineering portfolio" />
     <title>{title}</title>
-    <Analytics mode="production" />
+    {import.meta.env.PROD && <Analytics mode="production" />}
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="page-shell">
-      <header class="site-header">
+      <header class="site-header" data-site-header>
         <nav class="nav-inner" aria-label="Primary navigation">
           <a class="brand" href="/" aria-label="Atishay Jain portfolio home">
             <span class="brand-mark">AJ</span>
             <span class="brand-copy">
               <strong>Atishay Jain</strong>
-              <small>Systems × Product</small>
+              <small>Systems × Product / 2027</small>
             </span>
           </a>
-          <div class="nav-links">
-            <a href="/#featured-projects">Work</a>
-            <a href="/#lab-projects">Lab</a>
-            <a href="/#systems-map">Systems</a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+            <span>Menu</span>
+            <i class="ph ph-list" aria-hidden="true"></i>
+          </button>
+          <div class="nav-links" id="primary-nav" data-nav-links>
+            <a href="/#featured-projects">Selected work</a>
+            <a href="/#about">About</a>
+            <a href="/#proof">Proof</a>
             <a href="/#contact">Contact</a>
             {
               resumeHref && (
-                <a class="icon-link" href={resumeHref}>
-                  <Icon name="resume" />
+                <a class="nav-resume" href={resumeHref}>
                   <span>Resume</span>
-                </a>
-              )
-            }
-            {
-              githubHref && (
-                <a class="icon-link icon-only" href={githubHref} aria-label="GitHub" target="_blank" rel="noreferrer">
-                  <Icon name="github" />
-                </a>
-              )
-            }
-            {
-              linkedinHref && (
-                <a class="icon-link icon-only" href={linkedinHref} aria-label="LinkedIn" target="_blank" rel="noreferrer">
-                  <Icon name="linkedin" />
+                  <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
                 </a>
               )
             }
@@ -89,9 +89,45 @@ const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undef
       </main>
       <footer class="site-footer">
         <div class="section-inner footer-inner">
-          <span>Built static-first with Astro, TypeScript, and evidence-safe project notes.</span>
+          <span>© {currentYear} Atishay Jain</span>
+          <span>Built with intent. Evidence before claims.</span>
+          <div class="footer-links" aria-label="Social links">
+            {githubHref && <a href={githubHref} target="_blank" rel="noreferrer">GitHub</a>}
+            {linkedinHref && <a href={linkedinHref} target="_blank" rel="noreferrer">LinkedIn</a>}
+          </div>
         </div>
       </footer>
     </div>
+    <script>
+      const navToggle = document.querySelector<HTMLButtonElement>("[data-nav-toggle]");
+      const navLinks = document.querySelector<HTMLElement>("[data-nav-links]");
+      const siteHeader = document.querySelector<HTMLElement>("[data-site-header]");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+          navToggle.setAttribute("aria-expanded", String(!isOpen));
+          navLinks.classList.toggle("is-open", !isOpen);
+          navToggle.querySelector("span")!.textContent = isOpen ? "Menu" : "Close";
+          navToggle.querySelector("i")!.className = isOpen ? "ph ph-list" : "ph ph-x";
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navToggle.setAttribute("aria-expanded", "false");
+            navLinks.classList.remove("is-open");
+            navToggle.querySelector("span")!.textContent = "Menu";
+            navToggle.querySelector("i")!.className = "ph ph-list";
+          });
+        });
+      }
+
+      const syncHeader = () => {
+        siteHeader?.classList.toggle("is-scrolled", window.scrollY > 24);
+      };
+
+      window.addEventListener("scroll", syncHeader, { passive: true });
+      syncHeader();
+    </script>
   </body>
 </html>
