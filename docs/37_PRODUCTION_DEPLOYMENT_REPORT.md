@@ -17,6 +17,38 @@ Release branch: `release/portfolio-production`
 - Production deployment: `dpl_ERjUA8sG9yydSm6CHWiziBNgmN1d`
 - Vercel logs confirmed the exact pushed commit before both builds.
 
+## 2026-07-14 Mobile UX Production Addendum
+
+- Deployment: `dpl_HYYZD5ePW6a6ZbxYs6CmMzu9RBRu`
+- Production alias: `https://atishay9828-portfolio.vercel.app/`
+- Vercel status: Ready
+- Production HTTP verification: 200; rendered HTML contains the compact primary navigation, mobile Signal Path drawer, and differentiated footer.
+- Scope: mobile header hierarchy, one-portrait hero presentation, left-edge section navigation, and footer differentiation. No project evidence claims or destinations changed.
+
+## 2026-07-14 Controlled Scroll Follow-up
+
+- Initial controlled-scroll deployment: `dpl_7aPMk1PDhoZuv9PYoDRgw5AgxQZH`
+- Recording-reviewed slower-motion deployment: `dpl_3x5pKQDaWFcoY8kCLjgmSLyMBN6q`
+- Production alias: `https://atishay9828-portfolio.vercel.app/`
+- Vercel status: Ready
+- Signal Path and the homepage return action now share a `requestAnimationFrame` ease-in-out scroll animation with an 850ms minimum and 1.6s maximum duration. CSS native smooth scrolling is suspended during the animation so device/browser timing cannot stack or diverge; the slower pacing follows owner-provided real-phone recording review.
+
+## 2026-07-14 Resume Refresh
+
+- Initial deployment: `dpl_4wtrSSp1BJFP4YmFL3JvgnPVmBJM`
+- CGPA-format correction deployment: `dpl_2UJEgmP2geQ7DCAPXMb5wdnftJUQ`
+- Production alias: `https://atishay9828-portfolio.vercel.app/`
+- Vercel status: Ready
+- Replaced the public resume with a visually reviewed, ATS-friendly one-page PDF generated from `tools/generate_resume.py`.
+- Production download verification passed: one page, exact text `CGPA: 8.00` with no `/10`, concise transferable engineering skills, and clickable Portfolio, GitHub, and LinkedIn links.
+
+## 2026-07-15 Transferable Skills Resume Follow-up
+
+- Deployment: `dpl_7ShfzW5zpsFo311RrJZD6MAbVHaU`
+- Production alias: `https://atishay9828-portfolio.vercel.app/`
+- Replaced project-specific entries in the resume Skills section with reusable capabilities across frontend, APIs, data modeling, AI/ML, systems/DevOps, and core CS.
+- Production PDF extraction confirmed the transferable skills are present and removed resume-only references such as Qwen2.5 GGUF, Uvicorn, Render, UPI deep links, and shadcn/ui.
+
 ## Validation
 
 - `npm ci`: passed

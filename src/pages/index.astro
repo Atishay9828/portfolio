@@ -18,8 +18,23 @@ import { journeyStops } from "../data/journey";
   <div class="signal-journey signal-corridor" data-journey-root>
     <JourneyDepthScene />
     <aside class="journey-gutter" aria-label="Homepage journey controls">
+      <button class="journey-menu-scrim" type="button" aria-label="Close Signal Path navigation" tabindex="-1"></button>
       <div class="journey-gutter-inner">
-        <nav class="journey-rail" aria-label="Homepage signal journey">
+        <button
+          class="journey-menu-toggle"
+          type="button"
+          aria-controls="homepage-signal-path"
+          aria-expanded="false"
+          aria-label="Open Signal Path navigation"
+        >
+          <span class="journey-menu-toggle__dot" aria-hidden="true"></span>
+          <span>Signal path</span>
+        </button>
+        <nav class="journey-rail" id="homepage-signal-path" aria-label="Homepage signal journey">
+          <div class="journey-rail-heading">
+            <strong>Signal path</strong>
+            <span>Choose a section</span>
+          </div>
           <div class="journey-rail-track" aria-hidden="true">
             <span class="journey-rail-fill"></span>
             <span class="journey-rail-orb"></span>
@@ -36,7 +51,7 @@ import { journeyStops } from "../data/journey";
               ))
             }
           </ol>
-          <p class="journey-rail-hint">Click to travel</p>
+          <p class="journey-rail-hint">Select a stop</p>
         </nav>
         <GymCoderMascot />
       </div>
@@ -54,7 +69,11 @@ import { journeyStops } from "../data/journey";
     </div>
   </div>
   <script>
-    const initSignalJourney = () => {
+      const initSignalJourney = () => {
+      type PortfolioWindow = Window & {
+        portfolioScrollTo?: (top: number, reducedMotion: boolean) => void;
+      };
+
       const journeyRoot = document.querySelector<HTMLElement>("[data-journey-root]");
 
       if (!journeyRoot) {
@@ -75,6 +94,8 @@ import { journeyStops } from "../data/journey";
       const journeyStations = Array.from(
         journeyRoot.querySelectorAll<HTMLAnchorElement>("[data-journey-nav]"),
       );
+      const journeyMenuToggle = journeyRoot.querySelector<HTMLButtonElement>(".journey-menu-toggle");
+      const journeyMenuScrim = journeyRoot.querySelector<HTMLButtonElement>(".journey-menu-scrim");
       const journeySectionByIndex = new Map(
         journeySections.map((section) => [readJourneyIndex(section, "journeyIndex") ?? 0, section]),
       );
@@ -89,6 +110,16 @@ import { journeyStops } from "../data/journey";
       }
 
       journeyRoot.classList.add("is-journey-ready");
+
+      const setJourneyMenuOpen = (isOpen: boolean) => {
+        journeyRoot.classList.toggle("is-journey-menu-open", isOpen);
+        journeyMenuToggle?.setAttribute("aria-expanded", String(isOpen));
+        journeyMenuToggle?.setAttribute(
+          "aria-label",
+          isOpen ? "Close Signal Path navigation" : "Open Signal Path navigation",
+        );
+        journeyMenuScrim?.setAttribute("tabindex", isOpen ? "0" : "-1");
+      };
 
       const getStickyOffset = () => {
         const header = document.querySelector<HTMLElement>(".site-header");
@@ -133,7 +164,9 @@ import { journeyStops } from "../data/journey";
       };
 
       const syncScrollMargins = () => {
-        const scrollMarginTop = `${getStickyOffset() + 8}px`;
+        const headerHeight = getStickyOffset() - 18;
+        const scrollMarginTop = `${headerHeight + 26}px`;
+        journeyRoot.style.setProperty("--journey-header-height", `${headerHeight}px`);
         journeySections.forEach((section) => {
           section.style.scrollMarginTop = scrollMarginTop;
         });
@@ -206,13 +239,35 @@ import { journeyStops } from "../data/journey";
           }
 
           event.preventDefault();
+          setJourneyMenuOpen(false);
           syncScrollMargins();
           setActiveJourneySection(targetIndex);
-          window.scrollTo({
-            top: target.getBoundingClientRect().top + window.scrollY - getStickyOffset(),
-            behavior: reducedMotion.matches ? "auto" : "smooth",
-          });
+          if (window.location.hash !== href) {
+            window.history.pushState(null, "", href);
+          }
+          const destination = target.getBoundingClientRect().top + window.scrollY - getStickyOffset();
+          const scrollPortfolioTo = (window as PortfolioWindow).portfolioScrollTo;
+
+          if (scrollPortfolioTo) {
+            scrollPortfolioTo(destination, reducedMotion.matches);
+          } else {
+            window.scrollTo({
+              top: destination,
+              behavior: reducedMotion.matches ? "auto" : "smooth",
+            });
+          }
         });
+      });
+
+      journeyMenuToggle?.addEventListener("click", () => {
+        setJourneyMenuOpen(!journeyRoot.classList.contains("is-journey-menu-open"));
+      });
+      journeyMenuScrim?.addEventListener("click", () => setJourneyMenuOpen(false));
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && journeyRoot.classList.contains("is-journey-menu-open")) {
+          setJourneyMenuOpen(false);
+          journeyMenuToggle?.focus();
+        }
       });
 
       window.addEventListener("scroll", requestJourneyUpdate, { passive: true });

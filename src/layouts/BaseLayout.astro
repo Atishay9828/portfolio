@@ -14,6 +14,7 @@ const resumeHref = links.resume.href;
 const linkedinHref = links.linkedin.href;
 const canonicalUrl = Astro.site && !robots.startsWith("noindex") ? new URL(Astro.url.pathname, Astro.site) : undefined;
 const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undefined;
+const footerReturnHref = Astro.url.pathname === "/" ? "#top" : "/#top";
 ---
 
 <!doctype html>
@@ -55,32 +56,36 @@ const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undef
             </span>
           </a>
           <div class="nav-links">
-            <a href="/#featured-projects">Work</a>
-            <a href="/#lab-projects">Lab</a>
-            <a href="/#systems-map">Systems</a>
-            <a href="/#contact">Contact</a>
-            {
-              resumeHref && (
-                <a class="icon-link" href={resumeHref}>
-                  <Icon name="resume" />
-                  <span>Resume</span>
-                </a>
-              )
-            }
-            {
-              githubHref && (
-                <a class="icon-link icon-only" href={githubHref} aria-label="GitHub" target="_blank" rel="noreferrer">
-                  <Icon name="github" />
-                </a>
-              )
-            }
-            {
-              linkedinHref && (
-                <a class="icon-link icon-only" href={linkedinHref} aria-label="LinkedIn" target="_blank" rel="noreferrer">
-                  <Icon name="linkedin" />
-                </a>
-              )
-            }
+            <div class="primary-nav-links">
+              <a href="/#featured-projects">Work</a>
+              <a href="/#lab-projects">Lab</a>
+              <a href="/#systems-map">Systems</a>
+              <a href="/#contact">Contact</a>
+            </div>
+            <div class="utility-nav-links" aria-label="Profile links">
+              {
+                resumeHref && (
+                  <a class="icon-link" href={resumeHref} aria-label="Resume">
+                    <Icon name="resume" />
+                    <span>Resume</span>
+                  </a>
+                )
+              }
+              {
+                githubHref && (
+                  <a class="icon-link icon-only" href={githubHref} aria-label="GitHub" target="_blank" rel="noreferrer">
+                    <Icon name="github" />
+                  </a>
+                )
+              }
+              {
+                linkedinHref && (
+                  <a class="icon-link icon-only" href={linkedinHref} aria-label="LinkedIn" target="_blank" rel="noreferrer">
+                    <Icon name="linkedin" />
+                  </a>
+                )
+              }
+            </div>
           </div>
         </nav>
       </header>
@@ -89,9 +94,93 @@ const socialImageUrl = Astro.site ? new URL("/og-image.png", Astro.site) : undef
       </main>
       <footer class="site-footer">
         <div class="section-inner footer-inner">
-          <span>Built static-first with Astro, TypeScript, and evidence-safe project notes.</span>
+          <div>
+            <span class="footer-label">End of signal</span>
+            <p>Built static-first with Astro, TypeScript, and evidence-safe project notes.</p>
+          </div>
+          <a class="footer-return" href={footerReturnHref}>Return to signal <span aria-hidden="true">↑</span></a>
         </div>
       </footer>
     </div>
+    <script>
+      type PortfolioWindow = Window & {
+        portfolioScrollTo?: (top: number, reducedMotion: boolean) => void;
+      };
+
+      let activeScrollFrame: number | null = null;
+
+      const scrollPortfolioTo = (top: number, reducedMotion: boolean) => {
+        if (activeScrollFrame !== null) {
+          window.cancelAnimationFrame(activeScrollFrame);
+          activeScrollFrame = null;
+        }
+
+        const start = window.scrollY;
+        const destination = Math.max(top, 0);
+        const distance = destination - start;
+        const root = document.documentElement;
+        const previousScrollBehavior = root.style.scrollBehavior;
+
+        root.style.scrollBehavior = "auto";
+
+        if (reducedMotion || Math.abs(distance) < 2) {
+          window.scrollTo(0, destination);
+          root.style.scrollBehavior = previousScrollBehavior;
+          return;
+        }
+
+        const duration = Math.min(1600, Math.max(850, Math.abs(distance) * 0.22));
+        const startedAt = performance.now();
+        const easeInOutCubic = (progress: number) =>
+          progress < 0.5
+            ? 4 * Math.pow(progress, 3)
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        const animate = (now: number) => {
+          const progress = Math.min((now - startedAt) / duration, 1);
+          window.scrollTo(0, start + distance * easeInOutCubic(progress));
+
+          if (progress < 1) {
+            activeScrollFrame = window.requestAnimationFrame(animate);
+          } else {
+            activeScrollFrame = null;
+            root.style.scrollBehavior = previousScrollBehavior;
+          }
+        };
+
+        activeScrollFrame = window.requestAnimationFrame(animate);
+      };
+
+      (window as PortfolioWindow).portfolioScrollTo = scrollPortfolioTo;
+
+      const initFooterReturn = () => {
+        const footerReturn = document.querySelector<HTMLAnchorElement>(".footer-return");
+        const signalTop = document.getElementById("top");
+
+        if (!footerReturn || !signalTop || window.location.pathname !== "/") {
+          return;
+        }
+
+        footerReturn.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          if (window.location.hash !== "#top") {
+            window.history.pushState(null, "", "#top");
+          }
+
+          const headerHeight = document.querySelector<HTMLElement>(".site-header")?.offsetHeight ?? 0;
+          const destination = signalTop.getBoundingClientRect().top + window.scrollY - headerHeight;
+          const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+          scrollPortfolioTo(destination, reducedMotion);
+        });
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initFooterReturn, { once: true });
+      } else {
+        initFooterReturn();
+      }
+    </script>
   </body>
 </html>

@@ -230,7 +230,7 @@ describe("portfolio scaffold data", () => {
     expect(indexPageSource).toContain("const journeyPositionByIndex = new Map");
     expect(indexPageSource).toContain("const progress = activePosition / Math.max(journeySections.length - 1, 1)");
     expect(indexPageSource).toContain("scrollMarginTop");
-    expect(indexPageSource).toContain("Click to travel");
+    expect(indexPageSource).toContain("Select a stop");
     expect(indexPageSource).toContain('station.setAttribute("aria-current", "location")');
     expect(indexPageSource).not.toContain("rawProgress");
     expect(indexPageSource).not.toContain("journeyEnd");
@@ -267,12 +267,30 @@ describe("portfolio scaffold data", () => {
   it("keeps the hero right side focused on proof anchors, not a duplicate Signal Path", () => {
     expect(heroSource).toContain("Proof anchors");
     expect(heroSource).toContain("/assets/profile/atishay-jain-portrait.webp");
+    expect(heroSource.match(/atishay-jain-portrait\.webp/g) ?? []).toHaveLength(1);
     expect(heroSource).toContain("Builder profile");
-    expect(heroSource).toContain("Builder behind the systems");
     expect(heroSource).toContain('alt="Atishay Jain in a black shirt, smiling with his arms crossed"');
     expect(heroSource).not.toContain("Signal path");
     expect(heroSource).not.toContain("Model to proof chain");
     expect(heroSource).not.toContain("signal-cursor");
+  });
+
+  it("provides compact mobile navigation and a distinct end-of-page return path", () => {
+    expect(baseLayoutSource).toContain('class="primary-nav-links"');
+    expect(baseLayoutSource).toContain('class="utility-nav-links"');
+    expect(baseLayoutSource).toContain('class="footer-label">End of signal');
+    expect(baseLayoutSource).toContain('const footerReturnHref = Astro.url.pathname === "/" ? "#top" : "/#top"');
+    expect(baseLayoutSource).toContain('class="footer-return" href={footerReturnHref}');
+    expect(baseLayoutSource).toContain('const duration = Math.min(1600, Math.max(850, Math.abs(distance) * 0.22))');
+    expect(baseLayoutSource).toContain('const easeInOutCubic = (progress: number) =>');
+    expect(baseLayoutSource).toContain('root.style.scrollBehavior = "auto"');
+    expect(baseLayoutSource).toContain('portfolioScrollTo = scrollPortfolioTo');
+    expect(indexPageSource).toContain('scrollPortfolioTo(destination, reducedMotion.matches)');
+    expect(indexPageSource).toContain('class="journey-menu-toggle"');
+    expect(indexPageSource).toContain('aria-controls="homepage-signal-path"');
+    expect(indexPageSource).toContain('setJourneyMenuOpen(false)');
+    expect(indexPageSource).toContain('event.key === "Escape"');
+    expect(indexPageSource).toContain('window.history.pushState(null, "", href)');
   });
 
   it("keeps lab projects concise without public apology copy", () => {

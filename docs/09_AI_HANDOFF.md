@@ -2,11 +2,27 @@
 
 Date: 2026-07-13
 
+2026-07-14 resume addendum:
+- The source is now `tools/generate_resume.py`.
+- The user-facing artifact is `output/pdf/atishay-jain-sde-resume.pdf`.
+- The site serves the same generated file from `public/resume/atishay-jain-sde-resume.pdf`.
+- Keep CGPA at 8.00. Keep the detailed evidence-derived toolkit on the site, while the resume uses concise transferable capabilities supported by that toolkit.
+
 ## Current Project State
 
 2026-07-13 production handoff: the portfolio is live and verified at `https://atishay-jain-portfolio.vercel.app`. The exact application release commit is `a53f44f942060b92ceb7a44945d3331e3001adb0`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` records the release evidence. The release pass removed the unvalidated Mahoraga chart from public output, optimized large Loop/mascot media, added canonical/social metadata plus 404/robots/sitemap, configured the Vercel `dist` output, and added a tested response-header policy. Treat older launch-readiness scores and asset paths below as historical context.
 
 The portfolio now has a conservative Astro static scaffold, a first implementation hardening pass, a conservative design-system polish pass, screenshot QA history, featured case-study copy polish, a role/contribution evidence framework, owner-reviewed featured contribution wording, a published primary SDE resume CTA, owner-approved LinkedIn/email CTAs, a proof/visual launch-readiness audit, imported verified The Loop live-deployment visuals, compact public-link icon polish, a scroll-responsive homepage Signal Journey, and the 2026-07-09 manual review fix pass. The strategy is strong and should not be redesigned.
+
+2026-07-14 production mobile UX addendum:
+- Mobile header links are grouped into a compact primary tab row plus icon-only resource links.
+- The hero now renders the profile portrait once, inside the proof-anchor panel.
+- The existing seven-stop journey data drives a left-edge mobile Signal Path drawer; selections close the drawer, update the active state and URL hash, and land below the sticky header.
+- The mobile content gutter clears the persistent path handle, and the footer is visually separated as the end of the signal.
+- Signal Path and footer navigation share a controlled 850-1600ms ease-in-out scroll animation instead of browser-native smooth scrolling, keeping mobile devices and laptop device emulation visually consistent. This timing was slowed after reviewing an owner-provided real-phone recording.
+- `npm.cmd test` passes 48/48, the static build completes with 0 errors and 5 pages, and Chrome headless QA passes at 390x844 and 360x740 with no horizontal overflow. The local Vercel Analytics script 404 is expected in preview.
+- Vercel production deployment `dpl_HYYZD5ePW6a6ZbxYs6CmMzu9RBRu` is Ready and aliased to `https://atishay9828-portfolio.vercel.app/`; an HTTP 200 response confirmed the published page includes the new mobile UI markup.
+- The current production deployment is `dpl_3x5pKQDaWFcoY8kCLjgmSLyMBN6q`, Ready and aliased to the same public URL.
 
 The repository now has a continuity system under `docs/00..25`, including current status, decisions, architecture, design/content summaries, asset tracker, backlog, progress log, AI handoff, project evidence registry, link registry, featured evidence review, screenshot/import plan, Hybrid benchmark plan, Hybrid routing proof, Hybrid benchmark results, The Loop workflow walkthrough, resume publication plan, polished screenshot QA review, role/contribution evidence framework, owner-reviewed contribution wording, launch-readiness audit, and The Loop visual evidence update.
 

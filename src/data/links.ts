@@ -31,7 +31,7 @@ export const links: Record<string, LinkRecord> = {
     label: "SDE Resume",
     href: "/resume/atishay-jain-sde-resume.pdf",
     status: "Verified",
-    note: "Primary public SDE resume published under public/resume on 2026-07-03.",
+    note: "Primary public SDE resume refreshed with portfolio link, CGPA, and website-aligned skills on 2026-07-14.",
   },
   portfolioRepo: {
     label: "Portfolio repository",

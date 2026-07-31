@@ -1,6 +1,6 @@
 # 17_RESUME_PUBLICATION_PLAN.md
 
-Date: 2026-07-03
+Date: 2026-07-14
 
 Purpose:
 - Prevent local resume PDFs from being published accidentally.
@@ -10,19 +10,20 @@ Purpose:
 
 | Candidate | Current location | Exists locally? | Publication status |
 |---|---|---|---|
-| SDE / software intern resume | `E:\Downloads\ATISHAY_Software_Intern.pdf` | Yes | Published as primary public resume on 2026-07-03 |
+| SDE / software intern resume | `tools/generate_resume.py` | Yes | Rebuilt and published as the primary public resume on 2026-07-14 |
 | Data analyst resume | `E:\Downloads\ATISHAY_Data_Analyst.pdf` | Not rechecked in this pass | Not published |
 
 ## Published Public Resume
 
 Primary public resume:
-- Source: `E:\Downloads\ATISHAY_Software_Intern.pdf`
+- Source: `tools/generate_resume.py`
+- Downloadable build artifact: `output/pdf/atishay-jain-sde-resume.pdf`
 - Destination: `public/resume/atishay-jain-sde-resume.pdf`
 - Public CTA href: `/resume/atishay-jain-sde-resume.pdf`
-- Publication date: 2026-07-03
-- Source metadata checked before copy: `.pdf` extension, 55,900 bytes, last modified `2026-07-01 21:40:57 +05:30`.
+- Refresh date: 2026-07-14
+- Content checks: one page, clickable portfolio/GitHub/LinkedIn links, CGPA `8.00`, and concise transferable engineering capabilities distilled from the evidence-derived website toolkit.
 
-The PDF content was not edited. The file was copied into the repo under a clean public filename.
+The PDF is generated reproducibly with ReportLab. The public copy and downloadable output are produced from the same source to prevent drift.
 
 ## Not Published
 
@@ -34,11 +35,12 @@ Do not add it later unless AJ explicitly selects it for a separate public use ca
 
 AJ explicitly approved the SDE resume as the primary public resume CTA for this pass.
 
-Still not changed by this pass:
-- LinkedIn remains Known and inactive until manually verified public-ready.
-- Email remains Known and inactive until AJ confirms the preferred public email.
-- Resume content was not modified.
-- No fake certifications, links, metrics, or project claims were added.
+Current public contact state:
+- Portfolio: `https://www.atishay.app`
+- GitHub: `https://github.com/Atishay9828/`
+- LinkedIn: `https://www.linkedin.com/in/atishay9828/`
+- Email: `ajain8_be23@thapar.edu`
+- No fake certifications, links, metrics, or project claims were added. Unsupported Mahoraga performance numbers from the older PDF were not carried forward.
 
 ## Status Rule
 

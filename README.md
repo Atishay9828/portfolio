@@ -13,7 +13,7 @@ The site is implemented as an evidence-safe static shell. This repo also contain
 
 The portfolio is deployed and production-verified on Vercel:
 
-**Live site:** <https://atishay-jain-portfolio.vercel.app>
+**Live site:** <https://www.atishay.app>
 
 The current implementation is a production static portfolio backed by evidence-gated project data. Remaining project-proof gaps restrict only future claims and optional visuals; they are not release blockers for the published wording. Build, route, browser, responsive, accessibility, SEO, security-header, secret-scan, dependency-reachability, resume, and link checks are recorded in `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md`.
 

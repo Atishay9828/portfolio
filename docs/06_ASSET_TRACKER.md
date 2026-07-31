@@ -48,7 +48,7 @@ Link registry:
 
 | Asset | Status | Priority | Next action |
 |---|---|---|---|
-| SDE resume PDF | Verified | Required | Published at `public/resume/atishay-jain-sde-resume.pdf`; CTA active at `/resume/atishay-jain-sde-resume.pdf`. |
+| SDE resume PDF | Verified | Required | Rebuilt on 2026-07-14; generated artifact at `output/pdf/atishay-jain-sde-resume.pdf`, published at `public/resume/atishay-jain-sde-resume.pdf`, and CTA active at `/resume/atishay-jain-sde-resume.pdf`. |
 | Data Analyst resume PDF | Not applicable | Optional | Not published; do not expose unless AJ explicitly selects it later. |
 | GitHub profile URL | Verified | Required | Use `https://github.com/Atishay9828/` after implementation begins. |
 | LinkedIn URL | Verified | Required | Owner-approved public CTA active at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |

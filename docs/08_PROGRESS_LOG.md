@@ -7,6 +7,25 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-07-14 Mobile Navigation and Hierarchy Repair
+
+Completed:
+- Reorganized the mobile header into compact identity/resource and primary-section rows.
+- Removed the duplicate mobile hero portrait and retained the proof-anchor profile portrait.
+- Added a left-edge Signal Path drawer with all seven labeled stops, active-state sync, URL-hash updates, and keyboard/scrim close behavior.
+- Reserved a narrow content gutter so the persistent path control does not cover section content.
+- Differentiated the footer with an end-of-signal label, elevated surface, and return-to-signal action.
+- Replaced browser-native section scrolling with a controlled 850-1600ms ease-in-out animation shared by Signal Path and the return action; it temporarily disables CSS smoothing to avoid device-dependent double animation. The slower curve follows owner-provided real-phone recording review.
+
+Validation:
+- `npm.cmd test` passed with 48/48 tests.
+- `npm.cmd run build` passed with 0 errors and generated 5 pages; the known generated Vercel Analytics hint and trailing esbuild cancellation text remain non-failing.
+- Chrome headless browser QA passed at 390x844 and 360x740 with no horizontal overflow, one visible portrait, all seven Signal Path labels, correct `#featured-projects` navigation, and content clear of the path handle.
+- The only local browser console error was the expected 404 for `/_vercel/insights/script.js`, which is served by Vercel after deployment.
+- Production deployment `dpl_HYYZD5ePW6a6ZbxYs6CmMzu9RBRu` is Ready. The live alias `https://atishay9828-portfolio.vercel.app/` returned HTTP 200 and contains the new mobile navigation and footer markup.
+- Follow-up production deployment `dpl_7aPMk1PDhoZuv9PYoDRgw5AgxQZH` is Ready and aliased to the same public URL.
+- Recording-reviewed slower-motion deployment `dpl_3x5pKQDaWFcoY8kCLjgmSLyMBN6q` is Ready and is the current production alias target.
+
 ### 2026-07-13 Personal Landing Identity Pass
 
 Completed:
@@ -659,3 +678,11 @@ Validation:
 - `git diff --check`: clean apart from existing line-ending notices.
 - Desktop homepage, featured-project, and Mahoraga case-study browser checks showed no horizontal overflow; mobile Mahoraga check also showed no horizontal overflow.
 - Reviewed project assets keep their existing Known/Verified statuses; no new asset or performance claims were introduced.
+
+## 2026-07-14 Resume Readability And Site Refresh
+
+Completed:
+- Rebuilt the public SDE resume as a reproducible, ATS-friendly one-page PDF with larger text and clearer section rhythm.
+- Added the live portfolio link, updated CGPA to 8.00, and distilled the evidence-derived website toolkit into reusable engineering capabilities for the resume.
+- Replaced dense repeated project bullets with concise evidence-safe summaries and removed unsupported Mahoraga performance numbers.
+- Published the same generated PDF to both `output/pdf/` and the site resume path under `public/resume/`.

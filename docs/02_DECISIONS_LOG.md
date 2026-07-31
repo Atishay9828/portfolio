@@ -22,6 +22,7 @@ Purpose:
 | 2026-07-10 | The homepage depicts learning through seven stable story states. | A single progression from identity to operating model, builds, lessons, toolkit, systems, and collaboration is more specific and maintainable than unrelated visual effects. | `docs/34_PORTFOLIO_STORY_AND_LEARNING_PLAN.md`, `src/data/journey.ts` |
 | 2026-07-10 | The Signal Core uses a reserved sticky desktop lane and disappears below 1180px. | Reserved layout space keeps the visual legible without covering project proof; smaller widths retain the complete static story. | `docs/35_VISUAL_MOTION_DIRECTION.md`, `docs/36_IMPLEMENTATION_AND_QA_PLAN.md` |
 | 2026-07-10 | CSS transitions and the existing vanilla controller remain the motion runtime. | The current seven-state behavior does not justify GSAP or WebGL cost; heavier motion waits for a concrete scrubbed-path requirement. | `docs/35_VISUAL_MOTION_DIRECTION.md` |
+| 2026-07-14 | Mobile reuses the seven-stop Signal Path through a left-edge drawer instead of adding a second navigation model. | Labeled destinations remain reachable without permanently narrowing the content column, while desktop and mobile keep one journey source of truth. | `src/data/journey.ts`, `src/pages/index.astro` |
 
 ## Decision Maintenance Rule
 

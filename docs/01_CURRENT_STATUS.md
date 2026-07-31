@@ -6,6 +6,24 @@ Date: 2026-07-13
 
 The Astro static portfolio is deployed and verified in Vercel production at `https://atishay-jain-portfolio.vercel.app`. The exact application release commit is `a53f44f942060b92ceb7a44945d3331e3001adb0`; preview and production browser, route, security-header, metadata, responsive, resume, link, and Lighthouse checks passed on 2026-07-13. `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
 
+2026-07-14 production mobile UX addendum:
+- The compact header now separates four primary section tabs from icon-only Resume, GitHub, and LinkedIn resources.
+- The duplicate mobile hero portrait is removed; the proof-anchor profile remains the single portrait surface.
+- Mobile widths now expose a left-edge Signal Path drawer with all seven labeled journey stops, active-state sync, URL-hash updates, Escape/scrim close behavior, and a reserved content gutter.
+- The footer now uses a distinct end-of-signal surface and a return-to-signal action.
+- Signal Path selections and the homepage return action now use one controlled `requestAnimationFrame` animation: 850ms minimum, 1.6s maximum, with an ease-in-out curve and native CSS smoothing temporarily disabled to keep timing consistent across phone browsers and laptop device previews.
+- Chrome headless QA passed at 390x844 and 360x740 with one visible portrait, no horizontal overflow, correct Builds landing below the sticky header, and the expected local-only Vercel Analytics 404.
+- Latest production deployment: `dpl_3x5pKQDaWFcoY8kCLjgmSLyMBN6q`; `https://atishay9828-portfolio.vercel.app/` serves the new mobile header, Signal Path, footer, and slower recording-reviewed scroll animation.
+
+2026-07-14 resume addendum:
+- The public SDE resume was rebuilt for readability from `tools/generate_resume.py`, with CGPA 8.00 and a concise set of transferable engineering skills derived from the evidence-backed website toolkit.
+- The resume header now links to the live portfolio, GitHub, and LinkedIn; the production PDF was downloaded and content-checked after deployment.
+- Latest production deployment: `dpl_2UJEgmP2geQ7DCAPXMb5wdnftJUQ`; production alias remains `https://atishay9828-portfolio.vercel.app/`. The resume shows exactly `CGPA: 8.00` with no `/10` suffix.
+
+2026-07-15 resume skills addendum:
+- The resume Skills section now prioritizes reusable engineering capabilities rather than project-specific runtimes, model names, hosting vendors, or product features.
+- Latest production deployment: `dpl_7ShfzW5zpsFo311RrJZD6MAbVHaU`; the detailed website toolkit remains unchanged as evidence of technologies used.
+
 Current dependency-audit interpretation: `npm audit --omit=dev` reports two moderate and two high advisories, but the high advisories are limited to Astro SSR/server-island paths and Vite's network-exposed Windows development server. This portfolio is a static Vercel build with no server adapter, server islands, or public development server, so no applicable critical/high production vulnerability remains. Major Astro/Vitest upgrades remain a separate maintenance task rather than a release hotfix.
 
 2026-07-13 production-release addendum:

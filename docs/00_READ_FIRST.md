@@ -9,7 +9,7 @@ Purpose:
 
 ## Current Rule
 
-The website is deployed and production-verified at `https://atishay-jain-portfolio.vercel.app`. Release truth is recorded in `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md`; future work remains evidence-safe iteration, not launch-blocker cleanup.
+The website is deployed at `https://www.atishay.app`. Release truth is recorded in `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md`; future work remains evidence-safe iteration, not launch-blocker cleanup.
 
 Implementation may improve the learning story, hierarchy, motion, accessibility, and maintainability. It must preserve verified destinations, project maturity, ownership boundaries, privacy rules, and Known/Verified evidence states.
 
