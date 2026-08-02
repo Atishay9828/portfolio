@@ -1,22 +1,88 @@
 ---
-import SectionHeader from "../ui/SectionHeader.astro";
 import ProjectModule from "../project/ProjectModule.astro";
 import { featuredProjects } from "../../data/projects";
+
+const workItems = featuredProjects.slice(0, 4);
+const workSectionHeight = 145 + workItems.length * 68;
 ---
 
-<section class="section" id="featured-projects" data-journey-section data-journey-label="Featured builds" data-journey-index="2">
-  <div class="section-inner">
-    <div class="section-marker" aria-hidden="true">
-      <span>03</span>
-      <strong>Featured Builds</strong>
-    </div>
-    <SectionHeader
-      eyebrow="Featured projects"
-      title="Three systems that changed how I build"
-      body="Adaptive behavior, local AI routing, and campus coordination each introduced a different engineering constraint."
-    />
-    <div class="featured-stack">
-      {featuredProjects.map((project) => <ProjectModule project={project} />)}
+<section
+  class="section work_section work-journey"
+  id="featured-projects"
+  data-journey-section
+  data-journey-label="Featured builds"
+  data-journey-index="2"
+  data-work-journey
+  style={`height:${workSectionHeight}vh`}
+>
+  <div class="work-sticky">
+    <header class="work-top-layout">
+      <div>
+        <span class="pill-label pill-label--dark">Selected work</span>
+        <h2>Built to perform,<br />made to be inspected.</h2>
+      </div>
+      <p>Three focused systems. Scroll to move through real product views, the decision behind each build, and the proof that exists.</p>
+      <div class="work-counter" aria-live="polite">
+        <strong data-work-counter>01</strong><span>/ {String(workItems.length).padStart(2, "0")}</span>
+      </div>
+    </header>
+
+    <div class="work-progress" aria-hidden="true"><span></span></div>
+
+    <div class="work-track-wrap">
+      <div class="work-track" data-work-track>
+        {workItems.map((project, index) => <ProjectModule project={project} index={index + 1} />)}
+      </div>
     </div>
   </div>
+
+  <script>
+    const initWorkJourney = () => {
+      const root = document.querySelector<HTMLElement>("[data-work-journey]");
+      if (!root || root.dataset.workReady === "true") return;
+      const sticky = root.querySelector<HTMLElement>(".work-sticky");
+      const track = root.querySelector<HTMLElement>("[data-work-track]");
+      const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-work-card]"));
+      const counter = root.querySelector<HTMLElement>("[data-work-counter]");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      if (!sticky || !track || cards.length === 0) return;
+
+      root.dataset.workReady = "true";
+      let frame = 0;
+      let activeIndex = -1;
+
+      const update = () => {
+        frame = 0;
+        const rect = root.getBoundingClientRect();
+        const range = Math.max(root.offsetHeight - window.innerHeight, 1);
+        const progress = Math.min(Math.max(-rect.top / range, 0), 1);
+        const viewportStart = window.innerWidth * 0.22;
+        const available = Math.max(window.innerWidth - viewportStart, 1);
+        const maxShift = Math.max(track.scrollWidth - available + window.innerWidth * 0.03, 0);
+        const shift = reducedMotion.matches ? 0 : progress * maxShift;
+
+        track.style.transform = `translate3d(${-shift}px, 0, 0)`;
+        root.style.setProperty("--work-progress", `${(progress * 100).toFixed(2)}%`);
+
+        const nextActive = Math.min(cards.length - 1, Math.max(0, Math.round(progress * (cards.length - 1))));
+        if (nextActive !== activeIndex) {
+          activeIndex = nextActive;
+          if (counter) counter.textContent = String(activeIndex + 1).padStart(2, "0");
+          cards.forEach((card, index) => {
+            card.classList.toggle("is-active", index === activeIndex);
+            card.classList.toggle("is-past", index < activeIndex);
+          });
+        }
+      };
+
+      const requestUpdate = () => { if (!frame) frame = window.requestAnimationFrame(update); };
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+      reducedMotion.addEventListener("change", requestUpdate);
+      update();
+    };
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initWorkJourney, { once: true });
+    else initWorkJourney();
+  </script>
 </section>

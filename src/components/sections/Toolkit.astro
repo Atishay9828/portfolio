@@ -1,5 +1,4 @@
 ---
-import SectionHeader from "../ui/SectionHeader.astro";
 import { toolkit } from "../../data/toolkit";
 
 const groupedToolkit = toolkit.reduce<Record<string, typeof toolkit>>((groups, item) => {
@@ -8,30 +7,33 @@ const groupedToolkit = toolkit.reduce<Record<string, typeof toolkit>>((groups, i
 }, {});
 ---
 
-<section class="section" id="toolkit" data-journey-section data-journey-label="Toolkit" data-journey-index="4">
-  <div class="section-inner">
-    <div class="section-marker" aria-hidden="true">
-      <span>05</span>
-      <strong>Toolkit</strong>
-    </div>
-    <SectionHeader
-      eyebrow="Toolkit"
-      title="Tools chosen for the job"
-      body="Grouped from project evidence; the stack supports the engineering decisions above."
-    />
-    <div class="toolkit-grid">
-      {Object.entries(groupedToolkit).map(([category, items]) => (
-        <article class="toolkit-group">
-          <span class="meta-label">{category}</span>
-          <div class="toolkit-list">
-            {items.map((item) => (
-              <span class="toolkit-chip" title={`${item.project}: ${item.evidenceSource} (${item.proofFile})`}>
-                <span>{item.name}</span>
-              </span>
-            ))}
-          </div>
-        </article>
-      ))}
+<section class="section toolkit-section" id="toolkit" data-journey-section data-journey-label="Toolkit" data-journey-index="4">
+  <div class="nesh-section-shell toolkit-layout">
+    <header class="toolkit-intro">
+      <div>
+        <span class="pill-label">Working set</span>
+        <h2>Tools<br />That Deliver</h2>
+      </div>
+      <p>The stack changes with the system. These are tools traced back to real project work—not a wall of self-rating badges.</p>
+    </header>
+
+    <div class="toolkit-grid" aria-label="Evidence-backed working set">
+      {
+        Object.entries(groupedToolkit).map(([category, items], index) => (
+          <article class="toolkit-group">
+            <div class="toolkit-group__heading">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{category}</h3>
+              <small>{String(items.length).padStart(2, "0")} tools</small>
+            </div>
+            <div class="toolkit-list">
+              {items.map((item) => (
+                <span class="toolkit-chip" title={`${item.project}: ${item.evidenceSource} (${item.proofFile})`}><span>{item.name}</span></span>
+              ))}
+            </div>
+          </article>
+        ))
+      }
     </div>
   </div>
 </section>

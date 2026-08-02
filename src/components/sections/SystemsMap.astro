@@ -1,26 +1,82 @@
 ---
-import SectionHeader from "../ui/SectionHeader.astro";
 import { capabilities } from "../../data/projects";
+
+const systemsHeadline = "Transform an idea into a system people can actually use.";
 ---
 
-<section class="section" id="systems-map" data-journey-section data-journey-label="Systems map" data-journey-index="5">
-  <div class="section-inner">
-    <div class="section-marker" aria-hidden="true">
-      <span>06</span>
-      <strong>Systems Map</strong>
-    </div>
-    <SectionHeader
-      eyebrow="Systems map"
-      title="Capabilities traced back to projects"
-      body="The recurring patterns across AI, product, data, and automation work—after the proof, not instead of it."
-    />
+<section class="section systems-section" id="systems-map" data-journey-section data-journey-label="Systems map" data-journey-index="5">
+  <div class="nesh-section-shell systems-layout">
+    <header class="systems-heading">
+      <span class="pill-label">Systems map</span>
+      <h2 aria-label={systemsHeadline}>
+        <span class="systems-heading__typed" data-systems-typed data-full-text={systemsHeadline} aria-hidden="true">{systemsHeadline}</span>
+        <span class="systems-heading__caret" aria-hidden="true"></span>
+      </h2>
+      <p>Capabilities are shown through the projects that made them real—not detached keyword claims.</p>
+    </header>
+
     <div class="capability-grid">
-      {capabilities.map((capability) => (
-        <article class="lab-entry">
+      {capabilities.map((capability, index) => (
+        <article class="capability-card">
+          <span>{String(index + 1).padStart(2, "0")}</span>
           <h3>{capability.label}</h3>
           <p>{capability.evidence.join(" / ")}</p>
         </article>
       ))}
     </div>
   </div>
+  <script>
+    const initSystemsTyping = () => {
+      const root = document.querySelector<HTMLElement>("#systems-map");
+      const typed = root?.querySelector<HTMLElement>("[data-systems-typed]");
+      if (!root || !typed || root.dataset.typingReady === "true") return;
+
+      root.dataset.typingReady = "true";
+      const fullText = typed.dataset.fullText ?? typed.textContent ?? "";
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reducedMotion) {
+        typed.textContent = fullText;
+        root.classList.add("is-systems-typed");
+        return;
+      }
+
+      typed.textContent = "";
+      const typeHeadline = () => {
+        if (root.dataset.typingStarted === "true") return;
+        root.dataset.typingStarted = "true";
+        root.classList.add("is-systems-typing");
+        let characterIndex = 0;
+
+        const typeNext = () => {
+          characterIndex += 1;
+          typed.textContent = fullText.slice(0, characterIndex);
+          if (characterIndex < fullText.length) {
+            window.setTimeout(typeNext, fullText[characterIndex - 1] === " " ? 28 : 42);
+          } else {
+            root.classList.remove("is-systems-typing");
+            root.classList.add("is-systems-typed");
+          }
+        };
+
+        typeNext();
+      };
+
+      if (!("IntersectionObserver" in window)) {
+        typeHeadline();
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          typeHeadline();
+          observer.disconnect();
+        }
+      }, { rootMargin: "0px 0px -18% 0px", threshold: 0.2 });
+
+      observer.observe(root);
+    };
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initSystemsTyping, { once: true });
+    else initSystemsTyping();
+  </script>
 </section>

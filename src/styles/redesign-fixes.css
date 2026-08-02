@@ -1,0 +1,133 @@
+/* Responsive containment fixes verified against the rendered work corridor. */
+
+.work-journey__layout,
+.work-journey__layout > *,
+.work-journey__sidebar,
+.work-journey__stream,
+.featured-stack,
+.support-work-grid,
+.lab-work-list,
+.project-module,
+.project-module > *,
+.work-support-card,
+.work-support-card > *,
+.work-lab-card,
+.work-lab-card > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.work-journey__layout,
+.work-journey__stream,
+.featured-stack,
+.support-work-grid,
+.lab-work-list {
+  width: 100%;
+}
+
+/* Every large sequence number is linework, never a solid block over content or media. */
+.outline-number,
+.build-step .outline-number,
+.project-module__index .outline-number,
+.work-support-card > .outline-number,
+.work-lab-card > .outline-number {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  paint-order: stroke fill;
+}
+
+.outline-number,
+.build-step .outline-number {
+  -webkit-text-stroke: 1.4px var(--ink);
+}
+
+.project-module__index .outline-number,
+.work-support-card > .outline-number,
+.work-lab-card > .outline-number {
+  -webkit-text-stroke: 1.4px var(--paper);
+}
+
+@media (min-width: 761px) and (max-width: 1599px) {
+  .work-journey__layout {
+    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+    gap: clamp(28px, 3.2vw, 46px);
+  }
+
+  .work-journey__sidebar {
+    width: 100%;
+  }
+
+  .project-module,
+  .project-module:first-child {
+    min-height: 0;
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .project-module__index {
+    grid-row: 1 / span 2;
+  }
+
+  .project-module .evidence-panel {
+    grid-column: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 0;
+    padding: 28px 0 0;
+  }
+
+  .work-journey .evidence-assets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .work-journey .evidence-asset img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .support-work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .work-journey__layout {
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .work-journey__sidebar,
+  .work-journey__stream {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .work-index {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .project-module,
+  .project-module:first-child,
+  .work-support-card,
+  .work-lab-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-module h3,
+  .project-module .project-summary,
+  .project-module .project-lesson,
+  .project-module .evidence-panel,
+  .work-support-card h3,
+  .work-support-card p,
+  .work-lab-card h3,
+  .work-lab-card p {
+    width: auto;
+    max-width: 100%;
+  }
+}

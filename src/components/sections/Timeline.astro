@@ -1,48 +1,108 @@
 ---
-import SectionHeader from "../ui/SectionHeader.astro";
 import Icon from "../ui/Icon.astro";
 import { featuredProjects, secondaryProjects, timelineProjectLinks, timelineStages } from "../../data/projects";
 
-const projectLinks = new Map<string, { href: string; external: boolean }>(
-  [
-    ...featuredProjects.map(
-      (project) => [project.title, { href: `/projects/${project.slug}/`, external: false }] as const,
-    ),
-    ...secondaryProjects.flatMap((project) => {
-      const repoLink = project.links.find(
-        (link) => link.status === "Verified" && link.label.toLowerCase().includes("github"),
-      );
+const projectLinks = new Map<string, { href: string; external: boolean }>([
+  ...featuredProjects.map((project) => [project.title, { href: `/projects/${project.slug}/`, external: false }] as const),
+  ...secondaryProjects.flatMap((project) => {
+    const repoLink = project.links.find((link) => link.status === "Verified" && link.label.toLowerCase().includes("github"));
+    return repoLink ? ([[project.title, { href: repoLink.href, external: true }] as const] as const) : [];
+  }),
+  ...Object.entries(timelineProjectLinks),
+]);
 
-      return repoLink ? ([[project.title, { href: repoLink.href, external: true }] as const] as const) : [];
-    }),
-    ...Object.entries(timelineProjectLinks),
-  ],
-);
+const methodWords = [
+  {
+    label: "Strategy,",
+    accent: true,
+    detail: "I map the user, state, constraints, trust boundary, and failure paths before choosing tools.",
+  },
+  {
+    label: "precision,",
+    accent: true,
+    detail: "The Hybrid Categorizer routes merchant rules to local inference and then fallback instead of trusting one path.",
+  },
+  { label: "and" },
+  {
+    label: "system design",
+    accent: true,
+    detail: "I connect API contracts, persistence, recovery, and interface states across systems such as The Loop and ReceiptSplit.",
+  },
+  { label: "combined—turning" },
+  { label: "uncertainty" },
+  { label: "into" },
+  { label: "a" },
+  { label: "useful" },
+  { label: "product" },
+  { label: "experience" },
+  { label: "that" },
+  { label: "feels" },
+  {
+    label: "clear.",
+    accent: true,
+    detail: "I expose limits, evidence, recovery, and the next action so the user always knows what changed and what can fail.",
+  },
+];
 ---
 
-<section class="section" id="signal-evolution" data-journey-section data-journey-label="Evolution" data-journey-index="3">
-  <div class="section-inner">
-    <div class="section-marker" aria-hidden="true">
-      <span>04</span>
-      <strong>Evolution</strong>
+<section
+  class="section value-section"
+  id="signal-evolution"
+  data-journey-section
+  data-journey-label="Evolution"
+  data-journey-index="3"
+  data-value-story
+>
+  <div class="nesh-section-shell value-layout">
+    <div class="value-intro">
+      <header class="value-heading">
+        <span class="pill-label">How I build</span>
+        <h2>What<br />You Get?</h2>
+      </header>
+
+      <p
+        class="value-statement"
+        aria-label="Strategy, precision, and system design combined—turning uncertainty into a useful product experience that feels clear."
+      >
+        {
+          methodWords.map((word, index) => (
+            word.detail ? (
+              <span class:list={["typed-word", "value-keyword-wrap", word.accent && "is-accent"]} style={`--word-delay:${260 + index * 190}ms`}>
+                <button
+                  type="button"
+                  class="value-keyword"
+                  data-method-trigger
+                  data-method-title={word.label.replace(/[,.]$/, "")}
+                  data-method-detail={word.detail}
+                  aria-controls="method-detail-panel"
+                >{word.label}</button>
+              </span>
+            ) : (
+              <span class="typed-word" style={`--word-delay:${260 + index * 190}ms`}>{word.label}</span>
+            )
+          ))
+        }
+      </p>
+
+      <aside class="value-detail-dock" id="method-detail-panel" data-method-panel aria-live="polite">
+        <strong data-method-panel-title>Hover or focus a phrase</strong>
+        <p data-method-panel-copy>See the concrete decision path, system, or proof habit behind the words.</p>
+      </aside>
     </div>
-    <SectionHeader
-      eyebrow="Signal evolution"
-      title="How the approach evolved"
-      body="Each stage added a new constraint: algorithms, complete workflows, routed uncertainty, adaptive behavior, then production discipline."
-    />
-    <div class="timeline">
-      {timelineStages.map((stage, index) => (
-        <article class="timeline-card">
-          <div>
-            <span class="timeline-index">{String(index + 1).padStart(2, "0")}</span>
-            <span class="meta-label">{stage.label}</span>
-          </div>
-          <div>
+
+    <div class="value-proof-grid" aria-label="Engineering growth stages">
+      {
+        timelineStages.map((stage, index) => (
+          <article class="value-proof-card" data-value-proof-card>
+            <span class="value-proof-card__track" aria-hidden="true"></span>
+            <div>
+              <span data-value-count data-count-to={index + 1}>{String(index).padStart(2, "0")}</span>
+              <small>{stage.label}</small>
+            </div>
+            <p>{stage.capability}</p>
             <h3>
               {stage.projects.map((projectName, projectIndex) => {
                 const link = projectLinks.get(projectName);
-
                 return (
                   <>
                     {projectIndex > 0 && <span class="project-separator"> / </span>}
@@ -54,20 +114,110 @@ const projectLinks = new Map<string, { href: string; external: boolean }>(
                         rel={link.external ? "noreferrer" : undefined}
                         aria-label={link.external ? `${projectName} GitHub repo` : undefined}
                       >
-                        {projectName}
-                        {link.external && <Icon name="github" class="timeline-link-icon" />}
+                        {projectName}{link.external && <Icon name="github" class="timeline-link-icon" />}
                       </a>
-                    ) : (
-                      <span>{projectName}</span>
-                    )}
+                    ) : <span>{projectName}</span>}
                   </>
                 );
               })}
             </h3>
-            <p>{stage.capability}</p>
-          </div>
-        </article>
-      ))}
+          </article>
+        ))
+      }
     </div>
   </div>
+
+  <script>
+    const initValueStory = () => {
+      const root = document.querySelector<HTMLElement>("[data-value-story]");
+      if (!root) return;
+      const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-value-proof-card]"));
+      const triggers = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-method-trigger]"));
+      const panel = root.querySelector<HTMLElement>("[data-method-panel]");
+      const panelTitle = panel?.querySelector<HTMLElement>("[data-method-panel-title]");
+      const panelCopy = panel?.querySelector<HTMLElement>("[data-method-panel-copy]");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const showMethod = (trigger: HTMLButtonElement) => {
+        if (!panel || !panelTitle || !panelCopy) return;
+        panelTitle.textContent = trigger.dataset.methodTitle ?? "How I build";
+        panelCopy.textContent = trigger.dataset.methodDetail ?? "";
+        panel.classList.add("is-active");
+      };
+      const hideMethod = () => panel?.classList.remove("is-active");
+      triggers.forEach((trigger) => {
+        trigger.addEventListener("pointerenter", () => showMethod(trigger));
+        trigger.addEventListener("pointerleave", hideMethod);
+        trigger.addEventListener("focus", () => showMethod(trigger));
+        trigger.addEventListener("blur", hideMethod);
+      });
+
+      const renderCount = (counter: HTMLElement, value: number) => {
+        counter.textContent = String(value).padStart(2, "0");
+      };
+      const animateCount = (counter: HTMLElement) => {
+        const target = Number.parseInt(counter.dataset.countTo ?? "0", 10);
+        const start = Math.max(target - 1, 0);
+        if (reducedMotion) {
+          renderCount(counter, target);
+          counter.classList.add("is-counted");
+          return;
+        }
+        const startedAt = performance.now();
+        const duration = 500;
+        renderCount(counter, start);
+        counter.classList.add("is-counting");
+        const tick = (now: number) => {
+          const progress = Math.min((now - startedAt) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          renderCount(counter, start + Math.round((target - start) * eased));
+          if (progress < 1) window.requestAnimationFrame(tick);
+          else counter.classList.replace("is-counting", "is-counted");
+        };
+        window.requestAnimationFrame(tick);
+      };
+
+      const startStory = () => {
+        if (root.dataset.storyStarted === "true") return;
+        root.dataset.storyStarted = "true";
+        root.classList.add("is-typing");
+
+        if (reducedMotion) {
+          root.classList.add("is-typed");
+          cards.forEach((card) => {
+            card.classList.add("is-visible");
+            const counter = card.querySelector<HTMLElement>("[data-value-count]");
+            if (counter) animateCount(counter);
+          });
+          return;
+        }
+
+        window.setTimeout(() => root.classList.add("is-typed"), 3300);
+        cards.forEach((card, index) => {
+          window.setTimeout(() => {
+            card.classList.add("is-visible");
+            const counter = card.querySelector<HTMLElement>("[data-value-count]");
+            if (counter) animateCount(counter);
+          }, 500 + index * 240);
+        });
+      };
+
+      if (!("IntersectionObserver" in window)) {
+        startStory();
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          startStory();
+          observer.disconnect();
+        }
+      }, { rootMargin: "0px 0px -18% 0px", threshold: 0.12 });
+
+      observer.observe(root);
+    };
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initValueStory, { once: true });
+    else initValueStory();
+  </script>
 </section>

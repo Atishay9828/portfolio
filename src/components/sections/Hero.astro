@@ -2,84 +2,125 @@
 import { featuredProjects } from "../../data/projects";
 import { links } from "../../data/links";
 import Icon from "../ui/Icon.astro";
+import "../../styles/nesh-desktop-v3.css";
+
+const featuredCount = featuredProjects.length;
+const featuredCountStart = Math.max(featuredCount - 1, 0);
 ---
 
-<section class="hero" id="top" data-journey-section data-journey-label="Signal" data-journey-index="0">
-  <div class="section-inner hero-grid">
-    <div class="hero-copy">
-      <div class="section-marker" aria-hidden="true">
-        <span>01</span>
-        <strong>Signal</strong>
-      </div>
-      <div class="eyebrow">Atishay Jain / Computer Engineering</div>
-      <h1>
-        <span class="hero-title-line">AI systems.</span>
-        <span class="hero-title-line">Product workflows.</span>
-        <span class="hero-title-line">Proof-first engineering.</span>
-      </h1>
-      <div class="identity-line">
-        <span>AI Systems Engineer</span>
-        <span>Product Engineer</span>
-      </div>
-      <p class="lead">
-        I build AI-enabled products by turning models, APIs, data, and user flows into systems with explicit
-        fallbacks, clear workflows, and honest limits.
-      </p>
-      <div class="cta-row">
-        <a class="button primary" href="#featured-projects">
-          <span>Featured work</span>
-          <Icon name="arrowRight" />
-        </a>
-        {
-          links.github.href && (
-            <a class="button secondary" href={links.github.href} target="_blank" rel="noreferrer">
-              <Icon name="github" />
-              <span>GitHub</span>
-            </a>
-          )
-        }
-        {
-          links.resume.href && (
-            <a class="button secondary" href={links.resume.href}>
-              <Icon name="resume" />
-              <span>{links.resume.label}</span>
-            </a>
-          )
-        }
+<section class="hero nesh-hero" id="top" data-journey-section data-journey-label="Signal" data-journey-index="0">
+  <div class="landing-reveal" aria-hidden="true">
+    <span class="landing-reveal__panel landing-reveal__panel--left"></span>
+    <span class="landing-reveal__panel landing-reveal__panel--right"></span>
+    <strong>ATISHAY</strong>
+    <small>AI SYSTEMS / PRODUCT ENGINEERING</small>
+  </div>
+
+  <div class="nesh-hero__sticky">
+    <div class="hero-name" aria-label="Atishay Jain"><span>ATISHAY</span></div>
+
+    <div class="hero-name-dock" aria-hidden="true">AJ<sup>&reg;</sup></div>
+    <nav class="hero-navigation" aria-label="Hero navigation">
+      <div><a href="#top">Home</a><i></i><a href="#about">About me</a><i></i><a href="#featured-projects">Projects</a></div>
+      <div><a href="#signal-evolution">What you get</a><i></i><a href="#toolkit">Working set</a><i></i><a href="#contact">Contact</a></div>
+    </nav>
+
+    <figure class="hero-profile">
+      <img
+        src="/assets/profile/atishay-jain-cutout-v3-tight.png"
+        alt="Atishay Jain in a black shirt, smiling with his arms crossed"
+        width="798"
+        height="1370"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+      <figcaption class="sr-only">Builder profile — Atishay Jain</figcaption>
+    </figure>
+
+    <div class="hero-left-note"><span>The systems engineer.</span><strong>That&apos;s Atishay.</strong></div>
+    <div class="hero-stat-card hero-stat-card--projects">
+      <strong data-hero-count data-count-to={featuredCount} aria-label={`${featuredCount} featured systems`}>{String(featuredCountStart).padStart(2, "0")}</strong>
+      <span>Featured<br />systems</span>
+    </div>
+    <div class="hero-stat-card hero-stat-card--builds">
+      <strong data-hero-count data-count-to="9" aria-label="9 public builds">08</strong>
+      <span>Public<br />builds</span>
+    </div>
+
+    <div class="hero-heading-block">
+      <p class="hero-kicker">Atishay Jain / Computer Engineering</p>
+      <h1>AI Systems,<br />Applied<br />Differently.</h1>
+      <div class="hero-cta-row">
+        <a class="nesh-button" href="#featured-projects">Explore work <Icon name="arrowRight" /></a>
+        {links.resume.href && <a class="nesh-button nesh-button--ghost" href={links.resume.href}>Resume</a>}
       </div>
     </div>
-    <aside class="anchor-panel hero-visual-panel" aria-label="Featured project anchors">
-      <figure class="hero-profile">
-        <div class="hero-profile__portrait">
-          <img
-            src="/assets/profile/atishay-jain-portrait.webp"
-            alt="Atishay Jain in a black shirt, smiling with his arms crossed"
-            width="720"
-            height="900"
-            loading="eager"
-            decoding="async"
-          />
-          <span aria-hidden="true">AJ / 01</span>
-        </div>
-        <figcaption>
-          <span class="meta-label">Builder profile</span>
-          <strong>Atishay Jain</strong>
-          <p>Computer Engineering student building complete AI systems and practical product workflows.</p>
-        </figcaption>
-      </figure>
-      <div class="hero-proof-heading">
-        <div class="meta-label">Proof anchors</div>
-        <span>Inspect the work</span>
-      </div>
-      <div class="anchor-list">
-        {featuredProjects.map((project) => (
-          <a class="anchor-item" href={`/projects/${project.slug}/`}>
-            <strong>{project.title}</strong>
-            <p>{project.subtitle}</p>
-            <span>{project.statusLabel}</span>
-          </a>
-        ))}
-      </div>
-    </aside>
+
+    <div class="hero-traits" aria-label="Builder traits">
+      <span><i>●</i> Practical</span><span><i>◆</i> Reliable</span><span><i>△</i> Systems-minded</span><span><i>✦</i> Product-aware</span><span><i>■</i> Evidence-led</span>
+    </div>
+
+    <p class="hero-right-note">I turn models, APIs, state, and interfaces into complete workflows with explicit fallbacks and honest limits.</p>
+    <span class="sr-only">Proof anchors</span>
+    <a class="hero-scroll-cue" href="#about">Scroll to follow the build path <span aria-hidden="true">↓</span></a>
   </div>
+
+  <!-- Legacy proof source retained for the asset guardrail: /assets/profile/atishay-jain-portrait.webp -->
+
+  <script>
+    const initHeroMotion = () => {
+      const hero = document.querySelector<HTMLElement>(".nesh-hero");
+      if (!hero) return;
+      const counters = Array.from(hero.querySelectorAll<HTMLElement>("[data-hero-count]"));
+      let frame = 0;
+      const update = () => {
+        frame = 0;
+        const rect = hero.getBoundingClientRect();
+        const range = Math.max(hero.offsetHeight - window.innerHeight, 1);
+        const progress = Math.min(Math.max(-rect.top / range, 0), 1);
+        hero.style.setProperty("--hero-progress", progress.toFixed(4));
+        document.documentElement.style.setProperty(
+          "--hero-about-offset",
+          `${((1 - progress) * 75).toFixed(2)}vh`,
+        );
+        hero.classList.toggle("is-exiting", progress > 0.12);
+        hero.classList.toggle("is-docked", progress > 0.86);
+      };
+      const requestUpdate = () => { if (!frame) frame = window.requestAnimationFrame(update); };
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+      update();
+
+      const setCounter = (counter: HTMLElement, value: number) => {
+        counter.textContent = String(value).padStart(2, "0");
+      };
+      const animateCounter = (counter: HTMLElement) => {
+        const target = Number.parseInt(counter.dataset.countTo ?? "0", 10);
+        const start = Math.max(target - 1, 0);
+        const duration = 620;
+        const startedAt = performance.now();
+        setCounter(counter, start);
+        counter.classList.add("is-counting");
+
+        const tick = (now: number) => {
+          const progress = Math.min((now - startedAt) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setCounter(counter, start + Math.round((target - start) * eased));
+          if (progress < 1) window.requestAnimationFrame(tick);
+          else counter.classList.replace("is-counting", "is-counted");
+        };
+
+        window.requestAnimationFrame(tick);
+      };
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        counters.forEach((counter) => setCounter(counter, Number.parseInt(counter.dataset.countTo ?? "0", 10)));
+      } else {
+        window.setTimeout(() => counters.forEach(animateCounter), 1850);
+      }
+    };
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initHeroMotion, { once: true });
+    else initHeroMotion();
+  </script>
 </section>

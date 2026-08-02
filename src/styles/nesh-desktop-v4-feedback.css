@@ -1,0 +1,290 @@
+/* Desktop feedback pass: collision-safe hero, selective emphasis, compact cards. */
+
+@keyframes systemsCaretV4 {
+  0%, 48% { opacity: 1; }
+  49%, 100% { opacity: 0; }
+}
+
+@media (min-width: 1100px) {
+  /* Give the name breathing room while keeping its full-width hero presence. */
+  .home-page .nesh-hero {
+    min-height: 125vh !important;
+  }
+
+  .home-page .hero-name,
+  .home-page .landing-reveal strong {
+    letter-spacing: -0.045em;
+    -webkit-text-stroke: 0 transparent !important;
+    paint-order: normal;
+    text-shadow: none;
+  }
+
+  .home-page .hero-name {
+    left: calc(3.7vw - var(--hero-progress) * 3.15vw);
+    width: 98.9vw;
+    opacity: clamp(0, calc(2.95 - var(--hero-progress) * 3.4), 1);
+  }
+
+  .home-page .hero-name > span {
+    transform: scaleX(1.075) scaleY(2.02);
+    transform-origin: left top;
+  }
+
+  .home-page .landing-reveal strong {
+    font-size: 18.9vw;
+  }
+
+  /* Contract the full word toward the rail, then hand it to an identical AJ badge. */
+  .home-page .hero-name {
+    transform: translate3d(
+      calc(var(--hero-progress) * 1.05rem),
+      calc(var(--hero-progress) * 1rem),
+      0
+    ) scale(calc(1 - var(--hero-progress) * 0.79));
+  }
+
+  .home-page .hero-name-dock {
+    position: absolute;
+    z-index: 90;
+    top: 2.0625rem;
+    left: 2.0625rem;
+    display: inline-flex;
+    align-items: flex-start;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.55rem;
+    background: var(--nesh-yellow);
+    color: var(--nesh-ink);
+    font-size: 1.15rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.07em;
+    opacity: clamp(0, calc(var(--hero-progress) * 4 - 2.6), 1);
+    transform: scale(clamp(0.78, calc(0.45 + var(--hero-progress) * 0.65), 1));
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .home-page .hero-name-dock sup {
+    margin-left: 0.18rem;
+    font-size: 0.48rem;
+    letter-spacing: 0;
+  }
+
+  .home-page .about-name-mark {
+    display: none;
+  }
+
+  /* Share the final hero viewport with About so the AJ handoff never becomes a blank page. */
+  .home-page .nesh-about {
+    margin-top: -100vh;
+    translate: 0 var(--hero-about-offset, 75vh);
+  }
+
+  /* Floaters use dedicated lower lanes and disappear before they can cross navigation. */
+  .home-page .hero-stat-card {
+    min-width: 0;
+    width: clamp(10.5rem, 11vw, 13rem);
+    padding: clamp(0.78rem, 0.82vw, 1rem);
+    gap: clamp(0.55rem, 0.62vw, 0.8rem);
+    opacity: clamp(0, calc(1 - var(--hero-progress) * 4.5), 1);
+    transform: translateY(calc(var(--hero-progress) * 2vh));
+  }
+
+  .home-page .hero-stat-card strong {
+    min-width: 1.3em;
+    font-size: clamp(2rem, 2.55vw, 3.25rem);
+  }
+
+  .home-page .hero-stat-card span {
+    font-size: clamp(0.7rem, 0.72vw, 0.84rem);
+  }
+
+  .home-page .hero-stat-card--projects {
+    right: auto;
+    bottom: 12.5vh;
+    left: 2vw;
+  }
+
+  .home-page .hero-stat-card--builds {
+    right: auto;
+    bottom: 12.5vh;
+    left: 14.2vw;
+  }
+
+  .home-page .hero-traits {
+    right: 2.2vw;
+    bottom: 12.5vh;
+    min-width: 0;
+    width: clamp(12.5rem, 14vw, 16rem);
+    padding: clamp(0.9rem, 1vw, 1.15rem);
+    opacity: clamp(0, calc(1 - var(--hero-progress) * 4.5), 1);
+    transform: translateY(calc(var(--hero-progress) * 2vh));
+  }
+
+  .home-page .hero-left-note,
+  .home-page .hero-right-note,
+  .home-page .hero-heading-block,
+  .home-page .hero-profile,
+  .home-page .hero-navigation {
+    opacity: clamp(0, calc(1 - var(--hero-progress) * 3.2), 1);
+  }
+
+  /* Only the four decision-bearing phrases receive boxes. */
+  .home-page .value-statement .typed-word {
+    margin-right: 0.11em;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .home-page .value-statement .value-keyword-wrap {
+    padding: 0;
+    background: transparent;
+  }
+
+  .home-page .value-keyword {
+    padding: 0.015em 0.13em 0.065em;
+    border: 1px solid rgba(8, 8, 8, 0.38);
+    border-radius: 0.14em;
+    background: #ece8da;
+    color: #626700;
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+  }
+
+  .home-page .value-keyword:hover,
+  .home-page .value-keyword:focus-visible {
+    border-color: #111;
+    background: var(--nesh-yellow);
+    color: #080808;
+    transform: translateY(-0.025em);
+  }
+
+  .home-page .value-detail-dock {
+    min-height: 0;
+    padding: 1rem 1.15rem;
+  }
+
+  /* Section 4 cards should read as a tight sequence, not five empty panels. */
+  .home-page .value-proof-card,
+  .home-page .value-proof-card:nth-child(4),
+  .home-page .value-proof-card:nth-child(5) {
+    min-height: clamp(14rem, 16vw, 18rem);
+    padding: clamp(1rem, 1.1vw, 1.3rem);
+  }
+
+  .home-page .value-proof-card > p {
+    margin: clamp(1.5rem, 1.8vw, 2.2rem) 0 1.1rem;
+    font-size: clamp(0.88rem, 0.92vw, 1.05rem);
+  }
+
+  .home-page .value-proof-card > div span {
+    font-size: clamp(2.1rem, 2.45vw, 3.15rem);
+  }
+
+  /* Systems Map: reserve a readable typing area and keep evidence cards compact. */
+  .home-page .systems-heading {
+    align-items: start;
+    margin-bottom: clamp(2.5rem, 3.5vw, 4.5rem);
+  }
+
+  .home-page .systems-heading h2 {
+    min-height: 2.85em;
+    font-size: clamp(3.2rem, 4.65vw, 5.9rem);
+    line-height: 0.96;
+  }
+
+  .home-page .systems-heading__caret {
+    display: none;
+    width: 0.075em;
+    height: 0.82em;
+    margin-left: 0.07em;
+    background: #111;
+    vertical-align: -0.04em;
+  }
+
+  .home-page .systems-section.is-systems-typing .systems-heading__caret {
+    display: inline-block;
+    animation: systemsCaretV4 620ms step-end infinite;
+  }
+
+  .home-page .capability-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.7rem, 0.8vw, 1rem);
+  }
+
+  .home-page .capability-card {
+    min-height: clamp(11.5rem, 13vw, 14.5rem);
+    padding: clamp(1rem, 1.15vw, 1.35rem);
+  }
+
+  .home-page .capability-card > span {
+    font-size: clamp(2rem, 2.25vw, 2.85rem);
+  }
+
+  .home-page .capability-card h3 {
+    margin: clamp(2rem, 2.4vw, 2.8rem) 0 0.7rem;
+    font-size: clamp(1.25rem, 1.45vw, 1.75rem);
+  }
+
+  .home-page .capability-card p {
+    font-size: clamp(0.72rem, 0.76vw, 0.86rem);
+    line-height: 1.45;
+  }
+
+  /* Every neon active state must retain readable black text. */
+  .home-page :is(.journey-station.is-active, .toolkit-group.is-active, .toolkit-group:focus-within) {
+    color: #080808 !important;
+  }
+
+  .home-page .journey-station.is-active :is(span, strong) {
+    color: #080808 !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 1100px) and (prefers-reduced-motion: reduce) {
+  .home-page .hero-name {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .home-page .hero-name-dock {
+    display: none !important;
+  }
+
+  .home-page .nesh-hero {
+    min-height: 100vh !important;
+  }
+
+  .home-page .nesh-about {
+    margin-top: 0;
+    translate: none;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1399px) {
+  .home-page .hero-stat-card--projects {
+    left: 1.4vw;
+  }
+
+  .home-page .hero-stat-card--builds {
+    left: 14.5vw;
+  }
+
+  .home-page .hero-traits {
+    right: 1.4vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .systems-heading__caret {
+    display: none !important;
+    animation: none !important;
+  }
+}
+@media (min-width: 1100px) and (max-height: 900px) {
+  .home-page .hero-navigation {
+    top: 42vh;
+  }
+}

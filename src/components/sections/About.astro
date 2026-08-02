@@ -1,37 +1,167 @@
 ---
+const buildSteps = [
+  {
+    year: "'22",
+    label: "Frame the environment",
+    title: "Start with the constraints",
+    body: "Map the user, state, inputs, trust boundary, and failure paths before choosing a model or framework.",
+    output: "Contract / state map / failure modes",
+  },
+  {
+    year: "'23",
+    label: "Route uncertainty",
+    title: "Make ambiguity explicit",
+    body: "Prefer deterministic rules first, local inference where it is enough, and a visible fallback for real ambiguity.",
+    output: "Decision path / confidence gate / fallback",
+  },
+  {
+    year: "'24",
+    label: "Ship the workflow",
+    title: "Complete the useful path",
+    body: "Connect backend decisions to interfaces, persistence, feedback, recovery, and the moments where users need context.",
+    output: "API / UI / persisted state / recovery",
+  },
+  {
+    year: "'26",
+    label: "Show the artifact",
+    title: "Make the proof inspectable",
+    body: "Keep claims scoped to the code, tests, captures, benchmarks, and limitations that someone else can inspect.",
+    output: "Tests / diagrams / screenshots / boundaries",
+  },
+];
+
+const previousCount = (target: number, prefix = "") =>
+  `${prefix}${String(Math.max(target - 1, 0)).padStart(2, "0")}`;
 ---
 
-<section class="section" id="about" data-journey-section data-journey-label="About" data-journey-index="1">
-  <div class="section-inner about-grid">
-    <div>
-      <div class="section-marker" aria-hidden="true">
-        <span>02</span>
-        <strong>About</strong>
-      </div>
-      <div class="eyebrow">How the work changed my engineering</div>
-      <h2>I learned to design the whole decision path.</h2>
-      <p class="lead">
-        My projects moved me from isolated algorithms and models toward systems thinking: start with contracts,
-        route uncertainty deliberately, persist the state that matters, and treat the user workflow as part of the
-        architecture.
-      </p>
-      <p class="focus-line">
-        Computer Engineering / software systems / local AI / product workflows / practical automation
-      </p>
-    </div>
-    <div class="about-focus-grid" aria-label="Current focus">
-      <article class="focus-card">
-        <span class="meta-label">Start with contracts</span>
-        <p>Define state, inputs, constraints, and failure paths before choosing the model or framework.</p>
-      </article>
-      <article class="focus-card">
-        <span class="meta-label">Route uncertainty</span>
-        <p>Use rules, local models, memory, and LLM fallback only where each earns its complexity.</p>
-      </article>
-      <article class="focus-card">
-        <span class="meta-label">Build for use</span>
-        <p>Connect backend decisions to interfaces, feedback, recovery, and inspectable proof.</p>
-      </article>
+<section
+  class="section nesh-about"
+  id="about"
+  data-journey-section
+  data-journey-label="About"
+  data-journey-index="1"
+  data-about-journey
+>
+  <div class="about-name-mark" aria-hidden="true">ATISHAY</div>
+
+  <div class="nesh-section-shell">
+    <header class="about-heading">
+      <span class="pill-label">Start small. Grow useful.</span>
+      <h2>About Me (&amp;)<br />How I Build</h2>
+      <p>I learned to design the whole decision path. What changed after that is easier to show than explain.</p>
+    </header>
+
+    <div class="about-timeline" aria-label="Atishay's engineering approach" data-about-timeline>
+      <svg class="about-path" viewBox="0 0 1200 2100" preserveAspectRatio="none" aria-hidden="true">
+        <path class="about-path__base" pathLength="1" d="M180 0 C 20 180, 30 390, 250 470 S 1130 660, 950 890 S 70 1100, 230 1350 S 1120 1550, 950 1760 S 530 1960, 590 2100" />
+        <path class="about-path__progress" pathLength="1" d="M180 0 C 20 180, 30 390, 250 470 S 1130 660, 950 890 S 70 1100, 230 1350 S 1120 1550, 950 1760 S 530 1960, 590 2100" />
+      </svg>
+
+      {
+        buildSteps.map((step, index) => (
+          <article
+            class:list={["about-card", index % 2 === 0 ? "is-right" : "is-left"]}
+            data-about-card
+            data-about-index={index}
+            data-about-threshold={(0.08 + index * 0.25).toFixed(2)}
+          >
+            <span class="about-card__year" data-count-to={Number.parseInt(step.year.replace("'", ""), 10)} data-count-prefix="'">{previousCount(Number.parseInt(step.year.replace("'", ""), 10), "'")}</span>
+            <span class="meta-label">{step.label}</span>
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+            <div class="about-card__footer">
+              <span>{step.output}</span>
+              <strong data-count-to={index + 1}>{previousCount(index + 1)}</strong>
+            </div>
+          </article>
+        ))
+      }
     </div>
   </div>
+
+  <script>
+    const initAboutJourney = () => {
+      const root = document.querySelector<HTMLElement>("[data-about-journey]");
+      const timeline = root?.querySelector<HTMLElement>("[data-about-timeline]");
+      if (!root || !timeline) return;
+      const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-about-card]"));
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let frame = 0;
+
+      const renderCount = (counter: HTMLElement, value: number) => {
+        const prefix = counter.dataset.countPrefix ?? "";
+        counter.textContent = `${prefix}${String(value).padStart(2, "0")}`;
+      };
+
+      const animateCount = (counter: HTMLElement) => {
+        const target = Number.parseInt(counter.dataset.countTo ?? "0", 10);
+        const start = Math.max(target - 1, 0);
+        if (reducedMotion) {
+          renderCount(counter, target);
+          counter.classList.add("is-counted");
+          return;
+        }
+
+        const startedAt = performance.now();
+        const duration = 520;
+        renderCount(counter, start);
+        counter.classList.add("is-counting");
+        const tick = (now: number) => {
+          const progress = Math.min((now - startedAt) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          renderCount(counter, start + Math.round((target - start) * eased));
+          if (progress < 1) window.requestAnimationFrame(tick);
+          else counter.classList.replace("is-counting", "is-counted");
+        };
+        window.requestAnimationFrame(tick);
+      };
+
+      const resetCounts = (card: HTMLElement) => {
+        card.querySelectorAll<HTMLElement>("[data-count-to]").forEach((counter) => {
+          const target = Number.parseInt(counter.dataset.countTo ?? "0", 10);
+          renderCount(counter, Math.max(target - 1, 0));
+          counter.classList.remove("is-counting", "is-counted");
+        });
+      };
+
+      if (reducedMotion) {
+        root.style.setProperty("--about-progress", "1");
+        cards.forEach((card) => {
+          card.classList.add("is-visible");
+          card.querySelectorAll<HTMLElement>("[data-count-to]").forEach(animateCount);
+        });
+        return;
+      }
+
+      const update = () => {
+        frame = 0;
+        const rect = timeline.getBoundingClientRect();
+        const startLine = window.innerHeight * 0.72;
+        const range = Math.max(timeline.offsetHeight - window.innerHeight * 0.3, 1);
+        const progress = Math.min(Math.max((startLine - rect.top) / range, 0), 1);
+        root.style.setProperty("--about-progress", progress.toFixed(4));
+
+        cards.forEach((card) => {
+          const threshold = Number.parseFloat(card.dataset.aboutThreshold ?? "1");
+          const visible = progress >= threshold;
+          const wasVisible = card.classList.contains("is-visible");
+          card.classList.toggle("is-visible", visible);
+          card.classList.toggle("is-reached", visible && progress < threshold + 0.25);
+          if (visible && !wasVisible) card.querySelectorAll<HTMLElement>("[data-count-to]").forEach(animateCount);
+          if (!visible && wasVisible) resetCounts(card);
+        });
+      };
+
+      const requestUpdate = () => {
+        if (!frame) frame = window.requestAnimationFrame(update);
+      };
+
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+      update();
+    };
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initAboutJourney, { once: true });
+    else initAboutJourney();
+  </script>
 </section>

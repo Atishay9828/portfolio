@@ -1,0 +1,32 @@
+/* Keep the method explanation visible at the moment of hover/focus. */
+
+@media (min-width: 1100px) {
+  .home-page .value-detail-dock {
+    position: fixed;
+    z-index: 900;
+    right: auto;
+    bottom: clamp(1.4rem, 2vw, 2.5rem);
+    left: 60.5vw;
+    width: min(42rem, calc(76vw - 2rem));
+    max-width: calc(100vw - 2rem);
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, 1rem);
+    transition: opacity 180ms ease, visibility 0ms linear 180ms, background-color 180ms ease, border-color 180ms ease, box-shadow 220ms ease, transform 220ms ease;
+  }
+
+  .home-page .value-detail-dock.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+    transition-delay: 0ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .value-detail-dock {
+    transform: translate(-50%, 0) !important;
+  }
+}

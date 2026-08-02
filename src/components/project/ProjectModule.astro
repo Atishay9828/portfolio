@@ -2,119 +2,73 @@
 import type { Project } from "../../data/projects";
 import Icon from "../ui/Icon.astro";
 
-const { project, compact = false } = Astro.props as { project: Project; compact?: boolean };
-const moduleClass = compact ? "compact-module" : "project-module";
+const { project, compact = false, index } = Astro.props as { project: Project; compact?: boolean; index?: number };
 const visualAssets = project.visual.assets ?? [];
-const evidenceClass = `evidence-panel evidence-${project.visual.status.toLowerCase().replaceAll(" ", "-")}`;
+const primaryVisual = visualAssets.find((asset) => !asset.src.toLowerCase().endsWith(".svg")) ?? visualAssets[0];
 const caseStudyHref = project.tier === "Featured" ? `/projects/${project.slug}/` : undefined;
 const visibleStack = project.stack.slice(0, compact ? 4 : 3);
+const displayIndex = index ? String(index).padStart(2, "0") : undefined;
+const moduleClass = compact ? "compact-module" : "project-module";
 
-type ProjectActionIcon =
-  | "github"
-  | "notebook"
-  | "kaggle"
-  | "huggingFace"
-  | "demo"
-  | "video"
-  | "deployment"
-  | "page"
-  | "arrowRight";
+type ProjectActionIcon = "github" | "notebook" | "kaggle" | "huggingFace" | "demo" | "video" | "deployment" | "page" | "arrowRight";
 
 const getAction = (label: string): { icon: ProjectActionIcon; label: string } => {
   const normalizedLabel = label.toLowerCase();
-
-  if (normalizedLabel.includes("github")) {
-    return { icon: "github", label: "GitHub" };
-  }
-
-  if (normalizedLabel.includes("kaggle") || normalizedLabel.includes("notebook")) {
-    return { icon: "kaggle", label: "Kaggle" };
-  }
-
-  if (normalizedLabel.includes("hugging")) {
-    return { icon: "huggingFace", label: "Hugging Face" };
-  }
-
-  if (normalizedLabel.includes("youtube")) {
-    return { icon: "video", label: "YouTube" };
-  }
-
-  if (normalizedLabel.includes("deployment") || normalizedLabel.includes("live")) {
-    return { icon: "deployment", label: "Live" };
-  }
-
+  if (normalizedLabel.includes("github")) return { icon: "github", label: "GitHub" };
+  if (normalizedLabel.includes("kaggle") || normalizedLabel.includes("notebook")) return { icon: "kaggle", label: "Kaggle" };
+  if (normalizedLabel.includes("hugging")) return { icon: "huggingFace", label: "Hugging Face" };
+  if (normalizedLabel.includes("youtube")) return { icon: "video", label: "YouTube" };
+  if (normalizedLabel.includes("deployment") || normalizedLabel.includes("live")) return { icon: "deployment", label: "Live" };
   return { icon: "arrowRight", label };
 };
 ---
 
-<article class={moduleClass}>
-  <div>
-    <div class="status-label">{project.tier.toUpperCase()} / {project.statusLabel.toUpperCase()}</div>
-    <h3>
-      {caseStudyHref ? (
-        <a class="project-title-link" href={caseStudyHref}>{project.title}</a>
+<article
+  class:list={[moduleClass, "work-card", compact && "is-compact"]}
+  id={displayIndex ? `work-${project.slug}` : undefined}
+  data-work-card={displayIndex ? "" : undefined}
+  data-work-index={displayIndex}
+>
+  <div class="work-card__top">
+    <div class="work-card__tags">{visibleStack.map((item) => <span>{item}</span>)}</div>
+  </div>
+
+  <div class="work-card__visual evidence-panel">
+    {
+      primaryVisual ? (
+        <img src={primaryVisual.src} alt={primaryVisual.alt ?? primaryVisual.label} loading="lazy" />
       ) : (
-        project.title
-      )}
-    </h3>
+        <div class="work-card__visual-copy"><span>{project.tier}</span><strong>{project.statusLabel}</strong></div>
+      )
+    }
+    <span class="sr-only">Proof on file: {project.visual.label}</span>
+  </div>
+
+  <div class="work-card__content">
+    <span class="status-label">{project.tier.toUpperCase()} / {project.statusLabel.toUpperCase()}</span>
+    <h3>{caseStudyHref ? <a class="project-title-link" href={caseStudyHref}>{project.title}</a> : project.title}</h3>
     <p class="project-summary">{compact ? project.subtitle : project.problem}</p>
-    <div class="project-meta">
-      {visibleStack.map((item) => <span class="tag">{item}</span>)}
-    </div>
-    {!compact && project.homepageLesson && (
-      <div class="project-lesson">
-        <span class="meta-label">What I learned</span>
-        <p>{project.homepageLesson}</p>
-      </div>
-    )}
+    {!compact && project.homepageLesson && <p class="project-lesson"><span>What I learned</span>{project.homepageLesson}</p>}
     {compact && <p class="compact-summary">{project.problem}</p>}
     <div class="project-action-row" aria-label={`${project.title} links`}>
-      {caseStudyHref && (
-        <a class="project-action project-card-link" href={caseStudyHref}>
-          <Icon name="page" />
-          <span>Case study</span>
-        </a>
-      )}
-      {project.links.map((projectLink) => {
-        const action = getAction(projectLink.label);
-        const link = { ...projectLink, isExternal: projectLink.href.startsWith("https://") };
-        return (
-          <a
-            class="project-action"
-            href={link.href}
-            target={link.isExternal ? "_blank" : undefined}
-            rel={link.isExternal ? "noreferrer" : undefined}
-            aria-label={`${action.label}: ${project.title}`}
-          >
-            <Icon name={action.icon} />
-            <span>{action.label}</span>
-          </a>
-        );
-      })}
+      {caseStudyHref && <a class="project-action project-card-link" href={caseStudyHref}><Icon name="page" /><span>Case study</span></a>}
+      {
+        project.links.map((projectLink) => {
+          const action = getAction(projectLink.label);
+          const link = { ...projectLink, isExternal: projectLink.href.startsWith("https://") };
+          return (
+            <a
+              class="project-action"
+              href={link.href}
+              target={link.isExternal ? "_blank" : undefined}
+              rel={link.isExternal ? "noreferrer" : undefined}
+              aria-label={`${action.label}: ${project.title}`}
+            >
+              <Icon name={action.icon} /><span>{action.label}</span>
+            </a>
+          );
+        })
+      }
     </div>
   </div>
-  {!compact && (
-    <aside class={evidenceClass} aria-label={`${project.title} evidence status`}>
-      <div class="evidence-panel__heading">
-        <span class="status-pill">{project.visual.status}</span>
-        <div>
-          <span class="meta-label">Proof on file</span>
-          <h3>{project.visual.label}</h3>
-        </div>
-      </div>
-      {visualAssets.length > 0 && (
-        <div class="evidence-assets" aria-label={`${project.title} visual evidence`}>
-          {visualAssets.slice(0, 2).map((asset) => (
-            <figure class="evidence-asset">
-              <img src={asset.src} alt={asset.alt ?? asset.label} loading="lazy" />
-              <figcaption>
-                <strong>{asset.label}</strong>
-                <span>{asset.status}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      )}
-    </aside>
-  )}
 </article>

@@ -1,0 +1,56 @@
+/* Stable explanation dock for animated method words. */
+
+@media (min-width: 1100px) {
+  .home-page .value-statement {
+    padding-bottom: 0;
+  }
+
+  .home-page .value-detail-dock {
+    display: grid;
+    width: min(42rem, 68vw);
+    min-height: 8.4rem;
+    margin: clamp(2.5rem, 3.5vw, 4.5rem) auto 0;
+    box-sizing: border-box;
+    align-content: center;
+    gap: 0.45rem;
+    padding: clamp(1.2rem, 1.45vw, 1.7rem);
+    border: 1px solid rgba(8, 8, 8, 0.34);
+    border-radius: 0.65rem;
+    background: #e9e5d7;
+    color: #111;
+    box-shadow: 0 1rem 2.6rem rgba(44, 40, 31, 0.1);
+    transform: translateY(0);
+    transition: background-color 180ms ease, border-color 180ms ease, box-shadow 220ms ease, transform 220ms ease;
+  }
+
+  .home-page .value-detail-dock.is-active {
+    border-color: #111;
+    background: var(--nesh-yellow);
+    box-shadow: 0 1.25rem 3rem rgba(44, 40, 31, 0.2);
+    transform: translateY(-0.3rem);
+  }
+
+  .home-page .value-detail-dock small {
+    font-size: clamp(0.6rem, 0.64vw, 0.72rem);
+    font-weight: 900;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .home-page .value-detail-dock strong {
+    font-size: clamp(1.35rem, 1.6vw, 1.9rem);
+    line-height: 1;
+  }
+
+  .home-page .value-detail-dock p {
+    margin: 0;
+    font-size: clamp(0.88rem, 0.9vw, 1.02rem);
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .value-detail-dock {
+    transition: none !important;
+  }
+}

@@ -1,54 +1,76 @@
 ---
 import { links } from "../../data/links";
+import { featuredProjects } from "../../data/projects";
 import Icon from "../ui/Icon.astro";
+import "../../styles/nesh-desktop-v3-fixes.css";
+import "../../styles/nesh-desktop-v3-dock.css";
+import "../../styles/nesh-desktop-v3-dock-fix.css";
+import "../../styles/nesh-desktop-v3-hero-final.css";
+import "../../styles/nesh-desktop-v4-feedback.css";
+
+const emailAddress = links.email.href?.replace(/^mailto:/, "") ?? "";
+const letters = "ATISHAY".split("");
+const projectImages = featuredProjects
+  .map((project) => project.visual.assets?.find((asset) => !asset.src.toLowerCase().endsWith(".svg"))?.src)
+  .filter((src): src is string => Boolean(src));
 ---
 
-<section class="section" id="contact" data-journey-section data-journey-label="Contact" data-journey-index="6">
-  <div class="section-inner contact-grid">
-    <div>
-      <div class="section-marker" aria-hidden="true">
-        <span>07</span>
-        <strong>Contact</strong>
-      </div>
-      <div class="eyebrow">Contact</div>
-      <h2>Inspect the evidence, then let's talk.</h2>
-      <p class="lead">For software, AI systems, or product engineering opportunities, these are the direct paths.</p>
+<section class="section contact-section" id="contact" data-journey-section data-journey-label="Contact" data-journey-index="6">
+  <div class="nesh-section-shell contact-layout">
+    <div class="contact-word" data-local-reveal tabindex="0" aria-label="Atishay — move across the name to reveal featured project imagery">
+      {
+        letters.map((letter, index) => (
+          <span
+            class="contact-letter"
+            data-letter={letter}
+            style={`--letter-image:url("${projectImages[index % Math.max(projectImages.length, 1)] ?? ""}")`}
+          >{letter}</span>
+        ))
+      }
+      <sup>®</sup>
     </div>
-    <div class="case-panel">
-      <div class="link-row">
-        {
-          links.github.href && (
-            <a class="button secondary" href={links.github.href} target="_blank" rel="noreferrer">
-              <Icon name="github" />
-              <span>GitHub</span>
-            </a>
-          )
-        }
-        {
-          links.resume.href && (
-            <a class="button secondary" href={links.resume.href}>
-              <Icon name="resume" />
-              <span>{links.resume.label}</span>
-            </a>
-          )
-        }
-        {
-          links.linkedin.href && (
-            <a class="button secondary" href={links.linkedin.href} target="_blank" rel="noreferrer">
-              <Icon name="linkedin" />
-              <span>LinkedIn</span>
-            </a>
-          )
-        }
-        {
-          links.email.href && (
-            <a class="button secondary" href={links.email.href}>
-              <Icon name="mail" />
-              <span>Email</span>
-            </a>
-          )
-        }
-      </div>
+    <div class="contact-copy">
+      <span class="pill-label">Contact</span>
+      <h2>Got a system<br />worth building?</h2>
+      <p>For software, AI systems, or product engineering opportunities, inspect the work and use the direct path that fits.</p>
+    </div>
+    <div class="contact-actions">
+      {links.email.href && <a class="contact-primary" href={links.email.href}><Icon name="mail" /><span>{emailAddress}</span></a>}
+      {links.github.href && <a href={links.github.href} target="_blank" rel="noreferrer"><Icon name="github" /><span>GitHub</span></a>}
+      {links.linkedin.href && <a href={links.linkedin.href} target="_blank" rel="noreferrer"><Icon name="linkedin" /><span>LinkedIn</span></a>}
+      {links.resume.href && <a href={links.resume.href}><Icon name="resume" /><span>Resume</span></a>}
     </div>
   </div>
+
+  <script>
+    const initContactReveal = () => {
+      const word = document.querySelector<HTMLElement>("[data-local-reveal]");
+      if (!word) return;
+      const letters = Array.from(word.querySelectorAll<HTMLElement>(".contact-letter"));
+
+      const setRevealPoint = (clientX: number, clientY: number) => {
+        letters.forEach((letter) => {
+          const rect = letter.getBoundingClientRect();
+          letter.style.setProperty("--reveal-x", `${clientX - rect.left}px`);
+          letter.style.setProperty("--reveal-y", `${clientY - rect.top}px`);
+        });
+      };
+
+      word.addEventListener("pointerenter", (event) => {
+        word.classList.add("is-pointer-active");
+        setRevealPoint(event.clientX, event.clientY);
+      });
+      word.addEventListener("pointermove", (event) => setRevealPoint(event.clientX, event.clientY));
+      word.addEventListener("pointerleave", () => word.classList.remove("is-pointer-active"));
+      word.addEventListener("focus", () => {
+        const rect = word.getBoundingClientRect();
+        word.classList.add("is-keyboard-active");
+        setRevealPoint(rect.left + rect.width * 0.5, rect.top + rect.height * 0.55);
+      });
+      word.addEventListener("blur", () => word.classList.remove("is-keyboard-active"));
+    };
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initContactReveal, { once: true });
+    else initContactReveal();
+  </script>
 </section>
