@@ -7,6 +7,7 @@ import {
   secondaryProjects,
   timelineProjectLinks,
   timelineStages,
+  yearlyProgress,
   type Project,
   type ProjectContribution,
 } from "../src/data/projects";
@@ -315,7 +316,7 @@ describe("portfolio scaffold data", () => {
     expect(lessons.every(Boolean)).toBe(true);
     expect(new Set(lessons).size).toBe(featuredProjects.length);
     expect(projectModuleSource).toContain("What I learned");
-    expect(aboutSource).toContain("I learned to design the whole decision path.");
+    expect(aboutSource).toContain("Each project added a harder problem");
     expect(timelineStages.every((stage) => /^(Learned|Applying)/.test(stage.capability))).toBe(true);
     expect(storyLearningPlan).toContain("## What AJ Learned");
     expect(storyLearningPlan).toContain("## Audience Reading Paths");
@@ -909,5 +910,20 @@ describe("portfolio scaffold data", () => {
     expect(timelineSource).toContain('class:list={["timeline-project-link", link.external && "is-external"]}');
     expect(timelineSource).toContain('aria-label={link.external ? `${projectName} GitHub repo` : undefined}');
     expect(timelineSource).toContain('Icon name="github"');
+  });
+
+  it("grounds the About timeline in dated projects and explicit growth", () => {
+    expect(yearlyProgress.map((step) => step.year)).toEqual([2025, 2025, 2026, 2026]);
+    expect(yearlyProgress.every((step) => step.projects.length >= 2)).toBe(true);
+    expect(yearlyProgress.every((step) => step.improvement.includes("→"))).toBe(true);
+
+    const progressText = JSON.stringify(yearlyProgress);
+    for (const project of ["The Loop", "Hybrid GenAI Categorizer", "Mahoraga", "ReceiptSplit", "PlantBrain (team)"]) {
+      expect(progressText).toContain(project);
+    }
+
+    expect(aboutSource).toContain("Projects (&amp;)");
+    expect(aboutSource).toContain("about-card__projects");
+    expect(aboutSource).toContain("Improvement");
   });
 });

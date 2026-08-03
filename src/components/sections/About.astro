@@ -1,34 +1,5 @@
 ---
-const buildSteps = [
-  {
-    year: "'22",
-    label: "Frame the environment",
-    title: "Start with the constraints",
-    body: "Map the user, state, inputs, trust boundary, and failure paths before choosing a model or framework.",
-    output: "Contract / state map / failure modes",
-  },
-  {
-    year: "'23",
-    label: "Route uncertainty",
-    title: "Make ambiguity explicit",
-    body: "Prefer deterministic rules first, local inference where it is enough, and a visible fallback for real ambiguity.",
-    output: "Decision path / confidence gate / fallback",
-  },
-  {
-    year: "'24",
-    label: "Ship the workflow",
-    title: "Complete the useful path",
-    body: "Connect backend decisions to interfaces, persistence, feedback, recovery, and the moments where users need context.",
-    output: "API / UI / persisted state / recovery",
-  },
-  {
-    year: "'26",
-    label: "Show the artifact",
-    title: "Make the proof inspectable",
-    body: "Keep claims scoped to the code, tests, captures, benchmarks, and limitations that someone else can inspect.",
-    output: "Tests / diagrams / screenshots / boundaries",
-  },
-];
+import { yearlyProgress } from "../../data/projects";
 
 const previousCount = (target: number, prefix = "") =>
   `${prefix}${String(Math.max(target - 1, 0)).padStart(2, "0")}`;
@@ -46,35 +17,52 @@ const previousCount = (target: number, prefix = "") =>
 
   <div class="nesh-section-shell">
     <header class="about-heading">
-      <span class="pill-label">Start small. Grow useful.</span>
-      <h2>About Me (&amp;)<br />How I Build</h2>
-      <p>I learned to design the whole decision path. What changed after that is easier to show than explain.</p>
+      <span class="pill-label">Built year by year.</span>
+      <h2>Projects (&amp;)<br />How I&apos;m Improving</h2>
+      <p>Each project added a harder problem: first finishing the tool, then connecting the system, then making its behavior reliable.</p>
     </header>
 
-    <div class="about-timeline" aria-label="Atishay's engineering approach" data-about-timeline>
+    <div class="about-timeline" aria-label="Atishay's project timeline and engineering progression" data-about-timeline>
       <svg class="about-path" viewBox="0 0 1200 2100" preserveAspectRatio="none" aria-hidden="true">
         <path class="about-path__base" pathLength="1" d="M180 0 C 20 180, 30 390, 250 470 S 1130 660, 950 890 S 70 1100, 230 1350 S 1120 1550, 950 1760 S 530 1960, 590 2100" />
         <path class="about-path__progress" pathLength="1" d="M180 0 C 20 180, 30 390, 250 470 S 1130 660, 950 890 S 70 1100, 230 1350 S 1120 1550, 950 1760 S 530 1960, 590 2100" />
       </svg>
 
       {
-        buildSteps.map((step, index) => (
+        yearlyProgress.map((step, index) => {
+          const shortYear = step.year % 100;
+          return (
           <article
             class:list={["about-card", index % 2 === 0 ? "is-right" : "is-left"]}
             data-about-card
             data-about-index={index}
             data-about-threshold={(0.08 + index * 0.25).toFixed(2)}
           >
-            <span class="about-card__year" data-count-to={Number.parseInt(step.year.replace("'", ""), 10)} data-count-prefix="'">{previousCount(Number.parseInt(step.year.replace("'", ""), 10), "'")}</span>
-            <span class="meta-label">{step.label}</span>
+            <span class="about-card__year" data-count-to={shortYear} data-count-prefix="'">{previousCount(shortYear, "'")}</span>
+            <span class="meta-label">{step.year} / {step.phase}</span>
             <h3>{step.title}</h3>
-            <p>{step.body}</p>
+            <p>{step.summary}</p>
+            <div class="about-card__projects" aria-label={`${step.year} projects`}>
+              {
+                step.projects.map((project) => (
+                  <a
+                    href={project.href}
+                    target={project.external ? "_blank" : undefined}
+                    rel={project.external ? "noreferrer" : undefined}
+                    aria-label={project.external ? `${project.name} GitHub repository` : project.name}
+                  >
+                    {project.name}
+                  </a>
+                ))
+              }
+            </div>
             <div class="about-card__footer">
-              <span>{step.output}</span>
+              <span><small>Improvement</small>{step.improvement}</span>
               <strong data-count-to={index + 1}>{previousCount(index + 1)}</strong>
             </div>
           </article>
-        ))
+          );
+        })
       }
     </div>
   </div>

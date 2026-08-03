@@ -775,6 +775,31 @@
   line-height: 1.55;
 }
 
+.home-page .about-card__projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+}
+
+.home-page .about-card__projects a {
+  padding: 0.48rem 0.68rem 0.42rem;
+  border: 1px solid rgba(8, 8, 8, 0.24);
+  border-radius: 999px;
+  color: #080808;
+  background: rgba(255, 255, 255, 0.26);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.home-page .about-card__projects a:is(:hover, :focus-visible) {
+  border-color: #080808;
+  background: var(--nesh-yellow);
+}
+
 .home-page .about-card__footer {
   display: flex;
   align-items: end;
@@ -786,8 +811,19 @@
 }
 
 .home-page .about-card__footer span {
+  display: grid;
+  gap: 0.32rem;
+  max-width: 84%;
   color: #615e58;
-  font-size: 0.72rem;
+  font-size: clamp(0.78rem, 0.84vw, 0.96rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.home-page .about-card__footer span small {
+  color: #747900;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 

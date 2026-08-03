@@ -232,6 +232,28 @@
     line-height: 1.45;
   }
 
+  /* The dated path is a project-backed growth story, not an abstract method list. */
+  .home-page .about-card {
+    min-height: clamp(24rem, 26vw, 28rem);
+  }
+
+  .home-page .about-card .meta-label {
+    position: absolute;
+    top: 2.45rem;
+    right: 2rem;
+    max-width: 12rem;
+    line-height: 1.25;
+    text-align: right;
+  }
+
+  .home-page .about-card__projects a {
+    font-size: clamp(0.68rem, 0.72vw, 0.8rem);
+  }
+
+  .home-page .about-card__footer {
+    margin-top: 1.45rem;
+  }
+
   /* Every neon active state must retain readable black text. */
   .home-page :is(.journey-station.is-active, .toolkit-group.is-active, .toolkit-group:focus-within) {
     color: #080808 !important;

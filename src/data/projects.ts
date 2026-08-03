@@ -703,6 +703,101 @@ export const timelineProjectLinks = {
   },
 } satisfies Record<string, { href: string; external: boolean }>;
 
+export const yearlyProgress = [
+  {
+    year: 2025,
+    phase: "Build small",
+    title: "Learn to finish the whole loop",
+    summary:
+      "Small automation, API, and data projects taught me to carry an idea from input to a result someone could actually use.",
+    improvement: "Exercises → finished utilities",
+    projects: [
+      {
+        name: "TEDxMailer",
+        href: "https://github.com/Atishay9828/TEDxMailer",
+        external: true,
+      },
+      {
+        name: "Global Super Store",
+        href: "https://github.com/Atishay9828/Global-Super-Store-Database",
+        external: true,
+      },
+      {
+        name: "Fast & Curious",
+        href: "https://github.com/Atishay9828/Fast-and-Curious_Car-Analysis",
+        external: true,
+      },
+      {
+        name: "Webcam Alert",
+        href: "https://github.com/Atishay9828/Webcam-Alert-App",
+        external: true,
+      },
+    ],
+  },
+  {
+    year: 2025,
+    phase: "Connect systems",
+    title: "Move beyond isolated screens",
+    summary:
+      "The Loop and Hybrid forced me to connect interfaces with persisted state, collaboration, routing, and explicit fallback paths.",
+    improvement: "Utilities → multi-step systems",
+    projects: [
+      { name: "The Loop", href: "/projects/the-loop/", external: false },
+      {
+        name: "Hybrid GenAI Categorizer",
+        href: "/projects/hybrid-categorizer/",
+        external: false,
+      },
+    ],
+  },
+  {
+    year: 2026,
+    phase: "Design intelligence",
+    title: "Make AI behavior deliberate",
+    summary:
+      "RAG, resume tailoring, and Mahoraga moved me from calling models to designing retrieval, routing, memory, reward signals, and evaluation.",
+    improvement: "Model calls → designed AI behavior",
+    projects: [
+      {
+        name: "Minimal RAG",
+        href: "https://github.com/Atishay9828/RAG",
+        external: true,
+      },
+      {
+        name: "AI Resume Engine",
+        href: "https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly",
+        external: true,
+      },
+      { name: "Mahoraga", href: "/projects/mahoraga/", external: false },
+    ],
+  },
+  {
+    year: 2026,
+    phase: "Current direction",
+    title: "Harden what ships",
+    summary:
+      "My current work is tightening contracts, tests, deployment, failure recovery, and evidence instead of stopping when the happy path works.",
+    improvement: "Working demos → production-minded engineering",
+    projects: [
+      {
+        name: "ReceiptSplit",
+        href: "https://github.com/Atishay9828/ReceiptSplit",
+        external: true,
+      },
+      {
+        name: "Portfolio",
+        href: "https://github.com/Atishay9828/portfolio",
+        external: true,
+      },
+      {
+        name: "PlantBrain (team)",
+        href: "https://github.com/Atishay9828/PlantBrain",
+        external: true,
+      },
+    ],
+  },
+] as const;
+
 export const timelineStages = [
   {
     label: "Foundations",
