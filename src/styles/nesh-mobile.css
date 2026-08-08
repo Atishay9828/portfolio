@@ -13,14 +13,28 @@
 
 @media (max-width: 1099px) {
   /* Make both ATISHAY name moments read as intentional mobile landmarks. */
+  .home-page .landing-reveal strong,
+  .home-page .contact-word {
+    font-family: Arial, "Helvetica Neue", sans-serif !important;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    -webkit-text-stroke: 0 transparent !important;
+    paint-order: normal;
+    text-shadow: none;
+    font-kerning: normal;
+  }
+
   .home-page .landing-reveal strong {
     font-size: clamp(5rem, 21.5vw, 9rem);
-    letter-spacing: -0.065em;
   }
 
   .home-page .contact-word {
     font-size: clamp(5rem, 21vw, 10rem);
-    letter-spacing: -0.065em;
+  }
+
+  /* The image-reveal interaction is not a useful mobile gesture; keep the word clean. */
+  .home-page .contact-letter::after {
+    display: none;
   }
 
   @keyframes mobileCountHighlight {
