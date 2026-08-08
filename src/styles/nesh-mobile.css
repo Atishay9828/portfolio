@@ -1,0 +1,541 @@
+/*
+ * Mobile repair pass.
+ *
+ * The reference composition is intentionally desktop-led, but its fixed rail,
+ * absolute hero layers, and scroll-driven project track need a separate phone
+ * reading order. These rules are scoped below 1100px so the laptop layout is
+ * not changed by mobile fixes.
+ */
+
+@media (max-width: 1099px) {
+  .home-page .hero-name-dock,
+  .home-page .hero-navigation,
+  .home-page .hero-stat-card,
+  .home-page .hero-traits,
+  .home-page .hero-left-note,
+  .home-page .hero-right-note,
+  .home-page .hero-scroll-cue {
+    display: none !important;
+  }
+
+  /* The menu is a real drawer on mobile, not a decorative tab over the page. */
+  .home-page .journey-menu-toggle {
+    position: fixed !important;
+    z-index: 120 !important;
+    top: 100px !important;
+    right: auto !important;
+    left: 0 !important;
+    display: inline-flex !important;
+    width: auto !important;
+    width: 40px !important;
+    min-width: 40px;
+    height: 42px;
+    min-height: 42px !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border: 1px solid #080808;
+    border-left: 0;
+    border-radius: 0 999px 999px 0;
+    padding: 0 3px;
+    background: #080808;
+    box-shadow: 0 8px 22px rgba(8, 8, 8, 0.18);
+    color: #f3f0e6;
+    font: 800 0.52rem/1 Arial, sans-serif;
+    letter-spacing: 0.08em;
+    writing-mode: horizontal-tb !important;
+    text-transform: uppercase;
+    transform: none !important;
+  }
+
+  .home-page .journey-menu-toggle span {
+    color: var(--nesh-yellow);
+    font-size: 0.58rem;
+    letter-spacing: -0.04em;
+  }
+
+  .home-page .journey-menu-toggle strong {
+    display: inline-grid;
+    width: 0.8rem;
+    height: 0.8rem;
+    place-items: center;
+    color: inherit;
+    font-size: 0;
+  }
+
+  .home-page .journey-menu-toggle strong::after {
+    content: "+";
+    font: 900 0.85rem/1 Arial, sans-serif;
+  }
+
+  .home-page .signal-journey:not([data-active-journey="0"]):not(.is-journey-menu-open) .journey-menu-toggle {
+    top: 12px !important;
+  }
+
+  .home-page .signal-journey.is-journey-menu-open .journey-menu-toggle {
+    top: 12px !important;
+    left: calc(min(calc(100vw - 24px), 320px) + 12px) !important;
+  }
+
+  .home-page .journey-menu-scrim {
+    z-index: 100 !important;
+    inset: 0 !important;
+    background: rgba(8, 8, 8, 0.58) !important;
+  }
+
+  .home-page .portfolio-rail {
+    position: fixed !important;
+    z-index: 110 !important;
+    inset: 12px auto 12px 12px !important;
+    display: flex !important;
+    width: min(calc(100vw - 24px), 320px) !important;
+    min-height: 0 !important;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 14px;
+    padding: 12px;
+    background: #111;
+    box-shadow: 18px 0 54px rgba(0, 0, 0, 0.42);
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateX(calc(-100% - 20px)) !important;
+    transition: opacity 180ms ease, transform 220ms ease, visibility 0ms linear 220ms;
+  }
+
+  .home-page .signal-journey.is-journey-menu-open .portfolio-rail {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateX(0) !important;
+    transition-delay: 0ms;
+  }
+
+  .home-page .portfolio-rail .rail-card,
+  .home-page .portfolio-rail .rail-email,
+  .home-page .portfolio-rail .rail-cta {
+    flex: 0 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: #1d1d1b;
+    color: #f3f0e6;
+    box-shadow: none;
+  }
+
+  .home-page .portfolio-rail .rail-profile-card {
+    padding: 14px;
+  }
+
+  .home-page .portfolio-rail .rail-profile-card p {
+    margin: 18px 0 0;
+    color: rgba(243, 240, 230, 0.76);
+    font-size: 0.84rem;
+  }
+
+  .home-page .portfolio-rail .rail-logo {
+    background: var(--nesh-yellow);
+  }
+
+  .home-page .portfolio-rail .rail-socials a {
+    background: #2a2a28;
+  }
+
+  .home-page .portfolio-rail .rail-stats-card {
+    min-height: 92px;
+    padding: 12px;
+  }
+
+  .home-page .portfolio-rail .rail-stats-card strong {
+    color: var(--nesh-yellow);
+    font-size: 2.4rem;
+  }
+
+  .home-page .portfolio-rail .rail-stats-card span,
+  .home-page .portfolio-rail .journey-station,
+  .home-page .portfolio-rail .rail-email,
+  .home-page .portfolio-rail .rail-cta {
+    color: #f3f0e6;
+  }
+
+  .home-page .portfolio-rail .journey-rail {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: auto !important;
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow: auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 12px;
+    background: #171715;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  .home-page .portfolio-rail .journey-rail-heading {
+    display: grid;
+    gap: 3px;
+    margin: 0 0 12px;
+  }
+
+  .home-page .portfolio-rail .journey-rail-heading strong {
+    color: #f3f0e6;
+    font-size: 0.9rem;
+  }
+
+  .home-page .portfolio-rail .journey-rail-heading span {
+    color: rgba(243, 240, 230, 0.54);
+    font: 0.61rem/1.2 var(--mono-face);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .home-page .portfolio-rail .journey-rail-track {
+    display: block;
+    top: 57px;
+    bottom: 20px;
+    left: 25px;
+    width: 1px;
+    background: rgba(243, 240, 230, 0.22);
+  }
+
+  .home-page .portfolio-rail .journey-stations {
+    display: grid;
+    gap: 4px;
+    padding: 0;
+  }
+
+  .home-page .portfolio-rail .journey-station {
+    grid-template-columns: 28px minmax(0, 1fr);
+    min-height: 42px;
+    border-radius: 7px;
+    padding: 0 8px;
+    background: #252523;
+    font-size: 0.74rem;
+  }
+
+  .home-page .portfolio-rail .journey-station > span {
+    color: rgba(243, 240, 230, 0.56);
+  }
+
+  .home-page .portfolio-rail .journey-station.is-active {
+    background: var(--nesh-yellow);
+    color: #080808;
+  }
+
+  .home-page .portfolio-rail .journey-station.is-active > span {
+    color: #080808;
+  }
+
+  .home-page .portfolio-rail .journey-station.is-active strong {
+    color: #080808 !important;
+  }
+
+  .home-page .portfolio-rail .rail-stack-ticker,
+  .home-page .portfolio-rail .rail-email,
+  .home-page .portfolio-rail .rail-cta {
+    min-height: 42px;
+    padding: 10px 12px;
+  }
+
+  /* Mobile hero: name, portrait, message, action. No text is painted on top of a face. */
+  .home-page .nesh-hero {
+    min-height: auto !important;
+  }
+
+  .home-page .nesh-hero__sticky {
+    position: relative !important;
+    top: auto !important;
+    display: flex;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    flex-direction: column;
+    overflow: visible !important;
+    padding: 18px 20px 32px;
+    background: var(--nesh-paper);
+  }
+
+  .home-page .hero-name {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 1;
+    width: 100% !important;
+    margin: 0;
+    transform: none !important;
+    opacity: 1 !important;
+    color: var(--nesh-yellow);
+    font-size: clamp(4.7rem, 22vw, 7rem);
+    line-height: 0.8;
+    letter-spacing: -0.09em;
+    white-space: nowrap;
+    text-shadow: none;
+  }
+
+  .home-page .hero-name > span {
+    display: block;
+    transform: none !important;
+    transform-origin: left top;
+  }
+
+  .home-page .hero-profile {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 2;
+    width: min(100%, 285px) !important;
+    height: auto !important;
+    aspect-ratio: 798 / 1370;
+    margin: 24px auto 0;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .home-page .hero-profile img {
+    object-fit: contain;
+    object-position: 50% 100%;
+  }
+
+  .home-page .hero-heading-block {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 3;
+    width: 100% !important;
+    margin-top: 18px;
+    transform: none !important;
+    opacity: 1 !important;
+    color: var(--nesh-ink);
+    text-shadow: none !important;
+  }
+
+  .home-page .hero-kicker {
+    margin-bottom: 8px;
+    color: rgba(8, 8, 8, 0.72);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+  }
+
+  .home-page .hero-heading-block h1 {
+    color: var(--nesh-ink);
+    font-size: clamp(2.8rem, 11.5vw, 4.3rem);
+    line-height: 0.88;
+    letter-spacing: -0.075em;
+  }
+
+  .home-page .hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .home-page .hero-cta-row .nesh-button {
+    flex: 1 1 145px;
+    min-height: 46px;
+    justify-content: center;
+  }
+
+  /* About is a readable stacked path on a phone, not a scaled desktop canvas. */
+  .home-page .nesh-about {
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    padding: 64px 0 80px !important;
+    translate: none !important;
+  }
+
+  .home-page .about-name-mark,
+  .home-page .about-path {
+    display: none !important;
+  }
+
+  .home-page .about-heading {
+    width: auto !important;
+    margin: 0 0 32px;
+  }
+
+  .home-page .about-heading h2 {
+    margin: 14px 0 18px;
+    font-size: clamp(3rem, 13.5vw, 5rem);
+    line-height: 0.87;
+  }
+
+  .home-page .about-heading p {
+    width: auto !important;
+    font-size: 1rem;
+  }
+
+  .home-page .about-timeline {
+    display: grid;
+    height: auto !important;
+    gap: 14px;
+  }
+
+  .home-page .about-card,
+  .home-page .about-card:nth-of-type(n) {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    border-radius: 10px;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .home-page .about-card__year {
+    margin-bottom: 8px;
+    font-size: clamp(3.5rem, 18vw, 5rem);
+  }
+
+  .home-page .about-card .meta-label {
+    position: static !important;
+    max-width: none;
+    text-align: left;
+  }
+
+  .home-page .about-card h3 {
+    margin: 10px 0;
+    font-size: clamp(1.7rem, 8.2vw, 2.5rem);
+  }
+
+  .home-page .about-card > p {
+    font-size: 1rem;
+  }
+
+  .home-page .about-card__footer {
+    margin-top: 1.35rem;
+  }
+
+  /* Projects remain swipeable, but the browser scrollbar is not part of the design. */
+  .home-page .work_section {
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  .home-page .work-sticky {
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 64px 20px 38px !important;
+  }
+
+  .home-page .work-top-layout {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .home-page .work-top-layout h2 {
+    font-size: clamp(3rem, 14vw, 4.8rem);
+    line-height: 0.86;
+  }
+
+  .home-page .work-top-layout p {
+    font-size: 1rem;
+  }
+
+  .home-page .work-mobile-hint {
+    display: block;
+    margin: 22px 0 12px;
+    color: rgba(243, 240, 230, 0.6);
+    font: 700 0.64rem/1.2 var(--mono-face);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .home-page .work-progress,
+  .home-page .work-counter {
+    display: none !important;
+  }
+
+  .home-page .work-track-wrap {
+    width: calc(100% + 40px);
+    margin: 28px -20px 0 !important;
+    padding: 0 20px 12px;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .home-page .work-track-wrap::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .home-page .work-track {
+    display: flex !important;
+    width: max-content;
+    gap: 14px;
+    padding-inline: 16px;
+    transform: none !important;
+  }
+
+  .home-page .work-card {
+    width: min(86vw, 352px) !important;
+    min-width: 0 !important;
+    flex: 0 0 min(86vw, 352px) !important;
+    height: 34rem;
+    min-height: 34rem;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .home-page .work-card__content {
+    padding: 18px;
+  }
+
+  .home-page .work-card h3 {
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+  }
+
+  .home-page .toolkit-section,
+  .home-page .systems-section,
+  .home-page .contact-section {
+    min-height: 0 !important;
+  }
+
+  .home-page .systems-heading h2 {
+    font-size: clamp(3.3rem, 14vw, 5.4rem);
+    line-height: 0.9;
+  }
+
+  .home-page .contact-copy h2 {
+    font-size: clamp(3.5rem, 15vw, 5.5rem);
+    line-height: 0.86;
+  }
+}
+
+@media (max-width: 430px) {
+  .home-page .nesh-hero__sticky {
+    padding-inline: 16px;
+  }
+
+  .home-page .work-sticky {
+    padding: 64px 16px 38px !important;
+  }
+
+  .home-page .work-track-wrap {
+    width: calc(100% + 32px);
+    margin: 28px -16px 0 !important;
+    padding-inline: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .portfolio-rail,
+  .home-page .journey-menu-toggle,
+  .home-page .about-card {
+    transition: none !important;
+  }
+}

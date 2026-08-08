@@ -2,7 +2,7 @@
 import { yearlyProgress } from "../../data/projects";
 
 const previousCount = (target: number, prefix = "") =>
-  `${prefix}${String(Math.max(target - 1, 0)).padStart(2, "0")}`;
+  `${prefix}${String(Math.max(target - 1, 1)).padStart(2, "0")}`;
 ---
 
 <section
@@ -83,7 +83,7 @@ const previousCount = (target: number, prefix = "") =>
 
       const animateCount = (counter: HTMLElement) => {
         const target = Number.parseInt(counter.dataset.countTo ?? "0", 10);
-        const start = Math.max(target - 1, 0);
+        const start = Math.max(target - 1, 1);
         if (reducedMotion) {
           renderCount(counter, target);
           counter.classList.add("is-counted");
@@ -107,7 +107,7 @@ const previousCount = (target: number, prefix = "") =>
       const resetCounts = (card: HTMLElement) => {
         card.querySelectorAll<HTMLElement>("[data-count-to]").forEach((counter) => {
           const target = Number.parseInt(counter.dataset.countTo ?? "0", 10);
-          renderCount(counter, Math.max(target - 1, 0));
+          renderCount(counter, Math.max(target - 1, 1));
           counter.classList.remove("is-counting", "is-counted");
         });
       };
