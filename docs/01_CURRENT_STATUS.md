@@ -4,12 +4,13 @@ Date: 2026-08-09
 
 ## Current Phase
 
-The Astro static portfolio is deployed and verified in Vercel production at `https://www.atishay.app`. The latest application release commit is `d8aeb2cb8b5fd950b81e32eaf9b52818d331e483`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
+The Astro static portfolio is deployed and verified in Vercel production at `https://www.atishay.app`. The latest application release commit is `ad1fcb0ed566cf2c37f4ccd3f02b627beca37463`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
 
 2026-08-09 certificate-link and certification-layout revision:
 - The resume keeps the wrapped `fundamentals.` certification line fully visible, removes the separate certificate-number text, and attaches the certificate URL to the Def-Space internship heading.
 - Local PDF validation passed for one-page A4 layout, clean extraction, 8 annotations, and visual review. Local public asset SHA-256 is `E6D16BFB1D76E055EFD9F941A5AF52E903C59B6E4C61BAFFFFBB7F584915F03C`.
-- This revision is prepared for the next Vercel production promotion; the prior production deployment remains live until promotion completes.
+- Production deployment `dpl_G6U5mEEMPssxTHmfNqHd1mU1ugUR` is Ready and tied to the exact release commit `ad1fcb0ed566cf2c37f4ccd3f02b627beca37463`.
+- Live verification returned HTTP 200 with `application/pdf`, one page, zero certificate-number text occurrences, and the certificate link attached to the Def-Space internship heading. SHA-256: `E6D16BFB1D76E055EFD9F941A5AF52E903C59B6E4C61BAFFFFBB7F584915F03C`.
 
 2026-08-09 achievement-heading resume revision:
 - The primary public SDE resume now presents the Meta OpenEnv Hackathon 2026 finalist achievement under a standalone `ACHIEVEMENT` heading while remaining one-page A4.

@@ -17,7 +17,9 @@ Completed:
 Validation:
 - The revised PDF has one page, one extracted achievement statement, zero certificate-number text occurrences, 8 link annotations, and a visual review showing the clean `development.` sentence.
 - Local public asset SHA-256: `E6D16BFB1D76E055EFD9F941A5AF52E903C59B6E4C61BAFFFFBB7F584915F03C`.
-- Production promotion is pending this revision.
+- Promoted production deployment `dpl_G6U5mEEMPssxTHmfNqHd1mU1ugUR` from exact release commit `ad1fcb0ed566cf2c37f4ccd3f02b627beca37463`; deployment state is Ready.
+- Live resume verification returned HTTP 200 and `application/pdf`, with 73,020 bytes, one page, zero certificate-number text occurrences, one internship-name certificate link annotation, one `ACHIEVEMENT` heading, one finalist statement, 8 annotations, and SHA-256 `E6D16BFB1D76E055EFD9F941A5AF52E903C59B6E4C61BAFFFFBB7F584915F03C`.
+- Browser smoke passed on production at desktop and 390x844 mobile viewports with 3 resume CTAs, no horizontal overflow, and no console/page errors.
 
 ### 2026-08-09 Certificate Link and Certification Wrap Fix
 

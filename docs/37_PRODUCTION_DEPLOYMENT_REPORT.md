@@ -3,8 +3,15 @@
 Date: 2026-08-09
 Platform: Vercel
 Production URL: `https://www.atishay.app`
-Application release commit: `d8aeb2cb8b5fd950b81e32eaf9b52818d331e483`
+Application release commit: `ad1fcb0ed566cf2c37f4ccd3f02b627beca37463`
 Release branch: `release/portfolio-production`
+
+## 2026-08-09 Final Internship Name Certificate Link Release
+
+- The visible certificate-number text and separate link were removed; the certificate URL is attached to the Def-Space internship heading above the bullet.
+- Production deployment: `dpl_G6U5mEEMPssxTHmfNqHd1mU1ugUR` — Ready, tied to exact commit `ad1fcb0ed566cf2c37f4ccd3f02b627beca37463`.
+- Live resume verification: HTTP 200, `application/pdf`, 73,020 bytes, one-page A4, zero certificate-number text occurrences, 8 link annotations, and SHA-256 `E6D16BFB1D76E055EFD9F941A5AF52E903C59B6E4C61BAFFFFBB7F584915F03C`.
+- Browser smoke passed on desktop and 390x844 mobile production viewports with 3 resume CTAs, no horizontal overflow, and no console/page errors.
 
 ## 2026-08-09 Internship Name Certificate Link Revision
 
