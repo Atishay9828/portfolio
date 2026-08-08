@@ -1,11 +1,16 @@
 # 09_AI_HANDOFF.md
 
-Date: 2026-07-13
+Date: 2026-08-09
+
+2026-08-09 resume replacement addendum:
+- The owner-provided `E:\Downloads\Atishay_Jain_SDEResume.pdf` is now the public SDE resume source.
+- The site serves the unchanged file from `public/resume/atishay-jain-sde-resume.pdf`; the CTA path is unchanged.
+- PDF checks passed for one-page A4 structure, readable rendering, extracted text, and public portfolio/GitHub/LinkedIn/email annotations. The supplied file also contains a time-limited certificate URL that may expire; it was preserved unchanged by approval.
 
 2026-07-14 resume addendum:
 - The source is now `tools/generate_resume.py`.
 - The user-facing artifact is `output/pdf/atishay-jain-sde-resume.pdf`.
-- The site serves the same generated file from `public/resume/atishay-jain-sde-resume.pdf`.
+- The site served the same generated file from `public/resume/atishay-jain-sde-resume.pdf` at that time.
 - Keep CGPA at 8.00. Keep the detailed evidence-derived toolkit on the site, while the resume uses concise transferable capabilities supported by that toolkit.
 
 ## Current Project State
@@ -268,7 +273,7 @@ Status:
 
 ## Public Contact Links
 
-- Primary SDE resume: `public/resume/atishay-jain-sde-resume.pdf`; copied from `E:\Downloads\ATISHAY_Software_Intern.pdf` on 2026-07-03. The Data Analyst resume was not published.
+- Primary SDE resume: `public/resume/atishay-jain-sde-resume.pdf`; replaced from `E:\Downloads\Atishay_Jain_SDEResume.pdf` on 2026-08-09. The Data Analyst resume was not published.
 - LinkedIn: `https://www.linkedin.com/in/atishay9828/`; owner-approved and active on 2026-07-03. Automated verification was previously blocked by LinkedIn HTTP 999.
 - Email: `mailto:ajain8_be23@thapar.edu`; owner-approved and active on 2026-07-03.
 

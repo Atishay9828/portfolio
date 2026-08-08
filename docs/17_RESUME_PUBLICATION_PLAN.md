@@ -1,6 +1,6 @@
 # 17_RESUME_PUBLICATION_PLAN.md
 
-Date: 2026-07-14
+Date: 2026-08-09
 
 Purpose:
 - Prevent local resume PDFs from being published accidentally.
@@ -10,20 +10,19 @@ Purpose:
 
 | Candidate | Current location | Exists locally? | Publication status |
 |---|---|---|---|
-| SDE / software intern resume | `tools/generate_resume.py` | Yes | Rebuilt and published as the primary public resume on 2026-07-14 |
+| SDE / software intern resume | `E:\Downloads\Atishay_Jain_SDEResume.pdf` | Yes | Owner-provided replacement approved and published as the primary public resume on 2026-08-09 |
 | Data analyst resume | `E:\Downloads\ATISHAY_Data_Analyst.pdf` | Not rechecked in this pass | Not published |
 
 ## Published Public Resume
 
 Primary public resume:
-- Source: `tools/generate_resume.py`
-- Downloadable build artifact: `output/pdf/atishay-jain-sde-resume.pdf`
+- Source: `E:\Downloads\Atishay_Jain_SDEResume.pdf`
 - Destination: `public/resume/atishay-jain-sde-resume.pdf`
 - Public CTA href: `/resume/atishay-jain-sde-resume.pdf`
-- Refresh date: 2026-07-14
-- Content checks: one page, clickable portfolio/GitHub/LinkedIn links, CGPA `8.00`, and concise transferable engineering capabilities distilled from the evidence-derived website toolkit.
+- Refresh date: 2026-08-09
+- Content checks: one-page A4 PDF, readable visual rendering, text extraction, public portfolio/GitHub/LinkedIn/email annotations, and current SDE/full-stack/applied-AI content supplied by AJ.
 
-The PDF is generated reproducibly with ReportLab. The public copy and downloadable output are produced from the same source to prevent drift.
+The supplied PDF is copied unchanged to the public asset path so the approved resume content is preserved exactly.
 
 ## Not Published
 

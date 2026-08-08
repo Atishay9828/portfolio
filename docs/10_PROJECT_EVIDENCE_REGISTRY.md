@@ -22,7 +22,7 @@ Production-release note (2026-07-13): Mahoraga `training_metrics.png` is no long
 | Item | Status | Notes |
 |---|---|---|
 | GitHub profile | Verified | Public profile link remains active. |
-| SDE resume | Verified | Reproducibly generated from `tools/generate_resume.py`. The one-page PDF includes the live portfolio link, CGPA 8.00, and transferable engineering skills distilled from the evidence-derived website toolkit; CTA href is `/resume/atishay-jain-sde-resume.pdf`. |
+| SDE resume | Verified | The owner-provided one-page PDF was checked and published unchanged at the repo-local asset path; it includes the live portfolio, GitHub, LinkedIn, and email annotations; CTA href is `/resume/atishay-jain-sde-resume.pdf`. |
 | Data Analyst resume | Not applicable | Not published in this pass and not exposed by public CTA. |
 | LinkedIn | Verified | Owner-approved public CTA activated on 2026-07-03 at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |
 | Email | Verified | Owner-approved public CTA activated on 2026-07-03 at `mailto:ajain8_be23@thapar.edu`. |

@@ -25,7 +25,7 @@ Purpose:
 
 | Label | URL | Status | Notes |
 |---|---|---|---|
-| SDE resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. Rebuilt from `tools/generate_resume.py` with clickable portfolio/GitHub/LinkedIn links, CGPA 8.00, and concise transferable skills supported by the website toolkit. |
+| SDE resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. The owner-provided one-page PDF was checked and published unchanged on 2026-08-09 with portfolio/GitHub/LinkedIn/email annotations. |
 | Data Analyst resume PDF | Not public | Not applicable | Not published and not exposed by any CTA. |
 | GitHub profile | `https://github.com/Atishay9828/` | Verified | GitHub API confirms public user `Atishay9828`. Verified 2026-06-26. |
 | LinkedIn | `https://www.linkedin.com/in/atishay9828/` | Verified | Owner-approved public LinkedIn CTA activated on 2026-07-03. Earlier automated verification was blocked by LinkedIn HTTP 999, so this status is owner-approval based. |
