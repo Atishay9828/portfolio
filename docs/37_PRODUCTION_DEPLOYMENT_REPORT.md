@@ -6,6 +6,13 @@ Production URL: `https://www.atishay.app`
 Application release commit: `3c1e520fd15b16aa8243eef94eedfd50e00d7519`
 Release branch: `release/portfolio-production`
 
+## 2026-08-09 Certificate Link and Certification Wrap Revision
+
+- Rebuilt the public resume bottom section so the wrapped `fundamentals.` certification line remains fully visible above `ACHIEVEMENT`.
+- The certificate URL is attached to the visible `BSERC-DSI-2026-2601` number, with accessible annotation label `Certificate No. BSERC-DSI-2026-2601`.
+- Local validation passed for one-page A4 structure, clean text extraction, 8 link annotations, and visual rendering. Local public asset SHA-256: `764D9AAE3E932FC0D7872BBD71DB42C8F6482D2D37B6FBA4209D7B7F21CCC232`.
+- Vercel promotion and live HTTP verification are pending this revision.
+
 ## 2026-08-09 Achievement Heading Resume Revision
 
 - The primary SDE resume was revised to promote the Meta OpenEnv Hackathon 2026 finalist achievement into a standalone `ACHIEVEMENT` heading while remaining one-page A4.

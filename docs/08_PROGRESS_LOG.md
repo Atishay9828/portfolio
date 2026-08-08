@@ -7,6 +7,17 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-08-09 Certificate Link and Certification Wrap Fix
+
+Completed:
+- Rebuilt the one-page resume bottom section so the wrapped `fundamentals.` certification line is fully visible.
+- Attached the certificate URL to the visible `BSERC-DSI-2026-2601` number and added the accessible annotation label `Certificate No. BSERC-DSI-2026-2601`.
+
+Validation:
+- The revised PDF has one page, one extracted `ACHIEVEMENT` heading, one finalist statement, 8 link annotations, and a visually reviewed certification/achievement boundary.
+- Local public asset SHA-256: `764D9AAE3E932FC0D7872BBD71DB42C8F6482D2D37B6FBA4209D7B7F21CCC232`.
+- Production promotion is pending this revision.
+
 ### 2026-08-09 Achievement Heading Resume Revision
 
 Completed:

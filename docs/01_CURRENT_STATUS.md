@@ -6,6 +6,11 @@ Date: 2026-08-09
 
 The Astro static portfolio is deployed and verified in Vercel production at `https://www.atishay.app`. The latest application release commit is `3c1e520fd15b16aa8243eef94eedfd50e00d7519`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
 
+2026-08-09 certificate-link and certification-layout revision:
+- The resume now keeps the wrapped `fundamentals.` certification line fully visible and attaches the certificate URL directly to `BSERC-DSI-2026-2601`.
+- Local PDF validation passed for one-page A4 layout, clean extraction, 8 annotations, and visual review. Local public asset SHA-256 is `764D9AAE3E932FC0D7872BBD71DB42C8F6482D2D37B6FBA4209D7B7F21CCC232`.
+- This revision is prepared for the next Vercel production promotion; the prior production deployment remains live until promotion completes.
+
 2026-08-09 achievement-heading resume revision:
 - The primary public SDE resume now presents the Meta OpenEnv Hackathon 2026 finalist achievement under a standalone `ACHIEVEMENT` heading while remaining one-page A4.
 - Local PDF validation passed for visual rendering, clean text extraction, and 8 preserved link annotations. Local public asset SHA-256 is `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
