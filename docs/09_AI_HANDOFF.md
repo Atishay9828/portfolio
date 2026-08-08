@@ -5,7 +5,7 @@ Date: 2026-08-09
 2026-08-09 Mahoraga resume-density revision:
 - The public PDF now includes Mahoraga as a fourth project; its bullets use evidence-safe wording for the adaptive RL environment, reward shaping, and optional Qwen/LoRA integration.
 - ReceiptSplit, TIET-LOOP, and Hybrid project bullets plus the Def-Space internship description were condensed to preserve a readable one-page A4 layout.
-- Local asset SHA-256: `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`; deployment remains pending.
+- Local and live asset SHA-256: `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`; production deployment `dpl_7JR9sona2AdhR27Jai1hAjdr9fhB` is Ready on commit `41084e6801c63d9487ab5f55f9f317076b7accbc`.
 
 2026-08-09 internship-name certificate-link revision:
 - Removed the visible `Certificate No. BSERC-DSI-2026-2601` text and its separate link from the Def-Space bullet.

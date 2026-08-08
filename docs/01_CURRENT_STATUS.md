@@ -4,11 +4,13 @@ Date: 2026-08-09
 
 ## Current Phase
 
-The Astro static portfolio is deployed and verified in Vercel production at `https://www.atishay.app`. The latest application release commit is `ad1fcb0ed566cf2c37f4ccd3f02b627beca37463`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
+The Astro static portfolio is deployed and verified in Vercel production at `https://www.atishay.app`. The latest application release commit is `41084e6801c63d9487ab5f55f9f317076b7accbc`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
 
-2026-08-09 Mahoraga and resume-density revision (local, deployment pending):
+2026-08-09 Mahoraga and resume-density revision:
 - Added Mahoraga as a fourth project with concise evidence-safe bullets, condensed the other project bullets, and reduced the Def-Space internship description.
 - Local PDF validation passed for one-page A4 layout and visual readability. The current asset is 54,549 bytes with SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B` and 9 link annotations.
+- Preview `dpl_7EG9L5xLuTvowLBAapUNpL2gigSY` and production `dpl_7JR9sona2AdhR27Jai1hAjdr9fhB` are Ready and tied to the exact release commit above.
+- Live PDF verification returned HTTP 200 with `application/pdf`, one page, matching bytes/hash, 2 Mahoraga mentions, 1 `ACHIEVEMENT` heading, zero certificate-number text occurrences, and 9 annotations. Browser smoke passed at desktop and 390x844 with 3 resume CTAs, no horizontal overflow, and no console/page errors.
 
 2026-08-09 certificate-link and certification-layout revision:
 - The resume keeps the wrapped `fundamentals.` certification line fully visible, removes the separate certificate-number text, and attaches the certificate URL to the Def-Space internship heading.

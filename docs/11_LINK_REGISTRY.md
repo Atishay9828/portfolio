@@ -7,7 +7,7 @@ Purpose:
 - Prevent placeholder links from leaking into public UI.
 
 2026-08-09 resume revision:
-- The primary SDE PDF remains `/resume/atishay-jain-sde-resume.pdf` and now includes a clickable Mahoraga project name plus the existing clickable Def-Space internship heading certificate link. Local one-page validation passed; deployment is pending.
+- The primary SDE PDF remains `/resume/atishay-jain-sde-resume.pdf` and now includes a clickable Mahoraga project name plus the existing clickable Def-Space internship heading certificate link. Live one-page verification passed at `https://www.atishay.app/resume/atishay-jain-sde-resume.pdf`.
 
 ## Status Meanings
 

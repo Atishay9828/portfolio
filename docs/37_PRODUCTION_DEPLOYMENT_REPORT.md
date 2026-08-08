@@ -3,14 +3,15 @@
 Date: 2026-08-09
 Platform: Vercel
 Production URL: `https://www.atishay.app`
-Application release commit: `ad1fcb0ed566cf2c37f4ccd3f02b627beca37463`
+Application release commit: `41084e6801c63d9487ab5f55f9f317076b7accbc`
 Release branch: `release/portfolio-production`
 
 ## 2026-08-09 Mahoraga and Resume-Density Revision
 
 - Added Mahoraga as a fourth project, condensed the other project bullets, and reduced the Def-Space internship description while retaining the standalone achievement section.
 - Local public PDF validation passed for one-page A4 layout and visual readability. Asset size is 54,549 bytes, with 9 link annotations and SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`.
-- Production deployment and live PDF verification are pending this release.
+- Preview deployment `dpl_7EG9L5xLuTvowLBAapUNpL2gigSY` was verified and promoted; production deployment `dpl_7JR9sona2AdhR27Jai1hAjdr9fhB` is Ready on the exact release commit.
+- Live resume verification returned HTTP 200 with `application/pdf`, one page, matching 54,549 bytes and SHA-256, 9 link annotations, two Mahoraga mentions, one `ACHIEVEMENT` heading, and zero certificate-number text occurrences. Browser smoke passed at desktop and 390x844 with 3 resume CTAs, no horizontal overflow, and no console/page errors.
 
 ## 2026-08-09 Final Internship Name Certificate Link Release
 

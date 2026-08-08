@@ -17,6 +17,7 @@ Link registry:
 
 2026-08-09 resume revision:
 - Mahoraga is now represented in the public resume as a fourth project using evidence-safe wording; other project and internship descriptions were shortened to preserve the one-page layout.
+- The revised PDF is live in Vercel production and matches the locally validated one-page asset byte-for-byte.
 
 ## Summary
 

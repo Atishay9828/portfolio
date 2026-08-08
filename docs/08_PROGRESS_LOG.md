@@ -16,7 +16,8 @@ Completed:
 
 Validation:
 - Local PDF is one-page A4, visually reviewed, 54,549 bytes, with 9 link annotations and SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`.
-- Production deployment is pending this release.
+- Preview `dpl_7EG9L5xLuTvowLBAapUNpL2gigSY` and production `dpl_7JR9sona2AdhR27Jai1hAjdr9fhB` are Ready on exact commit `41084e6801c63d9487ab5f55f9f317076b7accbc`.
+- Live PDF matches the local bytes/hash; browser smoke passed on desktop and 390x844 with 3 resume CTAs, no overflow, and no console/page errors.
 
 ### 2026-08-09 Internship Name Certificate Link Revision
 

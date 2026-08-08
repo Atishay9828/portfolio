@@ -10,7 +10,7 @@ Purpose:
 
 - The selected public SDE resume now includes Mahoraga as a fourth project.
 - Existing project bullets and the Def-Space internship description were shortened to preserve a readable one-page A4 layout; the finalist achievement remains under `ACHIEVEMENT`.
-- Local validation passed: 54,549 bytes, 9 link annotations, visual review complete, SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`. Production deployment is pending.
+- Local and live validation passed: 54,549 bytes, 9 link annotations, visual review complete, matching SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`. Production deployment `dpl_7JR9sona2AdhR27Jai1hAjdr9fhB` is Ready.
 
 ## Current Local Resume Candidates
 
