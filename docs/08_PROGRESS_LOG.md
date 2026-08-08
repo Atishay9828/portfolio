@@ -16,7 +16,8 @@ Completed:
 Validation:
 - The revised PDF remains one-page A4, visually reviewed, preserves 8 existing link annotations, and extracts the `ACHIEVEMENT` heading plus finalist statement once each.
 - Local public asset SHA-256: `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
-- Production promotion is pending this release commit.
+- Promoted production deployment `dpl_7LThRun79G4jQX6E3rEf54JdibjW` from exact release commit `3c1e520fd15b16aa8243eef94eedfd50e00d7519`; deployment state is Ready.
+- Live `https://www.atishay.app/resume/atishay-jain-sde-resume.pdf` returned HTTP 200 and `application/pdf`, with one page, the `ACHIEVEMENT` heading and finalist statement once each, 8 annotations, and SHA-256 `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
 
 ### 2026-08-09 Public Resume Replacement and Production Release
 

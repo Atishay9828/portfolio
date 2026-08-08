@@ -3,14 +3,16 @@
 Date: 2026-08-09
 Platform: Vercel
 Production URL: `https://www.atishay.app`
-Application release commit: `add3fd424ba765c6398e45509d37d49c4cdad30a`
+Application release commit: `3c1e520fd15b16aa8243eef94eedfd50e00d7519`
 Release branch: `release/portfolio-production`
 
 ## 2026-08-09 Achievement Heading Resume Revision
 
 - The primary SDE resume was revised to promote the Meta OpenEnv Hackathon 2026 finalist achievement into a standalone `ACHIEVEMENT` heading while remaining one-page A4.
 - Local validation passed for visual rendering, clean text extraction, and 8 preserved link annotations. Local public asset SHA-256: `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
-- Vercel promotion and live HTTP verification are pending this release commit.
+- Vercel production deployment: `dpl_7LThRun79G4jQX6E3rEf54JdibjW` — Ready, tied to exact commit `3c1e520fd15b16aa8243eef94eedfd50e00d7519`.
+- Live resume verification: HTTP 200, `application/pdf`, 73,183 bytes, one-page A4, 8 link annotations, and SHA-256 `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
+- Production aliases include `https://www.atishay.app`, `https://atishay.app`, and `https://atishay9828-portfolio.vercel.app/`.
 
 ## 2026-08-09 Approved Resume Release
 
