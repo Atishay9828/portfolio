@@ -96,7 +96,7 @@ const methodWords = [
           <article class="value-proof-card" data-value-proof-card>
             <span class="value-proof-card__track" aria-hidden="true"></span>
             <div>
-              <span data-value-count data-count-to={index + 1}>{String(index).padStart(2, "0")}</span>
+              <span data-value-count data-count-to={index + 1}>{String(Math.max(index + 1, 1)).padStart(2, "0")}</span>
               <small>{stage.label}</small>
             </div>
             <p>{stage.capability}</p>
@@ -157,7 +157,7 @@ const methodWords = [
       };
       const animateCount = (counter: HTMLElement) => {
         const target = Number.parseInt(counter.dataset.countTo ?? "0", 10);
-        const start = Math.max(target - 1, 0);
+        const start = Math.max(target - 1, 1);
         if (reducedMotion) {
           renderCount(counter, target);
           counter.classList.add("is-counted");
