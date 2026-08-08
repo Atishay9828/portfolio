@@ -6,6 +6,12 @@ Production URL: `https://www.atishay.app`
 Application release commit: `add3fd424ba765c6398e45509d37d49c4cdad30a`
 Release branch: `release/portfolio-production`
 
+## 2026-08-09 Achievement Heading Resume Revision
+
+- The primary SDE resume was revised to promote the Meta OpenEnv Hackathon 2026 finalist achievement into a standalone `ACHIEVEMENT` heading while remaining one-page A4.
+- Local validation passed for visual rendering, clean text extraction, and 8 preserved link annotations. Local public asset SHA-256: `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
+- Vercel promotion and live HTTP verification are pending this release commit.
+
 ## 2026-08-09 Approved Resume Release
 
 - Resume publication commit: `6e1c3fb` (`chore(portfolio): publish updated SDE resume`), included in the deployed branch tip `add3fd424ba765c6398e45509d37d49c4cdad30a`.

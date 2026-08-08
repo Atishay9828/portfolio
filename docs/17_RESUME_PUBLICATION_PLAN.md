@@ -20,9 +20,9 @@ Primary public resume:
 - Destination: `public/resume/atishay-jain-sde-resume.pdf`
 - Public CTA href: `/resume/atishay-jain-sde-resume.pdf`
 - Refresh date: 2026-08-09
-- Content checks: one-page A4 PDF, readable visual rendering, text extraction, public portfolio/GitHub/LinkedIn/email annotations, and current SDE/full-stack/applied-AI content supplied by AJ.
+- Content checks: one-page A4 PDF, readable visual rendering, clean text extraction, public portfolio/GitHub/LinkedIn/email annotations, and current SDE/full-stack/applied-AI content supplied by AJ. The Meta OpenEnv Hackathon 2026 finalist achievement is presented under a standalone `ACHIEVEMENT` heading.
 
-The supplied PDF is copied unchanged to the public asset path so the approved resume content is preserved exactly.
+The owner-provided PDF content is preserved at the public asset path, with the approved finalist achievement promoted from an inline line to a standalone `ACHIEVEMENT` heading while retaining the one-page layout.
 
 ## Not Published
 

@@ -7,6 +7,17 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-08-09 Achievement Heading Resume Revision
+
+Completed:
+- Promoted the Meta OpenEnv Hackathon 2026 finalist achievement into a standalone `ACHIEVEMENT` heading in `public/resume/atishay-jain-sde-resume.pdf`.
+- Removed the replaced inline achievement text from the PDF text layer so ATS extraction contains one clean heading and one achievement statement.
+
+Validation:
+- The revised PDF remains one-page A4, visually reviewed, preserves 8 existing link annotations, and extracts the `ACHIEVEMENT` heading plus finalist statement once each.
+- Local public asset SHA-256: `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
+- Production promotion is pending this release commit.
+
 ### 2026-08-09 Public Resume Replacement and Production Release
 
 Completed:

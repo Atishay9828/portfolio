@@ -41,7 +41,7 @@ Purpose:
 
 | Asset | Priority | Status | Notes |
 |---|---|---|---|
-| SDE resume PDF | Required | Verified | Primary public resume is repo-local at `public/resume/atishay-jain-sde-resume.pdf`; the current source was the owner-provided `E:\Downloads\Atishay_Jain_SDEResume.pdf`. Data Analyst resume remains unpublished and unexposed. |
+| SDE resume PDF | Required | Verified | Primary public resume is repo-local at `public/resume/atishay-jain-sde-resume.pdf`; it was revised from the owner-provided `E:\Downloads\Atishay_Jain_SDEResume.pdf` with a standalone `ACHIEVEMENT` section while remaining one page. Data Analyst resume remains unpublished and unexposed. |
 | GitHub profile URL | Required | Verified | `https://github.com/Atishay9828/`; GitHub API confirms user `Atishay9828`. Verified 2026-06-26. |
 | LinkedIn URL | Required | Verified | Owner-approved public CTA active at `https://www.linkedin.com/in/atishay9828/`; automated verification was previously blocked by LinkedIn HTTP 999. |
 | Email address | Required | Verified | Owner-approved public CTA active at `mailto:ajain8_be23@thapar.edu`. |

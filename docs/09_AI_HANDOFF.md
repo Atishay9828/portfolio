@@ -2,10 +2,10 @@
 
 Date: 2026-08-09
 
-2026-08-09 resume replacement addendum:
+2026-08-09 resume replacement and achievement-heading addendum:
 - The owner-provided `E:\Downloads\Atishay_Jain_SDEResume.pdf` is now the public SDE resume source.
-- The site serves the unchanged file from `public/resume/atishay-jain-sde-resume.pdf`; the CTA path is unchanged.
-- PDF checks passed for one-page A4 structure, readable rendering, extracted text, and public portfolio/GitHub/LinkedIn/email annotations. The supplied file also contains a time-limited certificate URL that may expire; it was preserved unchanged by approval.
+- The site serves the revised one-page file from `public/resume/atishay-jain-sde-resume.pdf`; the CTA path is unchanged.
+- The Meta OpenEnv Hackathon 2026 finalist achievement now has a standalone `ACHIEVEMENT` heading. PDF checks passed for one-page A4 structure, readable rendering, clean extracted text, and public portfolio/GitHub/LinkedIn/email annotations. The supplied content also contains a time-limited certificate URL that may expire; it remains preserved.
 
 2026-07-14 resume addendum:
 - The source is now `tools/generate_resume.py`.
@@ -273,7 +273,7 @@ Status:
 
 ## Public Contact Links
 
-- Primary SDE resume: `public/resume/atishay-jain-sde-resume.pdf`; replaced from `E:\Downloads\Atishay_Jain_SDEResume.pdf` on 2026-08-09. The Data Analyst resume was not published.
+- Primary SDE resume: `public/resume/atishay-jain-sde-resume.pdf`; revised from `E:\Downloads\Atishay_Jain_SDEResume.pdf` on 2026-08-09 with a standalone `ACHIEVEMENT` heading. The Data Analyst resume was not published.
 - LinkedIn: `https://www.linkedin.com/in/atishay9828/`; owner-approved and active on 2026-07-03. Automated verification was previously blocked by LinkedIn HTTP 999.
 - Email: `mailto:ajain8_be23@thapar.edu`; owner-approved and active on 2026-07-03.
 
