@@ -16,7 +16,9 @@ Completed:
 Validation:
 - The revised PDF has one page, one extracted `ACHIEVEMENT` heading, one finalist statement, 8 link annotations, and a visually reviewed certification/achievement boundary.
 - Local public asset SHA-256: `764D9AAE3E932FC0D7872BBD71DB42C8F6482D2D37B6FBA4209D7B7F21CCC232`.
-- Production promotion is pending this revision.
+- Promoted production deployment `dpl_6a7ouGzzf5FLqX7GL3JpcX5EKSTT` from exact release commit `d8aeb2cb8b5fd950b81e32eaf9b52818d331e483`; deployment state is Ready.
+- Live resume verification returned HTTP 200 and `application/pdf`, with 73,229 bytes, one page, the full `fundamentals.` certification line, one `ACHIEVEMENT` heading, one finalist statement, 8 annotations, and SHA-256 `764D9AAE3E932FC0D7872BBD71DB42C8F6482D2D37B6FBA4209D7B7F21CCC232`.
+- Browser smoke passed on production at desktop and 390x844 mobile viewports with 3 resume CTAs, no horizontal overflow, no console/page errors, and a successful live PDF request.
 
 ### 2026-08-09 Achievement Heading Resume Revision
 
