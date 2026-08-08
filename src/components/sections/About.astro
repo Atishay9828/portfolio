@@ -74,6 +74,7 @@ const previousCount = (target: number, prefix = "") =>
       if (!root || !timeline) return;
       const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-about-card]"));
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const isMobileViewport = window.matchMedia("(max-width: 1099px)").matches;
       let frame = 0;
 
       const renderCount = (counter: HTMLElement, value: number) => {
@@ -91,7 +92,7 @@ const previousCount = (target: number, prefix = "") =>
         }
 
         const startedAt = performance.now();
-        const duration = 520;
+        const duration = isMobileViewport ? 900 : 520;
         renderCount(counter, start);
         counter.classList.add("is-counting");
         const tick = (now: number) => {
