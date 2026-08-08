@@ -1,10 +1,31 @@
 # Production Deployment Report
 
-Date: 2026-07-13
+Date: 2026-08-09
 Platform: Vercel
-Production URL: `https://atishay-jain-portfolio.vercel.app`
-Application release commit: `a53f44f942060b92ceb7a44945d3331e3001adb0`
+Production URL: `https://www.atishay.app`
+Application release commit: `add3fd424ba765c6398e45509d37d49c4cdad30a`
 Release branch: `release/portfolio-production`
+
+## 2026-08-09 Approved Resume Release
+
+- Resume publication commit: `6e1c3fb` (`chore(portfolio): publish updated SDE resume`), included in the deployed branch tip `add3fd424ba765c6398e45509d37d49c4cdad30a`.
+- Preview deployment: `dpl_5wixxMYjFMc7fkFSzEhzP2iaCXg9` — Ready before promotion.
+- Current production deployment: `dpl_HRT5ZXgiNiXyGGjekCkyBvow8pd6` — Ready.
+- Production aliases: `https://www.atishay.app`, `https://atishay.app`, and `https://atishay9828-portfolio.vercel.app/`.
+- Resume URL: `/resume/atishay-jain-sde-resume.pdf`.
+- Live resume verification: HTTP 200, `application/pdf`, 52,382 bytes, SHA-256 `86CCE32A41D9676F699B30C9D525C77955AF86986958966DA15542EE4DE7C643`, matching the supplied PDF.
+- Chrome smoke verification: desktop and 390x844 mobile checks passed with three resume CTAs, no horizontal overflow, no console/page errors, and reduced-motion content visible.
+- Anonymous preview browser proof remains unavailable because Vercel deployment protection served its access page; public production checks passed.
+- Release warning: the supplied PDF preserves a time-limited certificate URL; it was published unchanged per approval and may expire independently of the site.
+
+## 2026-08-09 Resume-release validation addendum
+
+- `npm.cmd ci`: passed.
+- `npm.cmd test`: 49/49 passed.
+- `npm.cmd run lint`: passed with 0 errors and 0 warnings; one existing generated-output TypeScript hint was reported.
+- `npm.cmd run build`: passed with 0 errors and generated five pages plus robots and sitemap; the known trailing esbuild cancellation text did not change the zero exit status.
+- `git diff --check`: passed before the release commit.
+- `npm.cmd audit --omit=dev`: reported 2 moderate and 7 high dependency advisories in Astro/build-time dependency paths; no dependency upgrade was included in this resume release.
 
 ## Build and deployment
 

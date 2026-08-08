@@ -1,11 +1,24 @@
 # 08_PROGRESS_LOG.md
 
-Date: 2026-06-26
+Date: 2026-08-09
 
 Purpose:
 - Record completed milestones and repository progress.
 
 ## Progress Entries
+
+### 2026-08-09 Public Resume Replacement and Production Release
+
+Completed:
+- Replaced the public `public/resume/atishay-jain-sde-resume.pdf` with the owner-provided one-page SDE resume without changing the existing CTA path.
+- Synchronized the resume publication plan, asset tracker, evidence registry, link registry, and AI handoff with the new source and public asset.
+
+Validation:
+- PDF metadata, extracted text, link annotations, and rendered-page review passed; the public copy matches the supplied file byte-for-byte.
+- `npm.cmd ci` passed; `npm.cmd test` passed with 49/49 tests; `npm.cmd run lint` and `npm.cmd run build` passed with 0 errors; `git diff --check` passed.
+- The static build copied the resume to `dist/resume/atishay-jain-sde-resume.pdf` with the same SHA-256 as the source.
+- Vercel preview `dpl_5wixxMYjFMc7fkFSzEhzP2iaCXg9` and production deployment `dpl_HRT5ZXgiNiXyGGjekCkyBvow8pd6` are Ready. The current production branch tip is `add3fd424ba765c6398e45509d37d49c4cdad30a`, with resume commit `6e1c3fb` in its history.
+- Production HTTP and Chrome smoke checks passed for the homepage and resume at desktop and 390x844 mobile sizes. Anonymous preview checks were blocked by Vercel deployment protection.
 
 ### 2026-07-14 Mobile Navigation and Hierarchy Repair
 

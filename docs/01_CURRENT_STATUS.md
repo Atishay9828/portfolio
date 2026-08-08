@@ -1,10 +1,16 @@
 # 01_CURRENT_STATUS.md
 
-Date: 2026-07-13
+Date: 2026-08-09
 
 ## Current Phase
 
-The Astro static portfolio is deployed and verified in Vercel production at `https://atishay-jain-portfolio.vercel.app`. The exact application release commit is `a53f44f942060b92ceb7a44945d3331e3001adb0`; preview and production browser, route, security-header, metadata, responsive, resume, link, and Lighthouse checks passed on 2026-07-13. `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
+The Astro static portfolio is deployed and verified in Vercel production at `https://www.atishay.app`. The latest application release commit is `add3fd424ba765c6398e45509d37d49c4cdad30a`, with the resume publication in parent commit `6e1c3fb`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
+
+2026-08-09 resume replacement and release addendum:
+- The public SDE resume was replaced with the owner-provided `E:\Downloads\Atishay_Jain_SDEResume.pdf` after one-page PDF metadata, text, link-annotation, and visual checks.
+- Production deployment `dpl_HRT5ZXgiNiXyGGjekCkyBvow8pd6` is Ready on `www.atishay.app`, `atishay.app`, and the Vercel aliases. The promoted preview was `dpl_5wixxMYjFMc7fkFSzEhzP2iaCXg9`; Vercel metadata ties the production deployment to branch `release/portfolio-production` and commit `add3fd424ba765c6398e45509d37d49c4cdad30a`.
+- Live checks returned homepage HTTP 200 and resume HTTP 200 with `application/pdf`, 52,382 bytes, and SHA-256 `86CCE32A41D9676F699B30C9D525C77955AF86986958966DA15542EE4DE7C643`.
+- Chrome smoke checks passed at desktop and 390x844 mobile viewports with three resume CTAs, no horizontal overflow, no console/page errors, and reduced-motion content visible. Anonymous preview HTTP was blocked by Vercel deployment protection; production verification was public and passed.
 
 2026-07-14 production mobile UX addendum:
 - The compact header now separates four primary section tabs from icon-only Resume, GitHub, and LinkedIn resources.
@@ -116,7 +122,7 @@ Reason:
 |---|---|---|
 | GitHub remote | Verified | `origin` points to `https://github.com/Atishay9828/portfolio.git`; `origin/master` exists. |
 | GitHub repository health | Verified | `gh repo view` confirms `Atishay9828/portfolio`, default branch `master`, visibility `PUBLIC`; README exists on GitHub. |
-| Resume PDF | Verified | Primary SDE resume copied from `E:\Downloads\ATISHAY_Software_Intern.pdf` to `public/resume/atishay-jain-sde-resume.pdf` on 2026-07-03. Data Analyst resume was not published. |
+| Resume PDF | Verified | Primary SDE resume replaced from `E:\Downloads\Atishay_Jain_SDEResume.pdf` at `public/resume/atishay-jain-sde-resume.pdf` on 2026-08-09. Data Analyst resume was not published. |
 | GitHub profile URL | Verified | Global identity link available. |
 | LinkedIn URL | Verified | Owner-approved public CTA active at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |
 | Email address | Verified | Owner-approved public CTA active at `mailto:ajain8_be23@thapar.edu`. |
