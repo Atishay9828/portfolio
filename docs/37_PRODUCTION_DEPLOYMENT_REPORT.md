@@ -6,6 +6,12 @@ Production URL: `https://www.atishay.app`
 Application release commit: `ad1fcb0ed566cf2c37f4ccd3f02b627beca37463`
 Release branch: `release/portfolio-production`
 
+## 2026-08-09 Mahoraga and Resume-Density Revision
+
+- Added Mahoraga as a fourth project, condensed the other project bullets, and reduced the Def-Space internship description while retaining the standalone achievement section.
+- Local public PDF validation passed for one-page A4 layout and visual readability. Asset size is 54,549 bytes, with 9 link annotations and SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`.
+- Production deployment and live PDF verification are pending this release.
+
 ## 2026-08-09 Final Internship Name Certificate Link Release
 
 - The visible certificate-number text and separate link were removed; the certificate URL is attached to the Def-Space internship heading above the bullet.

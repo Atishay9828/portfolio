@@ -9,6 +9,9 @@ Purpose:
 
 Production-release note (2026-07-13): Mahoraga `training_metrics.png` is no longer rendered or copied to the public build because methodology/evaluation interpretation remains Needed. The selected Loop event-detail and map evidence now use visually reviewed `.webp` production encodes; evidence meaning and source status are unchanged.
 
+2026-08-09 resume revision:
+- Mahoraga is included as the fourth resume project with concise wording grounded in the verified environment, reward-shaping, Gymnasium, FastAPI/Gradio, and Qwen/LoRA evidence below. The public copy does not claim production-grade game-engine status.
+
 ## Status Meanings
 
 - Known: link or artifact was provided, discovered in a verified source, or created as a repo spec, but is not final public-ready portfolio evidence.

@@ -6,6 +6,9 @@ Purpose:
 - Centralize all known, verified, missing, and TODO links.
 - Prevent placeholder links from leaking into public UI.
 
+2026-08-09 resume revision:
+- The primary SDE PDF remains `/resume/atishay-jain-sde-resume.pdf` and now includes a clickable Mahoraga project name plus the existing clickable Def-Space internship heading certificate link. Local one-page validation passed; deployment is pending.
+
 ## Status Meanings
 
 - Known: provided in planning context but not checked in this repo session.

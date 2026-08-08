@@ -7,6 +7,17 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-08-09 Mahoraga Resume Space Revision
+
+Completed:
+- Added Mahoraga as a fourth project with concise bullets covering its adaptive RL environment, reward shaping, and Gymnasium/FastAPI/Gradio/Qwen/LoRA integration.
+- Condensed ReceiptSplit, TIET-LOOP, and Hybrid GenAI Transaction Categorizer bullets, and reduced the Def-Space internship to one focused bullet.
+- Kept the standalone `ACHIEVEMENT` section and the certificate URL on the clickable Def-Space internship heading.
+
+Validation:
+- Local PDF is one-page A4, visually reviewed, 54,549 bytes, with 9 link annotations and SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`.
+- Production deployment is pending this release.
+
 ### 2026-08-09 Internship Name Certificate Link Revision
 
 Completed:

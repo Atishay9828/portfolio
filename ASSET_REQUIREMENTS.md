@@ -23,6 +23,12 @@ Purpose:
 - Prevent unverified links, fake visuals, unsupported metrics, and placeholder evidence.
 - Give implementation agents a checklist before building visual sections.
 
+## 2026-08-09 Resume Content Revision
+
+- The public one-page A4 SDE resume now includes Mahoraga as a fourth project.
+- Existing project bullets and the Def-Space internship description were condensed to keep the page readable; the Meta OpenEnv finalist achievement remains a standalone `ACHIEVEMENT` section.
+- Local public PDF validation: one page, visual review passed, 9 link annotations, zero visible certificate-number text occurrences, SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B`.
+
 ## Status Values
 
 - Known: link or artifact was provided, discovered in a verified source, or created as a repo spec, but is not final public-ready portfolio evidence.

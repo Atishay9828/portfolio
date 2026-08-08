@@ -15,6 +15,9 @@ Evidence registry:
 Link registry:
 - `docs/11_LINK_REGISTRY.md`
 
+2026-08-09 resume revision:
+- Mahoraga is now represented in the public resume as a fourth project using evidence-safe wording; other project and internship descriptions were shortened to preserve the one-page layout.
+
 ## Summary
 
 | Area | Known | Verified | Missing | Needed | Public-ready? |
