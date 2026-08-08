@@ -13,6 +13,7 @@ Release branch: `release/portfolio-production`
 - Vercel production deployment: `dpl_7LThRun79G4jQX6E3rEf54JdibjW` — Ready, tied to exact commit `3c1e520fd15b16aa8243eef94eedfd50e00d7519`.
 - Live resume verification: HTTP 200, `application/pdf`, 73,183 bytes, one-page A4, 8 link annotations, and SHA-256 `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
 - Production aliases include `https://www.atishay.app`, `https://atishay.app`, and `https://atishay9828-portfolio.vercel.app/`.
+- Browser smoke passed on production at desktop and 390x844 mobile viewports: title loaded, 3 resume CTAs were present, no horizontal overflow, no console/page errors, and the PDF request returned HTTP 200 with `application/pdf`.
 
 ## 2026-08-09 Approved Resume Release
 

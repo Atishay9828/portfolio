@@ -18,6 +18,7 @@ Validation:
 - Local public asset SHA-256: `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
 - Promoted production deployment `dpl_7LThRun79G4jQX6E3rEf54JdibjW` from exact release commit `3c1e520fd15b16aa8243eef94eedfd50e00d7519`; deployment state is Ready.
 - Live `https://www.atishay.app/resume/atishay-jain-sde-resume.pdf` returned HTTP 200 and `application/pdf`, with one page, the `ACHIEVEMENT` heading and finalist statement once each, 8 annotations, and SHA-256 `D33DA440E27344674722BB9A79D806A63AD7E67E386A2D224DC02655135253A8`.
+- Browser smoke passed on production at desktop and 390x844 mobile viewports with 3 resume CTAs, no horizontal overflow, no console/page errors, and a successful live PDF request.
 
 ### 2026-08-09 Public Resume Replacement and Production Release
 
