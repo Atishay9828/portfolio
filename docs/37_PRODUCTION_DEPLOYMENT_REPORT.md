@@ -78,3 +78,27 @@ Vercel retains immutable deployments. Rollback is available by restoring the pre
 ## Remaining manual work
 
 No action is required to share the Vercel URL. A custom domain and search-console registration are optional future tasks.
+
+## 2026-08-09 Mobile Repair Release
+
+- Release branch: `release/portfolio-production`
+- Release commit: `add3fd424ba765c6398e45509d37d49c4cdad30a`
+- Preview deployment: `dpl_5wixxMYjFMc7fkFSzEhzP2iaCXg9`
+- Production deployment: `dpl_HRT5ZXgiNiXyGGjekCkyBvow8pd6`
+- Production aliases: `https://www.atishay.app`, `https://atishay.app`, and `https://atishay9828-portfolio.vercel.app`
+- Vercel state: `READY` / `PROMOTED`; Git source reports the exact release SHA above.
+- Scope: mobile-only layout repair for the Signal Path drawer, hero reading order, swipeable Builds track, mobile section spacing, and the first About counter state. Desktop CSS remains outside the `max-width: 1099px` mobile rules.
+
+### Release validation
+
+- `npm.cmd ci`: passed; `npm audit --omit=dev` remains non-zero with the repository's known Astro/Vite dependency advisories. The available forced remediation is a breaking Astro 7 upgrade and was not applied in this release.
+- `npm.cmd test -- --run`: 49/49 passed.
+- `npm.cmd run lint`: 0 errors, 0 warnings, 1 generated Vercel Analytics hint.
+- `npm.cmd run build`: exited 0; five pages generated. Astro still prints its known post-completion cancellation line after `Complete!`.
+- `git diff --check`: passed.
+- Production HTTP checks: homepage, Mahoraga route, robots, and sitemap returned 200; robots was `text/plain` and sitemap was `application/xml`.
+- Real-browser mobile check at `390 × 844`: no horizontal page overflow, mobile drawer opens with active contrast, Builds track remains swipeable with the scrollbar hidden, and the first About count starts at `01`.
+- Real-browser desktop regression at `1280 × 720`: mobile menu is hidden, desktop rail remains visible, and page width matches the viewport.
+- Production console: no page errors. One non-blocking Google One Tap/FedCM warning was emitted by `accounts.google.com/gsi/client`; the portfolio source does not include a Google One Tap script.
+
+Rollback remains available through Vercel's immutable deployment history; the immediately previous production deployment was not modified or deleted.
