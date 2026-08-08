@@ -2,9 +2,14 @@
 
 Date: 2026-08-09
 
+2026-08-09 internship-name certificate-link revision:
+- Removed the visible `Certificate No. BSERC-DSI-2026-2601` text and its separate link from the Def-Space bullet.
+- Attached the certificate URL to the clickable internship heading `Def-Space Summer Intern - Bharat Space Education Research Centre (BSERC)` above the bullet.
+- The bullet now ends cleanly with `scientific and technological development.`; the one-page layout and standalone achievement section remain intact. New SHA-256: `E6D16BFB1D76E055EFD9F941A5AF52E903C59B6E4C61BAFFFFBB7F584915F03C`.
+
 2026-08-09 certificate-link and certification-layout addendum:
 - Rebuilt the public one-page resume from the owner-provided source so the wrapped `fundamentals.` certification line remains fully visible above the achievement section.
-- The certificate URL is now attached to the visible `BSERC-DSI-2026-2601` number, with an accessible annotation label of `Certificate No. BSERC-DSI-2026-2601`; it is not a separate link block.
+- The certificate URL was attached to the visible certificate number in this intermediate revision; the later revision moves that link to the Def-Space internship heading and removes the separate certificate-number text.
 - The revised public asset remains one page with one extracted finalist statement and 8 link annotations. New SHA-256: `764D9AAE3E932FC0D7872BBD71DB42C8F6482D2D37B6FBA4209D7B7F21CCC232`.
 
 2026-08-09 resume replacement and achievement-heading addendum:
@@ -278,7 +283,7 @@ Status:
 
 ## Public Contact Links
 
-- Primary SDE resume: `public/resume/atishay-jain-sde-resume.pdf`; revised from `E:\Downloads\Atishay_Jain_SDEResume.pdf` on 2026-08-09 with a standalone `ACHIEVEMENT` heading and visible certificate-number link. The Data Analyst resume was not published.
+- Primary SDE resume: `public/resume/atishay-jain-sde-resume.pdf`; revised from `E:\Downloads\Atishay_Jain_SDEResume.pdf` on 2026-08-09 with a standalone `ACHIEVEMENT` heading and certificate link on the Def-Space internship heading. The Data Analyst resume was not published.
 - LinkedIn: `https://www.linkedin.com/in/atishay9828/`; owner-approved and active on 2026-07-03. Automated verification was previously blocked by LinkedIn HTTP 999.
 - Email: `mailto:ajain8_be23@thapar.edu`; owner-approved and active on 2026-07-03.
 

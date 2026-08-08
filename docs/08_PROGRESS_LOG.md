@@ -7,6 +7,18 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-08-09 Internship Name Certificate Link Revision
+
+Completed:
+- Removed the visible certificate-number text and its separate link from the Def-Space bullet.
+- Made the `Def-Space Summer Intern - Bharat Space Education Research Centre (BSERC)` heading above the bullet carry the certificate URL.
+- Kept the certification wrap fully visible and the achievement section on the same page.
+
+Validation:
+- The revised PDF has one page, one extracted achievement statement, zero certificate-number text occurrences, 8 link annotations, and a visual review showing the clean `development.` sentence.
+- Local public asset SHA-256: `E6D16BFB1D76E055EFD9F941A5AF52E903C59B6E4C61BAFFFFBB7F584915F03C`.
+- Production promotion is pending this revision.
+
 ### 2026-08-09 Certificate Link and Certification Wrap Fix
 
 Completed:

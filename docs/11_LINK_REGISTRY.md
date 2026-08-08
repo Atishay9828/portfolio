@@ -25,7 +25,7 @@ Purpose:
 
 | Label | URL | Status | Notes |
 |---|---|---|---|
-| SDE resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. The owner-provided one-page PDF was checked and published on 2026-08-09 with a standalone `ACHIEVEMENT` heading, fully visible certifications, the certificate URL attached to `BSERC-DSI-2026-2601`, and portfolio/GitHub/LinkedIn/email annotations. |
+| SDE resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. The owner-provided one-page PDF was checked and published on 2026-08-09 with a standalone `ACHIEVEMENT` heading, fully visible certifications, and the certificate URL attached to the Def-Space internship heading; the separate certificate-number text was removed. |
 | Data Analyst resume PDF | Not public | Not applicable | Not published and not exposed by any CTA. |
 | GitHub profile | `https://github.com/Atishay9828/` | Verified | GitHub API confirms public user `Atishay9828`. Verified 2026-06-26. |
 | LinkedIn | `https://www.linkedin.com/in/atishay9828/` | Verified | Owner-approved public LinkedIn CTA activated on 2026-07-03. Earlier automated verification was blocked by LinkedIn HTTP 999, so this status is owner-approval based. |
