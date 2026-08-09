@@ -7,6 +7,16 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-08-10 Resume Whitespace Revision
+
+Completed:
+- Removed the oversized whitespace between the Def-Space and TEDxTIET entries and before Skills.
+- Preserved the one-page A4 layout, Mahoraga project, achievement heading, certification wrap, and clickable project/internship links.
+
+Validation:
+- Local PDF is 49,259 bytes with SHA-256 `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`, one page, 9 annotations, one extracted `ACHIEVEMENT` heading, two Mahoraga mentions, and zero certificate-number occurrences.
+- Production deployment is pending this release.
+
 ### 2026-08-09 Mahoraga Resume Space Revision
 
 Completed:

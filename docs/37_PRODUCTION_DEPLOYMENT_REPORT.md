@@ -6,6 +6,12 @@ Production URL: `https://www.atishay.app`
 Application release commit: `41084e6801c63d9487ab5f55f9f317076b7accbc`
 Release branch: `release/portfolio-production`
 
+## 2026-08-10 Resume Whitespace Revision
+
+- Tightened the oversized gaps between experience entries and before Skills while preserving the one-page A4 resume, Mahoraga, certifications, achievement heading, and 9 annotations.
+- Local PDF validation passed: 49,259 bytes, SHA-256 `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`, one `ACHIEVEMENT` heading, two Mahoraga mentions, and zero certificate-number occurrences.
+- Production deployment and live verification are pending this release.
+
 ## 2026-08-09 Mahoraga and Resume-Density Revision
 
 - Added Mahoraga as a fourth project, condensed the other project bullets, and reduced the Def-Space internship description while retaining the standalone achievement section.
