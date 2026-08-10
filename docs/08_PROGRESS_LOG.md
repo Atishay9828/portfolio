@@ -14,8 +14,8 @@ Completed:
 - Preserved the one-page A4 layout and all existing resume links.
 
 Validation:
-- Local PDF is 49,258 bytes with SHA-256 `95E2222A96D7CAF0517A4E6B533F5380FA03CFF5254F01F2D612FBAAEF315280`, one page, 9 annotations, one extracted `ACHIEVEMENT` heading, and two Mahoraga mentions.
-- Preview `dpl_DvfdcYGHjUpEyfarc2PHMTxjCB6H` and production `dpl_DZd7xZU7hZqY2UYz4c87LvfDLW18` are Ready on exact commit `ff218ea6c4df1256ee0ec4d4601d36cba252b01f`; live PDF matches local bytes and hash.
+- Local PDF is 49,169 bytes with SHA-256 `EEA2CE0CCC22E6B3E7F6235810D24C12DA7BBCD56EEE2EE30F96C467D78D160`, one page, 9 annotations, one extracted `ACHIEVEMENT` heading, and two Mahoraga mentions.
+- Preview `dpl_14fHMsqnKagU4kYtVgLChaKJhpwg` and production `dpl_G44WUuLiAoGFKogGTHxA4S1YY1jY` are Ready on exact commit `dea4998e4f90cebc3c2905e01f948226b008fd50`; live PDF matches local bytes and hash.
 
 ### 2026-08-10 Resume Whitespace Revision
 

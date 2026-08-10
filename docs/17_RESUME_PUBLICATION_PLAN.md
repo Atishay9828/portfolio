@@ -9,7 +9,7 @@ Purpose:
 ## 2026-08-10 TEDxTIET Spacing Refinement
 
 - The TEDxTIET entry now uses a compact title and location/date metadata row to remove the awkward internal spacing.
-- Local and live validation passed: 49,258 bytes, 9 annotations, one `ACHIEVEMENT` heading, two Mahoraga mentions, and matching SHA-256 `95E2222A96D7CAF0517A4E6B533F5380FA03CFF5254F01F2D612FBAAEF315280`. Production deployment `dpl_DZd7xZU7hZqY2UYz4c87LvfDLW18` is Ready.
+- Local and live validation passed: 49,169 bytes, 9 annotations, one `ACHIEVEMENT` heading, two Mahoraga mentions, and matching SHA-256 `EEA2CE0CCC22E6B3E7F6235810D24C12DA7BBCD56EEE2EE30F96C467D78D160`. Production deployment `dpl_G44WUuLiAoGFKogGTHxA4S1YY1jY` is Ready.
 
 ## 2026-08-10 Resume Whitespace Revision
 

@@ -3,15 +3,15 @@
 Date: 2026-08-09
 Platform: Vercel
 Production URL: `https://www.atishay.app`
-Application release commit: `ff218ea6c4df1256ee0ec4d4601d36cba252b01f`
+Application release commit: `dea4998e4f90cebc3c2905e01f948226b008fd50`
 Release branch: `release/portfolio-production`
 
 ## 2026-08-10 TEDxTIET Spacing Refinement
 
 - Rebalanced the TEDxTIET entry into a compact title, location/date metadata row, and balanced bullet spacing.
-- Local PDF validation passed: 49,258 bytes, SHA-256 `95E2222A96D7CAF0517A4E6B533F5380FA03CFF5254F01F2D612FBAAEF315280`, one page, 9 annotations, one `ACHIEVEMENT` heading, and two Mahoraga mentions.
-- Preview deployment `dpl_DvfdcYGHjUpEyfarc2PHMTxjCB6H` was verified and promoted; production deployment `dpl_DZd7xZU7hZqY2UYz4c87LvfDLW18` is Ready on the exact release commit.
-- Live resume verification returned HTTP 200 with `application/pdf`, 49,258 bytes, matching SHA-256, one page, one TEDxTIET entry, one `ACHIEVEMENT` heading, two Mahoraga mentions, zero certificate-number occurrences, and 9 annotations.
+- Local PDF validation passed: 49,169 bytes, SHA-256 `EEA2CE0CCC22E6B3E7F6235810D24C12DA7BBCD56EEE2EE30F96C467D78D160`, one page, 9 annotations, one `ACHIEVEMENT` heading, and two Mahoraga mentions.
+- Preview deployment `dpl_14fHMsqnKagU4kYtVgLChaKJhpwg` was verified and promoted; production deployment `dpl_G44WUuLiAoGFKogGTHxA4S1YY1jY` is Ready on the exact release commit.
+- Live resume verification returned HTTP 200 with `application/pdf`, 49,169 bytes, matching SHA-256, one page, one TEDxTIET entry, one `ACHIEVEMENT` heading, two Mahoraga mentions, zero certificate-number occurrences, and 9 annotations.
 
 ## 2026-08-10 Resume Whitespace Revision
 
