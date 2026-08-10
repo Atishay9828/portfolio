@@ -2,6 +2,10 @@
 
 Date: 2026-08-09
 
+2026-08-10 TEDxTIET spacing refinement:
+- The TEDxTIET entry now uses a compact title, location/date metadata row, and balanced bullet spacing.
+- Local asset SHA-256: `95E2222A96D7CAF0517A4E6B533F5380FA03CFF5254F01F2D612FBAAEF315280`; deployment remains pending.
+
 2026-08-10 resume whitespace revision:
 - Tightened the two large vertical gaps in the public PDF: between the experience entries and between Mahoraga and Skills.
 - Local and live asset SHA-256: `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`; production deployment `dpl_4iXYQ66maMbb3JKiSXMkzVhsKfQT` is Ready on commit `75bb9b82d3cbf69975eba2869ee385b48c0f86cf`.

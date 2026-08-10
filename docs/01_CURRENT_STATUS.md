@@ -11,6 +11,10 @@ The Astro static portfolio is deployed and verified in Vercel production at `htt
 - Local PDF validation passed for one-page A4 layout, visual rendering, and clean extraction. Asset size is 49,259 bytes with SHA-256 `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`, 9 annotations, one `ACHIEVEMENT` heading, and two Mahoraga mentions.
 - Preview `dpl_FDdxM1kWHBBX5tbCUoDdhnc9aA3u` and production `dpl_4iXYQ66maMbb3JKiSXMkzVhsKfQT` are Ready and tied to the exact release commit above. Live PDF and browser verification passed.
 
+2026-08-10 TEDxTIET spacing refinement (local, deployment pending):
+- Rebalanced the TEDxTIET entry into a compact title, metadata row, and bullet so the location/date no longer create an awkward vertical gap.
+- Local PDF is one page with 9 annotations, one `ACHIEVEMENT` heading, two Mahoraga mentions, and SHA-256 `95E2222A96D7CAF0517A4E6B533F5380FA03CFF5254F01F2D612FBAAEF315280`.
+
 2026-08-09 Mahoraga and resume-density revision:
 - Added Mahoraga as a fourth project with concise evidence-safe bullets, condensed the other project bullets, and reduced the Def-Space internship description.
 - Local PDF validation passed for one-page A4 layout and visual readability. The current asset is 54,549 bytes with SHA-256 `9C4D23555B299186AEEFD74468386794E348B3BCA6DE86ADE2A9C7056EFEC71B` and 9 link annotations.

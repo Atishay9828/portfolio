@@ -7,6 +7,16 @@ Purpose:
 
 ## Progress Entries
 
+### 2026-08-10 TEDxTIET Spacing Refinement
+
+Completed:
+- Reworked the TEDxTIET entry into a compact heading, location/date metadata row, and two-line bullet with balanced spacing.
+- Preserved the one-page A4 layout and all existing resume links.
+
+Validation:
+- Local PDF is 49,258 bytes with SHA-256 `95E2222A96D7CAF0517A4E6B533F5380FA03CFF5254F01F2D612FBAAEF315280`, one page, 9 annotations, one extracted `ACHIEVEMENT` heading, and two Mahoraga mentions.
+- Production deployment is pending this release.
+
 ### 2026-08-10 Resume Whitespace Revision
 
 Completed:

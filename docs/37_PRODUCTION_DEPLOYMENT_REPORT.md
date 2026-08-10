@@ -6,6 +6,12 @@ Production URL: `https://www.atishay.app`
 Application release commit: `75bb9b82d3cbf69975eba2869ee385b48c0f86cf`
 Release branch: `release/portfolio-production`
 
+## 2026-08-10 TEDxTIET Spacing Refinement
+
+- Rebalanced the TEDxTIET entry into a compact title, location/date metadata row, and balanced bullet spacing.
+- Local PDF validation passed: 49,258 bytes, SHA-256 `95E2222A96D7CAF0517A4E6B533F5380FA03CFF5254F01F2D612FBAAEF315280`, one page, 9 annotations, one `ACHIEVEMENT` heading, and two Mahoraga mentions.
+- Production deployment and live verification are pending this release.
+
 ## 2026-08-10 Resume Whitespace Revision
 
 - Tightened the oversized gaps between experience entries and before Skills while preserving the one-page A4 resume, Mahoraga, certifications, achievement heading, and 9 annotations.
