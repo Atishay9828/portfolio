@@ -15,7 +15,7 @@ Completed:
 
 Validation:
 - Local PDF is 49,258 bytes with SHA-256 `95E2222A96D7CAF0517A4E6B533F5380FA03CFF5254F01F2D612FBAAEF315280`, one page, 9 annotations, one extracted `ACHIEVEMENT` heading, and two Mahoraga mentions.
-- Production deployment is pending this release.
+- Preview `dpl_DvfdcYGHjUpEyfarc2PHMTxjCB6H` and production `dpl_DZd7xZU7hZqY2UYz4c87LvfDLW18` are Ready on exact commit `ff218ea6c4df1256ee0ec4d4601d36cba252b01f`; live PDF matches local bytes and hash.
 
 ### 2026-08-10 Resume Whitespace Revision
 
