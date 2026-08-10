@@ -3,14 +3,15 @@
 Date: 2026-08-09
 Platform: Vercel
 Production URL: `https://www.atishay.app`
-Application release commit: `41084e6801c63d9487ab5f55f9f317076b7accbc`
+Application release commit: `75bb9b82d3cbf69975eba2869ee385b48c0f86cf`
 Release branch: `release/portfolio-production`
 
 ## 2026-08-10 Resume Whitespace Revision
 
 - Tightened the oversized gaps between experience entries and before Skills while preserving the one-page A4 resume, Mahoraga, certifications, achievement heading, and 9 annotations.
 - Local PDF validation passed: 49,259 bytes, SHA-256 `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`, one `ACHIEVEMENT` heading, two Mahoraga mentions, and zero certificate-number occurrences.
-- Production deployment and live verification are pending this release.
+- Preview deployment `dpl_FDdxM1kWHBBX5tbCUoDdhnc9aA3u` was verified and promoted; production deployment `dpl_4iXYQ66maMbb3JKiSXMkzVhsKfQT` is Ready on the exact release commit.
+- Live resume verification returned HTTP 200 with `application/pdf`, 49,259 bytes, matching SHA-256, one page, 9 annotations, two Mahoraga mentions, one `ACHIEVEMENT` heading, and zero certificate-number occurrences. Browser smoke passed at desktop and 390x844 with 3 resume CTAs, no horizontal overflow, and no console/page errors.
 
 ## 2026-08-09 Mahoraga and Resume-Density Revision
 

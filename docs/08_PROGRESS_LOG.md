@@ -15,7 +15,7 @@ Completed:
 
 Validation:
 - Local PDF is 49,259 bytes with SHA-256 `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`, one page, 9 annotations, one extracted `ACHIEVEMENT` heading, two Mahoraga mentions, and zero certificate-number occurrences.
-- Production deployment is pending this release.
+- Preview `dpl_FDdxM1kWHBBX5tbCUoDdhnc9aA3u` and production `dpl_4iXYQ66maMbb3JKiSXMkzVhsKfQT` are Ready on exact commit `75bb9b82d3cbf69975eba2869ee385b48c0f86cf`; live PDF hash matches local and browser smoke passed on desktop and 390x844.
 
 ### 2026-08-09 Mahoraga Resume Space Revision
 

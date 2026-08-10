@@ -9,7 +9,7 @@ Purpose:
 ## 2026-08-10 Resume Whitespace Revision
 
 - Tightened the two oversized vertical gaps while preserving the one-page A4 layout and all existing resume links.
-- Local validation passed: 49,259 bytes, 9 annotations, one `ACHIEVEMENT` heading, two Mahoraga mentions, and SHA-256 `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`. Production deployment is pending.
+- Local and live validation passed: 49,259 bytes, 9 annotations, one `ACHIEVEMENT` heading, two Mahoraga mentions, and matching SHA-256 `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`. Production deployment `dpl_4iXYQ66maMbb3JKiSXMkzVhsKfQT` is Ready.
 
 ## 2026-08-09 Mahoraga Resume Revision
 

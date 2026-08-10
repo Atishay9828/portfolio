@@ -4,7 +4,7 @@ Date: 2026-08-09
 
 2026-08-10 resume whitespace revision:
 - Tightened the two large vertical gaps in the public PDF: between the experience entries and between Mahoraga and Skills.
-- Local asset SHA-256: `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`; deployment remains pending.
+- Local and live asset SHA-256: `DF3849F6B4A66B7890ED4E1B04A15111F030BBB33BEB3C5980953DD6A313D629`; production deployment `dpl_4iXYQ66maMbb3JKiSXMkzVhsKfQT` is Ready on commit `75bb9b82d3cbf69975eba2869ee385b48c0f86cf`.
 
 2026-08-09 Mahoraga resume-density revision:
 - The public PDF now includes Mahoraga as a fourth project; its bullets use evidence-safe wording for the adaptive RL environment, reward shaping, and optional Qwen/LoRA integration.
