@@ -1,6 +1,9 @@
 # 09_AI_HANDOFF.md
 
 Date: 2026-08-09
+2026-08-10 full resume-flow spacing fix:
+- Tightened the TEDxTIET entry and shifted Projects, Skills, Education & Certifications, and Achievement upward as one coordinated vertical flow.
+- Local and live asset SHA-256: `73EE8216CA205EC7225333350DD94EF7C7F76060FC1807F7ABD516949BD118C9`; production deployment `dpl_3Zt6ncqJDo1u8NsTiddduEofZ7Bq` is Ready on commit `34b4131821145363e6245ea5fff64aa70625d77f`.
 
 2026-08-10 TEDxTIET spacing refinement:
 - The TEDxTIET entry now uses a compact title, location/date metadata row, and balanced bullet spacing.

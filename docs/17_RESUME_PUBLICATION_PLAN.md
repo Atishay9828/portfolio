@@ -5,6 +5,10 @@ Date: 2026-08-09
 Purpose:
 - Prevent local resume PDFs from being published accidentally.
 - Record the selected public resume asset and the remaining public CTA boundaries.
+## 2026-08-10 Full Resume-Flow Spacing Fix
+
+- Tightened the TEDxTIET block and moved Projects, Skills, Education & Certifications, and Achievement upward together while preserving the one-page layout and all existing links.
+- Local/live validation passed: 49,191 bytes, 9 annotations, one TEDxTIET entry, one `ACHIEVEMENT` heading, two Mahoraga mentions, zero certificate-number occurrences, and matching SHA-256 `73EE8216CA205EC7225333350DD94EF7C7F76060FC1807F7ABD516949BD118C9`. Production deployment `dpl_3Zt6ncqJDo1u8NsTiddduEofZ7Bq` is Ready.
 
 ## 2026-08-10 TEDxTIET Spacing Refinement
 

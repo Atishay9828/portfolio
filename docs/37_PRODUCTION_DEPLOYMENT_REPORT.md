@@ -5,6 +5,12 @@ Platform: Vercel
 Production URL: `https://www.atishay.app`
 Application release commit: `dea4998e4f90cebc3c2905e01f948226b008fd50`
 Release branch: `release/portfolio-production`
+## 2026-08-10 Full Resume-Flow Spacing Fix
+
+- Tightened the TEDxTIET entry and shifted Projects, Skills, Education & Certifications, and Achievement upward together.
+- Local/live PDF validation: 49,191 bytes, SHA-256 `73EE8216CA205EC7225333350DD94EF7C7F76060FC1807F7ABD516949BD118C9`, one page, 9 annotations, one TEDxTIET entry, one `ACHIEVEMENT` heading, two Mahoraga mentions, and zero certificate-number occurrences.
+- Preview deployment `dpl_7e8Pt1Sf4xvJiitjduJaW5ENe6y2` was promoted; production deployment `dpl_3Zt6ncqJDo1u8NsTiddduEofZ7Bq` is Ready on exact commit `34b4131821145363e6245ea5fff64aa70625d77f`.
+- Live PDF bytes match the local verified asset at `https://www.atishay.app/resume/atishay-jain-sde-resume.pdf`.
 
 ## 2026-08-10 TEDxTIET Spacing Refinement
 

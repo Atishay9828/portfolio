@@ -6,6 +6,15 @@ Purpose:
 - Record completed milestones and repository progress.
 
 ## Progress Entries
+### 2026-08-10 Full Resume-Flow Spacing Fix
+
+Completed:
+- Tightened the TEDxTIET block and moved Projects, Skills, Education & Certifications, and Achievement upward together to remove the remaining staggered whitespace.
+- Preserved the one-page A4 layout, Mahoraga project, certificate-linked Def-Space heading, and clickable project titles.
+
+Validation:
+- Local/live PDF is 49,191 bytes with SHA-256 `73EE8216CA205EC7225333350DD94EF7C7F76060FC1807F7ABD516949BD118C9`, one page, 9 annotations, one TEDxTIET entry, one `ACHIEVEMENT` heading, two Mahoraga mentions, and zero certificate-number occurrences.
+- Preview `dpl_7e8Pt1Sf4xvJiitjduJaW5ENe6y2` was promoted to production deployment `dpl_3Zt6ncqJDo1u8NsTiddduEofZ7Bq` on exact commit `34b4131821145363e6245ea5fff64aa70625d77f`; live bytes match local.
 
 ### 2026-08-10 TEDxTIET Spacing Refinement
 
