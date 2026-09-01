@@ -15,7 +15,8 @@ Completed:
 
 Validation:
 - Resume and certificate are each one page. The resume has nine annotations, with the certificate path present twice; local SHA-256 values are recorded in `docs/17_RESUME_PUBLICATION_PLAN.md`.
-- Application build and deployment verification remain pending this change set's release.
+- `npm.cmd test` passed 50/50, `npm.cmd run lint` passed with 0 errors/warnings and one existing generated Analytics hint, and the standalone Astro static build exited 0 with five pages generated.
+- Production deployment `dpl_9CXgmTR5h3eFbN54c1ZFo7JULjQR` is Ready. Both public PDF URLs returned `200 application/pdf` with byte-for-byte SHA-256 matches.
 
 ### 2026-08-10 Full Resume-Flow Spacing Fix
 

@@ -5,7 +5,7 @@ Date: 2026-08-09
 - The public resume source is now `D:\AI_Resume_Builder_ATS_Friendly\output\pdf\atishay-jain-full-stack-sde-resume.pdf`, served at the unchanged `/resume/atishay-jain-sde-resume.pdf` path.
 - The owner-provided BSERC Def-Space certificate is repo-local at `public/certificates/bserc-def-space-2026.pdf`; the resume links to `/certificates/bserc-def-space-2026.pdf` twice.
 - Keep Resume Engine wording within the README-backed boundaries: deterministic direct-skill coverage, verified-profile document source, local MiniLM ranking, deterministic fallback, and static PDF output. Do not claim hiring prediction, a proprietary ATS score, external AI inference, or user outcomes.
-- Local PDF structure and link checks are complete. The next release must run the repo's tests/build and verify both public asset paths live before marking this update deployed.
+- Local PDF structure and link checks are complete. The release passed 50/50 tests, lint, and static build; production deployment `dpl_9CXgmTR5h3eFbN54c1ZFo7JULjQR` is Ready, with both asset paths returning `200 application/pdf` and matching local SHA-256 values.
 
 2026-08-10 full resume-flow spacing fix:
 - Tightened the TEDxTIET entry and shifted Projects, Skills, Education & Certifications, and Achievement upward as one coordinated vertical flow.

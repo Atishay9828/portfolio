@@ -8,7 +8,7 @@ The Astro static portfolio is deployed and verified in Vercel production at `htt
 2026-09-01 Full-Stack SDE resume and certificate update (local verification):
 - Replaced the primary public resume asset with the owner-selected one-page Full-Stack SDE PDF while preserving `/resume/atishay-jain-sde-resume.pdf`.
 - Added the owner-provided BSERC Def-Space certificate at `/certificates/bserc-def-space-2026.pdf`, the exact public path embedded twice in the new resume.
-- Local checks confirm nine resume annotations and one page for both PDFs. Build and deployment verification are pending this change set's release.
+- Local checks confirm nine resume annotations and one page for both PDFs. Production deployment `dpl_9CXgmTR5h3eFbN54c1ZFo7JULjQR` is Ready; both public asset URLs return `200 application/pdf` and match their local SHA-256 values.
 
 2026-08-10 full resume-flow spacing fix:
 - Tightened TEDxTIET and shifted Projects, Skills, Education & Certifications, and Achievement upward as a coordinated one-page flow.

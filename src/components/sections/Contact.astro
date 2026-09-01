@@ -38,7 +38,7 @@ const projectImages = featuredProjects
       {links.email.href && <a class="contact-primary" href={links.email.href}><Icon name="mail" /><span>{emailAddress}</span></a>}
       {links.github.href && <a href={links.github.href} target="_blank" rel="noreferrer"><Icon name="github" /><span>GitHub</span></a>}
       {links.linkedin.href && <a href={links.linkedin.href} target="_blank" rel="noreferrer"><Icon name="linkedin" /><span>LinkedIn</span></a>}
-      {links.resume.href && <a href={links.resume.href}><Icon name="resume" /><span>Resume</span></a>}
+      {links.resume.href && <a href={links.resume.href}><Icon name="resume" /><span>{links.resume.label}</span></a>}
     </div>
   </div>
 
