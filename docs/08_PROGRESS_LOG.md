@@ -6,6 +6,17 @@ Purpose:
 - Record completed milestones and repository progress.
 
 ## Progress Entries
+### 2026-09-01 Full-Stack SDE Resume and Certificate Publication
+
+Completed:
+- Replaced the repo-local public resume with AJ's owner-selected Full-Stack SDE PDF, keeping the existing resume CTA path stable.
+- Published the owner-provided BSERC Def-Space certificate at the precise path already linked by the generated resume.
+- Updated the secondary AI Resume Tailoring Engine card only with README-backed, conservative facts: deterministic direct-skill coverage, verified-profile document content, local MiniLM ranking, deterministic fallback, and one-page PDF output.
+
+Validation:
+- Resume and certificate are each one page. The resume has nine annotations, with the certificate path present twice; local SHA-256 values are recorded in `docs/17_RESUME_PUBLICATION_PLAN.md`.
+- Application build and deployment verification remain pending this change set's release.
+
 ### 2026-08-10 Full Resume-Flow Spacing Fix
 
 Completed:

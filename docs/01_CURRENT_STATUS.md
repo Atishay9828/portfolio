@@ -5,6 +5,11 @@ Date: 2026-08-09
 ## Current Phase
 
 The Astro static portfolio is deployed and verified in Vercel production at `https://www.atishay.app`. The latest application release commit is `75bb9b82d3cbf69975eba2869ee385b48c0f86cf`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
+2026-09-01 Full-Stack SDE resume and certificate update (local verification):
+- Replaced the primary public resume asset with the owner-selected one-page Full-Stack SDE PDF while preserving `/resume/atishay-jain-sde-resume.pdf`.
+- Added the owner-provided BSERC Def-Space certificate at `/certificates/bserc-def-space-2026.pdf`, the exact public path embedded twice in the new resume.
+- Local checks confirm nine resume annotations and one page for both PDFs. Build and deployment verification are pending this change set's release.
+
 2026-08-10 full resume-flow spacing fix:
 - Tightened TEDxTIET and shifted Projects, Skills, Education & Certifications, and Achievement upward as a coordinated one-page flow.
 - Local/live PDF: 49,191 bytes, one page, 9 annotations, one TEDxTIET entry, one ACHIEVEMENT heading, two Mahoraga mentions, zero certificate-number text occurrences, and SHA-256 `73EE8216CA205EC7225333350DD94EF7C7F76060FC1807F7ABD516949BD118C9`.

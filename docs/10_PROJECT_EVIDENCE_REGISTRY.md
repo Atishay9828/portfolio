@@ -12,6 +12,9 @@ Production-release note (2026-07-13): Mahoraga `training_metrics.png` is no long
 2026-08-09 resume revision:
 - Mahoraga is included as the fourth resume project with concise wording grounded in the verified environment, reward-shaping, Gymnasium, FastAPI/Gradio, and Qwen/LoRA evidence below. The public copy does not claim production-grade game-engine status.
 
+2026-09-01 Full-Stack SDE resume and certificate revision:
+- The owner-selected one-page Full-Stack SDE resume and its linked one-page BSERC Def-Space certificate are repo-local Verified assets. The resume preserves project repository links and uses the stable `/certificates/bserc-def-space-2026.pdf` path twice.
+
 ## Status Meanings
 
 - Known: link or artifact was provided, discovered in a verified source, or created as a repo spec, but is not final public-ready portfolio evidence.
@@ -25,7 +28,8 @@ Production-release note (2026-07-13): Mahoraga `training_metrics.png` is no long
 | Item | Status | Notes |
 |---|---|---|
 | GitHub profile | Verified | Public profile link remains active. |
-| SDE resume | Verified | The owner-provided one-page PDF content was checked and published at the repo-local asset path with the finalist achievement promoted to a standalone `ACHIEVEMENT` heading and the Def-Space internship heading linked to its certificate URL; the separate certificate-number text was removed; CTA href is `/resume/atishay-jain-sde-resume.pdf`. |
+| Full-Stack SDE resume | Verified | Owner-selected one-page PDF checked and published at `/resume/atishay-jain-sde-resume.pdf`, with nine verified annotations including the stable Def-Space certificate path. |
+| BSERC Def-Space certificate | Verified | Owner-provided one-page certificate checked and published at `/certificates/bserc-def-space-2026.pdf`; the resume links to this exact local public asset. |
 | Data Analyst resume | Not applicable | Not published in this pass and not exposed by public CTA. |
 | LinkedIn | Verified | Owner-approved public CTA activated on 2026-07-03 at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |
 | Email | Verified | Owner-approved public CTA activated on 2026-07-03 at `mailto:ajain8_be23@thapar.edu`. |

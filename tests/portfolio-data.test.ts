@@ -61,6 +61,7 @@ import loopFriendsLiveRedacted from "../public/assets/projects/the-loop/the-loop
 import loopProfileLiveRedacted from "../public/assets/projects/the-loop/the-loop-profile-live-redacted.png?url";
 import loopRecommendationFlow from "../public/assets/projects/the-loop/the-loop-recommendation-flow.svg?url";
 import loopSystemDiagram from "../public/assets/projects/the-loop/the-loop-system-diagram.svg?url";
+import bsercCertificate from "../public/certificates/bserc-def-space-2026.pdf?url";
 import sdeResume from "../public/resume/atishay-jain-sde-resume.pdf?url";
 
 const importedProjectAssets = [
@@ -339,7 +340,7 @@ describe("portfolio scaffold data", () => {
   it("renders only verified public project links as enabled CTAs", () => {
     for (const project of [...featuredProjects, ...secondaryProjects]) {
       expect(project.links.every((link) => link.status === "Verified")).toBe(true);
-      expect(project.links.every((link) => link.href.startsWith("https://"))).toBe(true);
+      expect(project.links.every((link) => link.href.startsWith("https://") || link.href.startsWith("/resume/"))).toBe(true);
     }
   });
 
@@ -404,13 +405,18 @@ describe("portfolio scaffold data", () => {
     }
   });
 
-  it("exposes only the repo-local SDE resume CTA when the public PDF exists", () => {
+  it("exposes the repo-local Full-Stack SDE resume CTA when the public PDF exists", () => {
     expect(links.resume.status).toBe("Verified");
     expect(links.resume.href).toBe("/resume/atishay-jain-sde-resume.pdf");
-    expect(links.resume.label).toBe("SDE Resume");
+    expect(links.resume.label).toBe("Full-Stack SDE Resume");
     expect(sdeResume).toContain("atishay-jain-sde-resume.pdf");
     expect(JSON.stringify(links).toLowerCase()).not.toContain("data_analyst");
     expect(JSON.stringify(links).toLowerCase()).not.toContain("data analyst");
+  });
+
+  it("publishes the Def-Space certificate at the stable path embedded in the Full-Stack SDE resume", () => {
+    expect(bsercCertificate).toContain("certificates/bserc-def-space-2026.pdf");
+    expect(sdeResume).toContain("resume/atishay-jain-sde-resume.pdf");
   });
 
   it("defines static routes for the homepage and featured case-study shells", () => {

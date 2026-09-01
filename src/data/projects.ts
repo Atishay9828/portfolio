@@ -1,4 +1,4 @@
-import type { EvidenceStatus, LinkRecord } from "./links";
+import { links, type EvidenceStatus, type LinkRecord } from "./links";
 
 export type ProjectTier = "Featured" | "Secondary" | "Lab" | "Timeline";
 
@@ -596,29 +596,34 @@ export const secondaryProjects: Project[] = [
   {
     slug: "resume-engine",
     title: "AI Resume Tailoring Engine",
-    subtitle: "Constrained LLM workflow automation for resume generation.",
+    subtitle: "Privacy-first, deterministic resume and cover-letter generation.",
     tier: "Secondary",
-    portfolioRole: "LLM workflow automation support signal.",
-    statusLabel: "Repo verified, compact support",
-    problem: "Automate resume tailoring while avoiding unsupported claims and private-data leakage.",
-    keyDecision: "Frame as profile compression, prompt constraints, PDF/report workflow, and fallback planning.",
-    tradeoff: "Supporting automation project; repo evidence is enough for a compact mention.",
-    roleStatus: "Supporting project; repo verified.",
-    stack: ["LLM workflow", "PDF generation", "ATS reporting"],
+    portfolioRole: "Constrained application-document automation support signal.",
+    statusLabel: "Repo and generated SDE resume verified",
+    problem: "Tailor application documents against a job description without inventing profile claims or sending personal data to an external AI API.",
+    keyDecision: "Use deterministic skill matching and verified-profile content; use local MiniLM relevance ranking with a deterministic fallback.",
+    tradeoff: "Recognized direct skill coverage is not a hiring prediction or proprietary ATS score.",
+    roleStatus: "Supporting project; repository and owner-generated public resume verified.",
+    stack: ["FastAPI", "React", "Local MiniLM", "ReportLab PDFs"],
     links: [
       {
         label: "GitHub repo",
         href: "https://github.com/Atishay9828/AI_Resume_Builder_ATS_Friendly",
         status: "Verified",
       },
+      {
+        label: "Full-Stack SDE resume",
+        href: links.resume.href!,
+        status: "Verified",
+      },
     ],
     visual: {
       kind: "evidence-panel",
-      status: "Needed",
-      label: "Supporting workflow artifact",
-      detail: "Repo evidence supports a compact automation mention without output or ATS-result claims.",
+      status: "Verified",
+      label: "Generated public resume",
+      detail: "The owner-generated one-page Full-Stack SDE resume is published as a static portfolio asset; it demonstrates document output, not hiring outcomes.",
     },
-    missingProof: ["redacted sample output", "ATS report", "pipeline diagram", "role/contribution details"],
+    missingProof: ["redacted product UI", "pipeline diagram", "role/contribution details"],
   },
   {
     slug: "webcam-alert",

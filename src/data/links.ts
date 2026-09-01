@@ -28,10 +28,10 @@ export const links: Record<string, LinkRecord> = {
     note: "Owner-approved public contact email activated on 2026-07-03.",
   },
   resume: {
-    label: "SDE Resume",
+    label: "Full-Stack SDE Resume",
     href: "/resume/atishay-jain-sde-resume.pdf",
     status: "Verified",
-    note: "Primary public SDE resume updated with Mahoraga, concise project/internship sections, and the internship-name certificate link on 2026-08-09.",
+    note: "Owner-provided one-page Full-Stack SDE resume, published on 2026-09-01 with verified portfolio, GitHub, LinkedIn, project, and Def-Space certificate links.",
   },
   portfolioRepo: {
     label: "Portfolio repository",

@@ -19,6 +19,11 @@ Link registry:
 - Mahoraga is now represented in the public resume as a fourth project using evidence-safe wording; other project and internship descriptions were shortened to preserve the one-page layout.
 - The revised PDF is live in Vercel production and matches the locally validated one-page asset byte-for-byte.
 
+2026-09-01 Full-Stack SDE resume and certificate assets:
+- The primary public resume now uses the owner-selected, one-page `public/resume/atishay-jain-sde-resume.pdf` from the Full-Stack SDE output.
+- The owner-provided Def-Space certificate is published at `public/certificates/bserc-def-space-2026.pdf`, matching the stable path embedded in the resume.
+- Both assets are locally verified; live deployment verification remains required after release.
+
 ## Summary
 
 | Area | Known | Verified | Missing | Needed | Public-ready? |
@@ -52,7 +57,8 @@ Link registry:
 
 | Asset | Status | Priority | Next action |
 |---|---|---|---|
-| SDE resume PDF | Verified | Required | Owner-provided replacement checked and published on 2026-08-09 at `public/resume/atishay-jain-sde-resume.pdf`; the finalist achievement is a standalone `ACHIEVEMENT` section, the certification wrap is fully visible, and the Def-Space internship heading carries the certificate link. |
+| Full-Stack SDE resume PDF | Verified | Required | Owner-selected one-page PDF checked and published on 2026-09-01 at `public/resume/atishay-jain-sde-resume.pdf`; its nine annotations include the stable Def-Space certificate path. |
+| BSERC Def-Space certificate PDF | Verified | Required | Owner-provided certificate checked and published on 2026-09-01 at `public/certificates/bserc-def-space-2026.pdf`; the resume links to this exact path. |
 | Data Analyst resume PDF | Not applicable | Optional | Not published; do not expose unless AJ explicitly selects it later. |
 | GitHub profile URL | Verified | Required | Use `https://github.com/Atishay9828/` after implementation begins. |
 | LinkedIn URL | Verified | Required | Owner-approved public CTA active at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |

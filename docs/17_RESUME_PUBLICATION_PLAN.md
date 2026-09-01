@@ -5,6 +5,14 @@ Date: 2026-08-09
 Purpose:
 - Prevent local resume PDFs from being published accidentally.
 - Record the selected public resume asset and the remaining public CTA boundaries.
+
+## 2026-09-01 Full-Stack SDE Resume and Certificate Publication
+
+- Owner-selected source: `D:\AI_Resume_Builder_ATS_Friendly\output\pdf\atishay-jain-full-stack-sde-resume.pdf`.
+- Published resume: `public/resume/atishay-jain-sde-resume.pdf`, retaining the stable CTA at `/resume/atishay-jain-sde-resume.pdf`.
+- Published certificate: `E:\Downloads\83349.pdf` at `public/certificates/bserc-def-space-2026.pdf`; this exact public path is linked twice from the resume.
+- Local PDF checks: both PDFs are one page. The resume has nine annotations, including the portfolio, GitHub, LinkedIn, four project repositories, and two Def-Space certificate links. The certificate extracts Atishay Jain, BSERC-DSI-2026-2601, June 19 to August 9, 2026, 6+ Weeks, and Aug 6, 2026.
+- This record is local asset verification only; production deployment verification is still required after release.
 ## 2026-08-10 Full Resume-Flow Spacing Fix
 
 - Tightened the TEDxTIET block and moved Projects, Skills, Education & Certifications, and Achievement upward together while preserving the one-page layout and all existing links.
@@ -30,17 +38,22 @@ Purpose:
 
 | Candidate | Current location | Exists locally? | Publication status |
 |---|---|---|---|
-| SDE / software intern resume | `E:\Downloads\Atishay_Jain_SDEResume.pdf` | Yes | Owner-provided replacement approved and published as the primary public resume on 2026-08-09 |
+| Full-Stack SDE resume | `D:\AI_Resume_Builder_ATS_Friendly\output\pdf\atishay-jain-full-stack-sde-resume.pdf` | Yes | Owner-selected replacement published as the primary public resume on 2026-09-01 |
 | Data analyst resume | `E:\Downloads\ATISHAY_Data_Analyst.pdf` | Not rechecked in this pass | Not published |
 
 ## Published Public Resume
 
 Primary public resume:
-- Source: `E:\Downloads\Atishay_Jain_SDEResume.pdf`
+- Source: `D:\AI_Resume_Builder_ATS_Friendly\output\pdf\atishay-jain-full-stack-sde-resume.pdf`
 - Destination: `public/resume/atishay-jain-sde-resume.pdf`
 - Public CTA href: `/resume/atishay-jain-sde-resume.pdf`
-- Refresh date: 2026-08-09
-- Content checks: one-page A4 PDF, readable visual rendering, clean text extraction, public portfolio/GitHub/LinkedIn/email annotations, and current SDE/full-stack/applied-AI content supplied by AJ. The Meta OpenEnv Hackathon 2026 finalist achievement is presented under a standalone `ACHIEVEMENT` heading, and the Def-Space internship heading carries the certificate link without displaying a separate certificate-number link.
+- Refresh date: 2026-09-01
+- Content checks: one-page PDF, clean text extraction, nine annotations, and public portfolio/GitHub/LinkedIn, project-repository, and Def-Space certificate links. The resume presents Full-Stack Software Development, while project copy remains limited to the verified scope of each project.
+
+Published certificate:
+- Source: `E:\Downloads\83349.pdf`
+- Destination: `public/certificates/bserc-def-space-2026.pdf`
+- Stable public path: `/certificates/bserc-def-space-2026.pdf`
 
 The owner-provided PDF content is preserved at the public asset path, with the approved finalist achievement promoted from an inline line to a standalone `ACHIEVEMENT` heading while retaining the one-page layout.
 

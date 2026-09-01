@@ -6,8 +6,8 @@ Purpose:
 - Centralize all known, verified, missing, and TODO links.
 - Prevent placeholder links from leaking into public UI.
 
-2026-08-09 resume revision:
-- The primary SDE PDF remains `/resume/atishay-jain-sde-resume.pdf` and now includes a clickable Mahoraga project name plus the existing clickable Def-Space internship heading certificate link. Live one-page verification passed at `https://www.atishay.app/resume/atishay-jain-sde-resume.pdf`.
+2026-09-01 Full-Stack SDE resume and certificate revision:
+- The primary Full-Stack SDE PDF remains `/resume/atishay-jain-sde-resume.pdf` and links to the stable Def-Space certificate path `/certificates/bserc-def-space-2026.pdf` twice. Both local assets were checked; live verification remains required after release.
 
 ## Status Meanings
 
@@ -28,7 +28,8 @@ Purpose:
 
 | Label | URL | Status | Notes |
 |---|---|---|---|
-| SDE resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. The owner-provided one-page PDF was checked and published on 2026-08-09 with a standalone `ACHIEVEMENT` heading, fully visible certifications, and the certificate URL attached to the Def-Space internship heading; the separate certificate-number text was removed. |
+| Full-Stack SDE resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. Owner-selected one-page PDF was checked and published on 2026-09-01 with verified portfolio, GitHub, LinkedIn, project-repository, and Def-Space certificate links. |
+| BSERC Def-Space certificate PDF | `/certificates/bserc-def-space-2026.pdf` | Verified | Owner-provided one-page certificate asset, checked and published locally on 2026-09-01. The Full-Stack SDE resume points to this exact stable path. |
 | Data Analyst resume PDF | Not public | Not applicable | Not published and not exposed by any CTA. |
 | GitHub profile | `https://github.com/Atishay9828/` | Verified | GitHub API confirms public user `Atishay9828`. Verified 2026-06-26. |
 | LinkedIn | `https://www.linkedin.com/in/atishay9828/` | Verified | Owner-approved public LinkedIn CTA activated on 2026-07-03. Earlier automated verification was blocked by LinkedIn HTTP 999, so this status is owner-approval based. |
