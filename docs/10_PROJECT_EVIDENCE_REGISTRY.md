@@ -15,6 +15,9 @@ Production-release note (2026-07-13): Mahoraga `training_metrics.png` is no long
 2026-09-01 Full-Stack SDE resume and certificate revision:
 - The owner-selected one-page Full-Stack SDE resume and its linked one-page BSERC Def-Space certificate are repo-local Verified assets. The resume preserves project repository links and uses the stable `/certificates/bserc-def-space-2026.pdf` path twice.
 
+2026-09-01 final resume source revision:
+- The one-page Full-Stack Software Engineer resume source hashes to `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003`. Its qualitative Hybrid CPU-latency sentence does not support a numerical, endpoint, fallback, accuracy, or production-performance claim.
+
 ## Status Meanings
 
 - Known: link or artifact was provided, discovered in a verified source, or created as a repo spec, but is not final public-ready portfolio evidence.
@@ -28,7 +31,7 @@ Production-release note (2026-07-13): Mahoraga `training_metrics.png` is no long
 | Item | Status | Notes |
 |---|---|---|
 | GitHub profile | Verified | Public profile link remains active. |
-| Full-Stack SDE resume | Verified | Owner-selected one-page PDF checked and published at `/resume/atishay-jain-sde-resume.pdf`, with nine verified annotations including the stable Def-Space certificate path. |
+| Full-Stack Software Engineer resume | Verified | Owner-selected one-page PDF checked at `/resume/atishay-jain-sde-resume.pdf`, with SHA-256 `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003` and nine verified annotations including the stable Def-Space certificate path. |
 | BSERC Def-Space certificate | Verified | Owner-provided one-page certificate checked and published at `/certificates/bserc-def-space-2026.pdf`; the resume links to this exact local public asset. |
 | Data Analyst resume | Not applicable | Not published in this pass and not exposed by public CTA. |
 | LinkedIn | Verified | Owner-approved public CTA activated on 2026-07-03 at `https://www.linkedin.com/in/atishay9828/`; automated LinkedIn verification was previously blocked by HTTP 999. |

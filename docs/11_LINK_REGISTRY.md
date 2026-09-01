@@ -9,6 +9,9 @@ Purpose:
 2026-09-01 Full-Stack SDE resume and certificate revision:
 - The primary Full-Stack SDE PDF remains `/resume/atishay-jain-sde-resume.pdf` and links to the stable Def-Space certificate path `/certificates/bserc-def-space-2026.pdf` twice. Both local assets were checked; live verification remains required after release.
 
+2026-09-01 final resume source revision:
+- The unchanged resume URL now serves the owner-selected Full-Stack Software Engineer source (SHA-256 `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003`). The certificate URL is unchanged.
+
 ## Status Meanings
 
 - Known: provided in planning context but not checked in this repo session.
@@ -28,7 +31,7 @@ Purpose:
 
 | Label | URL | Status | Notes |
 |---|---|---|---|
-| Full-Stack SDE resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. Owner-selected one-page PDF was checked and published on 2026-09-01 with verified portfolio, GitHub, LinkedIn, project-repository, and Def-Space certificate links. |
+| Full-Stack Software Engineer resume PDF | `/resume/atishay-jain-sde-resume.pdf` | Verified | Primary public resume CTA. Owner-selected one-page PDF was checked on 2026-09-01 with SHA-256 `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003`, plus verified portfolio, GitHub, LinkedIn, project-repository, and Def-Space certificate links. |
 | BSERC Def-Space certificate PDF | `/certificates/bserc-def-space-2026.pdf` | Verified | Owner-provided one-page certificate asset, checked and published locally on 2026-09-01. The Full-Stack SDE resume points to this exact stable path. |
 | Data Analyst resume PDF | Not public | Not applicable | Not published and not exposed by any CTA. |
 | GitHub profile | `https://github.com/Atishay9828/` | Verified | GitHub API confirms public user `Atishay9828`. Verified 2026-06-26. |

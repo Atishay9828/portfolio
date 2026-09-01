@@ -405,16 +405,16 @@ describe("portfolio scaffold data", () => {
     }
   });
 
-  it("exposes the repo-local Full-Stack SDE resume CTA when the public PDF exists", () => {
+  it("exposes the repo-local Full-Stack Software Engineer resume CTA when the public PDF exists", () => {
     expect(links.resume.status).toBe("Verified");
     expect(links.resume.href).toBe("/resume/atishay-jain-sde-resume.pdf");
-    expect(links.resume.label).toBe("Full-Stack SDE Resume");
+    expect(links.resume.label).toBe("Full-Stack Software Engineer Resume");
     expect(sdeResume).toContain("atishay-jain-sde-resume.pdf");
     expect(JSON.stringify(links).toLowerCase()).not.toContain("data_analyst");
     expect(JSON.stringify(links).toLowerCase()).not.toContain("data analyst");
   });
 
-  it("publishes the Def-Space certificate at the stable path embedded in the Full-Stack SDE resume", () => {
+  it("publishes the Def-Space certificate at the stable path embedded in the Full-Stack Software Engineer resume", () => {
     expect(bsercCertificate).toContain("certificates/bserc-def-space-2026.pdf");
     expect(sdeResume).toContain("resume/atishay-jain-sde-resume.pdf");
   });

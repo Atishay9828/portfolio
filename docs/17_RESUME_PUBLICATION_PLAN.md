@@ -13,6 +13,14 @@ Purpose:
 - Published certificate: `E:\Downloads\83349.pdf` at `public/certificates/bserc-def-space-2026.pdf`; this exact public path is linked twice from the resume.
 - Local PDF checks: both PDFs are one page. The resume has nine annotations, including the portfolio, GitHub, LinkedIn, four project repositories, and two Def-Space certificate links. The certificate extracts Atishay Jain, BSERC-DSI-2026-2601, June 19 to August 9, 2026, 6+ Weeks, and Aug 6, 2026.
 - Production deployment `dpl_9CXgmTR5h3eFbN54c1ZFo7JULjQR` is Ready; both public asset URLs returned `200 application/pdf` with byte-for-byte SHA-256 matches.
+
+## 2026-09-01 Final Full-Stack Software Engineer Resume Source
+
+- Source: `D:\AI_Resume_Builder_ATS_Friendly\output\pdf\atishay-jain-full-stack-sde-resume.pdf`
+- SHA-256: `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003`
+- The one-page PDF has nine annotations and leads with `FULL-STACK SOFTWARE ENGINEER`.
+- The Hybrid bullet reports qualitative local CPU-latency improvement only. It publishes no numerical latency, accuracy, endpoint, fallback, or production-performance result.
+- The BSERC Def-Space certificate asset is out of scope and remains unchanged.
 ## 2026-08-10 Full Resume-Flow Spacing Fix
 
 - Tightened the TEDxTIET block and moved Projects, Skills, Education & Certifications, and Achievement upward together while preserving the one-page layout and all existing links.

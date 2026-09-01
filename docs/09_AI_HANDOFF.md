@@ -1,6 +1,11 @@
 # 09_AI_HANDOFF.md
 
 Date: 2026-08-09
+2026-09-01 final Full-Stack Software Engineer resume revision:
+- The stable public resume path is unchanged, but its owner-selected source now hashes to `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003` and leads with `FULL-STACK SOFTWARE ENGINEER`.
+- The Hybrid CPU-latency sentence is qualitative evidence-safe wording only; do not expand it into a measured, endpoint, fallback, accuracy, or production-performance claim.
+- Do not alter `public/certificates/bserc-def-space-2026.pdf` during this revision.
+
 2026-09-01 Full-Stack SDE resume and certificate update:
 - The public resume source is now `D:\AI_Resume_Builder_ATS_Friendly\output\pdf\atishay-jain-full-stack-sde-resume.pdf`, served at the unchanged `/resume/atishay-jain-sde-resume.pdf` path.
 - The owner-provided BSERC Def-Space certificate is repo-local at `public/certificates/bserc-def-space-2026.pdf`; the resume links to `/certificates/bserc-def-space-2026.pdf` twice.

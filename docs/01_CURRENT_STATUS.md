@@ -5,6 +5,11 @@ Date: 2026-08-09
 ## Current Phase
 
 The Astro static portfolio is deployed and verified in Vercel production at `https://www.atishay.app`. The latest application release commit is `75bb9b82d3cbf69975eba2869ee385b48c0f86cf`; `docs/37_PRODUCTION_DEPLOYMENT_REPORT.md` is the concise release record.
+2026-09-01 Full-Stack Software Engineer resume source revision (local verification):
+- Replaced the public resume asset at the unchanged `/resume/atishay-jain-sde-resume.pdf` path with the owner-selected one-page source whose SHA-256 is `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003`.
+- The headline is `FULL-STACK SOFTWARE ENGINEER`. Its Hybrid bullet describes local CPU-latency improvement qualitatively and does not present a latency number, accuracy result, or production-performance claim.
+- The certificate asset at `/certificates/bserc-def-space-2026.pdf` was not changed.
+
 2026-09-01 Full-Stack SDE resume and certificate update (local verification):
 - Replaced the primary public resume asset with the owner-selected one-page Full-Stack SDE PDF while preserving `/resume/atishay-jain-sde-resume.pdf`.
 - Added the owner-provided BSERC Def-Space certificate at `/certificates/bserc-def-space-2026.pdf`, the exact public path embedded twice in the new resume.

@@ -24,6 +24,10 @@ Link registry:
 - The owner-provided Def-Space certificate is published at `public/certificates/bserc-def-space-2026.pdf`, matching the stable path embedded in the resume.
 - Both assets are locally verified; live deployment verification remains required after release.
 
+2026-09-01 source revision:
+- The public resume was replaced with the owner-selected Full-Stack Software Engineer PDF (SHA-256 `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003`).
+- The certificate asset was deliberately left unchanged.
+
 ## Summary
 
 | Area | Known | Verified | Missing | Needed | Public-ready? |
@@ -57,7 +61,7 @@ Link registry:
 
 | Asset | Status | Priority | Next action |
 |---|---|---|---|
-| Full-Stack SDE resume PDF | Verified | Required | Owner-selected one-page PDF checked and published on 2026-09-01 at `public/resume/atishay-jain-sde-resume.pdf`; its nine annotations include the stable Def-Space certificate path. |
+| Full-Stack Software Engineer resume PDF | Verified | Required | Owner-selected one-page PDF checked on 2026-09-01 at `public/resume/atishay-jain-sde-resume.pdf`; SHA-256 `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003`; its nine annotations include the stable Def-Space certificate path. |
 | BSERC Def-Space certificate PDF | Verified | Required | Owner-provided certificate checked and published on 2026-09-01 at `public/certificates/bserc-def-space-2026.pdf`; the resume links to this exact path. |
 | Data Analyst resume PDF | Not applicable | Optional | Not published; do not expose unless AJ explicitly selects it later. |
 | GitHub profile URL | Verified | Required | Use `https://github.com/Atishay9828/` after implementation begins. |

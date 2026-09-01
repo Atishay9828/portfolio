@@ -6,6 +6,16 @@ Purpose:
 - Record completed milestones and repository progress.
 
 ## Progress Entries
+### 2026-09-01 Full-Stack Software Engineer Resume Revision
+
+Completed:
+- Replaced the public resume with AJ's final owner-selected source while preserving its stable URL.
+- Preserved the certificate asset byte-for-byte.
+
+Validation:
+- The one-page, nine-annotation source hash is `BBE3CF192AFF004D81180C586338E7ADC9B79A1CCBA1F1AD9A670CFD1A1A7003`.
+- The Hybrid line is qualitative only and does not introduce a numerical latency, accuracy, or production-performance claim.
+
 ### 2026-09-01 Full-Stack SDE Resume and Certificate Publication
 
 Completed:

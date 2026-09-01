@@ -612,7 +612,7 @@ export const secondaryProjects: Project[] = [
         status: "Verified",
       },
       {
-        label: "Full-Stack SDE resume",
+        label: "Full-Stack Software Engineer resume",
         href: links.resume.href!,
         status: "Verified",
       },
@@ -621,7 +621,7 @@ export const secondaryProjects: Project[] = [
       kind: "evidence-panel",
       status: "Verified",
       label: "Generated public resume",
-      detail: "The owner-generated one-page Full-Stack SDE resume is published as a static portfolio asset; it demonstrates document output, not hiring outcomes.",
+      detail: "The owner-generated one-page Full-Stack Software Engineer resume is published as a static portfolio asset; it demonstrates document output, not hiring outcomes.",
     },
     missingProof: ["redacted product UI", "pipeline diagram", "role/contribution details"],
   },
